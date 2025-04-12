@@ -109,7 +109,7 @@ Use-case: Simulated phishing attack leading to endpoint compromise
 ## 📚 Tools Used 
 ![image](https://github.com/user-attachments/assets/6ea33308-aac0-439b-9b78-638dec1fc0e2)
 
-
+### 👤 Author
 Ali Choukatli  
 📧 alichoukatli@gmail.com  
 🔗 LinkedIn | GitHub
