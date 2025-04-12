@@ -106,6 +106,7 @@ Use-case: Simulated phishing attack leading to endpoint compromise
 
 ## 📸 Screenshots available in /Screenshots/Forensics_Analysis/
 
+## 📚 Tools Used 
 ![image](https://github.com/user-attachments/assets/6ea33308-aac0-439b-9b78-638dec1fc0e2)
 
 
