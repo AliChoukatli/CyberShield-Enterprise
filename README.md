@@ -84,23 +84,23 @@ SecurityAlert
 Use-case: Simulated phishing attack leading to endpoint compromise
 
 🔍 Steps:
-Alert triggered in Microsoft Defender for Endpoint (phishing email opened).
+1 - Alert triggered in Microsoft Defender for Endpoint (phishing email opened).
 
-Sentinel receives log and generates an alert.
+2 - Sentinel receives log and generates an alert.
 
-Alert is triaged manually via KQL.
+3 - Alert is triaged manually via KQL.
 
-Evidence collected using:
+4 - Evidence collected using:
 
-Windows Event Viewer (event ID 4104, 4624, 4688)
+    Windows Event Viewer (event ID 4104, 4624, 4688)
 
-Autopsy (USB artifacts, browser history)
+    Autopsy (USB artifacts, browser history)
 
-X-Ways or FTK Imager for disk imaging and analysis
+    X-Ways or FTK Imager for disk imaging and analysis
 
-Affected user account disabled.
+5 - Affected user account disabled.
 
-Root cause documented in a forensic report.
+6 - Root cause documented in a forensic report.
 
 📁 See details in /Incident_Response/Phishing_Alert_Playbook.pdf
 
