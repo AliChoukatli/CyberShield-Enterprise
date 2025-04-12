@@ -92,11 +92,11 @@ Use-case: Simulated phishing attack leading to endpoint compromise
 
 4 - Evidence collected using:
 
-    Windows Event Viewer (event ID 4104, 4624, 4688)
+   Windows Event Viewer (event ID 4104, 4624, 4688)
 
-    Autopsy (USB artifacts, browser history)
+   Autopsy (USB artifacts, browser history)
 
-    X-Ways or FTK Imager for disk imaging and analysis
+   X-Ways or FTK Imager for disk imaging and analysis
 
 5 - Affected user account disabled.
 
