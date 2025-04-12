@@ -112,6 +112,6 @@ Use-case: Simulated phishing attack leading to endpoint compromise
 ### 👤 Author
 Ali Choukatli  
 📧 alichoukatli@gmail.com  
-🔗 LinkedIn | GitHub
+🔗 LinkedIn : | linkedin.com/in/ali-choukatli |  | GitHub :github.com/AliChoukatli
 
 
