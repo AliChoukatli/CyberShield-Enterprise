@@ -78,7 +78,44 @@ In `/Cybersecurity/Sentinel_Alerts_Triage`:
 SecurityAlert 
 | where Severity == "High" 
 | where TimeGenerated > ago(7d)
+```
+
+🧪 Forensics & Incident Response
+Use-case: Simulated phishing attack leading to endpoint compromise
+
+🔍 Steps:
+Alert triggered in Microsoft Defender for Endpoint (phishing email opened).
+
+Sentinel receives log and generates an alert.
+
+Alert is triaged manually via KQL.
+
+Evidence collected using:
+
+Windows Event Viewer (event ID 4104, 4624, 4688)
+
+Autopsy (USB artifacts, browser history)
+
+X-Ways or FTK Imager for disk imaging and analysis
+
+Affected user account disabled.
+
+Root cause documented in a forensic report.
+
+📁 See details in /Incident_Response/Phishing_Alert_Playbook.pdf
+
+📸 Screenshots available in /Screenshots/Forensics_Analysis/
+
+📚 Tools Used
+Category    | Tools
+Cloud & IAM  |	Azure AD, Intune, Microsoft 365
+Endpoint Security |	Defender for Endpoint, BitLocker
+SOC & SIEM	| Microsoft Sentinel
+Scripting |	PowerShell
+Frameworks | ISO/IEC 27001, NIST CSF, Zero Trust
 
 Ali Choukatli  
 📧 alichoukatli@gmail.com  
 🔗 LinkedIn | GitHub
+
+
