@@ -79,25 +79,6 @@ SecurityAlert
 | where Severity == "High" 
 | where TimeGenerated > ago(7d)
 
-🧪 Forensics & Incident Response
-Use-case: Simulated phishing alert
-
-Defender alert triggered
-
-Triage in Sentinel
-
-Response plan (manual + Logic App)
-
-Documented in: /Incident_Response/Phishing_Alert_Playbook.pdf
-
-📷 Screenshots
-📸 All screenshots of configurations and alerts available in the /Screenshots folder.
-
-📚 Tools Used
-Category	Tools
-Cloud & IAM	Azure AD, Intune, Microsoft 365
-Endpoint Security	Defender for Endpoint, BitLocker
-SOC & SIEM	Microsoft Sentinel
-Scripting	PowerShell
-Frameworks	ISO/IEC 27001, NIST CSF, Zero Trust
-
+Ali Choukatli  
+📧 alichoukatli@gmail.com  
+🔗 LinkedIn | GitHub
