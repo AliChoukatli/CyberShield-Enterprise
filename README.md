@@ -106,13 +106,8 @@ Use-case: Simulated phishing attack leading to endpoint compromise
 
 ## 📸 Screenshots available in /Screenshots/Forensics_Analysis/
 
-## 📚 Tools Used
-Category    | Tools
-Cloud & IAM  |	Azure AD, Intune, Microsoft 365
-Endpoint Security |	Defender for Endpoint, BitLocker
-SOC & SIEM	| Microsoft Sentinel
-Scripting |	PowerShell
-Frameworks | ISO/IEC 27001, NIST CSF, Zero Trust
+![image](https://github.com/user-attachments/assets/6ea33308-aac0-439b-9b78-638dec1fc0e2)
+
 
 Ali Choukatli  
 📧 alichoukatli@gmail.com  
