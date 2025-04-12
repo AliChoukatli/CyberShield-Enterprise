@@ -84,6 +84,7 @@ SecurityAlert
 Use-case: Simulated phishing attack leading to endpoint compromise
 
 🔍 Steps:
+
 1 - Alert triggered in Microsoft Defender for Endpoint (phishing email opened).
 
 2 - Sentinel receives log and generates an alert.
