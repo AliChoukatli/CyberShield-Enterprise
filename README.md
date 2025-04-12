@@ -80,7 +80,7 @@ SecurityAlert
 | where TimeGenerated > ago(7d)
 ```
 
-🧪 Forensics & Incident Response
+## 🧪 Forensics & Incident Response
 Use-case: Simulated phishing attack leading to endpoint compromise
 
 🔍 Steps:
@@ -102,11 +102,11 @@ Use-case: Simulated phishing attack leading to endpoint compromise
 
 6 - Root cause documented in a forensic report.
 
-📁 See details in /Incident_Response/Phishing_Alert_Playbook.pdf
+## 📁 See details in /Incident_Response/Phishing_Alert_Playbook.pdf
 
-📸 Screenshots available in /Screenshots/Forensics_Analysis/
+## 📸 Screenshots available in /Screenshots/Forensics_Analysis/
 
-📚 Tools Used
+## 📚 Tools Used
 Category    | Tools
 Cloud & IAM  |	Azure AD, Intune, Microsoft 365
 Endpoint Security |	Defender for Endpoint, BitLocker
