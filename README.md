@@ -60,8 +60,6 @@ This project is organized into several key sections, each serving a specific pur
 
 ├── Screenshots/                             <-- Répertoire pour les captures d'écran
 │   └── Forensics_Analysis/                  <-- Répertoire pour les analyses forensiques
-
-
 ```
 
 
