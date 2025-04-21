@@ -31,7 +31,24 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 This project is organized into several key sections, each serving a specific purpose:
 
  
-/Projet_IT_Support_Cybersec/ │ ├── README.md # Project documentation (this file) ├── LICENSE # License information (MIT License) │ ├── Compliance/ # Compliance-related files │ └── Mapping_ISO_NIST.xlsx # Mapping of ISO/IEC and NIST controls │ ├── ZeroTrust/ # Zero Trust-related resources │ └── Zero_Trust_Implementation_Guide.pdf # Guide for implementing Zero Trust in the environment │ ├── Support_IT/ # IT support-related automation and scripts │ └── PowerShell_Scripts/ # PowerShell scripts to automate IT tasks │ ├── DeployOffice365.ps1 # Script to deploy Office 365 to new endpoints │ ├── Reset-UserPassword.ps1 # Password reset tool for helpdesk │ └── Get-SecurityStatus.ps1 # Export security compliance status from Intune │ ├── Cybersecurity/ # Cybersecurity monitoring and alert triage resources │ └── Sentinel_Alerts_Triage/ # Tools and configurations for Sentinel alert triage │ ├── KQL_queries.txt # KQL queries for filtering high-severity alerts │ └── Playbook_AutoResponse.json # Playbook for automated alert responses in Sentinel │ ├── Incident_Response/ # Incident response documentation and steps │ └── Phishing_Simulation_Steps.md # Detailed steps for phishing simulation and response │ ├── Screenshots/ # Screenshots for evidence and documentation │ └── Forensics_Analysis/ # Screenshots of forensics analysis, event logs, and alerts
+
+---
+
+### Explication des sections :
+
+- **README.md** : Ce fichier contient la documentation du projet, y compris l'introduction, les objectifs, et le statut.
+- **LICENSE** : Contient des informations sur la licence du projet, ici sous licence MIT.
+- **Compliance** : Inclut des fichiers relatifs à la conformité avec les normes ISO/IEC et NIST.
+- **ZeroTrust** : Comprend un guide détaillant la mise en œuvre du modèle Zero Trust dans l'environnement.
+- **Support_IT** : Contient des scripts PowerShell automatisant diverses tâches de support informatique.
+- **Cybersecurity** : Regroupe les outils et ressources utilisés pour la surveillance de la sécurité via Microsoft Sentinel et la gestion des alertes.
+- **Incident_Response** : Documente le processus de réponse à un incident de cybersécurité (par exemple, une simulation de phishing).
+- **Screenshots** : Contient les captures d'écran liées aux investigations forensiques et à la détection des alertes.
+
+---
+
+Cela devrait maintenant afficher correctement l'arborescence dans le `README.md` lorsque tu le colles dans ton fichier. Assure-toi de bien garder la structure de code avec les trois accents graves ``` pour l'arborescence et les sections.
+
 
 
 ---
