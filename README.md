@@ -133,15 +133,6 @@ This project is organized into several key sections, each serving a specific pur
 
 
 ## 🖼️ Screenshots Summary
-📁 Cybersecurity/Screenshots/
-
-- [Sentinel_Alert.png](#sentinel-alertpng) – Alert detection via Microsoft Sentinel  
-- [Defender_Investigation.png](#defender-investigationpng) – Investigation view in Microsoft Defender  
-
-📁 Incident_Response/Screenshots/
-
-- [Phishing_Email.png](#phishing-emailpng) – Simulated phishing email  
-- [EventViewer_Logs.png](#eventviewer-logspng) – Event Viewer logs related to the incident  
 
 📁 Support_IT/Screenshots/
 
@@ -155,6 +146,16 @@ This project is organized into several key sections, each serving a specific pur
 - [Windows_Network_Troubleshooter.png](#windows-network-troubleshooterpng) – Windows network troubleshooting tool  
 - [CMD_Ping_Test.png](#cmd-ping-testpng) – Network ping test  
 - [CMD_Ipconfig_Results.png](#cmd-ipconfig-resultspng) – IP configuration (ipconfig) output  
+
+📁 Cybersecurity/Screenshots/
+
+- [Sentinel_Alert.png](#sentinel-alertpng) – Alert detection via Microsoft Sentinel  
+- [Defender_Investigation.png](#defender-investigationpng) – Investigation view in Microsoft Defender  
+
+📁 Incident_Response/Screenshots/
+
+- [Phishing_Email.png](#phishing-emailpng) – Simulated phishing email  
+- [EventViewer_Logs.png](#eventviewer-logspng) – Event Viewer logs related to the incident  
 
 
 📁 Forensics_Analysis/Screenshots/
