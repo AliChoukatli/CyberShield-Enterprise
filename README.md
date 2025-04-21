@@ -133,17 +133,21 @@ This project is organized into several key sections, each serving a specific pur
 
 
 
+🖼️ Screenshots Summary
 📁 Cybersecurity/Screenshots/
+
 Sentinel_Alert.png – Alert detection via Microsoft Sentinel
 
 Defender_Investigation.png – Investigation view in Microsoft Defender
 
 📁 Incident_Response/Screenshots/
+
 Phishing_Email.png – Simulated phishing email
 
 EventViewer_Logs.png – Event Viewer logs related to the incident
 
 📁 Support_IT/Screenshots/
+
 AD_User_Creation.png – Creating a user in Active Directory
 
 Group_Management.png – Managing user groups in Active Directory
@@ -165,6 +169,7 @@ CMD_Ping_Test.png – Network test using ping command
 CMD_Ipconfig_Results.png – Network configuration details using ipconfig
 
 📁 Forensics_Analysis/Screenshots/
+
 Logon_Event_4624.png – Suspicious logon event
 
 PowerShell_4104.png – Malicious PowerShell script execution (Event ID 4104)
