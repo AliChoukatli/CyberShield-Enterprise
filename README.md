@@ -138,13 +138,13 @@ Sentinel_Alert.png – Alert detection via Microsoft Sentinel
 
 Defender_Investigation.png – Investigation view in Microsoft Defender
 
-##📁 Incident_Response/Screenshots/
+📁 Incident_Response/Screenshots/
 
 Phishing_Email.png – Simulated phishing email
 
 EventViewer_Logs.png – Event Viewer logs related to the incident
 
-##📁 Support_IT/Screenshots/
+📁 Support_IT/Screenshots/
 
 AD_User_Creation.png – Creating a user in Active Directory
 
