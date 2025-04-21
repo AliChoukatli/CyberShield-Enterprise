@@ -103,8 +103,6 @@ This project is organized into several key sections, each serving a specific pur
 🔗 **Full version available in** [Mapping_ISO_NIST.xlsx](./Mapping_ISO_NIST.xlsx)
 
 
-
-
 ## 🧪 Incident Response Simulation
 
 **Use Case:** A user opens a phishing email → endpoint is compromised → alert is triggered
@@ -133,8 +131,8 @@ This project is organized into several key sections, each serving a specific pur
 
 
 
-# 🖼️ Screenshots Summary
-##**📁 Cybersecurity/Screenshots/**
+## 🖼️ Screenshots Summary
+📁 Cybersecurity/Screenshots/**
 
 Sentinel_Alert.png – Alert detection via Microsoft Sentinel
 
