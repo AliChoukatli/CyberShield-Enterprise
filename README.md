@@ -51,7 +51,7 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 | NIST CSF DE.CM – Continuous Monitoring | Defender for Endpoint                     |
 | NIST CSF RS.RP – Response Planning | Sentinel alert triage & basic response        |
 
-*Full mapping available in `Cybersecurity/Compliance/Compliance_Mapping.md`*
+[Full mapping available here](Cybersecurity/Compliance/Compliance_Mapping.md)
 
 ---
 
@@ -59,7 +59,7 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 
 **Use Case:** A user opens a phishing email → endpoint is compromised → alert is triggered
 
-**Workflow:**
+### Workflow:
 
 1. Defender detects a malicious file from phishing
 2. Sentinel logs the alert and triggers high severity
@@ -68,10 +68,7 @@ This project simulates the implementation of a secure, cloud-based IT environmen
    - Windows Event Viewer (IDs: 4104, 4624, 4688)
    - Browser/USB artifacts (noted only)
 5. User account disabled and isolated
-6. Root cause summary noted in `Incident_Response/Phishing_Simulation_Steps.md`
-
----
-
+6. Root cause summary noted in [Incident_Response/Phishing_Simulation_Steps.md](Incident_Response/Phishing_Simulation_Steps.md)
 ## ⚙️ PowerShell Tools (Support IT)
 
 | Script Name              | Purpose                                        |
