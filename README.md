@@ -126,11 +126,23 @@ This project is organized into several key sections, each serving a specific pur
 
 ## 📸 Screenshots
 
-All key screenshots are stored in `/Screenshots`:
-- Alert detection from Sentinel
-- Defender investigation page
-- Forensics: Windows Event Viewer logs
+## 🖼️ Captures d’écran
 
+📁 `Cybersecurity/Screenshots/`
+- `Sentinel_Alert.png` – Détection d'alerte via Microsoft Sentinel
+- `Defender_Investigation.png` – Vue de l'analyse Defender
+
+📁 `Incident_Response/Screenshots/`
+- `Phishing_Email.png` – Capture de l'email de phishing
+- `EventViewer_Logs.png` – Journaux d'événements liés à l'incident
+
+📁 `Support_IT/Screenshots/`
+- `AD_User_Creation.png` – Ajout d’un utilisateur via Active Directory
+- `Group_Management.png` – Gestion des groupes
+
+📁 `Screenshots/Forensics_Analysis/`
+- `Logon_Event_4624.png` – Connexion suspecte
+- `PowerShell_4104.png` – Script PowerShell malveillant exécuté
 
 
 ## 🗂️ License
