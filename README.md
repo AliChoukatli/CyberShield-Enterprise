@@ -64,7 +64,7 @@ This project is organized into several key sections, each serving a specific pur
 | Least privilege   | RBAC with limited access permissions              |
 | Assume breach     | Endpoint monitoring, isolation, security alerts   |
 
----
+
 
 ## 📄 Compliance Mapping (Summary)
 
@@ -78,7 +78,7 @@ This project is organized into several key sections, each serving a specific pur
 
 *Full mapping available in `Cybersecurity/Compliance/Compliance_Mapping.md`*
 
----
+
 
 ## 🧪 Incident Response Simulation
 
@@ -95,7 +95,7 @@ This project is organized into several key sections, each serving a specific pur
 5. User account disabled and isolated
 6. Root cause summary noted in `Incident_Response/Phishing_Simulation_Steps.md`
 
----
+
 
 ## ⚙️ PowerShell Tools (Support IT)
 
@@ -105,7 +105,7 @@ This project is organized into several key sections, each serving a specific pur
 | Reset-UserPassword.ps1   | Helpdesk password reset tool                   |
 | Get-SecurityStatus.ps1   | Export security compliance status from Intune  |
 
----
+
 
 ## 📸 Screenshots
 
@@ -114,7 +114,7 @@ All key screenshots are stored in `/Screenshots`:
 - Defender investigation page
 - Forensics: Windows Event Viewer logs
 
----
+
 
 ## 🗂️ License
 
