@@ -21,22 +21,29 @@ This project is organized into several key sections, each serving a specific pur
 /Secure_IT_for_SMB/                           <-- Répertoire principal du projet
 │
 ├── README.md                                 <-- Fichier de documentation du projet
+
 ├── LICENSE                                   <-- Informations sur la licence du projet
+
 ├── Compliance/                               <-- Répertoire pour la conformité et les normes
 │   └── Mapping_ISO_NIST.xlsx                 <-- Fichier Excel pour le mapping ISO/NIST
+
 ├── ZeroTrust/                                <-- Répertoire pour le modèle Zero Trust
 │   └── Zero_Trust_Implementation_Guide.pdf   <-- Guide de mise en œuvre Zero Trust
+
 ├── Support_IT/                               <-- Répertoire pour les scripts PowerShell
 │   └── PowerShell_Scripts/                   <-- Scripts PowerShell
 │       ├── DeployOffice365.ps1
 │       ├── Reset-UserPassword.ps1
 │       └── Get-SecurityStatus.ps1
+
 ├── Cybersecurity/                           <-- Répertoire pour la surveillance de la sécurité
 │   └── Sentinel_Alerts_Triage/              <-- Répertoire pour les alertes et le triage de Sentinel
 │       ├── KQL_queries.txt                  <-- Requêtes KQL
 │       └── Playbook_AutoResponse.json       <-- Playbook pour la réponse automatique
+
 ├── Incident_Response/                       <-- Répertoire pour la réponse aux incidents
 │   └── Phishing_Simulation_Steps.md         <-- Détails de la simulation de phishing
+
 ├── Screenshots/                             <-- Répertoire pour les captures d'écran
 │   └── Forensics_Analysis/                  <-- Répertoire pour les analyses forensiques
 
