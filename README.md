@@ -13,6 +13,11 @@ The environment uses:
 ---
 
 ## 🧱 Infrastructure Overview
+- Choix du tenant Microsoft 365 (E5 Trial possible)
+
+- Paramétrage du domaine personnalisé (facultatif)
+
+- Vue d’ensemble de l’architecture (schéma réseau, flux)
 
 ### 👥 Identity & Access Management (IAM)
 - Azure AD users and groups
