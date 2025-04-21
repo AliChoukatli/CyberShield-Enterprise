@@ -160,7 +160,90 @@ This project is organized into several key sections, each serving a specific pur
 📁 Forensics_Analysis/Screenshots/
 
 - [Logon_Event_4624.png](#logon-event-4624png) – Suspicious logon event  
-- [PowerShell_4104.png](#powershell-4104png) – Malicious PowerShell script execution (Event ID 4104)  
+- [PowerShell_4104.png](#powershell-4104png) – Malicious PowerShell script execution (Event ID 4104)
+
+- ### Screenshots Section
+
+#### 🔒 Cybersecurity/Screenshots
+
+##### [Sentinel_Alert.png](#sentinel-alertpng)  
+![Sentinel_Alert.png](./Cybersecurity/Screenshots/Sentinel_Alert.png)  
+Alert detection via Microsoft Sentinel
+
+##### [Defender_Investigation.png](#defender-investigationpng)  
+![Defender_Investigation.png](./Cybersecurity/Screenshots/Defender_Investigation.png)  
+Investigation view in Microsoft Defender
+
+---
+
+#### 🛡️ Incident_Response/Screenshots
+
+##### [Phishing_Email.png](#phishing-emailpng)  
+![Phishing_Email.png](./Incident_Response/Screenshots/Phishing_Email.png)  
+Simulated phishing email
+
+##### [EventViewer_Logs.png](#eventviewer-logspng)  
+![EventViewer_Logs.png](./Incident_Response/Screenshots/EventViewer_Logs.png)  
+Event Viewer logs related to the incident
+
+---
+
+#### 🖥️ Support_IT/Screenshots
+
+##### [AD_User_Creation.png](#ad-user-creationpng)  
+![AD_User_Creation.png](./Support_IT/Screenshots/AD_User_Creation.png)  
+Creating a user in Active Directory
+
+##### [Group_Management.png](#group-managementpng)  
+![Group_Management.png](./Support_IT/Screenshots/Group_Management.png)  
+Managing user groups in Active Directory
+
+##### [Password_Reset_AD.png](#password-reset-adpng)  
+![Password_Reset_AD.png](./Support_IT/Screenshots/Password_Reset_AD.png)  
+Resetting a user password in AD
+
+##### [AD_Permissions_Management.png](#ad-permissions-managementpng)  
+![AD_Permissions_Management.png](./Support_IT/Screenshots/AD_Permissions_Management.png)  
+Managing permissions in Active Directory
+
+##### [Remote_Support_TeamViewer.png](#remote-support-teamviewerpng)  
+![Remote_Support_TeamViewer.png](./Support_IT/Screenshots/Remote_Support_TeamViewer.png)  
+Remote support session using TeamViewer
+
+##### [Remote_Desktop_Session.png](#remote-desktop-sessionpng)  
+![Remote_Desktop_Session.png](./Support_IT/Screenshots/Remote_Desktop_Session.png)  
+Remote Desktop session with a user
+
+##### [Device_Manager_Troubleshooting.png](#device-manager-troubleshootingpng)  
+![Device_Manager_Troubleshooting.png](./Support_IT/Screenshots/Device_Manager_Troubleshooting.png)  
+Troubleshooting via Device Manager
+
+##### [Windows_Network_Troubleshooter.png](#windows-network-troubleshooterpng)  
+![Windows_Network_Troubleshooter.png](./Support_IT/Screenshots/Windows_Network_Troubleshooter.png)  
+Windows network troubleshooting tool
+
+##### [CMD_Ping_Test.png](#cmd-ping-testpng)  
+![CMD_Ping_Test.png](./Support_IT/Screenshots/CMD_Ping_Test.png)  
+Network ping test
+
+##### [CMD_Ipconfig_Results.png](#cmd-ipconfig-resultspng)  
+![CMD_Ipconfig_Results.png](./Support_IT/Screenshots/CMD_Ipconfig_Results.png)  
+IP configuration (ipconfig) output
+
+---
+
+#### 🔍 Forensics_Analysis/Screenshots
+
+##### [Logon_Event_4624.png](#logon-event-4624png)  
+![Logon_Event_4624.png](./Forensics_Analysis/Screenshots/Logon_Event_4624.png)  
+Suspicious logon event
+
+##### [PowerShell_4104.png](#powershell-4104png)  
+![PowerShell_4104.png](./Forensics_Analysis/Screenshots/PowerShell_4104.png)  
+Malicious PowerShell script execution (Event ID 4104)
+
+---
+
 
 
 ## 🗂️ License
