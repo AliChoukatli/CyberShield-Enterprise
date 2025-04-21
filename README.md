@@ -14,20 +14,6 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 
 ---
 
-## 📁 Project Structure
-
-This project is organized into several key sections, each serving a specific purpose:
-
-- **README.md** : This file contains the project documentation, including the introduction, objectives, and status.
-- **LICENSE** : Contains information about the project's license, here under the MIT License.
-- **Compliance** : Includes files related to compliance with ISO/IEC and NIST standards.
-- **ZeroTrust** : Contains a guide detailing the implementation of the Zero Trust model within the environment.
-- **Support_IT** : Contains PowerShell scripts that automate various IT support tasks.
-- **Cybersecurity** : Contains tools and resources used for security monitoring via Microsoft Sentinel and managing alerts.
-- **Incident_Response** : Documents the incident response process, such as a phishing simulation.
-- **Screenshots** : Contains screenshots related to forensic investigations and alert detection.
-
-
 # 📁 Project Structure
 
 This project is organized into several key sections, each serving a specific purpose:
