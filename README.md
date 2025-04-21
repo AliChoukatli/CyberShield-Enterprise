@@ -14,7 +14,7 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 
 
 
-```
+
 
 
 ## 🧩 Tools
@@ -62,7 +62,7 @@ This project is organized into several key sections, each serving a specific pur
 │   └── Forensics_Analysis/                  <-- Répertoire pour les analyses forensiques
 
 
-
+```
 
 
 ## 🔐 Zero Trust Implementation (Integrated)
