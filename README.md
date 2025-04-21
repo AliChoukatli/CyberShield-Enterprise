@@ -27,11 +27,15 @@ This project is organized into several key sections, each serving a specific pur
 - **Incident_Response** : Documents the incident response process, such as a phishing simulation.
 - **Screenshots** : Contains screenshots related to forensic investigations and alert detection.
 
-```
-- /Projet_IT_Support_Cybersec/
+
+# 📁 Project Structure
+
+This project is organized into several key sections, each serving a specific purpose:
+
+/Projet_IT_Support_Cybersec/
 │
 ├── README.md : This file contains the project documentation, including the introduction, objectives, and status.
-├── LICENSE :  Contains information about the project's license, here under the MIT License.
+├── LICENSE : Contains information about the project's license, here under the MIT License.
 ├── Compliance/ : Includes files related to compliance with ISO/IEC and NIST standards.
 │   └── Mapping_ISO_NIST.xlsx
 ├── ZeroTrust/ : Contains a guide detailing the implementation of the Zero Trust model within the environment.
@@ -41,7 +45,7 @@ This project is organized into several key sections, each serving a specific pur
 │       ├── DeployOffice365.ps1
 │       ├── Reset-UserPassword.ps1
 │       └── Get-SecurityStatus.ps1
-├── Cybersecurity/  : Contains tools and resources used for security monitoring via Microsoft Sentinel and managing alerts.
+├── Cybersecurity/ : Contains tools and resources used for security monitoring via Microsoft Sentinel and managing alerts.
 │   └── Sentinel_Alerts_Triage/
 │       ├── KQL_queries.txt
 │       └── Playbook_AutoResponse.json
@@ -50,8 +54,9 @@ This project is organized into several key sections, each serving a specific pur
 ├── Screenshots/ : Contains screenshots related to forensic investigations and alert detection.
 │   └── Forensics_Analysis/
 
+
 ---
-```
+
 
 ## 🧩 Tools
 
