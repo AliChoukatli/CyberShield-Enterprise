@@ -18,7 +18,7 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 This project is organized into several key sections, each serving a specific purpose:
 
 ```
-/Secure_IT_for_SMB/                <-- Répertoire principal du projet
+/Secure_IT_for_SMB/                           <-- Répertoire principal du projet
 │
 ├── README.md                                 <-- Fichier de documentation du projet
 ├── LICENSE                                   <-- Informations sur la licence du projet
