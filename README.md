@@ -77,6 +77,23 @@ This project is organized into several key sections, each serving a specific pur
 │   └── Screenshots/                                <-- Screenshots from post-incident analysis
 │       ├── Logon_Event_4624.png                    <-- Suspicious logon (Event ID 4624)
 │       └── PowerShell_4104.png                     <-- Malicious PowerShell script (Event ID 4104)
+│
+├── All_Screenshots/                           <-- All screenshots centralized here
+│   ├── Group_Management.png
+│   ├── Password_Reset_AD.png
+│   ├── AD_Permissions_Management.png
+│   ├── Remote_Support_TeamViewer.png
+│   ├── Remote_Desktop_Session.png
+│   ├── Device_Manager_Troubleshooting.png
+│   ├── Windows_Network_Troubleshooter.png
+│   ├── CMD_Ping_Test.png
+│   ├── CMD_Ipconfig_Results.png
+│   ├── Sentinel_Alert.png
+│   ├── Defender_Investigation.png
+│   ├── Phishing_Email.png
+│   ├── EventViewer_Logs.png
+│   ├── Logon_Event_4624.png
+│   └── PowerShell_4104.png
 ```
 
 
