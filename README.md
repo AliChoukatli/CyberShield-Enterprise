@@ -34,9 +34,9 @@ This project is organized into several key sections, each serving a specific pur
 |---------------------|--------------------------------------------------------------------|
 | Identity & Access    | Microsoft 365, Azure AD (Entra ID), MFA, Conditional Access       |
 | Endpoint Management  | Windows 11, Intune, BitLocker, Microsoft Defender for Endpoint    |
-| Security Monitoring  | Microsoft Sentinel, KQL, Security Alerts, Logs                     |
-| Automation           | PowerShell scripting                                               |
-| Frameworks Applied   | ISO/IEC 27001, NIST CSF, Zero Trust                                |
+| Security Monitoring  | Microsoft Sentinel, KQL, Security Alerts, Logs                    |
+| Automation           | PowerShell scripting                                              |
+| Frameworks Applied   | ISO/IEC 27001, NIST CSF, Zero Trust                               |
 
 ---
 
@@ -49,7 +49,7 @@ This project is organized into several key sections, each serving a specific pur
 | Principle         | Implementation                                     |
 |-------------------|----------------------------------------------------|
 | Verify explicitly | MFA, device compliance, and sign-in risk policies |
-| Least privilege   | RBAC with limited access permissions               |
+| Least privilege   | RBAC with limited access permissions              |
 | Assume breach     | Endpoint monitoring, isolation, security alerts   |
 
 ---
