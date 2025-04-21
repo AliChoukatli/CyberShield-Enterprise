@@ -47,7 +47,7 @@ This project is organized into several key sections, each serving a specific pur
 
 | Area                | Tools & Services                                                   |
 |---------------------|--------------------------------------------------------------------|
-| Identity & Access    | Microsoft 365, Azure AD (Entra ID), MFA, Conditional Access       |
+| IAM                 | Microsoft 365, Azure AD (Entra ID), MFA, Conditional Access       |
 | Endpoint Management  | Windows 11, Intune, BitLocker, Microsoft Defender for Endpoint    |
 | Security Monitoring  | Microsoft Sentinel, KQL, Security Alerts, Logs                    |
 | Automation           | PowerShell scripting                                              |
