@@ -16,13 +16,13 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 
 ## 🧩 Tech Stack
 
-| Area                  | Tools & Services                                           |
-|-----------------------|------------------------------------------------------------|
-| Identity & Access     | Microsoft 365, Azure AD (Entra ID), MFA, Conditional Access |
-| Endpoint Management   | Windows 11, Intune, BitLocker, Microsoft Defender for Endpoint |
-| Security Monitoring   | Microsoft Sentinel, KQL, Security Alerts, Logs             |
-| Automation            | PowerShell scripting                                       |
-| Frameworks Applied    | ISO/IEC 27001, NIST CSF, Zero Trust                         |
+| Area                | Tools & Services                                                   |
+|---------------------|--------------------------------------------------------------------|
+| Identity & Access    | Microsoft 365, Azure AD (Entra ID), MFA, Conditional Access       |
+| Endpoint Management  | Windows 11, Intune, BitLocker, Microsoft Defender for Endpoint    |
+| Security Monitoring  | Microsoft Sentinel, KQL, Security Alerts, Logs                     |
+| Automation           | PowerShell scripting                                               |
+| Frameworks Applied   | ISO/IEC 27001, NIST CSF, Zero Trust                                |
 
 ---
 
@@ -30,19 +30,16 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 
 This project is organized into several key sections, each serving a specific purpose:
 
-- **README.md** : Ce fichier contient la documentation du projet, y compris l'introduction, les objectifs, et le statut.
-- **LICENSE** : Contient des informations sur la licence du projet, ici sous licence MIT.
-- **Compliance** : Inclut des fichiers relatifs à la conformité avec les normes ISO/IEC et NIST.
-- **ZeroTrust** : Comprend un guide détaillant la mise en œuvre du modèle Zero Trust dans l'environnement.
-- **Support_IT** : Contient des scripts PowerShell automatisant diverses tâches de support informatique.
-- **Cybersecurity** : Regroupe les outils et ressources utilisés pour la surveillance de la sécurité via Microsoft Sentinel et la gestion des alertes.
-- **Incident_Response** : Documente le processus de réponse à un incident de cybersécurité (par exemple, une simulation de phishing).
-- **Screenshots** : Contient les captures d'écran liées aux investigations forensiques et à la détection des alertes.
+- **README.md** : This file contains the project documentation, including the introduction, objectives, and status.
+- **LICENSE** : Contains information about the project's license, here under the MIT License.
+- **Compliance** : Includes files related to compliance with ISO/IEC and NIST standards.
+- **ZeroTrust** : Contains a guide detailing the implementation of the Zero Trust model within the environment.
+- **Support_IT** : Contains PowerShell scripts that automate various IT support tasks.
+- **Cybersecurity** : Contains tools and resources used for security monitoring via Microsoft Sentinel and managing alerts.
+- **Incident_Response** : Documents the incident response process, such as a phishing simulation.
+- **Screenshots** : Contains screenshots related to forensic investigations and alert detection.
 
 ---
-
----
-
 
 ## 🔐 Zero Trust Implementation (Integrated)
 
@@ -64,7 +61,7 @@ This project is organized into several key sections, each serving a specific pur
 | NIST CSF DE.CM – Continuous Monitoring | Defender for Endpoint                     |
 | NIST CSF RS.RP – Response Planning | Sentinel alert triage & basic response        |
 
-[Full mapping available here](Cybersecurity/Compliance/Compliance_Mapping.md)
+*Full mapping available in `Cybersecurity/Compliance/Compliance_Mapping.md`*
 
 ---
 
@@ -72,7 +69,7 @@ This project is organized into several key sections, each serving a specific pur
 
 **Use Case:** A user opens a phishing email → endpoint is compromised → alert is triggered
 
-### Workflow:
+**Workflow:**
 
 1. Defender detects a malicious file from phishing
 2. Sentinel logs the alert and triggers high severity
@@ -81,7 +78,10 @@ This project is organized into several key sections, each serving a specific pur
    - Windows Event Viewer (IDs: 4104, 4624, 4688)
    - Browser/USB artifacts (noted only)
 5. User account disabled and isolated
-6. Root cause summary noted in [Incident_Response/Phishing_Simulation_Steps.md](Incident_Response/Phishing_Simulation_Steps.md)
+6. Root cause summary noted in `Incident_Response/Phishing_Simulation_Steps.md`
+
+---
+
 ## ⚙️ PowerShell Tools (Support IT)
 
 | Script Name              | Purpose                                        |
@@ -101,23 +101,9 @@ All key screenshots are stored in `/Screenshots`:
 
 ---
 
-## 🚀 Status
-
-✅ 100% Complete – Optimized for learning, labs, and interviews  
-📌 Designed to demonstrate both IT support & cybersecurity fundamentals
-
----
-
-## 🧠 Bonus Ideas
-
-If you'd like to expand this project:
-- Add SSO integration with a SaaS app
-- Create a simple incident response PDF report
-- Build a video walkthrough or portfolio slide
 
 ---
 
 ## 🗂️ License
 
 MIT License
-
