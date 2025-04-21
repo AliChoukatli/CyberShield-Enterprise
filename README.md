@@ -113,6 +113,6 @@ Use-case: Simulated phishing attack leading to endpoint compromise
 ### 👤 Author
    Ali Choukatli  
 📧 alichoukatli@gmail.com  
-🔗 LinkedIn : | linkedin.com/in/ali-choukatli 
+🔗 LinkedIn : linkedin.com/in/ali-choukatli 
 
 
