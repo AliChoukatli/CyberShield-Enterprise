@@ -95,7 +95,7 @@ This project is organized into several key sections, each serving a specific pur
    - Windows Event Viewer (IDs: 4104, 4624, 4688)
    - Browser/USB artifacts (noted only)
 5. User account disabled and isolated
-6. Incident_Response/Phishing_Simulation_Steps (Incident_Response/Phishing_Simulation_Steps.md).
+6. Incident_Response/Phishing_Simulation_Steps [Phishing Simulation Steps](Incident_Response/Phishing_Simulation_Steps.md).
 
 
 
