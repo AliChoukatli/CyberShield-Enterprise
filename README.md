@@ -47,6 +47,7 @@ This project is organized into several key sections, each serving a specific pur
 │   │   ├── DeployOffice365.ps1
 │   │   ├── Reset-UserPassword.ps1
 │   │   └── Get-SecurityStatus.ps1
+│
 │   └── Screenshots/                                <-- Screenshots for IT support activities
 │
 │       ├── Group_Management.png                    <-- Adding users to groups in Active Directory
@@ -64,6 +65,7 @@ This project is organized into several key sections, each serving a specific pur
 │   ├── Sentinel_Alerts_Triage/                     <-- Microsoft Sentinel alert handling
 │   │   ├── KQL_queries.txt                         <-- KQL queries used for triage
 │   │   └── Playbook_AutoResponse.json              <-- Sentinel automated response playbook
+│
 │   └── Screenshots/                                <-- Security-related screenshots
 │       ├── Sentinel_Alert.png                      <-- Detected alert in Sentinel
 │       └── Defender_Investigation.png              <-- Investigation in Microsoft Defender
@@ -71,6 +73,7 @@ This project is organized into several key sections, each serving a specific pur
 ├── Incident_Response/                              <-- Incident response processes
 │
 │   ├── Phishing_Simulation_Steps.md                <-- Steps for phishing simulation
+│
 │   └── Screenshots/                                <-- Screenshots from the simulation
 │       ├── Phishing_Email.png                      <-- Example phishing email
 │       └── EventViewer_Logs.png                    <-- Relevant Windows Event Viewer logs
