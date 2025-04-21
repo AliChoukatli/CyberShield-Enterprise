@@ -44,22 +44,22 @@ This project is organized into several key sections, each serving a specific pur
 ├── ZeroTrust/                                <-- Répertoire pour le modèle Zero Trust
 │   └── Zero_Trust_Implementation_Guide.pdf   <-- Guide de mise en œuvre Zero Trust
 
-├── Cybersecurity/                       <-- Répertoire pour la surveillance de la sécurité
-│   ├── Sentinel_Alerts_Triage/          <-- Répertoire pour les alertes et le triage de Sentinel
-│   │   ├── KQL_queries.txt              <-- Requêtes KQL
-│   │   ├── Playbook_AutoResponse.json   <-- Playbook pour la réponse automatique
+├── Cybersecurity/                            <-- Répertoire pour la surveillance de la sécurité
+│   ├── Sentinel_Alerts_Triage/               <-- Répertoire pour les alertes et le triage de Sentinel
+│   │   ├── KQL_queries.txt                   <-- Requêtes KQL
+│   │   ├── Playbook_AutoResponse.json        <-- Playbook pour la réponse automatique
 │   └── Screenshots/
 │       ├── Sentinel_Alert.png
 │       └── Defender_Investigation.png
 │
-├── Incident_Response/                  <-- Répertoire pour la réponse aux incidents
-│   ├── Phishing_Simulation_Steps.md      <-- Détails de la simulation de phishing
+├── Incident_Response/                        <-- Répertoire pour la réponse aux incidents
+│   ├── Phishing_Simulation_Steps.md          <-- Détails de la simulation de phishing
 │   └── Screenshots/
 │       ├── Phishing_Email.png
 │       └── EventViewer_Logs.png
 │
-├── Support_IT/                     <-- Répertoire pour les scripts PowerShell
-│   ├── PowerShell_Scripts/         <-- Scripts PowerShell
+├── Support_IT/                              <-- Répertoire pour les scripts PowerShell
+│   ├── PowerShell_Scripts/                  <-- Scripts PowerShell
 │   │   ├── DeployOffice365.ps1
 │   │   ├── Reset-UserPassword.ps1
 │   │   └── Get-SecurityStatus.ps1
