@@ -30,24 +30,24 @@ This project is organized into several key sections, each serving a specific pur
 ```
 - /Projet_IT_Support_Cybersec/
 │
-├── README.md
-├── LICENSE
-├── Compliance/
+├── README.md : This file contains the project documentation, including the introduction, objectives, and status.
+├── LICENSE :  Contains information about the project's license, here under the MIT License.
+├── Compliance/ : Includes files related to compliance with ISO/IEC and NIST standards.
 │   └── Mapping_ISO_NIST.xlsx
-├── ZeroTrust/
+├── ZeroTrust/ : Contains a guide detailing the implementation of the Zero Trust model within the environment.
 │   └── Zero_Trust_Implementation_Guide.pdf
-├── Support_IT/
+├── Support_IT/ : Contains PowerShell scripts that automate various IT support tasks.
 │   └── PowerShell_Scripts/
 │       ├── DeployOffice365.ps1
 │       ├── Reset-UserPassword.ps1
 │       └── Get-SecurityStatus.ps1
-├── Cybersecurity/
+├── Cybersecurity/  : Contains tools and resources used for security monitoring via Microsoft Sentinel and managing alerts.
 │   └── Sentinel_Alerts_Triage/
 │       ├── KQL_queries.txt
 │       └── Playbook_AutoResponse.json
-├── Incident_Response/
+├── Incident_Response/ : Documents the incident response process, such as a phishing simulation.
 │   └── Phishing_Simulation_Steps.md
-├── Screenshots/
+├── Screenshots/ : Contains screenshots related to forensic investigations and alert detection.
 │   └── Forensics_Analysis/
 
 ---
