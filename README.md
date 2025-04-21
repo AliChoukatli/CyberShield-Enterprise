@@ -133,7 +133,7 @@ This project is organized into several key sections, each serving a specific pur
 
 
 
-🖼️ Screenshots Summary
+## 🖼️ Screenshots Summary
 📁 Cybersecurity/Screenshots/
 
 Sentinel_Alert.png – Alert detection via Microsoft Sentinel
