@@ -27,15 +27,11 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 ---
 
 ## 📁 Project Structure
-/Projet_IT_Support_Cybersec/ 
-│ 
-├── README.md 
-# Project documentation ├── LICENSE 
-# License file (MIT License) ├── Compliance/ # Compliance-related files 
-│ └── Mapping_ISO_NIST.xlsx 
-# Compliance mapping (ISO & NIST) ├── ZeroTrust/ 
-# Zero Trust related materials │ └── Zero_Trust_Implementation_Guide.pdf 
-# Guide for Zero Trust implementation ├── Support_IT/ # IT support scripts and tools │ └── PowerShell_Scripts/ # PowerShell scripts for automation │ ├── DeployOffice365.ps1 # Auto-install Office for new endpoints │ ├── Reset-UserPassword.ps1 # Helpdesk password reset tool │ └── Get-SecurityStatus.ps1 # Export security compliance status from Intune ├── Cybersecurity/ # Cybersecurity-related content │ └── Sentinel_Alerts_Triage/ # Files related to Sentinel alerts triage │ ├── KQL_queries.txt # KQL queries for log analysis │ └── Playbook_AutoResponse.json # Playbook for automated incident response ├── Incident_Response/ # Incident response-related documentation │ └── Phishing_Simulation_Steps.md # Steps for phishing simulation incident ├── Screenshots/ # Screenshots for demonstration │ └── Forensics_Analysis/ # Screenshots of forensic analysis steps
+
+This project is organized into several key sections, each serving a specific purpose:
+
+ 
+/Projet_IT_Support_Cybersec/ │ ├── README.md # Project documentation (this file) ├── LICENSE # License information (MIT License) │ ├── Compliance/ # Compliance-related files │ └── Mapping_ISO_NIST.xlsx # Mapping of ISO/IEC and NIST controls │ ├── ZeroTrust/ # Zero Trust-related resources │ └── Zero_Trust_Implementation_Guide.pdf # Guide for implementing Zero Trust in the environment │ ├── Support_IT/ # IT support-related automation and scripts │ └── PowerShell_Scripts/ # PowerShell scripts to automate IT tasks │ ├── DeployOffice365.ps1 # Script to deploy Office 365 to new endpoints │ ├── Reset-UserPassword.ps1 # Password reset tool for helpdesk │ └── Get-SecurityStatus.ps1 # Export security compliance status from Intune │ ├── Cybersecurity/ # Cybersecurity monitoring and alert triage resources │ └── Sentinel_Alerts_Triage/ # Tools and configurations for Sentinel alert triage │ ├── KQL_queries.txt # KQL queries for filtering high-severity alerts │ └── Playbook_AutoResponse.json # Playbook for automated alert responses in Sentinel │ ├── Incident_Response/ # Incident response documentation and steps │ └── Phishing_Simulation_Steps.md # Detailed steps for phishing simulation and response │ ├── Screenshots/ # Screenshots for evidence and documentation │ └── Forensics_Analysis/ # Screenshots of forensics analysis, event logs, and alerts
 
 
 ---
