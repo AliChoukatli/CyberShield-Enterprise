@@ -68,15 +68,16 @@ This project is organized into several key sections, each serving a specific pur
 
 ## 📄 Compliance Mapping (Summary)
 
-| Framework Control                  | Implementation                               |
-|------------------------------------|-----------------------------------------------|
-| ISO/IEC 27001 A.9.2 – User Access  | Azure AD, Conditional Access                  |
-| ISO/IEC 27001 A.12.4 – Logging     | Microsoft Defender, Sentinel Logs             |
-| NIST CSF PR.AC – Access Control    | Identity and role-based access setup          |
-| NIST CSF DE.CM – Continuous Monitoring | Defender for Endpoint                     |
-| NIST CSF RS.RP – Response Planning | Sentinel alert triage & basic response        |
+| Framework         | Control ID         | Implementation Example                      |
+|-------------------|--------------------|---------------------------------------------|
+| ISO/IEC 27001     | A.9.2 – User Access| Azure AD, Conditional Access                |
+| ISO/IEC 27001     | A.12.4 – Logging   | Microsoft Defender, Sentinel Logs           |
+| NIST CSF          | PR.AC – Access Ctrl| Identity and Role-Based Access Setup        |
+| NIST CSF          | DE.CM – Monitoring | Defender for Endpoint Continuous Monitoring |
+| NIST CSF          | RS.RP – Response   | Sentinel Alert Triage and Response          |
 
-*Full mapping available in `Cybersecurity/Compliance/Compliance_Mapping.md`*
+🔗 **Full version available in** [Mapping_ISO_NIST.xlsx](./Mapping_ISO_NIST.xlsx)
+
 
 
 
