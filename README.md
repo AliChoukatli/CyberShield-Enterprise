@@ -18,10 +18,6 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 
 This project is organized into several key sections, each serving a specific purpose:
 
-# 📁 Project Structure
-
-This project is organized into several key sections, each serving a specific purpose:
-
 ```
 /Projet_IT_Support_Cybersec/
 │
