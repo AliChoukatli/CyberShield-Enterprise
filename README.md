@@ -41,9 +41,6 @@ This project is organized into several key sections, each serving a specific pur
 ---
 
 
-
----
-
 ## 🔐 Zero Trust Implementation (Integrated)
 
 | Principle         | Implementation                                     |
@@ -101,9 +98,6 @@ All key screenshots are stored in `/Screenshots`:
 - Alert detection from Sentinel
 - Defender investigation page
 - Forensics: Windows Event Viewer logs
-
----
-
 
 ---
 
