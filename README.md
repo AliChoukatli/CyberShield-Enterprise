@@ -27,6 +27,7 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 ---
 
 ## 📁 Project Structure
+/Projet_IT_Support_Cybersec/ │ ├── README.md ├── LICENSE ├── Compliance/ │ └── Mapping_ISO_NIST.xlsx ├── ZeroTrust/ │ └── Zero_Trust_Implementation_Guide.pdf ├── Support_IT/ │ └── PowerShell_Scripts/ │ ├── DeployOffice365.ps1 │ ├── Reset-UserPassword.ps1 │ └── Get-SecurityStatus.ps1 ├── Cybersecurity/ │ └── Sentinel_Alerts_Triage/ │ ├── KQL_queries.txt │ └── Playbook_AutoResponse.json ├── Incident_Response/ │ └── Phishing_Simulation_Steps.md ├── Screenshots/ │ └── Forensics_Analysis/
 
 
 ---
