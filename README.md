@@ -27,6 +27,7 @@ This project is organized into several key sections, each serving a specific pur
 - **Incident_Response** : Documents the incident response process, such as a phishing simulation.
 - **Screenshots** : Contains screenshots related to forensic investigations and alert detection.
 
+```
 - /Projet_IT_Support_Cybersec/
 │
 ├── README.md
@@ -50,6 +51,7 @@ This project is organized into several key sections, each serving a specific pur
 │   └── Forensics_Analysis/
 
 ---
+```
 
 ## 🧩 Tools
 
