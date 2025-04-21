@@ -27,7 +27,7 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 | Automation           | PowerShell scripting                                              |
 | Frameworks Applied   | ISO/IEC 27001, NIST CSF, Zero Trust                               |
 
-# 📁 Project Structure
+## 📁 Project Structure
 
 This project is organized into several key sections, each serving a specific purpose:
 
