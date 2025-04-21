@@ -70,8 +70,6 @@ This project is organized into several key sections, each serving a specific pur
 │   └── Screenshots/                          <-- Captures liées à l'analyse post-incident
 │       ├── Logon_Event_4624.png              <-- Connexion suspecte
 │       └── PowerShell_4104.png               <-- Script PowerShell malveillant exécuté
-
-
 ```
 
 
