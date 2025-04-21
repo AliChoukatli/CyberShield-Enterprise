@@ -49,8 +49,15 @@ This project is organized into several key sections, each serving a specific pur
 │   │   ├── Reset-UserPassword.ps1
 │   │   └── Get-SecurityStatus.ps1
 │   └── Screenshots/                          <-- Captures pour les tâches IT
-│       ├── AD_User_Creation.png
-│       └── Group_Management.png
+│       ├── Group_Management.png                  <-- Ajout d'utilisateur à un groupe
+│       ├── Password_Reset_AD.png                 <-- Réinitialisation de mot de passe
+│       ├── AD_Permissions_Management.png         <-- Gestion des permissions
+│       ├── Remote_Support_TeamViewer.png         <-- Assistance via TeamViewer
+│       ├── Remote_Desktop_Session.png            <-- Assistance via RDP
+│       ├── Device_Manager_Troubleshooting.png    <-- Diagnostic dans le gestionnaire de périphériques
+│       ├── Windows_Network_Troubleshooter.png    <-- Dépannage réseau Windows
+│       ├── CMD_Ping_Test.png                     <-- Test réseau (ping)
+│       └── CMD_Ipconfig_Results.png              <-- Vérification de config réseau (ipconfig)
 │
 ├── Cybersecurity/                            <-- Répertoire pour la surveillance de la sécurité
 │   ├── Sentinel_Alerts_Triage/               <-- Répertoire pour les alertes et le triage de Sentinel
