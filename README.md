@@ -37,7 +37,6 @@ This project is organized into several key sections, each serving a specific pur
 ├── README.md                                       <-- Project documentation
 ├── LICENSE                                         <-- Project license information
 │
-│
 ├── ZeroTrust/                                      <-- Zero Trust security model
 │   └── Zero_Trust_Implementation_Guide.pdf         <-- Zero Trust implementation guide
 │
