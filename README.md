@@ -14,18 +14,6 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 
 ---
 
-## 🧩 Tech Stack
-
-| Area                | Tools & Services                                                   |
-|---------------------|--------------------------------------------------------------------|
-| Identity & Access    | Microsoft 365, Azure AD (Entra ID), MFA, Conditional Access       |
-| Endpoint Management  | Windows 11, Intune, BitLocker, Microsoft Defender for Endpoint    |
-| Security Monitoring  | Microsoft Sentinel, KQL, Security Alerts, Logs                     |
-| Automation           | PowerShell scripting                                               |
-| Frameworks Applied   | ISO/IEC 27001, NIST CSF, Zero Trust                                |
-
----
-
 ## 📁 Project Structure
 
 This project is organized into several key sections, each serving a specific purpose:
@@ -38,6 +26,20 @@ This project is organized into several key sections, each serving a specific pur
 - **Cybersecurity** : Contains tools and resources used for security monitoring via Microsoft Sentinel and managing alerts.
 - **Incident_Response** : Documents the incident response process, such as a phishing simulation.
 - **Screenshots** : Contains screenshots related to forensic investigations and alert detection.
+
+## 🧩 Tools
+
+| Area                | Tools & Services                                                   |
+|---------------------|--------------------------------------------------------------------|
+| Identity & Access    | Microsoft 365, Azure AD (Entra ID), MFA, Conditional Access       |
+| Endpoint Management  | Windows 11, Intune, BitLocker, Microsoft Defender for Endpoint    |
+| Security Monitoring  | Microsoft Sentinel, KQL, Security Alerts, Logs                     |
+| Automation           | PowerShell scripting                                               |
+| Frameworks Applied   | ISO/IEC 27001, NIST CSF, Zero Trust                                |
+
+---
+
+
 
 ---
 
