@@ -34,49 +34,49 @@ This project is organized into several key sections, each serving a specific pur
 ```
 /Secure_IT_for_SMB/                           <-- Main project directory
 │
-├── README.md                                 <-- Project documentation
-├── LICENSE                                   <-- Project license information
+├── README.md                                       <-- Project documentation
+├── LICENSE                                         <-- Project license information
 │
-├── Compliance/                               <-- Compliance and standards
-│   └── Mapping_ISO_NIST.xlsx                 <-- ISO/NIST mapping spreadsheet
+├── Compliance/                                     <-- Compliance and standards
+│   └── Mapping_ISO_NIST.xlsx                       <-- ISO/NIST mapping spreadsheet
 │
-├── ZeroTrust/                                <-- Zero Trust security model
-│   └── Zero_Trust_Implementation_Guide.pdf   <-- Zero Trust implementation guide
+├── ZeroTrust/                                      <-- Zero Trust security model
+│   └── Zero_Trust_Implementation_Guide.pdf         <-- Zero Trust implementation guide
 │
-├── Support_IT/                               <-- Technical support tasks and scripts
-│   ├── PowerShell_Scripts/                   <-- PowerShell scripts for common tasks
+├── Support_IT/                                     <-- Technical support tasks and scripts
+│   ├── PowerShell_Scripts/                         <-- PowerShell scripts for common tasks
 │   │   ├── DeployOffice365.ps1
 │   │   ├── Reset-UserPassword.ps1
 │   │   └── Get-SecurityStatus.ps1
-│   └── Screenshots/                          <-- Screenshots for IT support activities
-│       ├── Group_Management.png              <-- Adding users to groups in Active Directory
-│       ├── Password_Reset_AD.png             <-- Resetting a user's password in AD
-│       ├── AD_Permissions_Management.png     <-- Managing permissions in Active Directory
-│       ├── Remote_Support_TeamViewer.png     <-- Remote support session using TeamViewer
-│       ├── Remote_Desktop_Session.png        <-- Remote Desktop session with a user
-│       ├── Device_Manager_Troubleshooting.png <-- Troubleshooting via Device Manager
-│       ├── Windows_Network_Troubleshooter.png <-- Windows network troubleshooting tool
-│       ├── CMD_Ping_Test.png                 <-- Network ping test
-│       └── CMD_Ipconfig_Results.png          <-- IP configuration (ipconfig) output
+│   └── Screenshots/                                <-- Screenshots for IT support activities
+│       ├── Group_Management.png                    <-- Adding users to groups in Active Directory
+│       ├── Password_Reset_AD.png                   <-- Resetting a user's password in AD
+│       ├── AD_Permissions_Management.png           <-- Managing permissions in Active Directory
+│       ├── Remote_Support_TeamViewer.png           <-- Remote support session using TeamViewer
+│       ├── Remote_Desktop_Session.png              <-- Remote Desktop session with a user
+│       ├── Device_Manager_Troubleshooting.png      <-- Troubleshooting via Device Manager
+│       ├── Windows_Network_Troubleshooter.png      <-- Windows network troubleshooting tool
+│       ├── CMD_Ping_Test.png                       <-- Network ping test
+│       └── CMD_Ipconfig_Results.png                <-- IP configuration (ipconfig) output
 │
-├── Cybersecurity/                            <-- Security monitoring and response
-│   ├── Sentinel_Alerts_Triage/               <-- Microsoft Sentinel alert handling
-│   │   ├── KQL_queries.txt                   <-- KQL queries used for triage
-│   │   └── Playbook_AutoResponse.json        <-- Sentinel automated response playbook
-│   └── Screenshots/                          <-- Security-related screenshots
-│       ├── Sentinel_Alert.png                <-- Detected alert in Sentinel
-│       └── Defender_Investigation.png        <-- Investigation in Microsoft Defender
+├── Cybersecurity/                                  <-- Security monitoring and response
+│   ├── Sentinel_Alerts_Triage/                     <-- Microsoft Sentinel alert handling
+│   │   ├── KQL_queries.txt                         <-- KQL queries used for triage
+│   │   └── Playbook_AutoResponse.json              <-- Sentinel automated response playbook
+│   └── Screenshots/                                <-- Security-related screenshots
+│       ├── Sentinel_Alert.png                      <-- Detected alert in Sentinel
+│       └── Defender_Investigation.png              <-- Investigation in Microsoft Defender
 │
-├── Incident_Response/                        <-- Incident response processes
-│   ├── Phishing_Simulation_Steps.md          <-- Steps for phishing simulation
-│   └── Screenshots/                          <-- Screenshots from the simulation
-│       ├── Phishing_Email.png                <-- Example phishing email
-│       └── EventViewer_Logs.png              <-- Relevant Windows Event Viewer logs
+├── Incident_Response/                              <-- Incident response processes
+│   ├── Phishing_Simulation_Steps.md                <-- Steps for phishing simulation
+│   └── Screenshots/                                <-- Screenshots from the simulation
+│       ├── Phishing_Email.png                      <-- Example phishing email
+│       └── EventViewer_Logs.png                    <-- Relevant Windows Event Viewer logs
 │
-├── Forensics_Analysis/                       <-- Forensic investigation evidence
-│   └── Screenshots/                          <-- Screenshots from post-incident analysis
-│       ├── Logon_Event_4624.png              <-- Suspicious logon (Event ID 4624)
-│       └── PowerShell_4104.png               <-- Malicious PowerShell script (Event ID 4104)
+├── Forensics_Analysis/                             <-- Forensic investigation evidence
+│   └── Screenshots/                                <-- Screenshots from post-incident analysis
+│       ├── Logon_Event_4624.png                    <-- Suspicious logon (Event ID 4624)
+│       └── PowerShell_4104.png                     <-- Malicious PowerShell script (Event ID 4104)
 ```
 
 
