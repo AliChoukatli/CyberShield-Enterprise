@@ -22,7 +22,7 @@ This project is organized into several key sections, each serving a specific pur
 /Projet_IT_Support_Cybersec/
 │
 ├── README.md : This file contains the project documentation, including the introduction, objectives, and status.
-├── LICENSE : Contains information about the project's license, here under the MIT License.
+├── LICENSE : Contains information about the project's license.
 ├── Compliance/ : Includes files related to compliance with ISO/IEC and NIST standards.
 │   └── Mapping_ISO_NIST.xlsx
 ├── ZeroTrust/ : Contains a guide detailing the implementation of the Zero Trust model within the environment.
