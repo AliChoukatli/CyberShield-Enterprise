@@ -26,6 +26,7 @@ This project is organized into several key sections, each serving a specific pur
 - **Cybersecurity** : Contains tools and resources used for security monitoring via Microsoft Sentinel and managing alerts.
 - **Incident_Response** : Documents the incident response process, such as a phishing simulation.
 - **Screenshots** : Contains screenshots related to forensic investigations and alert detection.
+---
 
 ## 🧩 Tools
 
