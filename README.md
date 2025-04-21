@@ -58,16 +58,16 @@ This project is organized into several key sections, each serving a specific pur
 │       ├── Phishing_Email.png
 │       └── EventViewer_Logs.png
 │
-├── Support_IT/                              <-- Répertoire pour les scripts PowerShell
-│   ├── PowerShell_Scripts/                  <-- Scripts PowerShell
+├── Support_IT/                               <-- Répertoire pour les scripts PowerShell
+│   ├── PowerShell_Scripts/                   <-- Scripts PowerShell
 │   │   ├── DeployOffice365.ps1
 │   │   ├── Reset-UserPassword.ps1
 │   │   └── Get-SecurityStatus.ps1
 │   └── Screenshots/
 │       ├── AD_User_Creation.png
 │       └── Group_Management.png
-├── Screenshots/                             <-- Répertoire pour les captures d'écran
-│   └── Forensics_Analysis/                  <-- Répertoire pour les analyses forensiques
+├── Screenshots/                              <-- Répertoire pour les captures d'écran
+│   └── Forensics_Analysis/                   <-- Répertoire pour les analyses forensiques
 ```
 
 
