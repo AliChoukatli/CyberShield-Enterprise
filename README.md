@@ -42,7 +42,7 @@ This project is organized into several key sections, each serving a specific pur
 │
 ├── ZeroTrust/                                <-- Répertoire pour le modèle Zero Trust
 │   └── Zero_Trust_Implementation_Guide.pdf   <-- Guide de mise en œuvre Zero Trust
-
+|
 ├── Support_IT/                               <-- Répertoire pour le support technique
 │   ├── PowerShell_Scripts/                   <-- Scripts PowerShell
 │   │   ├── DeployOffice365.ps1
