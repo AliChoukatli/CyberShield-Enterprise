@@ -48,6 +48,7 @@ This project is organized into several key sections, each serving a specific pur
 │   │   ├── Reset-UserPassword.ps1
 │   │   └── Get-SecurityStatus.ps1
 │   └── Screenshots/                                <-- Screenshots for IT support activities
+│
 │       ├── Group_Management.png                    <-- Adding users to groups in Active Directory
 │       ├── Password_Reset_AD.png                   <-- Resetting a user's password in AD
 │       ├── AD_Permissions_Management.png           <-- Managing permissions in Active Directory
