@@ -67,7 +67,7 @@ This project is organized into several key sections, each serving a specific pur
 │       ├── AD_User_Creation.png
 │       └── Group_Management.png
 │ 
-├──    Forensics_Analysis/                    <-- Répertoire pour les analyses forensiques
+├── Forensics_Analysis/                    <-- Répertoire pour les analyses forensiques
 │── └── Screenshots/                 
        ├── Logon_Event_4624.png` – Connexion suspecte
        ├── PowerShell_4104.png` – Script PowerShell malveillant exécuté
