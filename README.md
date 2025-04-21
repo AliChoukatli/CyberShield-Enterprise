@@ -32,51 +32,51 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 This project is organized into several key sections, each serving a specific purpose:
 
 ```
-/Secure_IT_for_SMB/                           <-- Répertoire principal du projet
+/Secure_IT_for_SMB/
+├── README.md
+├── LICENSE
 │
-├── README.md                                 <-- Fichier de documentation du projet
-├── LICENSE                                   <-- Informations sur la licence du projet
+├── Compliance/
+│   └── Mapping_ISO_NIST.xlsx
 │
-├── Compliance/                               <-- Répertoire pour la conformité et les normes
-│   └── Mapping_ISO_NIST.xlsx                 <-- Fichier Excel pour le mapping ISO/NIST
+├── ZeroTrust/
+│   └── Zero_Trust_Implementation_Guide.pdf
 │
-├── ZeroTrust/                                <-- Répertoire pour le modèle Zero Trust
-│   └── Zero_Trust_Implementation_Guide.pdf   <-- Guide de mise en œuvre Zero Trust
-|
-├── Support_IT/                               <-- Répertoire pour le support technique
-│   ├── PowerShell_Scripts/                   <-- Scripts PowerShell
+├── Support_IT/
+│   ├── PowerShell_Scripts/
 │   │   ├── DeployOffice365.ps1
 │   │   ├── Reset-UserPassword.ps1
 │   │   └── Get-SecurityStatus.ps1
-│   └── Screenshots/                          <-- Captures pour les tâches IT
-│       ├── Group_Management.png                  <-- Ajout d'utilisateur à un groupe
-│       ├── Password_Reset_AD.png                 <-- Réinitialisation de mot de passe
-│       ├── AD_Permissions_Management.png         <-- Gestion des permissions
-│       ├── Remote_Support_TeamViewer.png         <-- Assistance via TeamViewer
-│       ├── Remote_Desktop_Session.png            <-- Assistance via RDP
-│       ├── Device_Manager_Troubleshooting.png    <-- Diagnostic dans le gestionnaire de périphériques
-│       ├── Windows_Network_Troubleshooter.png    <-- Dépannage réseau Windows
-│       ├── CMD_Ping_Test.png                     <-- Test réseau (ping)
-│       └── CMD_Ipconfig_Results.png              <-- Vérification de config réseau (ipconfig)
+│   └── Screenshots/
+│       ├── Group_Management.png
+│       ├── Password_Reset_AD.png
+│       ├── AD_Permissions_Management.png
+│       ├── Remote_Support_TeamViewer.png
+│       ├── Remote_Desktop_Session.png
+│       ├── Device_Manager_Troubleshooting.png
+│       ├── Windows_Network_Troubleshooter.png
+│       ├── CMD_Ping_Test.png
+│       └── CMD_Ipconfig_Results.png
 │
-├── Cybersecurity/                            <-- Répertoire pour la surveillance de la sécurité
-│   ├── Sentinel_Alerts_Triage/               <-- Répertoire pour les alertes et le triage de Sentinel
-│   │   ├── KQL_queries.txt                   <-- Requêtes KQL
-│   │   └── Playbook_AutoResponse.json        <-- Playbook pour la réponse automatique
-│   └── Screenshots/                          <-- Captures liées à la cybersécurité
+├── Cybersecurity/
+│   ├── Sentinel_Alerts_Triage/
+│   │   ├── KQL_queries.txt
+│   │   └── Playbook_AutoResponse.json
+│   └── Screenshots/
 │       ├── Sentinel_Alert.png
 │       └── Defender_Investigation.png
 │
-├── Incident_Response/                        <-- Répertoire pour la réponse aux incidents
-│   ├── Phishing_Simulation_Steps.md          <-- Détails de la simulation de phishing
-│   └── Screenshots/                          <-- Captures spécifiques à la simulation d'incident
+├── Incident_Response/
+│   ├── Phishing_Simulation_Steps.md
+│   └── Screenshots/
 │       ├── Phishing_Email.png
 │       └── EventViewer_Logs.png
 │
-├── Forensics_Analysis/                       <-- Répertoire pour les preuves forensiques
-│   └── Screenshots/                          <-- Captures liées à l'analyse post-incident
-│       ├── Logon_Event_4624.png              <-- Connexion suspecte
-│       └── PowerShell_4104.png               <-- Script PowerShell malveillant exécuté
+├── Forensics_Analysis/
+│   └── Screenshots/
+│       ├── Logon_Event_4624.png
+│       └── PowerShell_4104.png
+
 ```
 
 
