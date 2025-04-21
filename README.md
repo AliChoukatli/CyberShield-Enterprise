@@ -71,11 +71,13 @@ This project is organized into several key sections, each serving a specific pur
 ├── Incident_Response/                              <-- Incident response processes
 │
 │   ├── Phishing_Simulation_Steps.md                <-- Steps for phishing simulation
+│
 │   └── Screenshots/                                <-- Screenshots from the simulation
 │       ├── Phishing_Email.png                      <-- Example phishing email
 │       └── EventViewer_Logs.png                    <-- Relevant Windows Event Viewer logs
 │
 ├── Forensics_Analysis/                             <-- Forensic investigation evidence
+│
 │   └── Screenshots/                                <-- Screenshots from post-incident analysis
 │       ├── Logon_Event_4624.png                    <-- Suspicious logon (Event ID 4624)
 │       └── PowerShell_4104.png                     <-- Malicious PowerShell script (Event ID 4104)
