@@ -32,6 +32,11 @@ This project is organized into several key sections, each serving a specific pur
 
 This project is organized into several key sections, each serving a specific purpose:
 
+# 📁 Project Structure
+
+This project is organized into several key sections, each serving a specific purpose:
+
+```
 /Projet_IT_Support_Cybersec/
 │
 ├── README.md : This file contains the project documentation, including the introduction, objectives, and status.
@@ -54,7 +59,7 @@ This project is organized into several key sections, each serving a specific pur
 ├── Screenshots/ : Contains screenshots related to forensic investigations and alert detection.
 │   └── Forensics_Analysis/
 
-
+```
 ---
 
 
