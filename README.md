@@ -1,123 +1,113 @@
-# SecureIT-for-SMB
-# 💼 SecureIT for SMB – Support IT & Cybersecurity Project
+# 🛡️ IT Support & Cybersecurity Project – Small Business Simulation (25 Users)
 
-## 🎯 Project Overview
-This project demonstrates a full implementation of IT support and cybersecurity for a fictional small business (25 employees), applying modern security practices based on the **Zero Trust model**, **ISO/IEC 27001**, and **NIST Cybersecurity Framework (CSF)**.
-
-The environment uses:
-- **Microsoft 365, Azure AD (Entra ID), Intune, and Sentinel**
-- **BitLocker, MFA, Conditional Access**
-- **Defender for Endpoint**
-- **Automated scripting with PowerShell**
+This project simulates the implementation of a secure, cloud-based IT environment for a fictional small business with 25 employees. It follows modern best practices including the Zero Trust model, ISO/IEC 27001, and the NIST Cybersecurity Framework (CSF), using Microsoft 365, Azure AD (Entra ID), Intune, Microsoft Defender, and Sentinel.
 
 ---
 
-## 🧱 Infrastructure Overview
-- Choix du tenant Microsoft 365 (E5 Trial possible)
+## 🧱 Objectives
 
-- Paramétrage du domaine personnalisé (facultatif)
-
-- Vue d’ensemble de l’architecture (schéma réseau, flux)
-
-### 👥 Identity & Access Management (IAM)
-- Azure AD users and groups
-- Conditional Access based on device compliance & location
-- MFA enforced for all accounts
-- Role-Based Access Control (RBAC)
-
-### 💻 Endpoint Management
-- Windows 11 deployment with Windows Autopilot
-- Configuration via Intune: apps, security baselines, BitLocker
-- Update & patch management
-- Defender for Endpoint active monitoring
-
-### 🔐 Security Operations (SOC Lite)
-- Integration with Microsoft Sentinel
-- Collection of sign-in logs and security alerts
-- Alert triage with KQL queries
-- Basic playbook to auto-respond to high severity alerts
+- Deploy a modern cloud IT infrastructure
+- Apply cybersecurity best practices (Zero Trust, ISO/NIST)
+- Manage identities, endpoints, and security operations
+- Simulate a phishing attack and incident response workflow
+- Automate common IT support tasks using PowerShell
 
 ---
 
-## 📜 Compliance Mapping
+## 🧩 Tech Stack
 
-| Control | Implementation |
-|--------|----------------|
-| ISO/IEC 27001 A.9.2 – User Access | Azure AD + Conditional Access |
-| ISO/IEC 27001 A.12.4 – Logging | Microsoft Sentinel, Defender |
-| NIST CSF – PR.AC | Identity and access configured |
-| NIST CSF – DE.CM | Continuous monitoring via Defender |
-| NIST CSF – RS.RP | Alert response playbooks in Sentinel |
-
-📄 [Full compliance mapping here](./Cybersecurity/Compliance_Mapping_ISO_NIST.md)
+| Area                  | Tools & Services                                           |
+|-----------------------|------------------------------------------------------------|
+| Identity & Access     | Microsoft 365, Azure AD (Entra ID), MFA, Conditional Access |
+| Endpoint Management   | Windows 11, Intune, BitLocker, Microsoft Defender for Endpoint |
+| Security Monitoring   | Microsoft Sentinel, KQL, Security Alerts, Logs             |
+| Automation            | PowerShell scripting                                       |
+| Frameworks Applied    | ISO/IEC 27001, NIST CSF, Zero Trust                         |
 
 ---
 
-## 🔥 Zero Trust Implementation
+## 📁 Project Structure
 
-| Principle | Implementation |
-|----------|----------------|
-| Verify explicitly | MFA + Device compliance + Sign-in risk |
-| Least privilege | RBAC + Limited access |
-| Assume breach | Endpoint isolation, logging, Defender for Endpoint alerts |
-
-📄 [Zero Trust model documentation](./Cybersecurity/ZeroTrust_Model.md)
 
 ---
 
-## ⚙️ PowerShell Scripts
+## 🔐 Zero Trust Implementation (Integrated)
 
-In the `/Support_IT/PowerShell_Scripts` folder:
-- `DeployOffice365.ps1`: auto-installs Office
-- `Reset-UserPassword.ps1`: helpdesk password reset tool
-- `Get-SecurityStatus.ps1`: exports security compliance status from Intune
+| Principle         | Implementation                                     |
+|-------------------|----------------------------------------------------|
+| Verify explicitly | MFA, device compliance, and sign-in risk policies |
+| Least privilege   | RBAC with limited access permissions               |
+| Assume breach     | Endpoint monitoring, isolation, security alerts   |
 
 ---
 
-## 📊 Sentinel Triage & Playbook
+## 📄 Compliance Mapping (Summary)
 
-In `/Cybersecurity/Sentinel_Alerts_Triage`:
-- Sample logs
-- KQL query to filter high-severity alerts:
-```kql
-SecurityAlert 
-| where Severity == "High" 
-| where TimeGenerated > ago(7d)
-```
+| Framework Control                  | Implementation                               |
+|------------------------------------|-----------------------------------------------|
+| ISO/IEC 27001 A.9.2 – User Access  | Azure AD, Conditional Access                  |
+| ISO/IEC 27001 A.12.4 – Logging     | Microsoft Defender, Sentinel Logs             |
+| NIST CSF PR.AC – Access Control    | Identity and role-based access setup          |
+| NIST CSF DE.CM – Continuous Monitoring | Defender for Endpoint                     |
+| NIST CSF RS.RP – Response Planning | Sentinel alert triage & basic response        |
 
-## 🧪 Forensics & Incident Response
-Use-case: Simulated phishing attack leading to endpoint compromise
+*Full mapping available in `Cybersecurity/Compliance/Compliance_Mapping.md`*
 
-🔍 Steps:
+---
 
-1 - Alert triggered in Microsoft Defender for Endpoint (phishing email opened).
+## 🧪 Incident Response Simulation
 
-2 - Sentinel receives log and generates an alert.
+**Use Case:** A user opens a phishing email → endpoint is compromised → alert is triggered
 
-3 - Alert is triaged manually via KQL.
+**Workflow:**
 
-4 - Evidence collected using:
+1. Defender detects a malicious file from phishing
+2. Sentinel logs the alert and triggers high severity
+3. Triage done using KQL and log review
+4. Forensic evidence collected:
+   - Windows Event Viewer (IDs: 4104, 4624, 4688)
+   - Browser/USB artifacts (noted only)
+5. User account disabled and isolated
+6. Root cause summary noted in `Incident_Response/Phishing_Simulation_Steps.md`
 
-   - Windows Event Viewer (event ID 4104, 4624, 4688)
+---
 
-   - Autopsy (USB artifacts, browser history)
+## ⚙️ PowerShell Tools (Support IT)
 
-   - X-Ways or FTK Imager for disk imaging and analysis
+| Script Name              | Purpose                                        |
+|--------------------------|------------------------------------------------|
+| DeployOffice365.ps1      | Auto-install Office for new endpoints          |
+| Reset-UserPassword.ps1   | Helpdesk password reset tool                   |
+| Get-SecurityStatus.ps1   | Export security compliance status from Intune  |
 
-5 - Affected user account disabled.
+---
 
-6 - Root cause documented in a forensic report.
+## 📸 Screenshots
 
-## 📁 See details in /Incident_Response/Phishing_Alert_Playbook.pdf
+All key screenshots are stored in `/Screenshots`:
+- Alert detection from Sentinel
+- Defender investigation page
+- Forensics: Windows Event Viewer logs
 
-## 📸 Screenshots available in /Screenshots/Forensics_Analysis/
+---
 
-## 📚 Tools Used 
-![image](https://github.com/user-attachments/assets/6ea33308-aac0-439b-9b78-638dec1fc0e2)
+## 🚀 Status
 
-### 👤 Author
-   Ali Choukatli  
-📧 alichoukatli@gmail.com  
-🔗 LinkedIn : linkedin.com/in/ali-choukatli 
+✅ 100% Complete – Optimized for learning, labs, and interviews  
+📌 Designed to demonstrate both IT support & cybersecurity fundamentals
 
+---
+
+## 🧠 Bonus Ideas
+
+If you'd like to expand this project:
+- Add SSO integration with a SaaS app
+- Create a simple incident response PDF report
+- Build a video walkthrough or portfolio slide
+
+---
+
+## 🗂️ License
+
+MIT License
 
