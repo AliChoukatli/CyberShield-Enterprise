@@ -30,12 +30,6 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 
 This project is organized into several key sections, each serving a specific purpose:
 
- 
-
----
-
-### Explication des sections :
-
 - **README.md** : Ce fichier contient la documentation du projet, y compris l'introduction, les objectifs, et le statut.
 - **LICENSE** : Contient des informations sur la licence du projet, ici sous licence MIT.
 - **Compliance** : Inclut des fichiers relatifs à la conformité avec les normes ISO/IEC et NIST.
