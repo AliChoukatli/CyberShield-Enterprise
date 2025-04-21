@@ -42,6 +42,15 @@ This project is organized into several key sections, each serving a specific pur
 │
 ├── ZeroTrust/                                <-- Répertoire pour le modèle Zero Trust
 │   └── Zero_Trust_Implementation_Guide.pdf   <-- Guide de mise en œuvre Zero Trust
+
+├── Support_IT/                               <-- Répertoire pour le support technique
+│   ├── PowerShell_Scripts/                   <-- Scripts PowerShell
+│   │   ├── DeployOffice365.ps1
+│   │   ├── Reset-UserPassword.ps1
+│   │   └── Get-SecurityStatus.ps1
+│   └── Screenshots/                          <-- Captures pour les tâches IT
+│       ├── AD_User_Creation.png
+│       └── Group_Management.png
 │
 ├── Cybersecurity/                            <-- Répertoire pour la surveillance de la sécurité
 │   ├── Sentinel_Alerts_Triage/               <-- Répertoire pour les alertes et le triage de Sentinel
@@ -56,15 +65,6 @@ This project is organized into several key sections, each serving a specific pur
 │   └── Screenshots/                          <-- Captures spécifiques à la simulation d'incident
 │       ├── Phishing_Email.png
 │       └── EventViewer_Logs.png
-│
-├── Support_IT/                               <-- Répertoire pour le support technique
-│   ├── PowerShell_Scripts/                   <-- Scripts PowerShell
-│   │   ├── DeployOffice365.ps1
-│   │   ├── Reset-UserPassword.ps1
-│   │   └── Get-SecurityStatus.ps1
-│   └── Screenshots/                          <-- Captures pour les tâches IT
-│       ├── AD_User_Creation.png
-│       └── Group_Management.png
 │
 ├── Forensics_Analysis/                       <-- Répertoire pour les preuves forensiques
 │   └── Screenshots/                          <-- Captures liées à l'analyse post-incident
