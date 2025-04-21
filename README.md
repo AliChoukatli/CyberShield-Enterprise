@@ -78,8 +78,7 @@ This project is organized into several key sections, each serving a specific pur
 │ 
 ├── Compliance/                                     <-- Compliance and standards
 │   └── Mapping_ISO_NIST.xlsx                       <-- ISO/NIST mapping spreadsheet
-│
-──
+├──
 ```
 
 
