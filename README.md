@@ -169,7 +169,6 @@ This project is organized into several key sections, each serving a specific pur
 
 - [Logon_Event_4624.png](#logon-event-4624png) – Suspicious logon event  
 - [PowerShell_4104.png](#powershell-4104png) – Malicious PowerShell script execution (Event ID 4104
-- 
 ---
 
 
