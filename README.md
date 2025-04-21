@@ -26,6 +26,29 @@ This project is organized into several key sections, each serving a specific pur
 - **Cybersecurity** : Contains tools and resources used for security monitoring via Microsoft Sentinel and managing alerts.
 - **Incident_Response** : Documents the incident response process, such as a phishing simulation.
 - **Screenshots** : Contains screenshots related to forensic investigations and alert detection.
+
+- /Projet_IT_Support_Cybersec/
+│
+├── README.md
+├── LICENSE
+├── Compliance/
+│   └── Mapping_ISO_NIST.xlsx
+├── ZeroTrust/
+│   └── Zero_Trust_Implementation_Guide.pdf
+├── Support_IT/
+│   └── PowerShell_Scripts/
+│       ├── DeployOffice365.ps1
+│       ├── Reset-UserPassword.ps1
+│       └── Get-SecurityStatus.ps1
+├── Cybersecurity/
+│   └── Sentinel_Alerts_Triage/
+│       ├── KQL_queries.txt
+│       └── Playbook_AutoResponse.json
+├── Incident_Response/
+│   └── Phishing_Simulation_Steps.md
+├── Screenshots/
+│   └── Forensics_Analysis/
+
 ---
 
 ## 🧩 Tools
