@@ -32,13 +32,11 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 This project is organized into several key sections, each serving a specific purpose:
 
 ```
-/Secure_IT_for_SMB/                           <-- Main project directory
+/Secure_IT_for_SMB/                                 <-- Main project directory
 │
 ├── README.md                                       <-- Project documentation
 ├── LICENSE                                         <-- Project license information
 │
-├── Compliance/                                     <-- Compliance and standards
-│   └── Mapping_ISO_NIST.xlsx                       <-- ISO/NIST mapping spreadsheet
 │
 ├── ZeroTrust/                                      <-- Zero Trust security model
 │   └── Zero_Trust_Implementation_Guide.pdf         <-- Zero Trust implementation guide
@@ -77,6 +75,9 @@ This project is organized into several key sections, each serving a specific pur
 │   └── Screenshots/                                <-- Screenshots from post-incident analysis
 │       ├── Logon_Event_4624.png                    <-- Suspicious logon (Event ID 4624)
 │       └── PowerShell_4104.png                     <-- Malicious PowerShell script (Event ID 4104)
+│ 
+├── Compliance/                                     <-- Compliance and standards
+│   └── Mapping_ISO_NIST.xlsx                       <-- ISO/NIST mapping spreadsheet
 ```
 
 
