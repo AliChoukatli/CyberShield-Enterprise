@@ -150,25 +150,41 @@ This project is organized into several key sections, each serving a specific pur
 
 
 
-## 📸 Screenshots
+📁 Cybersecurity/Screenshots/
+Sentinel_Alert.png – Alert detection via Microsoft Sentinel
 
-## 🖼️ Captures d’écran
+Defender_Investigation.png – Investigation view in Microsoft Defender
 
-📁 `Cybersecurity/Screenshots/`
-- `Sentinel_Alert.png` – Détection d'alerte via Microsoft Sentinel
-- `Defender_Investigation.png` – Vue de l'analyse Defender
+📁 Incident_Response/Screenshots/
+Phishing_Email.png – Simulated phishing email
 
-📁 `Incident_Response/Screenshots/`
-- `Phishing_Email.png` – Capture de l'email de phishing
-- `EventViewer_Logs.png` – Journaux d'événements liés à l'incident
+EventViewer_Logs.png – Event Viewer logs related to the incident
 
-📁 `Support_IT/Screenshots/`
-- `AD_User_Creation.png` – Ajout d’un utilisateur via Active Directory
-- `Group_Management.png` – Gestion des groupes
+📁 Support_IT/Screenshots/
+AD_User_Creation.png – Creating a user in Active Directory
 
-📁 `Screenshots/Forensics_Analysis/`
-- `Logon_Event_4624.png` – Connexion suspecte
-- `PowerShell_4104.png` – Script PowerShell malveillant exécuté
+Group_Management.png – Managing user groups in Active Directory
+
+Password_Reset_AD.png – Resetting a user password
+
+AD_Permissions_Management.png – Managing permissions through groups
+
+Remote_Support_TeamViewer.png – Remote support session via TeamViewer
+
+Remote_Desktop_Session.png – Remote Desktop Protocol (RDP) session
+
+Device_Manager_Troubleshooting.png – Troubleshooting via Device Manager
+
+Windows_Network_Troubleshooter.png – Network troubleshooting using Windows tools
+
+CMD_Ping_Test.png – Network test using ping command
+
+CMD_Ipconfig_Results.png – Network configuration details using ipconfig
+
+📁 Forensics_Analysis/Screenshots/
+Logon_Event_4624.png – Suspicious logon event
+
+PowerShell_4104.png – Malicious PowerShell script execution (Event ID 4104)
 
 
 ## 🗂️ License
