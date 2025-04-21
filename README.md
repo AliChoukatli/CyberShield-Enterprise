@@ -111,8 +111,8 @@ Use-case: Simulated phishing attack leading to endpoint compromise
 ![image](https://github.com/user-attachments/assets/6ea33308-aac0-439b-9b78-638dec1fc0e2)
 
 ### 👤 Author
-Ali Choukatli  
+    Ali Choukatli  
 📧 alichoukatli@gmail.com  
-🔗 LinkedIn : | linkedin.com/in/ali-choukatli |  | GitHub :github.com/AliChoukatli
+🔗 LinkedIn : | linkedin.com/in/ali-choukatli 
 
 
