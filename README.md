@@ -13,6 +13,20 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 
 
 
+
+```
+
+
+## 🧩 Tools
+
+| Area                | Tools & Services                                                   |
+|---------------------|--------------------------------------------------------------------|
+| IAM                 | Microsoft 365, Azure AD (Entra ID), MFA, Conditional Access       |
+| Endpoint Management  | Windows 11, Intune, BitLocker, Microsoft Defender for Endpoint    |
+| Security Monitoring  | Microsoft Sentinel, KQL, Security Alerts, Logs                    |
+| Automation           | PowerShell scripting                                              |
+| Frameworks Applied   | ISO/IEC 27001, NIST CSF, Zero Trust                               |
+
 # 📁 Project Structure
 
 This project is organized into several key sections, each serving a specific purpose:
@@ -47,19 +61,6 @@ This project is organized into several key sections, each serving a specific pur
 ├── Screenshots/                             <-- Répertoire pour les captures d'écran
 │   └── Forensics_Analysis/                  <-- Répertoire pour les analyses forensiques
 
-
-```
-
-
-## 🧩 Tools
-
-| Area                | Tools & Services                                                   |
-|---------------------|--------------------------------------------------------------------|
-| IAM                 | Microsoft 365, Azure AD (Entra ID), MFA, Conditional Access       |
-| Endpoint Management  | Windows 11, Intune, BitLocker, Microsoft Defender for Endpoint    |
-| Security Monitoring  | Microsoft Sentinel, KQL, Security Alerts, Logs                    |
-| Automation           | PowerShell scripting                                              |
-| Frameworks Applied   | ISO/IEC 27001, NIST CSF, Zero Trust                               |
 
 
 
