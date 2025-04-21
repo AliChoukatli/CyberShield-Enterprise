@@ -25,7 +25,7 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 | Frameworks Applied    | ISO/IEC 27001, NIST CSF, Zero Trust                         |
 
 ---
-
+```
 ## 📁 Project Structure
 
 This project is organized into several key sections, each serving a specific purpose:
@@ -44,7 +44,7 @@ This project is organized into several key sections, each serving a specific pur
 Cela devrait maintenant afficher correctement l'arborescence dans le `README.md` lorsque tu le colles dans ton fichier. Assure-toi de bien garder la structure de code avec les trois accents graves ``` pour l'arborescence et les sections.
 
 
-
+```
 ---
 
 ## 🔐 Zero Trust Implementation (Integrated)
