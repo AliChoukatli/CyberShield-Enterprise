@@ -27,10 +27,15 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 ---
 
 ## 📁 Project Structure
-/Projet_IT_Support_Cybersec/ │ ├── README.md 
+/Projet_IT_Support_Cybersec/ 
+│ 
+├── README.md 
 # Project documentation ├── LICENSE 
 # License file (MIT License) ├── Compliance/ # Compliance-related files 
-│ └── Mapping_ISO_NIST.xlsx # Compliance mapping (ISO & NIST) ├── ZeroTrust/ # Zero Trust related materials │ └── Zero_Trust_Implementation_Guide.pdf # Guide for Zero Trust implementation ├── Support_IT/ # IT support scripts and tools │ └── PowerShell_Scripts/ # PowerShell scripts for automation │ ├── DeployOffice365.ps1 # Auto-install Office for new endpoints │ ├── Reset-UserPassword.ps1 # Helpdesk password reset tool │ └── Get-SecurityStatus.ps1 # Export security compliance status from Intune ├── Cybersecurity/ # Cybersecurity-related content │ └── Sentinel_Alerts_Triage/ # Files related to Sentinel alerts triage │ ├── KQL_queries.txt # KQL queries for log analysis │ └── Playbook_AutoResponse.json # Playbook for automated incident response ├── Incident_Response/ # Incident response-related documentation │ └── Phishing_Simulation_Steps.md # Steps for phishing simulation incident ├── Screenshots/ # Screenshots for demonstration │ └── Forensics_Analysis/ # Screenshots of forensic analysis steps
+│ └── Mapping_ISO_NIST.xlsx 
+# Compliance mapping (ISO & NIST) ├── ZeroTrust/ 
+# Zero Trust related materials │ └── Zero_Trust_Implementation_Guide.pdf 
+# Guide for Zero Trust implementation ├── Support_IT/ # IT support scripts and tools │ └── PowerShell_Scripts/ # PowerShell scripts for automation │ ├── DeployOffice365.ps1 # Auto-install Office for new endpoints │ ├── Reset-UserPassword.ps1 # Helpdesk password reset tool │ └── Get-SecurityStatus.ps1 # Export security compliance status from Intune ├── Cybersecurity/ # Cybersecurity-related content │ └── Sentinel_Alerts_Triage/ # Files related to Sentinel alerts triage │ ├── KQL_queries.txt # KQL queries for log analysis │ └── Playbook_AutoResponse.json # Playbook for automated incident response ├── Incident_Response/ # Incident response-related documentation │ └── Phishing_Simulation_Steps.md # Steps for phishing simulation incident ├── Screenshots/ # Screenshots for demonstration │ └── Forensics_Analysis/ # Screenshots of forensic analysis steps
 
 
 ---
