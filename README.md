@@ -96,6 +96,8 @@ This project is organized into several key sections, each serving a specific pur
    - Browser/USB artifacts (noted only)
 5. User account disabled and isolated
 6. Root cause summary noted in `Incident_Response/Phishing_Simulation_Steps.md`
+7. Pour plus de détails sur le processus de réponse à un incident de phishing, consultez le [phishing simulation steps](Incident_Response/Phishing_Simulation_Steps.md).
+
 
 
 
