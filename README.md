@@ -11,7 +11,7 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 - Simulate a phishing attack and incident response workflow
 - Automate common IT support tasks using PowerShell
 
----
+
 
 # 📁 Project Structure
 
@@ -41,7 +41,7 @@ This project is organized into several key sections, each serving a specific pur
 │   └── Forensics_Analysis/
 
 ```
----
+
 
 ## 🧩 Tools
 
@@ -53,7 +53,7 @@ This project is organized into several key sections, each serving a specific pur
 | Automation           | PowerShell scripting                                              |
 | Frameworks Applied   | ISO/IEC 27001, NIST CSF, Zero Trust                               |
 
----
+
 
 
 ## 🔐 Zero Trust Implementation (Integrated)
