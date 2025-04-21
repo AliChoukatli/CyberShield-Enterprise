@@ -18,27 +18,28 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 This project is organized into several key sections, each serving a specific purpose:
 
 ```
-/Projet_IT_Support_Cybersec/
+/Secure_IT_for_SMB/                <-- Répertoire principal du projet
 │
-├── README.md
-├── LICENSE
-├── Compliance
-│   └── Mapping_ISO_NIST.xlsx
-├── ZeroTrust/ : 
-│   └── Zero_Trust_Implementation_Guide.pdf
-├── Support_IT
-│   └── PowerShell_Scripts/
+├── README.md                      <-- Fichier de documentation du projet
+├── LICENSE                        <-- Informations sur la licence du projet
+├── Compliance/                    <-- Répertoire pour la conformité et les normes
+│   └── Mapping_ISO_NIST.xlsx      <-- Fichier Excel pour le mapping ISO/NIST
+├── ZeroTrust/                     <-- Répertoire pour le modèle Zero Trust
+│   └── Zero_Trust_Implementation_Guide.pdf  <-- Guide de mise en œuvre Zero Trust
+├── Support_IT/                    <-- Répertoire pour les scripts PowerShell
+│   └── PowerShell_Scripts/        <-- Scripts PowerShell
 │       ├── DeployOffice365.ps1
 │       ├── Reset-UserPassword.ps1
 │       └── Get-SecurityStatus.ps1
-├── Cybersecurity/ : 
-│   └── Sentinel_Alerts_Triage/
-│       ├── KQL_queries.txt
-│       └── Playbook_AutoResponse.json
-├── Incident_Response/ : 
-│   └── Phishing_Simulation_Steps.md
-├── Screenshots/ : 
-│   └── Forensics_Analysis/
+├── Cybersecurity/                 <-- Répertoire pour la surveillance de la sécurité
+│   └── Sentinel_Alerts_Triage/    <-- Répertoire pour les alertes et le triage de Sentinel
+│       ├── KQL_queries.txt       <-- Requêtes KQL
+│       └── Playbook_AutoResponse.json   <-- Playbook pour la réponse automatique
+├── Incident_Response/             <-- Répertoire pour la réponse aux incidents
+│   └── Phishing_Simulation_Steps.md  <-- Détails de la simulation de phishing
+├── Screenshots/                   <-- Répertoire pour les captures d'écran
+│   └── Forensics_Analysis/        <-- Répertoire pour les analyses forensiques
+
 
 ```
 
