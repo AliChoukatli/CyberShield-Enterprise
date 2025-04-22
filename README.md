@@ -10,7 +10,8 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 - Manage identities, endpoints, and security operations
 - Simulate a phishing attack and incident response workflow
 - Automate common IT support tasks using PowerShell
----
+  
+
 ## 🔧  How to Use This Project – Step-by-Step Guide
 This project simulates the implementation of a full Zero Trust architecture for a small business using Microsoft 365 tools. 
 You can follow the steps below to explore or reproduce each component:
