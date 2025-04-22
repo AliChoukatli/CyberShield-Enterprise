@@ -43,7 +43,7 @@ You can use the project in two ways:
 
 - [ Option A – Step-by-Step Learning Plan (10 Days)](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Guideline/Option_A.md)
 
-- [ Option B – Explore Individual Modules](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Guideline/Option_B.md)
+- [ Option B – Step-by-Step by Module](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Guideline/Option_B.md)
 
 
 ## 📁 **Project Structure**
