@@ -2,8 +2,6 @@
 
 This project simulates the implementation of a secure, cloud-based IT environment for a fictional small business with 25 employees. It follows modern best practices including the Zero Trust model, ISO/IEC 27001, and the NIST Cybersecurity Framework (CSF), using Microsoft 365, Azure AD (Entra ID), Intune, Microsoft Defender, and Sentinel.
 
-# 📦 IT Support & Cybersecurity Project – Small Business Simulation (25 Users)
-
 ## 📑 Index
 
 1. [Introduction](#introduction)
