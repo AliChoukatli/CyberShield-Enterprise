@@ -10,7 +10,7 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 4. [How to Use This Project](#how-to-use-this-project)
    - [Option A – Step-by-Step Learning Plan (10 Days)](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Guideline/Option_A.md)
    - [Option B – Explore Individual Modules](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Guideline/Option_B.md)
-5. [Project Structure](#project-structure)
+5. [Project Structure](#project structure)
 6. [Zero Trust Implementation](#zero-trust-implementation-integrated)
 7. [Compliance Mapping (Summary)](#compliance-mapping-summary)
 8. [Incident Response Simulation](#incident-response-simulation)
