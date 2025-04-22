@@ -70,8 +70,6 @@ You can follow the steps below to explore or reproduce each component:
 
 📂 Folder: Compliance/
 
----
-
 ## 🧩 Tools
 
 | Area                | Tools & Services                                                   |
