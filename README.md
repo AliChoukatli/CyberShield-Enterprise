@@ -11,10 +11,55 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 - Simulate a phishing attack and incident response workflow
 - Automate common IT support tasks using PowerShell
 
+🔧 Comment utiliser ce projet – Guide pas à pas
+Ce projet simule la mise en œuvre d’une architecture Zero Trust complète pour une PME fictive à l’aide d’outils Microsoft 365. Voici comment reproduire ou explorer chaque composant :
 
+🔐 1. Gestion des identités (IAM)
+Crée un environnement test dans Microsoft Entra ID (anciennement Azure AD)
 
+Ajoute des utilisateurs fictifs et affecte-les à des groupes (RBAC)
 
+Configure MFA et politiques d’accès conditionnel
 
+Teste l’accès à des applications en fonction du rôle ou de la localisation
+
+📂 Dossiers : ZeroTrust/ & Support_IT/PowerShell_Scripts/
+
+💻 2. Gestion des terminaux (Endpoint Security)
+Déploie un poste de travail via Autopilot ou une VM locale
+
+Configure Intune pour appliquer des politiques de sécurité (BitLocker, Defender, firewall)
+
+Utilise les scripts PowerShell pour installer Office, vérifier la sécurité, etc.
+
+📂 Dossiers : Support_IT/ & Cybersecurity/
+
+🛡️ 3. Surveillance et réponse aux incidents (SOC)
+Active Microsoft Sentinel dans ton tenant
+
+Connecte les logs de sécurité (Defender, Entra ID)
+
+Exécute les requêtes KQL pour détecter les anomalies
+
+Teste le playbook d’automatisation pour la réponse aux alertes
+
+📂 Dossiers : Cybersecurity/Sentinel_Alerts_Triage/
+
+🧪 4. Simulation d’incidents et forensic
+Simule un email de phishing ou une élévation de privilèges
+
+Analyse les événements avec Event Viewer (ex. : 4624, 4104)
+
+Explore les logs pour identifier des comportements suspects
+
+📂 Dossiers : Incident_Response/, Forensics_Analysis/
+
+✅ 5. Conformité et documentation
+Consulte le mapping entre les actions du projet et les normes ISO 27001 / NIST 800-53
+
+Utilise cette base pour rédiger des politiques ou des procédures réelles
+
+📂 Dossier : Compliance/
 
 
 ## 🧩 Tools
