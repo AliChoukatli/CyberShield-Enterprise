@@ -49,7 +49,7 @@ docs/Explore_by_Component.md → Explore the lab by topic
 ✅ Tip
 If you're new to Zero Trust or Microsoft security tools, we recommend starting with Option A for a progressive build-up.
 
-📁 **Project Structure**
+# 📁 **Project Structure**
 ```
 /Secure_IT_for_SMB/                                 <-- Main project directory
 │
