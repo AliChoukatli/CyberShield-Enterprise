@@ -3,7 +3,7 @@
 This project simulates the implementation of a secure, cloud-based IT environment for a fictional small business with 25 employees. It follows modern best practices including the Zero Trust model, ISO/IEC 27001, and the NIST Cybersecurity Framework (CSF), using Microsoft 365, Azure AD (Entra ID), Intune, Microsoft Defender, and Sentinel.
 
 
-## 🧱 Objectives
+## **🧱 Objectives**
 
 - Deploy a modern cloud IT infrastructure
 - Apply cybersecurity best practices (Zero Trust, ISO/NIST)
@@ -11,7 +11,7 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 - Simulate a phishing attack and incident response workflow
 - Automate common IT support tasks using PowerShell
 
-  ## 🧩 Tools
+  ## 🧩 **Tools**
 
 | Area                | Tools & Services                                                   |
 |---------------------|--------------------------------------------------------------------|
@@ -22,7 +22,7 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 | Frameworks Applied   | ISO/IEC 27001, NIST CSF, Zero Trust                               |
   
 --- 
-## **🔧 How to Use This Project**
+## 🔧 **How to Use This Project**
 
 This project simulates the implementation of a full Zero Trust architecture and IT support framework for a small business using Microsoft 365, Azure AD, Intune, Autopilot,Microsoft Defender, and Sentinel.
 You can use the project in two ways:
@@ -39,7 +39,7 @@ Follow this if you want to build the project in a guided, hands-on way, like a r
 Jump straight into specific technical areas like IAM, endpoint security, or SOC.
 🔍 Ideal for targeted exploration or demos.
 
-### 📂 Documentation Location
+### 📂 **Documentation Location**
 
 
 docs/Step-by-Step_Plan.md → Full simulation in 10 days
