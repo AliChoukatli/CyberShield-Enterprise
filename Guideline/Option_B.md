@@ -1,4 +1,4 @@
-# 📅 **Explore Individual Modules**
+# 📅 **Step-by-Step by Module**
 
 ## 🔐 **1. Identity and Access Management (IAM)**
 - **Set up** Microsoft Entra ID (Azure AD)
