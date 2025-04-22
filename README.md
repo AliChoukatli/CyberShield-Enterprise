@@ -22,69 +22,128 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 | Frameworks Applied   | ISO/IEC 27001, NIST CSF, Zero Trust                               |
   
 --- 
-## 🔧  How to Use This Project – Step-by-Step Guide
-This project simulates the implementation of a full Zero Trust architecture for a small business using Microsoft 365 tools. 
-You can follow the steps below to explore or reproduce each component:
+🔧 How to Use This Project
+This project simulates the implementation of a full Zero Trust architecture and IT support framework for a small business using Microsoft 365, Azure AD, Intune, Microsoft Defender, and Sentinel.
+
+You can use the project in two ways:
+📅 Option A – Step-by-Step Learning Plan (10 Days)
+Follow this plan if you want to build the project in a guided, hands-on way, like a real job simulation.
+
+⚙️ Day 1: Installation & Base Configuration (approx. 5h)
+Install Windows Server + Active Directory
+
+Create users/groups
+
+Prepare Azure AD + Intune
+
+🖥️ Day 2: Support IT – Active Directory (approx. 5h)
+Reset password, group membership, permission scenarios
+
+Screenshot tasks: password reset, group management, AD permissions
+
+Script: Reset-UserPassword.ps1
+
+👥 Day 3: Identity & Access Management (IAM) (approx. 6h)
+Configure Intune (compliance policies, device configuration)
+
+Join a VM to Azure AD
+
+Screenshots: Intune config, compliance, device join
+
+Scripts: deploy device & config compliance
+
+🔐 Day 4: Security & Zero Trust (approx. 5h)
+Configure MFA & Conditional Access
+
+Enable BitLocker on devices
+
+Screenshots: MFA & CA setup
+
+Script: Get-SecurityStatus.ps1
+
+🛠️ Day 5: Support IT – Helpdesk & Network (approx. 5h)
+RDP, TeamViewer, Device Manager, ping, ipconfig
+
+Screenshots: remote tools, troubleshooting steps
+
+Script: DeployOffice365.ps1
+
+🧪 Day 6: Sentinel & Defender (approx. 6h)
+Deploy Microsoft Sentinel
+
+Simulate and detect Defender alerts
+
+Screenshots: Sentinel alert, Defender investigation
+
+Use KQL queries & Playbook_AutoResponse.json
+
+🧵 Day 7: Phishing Simulation (IR) (approx. 6h)
+Create fake phishing scenario
+
+Analyze logs in Event Viewer & Defender
+
+Screenshots: phishing email, Event ID logs
+
+Doc: Phishing_Simulation_Steps.md
+
+🧠 Day 8: Forensic (Post-Attack) (approx. 5h)
+Capture Event IDs (4624, 4104)
+
+Analyze suspicious activity & summarize in README
+
+📊 Day 9: Compliance & Documentation (approx. 5h)
+ISO/NIST mapping
+
+Update Excel sheet + include table in README
+
+🧼 Day 10: Cleanup & Final README (approx. 5h)
+Create 📁 Screenshots section with clickable links
+
+Check structure, readability
+
+Final GitHub push or export archive
+
+🧭 Option B – Explore by Component
+Follow this if you prefer jumping straight into each topic.
 
 🔐 1. Identity and Access Management (IAM)
-- Set up a test environment using Microsoft Entra ID (formerly Azure AD)
+Set up Microsoft Entra ID (Azure AD)
 
-- Create user accounts and assign them to groups using RBAC
+Create users, apply RBAC, configure MFA & CA
 
-- Configure MFA and Conditional Access Policies
+Test app access by role, device, or location
+📂 Folders: ZeroTrust/, Support_IT/PowerShell_Scripts/
 
-- Test access to applications based on role, device compliance, or location
+💻 2. Endpoint Security & Device Management
+Deploy a VM (Autopilot or local)
 
-📂 Folders: ZeroTrust/, Support_IT/PowerShell_Scripts/ 
+Configure Intune: BitLocker, Defender, firewall
 
----
-
-💻 2. Endpoint Security and Device Management
-- Deploy a virtual machine using Autopilot or a local VM
-
-- Configure security policies in Microsoft Intune (BitLocker, Defender, firewall)
-
-- Use PowerShell scripts to install Office apps, reset passwords, and check device security
-
+Run PowerShell scripts (Office install, reset password, device check)
 📂 Folders: Support_IT/, Cybersecurity/
 
----
+🛡️ 3. SOC – Threat Detection & Response
+Enable Sentinel
 
-🛡️ 3. Threat Detection and Incident Response (SOC)
-- Enable Microsoft Sentinel in your tenant
+Ingest logs from Defender & Entra ID
 
-- Ingest logs from Defender and Entra ID
-
-- Run KQL queries to detect suspicious activity
-
-- Automate responses using the provided Sentinel playbook
-
+Run KQL queries, auto-response via playbook
 📂 Folder: Cybersecurity/Sentinel_Alerts_Triage/
 
----
+🧪 4. Incident Simulation & Forensics
+Simulate phishing or PowerShell-based attacks
 
-🧪 4. Incident Simulation and Forensics
-- Simulate attacks like phishing or malicious PowerShell scripts
+Investigate using Event Viewer (IDs 4624, 4104)
 
-- Investigate with Windows Event Viewer (e.g., Event ID 4624, 4104)
-
-- Analyze logs and screenshots for signs of compromise
-
+Analyze logs + screenshots for investigation
 📂 Folders: Incident_Response/, Forensics_Analysis/
 
----
-
 ✅ 5. Compliance Mapping
-- Review the ISO 27001 / NIST 800-53 mapping spreadsheet
+Review ISO 27001 / NIST 800-53 mapping sheet
 
-- Use it to align technical controls with standard frameworks for reporting or audits
+Map controls to technical features for audit or reporting
+📂 Folder: Compliance/
 
-📂 Folder: Compliance/  
-
-
-## 📁 Project Structure
-
-This project is organized into several key sections, each serving a specific purpose:
 
 ```
 /Secure_IT_for_SMB/                                 <-- Main project directory
