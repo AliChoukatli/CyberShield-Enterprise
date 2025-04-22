@@ -24,8 +24,9 @@ You can follow the steps below to explore or reproduce each component:
 
 - Test access to applications based on role, device compliance, or location
 
-📂 Folders: ZeroTrust/, Support_IT/PowerShell_Scripts/ <br>
+📂 Folders: ZeroTrust/, Support_IT/PowerShell_Scripts/ 
 
+---
 
 💻 2. Endpoint Security and Device Management
 - Deploy a virtual machine using Autopilot or a local VM
@@ -36,6 +37,7 @@ You can follow the steps below to explore or reproduce each component:
 
 📂 Folders: Support_IT/, Cybersecurity/
 
+---
 
 🛡️ 3. Threat Detection and Incident Response (SOC)
 - Enable Microsoft Sentinel in your tenant
@@ -48,6 +50,7 @@ You can follow the steps below to explore or reproduce each component:
 
 📂 Folder: Cybersecurity/Sentinel_Alerts_Triage/
 
+---
 
 🧪 4. Incident Simulation and Forensics
 - Simulate attacks like phishing or malicious PowerShell scripts
@@ -58,6 +61,7 @@ You can follow the steps below to explore or reproduce each component:
 
 📂 Folders: Incident_Response/, Forensics_Analysis/
 
+---
 
 ✅ 5. Compliance Mapping
 - Review the ISO 27001 / NIST 800-53 mapping spreadsheet
@@ -66,6 +70,7 @@ You can follow the steps below to explore or reproduce each component:
 
 📂 Folder: Compliance/
 
+---
 
 ## 🧩 Tools
 
