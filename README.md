@@ -26,6 +26,7 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 This project simulates the implementation of a full Zero Trust architecture and IT support framework for a small business using Microsoft 365, Azure AD, Intune, Microsoft Defender, and Sentinel.
 
 You can use the project in two ways:
+
 📅 Option A – Step-by-Step Learning Plan (10 Days)
 Follow this plan if you want to build the project in a guided, hands-on way, like a real job simulation.
 
@@ -39,52 +40,52 @@ Prepare Azure AD + Intune
 🖥️ Day 2: Support IT – Active Directory (approx. 5h)
 Reset password, group membership, permission scenarios
 
-Screenshot tasks: password reset, group management, AD permissions
+📸 Screenshots: password reset, group management, AD permissions
 
-Script: Reset-UserPassword.ps1
+💻 Script: Reset-UserPassword.ps1
 
 👥 Day 3: Identity & Access Management (IAM) (approx. 6h)
 Configure Intune (compliance policies, device configuration)
 
 Join a VM to Azure AD
 
-Screenshots: Intune config, compliance, device join
+📸 Screenshots: Intune config, compliance, device join
 
-Scripts: deploy device & config compliance
+💻 Scripts: deploy device & config compliance
 
 🔐 Day 4: Security & Zero Trust (approx. 5h)
 Configure MFA & Conditional Access
 
 Enable BitLocker on devices
 
-Screenshots: MFA & CA setup
+📸 Screenshots: MFA & CA setup
 
-Script: Get-SecurityStatus.ps1
+💻 Script: Get-SecurityStatus.ps1
 
 🛠️ Day 5: Support IT – Helpdesk & Network (approx. 5h)
-RDP, TeamViewer, Device Manager, ping, ipconfig
+Use RDP, TeamViewer, Device Manager, ping, ipconfig
 
-Screenshots: remote tools, troubleshooting steps
+📸 Screenshots: remote tools, troubleshooting steps
 
-Script: DeployOffice365.ps1
+💻 Script: DeployOffice365.ps1
 
 🧪 Day 6: Sentinel & Defender (approx. 6h)
 Deploy Microsoft Sentinel
 
 Simulate and detect Defender alerts
 
-Screenshots: Sentinel alert, Defender investigation
+📸 Screenshots: Sentinel alert, Defender investigation
 
-Use KQL queries & Playbook_AutoResponse.json
+🧠 Tools: KQL queries, Playbook_AutoResponse.json
 
 🧵 Day 7: Phishing Simulation (IR) (approx. 6h)
 Create fake phishing scenario
 
 Analyze logs in Event Viewer & Defender
 
-Screenshots: phishing email, Event ID logs
+📸 Screenshots: phishing email, Event ID logs
 
-Doc: Phishing_Simulation_Steps.md
+📄 Doc: Phishing_Simulation_Steps.md
 
 🧠 Day 8: Forensic (Post-Attack) (approx. 5h)
 Capture Event IDs (4624, 4104)
@@ -143,6 +144,7 @@ Review ISO 27001 / NIST 800-53 mapping sheet
 
 Map controls to technical features for audit or reporting
 📂 Folder: Compliance/
+
 
 
 ```
