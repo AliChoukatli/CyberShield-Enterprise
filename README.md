@@ -10,8 +10,18 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 - Manage identities, endpoints, and security operations
 - Simulate a phishing attack and incident response workflow
 - Automate common IT support tasks using PowerShell
-  
 
+  ## 🧩 Tools
+
+| Area                | Tools & Services                                                   |
+|---------------------|--------------------------------------------------------------------|
+| IAM                 | Microsoft 365, Azure AD (Entra ID), MFA, Conditional Access       |
+| Endpoint Management  | Windows 11, Intune, BitLocker, Microsoft Defender for Endpoint    |
+| Security Monitoring  | Microsoft Sentinel, KQL, Security Alerts, Logs                    |
+| Automation           | PowerShell scripting                                              |
+| Frameworks Applied   | ISO/IEC 27001, NIST CSF, Zero Trust                               |
+  
+--- 
 ## 🔧  How to Use This Project – Step-by-Step Guide
 This project simulates the implementation of a full Zero Trust architecture for a small business using Microsoft 365 tools. 
 You can follow the steps below to explore or reproduce each component:
@@ -71,16 +81,6 @@ You can follow the steps below to explore or reproduce each component:
 
 📂 Folder: Compliance/  
 
-
-## 🧩 Tools
-
-| Area                | Tools & Services                                                   |
-|---------------------|--------------------------------------------------------------------|
-| IAM                 | Microsoft 365, Azure AD (Entra ID), MFA, Conditional Access       |
-| Endpoint Management  | Windows 11, Intune, BitLocker, Microsoft Defender for Endpoint    |
-| Security Monitoring  | Microsoft Sentinel, KQL, Security Alerts, Logs                    |
-| Automation           | PowerShell scripting                                              |
-| Frameworks Applied   | ISO/IEC 27001, NIST CSF, Zero Trust                               |
 
 ## 📁 Project Structure
 
