@@ -12,7 +12,8 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 - Automate common IT support tasks using PowerShell
 ---
 🔧 How to Use This Project – Step-by-Step Guide
-This project simulates the implementation of a full Zero Trust architecture for a small business using Microsoft 365 tools. You can follow the steps below to explore or reproduce each component:
+This project simulates the implementation of a full Zero Trust architecture for a small business using Microsoft 365 tools. 
+You can follow the steps below to explore or reproduce each component:
 
 🔐 1. Identity and Access Management (IAM)
 Set up a test environment using Microsoft Entra ID (formerly Azure AD)
