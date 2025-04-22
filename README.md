@@ -40,7 +40,7 @@ This project is organized into several key sections, each serving a specific pur
 ├── ZeroTrust/                                      <-- Zero Trust security model
 │   └── Zero_Trust_Implementation_Guide.pdf         <-- Zero Trust implementation guide
 │
-├── Support_IT/                                     <-- Technical support tasks and scripts
+├── IT_Operations/                                     <-- Technical support tasks and scripts
 │   │
 │   ├── PowerShell_Scripts/                         <-- PowerShell scripts for common tasks
 │   │   ├── DeployOffice365.ps1
