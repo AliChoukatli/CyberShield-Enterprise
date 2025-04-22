@@ -26,27 +26,10 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 This project simulates the implementation of a full Zero Trust architecture and IT support framework for a small business using Microsoft 365, Azure AD, Intune, Autopilot,Microsoft Defender, and Sentinel.
 You can use the project in two ways:
 
-### 📅 Option A – Step-by-Step Learning Plan (10 Days)
+## Table of Contents
+- [Option A – Step-by-Step Learning Plan (10 Days)](#option-a--step-by-step-learning-plan-10-days)
+- [Option B – Explore by Component](#option-b--explore-by-component)
 
-
-Follow this if you want to build the project in a guided, hands-on way, like a real job simulation.
-🧰 Includes: AD setup, IAM, Zero Trust, SOC, phishing sim, forensics, ISO/NIST mapping.
-
-### 🧭 Option B – Explore by Component
-
-
-Jump straight into specific technical areas like IAM, endpoint security, or SOC.
-🔍 Ideal for targeted exploration or demos.
-
-### 📂 **Documentation Location**
-
-
-docs/Step-by-Step_Plan.md → Full simulation in 10 days
-
-docs/Explore_by_Component.md → Explore the lab by topic
-
-✅ Tip
-If you're new to Zero Trust or Microsoft security tools, we recommend starting with Option A for a progressive build-up.
 
 ## 📁 **Project Structure**
 ```
