@@ -11,55 +11,55 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 - Simulate a phishing attack and incident response workflow
 - Automate common IT support tasks using PowerShell
 ---
-🔧 Comment utiliser ce projet – Guide pas à pas
-Ce projet simule la mise en œuvre d’une architecture Zero Trust complète pour une PME fictive à l’aide d’outils Microsoft 365. Voici comment reproduire ou explorer chaque composant :
+🔧 How to Use This Project – Step-by-Step Guide
+This project simulates the implementation of a full Zero Trust architecture for a small business using Microsoft 365 tools. You can follow the steps below to explore or reproduce each component:
 
-🔐 1. Gestion des identités (IAM)
-Crée un environnement test dans Microsoft Entra ID (anciennement Azure AD)
+🔐 1. Identity and Access Management (IAM)
+Set up a test environment using Microsoft Entra ID (formerly Azure AD)
 
-Ajoute des utilisateurs fictifs et affecte-les à des groupes (RBAC)
+Create user accounts and assign them to groups using RBAC
 
-Configure MFA et politiques d’accès conditionnel
+Configure MFA and Conditional Access Policies
 
-Teste l’accès à des applications en fonction du rôle ou de la localisation
+Test access to applications based on role, device compliance, or location
 
-📂 Dossiers : ZeroTrust/ & Support_IT/PowerShell_Scripts/
+📂 Folders: ZeroTrust/, Support_IT/PowerShell_Scripts/
 
-💻 2. Gestion des terminaux (Endpoint Security)
-Déploie un poste de travail via Autopilot ou une VM locale
+💻 2. Endpoint Security and Device Management
+Deploy a virtual machine using Autopilot or a local VM
 
-Configure Intune pour appliquer des politiques de sécurité (BitLocker, Defender, firewall)
+Configure security policies in Microsoft Intune (BitLocker, Defender, firewall)
 
-Utilise les scripts PowerShell pour installer Office, vérifier la sécurité, etc.
+Use PowerShell scripts to install Office apps, reset passwords, and check device security
 
-📂 Dossiers : Support_IT/ & Cybersecurity/
+📂 Folders: Support_IT/, Cybersecurity/
 
-🛡️ 3. Surveillance et réponse aux incidents (SOC)
-Active Microsoft Sentinel dans ton tenant
+🛡️ 3. Threat Detection and Incident Response (SOC)
+Enable Microsoft Sentinel in your tenant
 
-Connecte les logs de sécurité (Defender, Entra ID)
+Ingest logs from Defender and Entra ID
 
-Exécute les requêtes KQL pour détecter les anomalies
+Run KQL queries to detect suspicious activity
 
-Teste le playbook d’automatisation pour la réponse aux alertes
+Automate responses using the provided Sentinel playbook
 
-📂 Dossiers : Cybersecurity/Sentinel_Alerts_Triage/
+📂 Folder: Cybersecurity/Sentinel_Alerts_Triage/
 
-🧪 4. Simulation d’incidents et forensic
-Simule un email de phishing ou une élévation de privilèges
+🧪 4. Incident Simulation and Forensics
+Simulate attacks like phishing or malicious PowerShell scripts
 
-Analyse les événements avec Event Viewer (ex. : 4624, 4104)
+Investigate with Windows Event Viewer (e.g., Event ID 4624, 4104)
 
-Explore les logs pour identifier des comportements suspects
+Analyze logs and screenshots for signs of compromise
 
-📂 Dossiers : Incident_Response/, Forensics_Analysis/
+📂 Folders: Incident_Response/, Forensics_Analysis/
 
-✅ 5. Conformité et documentation
-Consulte le mapping entre les actions du projet et les normes ISO 27001 / NIST 800-53
+✅ 5. Compliance Mapping
+Review the ISO 27001 / NIST 800-53 mapping spreadsheet
 
-Utilise cette base pour rédiger des politiques ou des procédures réelles
+Use it to align technical controls with standard frameworks for reporting or audits
 
-📂 Dossier : Compliance/
+📂 Folder: Compliance/
 
 
 ## 🧩 Tools
