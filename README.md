@@ -24,7 +24,7 @@ You can follow the steps below to explore or reproduce each component:
 
 - Test access to applications based on role, device compliance, or location
 
-📂 Folders: ZeroTrust/, Support_IT/PowerShell_Scripts/
+📂 Folders: ZeroTrust/, Support_IT/PowerShell_Scripts/  
 
 
 💻 2. Endpoint Security and Device Management
