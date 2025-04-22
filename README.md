@@ -22,7 +22,7 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 | Frameworks Applied   | ISO/IEC 27001, NIST CSF, Zero Trust                               |
   
 --- 
-## 🔧 How to Use This Project
+## **🔧 How to Use This Project**
 
 This project simulates the implementation of a full Zero Trust architecture and IT support framework for a small business using Microsoft 365, Azure AD, Intune, Autopilot,Microsoft Defender, and Sentinel.
 You can use the project in two ways:
