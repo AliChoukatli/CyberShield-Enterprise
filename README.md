@@ -28,7 +28,7 @@ You can use the project in two ways:
 
 - [ Option A – Step-by-Step Learning Plan (10 Days)](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Guideline/Individual%20_Modules.md)
 
-- [ Option B – Explore by Component Option B – Explore Individual Modules](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Guideline/Option%20B.md)
+- [ Option B – Explore Individual Modules](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Guideline/Option_B.md)
 
 
 ## 📁 **Project Structure**
