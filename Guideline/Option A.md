@@ -12,6 +12,7 @@ Prepare Azure AD and Intune for device management
 Reset passwords, modify group memberships, and manage permissions in AD
 
 Screenshots to capture:
+
 Password reset in Active Directory
 
 Group management steps
@@ -19,16 +20,16 @@ Group management steps
 Permissions in AD
 
 Script to use:
-powershell
-Copy
-Edit
+
 Reset-UserPassword.ps1
+
 👥 Day 3: Identity & Access Management (IAM) (approx. 6h)
 Configure Intune for compliance policies and device configuration
 
 Join a virtual machine (VM) to Azure AD
 
 Screenshots to capture:
+
 Intune configuration
 
 Compliance policies
@@ -36,46 +37,46 @@ Compliance policies
 Device join process
 
 Scripts to use:
-powershell
-Copy
-Edit
-DeployDevice.ps1
-ConfigCompliance.ps1
+
+Deploy device and configure compliance policies
+
 🔐 Day 4: Security & Zero Trust (approx. 5h)
 Set up MFA and Conditional Access policies
 
 Enable BitLocker on devices to enforce encryption
 
 Screenshots to capture:
+
 MFA and Conditional Access setup
 
 Script to use:
-powershell
-Copy
-Edit
-Get-SecurityStatus.ps1
+
+Get-SecurityStatus.ps1 (check compliance)
+
 🛠️ Day 5: Support IT – Helpdesk & Network (approx. 5h)
 Use RDP, TeamViewer, Device Manager, ping, and ipconfig for troubleshooting
 
 Screenshots to capture:
+
 Remote desktop and network troubleshooting steps
 
 Script to use:
-powershell
-Copy
-Edit
+
 DeployOffice365.ps1
+
 🧪 Day 6: Sentinel & Defender (approx. 6h)
 Deploy Microsoft Sentinel and configure Defender alerts
 
 Simulate and detect alerts using Defender
 
 Screenshots to capture:
+
 Alert in Sentinel
 
 Defender investigation view
 
 Tools to use:
+
 KQL queries
 
 Playbook_AutoResponse.json for automated responses
@@ -86,11 +87,13 @@ Simulate a phishing attack (create fake email)
 Analyze logs in Event Viewer and Defender
 
 Screenshots to capture:
+
 Phishing email
 
 Event ID logs in Defender
 
 Documentation:
+
 Phishing_Simulation_Steps.md
 
 🧠 Day 8: Forensic (Post-Attack) (approx. 5h)
