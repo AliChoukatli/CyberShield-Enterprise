@@ -86,7 +86,7 @@ You can follow the steps below to explore or reproduce each component:
 
 This project is organized into several key sections, each serving a specific purpose:
 
-`
+```
 /Secure_IT_for_SMB/                                 <-- Main project directory
 │
 ├── README.md                                       <-- Project documentation
