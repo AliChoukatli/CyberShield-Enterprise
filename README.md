@@ -10,13 +10,13 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 4. [How to Use This Project](#how-to-use-this-project)
    - [Option A – Step-by-Step Learning Plan (10 Days)](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Guideline/Option_A.md)
    - [Option B – Explore Individual Modules](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Guideline/Option_B.md)
-5. [Project Structure](#Project-Structure)
-6. [Zero Trust Implementation](#zero-trust-implementation-integrated)
-7. [Compliance Mapping (Summary)](#compliance-mapping-summary)
-8. [Incident Response Simulation](#incident-response-simulation)
-9. [PowerShell Tools (Support IT)](#powershell-tools-support-it)
-10. [Screenshots Summary](#screenshots-summary)
-11. [License](#license)
+5. [Project Structure](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/README.md#-project-structure)
+7. [Zero Trust Implementation](#zero-trust-implementation-integrated)
+8. [Compliance Mapping (Summary)](#compliance-mapping-summary)
+9. [Incident Response Simulation](#incident-response-simulation)
+10. [PowerShell Tools (Support IT)](#powershell-tools-support-it)
+11. [Screenshots Summary](#screenshots-summary)
+12. [License](#license)
 
 ## **🧱 Objectives**
 
