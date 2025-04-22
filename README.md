@@ -11,54 +11,54 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 - Simulate a phishing attack and incident response workflow
 - Automate common IT support tasks using PowerShell
 ---
-🔧 How to Use This Project – Step-by-Step Guide
+## 🔧  How to Use This Project – Step-by-Step Guide
 This project simulates the implementation of a full Zero Trust architecture for a small business using Microsoft 365 tools. 
 You can follow the steps below to explore or reproduce each component:
 
 🔐 1. Identity and Access Management (IAM)
-Set up a test environment using Microsoft Entra ID (formerly Azure AD)
+- Set up a test environment using Microsoft Entra ID (formerly Azure AD)
 
-Create user accounts and assign them to groups using RBAC
+- Create user accounts and assign them to groups using RBAC
 
-Configure MFA and Conditional Access Policies
+- Configure MFA and Conditional Access Policies
 
-Test access to applications based on role, device compliance, or location
+- Test access to applications based on role, device compliance, or location
 
 📂 Folders: ZeroTrust/, Support_IT/PowerShell_Scripts/
 
 💻 2. Endpoint Security and Device Management
-Deploy a virtual machine using Autopilot or a local VM
+- Deploy a virtual machine using Autopilot or a local VM
 
-Configure security policies in Microsoft Intune (BitLocker, Defender, firewall)
+- Configure security policies in Microsoft Intune (BitLocker, Defender, firewall)
 
-Use PowerShell scripts to install Office apps, reset passwords, and check device security
+- Use PowerShell scripts to install Office apps, reset passwords, and check device security
 
 📂 Folders: Support_IT/, Cybersecurity/
 
 🛡️ 3. Threat Detection and Incident Response (SOC)
-Enable Microsoft Sentinel in your tenant
+- Enable Microsoft Sentinel in your tenant
 
-Ingest logs from Defender and Entra ID
+- Ingest logs from Defender and Entra ID
 
-Run KQL queries to detect suspicious activity
+- Run KQL queries to detect suspicious activity
 
-Automate responses using the provided Sentinel playbook
+- Automate responses using the provided Sentinel playbook
 
 📂 Folder: Cybersecurity/Sentinel_Alerts_Triage/
 
 🧪 4. Incident Simulation and Forensics
-Simulate attacks like phishing or malicious PowerShell scripts
+- Simulate attacks like phishing or malicious PowerShell scripts
 
-Investigate with Windows Event Viewer (e.g., Event ID 4624, 4104)
+- Investigate with Windows Event Viewer (e.g., Event ID 4624, 4104)
 
-Analyze logs and screenshots for signs of compromise
+- Analyze logs and screenshots for signs of compromise
 
 📂 Folders: Incident_Response/, Forensics_Analysis/
 
 ✅ 5. Compliance Mapping
-Review the ISO 27001 / NIST 800-53 mapping spreadsheet
+- Review the ISO 27001 / NIST 800-53 mapping spreadsheet
 
-Use it to align technical controls with standard frameworks for reporting or audits
+- Use it to align technical controls with standard frameworks for reporting or audits
 
 📂 Folder: Compliance/
 
