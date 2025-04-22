@@ -1,3 +1,5 @@
+# **Explore Individual Modules**
+
 # 🔐 **1. Identity and Access Management (IAM)**
 - **Set up** Microsoft Entra ID (Azure AD)
 - **Create** users, apply **RBAC**, configure **MFA** & **Conditional Access** (CA)
