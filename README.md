@@ -11,7 +11,7 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 - Simulate a phishing attack and incident response workflow
 - Automate common IT support tasks using PowerShell
 
-  ## 🧩 **Tools**
+## 🧩 **Tools**
 
 | Area                | Tools & Services                                                   |
 |---------------------|--------------------------------------------------------------------|
