@@ -7,7 +7,7 @@
 - `ZeroTrust/`
 - `Support_IT/PowerShell_Scripts/`
 
----
+
 
 ## 💻 **2. Endpoint Security & Device Management**
 - **Deploy** a VM (Autopilot or local)
@@ -18,7 +18,7 @@
 - `Support_IT/`
 - `Cybersecurity/`
 
----
+
 
 ## 🛡️ **3. SOC – Threat Detection & Response**
 - **Enable** Microsoft Sentinel
@@ -28,7 +28,7 @@
 **📂 Folder**:
 - `Cybersecurity/Sentinel_Alerts_Triage/`
 
----
+
 
 ## 🧪 **4. Incident Simulation & Forensics**
 - **Simulate** phishing or PowerShell-based attacks
@@ -39,7 +39,7 @@
 - `Incident_Response/`
 - `Forensics_Analysis/`
 
----
+
 
 ## ✅ **5. Compliance Mapping**
 - **Review** ISO 27001 / NIST 800-53 mapping sheet
