@@ -4,12 +4,12 @@ Follow this plan if you want to build the project in a guided, hands-on way, sim
 ⚙️ Day 1: Installation & Base Configuration (approx. 5h)
 Install Windows Server and Active Directory
 
-Create users/groups in AD
+Create users/groups in Active Directory
 
 Prepare Azure AD and Intune for device management
 
 🖥️ Day 2: Support IT – Active Directory (approx. 5h)
-Reset passwords, modify group memberships, and manage permissions in AD
+Reset passwords, modify group memberships, and manage permissions in Active Directory
 
 Screenshots to capture:
 
@@ -41,7 +41,7 @@ Scripts to use:
 Deploy device and configure compliance policies
 
 🔐 Day 4: Security & Zero Trust (approx. 5h)
-Set up MFA and Conditional Access policies
+Set up Multi-Factor Authentication (MFA) and Conditional Access policies
 
 Enable BitLocker on devices to enforce encryption
 
@@ -51,7 +51,7 @@ MFA and Conditional Access setup
 
 Script to use:
 
-Get-SecurityStatus.ps1 (check compliance)
+Get-SecurityStatus.ps1 (to check compliance)
 
 🛠️ Day 5: Support IT – Helpdesk & Network (approx. 5h)
 Use RDP, TeamViewer, Device Manager, ping, and ipconfig for troubleshooting
