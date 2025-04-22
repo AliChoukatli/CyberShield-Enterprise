@@ -106,7 +106,7 @@ If you're new to Zero Trust or Microsoft security tools, we recommend starting w
 ```
 
 
-## 🔐 Zero Trust Implementation (Integrated)
+## 🔐 **Zero Trust Implementation (Integrated)**
 
 | Principle         | Implementation                                     |
 |-------------------|----------------------------------------------------|
@@ -116,7 +116,7 @@ If you're new to Zero Trust or Microsoft security tools, we recommend starting w
 
 
 
-## 📄 Compliance Mapping (Summary)
+## 📄 **Compliance Mapping (Summary)**
 
 | Framework         | Control ID         | Implementation Example                      |
 |-------------------|--------------------|---------------------------------------------|
@@ -129,7 +129,7 @@ If you're new to Zero Trust or Microsoft security tools, we recommend starting w
 🔗 **Full version available in** [Mapping_ISO_NIST.xlsx](./Mapping_ISO_NIST.xlsx)
 
 
-## 🧪 Incident Response Simulation
+## 🧪 **Incident Response Simulation**
 
 **Use Case:** A user opens a phishing email → endpoint is compromised → alert is triggered
 
@@ -147,7 +147,7 @@ If you're new to Zero Trust or Microsoft security tools, we recommend starting w
 
 
 
-## ⚙️ PowerShell Tools (Support IT)
+## ⚙️ **PowerShell Tools (Support IT)**
 
 | Script Name              | Purpose                                        |
 |--------------------------|------------------------------------------------|
@@ -157,9 +157,9 @@ If you're new to Zero Trust or Microsoft security tools, we recommend starting w
 
 
 
-## 🖼️ Screenshots Summary
+## 🖼️ **Screenshots Summary**
 
-📁 Support_IT/Screenshots/
+📁 *Support_IT/Screenshots/*
 
 - [AD_User_Creation.png](#ad-user-creationpng) – Creating a user in Active Directory  
 - [Group_Management.png](#group-managementpng) – Managing user groups in Active Directory  
@@ -172,18 +172,18 @@ If you're new to Zero Trust or Microsoft security tools, we recommend starting w
 - [CMD_Ping_Test.png](#cmd-ping-testpng) – Network ping test  
 - [CMD_Ipconfig_Results.png](#cmd-ipconfig-resultspng) – IP configuration (ipconfig) output  
 
-📁 Cybersecurity/Screenshots/
+📁 *Cybersecurity/Screenshots/*
 
 - [Sentinel_Alert.png](#sentinel-alertpng) – Alert detection via Microsoft Sentinel  
 - [Defender_Investigation.png](#defender-investigationpng) – Investigation view in Microsoft Defender  
 
-📁 Incident_Response/Screenshots/
+📁 *Incident_Response/Screenshots/*
 
 - [Phishing_Email.png](#phishing-emailpng) – Simulated phishing email  
 - [EventViewer_Logs.png](#eventviewer-logspng) – Event Viewer logs related to the incident  
 
 
-📁 Forensics_Analysis/Screenshots/
+📁 *Forensics_Analysis/Screenshots/*
 
 - [Logon_Event_4624.png](#logon-event-4624png) – Suspicious logon event  
 - [PowerShell_4104.png](#powershell-4104png) – Malicious PowerShell script execution (Event ID 4104
