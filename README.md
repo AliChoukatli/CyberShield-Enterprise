@@ -26,7 +26,6 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 This project simulates the implementation of a full Zero Trust architecture and IT support framework for a small business using Microsoft 365, Azure AD, Intune, Autopilot,Microsoft Defender, and Sentinel.
 You can use the project in two ways:
 
-## Table of Contents
 - [Option A – Step-by-Step Learning Plan (10 Days)](#option-a--step-by-step-learning-plan-10-days)
 - [Option B – Explore by Component](#option-b--explore-by-component)
 
