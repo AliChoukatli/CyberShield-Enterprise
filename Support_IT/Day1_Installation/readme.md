@@ -24,7 +24,7 @@ II. **Active Directory Setup**
    - Open Server Manager
    - Click on Local Server
    - Click the name next to Computer Name -> Click Change and rename it to something like (SRV-AD-01) -> Restart the computer
-   - [Verifiation ] (Screenshot capture name)
+   - [Screenshot](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/Capture_name.png)
      
   **Step 2:** Set a Static IP Address : Why? Active Directory needs a fixed IP.
    - In Server Manager > Local Server, click on the current IPv4 address
