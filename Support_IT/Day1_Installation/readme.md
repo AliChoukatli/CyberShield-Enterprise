@@ -19,7 +19,8 @@ This section covers the steps taken on Day 1 of the project:
    - [You should see the Server Manager](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/win_serv_1st_screen.png)
      
 3. **Active Directory Setup**
-4. **Azure AD & Intune Integration**
+   - 
+5. **Azure AD & Intune Integration**
 
 This folder contains screenshots taken during these steps to assist you in following the instructions in the guide.
 
