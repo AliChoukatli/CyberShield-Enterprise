@@ -45,19 +45,20 @@ Support_IT/
 ```
 ## 🛠️ Setup Instructions
 Day 1: Installation & Configuration of Active Directory
-Step 1: Install Windows Server on a VM.
+
+**Step 1:** Install Windows Server on a VM.
 
 Follow the guide in 02_windows_server_install.png.
 
-Step 2: Set up Active Directory (AD).
+**Step 2:** Set up Active Directory (AD).
 
 Create users and groups following the screenshots provided in 03_ad_users_creation.png.
 
-Step 3: Configure Azure AD synchronization for hybrid identity.
+*Step 3:** Configure Azure AD synchronization for hybrid identity.
 
 Check the Azure AD overview in 04_azure_ad_overview.png.
 
-Step 4: Enroll devices into Intune for mobile and device management.
+**Step 4:** Enroll devices into Intune for mobile and device management.
 
 Refer to 05_intune_enrollment.png for setup instructions.
 
