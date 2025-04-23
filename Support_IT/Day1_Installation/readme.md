@@ -13,8 +13,7 @@ This section covers the steps taken on Day 1 of the project:
 1. **Windows Server Installation**
    - [🔽 Download Windows Server 2022 ISO](https://www.microsoft.com/fr-fr/evalcenter/download-windows-server-2022)
    - Choose The version (Standard Desktop Experience)
-   - Choose Custom
-   - Select new
+   - Choose Custom -" New
    - Choose the size of the partition you need -> Apply -> Next
    - Choose a Strong Password -> Next
    - [You should see the Server Manager](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/win_serv_1st_screen.png)
