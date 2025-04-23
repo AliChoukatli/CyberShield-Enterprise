@@ -43,7 +43,7 @@ Support_IT/
     ├── 09_CMD_Ping_Test.png               # CMD Ping test screenshot
     └── 10_CMD_Ipconfig_Results.png        # CMD Ipconfig results screenshot
 ```
-🛠️ Setup Instructions
+## 🛠️ Setup Instructions
 Day 1: Installation & Configuration of Active Directory
 Step 1: Install Windows Server on a VM.
 
@@ -61,7 +61,7 @@ Step 4: Enroll devices into Intune for mobile and device management.
 
 Refer to 05_intune_enrollment.png for setup instructions.
 
-⚡ PowerShell Scripts
+## ⚡ PowerShell Scripts
 DeployOffice365.ps1
 This script will silently install Office 365 on managed devices.
 
@@ -101,19 +101,19 @@ PowerShell for script execution
 
 Remote support tools (e.g., TeamViewer, RDP)
 
-📅 Future Updates
+## 📅 Future Updates
 Integration with Microsoft Sentinel for Threat Detection
 
 Additional PowerShell scripts for system management
 
-👤 Author & Contributions
+## 👤 Author & Contributions
 Author: [Your Name]
 
 Email: [Your Email]
 
 GitHub: [Your GitHub Profile]
 
-📝 License
+## 📝 License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
 
 Explications :
