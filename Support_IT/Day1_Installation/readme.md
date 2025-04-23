@@ -34,7 +34,7 @@ II. **Active Directory Setup**
      - Gateway: 192.168.2.1
      - Preferred DNS: 127.0.0.1 
      - Alternate DNS: 8.8.8.8
-   - [Set Static IP with  Powershell](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Support_IT/PowerShell_Scripts/Set_Static_IP.ps1)
+   - 🔥 [Set Static IP with  Powershell](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Support_IT/PowerShell_Scripts/Set_Static_IP.ps1)
 
   **Step 3:** Install the Active Directory Domain Services Role
  
