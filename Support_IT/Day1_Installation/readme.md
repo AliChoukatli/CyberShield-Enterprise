@@ -26,10 +26,8 @@ II. **Active Directory Setup**
      
  ✅ Step 2: Set a Static IP Address : Why? Active Directory needs a fixed IP.
    - In Server Manager > Local Server, click on the current IPv4 address
-
    - Go to Properties > IPv4 Settings
-
-   - Set:
+   - Set: (capture Set_ip)
 
      IP: 192.168.2.10
      Masque: 255.255.255.0
