@@ -21,7 +21,7 @@ The following screenshots demonstrate key steps of the installation and configur
 
 | Screenshot | Description |
 |------------|-------------|
-| ![01_Install_M365_Business_Premium]([Screenshots/Day1_Installation_AD/01_Install_M365_Business_Premium.png](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/Install%20M365%20Business%20Premium.png)) | Choose the Business Option (Trial works) to install M365 Business Premium. |
+| ![01_Install_M365_Business_Premium](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/Install%20M365%20Business%20Premium.png) | Choose the Business Option (Trial works) to install M365 Business Premium. |
 | ![02_windows_server_install](Screenshots/Day1_Installation_AD/02_windows_server_install.png) | Screenshot showing the installation process of Windows Server. |
 | ![03_ad_user_creation](Screenshots/Day1_Installation_AD/03_ad_user_creation.png) | Screenshot showing the creation of users in Active Directory. |
 | ![04_azure_ad_overview](Screenshots/Day1_Installation_AD/04_azure_ad_overview.png) | Screenshot of the Azure AD overview page. |
