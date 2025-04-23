@@ -23,28 +23,25 @@ II. **Active Directory Setup**
   Step 1: Rename the Server : Why? A clear hostname helps with admin tasks and scripting.
    - Open Server Manager
    - Click on Local Server
-   - Click the name next to Computer Name -> Click Change and rename it to something like (SRV-AD-01) -> Restart the computer:
+   - Click the name next to Computer Name -> Click Change and rename it to something like (SRV-AD-01) -> Restart the computer
    - [Verifiation ] (Screenshot capture name)
      
   Step 2: Set a Static IP Address : Why? Active Directory needs a fixed IP.
    - In Server Manager > Local Server, click on the current IPv4 address
    - Go to Properties > IPv4 Settings
-   - Set: (capture Set_ip)
-
+     
      IP: 192.168.2.10
      Masque: 255.255.255.0
      Gateway: 192.168.2.1
      Preferred DNS: 127.0.0.1 
      Alternate DNS: 8.8.8.8 
-     📸 Capture:
+     📸 Capture: (capture Set_ip)
 
   Step 3: Install the Active Directory Domain Services Role
  
    - In Server Manager, click Add roles and features (capture ad role) -> Choose Role-based or feature-based installation -> Select your server (capture select server)
    - Under roles, check Active Directory Domain Services (cature select ADDS)
    - Click Next through to the end and hit Install
-   📸 Screenshot to take: Just before clicking “Install” with the AD DS role selected
-
 
  Step 4: Promote the Server to Domain Controller
 
