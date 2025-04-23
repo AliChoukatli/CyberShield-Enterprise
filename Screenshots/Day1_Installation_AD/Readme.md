@@ -1,11 +1,11 @@
 # Day 1: Installation & Configuration de base - Screenshots
 
 ## 🧰 Prerequisites
-✅ Windows machine with admin rights
-✅ Internet access
-✅ PowerShell 5.1+
-✅ install.xml file in the same directory as the script
-✅ A Microsoft 365 account with a valid license (e.g., Business Premium)
+- ✅ Windows machine with admin rights
+- ✅ Internet access
+- ✅ PowerShell 5.1+
+- ✅ install.xml file in the same directory as the script
+- ✅ A Microsoft 365 account with a valid license (e.g., Business Premium)
 
 
 
