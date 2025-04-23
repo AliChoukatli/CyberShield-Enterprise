@@ -28,14 +28,14 @@ II. **Active Directory Setup**
      
   **Step 2:** Set a Static IP Address : Why? Active Directory needs a fixed IP.
    - In Server Manager > Local Server, click on the current IPv4 address
-   - Go to Properties > IPv4 Settings
+   - [Go to Properties > IPv4 Settings](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/Set_ip.png)
      
      - IP: 192.168.2.10
      - Masque: 255.255.255.0
      - Gateway: 192.168.2.1
      - Preferred DNS: 127.0.0.1 
      - Alternate DNS: 8.8.8.8 
-     - 📸 [capture](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/Set_ip.png)
+     - 
 
   **Step 3:** Install the Active Directory Domain Services Role
  
