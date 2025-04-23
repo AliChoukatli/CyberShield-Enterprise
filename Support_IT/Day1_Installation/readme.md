@@ -24,7 +24,7 @@ II. **Active Directory Setup**
    - Open Server Manager
    - Click on Local Server
    - Click the name next to Computer Name -> Click Change and rename it to something like (SRV-AD-01) -> Restart the computer
-   - [Screenshot](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/Capture_name.png)
+   - 📸 [capture](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/Capture_name.png)
      
   **Step 2:** Set a Static IP Address : Why? Active Directory needs a fixed IP.
    - In Server Manager > Local Server, click on the current IPv4 address
@@ -35,18 +35,20 @@ II. **Active Directory Setup**
      - Gateway: 192.168.2.1
      - Preferred DNS: 127.0.0.1 
      - Alternate DNS: 8.8.8.8 
-     - 📸 Capture: (capture Set_ip)
+     - 📸 [capture](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/Set_ip.png)
 
   **Step 3:** Install the Active Directory Domain Services Role
  
-   - In Server Manager, click Add roles and features (capture ad role) -> Choose Role-based or feature-based installation -> Select your server (capture select server)
-   - Under roles, check Active Directory Domain Services (cature select ADDS)
+   - [In Server Manager, click Add roles and features](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/AD_add_role.png)
+   - Choose Role-based or feature-based installation ->
+   - [Select your server (capture select server](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/Select_server.png)
+   - [Under roles, check Active Directory Domain Services](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/select_ADDS.png)
    - Click Next through to the end and hit Install
 
  **Step 4:** Promote the Server to Domain Controller
 
 - After AD DS is installed, click the yellow flag in Server Manager
-- Click Promote this server to a domain controller (capture promote_server)
+- [Click Promote this server to a domain controller](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/Promote_server.png))
 - Choose Add a new forest
 - Enter a domain name : acpracticelab.local (in my case)
 - Leave defaults for forest/domain level and DNS
@@ -58,7 +60,7 @@ II. **Active Directory Setup**
 
 - Open Server Manager
 - Go to Tools > Active Directory Users and Computers
-- Confirm your domain appears and OUs (Organizational Units) are visible : (capture AD_Verification)
+- [Confirm your domain appears and OUs (Organizational Units) are visible](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/AD_verification.png)
 
 III. **Azure AD & Intune Integration**
 
