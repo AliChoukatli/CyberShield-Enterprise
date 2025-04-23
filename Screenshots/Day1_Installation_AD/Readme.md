@@ -1,6 +1,6 @@
 # Day 1: Installation & Configuration de base - Screenshots
 
-🧰 Prerequisites
+##🧰 Prerequisites
 ✅ Windows machine with admin rights
 ✅ Internet access
 ✅ PowerShell 5.1+
