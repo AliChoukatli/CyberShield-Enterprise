@@ -11,12 +11,13 @@ Before starting the configuration, ensure the following prerequisites are met:
 ## Overview
 This section covers the steps taken on Day 1 of the project:
 1. **Windows Server Installation**
-   - [(🔽 Download Windows Server 2022 ISO] (https://www.microsoft.com/fr-fr/evalcenter/download-windows-server-2022)
+   - [🔽 Download Windows Server 2022 ISO] (https://www.microsoft.com/fr-fr/evalcenter/download-windows-server-2022)
    - Choose The version (Standard Desktop Experience)
    - Choose Custom
    - Select new
    - Choose the size of the partition you need -> Apply -> Next
-   - Choose a Strong Password
+   - Choose a Strong Password -> Next
+   - [You should see the Server Manager](
      
 3. **Active Directory Setup**
 4. **Azure AD & Intune Integration**
