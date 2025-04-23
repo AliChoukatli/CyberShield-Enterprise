@@ -17,7 +17,7 @@ This section covers the steps taken on Day 1 of the project:
    - Select new
    - Choose the size of the partition you need -> Apply -> Next
    - Choose a Strong Password -> Next
-   - [You should see the Server Manager](
+   - [You should see the Server Manager](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/win_serv_1st_screen.png)
      
 3. **Active Directory Setup**
 4. **Azure AD & Intune Integration**
