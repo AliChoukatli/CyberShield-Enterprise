@@ -1,4 +1,4 @@
-# Step III – Azure AD & Intune Integration
+# Azure AD & Intune Integration
 
 This step enables you to:
 
