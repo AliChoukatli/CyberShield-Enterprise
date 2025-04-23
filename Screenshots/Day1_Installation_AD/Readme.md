@@ -16,6 +16,7 @@ This section covers the steps taken on Day 1 of the project:
    - Choose Custom
    - Select new
    - Choose the size of the partition you need -> Apply -> Next
+   - Choose a Strong Password
      
 3. **Active Directory Setup**
 4. **Azure AD & Intune Integration**
