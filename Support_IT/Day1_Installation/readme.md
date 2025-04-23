@@ -36,10 +36,12 @@ This section covers the steps taken :
      - Preferred DNS: 127.0.0.1 
      - Alternate DNS: 8.8.8.8
      -  Set Static IP with [Powershell](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Support_IT/PowerShell_Scripts/Set_Static_IP.ps1)
-     '''
-New-NetIPAddress -InterfaceAlias "Ethernet" -IPAddress 192.168.2.10 -PrefixLength 24 -DefaultGateway 192.168.2.1
+
+     ```
+     New-NetIPAddress -InterfaceAlias "Ethernet" -IPAddress 192.168.2.10 -PrefixLength 24 -DefaultGateway 192.168.2.1
      Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("127.0.0.1","8.8.8.8")
-'''
+  
+     ```
 
  **Step 4:** Install the Active Directory Domain Services Role
  
