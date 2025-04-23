@@ -10,9 +10,10 @@ Before starting the configuration, ensure the following prerequisites are met:
 
 # Overview
 This section covers the steps taken :
+
 **Step 1**
- ## **Windows Server Installation**
-   - [🔽 Download Windows Server 2022 ISO](https://www.microsoft.com/fr-fr/evalcenter/download-windows-server-2022)
+  **Windows Server Installation**
+   - [🔽Download Windows Server 2022 ISO](https://www.microsoft.com/fr-fr/evalcenter/download-windows-server-2022)
    - Choose The version (Standard Desktop Experience)
    - Choose Custom → "New":
    - Choose the size of the partition you need -> Apply -> Next
@@ -36,7 +37,7 @@ This section covers the steps taken :
      - Alternate DNS: 8.8.8.8
      -  [Set Static IP with  Powershell](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Support_IT/PowerShell_Scripts/Set_Static_IP.ps1)
 
-  **Step 4:** Install the Active Directory Domain Services Role
+ **Step 4:** Install the Active Directory Domain Services Role
  
    - [In Server Manager, click Add roles and features](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/AD_add_role.png)
    - Choose Role-based or feature-based installation ->
