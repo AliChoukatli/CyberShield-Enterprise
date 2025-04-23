@@ -11,7 +11,7 @@ Before starting the configuration, ensure the following prerequisites are met:
 ## Overview
 This section covers the steps taken on Day 1 of the project:
 1. **Windows Server Installation**
-   - (🔽 Download Windows Server 2022 ISO) [https://www.microsoft.com/fr-fr/evalcenter/download-windows-server-2022]
+   - [(🔽 Download Windows Server 2022 ISO] (https://www.microsoft.com/fr-fr/evalcenter/download-windows-server-2022)
    - Choose The version (Standard Desktop Experience)
    - Choose Custom
    - Select new
