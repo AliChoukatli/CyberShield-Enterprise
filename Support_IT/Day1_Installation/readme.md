@@ -66,8 +66,6 @@ This section covers the steps taken :
 - Go to Tools > Active Directory Users and Computers
 - [Confirm your domain appears and OUs (Organizational Units) are visible](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/AD_verification.png)
 
-III. **Azure AD & Intune Integration**
-
 
 
 ## ✅ Summary – Day 1
