@@ -14,7 +14,7 @@ This section covers the steps taken :
 I. **Windows Server Installation**
    - [🔽 Download Windows Server 2022 ISO](https://www.microsoft.com/fr-fr/evalcenter/download-windows-server-2022)
    - Choose The version (Standard Desktop Experience)
-   - Choose Custom -" New
+   - Choose Custom → "New":
    - Choose the size of the partition you need -> Apply -> Next
    - Choose a Strong Password -> Next
    - [You should see the Server Manager](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/win_serv_1st_screen.png)
@@ -26,15 +26,15 @@ II. **Active Directory Setup**
    - Click the name next to Computer Name -> Click Change and rename it to something like (SRV-AD-01) -> Restart the computer
    - 📸 [capture](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/Capture_name.png)
      
-  **Step 2:** Set a Static IP Address : Why? Active Directory needs a fixed IP.
+  **Step 2:** Setting a Static IP Address : Why? Active Directory needs a fixed IP.
    - In Server Manager > Local Server, click on the current IPv4 address
-   - [Go to Properties > IPv4 Settings](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/Set_ip.png)
+   - [Go to Properties > IPv4 Settings](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/Set_ip.png)(Example)
      - IP: 192.168.2.10
-     - Masque: 255.255.255.0
+     - Subnet mask: 255.255.255.0
      - Gateway: 192.168.2.1
      - Preferred DNS: 127.0.0.1 
-     - Alternate DNS: 8.8.8.8 
-     - 
+     - Alternate DNS: 8.8.8.8
+   - With Powershell
 
   **Step 3:** Install the Active Directory Domain Services Role
  
@@ -65,4 +65,10 @@ III. **Azure AD & Intune Integration**
 
 
 
+## ✅ Summary – Day 1
+At the end of Day 1, your environment should have:
+- A Windows Server 2022 machine installed and configured
+- A static IP set (192.168.2.10 in this case)
+- Active Directory installed and promoted with domain `acpracticelab.local`
+- You are ready to move forward to Azure AD & Intune integration (Day 2)
 
