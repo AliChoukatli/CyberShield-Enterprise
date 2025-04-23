@@ -10,7 +10,7 @@ Before starting the configuration, ensure the following prerequisites are met:
 
 ## Overview
 This section covers the steps taken on Day 1 of the project:
-1. **Windows Server Installation**
+I. **Windows Server Installation**
    - [🔽 Download Windows Server 2022 ISO](https://www.microsoft.com/fr-fr/evalcenter/download-windows-server-2022)
    - Choose The version (Standard Desktop Experience)
    - Choose Custom -" New
@@ -18,7 +18,7 @@ This section covers the steps taken on Day 1 of the project:
    - Choose a Strong Password -> Next
    - [You should see the Server Manager](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/win_serv_1st_screen.png)
      
-2. **Active Directory Setup**
+II. **Active Directory Setup**
  ✅ Step 1: Rename the Server : Why? A clear hostname helps with admin tasks and scripting.
    - Open Server Manager
    - Click on Local Server
@@ -40,49 +40,40 @@ This section covers the steps taken on Day 1 of the project:
 
  ✅ Step 3: Install the Active Directory Domain Services Role
  
-   In Server Manager, click Add roles and features
-   Choose Role-based or feature-based installation
-   Select your server
-   Under roles, check Active Directory Domain Services
-   Click Next through to the end and hit Install
+   - In Server Manager, click Add roles and features (capture ad role) -> Choose Role-based or feature-based installation -> Select your server (capture select server)
+   - Under roles, check Active Directory Domain Services (cature select ADDS)
+   - Click Next through to the end and hit Install
    📸 Screenshot to take: Just before clicking “Install” with the AD DS role selected
 
 
 ✅ Step 4: Promote the Server to Domain Controller
-Actions:
-After AD DS is installed, click the yellow flag in Server Manager
 
-Click Promote this server to a domain controller
+- After AD DS is installed, click the yellow flag in Server Manager
 
-Choose Add a new forest
+- Click Promote this server to a domain controller (capture promote_server)
 
-Enter a domain name like secureit.local
+- Choose Add a new forest
 
-Leave defaults for forest/domain level and DNS
+- Enter a domain name : acpracticelab.local (in my case)
 
-Set the DSRM password
+- Leave defaults for forest/domain level and DNS
 
-Continue with Next > Install
+- Set the DSRM password
 
-📸 Screenshots to take:
-
-Screen where you choose “Add a new forest” and enter the domain name
-
-Final summary before clicking “Install”
+- Continue with Next > Install
 
 🔁 The server will automatically restart after promotion.
 
 ✅ Step 5: Verify Active Directory Installation
-Actions:
-Open Server Manager
 
-Go to Tools > Active Directory Users and Computers
+- Open Server Manager
 
-Confirm your domain appears and OUs (Organizational Units) are visible
+- Go to Tools > Active Directory Users and Computers
 
-📸 Screenshot to take: Full window of "Active Directory Users and Computers" showing your domain (e.g., secureit.local)
+- Confirm your domain appears and OUs (Organizational Units) are visible : (capture AD_Verification)
 
-5. **Azure AD & Intune Integration**
+
+III. **Azure AD & Intune Integration**
 
 This folder contains screenshots taken during these steps to assist you in following the instructions in the guide.
 
