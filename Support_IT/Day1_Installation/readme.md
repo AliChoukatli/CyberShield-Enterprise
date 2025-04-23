@@ -1,6 +1,6 @@
 # Day 1: Installation & Configuration de base
 
-## 🧰 Prerequisites
+# 🧰 Prerequisites
 Before starting the configuration, ensure the following prerequisites are met:
 - A **Windows machine** with administrative rights.
 - **Internet access** for downloading necessary files and updates.
@@ -8,10 +8,10 @@ Before starting the configuration, ensure the following prerequisites are met:
 - The **`install.xml` file** must be present in the same directory as the script.
 - A **Microsoft 365 account** with a valid license (e.g., **Business Premium**).
 
-## Overview
+# Overview
 This section covers the steps taken :
-
-I. **Windows Server Installation**
+**Step 1**
+ ## **Windows Server Installation**
    - [🔽 Download Windows Server 2022 ISO](https://www.microsoft.com/fr-fr/evalcenter/download-windows-server-2022)
    - Choose The version (Standard Desktop Experience)
    - Choose Custom → "New":
@@ -19,14 +19,14 @@ I. **Windows Server Installation**
    - Choose a Strong Password -> Next
    - [You should see the Server Manager](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/win_serv_1st_screen.png)
      
-II. **Active Directory Setup**
-  **Step 1:** Rename the Server : Why? A clear hostname helps with admin tasks and scripting.
+**Step 2:** **Active Directory Setup**
+   - Rename the Server : Why? A clear hostname helps with admin tasks and scripting.
    - Open Server Manager
    - Click on Local Server
    - Click the name next to Computer Name -> Click Change and rename it to something like (SRV-AD-01) -> Restart the computer
    - 📸 [Steps](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/Capture_name.png)
      
-  **Step 2:** Setting a Static IP Address : Why? Active Directory needs a fixed IP.
+**Step 3:** Setting a Static IP Address : Why? Active Directory needs a fixed IP.
    - In Server Manager > Local Server, click on the current IPv4 address
    - [Go to Properties > IPv4 Settings](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/Set_ip.png)(Example)
      - IP: 192.168.2.10
