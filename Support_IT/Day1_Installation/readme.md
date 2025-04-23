@@ -30,12 +30,12 @@ II. **Active Directory Setup**
    - In Server Manager > Local Server, click on the current IPv4 address
    - Go to Properties > IPv4 Settings
      
-     IP: 192.168.2.10
-     Masque: 255.255.255.0
-     Gateway: 192.168.2.1
-     Preferred DNS: 127.0.0.1 
-     Alternate DNS: 8.8.8.8 
-     📸 Capture: (capture Set_ip)
+     - IP: 192.168.2.10
+     - Masque: 255.255.255.0
+     - Gateway: 192.168.2.1
+     - Preferred DNS: 127.0.0.1 
+     - Alternate DNS: 8.8.8.8 
+     - 📸 Capture: (capture Set_ip)
 
   **Step 3:** Install the Active Directory Domain Services Role
  
