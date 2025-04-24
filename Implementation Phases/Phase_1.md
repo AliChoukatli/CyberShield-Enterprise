@@ -2,12 +2,29 @@
 
 
 # ⚠️ Prerequisites
-Before starting the configuration, ensure the following prerequisites are met:
-- A **Windows machine** with administrative rights.
-- **Internet access** for downloading necessary files and updates.
-- **PowerShell 5.1+** installed for running automation scripts.
-- The **`install.xml` file** must be present in the same directory as the script.
-- A **Microsoft 365 account** with a valid license (e.g., **Business Premium**).
+Before you begin Step 1: Windows 11 Client Machines, please verify that you have the following in place:
+
+✅ Windows 11 (64-bit) client with administrative privileges
+
+Minimum 4 GB RAM, virtualization enabled in BIOS/UEFI
+
+🌐 Unrestricted Internet access
+
+HTTP/HTTPS (ports 80 and 443) open for downloads and cloud connections
+
+💻 PowerShell 5.1 or later installed
+
+powershell
+Copy
+Edit
+# Verify your PowerShell version
+$PSVersionTable.PSVersion
+
+📄 A valid install.xml file in the same folder as your PowerShell script
+
+🔐 A Microsoft 365 Business Premium account (includes Azure AD P1 & Intune)
+
+🖥️ Virtualization platform (Hyper-V, VMware, VirtualBox) if you’re spinning up VMs
 
 # Overview
 This section covers the steps taken :
