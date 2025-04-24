@@ -58,7 +58,7 @@ Follow the day-by-day guide from Day 1 through Day 10 to build and secure your S
 ```
 IT-Support-Cybersecurity-SMB/
 │
-├── 📁 00_Architecture             # High-level diagrams & docs
+├── 📁 00_Architecture            # High-level diagrams & docs
 │   ├── network_topology.png       # Diagram of network layout
 │   ├── zero_trust_overview.svg    # Zero Trust model flow
 │   └── README.md                  # Explanations of each diagram
