@@ -1,4 +1,4 @@
-# Day 7: Phishing Simulation
+# Phase 7: Phishing Simulation
 
 ## 🧰 Prerequisites
 - Access to Microsoft 365 Security & Compliance Center.
