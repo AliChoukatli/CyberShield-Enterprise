@@ -1,7 +1,7 @@
 # Day 1: Environment Setup – Win11, Active Directory & Network
 
 
-# ⚠️ Prerequisites
+## ⚠️ Prerequisites
 Before you begin Step 1: Windows 11 Client Machines, please verify that you have the following in place:
 
 ✅ Windows 11 (64-bit) client with administrative privileges
@@ -22,7 +22,7 @@ $PSVersionTable.PSVersion
 
 🖥️ Virtualization platform (Hyper-V, VMware, VirtualBox)-> 2 VMs
 
-# Overview
+## Overview
 This section covers the steps taken :
 
 🔴 **Step 1 – Windows 11 Client Machines**
