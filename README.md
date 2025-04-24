@@ -80,7 +80,7 @@ IT-Support-Cybersecurity-SMB/
 │    │   │
 │    │   ├── 01_azure_ad_user_creation.png       ← capture de la création d’un user
 │    │   ├── 02_azure_ad_group_creation.png      ← capture de la création d’un groupe
-│    │   └── …
+│    │   
 │    └── device_join_scripts/
 │        └── (intune enrollment, hybrid join scripts, etc.)
 │
