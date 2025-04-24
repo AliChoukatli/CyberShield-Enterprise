@@ -37,7 +37,7 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 
 ## 🔧 **How to Use This Project**
 
-Step-by-step to a secure, ready-to-use SMB IT setup
+A 10-step guide to deploy and secure your SMB infrastructure.
 
 - [**Step 1**: Installation & Base Configuration](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_1.md)         ----> Windows Server, AD DS, DNS, static IPs, domain join
 - [**Step 2**: AD User & Group Support](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_2.md)                   -----> Création et gestion des comptes, groupes, GPO, droits
