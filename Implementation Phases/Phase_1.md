@@ -13,14 +13,14 @@ HTTP/HTTPS (ports 80 and 443) open for downloads and cloud connections
 
 💻 PowerShell 5.1 or later installed
 ```
-# Verify your PowerShell version
+Verify your PowerShell version
 $PSVersionTable.PSVersion
 ```
 📄 A valid install.xml file in the same folder as your PowerShell script
 
 🔐 A Microsoft 365 Business Premium account (includes Azure AD P1 & Intune)
 
-🖥️ Virtualization platform (Hyper-V, VMware, VirtualBox) if you’re spinning up VMs
+🖥️ Virtualization platform (Hyper-V, VMware, VirtualBox)-> 2 VMs
 
 # Overview
 This section covers the steps taken :
