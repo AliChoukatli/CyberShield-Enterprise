@@ -1,4 +1,4 @@
-# Phase 5: Security & Zero Trust (MFA, CA, BitLocker)
+# Phase 3: Security & Zero Trust (MFA, CA, BitLocker)
 
 ## 🎯 Objectives
 This day focuses on enhancing security following a Zero Trust approach by enabling:
