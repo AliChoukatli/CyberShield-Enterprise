@@ -60,7 +60,6 @@ IT-Support-Cybersecurity-SMB/
 │
 ├── 📄 README.md                      # Overview of the entire project
 ├── 📄 LICENSE                        # (optional) License type if sharing publicly
-├── 📄 .gitignore                     # Files/folders ignored by Git
 │
 ├── 📁 01_Installation_Config         # Windows Server installation, AD, static IP setup
 │   ├── README.md
