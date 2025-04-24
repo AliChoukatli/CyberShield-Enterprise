@@ -6,13 +6,13 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 
 1. [Introduction](introduction)
 2. [Objectives](https://github.com/AliChoukatli/SecureIT-for-SMB/tree/main?tab=readme-ov-file#-objectives)
-3. [Tools](https://github.com/AliChoukatli/SecureIT-for-SMB/tree/main?tab=readme-ov-file#-tools)
-4. [How to Use This Project](https://github.com/AliChoukatli/SecureIT-for-SMB/tree/main?tab=readme-ov-file#-how-to-use-this-project)
-5. [Project Structure](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/README.md#-project-structure)
+3. [Project Structure](https://github.com/AliChoukatli/SecureIT-for-SMB/tree/main?tab=readme-ov-file#-tools)
+4. [Tools](https://github.com/AliChoukatli/SecureIT-for-SMB/tree/main?tab=readme-ov-file#-how-to-use-this-project)
+5. [How to Use This Project](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/README.md#-project-structure)
 6. [Zero Trust Implementation](https://github.com/AliChoukatli/SecureIT-for-SMB/tree/main?tab=readme-ov-file#-zero-trust-implementation-integrated)
-7. [Compliance Mapping (Summary)](https://github.com/AliChoukatli/SecureIT-for-SMB/tree/main?tab=readme-ov-file#-compliance-mapping-summary)
+7. [PowerShell Tools (Support ITy)](https://github.com/AliChoukatli/SecureIT-for-SMB/tree/main?tab=readme-ov-file#-compliance-mapping-summary)
 8. [Incident Response Simulation](https://github.com/AliChoukatli/SecureIT-for-SMB/tree/main?tab=readme-ov-file#-incident-response-simulation)
-9. [PowerShell Tools (Support IT)](https://github.com/AliChoukatli/SecureIT-for-SMB/tree/main?tab=readme-ov-file#%EF%B8%8F-powershell-tools-support-it)
+9. [Compliance Mapping (Summar)](https://github.com/AliChoukatli/SecureIT-for-SMB/tree/main?tab=readme-ov-file#%EF%B8%8F-powershell-tools-support-it)
 10. [License](https://github.com/AliChoukatli/SecureIT-for-SMB/tree/main?tab=readme-ov-file#%EF%B8%8F-license)
 
 ## **🧱 Objectives**
