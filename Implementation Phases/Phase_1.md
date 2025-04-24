@@ -1,4 +1,5 @@
-# Day 1: Setup – Win11 - AD - Network
+# Day 1: Day 1: Environment Setup – Win11, Active Directory & Network
+
 
 # 🧰 Prerequisites
 Before starting the configuration, ensure the following prerequisites are met:
