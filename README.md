@@ -16,7 +16,7 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 13. [Compliance Mapping (Summar)](https://github.com/AliChoukatli/SecureIT-for-SMB/tree/main?tab=readme-ov-file#-compliance-mapping-summary).
 14. [License](https://github.com/AliChoukatli/SecureIT-for-SMB/tree/main?tab=readme-ov-file#%EF%B8%8F-license).
 
-[Architecture :](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Architecture/Architecture.png)
+## Architecture : https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Architecture/Architecture.png
 
 ## **🧱 Objectives**
 
