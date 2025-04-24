@@ -1,4 +1,4 @@
-# Step 4: Endpoint Security & Device Management 
+# Phase 4: Endpoint Security & Device Management 
 
 This step enables you to:
 
