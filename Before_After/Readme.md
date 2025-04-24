@@ -11,7 +11,7 @@ Capture a successful login to **Microsoft 365 / Outlook Web** using **just the p
   
 
 
-✅ After – MFA On (Secure)
+## ✅ After – MFA On (Secure)
 📸 after_mfa_prompt.png
 Capture of Microsoft prompting for MFA verification (e.g., a code or Authenticator app).
 
