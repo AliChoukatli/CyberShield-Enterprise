@@ -13,7 +13,8 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 9. [PowerShell Tools (IT Support)](https://github.com/AliChoukatli/SecureIT-for-SMB/tree/main?tab=readme-ov-file#%EF%B8%8F-powershell-tools-support-it).
 11. [Incident Response Simulation](https://github.com/AliChoukatli/SecureIT-for-SMB/tree/main?tab=readme-ov-file#-incident-response-simulation)
 12. [Compliance Mapping (Summar)](https://github.com/AliChoukatli/SecureIT-for-SMB/tree/main?tab=readme-ov-file#-compliance-mapping-summary).
-13. [License](https://github.com/AliChoukatli/SecureIT-for-SMB/tree/main?tab=readme-ov-file#%EF%B8%8F-license).
+13. Security Posture: Before & After
+14. [License](https://github.com/AliChoukatli/SecureIT-for-SMB/tree/main?tab=readme-ov-file#%EF%B8%8F-license).
 
 ## **🧱 Objectives**
 
@@ -147,6 +148,18 @@ A 10-step guide to deploy and secure your SMB infrastructure.
    - Browser/USB artifacts (noted only)
 5. User account disabled and isolated
 6. Incident_Response/Phishing_Simulation_Steps [Phishing Simulation Steps](Incident_Response/Phishing_Simulation_Steps.md).
+
+## **Security Posture: Before & After**
+
+| **Aspect**                  | **Before Hardening**                     | **After Hardening**                              |
+|----------------------------|------------------------------------------|--------------------------------------------------|
+| **MFA**                    | Not enabled                              | Enforced via Conditional Access                  |
+| **Device Compliance**      | Not evaluated                            | Enforced via Intune Compliance Policies          |
+| **BitLocker**              | Disabled                                 | Enabled and enforced                             |
+| **Admin Account Usage**    | Used for login                           | Limited, with user-level privileges              |
+| **Windows Defender Settings** | Default settings                     | Custom security baselines applied                |
+| **Audit Logs**             | Not collected                            | Centralized via Sentinel                         |
+
 
 
 ## 📄 **Compliance Mapping (Summary)**
