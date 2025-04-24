@@ -106,7 +106,7 @@ A 10-step guide to deploy and secure your SMB infrastructure.
 - [**Step 1**: Installation & Base Configuration](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_1.md)           # Windows Server, AD DS, DNS, static IPs, domain join
 - [**Step 2**: AD User & Group Support](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_2.md)                     # Création et gestion des comptes, groupes, GPO, droits
 - [**Step 3**: Helpdesk & Network Troubleshooting](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_3.md)      # Support IT : accès distant, ipconfig, drivers, outils
-- [**Step 4:** Endpoint Security & Device Management](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_2.md)       # Join Intune, compliance, scripts, config device                 
+- [**Step 4:** Endpoint Security & Device Management](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_4.md)       # Join Intune, compliance, scripts, config device                 
 - [**Step 5**: Zero Trust (MFA, CA, BitLocker)](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_5.md )            # MFA, accès conditionnel, chiffrement, hardening
 - [**Step 6**: Sentinel & Defender Integration](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_6.md)             # Monitoring, alertes, règles KQL, automatisation     
 - [**Step 7**: Phishing Simulation](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_7.md)                         # Email piégé, Event Viewer, analyse Defender
