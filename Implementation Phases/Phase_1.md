@@ -1,4 +1,4 @@
-# Day 1: Day 1: Environment Setup – Win11, Active Directory & Network
+# Day 1: Environment Setup – Win11, Active Directory & Network
 
 
 # 🧰 Prerequisites
@@ -23,7 +23,7 @@ This section covers the steps taken :
 
 **Step 2**
   **Windows Server Installation**
-   - [🔽Download Windows Server 2022 ISO](https://www.microsoft.com/fr-fr/evalcenter/download-windows-server-2022)
+   - [Download Windows Server 2022 ISO](https://www.microsoft.com/fr-fr/evalcenter/download-windows-server-2022)
    - Choose The version (Standard Desktop Experience)
    - Choose Custom → "New":
    - Choose the size of the partition you need -> Apply -> Next
