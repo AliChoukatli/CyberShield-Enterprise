@@ -1,4 +1,4 @@
-# Azure AD & Intune Integration
+# Step 2: AD User & Group Support 
 
 This step enables you to:
 
