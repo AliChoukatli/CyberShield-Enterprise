@@ -68,40 +68,48 @@ IT-Support-Cybersecurity-SMB/
 │
 ├── 📁 02_IT_Support                  # Helpdesk tasks: RDP, password reset, network tools
 │   ├── README.md
-│   └── scripts/
+│   ├── scripts/
+│   └── network_troubleshooting/
 │
 ├── 📁 03_IAM_Intune_Join             # Azure AD, Intune, Hybrid Join, device management
 │   ├── README.md
-│   └── screenshots/
+│   ├── screenshots/
+│   └── device_join_scripts/
 │
 ├── 📁 04_Zero_Trust_Security         # MFA, Conditional Access, BitLocker, security baselines
 │   ├── README.md
-│   └── scripts/
+│   ├── scripts/
+│   └── configurations/
 │
 ├── 📁 05_Sentinel_Alert_Triage       # Microsoft Sentinel alert handling, KQL, automation
 │   ├── README.md
-│   └── playbooks/
+│   ├── playbooks/
+│   └── alerts/
 │
 ├── 📁 06_Phishing_Simulation         # Simulated phishing attack + Event Viewer & Defender logs
 │   ├── README.md
-│   └── captures_logs/
+│   ├── captures_logs/
+│   └── phishing_playbook/
 │
 ├── 📁 07_Forensics_Analysis          # Post-attack forensic analysis (Event IDs, attacker traces)
 │   ├── README.md
-│   └── evidence/
+│   ├── evidence/
+│   └── forensic_tools/
 │
 ├── 📁 08_Compliance_ISO_NIST         # ISO 27001 / NIST CSF mapping, policies
 │   ├── README.md
-│   └── mappings/
+│   ├── mappings/
+│   └── policies/
 │
 ├── 📁 09_Final_Documentation         # Final README, technical notes, conclusions
 │   ├── README.md
-│   └── export_pdf/
+│   ├── export_pdf/
+│   └── conclusion_reports/
 │
 └── 📁 10_Screenshots_All             # All screenshots sorted by day for GitHub display
     ├── Day1/
     ├── Day2/
-    └── ...
+    └── Day3/
 ```
 
 
