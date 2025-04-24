@@ -1,7 +1,7 @@
 # Day 1: Environment Setup – Win11, Active Directory & Network
 
 
-# 🧰 Prerequisites
+# ⚠️ Prerequisites
 Before starting the configuration, ensure the following prerequisites are met:
 - A **Windows machine** with administrative rights.
 - **Internet access** for downloading necessary files and updates.
