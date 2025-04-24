@@ -75,11 +75,16 @@ IT-Support-Cybersecurity-SMB/
 │   ├── README.md
 │   ├── scripts/
 │   └── network_troubleshooting/
-│
-├── 📁 03_IAM_Intune_Join          # Azure AD, Intune, Hybrid Join, device management
-│   ├── README.md
-│   ├── screenshots/
-│   └── device_join_scripts/
+│ 
+└── 📁03_Identity_Management_Intune_Join/
+    ├── README.md
+    ├── screenshots/
+    │   ├── 01_azure_ad_user_creation.png       ← capture de la création d’un user
+    │   ├── 02_azure_ad_group_creation.png      ← capture de la création d’un groupe
+    │   └── …
+    └── device_join_scripts/
+        └── (intune enrollment, hybrid join scripts, etc.)
+
 │
 ├── 📁 04_Zero_Trust_Security      # MFA, Conditional Access, BitLocker, security baselines
 │   ├── README.md
