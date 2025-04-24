@@ -58,47 +58,47 @@ Follow the day-by-day guide from Day 1 through Day 10 to build and secure your S
 ```
 IT-Support-Cybersecurity-SMB/
 │
-├── 📄 README.md                      # Présentation globale du projet
-├── 📄 LICENSE                        # (facultatif) Type de licence si tu veux partager le code
-├── 📄 .gitignore                     # Fichiers à ignorer par Git
+├── 📄 README.md                      # Overview of the entire project
+├── 📄 LICENSE                        # (optional) License type if sharing publicly
+├── 📄 .gitignore                     # Files/folders ignored by Git
 │
-├── 📁 01_Installation_Config         # Installation Windows Server, AD, IP statique
+├── 📁 01_Installation_Config         # Windows Server installation, AD, static IP setup
 │   ├── README.md
 │   └── screenshots/
 │
-├── 📁 02_Support_IT                  # Tâches de technicien Helpdesk (RDP, ping, reset pwd)
+├── 📁 02_IT_Support                  # Helpdesk tasks: RDP, password reset, network tools
 │   ├── README.md
 │   └── scripts/
 │
-├── 📁 03_IAM_Intune_Join             # Azure AD, Intune, Hybrid Join, MDM
+├── 📁 03_IAM_Intune_Join             # Azure AD, Intune, Hybrid Join, device management
 │   ├── README.md
 │   └── screenshots/
 │
-├── 📁 04_Zero_Trust_Security         # MFA, CA, BitLocker, baseline sécurité
+├── 📁 04_Zero_Trust_Security         # MFA, Conditional Access, BitLocker, security baselines
 │   ├── README.md
 │   └── scripts/
 │
-├── 📁 05_Sentinel_Alert_Triage       # KQL, alertes Sentinel, automation
+├── 📁 05_Sentinel_Alert_Triage       # Microsoft Sentinel alert handling, KQL, automation
 │   ├── README.md
 │   └── playbooks/
 │
-├── 📁 06_Phishing_Simulation         # Simulation phishing + analyse Defender & Event Viewer
+├── 📁 06_Phishing_Simulation         # Simulated phishing attack + Event Viewer & Defender logs
 │   ├── README.md
 │   └── captures_logs/
 │
-├── 📁 07_Forensics_Analysis          # Analyse post-attaque (4624, 4104, etc.)
+├── 📁 07_Forensics_Analysis          # Post-attack forensic analysis (Event IDs, attacker traces)
 │   ├── README.md
 │   └── evidence/
 │
-├── 📁 08_Compliance_ISO_NIST         # ISO 27001, NIST CSF, mapping et documentation
+├── 📁 08_Compliance_ISO_NIST         # ISO 27001 / NIST CSF mapping, policies
 │   ├── README.md
 │   └── mappings/
 │
-├── 📁 09_Documentation_Guide         # README final, ressources, notes techniques
+├── 📁 09_Final_Documentation         # Final README, technical notes, conclusions
 │   ├── README.md
-│   └── Final_PDF/
+│   └── export_pdf/
 │
-└── 📁 10_Screenshots_All             # Toutes les captures triées par jour
+└── 📁 10_Screenshots_All             # All screenshots sorted by day for GitHub display
     ├── Day1/
     ├── Day2/
     └── ...
