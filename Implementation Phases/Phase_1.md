@@ -34,7 +34,7 @@ This section covers the steps taken :
    - Screenshots to take: installation, initial setup, machine naming.
 
 
-🔴 **Step 2 - **Windows Server Installation**
+🔴 **Step 2 - Windows Server Installation**
 
    - [Download Windows Server 2022 ISO](https://www.microsoft.com/fr-fr/evalcenter/download-windows-server-2022)
    - Choose The version (Standard Desktop Experience)
