@@ -56,59 +56,52 @@ Follow the day-by-day guide from Day 1 through Day 10 to build and secure your S
 
 ## 📁 **Project Structure**
 ```
-/Secure_IT_for_SMB/                                 <-- Main project directory
+IT-Support-Cybersecurity-SMB/
 │
-├── README.md                                       <-- Project documentation
-├── LICENSE                                         <-- Project license information
+├── 📄 README.md                      # Présentation globale du projet
+├── 📄 LICENSE                        # (facultatif) Type de licence si tu veux partager le code
+├── 📄 .gitignore                     # Fichiers à ignorer par Git
 │
-├── ZeroTrust/                                      <-- Zero Trust security model
-│   └── Zero_Trust_Implementation_Guide.pdf         <-- Zero Trust implementation guide
+├── 📁 01_Installation_Config         # Installation Windows Server, AD, IP statique
+│   ├── README.md
+│   └── screenshots/
 │
-├── IT_Operations/                                  <-- Technical support tasks and scripts
-│   │
-│   ├── PowerShell_Scripts/                         <-- PowerShell scripts for common tasks
-│   │   ├── DeployOffice365.ps1
-│   │   ├── Reset-UserPassword.ps1
-│   │   └── Get-SecurityStatus.ps1
-│   │
-│   └── Screenshots/                                <-- Screenshots for IT support activities
-│       ├── Group_Management.png                    <-- Adding users to groups in Active Directory
-│       ├── Password_Reset_AD.png                   <-- Resetting a user's password in AD
-│       ├── AD_Permissions_Management.png           <-- Managing permissions in Active Directory
-│       ├── Remote_Support_TeamViewer.png           <-- Remote support session using TeamViewer
-│       ├── Remote_Desktop_Session.png              <-- Remote Desktop session with a user
-│       ├── Device_Manager_Troubleshooting.png      <-- Troubleshooting via Device Manager
-│       ├── Windows_Network_Troubleshooter.png      <-- Windows network troubleshooting tool
-│       ├── CMD_Ping_Test.png                       <-- Network ping test
-│       └── CMD_Ipconfig_Results.png                <-- IP configuration (ipconfig) output
+├── 📁 02_Support_IT                  # Tâches de technicien Helpdesk (RDP, ping, reset pwd)
+│   ├── README.md
+│   └── scripts/
 │
-├── Cybersecurity/                                  <-- Security monitoring and response
-│   │
-│   ├── Sentinel_Alerts_Triage/                     <-- Microsoft Sentinel alert handling
-│   │   ├── KQL_queries.txt                         <-- KQL queries used for triage
-│   │   └── Playbook_AutoResponse.json              <-- Sentinel automated response playbook
-│   │
-│   └── Screenshots/                                <-- Security-related screenshots
-│       ├── Sentinel_Alert.png                      <-- Detected alert in Sentinel
-│       └── Defender_Investigation.png              <-- Investigation in Microsoft Defender
+├── 📁 03_IAM_Intune_Join             # Azure AD, Intune, Hybrid Join, MDM
+│   ├── README.md
+│   └── screenshots/
 │
-├── Incident_Response/                              <-- Incident response processes
-│   │
-│   ├── Phishing_Simulation_Steps.md                <-- Steps for phishing simulation
-│   │
-│   └── Screenshots/                                <-- Screenshots from the simulation
-│       ├── Phishing_Email.png                      <-- Example phishing email
-│       └── EventViewer_Logs.png                    <-- Relevant Windows Event Viewer logs
+├── 📁 04_Zero_Trust_Security         # MFA, CA, BitLocker, baseline sécurité
+│   ├── README.md
+│   └── scripts/
 │
-├── Forensics_Analysis/                             <-- Forensic investigation evidence
-│   │
-│   └── Screenshots/                                <-- Screenshots from post-incident analysis
-│       ├── Logon_Event_4624.png                    <-- Suspicious logon (Event ID 4624)
-│       └── PowerShell_4104.png                     <-- Malicious PowerShell script (Event ID 4104)
-│ 
-├── Compliance/                                     <-- Compliance and standards
-│   │
-│   └── Mapping_ISO_NIST.xlsx                       <-- ISO/NIST mapping spreadsheet
+├── 📁 05_Sentinel_Alert_Triage       # KQL, alertes Sentinel, automation
+│   ├── README.md
+│   └── playbooks/
+│
+├── 📁 06_Phishing_Simulation         # Simulation phishing + analyse Defender & Event Viewer
+│   ├── README.md
+│   └── captures_logs/
+│
+├── 📁 07_Forensics_Analysis          # Analyse post-attaque (4624, 4104, etc.)
+│   ├── README.md
+│   └── evidence/
+│
+├── 📁 08_Compliance_ISO_NIST         # ISO 27001, NIST CSF, mapping et documentation
+│   ├── README.md
+│   └── mappings/
+│
+├── 📁 09_Documentation_Guide         # README final, ressources, notes techniques
+│   ├── README.md
+│   └── Final_PDF/
+│
+└── 📁 10_Screenshots_All             # Toutes les captures triées par jour
+    ├── Day1/
+    ├── Day2/
+    └── ...
 ```
 
 
