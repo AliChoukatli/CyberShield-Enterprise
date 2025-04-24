@@ -40,9 +40,9 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 Follow the day-by-day guide from Day 1 through Day 10 to build and secure your SMB environment step-by-step.
 
 ### **Day 1 → Day 10 Learning Path**
-- [**Day 1**: Installation & Base Configuration](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_1.md))
+- [**Day 1**: Installation & Base Configuration](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_1.md)
 - [**Day 2**: Endpoint Security & Device Management](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_2.md)
-- [**Day 3**: Zero Trust (MFA, CA, BitLocker)](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_3.md))
+- [**Day 3**: Zero Trust (MFA, CA, BitLocker)](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_3.md)
 - [**Day 4**: AD User & Group Support](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_4.md)
 - [**Day 5**: Helpdesk & Network Troubleshooting](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_5.md)
 - [**Day 6**: Sentinel & Defender Integration](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_6.md)
