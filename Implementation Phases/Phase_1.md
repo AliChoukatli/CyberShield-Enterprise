@@ -32,8 +32,7 @@ This section covers the steps taken :
    - Do **not** join them to Azure AD yet (planned for Phase 3).
    - Enable RDP and consider TeamViewer for support simulation.
    - Screenshots to take: installation, initial setup, machine naming.
-
-
+---
 🔴 **Step 2 - Windows Server Installation**
 
    - [Download Windows Server 2022 ISO](https://www.microsoft.com/fr-fr/evalcenter/download-windows-server-2022)
@@ -42,6 +41,7 @@ This section covers the steps taken :
    - Choose the size of the partition you need -> Apply -> Next
    - Choose a Strong Password -> Next
    - [You should see the Server Manager](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/win_serv_1st_screen.png)
+---
      
 🔴 **Step 3 - Active Directory Setup**
 
@@ -50,6 +50,7 @@ This section covers the steps taken :
    - Click on Local Server
    - Click the name next to Computer Name -> Click Change and rename it to something like (SRV-AD-01) -> Restart the computer
    - 📸 [Steps](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/Capture_name.png)
+---
      
 🔴 **Step 4 - Setting a Static IP Address : Why? Active Directory needs a fixed IP.**
 
@@ -73,24 +74,25 @@ This section covers the steps taken :
    - [Select your server (capture select server](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/Select_server.png)
    - [Under roles, check Active Directory Domain Services](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/select_ADDS.png)
    - Click Next through to the end and hit Install
+---
 
  🔴 **Step 6 - Promote the Server to Domain Controller**
 
-- After AD DS is installed, click the yellow flag in Server Manager
-- [Click Promote this server to a domain controller](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/Promote_server.png))
-- Choose Add a new forest
-- Enter a domain name : acpracticelab.local (in my case)
-- Leave defaults for forest/domain level and DNS
-- Set the DSRM password
-- Continue with Next > Install
+   - After AD DS is installed, click the yellow flag in Server Manager
+   - [Click Promote this server to a domain controller](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/Promote_server.png))
+   - Choose Add a new forest
+   - Enter a domain name : acpracticelab.local (in my case)
+   - Leave defaults for forest/domain level and DNS
+   - Set the DSRM password
+   - Continue with Next > Install
 🔁 The server will automatically restart after promotion.
+---
 
 🔴 **Step 7 - Verify Active Directory Installation**
 
-- Open Server Manager
-- Go to Tools > Active Directory Users and Computers
-- [Confirm your domain appears and OUs (Organizational Units) are visible](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/AD_verification.png)
-
+   - Open Server Manager
+   - Go to Tools > Active Directory Users and Computers
+   - [Confirm your domain appears and OUs (Organizational Units) are visible](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/AD_verification.png)
 
 
 ## ✅ Summary – Day 1
