@@ -1,4 +1,4 @@
-# Step 2: AD User & Group Support 
+# Step 4: AD User & Group Support 
 
 This step enables you to:
 
