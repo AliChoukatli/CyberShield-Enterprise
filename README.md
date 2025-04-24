@@ -40,8 +40,6 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 
 Follow the day-by-day guide from Day 1 through Day 10 to build and secure your SMB environment step-by-step.
 
----
-
 ### Day 1 → Day 10 Learning Path
 1. **Day 1**: Installation & Base Configuration  
 2. **Day 2**: Endpoint Security & Device Management  
