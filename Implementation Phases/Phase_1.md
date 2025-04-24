@@ -1,4 +1,4 @@
-# Day 1: Environment Setup – Win11, Active Directory & Network
+# Phase 1: Environment Setup – Win11, Active Directory & Network
 
 
 ## ⚠️ Prerequisites
