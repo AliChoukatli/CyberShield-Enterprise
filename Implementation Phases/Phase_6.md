@@ -1,4 +1,4 @@
-# Day 6: Sentinel & Defender Integration
+# Phase 6: Sentinel & Defender Integration
 
 ## 🧰 Prerequisites
 - Azure AD account with appropriate privileges.
