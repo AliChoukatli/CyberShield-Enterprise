@@ -5,8 +5,7 @@
 Before you begin Step 1: Windows 11 Client Machines, please verify that you have the following in place:
 
 ✅ Windows 11 (64-bit) client with administrative privileges
-
-Minimum 4 GB RAM, virtualization enabled in BIOS/UEFI
+     Minimum 4 GB RAM, virtualization enabled in BIOS/UEFI
 
 🌐 Unrestricted Internet access
 
@@ -14,9 +13,6 @@ HTTP/HTTPS (ports 80 and 443) open for downloads and cloud connections
 
 💻 PowerShell 5.1 or later installed
 
-powershell
-Copy
-Edit
 # Verify your PowerShell version
 $PSVersionTable.PSVersion
 
