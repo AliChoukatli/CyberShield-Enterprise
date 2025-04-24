@@ -37,7 +37,7 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 
 ## 🔧 **How to Use This Project**
 
-Follow the day-by-day guide from Day 1 through Day 10 to build and secure your SMB environment step-by-step.
+Step-by-step to a secure, ready-to-use SMB IT setup
 
 ### **Day 1 → Day 10 Learning Path**
 - [**Day 1**: Installation & Base Configuration](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_1.md)         ----> Windows Server, AD DS, DNS, static IPs, domain join
