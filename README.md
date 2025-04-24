@@ -185,7 +185,7 @@ IT-Support-Cybersecurity-SMB/
 📁 *Forensics_Analysis/Screenshots/*
 
 - [Logon_Event_4624.png](#logon-event-4624png) – Suspicious logon event  
-- [PowerShell_4104.png](#powershell-4104png) – Malicious PowerShell script execution (Event ID 4104
+- [PowerShell_4104.png](#powershell-4104png) – Malicious PowerShell script execution (Event ID 4104)
 ---
 
 
