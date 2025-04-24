@@ -17,8 +17,11 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 14. [License](https://github.com/AliChoukatli/SecureIT-for-SMB/tree/main?tab=readme-ov-file#%EF%B8%8F-license).
 
 ## Architecture : 
+<p align="center">
+  <img src="https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Architecture/Architecture.png" alt="SMB IT Architecture" width="300"/>
+</p>
 
-![SMB IT Architecture](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Architecture/Architecture.png)
+![SMB IT Architecture]()
 
 ## **🧱 Objectives**
 
