@@ -156,38 +156,6 @@ IT-Support-Cybersecurity-SMB/
 
 
 
-## 🖼️ **Screenshots Summary**
-
-📁 *Support_IT/Screenshots/*
-
-- [AD_User_Creation.png](#ad-user-creationpng) – Creating a user in Active Directory  
-- [Group_Management.png](#group-managementpng) – Managing user groups in Active Directory  
-- [Password_Reset_AD.png](#password-reset-adpng) – Resetting a user password in AD  
-- [AD_Permissions_Management.png](#ad-permissions-managementpng) – Managing permissions in Active Directory  
-- [Remote_Support_TeamViewer.png](#remote-support-teamviewerpng) – Remote support session using TeamViewer  
-- [Remote_Desktop_Session.png](#remote-desktop-sessionpng) – Remote Desktop session with a user  
-- [Device_Manager_Troubleshooting.png](#device-manager-troubleshootingpng) – Troubleshooting via Device Manager  
-- [Windows_Network_Troubleshooter.png](#windows-network-troubleshooterpng) – Windows network troubleshooting tool  
-- [CMD_Ping_Test.png](#cmd-ping-testpng) – Network ping test  
-- [CMD_Ipconfig_Results.png](#cmd-ipconfig-resultspng) – IP configuration (ipconfig) output  
-
-📁 *Cybersecurity/Screenshots/*
-
-- [Sentinel_Alert.png](#sentinel-alertpng) – Alert detection via Microsoft Sentinel  
-- [Defender_Investigation.png](#defender-investigationpng) – Investigation view in Microsoft Defender  
-
-📁 *Incident_Response/Screenshots/*
-
-- [Phishing_Email.png](#phishing-emailpng) – Simulated phishing email  
-- [EventViewer_Logs.png](#eventviewer-logspng) – Event Viewer logs related to the incident  
-
-
-📁 *Forensics_Analysis/Screenshots/*
-
-- [Logon_Event_4624.png](#logon-event-4624png) – Suspicious logon event  
-- [PowerShell_4104.png](#powershell-4104png) – Malicious PowerShell script execution (Event ID 4104)
----
-
 
 ## 🗂️ License
 
