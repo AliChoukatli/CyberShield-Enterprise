@@ -76,7 +76,7 @@ IT-Support-Cybersecurity-SMB/
 │   ├── scripts/
 │   └── network_troubleshooting/
 │ 
-└── 📁03_Identity_Management_Intune_Join/
+└── 📁03_Identity_Endpoint_Management/
 │    │   │
 │    │   ├── 01_azure_ad_user_creation.png       ← capture de la création d’un user
 │    │   ├── 02_azure_ad_group_creation.png      ← capture de la création d’un groupe
@@ -90,7 +90,7 @@ IT-Support-Cybersecurity-SMB/
 │   ├── scripts/
 │   └── configurations/
 │
-├── 📁 05_Sentinel_Alert_Triage    # Microsoft Sentinel alert handling, KQL, automation
+├── 📁 05_Sentinel_Security_Operations    # Microsoft Sentinel alert handling, KQL, automation
 │   ├── README.md
 │   ├── playbooks/
 │   └── alerts/
@@ -115,10 +115,6 @@ IT-Support-Cybersecurity-SMB/
 │   ├── export_pdf/
 │   └── conclusion_reports/
 │
-└── 📁 10_Screenshots_All          # All screenshots sorted by day for GitHub display
-    ├── Day1/
-    ├── Day2/
-    └── …
 ```
 
 
