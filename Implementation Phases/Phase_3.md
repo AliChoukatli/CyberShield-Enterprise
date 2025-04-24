@@ -1,4 +1,4 @@
-# **Day 3: Helpdesk & Network Troubleshooting**
+# **Phase 3: Helpdesk & Network Troubleshooting**
 
 ## 🧰 Prerequisites
 - Administrative rights on the local machine.
