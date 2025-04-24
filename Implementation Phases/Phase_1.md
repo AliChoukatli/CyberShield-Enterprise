@@ -12,7 +12,8 @@ Before starting the configuration, ensure the following prerequisites are met:
 # Overview
 This section covers the steps taken :
 
-**Step 1**
+**🛠 Step 1: Windows 11 Client Machines**
+
  **(Windows 11 Client Machines)**
    - Download the official Windows 11 ISO from Microsoft.
    - Install 2–3 VMs with Windows 11.
