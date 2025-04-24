@@ -1,4 +1,4 @@
-# Step 4: AD User & Group Support 
+# Step 4: Endpoint Security & Device Management 
 
 This step enables you to:
 
