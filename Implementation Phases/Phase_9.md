@@ -1,4 +1,4 @@
-# Day 9: Compliance Mapping (ISO/NIST)
+# Phase 9: Compliance Mapping (ISO/NIST)
 
 ## 🧰 Prerequisites
 - Familiarity with compliance frameworks (ISO 27001, NIST CSF).
