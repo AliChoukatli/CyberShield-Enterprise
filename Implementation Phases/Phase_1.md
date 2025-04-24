@@ -12,6 +12,15 @@ Before starting the configuration, ensure the following prerequisites are met:
 This section covers the steps taken :
 
 **Step 1**
+ **(Windows 11 Client Machines)**
+   - Download the official Windows 11 ISO from Microsoft.
+   - Install 2–3 VMs with Windows 11.
+   - Do **not** join them to Azure AD yet (planned for Phase 3).
+   - Enable RDP and consider TeamViewer for support simulation.
+   - Screenshots to take: installation, initial setup, machine naming.
+
+
+**Step 1**
   **Windows Server Installation**
    - [🔽Download Windows Server 2022 ISO](https://www.microsoft.com/fr-fr/evalcenter/download-windows-server-2022)
    - Choose The version (Standard Desktop Experience)
