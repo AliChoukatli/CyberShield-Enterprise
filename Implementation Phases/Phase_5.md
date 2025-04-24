@@ -1,4 +1,4 @@
-# **Day 5: Helpdesk & Network Troubleshooting**
+# **Day 3: Helpdesk & Network Troubleshooting**
 
 ## 🧰 Prerequisites
 - Administrative rights on the local machine.
