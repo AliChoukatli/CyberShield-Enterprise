@@ -12,10 +12,10 @@ Before you begin Step 1: Windows 11 Client Machines, please verify that you have
 HTTP/HTTPS (ports 80 and 443) open for downloads and cloud connections
 
 💻 PowerShell 5.1 or later installed
-
+```
 # Verify your PowerShell version
 $PSVersionTable.PSVersion
-
+```
 📄 A valid install.xml file in the same folder as your PowerShell script
 
 🔐 A Microsoft 365 Business Premium account (includes Azure AD P1 & Intune)
