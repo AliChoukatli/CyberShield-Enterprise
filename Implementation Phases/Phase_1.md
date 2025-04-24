@@ -20,7 +20,7 @@ This section covers the steps taken :
    - Screenshots to take: installation, initial setup, machine naming.
 
 
-**Step 1**
+**Step 2**
   **Windows Server Installation**
    - [🔽Download Windows Server 2022 ISO](https://www.microsoft.com/fr-fr/evalcenter/download-windows-server-2022)
    - Choose The version (Standard Desktop Experience)
@@ -29,14 +29,14 @@ This section covers the steps taken :
    - Choose a Strong Password -> Next
    - [You should see the Server Manager](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/win_serv_1st_screen.png)
      
-**Step 2** **Active Directory Setup**
+**Step 3** **Active Directory Setup**
    - Rename the Server : Why? A clear hostname helps with admin tasks and scripting.
    - Open Server Manager
    - Click on Local Server
    - Click the name next to Computer Name -> Click Change and rename it to something like (SRV-AD-01) -> Restart the computer
    - 📸 [Steps](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/Capture_name.png)
      
-**Step 3** Setting a Static IP Address : Why? Active Directory needs a fixed IP.
+**Step 4** Setting a Static IP Address : Why? Active Directory needs a fixed IP.
    - In Server Manager > Local Server, click on the current IPv4 address
    - [Go to Properties > IPv4 Settings](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/Set_ip.png)(Example)
      - IP: 192.168.2.10
@@ -50,7 +50,7 @@ This section covers the steps taken :
      Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("127.0.0.1","8.8.8.8")
      ```
 
- **Step 4:** Install the Active Directory Domain Services Role
+ **Step 5:** Install the Active Directory Domain Services Role
  
    - [In Server Manager, click Add roles and features](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/AD_add_role.png)
    - Choose Role-based or feature-based installation ->
@@ -58,7 +58,7 @@ This section covers the steps taken :
    - [Under roles, check Active Directory Domain Services](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/select_ADDS.png)
    - Click Next through to the end and hit Install
 
- **Step 5:** Promote the Server to Domain Controller
+ **Step 6:** Promote the Server to Domain Controller
 
 - After AD DS is installed, click the yellow flag in Server Manager
 - [Click Promote this server to a domain controller](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/Promote_server.png))
@@ -69,7 +69,7 @@ This section covers the steps taken :
 - Continue with Next > Install
 🔁 The server will automatically restart after promotion.
 
- **Step 6:** Verify Active Directory Installation
+ **Step 7:** Verify Active Directory Installation
 
 - Open Server Manager
 - Go to Tools > Active Directory Users and Computers
