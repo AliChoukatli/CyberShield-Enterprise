@@ -77,7 +77,7 @@ IT-Support-Cybersecurity-SMB/
 │   └── network_troubleshooting/
 │ 
 └── 📁03_Identity_Management_Intune_Join/
-│    │
+│    │   │
 │    │   ├── 01_azure_ad_user_creation.png       ← capture de la création d’un user
 │    │   ├── 02_azure_ad_group_creation.png      ← capture de la création d’un groupe
 │    │   └── …
