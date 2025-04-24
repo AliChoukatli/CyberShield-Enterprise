@@ -1,45 +1,29 @@
-✅ Exemple complet pour MFA (Multifactor Authentication)
-1. Admin View – Conditional Access Policy
-📸 after_mfa_admin_policy.png
+# MFA – Before vs After (Realistic Attack Scenario)
 
-Va dans : Entra ID > Security > Conditional Access
+## ⚠️ Before – MFA Off (Vulnerable)
 
-Capture une policy :
+### 📸 `before_mfa_login_success.png`
+Capture a successful login to **Microsoft 365 / Outlook Web** using **just the password**.
+- Simulate a **brute-force attack** or login with a **stolen password** (e.g., user@test.com / Password123!)
+  
+#### Sentinel Log Example:
+- Event: `Impossible Travel` detected from **another country**
+  
 
-Name : Require MFA for all users
 
-Assignments : All users, All cloud apps
+✅ After – MFA On (Secure)
+📸 after_mfa_prompt.png
+Capture of Microsoft prompting for MFA verification (e.g., a code or Authenticator app).
 
-Grant : Require multifactor authentication
+This shows that the attack fails without the second factor (e.g., SMS code, Authenticator App).
 
-Bonus pro : Ajoute un petit encadré rouge autour des sections importantes.
+📸 after_mfa_signin_blocked.png
+Capture of a sign-in blocked message due to Conditional Access policies.
 
-2. User View – MFA Prompt
-📸 after_mfa_user_prompt.png
+Event shown in Azure AD Sign-in Logs:
 
-Capture de l’écran de connexion d’un utilisateur :
+Filter by Status: Interrupted or Failure
 
-Juste après l’entrée du mot de passe
+Mention Conditional Access policies active
 
-L’écran de validation via Microsoft Authenticator ou SMS code
-
-Tu peux utiliser une VM utilisateur pour simuler ça.
-
-🔐 Exemple pour BitLocker
-1. Admin View – Intune Policy
-📸 after_bitlocker_intune_policy.png
-
-Va dans Endpoint Security > Disk Encryption
-
-Montre :
-
-Target : All Windows 10/11 devices
-
-Configuration : BitLocker enabled, recovery key saved to Azure AD
-
-2. Device View – BitLocker Status
-📸 after_bitlocker_device_status.png
-
-Sur la machine cliente (Win11), lance Manage BitLocker
-
-Capture : “BitLocker is on” sur disque C:
+Message: Even with a stolen password, the attacker cannot access the account without the second factor of authentication.
