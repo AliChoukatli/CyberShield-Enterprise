@@ -35,7 +35,6 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 | Frameworks Applied   | ISO/IEC 27001, NIST CSF, Zero Trust                               |
   
 
-
 ## 🔧 **How to Use This Project**
 
 Follow the day-by-day guide from Day 1 through Day 10 to build and secure your SMB environment step-by-step.
