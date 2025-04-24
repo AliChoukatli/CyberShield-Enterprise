@@ -18,10 +18,10 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 
 ## Architecture : 
 <p align="center">
-  <img src="https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Architecture/Architecture.png" alt="SMB IT Architecture" width="500"/>
+  <img src="https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Architecture/Architecture.png" alt="Architecture" width="500"/>
 </p>
 
-![SMB IT Architecture]()
+
 
 ## **🧱 Objectives**
 
