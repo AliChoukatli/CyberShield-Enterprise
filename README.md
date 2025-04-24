@@ -40,16 +40,16 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 Follow the day-by-day guide from Day 1 through Day 10 to build and secure your SMB environment step-by-step.
 
 ### **Day 1 → Day 10 Learning Path**
-- [**Day 1**: Installation & Base Configuration](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_1.md)
-- [**Day 2**: Endpoint Security & Device Management](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_2.md)
-- [**Day 3**: Zero Trust (MFA, CA, BitLocker)](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_3.md)
-- [**Day 4**: AD User & Group Support](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_4.md)
-- [**Day 5**: Helpdesk & Network Troubleshooting](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_5.md)
-- [**Day 6**: Sentinel & Defender Integration](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_6.md)
-- [**Day 7**: Phishing Simulation](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_7.md)
-- [**Day 8**: Post-Attack Forensics](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_8.md)
-- [**Day 9**: ISO/NIST Compliance Mapping](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_9.md)
-- [**Day 10**: Cleanup & Final Documentation](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_10.md)
+- [**Day 1**: Installation & Base Configuration](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_1.md)         ----> Windows Server, AD DS, DNS, static IPs, domain join
+- [**Day 2**: AD User & Group Support](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_2.md)                   -----> Création et gestion des comptes, groupes, GPO, droits
+- [**Day 3**: Helpdesk & Network Troubleshooting](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_5.md)        ------> Support IT : accès distant, ipconfig, drivers, outils
+- [**Day 4:** Endpoint Security & Device Management](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_2.md)        ------>Join Intune, compliance, scripts, config device                 
+- [**Day 5**: Zero Trust (MFA, CA, BitLocker)](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_3.md)  -----> MFA, accès conditionnel, chiffrement, hardening
+- [**Day 6**: Sentinel & Defender Integration](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_6.md)   -------> Monitoring, alertes, règles KQL, automatisation     
+- [**Day 7**: Phishing Simulation](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_7.md)                -----> Email piégé, Event Viewer, analyse Defender
+- [**Day 8**: Post-Attack Forensics](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_8.md)                 -----------> Logs, artefacts, Event ID, rapport d’incident 
+- [**Day 9**: ISO/NIST Compliance Mapping](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_9.md)            ---------> Alignement ISO 27001 / NIST CSF, gouvernance
+- [**Day 10**: Cleanup & Final Documentation](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Implementation%20Phases/Phase_10.md)         ----------------> README final, captures, PDF export, nettoyage
 
 ---
 
