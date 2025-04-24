@@ -58,57 +58,63 @@ Follow the day-by-day guide from Day 1 through Day 10 to build and secure your S
 ```
 IT-Support-Cybersecurity-SMB/
 │
-├── 📄 README.md                      # Overview of the entire project
-├── 📄 LICENSE                        # (optional) License type if sharing publicly
+├── 📁 00_Architecture             # High-level diagrams & docs
+│   ├── network_topology.png       # Diagram of network layout
+│   ├── zero_trust_overview.svg    # Zero Trust model flow
+│   └── README.md                  # Explanations of each diagram
 │
-├── 📁 01_Installation_Config         # Windows Server installation, AD, static IP setup
+├── 📄 README.md                   # Overview of the entire project
+├── 📄 LICENSE                     # (optional) License type if sharing publicly
+├── 📄 .gitignore                  # Files/folders ignored by Git
+│
+├── 📁 01_Installation_Config      # Windows Server installation, AD, static IP setup
 │   ├── README.md
 │   └── screenshots/
 │
-├── 📁 02_IT_Support                  # Helpdesk tasks: RDP, password reset, network tools
+├── 📁 02_IT_Support               # Helpdesk tasks: RDP, password reset, network tools
 │   ├── README.md
 │   ├── scripts/
 │   └── network_troubleshooting/
 │
-├── 📁 03_IAM_Intune_Join             # Azure AD, Intune, Hybrid Join, device management
+├── 📁 03_IAM_Intune_Join          # Azure AD, Intune, Hybrid Join, device management
 │   ├── README.md
 │   ├── screenshots/
 │   └── device_join_scripts/
 │
-├── 📁 04_Zero_Trust_Security         # MFA, Conditional Access, BitLocker, security baselines
+├── 📁 04_Zero_Trust_Security      # MFA, Conditional Access, BitLocker, security baselines
 │   ├── README.md
 │   ├── scripts/
 │   └── configurations/
 │
-├── 📁 05_Sentinel_Alert_Triage       # Microsoft Sentinel alert handling, KQL, automation
+├── 📁 05_Sentinel_Alert_Triage    # Microsoft Sentinel alert handling, KQL, automation
 │   ├── README.md
 │   ├── playbooks/
 │   └── alerts/
 │
-├── 📁 06_Phishing_Simulation         # Simulated phishing attack + Event Viewer & Defender logs
+├── 📁 06_Phishing_Simulation      # Simulated phishing attack + Event Viewer & Defender logs
 │   ├── README.md
 │   ├── captures_logs/
 │   └── phishing_playbook/
 │
-├── 📁 07_Forensics_Analysis          # Post-attack forensic analysis (Event IDs, attacker traces)
+├── 📁 07_Forensics_Analysis       # Post-attack forensic analysis (Event IDs, attacker traces)
 │   ├── README.md
 │   ├── evidence/
 │   └── forensic_tools/
 │
-├── 📁 08_Compliance_ISO_NIST         # ISO 27001 / NIST CSF mapping, policies
+├── 📁 08_Compliance_ISO_NIST      # ISO 27001 / NIST CSF mapping, policies
 │   ├── README.md
 │   ├── mappings/
 │   └── policies/
 │
-├── 📁 09_Final_Documentation         # Final README, technical notes, conclusions
+├── 📁 09_Final_Documentation      # Final README, technical notes, conclusions
 │   ├── README.md
 │   ├── export_pdf/
 │   └── conclusion_reports/
 │
-└── 📁 10_Screenshots_All             # All screenshots sorted by day for GitHub display
+└── 📁 10_Screenshots_All          # All screenshots sorted by day for GitHub display
     ├── Day1/
     ├── Day2/
-    └── Day3/
+    └── …
 ```
 
 
