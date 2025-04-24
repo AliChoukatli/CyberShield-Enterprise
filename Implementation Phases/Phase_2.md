@@ -1,4 +1,4 @@
-# Day 4: Active Directory User Management & IT Support Tasks
+# Phase 2: Active Directory User Management & IT Support Tasks
 
 ## 🎯 Objectives
 On Day 4, you will focus on core IT support operations:
