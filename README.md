@@ -38,12 +38,25 @@ This project simulates the implementation of a secure, cloud-based IT environmen
   
 ## 🔧 **How to Use This Project**
 
-This project simulates the implementation of a full Zero Trust architecture and IT support framework for a small business using Microsoft 365, Azure AD, Intune, Autopilot,Microsoft Defender, and Sentinel.
-You can use the project in two ways:
+## How to Use This Project
 
-- [ Option A – Step-by-Step Learning Plan (10 Days)](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Guideline/Option_A.md)
+Follow the day-by-day guide from Day 1 through Day 10 to build and secure your SMB environment step-by-step.
 
-- [ Option B – Step-by-Step by Module](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Guideline/Option_B.md)
+---
+
+### Day 1 → Day 10 Learning Path
+1. **Day 1**: Installation & Base Configuration  
+2. **Day 2**: Endpoint Security & Device Management  
+3. **Day 3**: Zero Trust (MFA, CA, BitLocker)  
+4. **Day 4**: AD User & Group Support  
+5. **Day 5**: Helpdesk & Network Troubleshooting  
+6. **Day 6**: Sentinel & Defender Integration  
+7. **Day 7**: Phishing Simulation  
+8. **Day 8**: Post-Attack Forensics  
+9. **Day 9**: ISO/NIST Compliance Mapping  
+10. **Day 10**: Cleanup & Final Documentation  
+
+---
 
 
 ## 📁 **Project Structure**
