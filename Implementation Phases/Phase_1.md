@@ -27,7 +27,7 @@ This section covers the steps taken :
 
 🔴 **Step 1 – Windows 11 Client Machines**
 
-   - Download the official Windows 11 ISO from Microsoft.
+   - Download the official [Windows 11 ISO] from Microsoft.(https://www.microsoft.com/en-us/software-download/windows11)
    - Install 2–3 VMs with Windows 11.
    - Do **not** join them to Azure AD yet (planned for Phase 3).
    - Enable RDP and consider TeamViewer for support simulation.
