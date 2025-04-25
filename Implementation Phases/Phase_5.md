@@ -82,7 +82,7 @@ Get-NetFirewallProfile | Select-Object Name, Enabled
 
 ---
 
-✅ At the end of Day 3, you should have a working MFA, a Conditional Access policy, BitLocker enabled, and a way to check your security posture via PowerShell.
+✅ At the end of Phase 6, you should have a working MFA, a Conditional Access policy, BitLocker enabled, and a way to check your security posture via PowerShell.
 
 Ready for Day 4: Active Directory User Management & IT Support Tasks? Let's go! 🚀
 
