@@ -125,6 +125,28 @@ Automate common helpdesk tasks to save time and reduce errors.
 - Remote support techniques demonstrated
 - Basic network troubleshooting validated
 
+  💡 Bonus Tip: How to Delete an Organizational Unit (OU)
+By default, Organizational Units (OUs) are protected from accidental deletion. If you want to delete an OU, follow these steps:
+
+🔧 Steps:
+Open Active Directory Users and Computers (ADUC)
+
+Go to View > check Advanced Features
+
+Navigate to the OU you want to delete
+
+Right-click on the OU > Properties
+
+Go to the Object tab
+
+Uncheck Protect object from accidental deletion
+
+Click OK, then right-click the OU again and choose Delete
+
+✅ You must enable Advanced Features to see the Object tab and modify deletion protection.
+
+
+
 Ready for **Phase 3: Helpdesk & Network Troubleshooting**? Let’s go! 🚀
 
 
