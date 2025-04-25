@@ -100,6 +100,6 @@ This section covers the steps taken :
 At the end of Day 1, your environment should have:
 - A Windows Server 2022 machine installed and configured
 - A static IP set (192.168.2.10 in this case)
-- Active Directory installed and promoted with domain `acpracticelab.local`
+- Active Directory installed and promoted with domain `aclab.tech`
 - You are ready to move forward to Azure AD & Intune integration (Day 2)
 
