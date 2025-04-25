@@ -70,9 +70,9 @@ This section covers the steps taken :
 
  🔴 **Step 5 - Install the Active Directory Domain Services Role**
  
-   - [In Server Manager, click Add roles and features](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/AD_add_role.png)
+   - [In Server Manager, click Add roles and features](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/AD_add_role.png)
    - Choose Role-based or feature-based installation ->
-   - [Select your server (capture select server](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Select_server.png)
+   - [Select your server.
    - [Under roles, check Active Directory Domain Services](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/select_ADDS.png)
    - Click Next through to the end and hit Install
 ---
