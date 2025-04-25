@@ -48,8 +48,9 @@ This section covers the steps taken :
    - Rename the Server : Why? A clear hostname helps with admin tasks and scripting.
    - Open Server Manager
    - Click on Local Server
-   - Click the name next to Computer Name -> Click Change and rename it to something like (SRV-AD-01) -> Restart the computer
-   - 📸 [Steps](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/Capture_name.png)
+   - [Click the name next to Computer Name -> Click Change and rename it to something like (DC01)](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/Capture_name.png)
+     -> Restart the computer 
+   - 
 ---
      
 🔴 **Step 4 - Setting a Static IP Address : Why? Active Directory needs a fixed IP.**
