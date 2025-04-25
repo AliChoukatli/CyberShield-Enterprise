@@ -125,6 +125,6 @@ Automate common helpdesk tasks to save time and reduce errors.
 - Remote support techniques demonstrated
 - Basic network troubleshooting validated
 
-Ready for **Day 5: Helpdesk & Network Troubleshooting**? Let’s go! 🚀
+Ready for **Phase 3: Helpdesk & Network Troubleshooting**? Let’s go! 🚀
 
 
