@@ -55,7 +55,7 @@ This section covers the steps taken :
 🔴 **Step 4 - Setting a Static IP Address : Why? Active Directory needs a fixed IP.**
 
    - In Server Manager > Local Server, click on the current IPv4 address
-   - [Go to Properties > IPv4 Settings](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/Set_ip.png)(Example)
+   - [Go to Properties > IPv4 Settings](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Set_ip.png)(Example)
      - IP: 192.168.2.10
      - Subnet mask: 255.255.255.0
      - Gateway: 192.168.2.1
@@ -72,7 +72,7 @@ This section covers the steps taken :
  
    - [In Server Manager, click Add roles and features](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/AD_add_role.png)
    - Choose Role-based or feature-based installation ->
-   - [Select your server (capture select server](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/Select_server.png)
+   - [Select your server (capture select server](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Select_server.png)
    - [Under roles, check Active Directory Domain Services](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/select_ADDS.png)
    - Click Next through to the end and hit Install
 ---
@@ -80,11 +80,11 @@ This section covers the steps taken :
  🔴 **Step 6 - Promote the Server to Domain Controller**
 
    - After AD DS is installed, click the yellow flag in Server Manager
-   - [Click Promote this server to a domain controller](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/Promote_server.png))
+   - [Click Promote this server to a domain controller](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Promote_server.png))
    - Choose Add a new forest
    - Enter a domain name : aclab.tech (in my case)
    - Leave defaults for forest/domain level and DNS
-   - Set the DSRM password
+   - [Set the DSRM passwor](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Promote_server.png)
    - Continue with Next > Install
 🔁 The server will automatically restart after promotion.
 ---
@@ -93,7 +93,7 @@ This section covers the steps taken :
 
    - Open Server Manager
    - Go to Tools > Active Directory Users and Computers
-   - [Confirm your domain appears and OUs (Organizational Units) are visible](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/AD_verification.png)
+   - [Confirm your domain appears and OUs (Organizational Units) are visible](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/AD_verification.png)
 
 
 ## ✅ Summary – Day 1
