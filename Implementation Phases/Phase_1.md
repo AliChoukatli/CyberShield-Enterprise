@@ -82,7 +82,7 @@ This section covers the steps taken :
    - After AD DS is installed, click the yellow flag in Server Manager
    - [Click Promote this server to a domain controller](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Screenshots/Day1_Installation_AD/Promote_server.png))
    - Choose Add a new forest
-   - Enter a domain name : acpracticelab.local (in my case)
+   - Enter a domain name : aclab.tech (in my case)
    - Leave defaults for forest/domain level and DNS
    - Set the DSRM password
    - Continue with Next > Install
