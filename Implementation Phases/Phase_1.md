@@ -84,7 +84,7 @@ This section covers the steps taken :
    - Choose Add a new forest
    - Enter a domain name : aclab.tech (in my case)
    - Leave defaults for forest/domain level and DNS
-   - [Set the DSRM passwor](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Promote_server.png)
+   - [Set the DSRM password](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Domain%20controller.png)
    - Continue with Next > Install
 🔁 The server will automatically restart after promotion.
 ---
