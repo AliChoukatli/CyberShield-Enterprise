@@ -43,9 +43,6 @@ In this phase, you will:
    ![Create Partition](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Create_Partition.png)
 
 5. Wait for Windows installation to complete.
-
-   ![Installing Windows 11](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Installing_Win11.png)
-
 6. Choose your region and keyboard layout.
 7. Select **Join Domain Instead** (do not sign in with a Microsoft account).
 
