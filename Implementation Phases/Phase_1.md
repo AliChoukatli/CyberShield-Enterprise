@@ -42,7 +42,9 @@ This section covers the steps taken :
 
    - You can shoudl see now your [first screen](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/win11_first_screen.png)
    -  ⚙️Rename the machine
-          Go to : 
+
+
+      Go to : 
           - Setting
           - System
           - About
