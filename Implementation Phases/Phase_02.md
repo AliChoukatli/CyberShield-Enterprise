@@ -48,7 +48,7 @@ Before deleting, ensure that the **"Protect object from accidental deletion"** o
  
  ![Protect](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Protect_OU.png)
 
-5. Click **OK** to confirm.
+4. Click **OK** to confirm.
 
 Now you can safely delete the OU.
 
