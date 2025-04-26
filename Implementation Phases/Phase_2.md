@@ -17,7 +17,7 @@ Managing user accounts is fundamental to IT support and access control.
 ### 🔧 Steps:
 1. Open **Server Manager** > **Tools** > **Active Directory Users and Computers**
 2. Navigate to your target Organizational Unit (e.g., `Users`)
-3. [Right-click > **New** > **User**](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/AD_User_01.png)
+3. Right-click > **New** > **User** [Screenshot](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/AD_User_01.png)
 4. Fill in details (Name, Logon name) 
 5. [Set a temporary password and enforce password change at next logon]
 6. Click [Finish]
