@@ -42,7 +42,7 @@ This section covers the steps taken :
 
    - You can shoudl see now your [first screen](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/win11_first_screen.png)
    -  ⚙️Rename the machine; Go to :
-   -  Setting --> System --> About --> [Rename this PC](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/rename_win11.png); Ex : WIN11-01  -> Restart the machine 
+   -  Setting --> System --> About --> [Rename this PC](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/rename_win11.png) Ex : WIN11-01  -> Restart the machine 
    
    -  [Confirmation of the name change](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/rename_confirmation.png)
 
