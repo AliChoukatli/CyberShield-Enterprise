@@ -23,7 +23,7 @@ Managing user accounts is fundamental to IT support and access control.
 6. Click [Finish]
 7. Alternatively, configure via [PowerShell](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_user.ps1)
 
-To ADD 10 users : i suggest you to go to [ADD_10.ps1](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/ADD_10.ps1)
+ . To ADD 10 users : i suggest you to go to [ADD_10.ps1](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/ADD_10.ps1)
   
 Pro tip: if you need to delete a OU you need to go advanced features etc etc
 ---
