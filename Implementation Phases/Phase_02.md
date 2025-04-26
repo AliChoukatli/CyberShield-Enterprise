@@ -42,10 +42,10 @@ Before deleting, ensure that the **"Protect object from accidental deletion"** o
 1. Right-click the OU and select **Properties**.
 2. Go to the **Object** tab.
 3. Uncheck the box for **Protect object from accidental deletion**.
-4. 
+ 
  ![P¨rotect](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Protect_OU.png)
 
-6. Click **OK** to confirm.
+5. Click **OK** to confirm.
 
 Now you can safely delete the OU.
 
