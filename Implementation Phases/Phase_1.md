@@ -46,7 +46,6 @@ This section covers the steps taken :
    
    -  [Confirmation of the name change](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/rename_confirmation.png)
 
----
 
  ## **Notes**   
    - Install 2–3 VMs with Windows 11.
