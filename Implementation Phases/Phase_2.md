@@ -18,11 +18,9 @@ Managing user accounts is fundamental to IT support and access control.
 1. Open **Server Manager** > **Tools** > **Active Directory Users and Computers**
 2. Navigate to your target Organizational Unit (e.g., `Users`)
 3. [Right-click > **New** > **User**](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/AD_User_01.png)
-4. Fill in details (Name, Logon name)
+4. Fill in details (Name, Logon name) 
 5. Set a temporary password and enforce password change at next logon
-
-### 📸 Capture to Take:
-- The **New Object – User** wizard before completing creation (`01_AD_User_Creation.png`)
+ (https://github.com/user-attachments/assets/3a4e803a-b6ea-4bff-a34b-b352b4646a66)
 
 ---
 
@@ -34,7 +32,7 @@ Groups simplify permission management across multiple resources.
 1. In **Active Directory Users and Computers**, navigate to the `Groups` OU
 2. Right-click > **New** > **Group**
 3. Name the group (e.g., `IT-SMB-Admins`), choose scope and type
-4. Add members via **Properties** > **Members** > **Add* (https://github.com/user-attachments/assets/3a4e803a-b6ea-4bff-a34b-b352b4646a66)
+4. Add members via **Properties** > **Members** > **Add* 
 
 5. On file servers or folders, assign NTFS permissions to this group
 
