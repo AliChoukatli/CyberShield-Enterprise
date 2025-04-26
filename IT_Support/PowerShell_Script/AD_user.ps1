@@ -4,8 +4,8 @@ for ($i = 1; $i -le 10; $i++) {
     $userNumber = "{0:D2}" -f $i
 
     # Define user properties
-    $firstName = "user"  # Corrected first name to "user"
-    $lastName = $userNumber  # Use userNumber as last name
+    $firstName = "user" 
+    $lastName = $userNumber  
     $samAccountName = "user$userNumber"
     $userPrincipalName = "user$userNumber@corp.aclab.tech"
 
