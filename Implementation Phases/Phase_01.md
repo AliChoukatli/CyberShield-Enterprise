@@ -146,7 +146,7 @@ In this phase, you will:
 ## Instructions
 
 1. After installing AD DS, click the yellow flag ➔ **Promote this server to a domain controller**.
-   ![Promote]()
+   ![Promote](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Promote_server.png)
 3. Select **Add a new forest**.
 4. Enter your domain name (e.g., `corp.aclab.tech`).
 5. Keep default **Forest** and **Domain functional levels**.
