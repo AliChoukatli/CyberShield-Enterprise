@@ -1,34 +1,43 @@
-# Phase 2: Active Directory User Management & IT Support Tasks
+# Phase 2: **Active Directory User Management & IT Support Tasks**
 
-## 🎯 Objectives
-On Day 4, you will focus on core IT support operations:
-- Creating and managing Active Directory users and groups
-- Assigning permissions and auditing access
-- Providing remote support (RDP, TeamViewer)
+## 🎯 **Objectives**
+On Phase 2, we focus on the essential aspects of IT support operations, including:
+
+- Creating and managing Active Directory (AD) user accounts and groups
+- Assigning permissions and auditing user access
+- Providing remote support (via RDP, TeamViewer)
 - Performing basic network diagnostics (ping, ipconfig)
-- Using PowerShell for automation tasks
+- Automating tasks using PowerShell
 
 ---
 
-## 1. 🆕 Creating Users in Active Directory
-### Why?
-Managing user accounts is fundamental to IT support and access control.
+## 1. 🆕 **Creating Users in Active Directory**
 
-### 🔧 Steps:
+### **Why is this important?**
+User account management is critical for maintaining access control, security, and efficient IT operations within the organization.
+
+### 🔧 **Steps:**
 1. Open **Server Manager** > **Tools** > **Active Directory Users and Computers**
-2. Navigate to your target Organizational Unit (e.g., `Users`)
-3. Right-click > **New** > **User** [Screenshot](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/AD_User_01.png)
-4. Fill in details (Name, Logon name) 
-5. Set a temporary password and enforce password change at next logon
-6. Click [Finish]
-7. in our project We will add 10 users to AD; [Screenshot](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/10_users.png)
+2. Navigate to the target **Organizational Unit (OU)**, for instance, `Users`
+3. Right-click on the OU > **New** > **User**  
+   ![Step 3 Screenshot](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/AD_User_01.png)
+4. Fill in user details, including **Name** and **Logon Name**
+5. Set a **temporary password** and select the option to **Force password change at next logon**
+6. Click **Finish**
+7. In this project, we will add 10 users to Active Directory  
+   ![Step 7 Screenshot](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/10_users.png)
 
-8. [Script](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_10_users.ps1)
-   
-   To add only 1 user; i sugest you to go to [Aadd_user](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_user.ps1)
-  
-Pro tip: if you need to delete a OU you need to go advanced features etc etc
+### ⚙️ **PowerShell Automation:**
+To automate the process of adding users to AD, you can use the following PowerShell script:
+
+- [PowerShell Script to Add 10 Users](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_10_users.ps1)
+- For adding a single user, refer to this [Add_user.ps1](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_user.ps1)
+
+### 🧑‍💻 **Pro Tip:**
+To delete an Organizational Unit (OU), you must enable **Advanced Features** in Active Directory Users and Computers. Navigate to **View** > **Advanced Features**, then right-click the OU you wish to delete.
+
 ---
+
 
 ## 2. 👥 Managing Groups and Permissions
 ### Why?
