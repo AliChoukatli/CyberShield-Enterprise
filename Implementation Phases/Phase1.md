@@ -85,8 +85,6 @@ In this phase, you will:
 3. Select the version: `Standard (Desktop Experience)`.
 4. Choose `Custom` installation ➔ Create a new partition ➔ Click `Next`.
 5. Set a strong administrator password.
-    [**Screenshot**](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/win_serv_1st_screen.png).
-
 
 
 # 🔴 Step 3 – Rename the Server
