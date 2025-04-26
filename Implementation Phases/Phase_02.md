@@ -19,7 +19,7 @@ Managing user accounts is fundamental to IT support and access control.
 2. Navigate to your target Organizational Unit (e.g., `Users`)
 3. Right-click > **New** > **User** [Screenshot](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/AD_User_01.png)
 4. Fill in details (Name, Logon name) 
-5. [Set a temporary password and enforce password change at next logon]
+5. Set a temporary password and enforce password change at next logon
 6. Click [Finish]
 7. in our project We will add 10 users to AD; [Script](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/ADD_10.ps1)
    
