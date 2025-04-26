@@ -11,7 +11,7 @@ On Phase 2, we focus on the essential aspects of IT support operations, includin
 
 ---
 
-## 1. 🔴 **Creating Users in Active Directory**
+## 1. **Creating Users in Active Directory**
 
 ### **Why is this important?**
 User account management is critical for maintaining access control, security, and efficient IT operations within the organization.
@@ -36,7 +36,7 @@ To automate the process of adding users to AD, you can use the following PowerSh
 - [PowerShell Script to Add 10 Users](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_10_users.ps1)
 - For adding a single user, refer to this [Add_user.ps1](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_user.ps1)
 
-## 2. 🔴 Step X – Delete a User in Active Directory
+## 2. **Delete a User in Active Directory**
 🎯 **Objective**: Safely remove a user account from Active Directory.
 
 ### Instructions
