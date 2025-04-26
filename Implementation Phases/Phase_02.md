@@ -44,8 +44,10 @@ To automate the process of adding users to AD, you can use the following PowerSh
 1. Open **Server Manager ➔ Tools ➔ Active Directory Users and Computers**.
 2. Navigate to the **OU** (Organizational Unit) where the user account is located.
 3. Right-click the user you want to delete ➔ Click **Delete**.
+   
    ![Delete_user](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/delete_user.png)
-5. Confirm the deletion when prompted.
+   
+4. Confirm the deletion when prompted.
 
 
 
