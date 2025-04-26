@@ -21,7 +21,8 @@ Managing user accounts is fundamental to IT support and access control.
 4. Fill in details (Name, Logon name) 
 5. [Set a temporary password and enforce password change at next logon]
 6. Click [Finish]
-7. Powershell:
+7. Alternatively, configure via PowerShell:
+   
 
 ---
 
