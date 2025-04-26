@@ -40,7 +40,7 @@ This section covers the steps taken :
    - Choose [Required only](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Required%20only.png) -> Accept 
    - Now you should see on the screen [Preapring your PC](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/preparing%20pc.png)
 
-   - You can shoudl see now your [first screen](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/win11_first_screen.png)
+   - You can now see now your [First screen](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/win11_first_screen.png)
    -  ⚙️Rename the machine; Go to :
       
         Setting --> System --> About --> [Rename this PC](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/rename_win11.png) Ex : WIN11-01  -> Restart the machine 
