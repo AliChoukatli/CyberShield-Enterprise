@@ -28,6 +28,31 @@ This section covers the steps taken :
 🔴 **Step 1 – Windows 11 Client Machines**
 
    - Download the official [Windows 11 ISO](https://www.microsoft.com/en-us/software-download/windows11) from Microsoft.
+   - Lance la VM avec l’ISO de Windows 11 monté.
+   - Click ➡️ "Install now
+   - Custom
+   - Capture #4 : Écran de sélection du disque/partition --> Next
+   - 📸 Capture #5 : Écran "Installing Win11. 
+   - Choose country / Keyboard Language
+   - Choose Join Domain Instead ( capture join domain)
+   - Put your name
+   - Choose a password
+   - Required only capture -> Accept
+   - Preapring your PC capture
+
+   -  Capture #8 : Bureau vierge juste après la première ouverture de session
+   -  ⚙️Rename the machine
+          Go to : 
+          - Setting > System > about > Rename this PC; Ex : WIN11-01 -> Restart the machine 📸 Capture #9 : Écran de renommage de l’ordinateur
+   
+📸 Capture #10 : Confirmation du nouveau nom dans les paramètres système après redémarrage
+
+
+
+
+
+
+
    - Install 2–3 VMs with Windows 11.
    - Do **not** join them to Azure AD yet (planned for Phase 3).
    - Enable RDP and consider TeamViewer for support simulation.
