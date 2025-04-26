@@ -119,6 +119,7 @@ In this phase, you will:
    - Alternate DNS: `8.8.8.8`
 
    ![Static IP Settings](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Static_IP.png)
+   📌 Ensure the IP configuration is consistent across reboots.
 
    ## Alternatively (PowerShell):
 
