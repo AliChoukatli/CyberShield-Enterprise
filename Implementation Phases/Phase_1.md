@@ -1,7 +1,7 @@
 # Phase 1: Environment Setup – Win11, Active Directory & Network
 
 
-## ⚠️ Prerequisites
+## ⚠️ Requirements
 Before you begin Step 1: Windows 11 Client Machines, please verify that you have the following in place:
 
 ✅ Windows 11 (64-bit) client with administrative privileges
