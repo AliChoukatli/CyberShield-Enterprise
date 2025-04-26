@@ -116,7 +116,7 @@ This section covers the steps taken :
    - [Confirm your domain appears and OUs (Organizational Units) are visible](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/AD_verification.png)
 
 
-## ✅ Summary – Day 1
+## ✅ Summary – Phase 1
 At the end of Day 1, your environment should have:
 - A Windows Server 2022 machine installed and configured
 - A static IP set (192.168.2.10 in this case)
