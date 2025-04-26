@@ -34,7 +34,8 @@ Groups simplify permission management across multiple resources.
 1. In **Active Directory Users and Computers**, navigate to the `Groups` OU
 2. Right-click > **New** > **Group**
 3. Name the group (e.g., `IT-SMB-Admins`), choose scope and type
-4. Add members via **Properties** > **Members** > **Add**
+4. Add members via **Properties** > **Members** > **Add* (https://github.com/user-attachments/assets/3a4e803a-b6ea-4bff-a34b-b352b4646a66)
+
 5. On file servers or folders, assign NTFS permissions to this group
 
 ### 📸 Capture to Take:
