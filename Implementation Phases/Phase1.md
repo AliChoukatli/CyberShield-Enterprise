@@ -131,7 +131,7 @@ Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("127.0.0
 
 ### Instructions:
 
-1. In **Server Manager**, click **Add Roles and Features**.[Screenshot](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/AD_add_role.png)
+1. In **Server Manager**, click **Add Roles and Features**. [Screenshot](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/AD_add_role.png)
 2. Select **Role-based or feature-based installation**. 
 3. Choose your server from the list.
 4. Under **Roles**, check **Active Directory Domain Services**.
