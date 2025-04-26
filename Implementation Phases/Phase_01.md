@@ -37,7 +37,7 @@ In this phase, you will:
 
 1. Download the official [Windows 11 ISO](https://www.microsoft.com/en-us/software-download/windows11).
 2. Create a new VM and boot from the ISO.
-3. Select **Install now** On the setup screen,
+3. Select **Install now** on the setup screen.
 4. Choose **Custom** installation ➔ Create a new partition ➔ Click **Next**.
 
    ![Create Partition](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Create_Partition.png)
@@ -96,7 +96,7 @@ In this phase, you will:
 
 1. Open **Server Manager**.
 2. Go to **Local Server**.
-3. Click the computer name ➔ **Change** ➔ Rename to `DC01`.
+3. Click **Computer Name ➔ Change settings ➔ Change ➔ Rename** the server to `DC01`.
 
    ![Rename Server](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Rename_Server.png)
 
@@ -111,73 +111,71 @@ In this phase, you will:
 ### Instructions
 
 1. In **Server Manager ➔ Local Server**, click the IPv4 address.
-2. Go to **Properties ➔ IPv4 Settings**:
+2. Go to **Properties ➔ IPv4 Settings** and configure:
    - IP Address: `192.168.2.10`
    - Subnet Mask: `255.255.255.0`
    - Default Gateway: `192.168.2.1`
-   - Preferred DNS: `127.0.0.1`
-   - Alternate DNS: `8.8.8.8`
+   - Preferred DNS Server: `127.0.0.1`
+   - Alternate DNS Server: `8.8.8.8`
 
    ![Static IP Settings](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Static_IP.png)
-  📌 Ensure IP configuration is consistent across reboots:
-      Setting a static IP address ensures that the server keeps the same IP address even after restarts. This is critical for Active Directory and DNS stability.
-   ## Alternatively (PowerShell):
 
-   ```powershell
-   New-NetIPAddress -InterfaceAlias "Ethernet" -IPAddress 192.168.2.10 -PrefixLength 24 -DefaultGateway 192.168.2.1
-   Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("127.0.0.1", "8.8.8.8")
-   ```
+📌 **Ensure IP configuration is consistent across reboots:**  
+Setting a static IP address ensures that the server keeps the same IP address even after restarts. This is critical for Active Directory and DNS stability.
 
-# 🔴 Step 5 – Install Active Directory Domain Services (AD DS)
+## Alternatively (PowerShell):
+
+```powershell
+New-NetIPAddress -InterfaceAlias "Ethernet" -IPAddress 192.168.2.10 -PrefixLength 24 -DefaultGateway 192.168.2.1
+Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("127.0.0.1", "8.8.8.8")
+```
+
+## 🔴 Step 5 – Install Active Directory Domain Services (AD DS)
 🎯 **Objective**: Add Active Directory role to the server.
 
-## Instructions
-
+### Instructions
 1. In **Server Manager**, click **Add Roles and Features**.
 2. Select **Role-based or feature-based installation**.
-3. Choose your server.
+3. Choose your server from the list.
 4. Under **Roles**, check **Active Directory Domain Services**.
 5. Proceed with the installation.
 
+🛈 **Note**: After installing the AD DS role, a yellow exclamation mark will appear in Server Manager. This is normal and indicates post-installation tasks are required.
+
 ---
 
-# 🔴 Step 6 – Promote the Server to a Domain Controller
+## 🔴 Step 6 – Promote the Server to a Domain Controller
 🎯 **Objective**: Create a new Active Directory forest.
 
-## Instructions
-
+### Instructions
 1. After installing AD DS, click the yellow flag ➔ **Promote this server to a domain controller**.
-   ![Promote](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Promote_server.png)
-3. Select **Add a new forest**.
-4. Enter your domain name (e.g., `corp.aclab.tech`).
-5. Keep default **Forest** and **Domain functional levels**.
-6. Configure the **DSRM password**.
-   ![DSRM](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/DSRM_password.png)
-8. Complete the wizard and install.
+2. Select **Add a new forest**.
+3. Enter your domain name (e.g., `corp.aclab.tech`).
+4. Keep default **Forest** and **Domain functional levels**.
+5. Configure the **DSRM password**.
+6. Complete the wizard and install.
 
 🔁 **The server will automatically reboot after promotion.**
 
 ---
 
-# 🔴 Step 7 – Verify Active Directory Installation
+## 🔴 Step 7 – Verify Active Directory Installation
 🎯 **Objective**: Confirm successful Active Directory deployment.
 
-## Instructions
-
+### Instructions
 1. Open **Server Manager ➔ Tools ➔ Active Directory Users and Computers**.
 2. Verify:
-   - Your **domain name** appears.
+   - Your domain name appears (`corp.aclab.tech`).
    - Default **Organizational Units (OUs)** are visible.
-   ![AD-Verification](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/AD_verification.png)
 
 ---
 
-# ✅ Phase 1 Summary
+## ✅ Phase 1 Summary
 
-At the end of Phase 1, you should have:
+At the end of **Phase 1**, you should have:
 
 - ✔️ **Windows Server 2022 installed and renamed.**
 - ✔️ **Static IP configuration completed.**
 - ✔️ **Active Directory Domain Services installed and configured.**
-- ✔️ **Domain created (`aclab.tech`).**
+- ✔️ **Domain created (`corp.aclab.tech`).**
 - ✔️ **2–3 Windows 11 client machines ready for domain join in future phases.**
