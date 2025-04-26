@@ -1,5 +1,6 @@
 # Phase 1: Environment Setup – Windows 11 Clients, Active Directory & Networking
 
+---
 
 ## ⚙️ Prerequisites
 
@@ -14,8 +15,9 @@ Before starting **Phase 1**, ensure you meet the following requirements:
 - ✅ Virtualization platform: Hyper-V, VMware, or VirtualBox.
 - ✅ Local administrative privileges.
 
+---
 
-## Overview
+## 🛠️ Overview
 
 In this phase, you will:
 
@@ -25,87 +27,91 @@ In this phase, you will:
 - Promote the server to a Domain Controller.
 - Verify Active Directory installation.
 
+---
 
 # 🔴 Step 1 – Windows 11 Client Machines
 
-**Objective**: Install and prepare Windows 11 machines for later domain joining.
+**🎯 Objective**: Install and prepare Windows 11 machines for later domain joining.
 
-### Instructions:
+### Instructions
 
 1. Download the official [Windows 11 ISO](https://www.microsoft.com/en-us/software-download/windows11).
 2. Create a new VM and boot from the ISO.
-3. On the setup screen, select `Install now`.
+3. On the setup screen, select **Install now**.
+4. Choose **Custom** installation ➔ Create a new partition ➔ Click **Next**.
 
-4. Select `Custom` installation.
-5. Create a new partition as needed ➔ click `Next`.
-   ![Step 2](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Create_Partition.png).
+   ![Create Partition](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Create_Partition.png)
 
-6. Wait for Windows installation to complete.
-   ![Step 6](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Installing_Win11.png).
+5. Wait for Windows installation to complete.
 
-7. Choose your region and keyboard layout.
+   ![Installing Windows 11](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Installing_Win11.png)
 
-8. Select `Join Domain Instead` (do not sign in with a Microsoft account).
-   ![Step 8](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/join%20domain.png).
+6. Choose your region and keyboard layout.
+7. Select **Join Domain Instead** (do not sign in with a Microsoft account).
 
-9. Create a local user account:
-   - Set a username.
-   - Set a strong password.
+   ![Join Domain](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/join%20domain.png)
 
-10. For privacy settings, choose `Required only` ➔ Accept.
+8. Create a local user account:
+   - Username
+   - Strong password
+9. For privacy settings, choose **Required only** ➔ Accept.
+10. The system will finalize setup ("Preparing your PC" screen).
 
-11. The system will finalize setup ("Preparing your PC" screen).
-   ![Step 11](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/preparing%20pc.png).
+    ![Preparing PC](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/preparing%20pc.png)
 
-12. Once at the desktop, proceed to rename the machine:
-    - Settings ➔ System ➔ About ➔ `Rename this PC`.
-    - Example: `WIN11-01`.
-   ![Step 12](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/rename_win11.png).
+11. Once at the desktop, rename the machine:
+    - **Settings ➔ System ➔ About ➔ Rename this PC** (e.g., `WIN11-01`).
 
-13. Restart the VM to apply the new hostname.
-    !]Step 13](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/rename_confirmation.png).
+    ![Rename Windows 11 PC](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/rename_win11.png)
 
-### Notes:
+12. Restart the VM to apply the new hostname.
 
+    ![Rename Confirmation](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/rename_confirmation.png)
+
+---
+
+### 📌 Notes:
 - Create **2–3** Windows 11 VMs.
-- Do **NOT** join them to Azure AD or local domain yet (planned for Phase 3).
+- **Do not** join them to Azure AD or local domain yet (planned for Phase 3).
 - Enable RDP and optionally install TeamViewer for remote support simulation.
 
-
+---
 
 # 🔴 Step 2 – Windows Server 2022 Installation
 
-**Objective**: Set up the server that will host Active Directory services.
+**🎯 Objective**: Set up the server that will host Active Directory services.
 
-### Instructions:
+### Instructions
 
-1. Download [Windows Server 2022 ISO](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2022).
+1. Download the official [Windows Server 2022 ISO](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2022).
 2. Create a new VM and boot from the ISO.
-3. Select the version: `Standard (Desktop Experience)`.
-4. Choose `Custom` installation ➔ Create a new partition ➔ Click `Next`.
+3. Select the edition: **Standard (Desktop Experience)**.
+4. Choose **Custom** installation ➔ Create a new partition ➔ Click **Next**.
 5. Set a strong administrator password.
 
+---
 
 # 🔴 Step 3 – Rename the Server
 
-**Objective**: Assign a clear hostname to the server.
+**🎯 Objective**: Assign a clear hostname to the server.
 
-### Instructions:
+### Instructions
 
 1. Open **Server Manager**.
 2. Go to **Local Server**.
-3. Click the current computer name ➔ `Change` ➔ Rename to something like `DC01`.
-   ![Step 3](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Rename_Server.png).
+3. Click the computer name ➔ **Change** ➔ Rename to `DC01`.
+
+   ![Rename Server](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Rename_Server.png)
 
 4. Restart the server to apply the new name.
 
-
+---
 
 # 🔴 Step 4 – Set a Static IP Address
 
-**Objective**: Ensure the server uses a fixed IP for Active Directory and DNS stability.
+**🎯 Objective**: Ensure the server uses a fixed IP for Active Directory and DNS stability.
 
-### Instructions:
+### Instructions
 
 1. In **Server Manager ➔ Local Server**, click the IPv4 address.
 2. Go to **Properties ➔ IPv4 Settings**:
@@ -114,70 +120,63 @@ In this phase, you will:
    - Default Gateway: `192.168.2.1`
    - Preferred DNS: `127.0.0.1`
    - Alternate DNS: `8.8.8.8`
-    ![*Step 2](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Static_IP.png).
 
-3. Alternatively, configure via PowerShell:
+   ![Static IP Settings](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Static_IP.png)
+
+### Alternatively (PowerShell):
+
 ```powershell
 New-NetIPAddress -InterfaceAlias "Ethernet" -IPAddress 192.168.2.10 -PrefixLength 24 -DefaultGateway 192.168.2.1
 Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("127.0.0.1", "8.8.8.8")
 ```
 
 # 🔴 Step 5 – Install Active Directory Domain Services (AD DS)
+🎯 **Objective**: Add Active Directory role to the server.
 
-**Objective**: Add Active Directory role to the server.
+## Instructions
 
-### Instructions:
-
-1. In **Server Manager**, click **Add Roles and Features**. [Screenshot](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/AD_add_role.png)
-2. Select **Role-based or feature-based installation**. 
-3. Choose your server from the list.
+1. In **Server Manager**, click **Add Roles and Features**.
+2. Select **Role-based or feature-based installation**.
+3. Choose your server.
 4. Under **Roles**, check **Active Directory Domain Services**.
-    ![Step 4*](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/select_ADDS.png).
-
 5. Proceed with the installation.
 
-
+---
 
 # 🔴 Step 6 – Promote the Server to a Domain Controller
+🎯 **Objective**: Create a new Active Directory forest.
 
-**Objective**: Create a new Active Directory forest.
+## Instructions
 
-### Instructions:
-
-1. After installing AD DS, click the yellow flag ➔ **Promote this server to a domain controller**. [Screenshot](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Promote_server.png)
+1. After installing AD DS, click the yellow flag ➔ **Promote this server to a domain controller**.
 2. Select **Add a new forest**.
 3. Enter your domain name (e.g., `corp.aclab.tech`).
 4. Keep default **Forest** and **Domain functional levels**.
-5. Configure the **DSRM password**. ![Step 5](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/DSRM_password.png)
+5. Configure the **DSRM password**.
 6. Complete the wizard and install.
 
 🔁 **The server will automatically reboot after promotion.**
 
-
+---
 
 # 🔴 Step 7 – Verify Active Directory Installation
+🎯 **Objective**: Confirm successful Active Directory deployment.
 
-**Objective**: Confirm successful Active Directory deployment.
-
-### Instructions:
+## Instructions
 
 1. Open **Server Manager ➔ Tools ➔ Active Directory Users and Computers**.
 2. Verify:
    - Your **domain name** appears.
    - Default **Organizational Units (OUs)** are visible.
-    ![Step 2](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/AD_verification.png).
 
-
+---
 
 # ✅ Phase 1 Summary
 
 At the end of Phase 1, you should have:
 
-- ✔️ Windows Server 2022 installed and renamed.
-- ✔️ Static IP configuration completed.
-- ✔️ Active Directory Domain Services installed and configured.
-- ✔️ Domain created (`aclab.tech`).
-- ✔️ 2–3 Windows 11 client machines ready for domain join in future phases.
-
-You are now ready to proceed to **Phase 2: Active Directory User Management**.
-
+- ✔️ **Windows Server 2022 installed and renamed.**
+- ✔️ **Static IP configuration completed.**
+- ✔️ **Active Directory Domain Services installed and configured.**
+- ✔️ **Domain created (`aclab.tech`).**
+- ✔️ **2–3 Windows 11 client machines ready for domain join in future phases.**
