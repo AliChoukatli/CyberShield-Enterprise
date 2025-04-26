@@ -26,7 +26,6 @@ In this phase, you will:
 - Promote the server to a Domain Controller.
 - Verify Active Directory installation.
 
----
 
 # 🔴 Step 1 – Windows 11 Client Machines
 
@@ -81,7 +80,7 @@ In this phase, you will:
 - Do **NOT** join them to Azure AD or local domain yet (planned for Phase 3).
 - Enable RDP and optionally install TeamViewer for remote support simulation.
 
----
+
 
 # 🔴 Step 2 – Windows Server 2022 Installation
 
@@ -97,7 +96,7 @@ In this phase, you will:
 
     🖼️ **Screenshot**: First Server Manager screen after installation.
 
----
+
 
 # 🔴 Step 3 – Rename the Server
 
@@ -113,7 +112,7 @@ In this phase, you will:
 
 4. Restart the server to apply the new name.
 
----
+
 
 # 🔴 Step 4 – Set a Static IP Address
 
@@ -152,7 +151,7 @@ Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("127.0.0
 
 5. Proceed with the installation.
 
----
+
 
 # 🔴 Step 6 – Promote the Server to a Domain Controller
 
@@ -172,7 +171,7 @@ Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("127.0.0
 
 🔁 **The server will automatically reboot after promotion.**
 
----
+
 
 # 🔴 Step 7 – Verify Active Directory Installation
 
@@ -187,7 +186,7 @@ Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("127.0.0
 
     🖼️ **Screenshot**: Active Directory Users and Computers overview.
 
----
+
 
 # ✅ Phase 1 Summary
 
