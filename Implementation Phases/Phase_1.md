@@ -48,7 +48,7 @@ This section covers the steps taken :
 
 ---
 
-##Notes   
+## *Notes*   
    - Install 2–3 VMs with Windows 11.
    - Do **not** join them to Azure AD yet (planned for Phase 3).
    - Enable RDP and consider TeamViewer for support simulation.
