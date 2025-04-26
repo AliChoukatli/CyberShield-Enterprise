@@ -151,7 +151,8 @@ In this phase, you will:
 4. Enter your domain name (e.g., `corp.aclab.tech`).
 5. Keep default **Forest** and **Domain functional levels**.
 6. Configure the **DSRM password**.
-7. Complete the wizard and install.
+   ![DSRM](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/DSRM_password.png)
+8. Complete the wizard and install.
 
 🔁 **The server will automatically reboot after promotion.**
 
