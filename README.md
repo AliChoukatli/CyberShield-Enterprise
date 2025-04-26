@@ -13,7 +13,7 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 9. [PowerShell Tools (IT Support)](https://github.com/AliChoukatli/SecureIT-for-SMB/tree/main?tab=readme-ov-file#%EF%B8%8F-powershell-tools-support-it).
 11. [Incident Response Simulation](https://github.com/AliChoukatli/SecureIT-for-SMB/tree/main?tab=readme-ov-file#-incident-response-simulation)
 12. [Security Posture: Before & After](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/README.md#security-posture-before--after)
-13. [Compliance Mapping (Summar)](https://github.com/AliChoukatli/SecureIT-for-SMB/tree/main?tab=readme-ov-file#-compliance-mapping-summary).
+13. [Compliance Mapping (Summary)](https://github.com/AliChoukatli/SecureIT-for-SMB/tree/main?tab=readme-ov-file#-compliance-mapping-summary).
 14. [License](https://github.com/AliChoukatli/SecureIT-for-SMB/tree/main?tab=readme-ov-file#%EF%B8%8F-license).
 
 ## 🧱 **Architecture :** 
