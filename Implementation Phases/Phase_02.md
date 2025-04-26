@@ -22,6 +22,7 @@ Managing user accounts is fundamental to IT support and access control.
 5. [Set a temporary password and enforce password change at next logon]
 6. Click [Finish]
 7. We will add 10 users to AD; [Script](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/ADD_10.ps1)
+   
    To add only 1 user; i sugest you to go to [Aadd_user](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/ADD_10.ps1)
   
 Pro tip: if you need to delete a OU you need to go advanced features etc etc
