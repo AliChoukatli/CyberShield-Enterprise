@@ -58,7 +58,7 @@ Before deleting a user, it is best practice to **first disable the account** for
 To disable a user:
 - Right-click the user ➔ **Disable Account**.
 
-  [Disable_user](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/disable_user.png)
+  ![Disable_user](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/disable_user.png)
 
 ---
 ## 🎯 3. **Delete an Organizational unit**
