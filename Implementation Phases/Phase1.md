@@ -136,3 +136,69 @@ In this phase, you will:
 ```powershell
 New-NetIPAddress -InterfaceAlias "Ethernet" -IPAddress 192.168.2.10 -PrefixLength 24 -DefaultGateway 192.168.2.1
 Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("127.0.0.1", "8.8.8.8")
+```
+
+# 🔴 Step 5 – Install Active Directory Domain Services (AD DS)
+
+**Objective**: Add Active Directory role to the server.
+
+### Instructions:
+
+1. In **Server Manager**, click **Add Roles and Features**.
+2. Select **Role-based or feature-based installation**.
+3. Choose your server from the list.
+4. Under **Roles**, check **Active Directory Domain Services**.
+
+    🖼️ **Screenshot**: Selecting AD DS role.
+
+5. Proceed with the installation.
+
+---
+
+# 🔴 Step 6 – Promote the Server to a Domain Controller
+
+**Objective**: Create a new Active Directory forest.
+
+### Instructions:
+
+1. After installing AD DS, click the yellow flag ➔ **Promote this server to a domain controller**.
+2. Select **Add a new forest**.
+3. Enter your domain name (e.g., `corp.aclab.tech`).
+4. Keep default **Forest** and **Domain functional levels**.
+5. Configure the **DSRM password**.
+
+    🖼️ **Screenshot**: Domain controller promotion screen.
+
+6. Complete the wizard and install.
+
+🔁 **The server will automatically reboot after promotion.**
+
+---
+
+# 🔴 Step 7 – Verify Active Directory Installation
+
+**Objective**: Confirm successful Active Directory deployment.
+
+### Instructions:
+
+1. Open **Server Manager ➔ Tools ➔ Active Directory Users and Computers**.
+2. Verify:
+   - Your **domain name** appears.
+   - Default **Organizational Units (OUs)** are visible.
+
+    🖼️ **Screenshot**: Active Directory Users and Computers overview.
+
+---
+
+# ✅ Phase 1 Summary
+
+At the end of Phase 1, you should have:
+
+- ✔️ Windows Server 2022 installed and renamed.
+- ✔️ Static IP configuration completed.
+- ✔️ Active Directory Domain Services installed and configured.
+- ✔️ Domain created (`aclab.tech`).
+- ✔️ 2–3 Windows 11 client machines ready for domain join in future phases.
+
+You are now ready to proceed to **Phase 2: Active Directory User Management**.
+
