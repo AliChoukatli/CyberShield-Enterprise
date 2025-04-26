@@ -50,9 +50,6 @@ To automate the process of adding users to AD, you can use the following PowerSh
 4. Confirm the deletion when prompted.
 
 
-
----
-
 ### 🧑‍💻 **Pro Tip:**
 Before deleting a user, it is best practice to **first disable the account** for a period of time to prevent accidental data loss or the need for recovery.
 
