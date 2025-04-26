@@ -1,6 +1,5 @@
 # Phase 1: Environment Setup – Windows 11 Clients, Active Directory & Networking
 
----
 
 ## ⚙️ Prerequisites
 
