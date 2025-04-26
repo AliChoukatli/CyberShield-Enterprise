@@ -1,7 +1,7 @@
-# Définir the information of the user
+# Définir the information of the user FirstName.LastName
 $firstName = "John"
 $lastName = "Doe"
-$samAccountName = "$firstName$lastName"
+$samAccountName = "$firstName.$lastName"
 $userPrincipalName = "$samAccountName@corp.aclab.tech"
 
 # Créer l'utilisateur Active Directory
