@@ -20,7 +20,7 @@ Managing user accounts is fundamental to IT support and access control.
 3. [Right-click > **New** > **User**](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/AD_User_01.png)
 4. Fill in details (Name, Logon name) 
 5. [Set a temporary password and enforce password change at next logon]
-6. Click [Next](https://github.com/user-attachments/assets/3a4e803a-b6ea-4bff-a34b-b352b4646a66)
+6. Click [Finish]
 
 ---
 
