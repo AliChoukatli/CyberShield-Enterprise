@@ -6,7 +6,7 @@
 
 Before starting **Phase 1**, ensure you meet the following requirements:
 
-- ✅ A host machine with at least 16 GB RAM and virtualization enabled (BIOS/UEFI).
+- ✅ A host machine with at least 8 GB RAM and virtualization enabled (BIOS/UEFI).
 - ✅ Windows 11 ISO (64-bit).
 - ✅ Windows Server 2022 ISO.
 - ✅ Internet access (ports 80/443 open).
