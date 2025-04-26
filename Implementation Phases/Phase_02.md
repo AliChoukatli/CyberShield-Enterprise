@@ -36,6 +36,31 @@ To automate the process of adding users to AD, you can use the following PowerSh
 - [PowerShell Script to Add 10 Users](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_10_users.ps1)
 - For adding a single user, refer to this [Add_user.ps1](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_user.ps1)
 
+# 🔴 Step X – Delete a User in Active Directory
+🎯 **Objective**: Safely remove a user account from Active Directory.
+
+### Instructions
+
+1. Open **Server Manager ➔ Tools ➔ Active Directory Users and Computers**.
+2. Navigate to the **OU** (Organizational Unit) where the user account is located.
+3. Right-click the user you want to delete ➔ Click **Delete**.
+4. Confirm the deletion when prompted.
+
+   ![Delete User](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/DayX_Delete_User/Delete_User.png)
+
+---
+
+### 🧑‍💻 **Pro Tip:**
+Before deleting a user, it is best practice to **first disable the account** for a period of time to prevent accidental data loss or the need for recovery.
+
+To disable a user:
+- Right-click the user ➔ **Disable Account**.
+
+---
+
+📌 **Note**: Deleted user accounts are **permanently removed** unless you have a backup or Active Directory Recycle Bin enabled.
+
+
 ### 🧑‍💻 **Pro Tip:**
 To delete an Organizational Unit (OU), you must enable **Advanced Features** in Active Directory Users and Computers. Navigate to **View** > **Advanced Features**, then right-click the OU you wish to delete. 
 
