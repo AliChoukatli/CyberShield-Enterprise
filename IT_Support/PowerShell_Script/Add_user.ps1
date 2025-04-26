@@ -1,30 +1,40 @@
-New-ADUser `
- -Name "John Doe" `
- -GivenName "John" `
- -Surname "Doe" `
- -SamAccountName "jdoe" `
- -UserPrincipalName "jdoe@yourdomain.com" `
- -Path "OU=Users,DC=yourdomain,DC=com" `
- -AccountPassword (ConvertTo-SecureString "TemporaryP@ssw0rd!" -AsPlainText -Force) `
- -Enabled $true `
- -ChangePasswordAtLogon $true
+# PowerShell script to create 10 users (from user-01 to user-10) :
 
------- 
 
--Name : Full display name.
+for ($i = 1; $i -le 10; $i++) {
+    $userNumber = "{0:D2}" -f $i
+    $firstName = "user-$userNumber"
+    $lastName = "Test"
+    $samAccountName = "user$userNumber"
+    $userPrincipalName = "user$userNumber@yourdomain.com"
 
--GivenName : First name.
+    New-ADUser `
+        -Name "$firstName $lastName" `
+        -GivenName $firstName `
+        -Surname $lastName `
+        -SamAccountName $samAccountName `
+        -UserPrincipalName $userPrincipalName `
+        -Path "OU=CyberShield_Users,DC=yourdomain,DC=com" `
+        -AccountPassword (ConvertTo-SecureString "TemporaryP@ssw0rd123!" -AsPlainText -Force) `
+        -Enabled $true `
+        -PasswordNeverExpires $false `
+        -ChangePasswordAtLogon $true
+}
 
--Surname : Last name.
+# Name : Full display name.
 
--SamAccountName : Username for authentication (logon name).
+# GivenName : First name.
 
--UserPrincipalName : Email format username (useful for Azure and cloud compatibility).
+# Surname : Last name.
 
--Path : The Organizational Unit (OU) where you create the user.
+# SamAccountName : Username for authentication (logon name).
 
--AccountPassword : Initial password (provided in plain text for the script).
+# UserPrincipalName : Email format username (useful for Azure and cloud compatibility).
 
--Enabled : Immediately enables the account.
+# Path : The Organizational Unit (OU) where you create the user.
 
--ChangePasswordAtLogon : Forces the user to change their password at first logon.
+# AccountPassword : Initial password (provided in plain text for the script).
+
+# Enabled : Immediately enables the account.
+
+# ChangePasswordAtLogon : Forces the user to change their password at first logon.
