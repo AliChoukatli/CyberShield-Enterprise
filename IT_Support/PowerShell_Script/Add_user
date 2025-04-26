@@ -1,0 +1,22 @@
+# PowerShell script to create 10 users (from user-01 to user-10) :
+
+
+for ($i = 1; $i -le 10; $i++) {
+    $userNumber = "{0:D2}" -f $i
+    $firstName = "user-$userNumber"
+    $lastName = "Test"
+    $samAccountName = "user$userNumber"
+    $userPrincipalName = "user$userNumber@yourdomain.com"
+
+    New-ADUser `
+        -Name "$firstName $lastName" `
+        -GivenName $firstName `
+        -Surname $lastName `
+        -SamAccountName $samAccountName `
+        -UserPrincipalName $userPrincipalName `
+        -Path "OU=CyberShield_Users,DC=yourdomain,DC=com" `
+        -AccountPassword (ConvertTo-SecureString "TemporaryP@ssw0rd123!" -AsPlainText -Force) `
+        -Enabled $true `
+        -PasswordNeverExpires $false `
+        -ChangePasswordAtLogon $true
+}
