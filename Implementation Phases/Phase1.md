@@ -15,7 +15,6 @@ Before starting **Phase 1**, ensure you meet the following requirements:
 - ✅ Virtualization platform: Hyper-V, VMware, or VirtualBox.
 - ✅ Local administrative privileges.
 
----
 
 ## Overview
 
