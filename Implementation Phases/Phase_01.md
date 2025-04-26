@@ -123,7 +123,7 @@ In this phase, you will:
 
    ![Static IP Settings](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Static_IP.png)
 
-### Alternatively (PowerShell):
+## Alternatively (PowerShell):
 
 ```powershell
 New-NetIPAddress -InterfaceAlias "Ethernet" -IPAddress 192.168.2.10 -PrefixLength 24 -DefaultGateway 192.168.2.1
