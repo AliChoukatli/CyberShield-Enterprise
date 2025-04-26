@@ -37,7 +37,7 @@ In this phase, you will:
 
 1. Download the official [Windows 11 ISO](https://www.microsoft.com/en-us/software-download/windows11).
 2. Create a new VM and boot from the ISO.
-3. On the setup screen, select **Install now**.
+3. Select **Install now** On the setup screen,
 4. Choose **Custom** installation ➔ Create a new partition ➔ Click **Next**.
 
    ![Create Partition](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Create_Partition.png)
