@@ -1,4 +1,5 @@
 # Liste of 10 users to add:
+
 $users = @(
     @{ FirstName = "John"; LastName = "Doe" },
     @{ FirstName = "Alice"; LastName = "Smith" },
@@ -13,8 +14,10 @@ $users = @(
 )
 
 # Loop to create the users
+
 foreach ($user in $users) {
     # Define user properties
+    
     $firstName = $user.FirstName
     $lastName = $user.LastName
     $samAccountName = "$firstName$lastName"
