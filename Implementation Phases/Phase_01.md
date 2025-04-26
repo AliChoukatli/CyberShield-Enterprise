@@ -38,7 +38,7 @@ In this phase, you will:
 
 4. Select `Custom` installation.
 5. Create a new partition as needed ➔ click `Next`.
-   [**Screenshot**](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Create_Partition.png).
+   ![Step 2](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Create_Partition.png).
 
 6. Wait for Windows installation to complete.
    [**Screenshot**](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Installing_Win11.png).
