@@ -31,21 +31,21 @@ This section covers the steps taken :
    - Lance la VM avec l’ISO de Windows 11 monté.
    - Click ➡️ "Install now
    - Custom
-   - Capture #4 : Écran de sélection du disque/partition --> Next
-   - 📸 Capture #5 : Écran "Installing Win11. 
+   - [Écran de sélection du disque/partitio](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Create_Partition.png) --> Next
+   - [Installing Win11](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Installing_Win11.png)
    - Choose country / Keyboard Language
    - Choose Join Domain Instead ( capture join domain)
    - Put your name
    - Choose a password
-   - Required only capture -> Accept
-   - Preapring your PC capture
+   - Choose [Required only](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Required%20only.png) -> Accept 
+   - [Preapring your PC](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/preparing%20pc.png)
 
-   -  Capture #8 : Bureau vierge juste après la première ouverture de session
-   -  ⚙️Rename the machine
+   -  [You can see now your First screen](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/win11_first_screen.png)
+   -  ⚙️[Rename the machine](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/rename_win11.png)
           Go to : 
-          - Setting > System > about > Rename this PC; Ex : WIN11-01 -> Restart the machine 📸 Capture #9 : Écran de renommage de l’ordinateur
+          - Setting > System > about > Rename this PC; Ex : WIN11-01  -> Restart the machine 
    
-📸 Capture #10 : Confirmation du nouveau nom dans les paramètres système après redémarrage
+   -  [Confirmation of the name change](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/rename_confirmation.png)
 
 
 
