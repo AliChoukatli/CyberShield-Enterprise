@@ -146,11 +146,12 @@ In this phase, you will:
 ## Instructions
 
 1. After installing AD DS, click the yellow flag ➔ **Promote this server to a domain controller**.
-2. Select **Add a new forest**.
-3. Enter your domain name (e.g., `corp.aclab.tech`).
-4. Keep default **Forest** and **Domain functional levels**.
-5. Configure the **DSRM password**.
-6. Complete the wizard and install.
+   ![Promote]()
+3. Select **Add a new forest**.
+4. Enter your domain name (e.g., `corp.aclab.tech`).
+5. Keep default **Forest** and **Domain functional levels**.
+6. Configure the **DSRM password**.
+7. Complete the wizard and install.
 
 🔁 **The server will automatically reboot after promotion.**
 
