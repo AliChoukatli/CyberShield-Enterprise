@@ -36,23 +36,21 @@ In this phase, you will:
 1. Download the official [Windows 11 ISO](https://www.microsoft.com/en-us/software-download/windows11).
 2. Create a new VM and boot from the ISO.
 3. On the setup screen, select `Install now`.
-   
-   🖼️ **Screenshot**: Installation screen (`Install now` button).
 
 4. Select `Custom` installation.
 5. Create a new partition as needed ➔ click `Next`.
    
-   🖼️ **Screenshot**: Partition creation screen.
+   🖼️ **Screenshot**: [Partition Creation](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Create_Partition.png)
 
 6. Wait for Windows installation to complete.
    
-   🖼️ **Screenshot**: Installation in progress.
+   🖼️ **Screenshot**:[ Installation in progress](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Installing_Win11.png)
 
 7. Choose your region and keyboard layout.
 
 8. Select `Join Domain Instead` (do not sign in with a Microsoft account).
    
-   🖼️ **Screenshot**: "Join Domain Instead" option.
+   🖼️ **Screenshot**: https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/join%20domain.png
 
 9. Create a local user account:
    - Set a username.
@@ -62,17 +60,17 @@ In this phase, you will:
 
 11. The system will finalize setup ("Preparing your PC" screen).
    
-    🖼️ **Screenshot**: "Preparing your PC" screen.
+    🖼️ **Screenshot**: https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/preparing%20pc.png
 
 12. Once at the desktop, proceed to rename the machine:
     - Settings ➔ System ➔ About ➔ `Rename this PC`.
     - Example: `WIN11-01`.
 
-    🖼️ **Screenshot**: Rename computer screen.
+    🖼️ **Screenshot**: https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/rename_win11.png
 
 13. Restart the VM to apply the new hostname.
 
-    🖼️ **Screenshot**: Confirmation after rename.
+    [🖼️ **Screenshot**:] (https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/rename_confirmation.png)
 
 ### Notes:
 
@@ -94,7 +92,7 @@ In this phase, you will:
 4. Choose `Custom` installation ➔ Create a new partition ➔ Click `Next`.
 5. Set a strong administrator password.
 
-    🖼️ **Screenshot**: First Server Manager screen after installation.
+    🖼️ **Screenshot**:[ First Server Manager](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/win_serv_1st_screen.png).
 
 
 
@@ -108,7 +106,7 @@ In this phase, you will:
 2. Go to **Local Server**.
 3. Click the current computer name ➔ `Change` ➔ Rename to something like `DC01`.
    
-   🖼️ **Screenshot**: Computer rename dialog.
+   🖼️ **Screenshot**: [Computer rename](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Rename_Server.png)
 
 4. Restart the server to apply the new name.
 
@@ -128,7 +126,7 @@ In this phase, you will:
    - Preferred DNS: `127.0.0.1`
    - Alternate DNS: `8.8.8.8`
 
-    🖼️ **Screenshot**: Static IP configuration screen.
+    🖼️ **Screenshot**: [Static IP configuration scree](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Static_IP.png)
 
 3. Alternatively, configure via PowerShell:
 ```powershell
@@ -143,11 +141,11 @@ Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("127.0.0
 ### Instructions:
 
 1. In **Server Manager**, click **Add Roles and Features**.
-2. Select **Role-based or feature-based installation**.
+2. Select **Role-based or feature-based installation**. (https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/AD_add_role.png)
 3. Choose your server from the list.
 4. Under **Roles**, check **Active Directory Domain Services**.
 
-    🖼️ **Screenshot**: Selecting AD DS role.
+    🖼️ **Screenshot**: [Selecting AD DS role](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/select_ADDS.png)
 
 5. Proceed with the installation.
 
@@ -165,7 +163,7 @@ Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("127.0.0
 4. Keep default **Forest** and **Domain functional levels**.
 5. Configure the **DSRM password**.
 
-    🖼️ **Screenshot**: Domain controller promotion screen.
+    🖼️ **Screenshot**: [Domain controller promotion screen](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Promote_server.png).
 
 6. Complete the wizard and install.
 
@@ -184,7 +182,7 @@ Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("127.0.0
    - Your **domain name** appears.
    - Default **Organizational Units (OUs)** are visible.
 
-    🖼️ **Screenshot**: Active Directory Users and Computers overview.
+    🖼️ **Screenshot**: [Active Directory Users and Computers overview.](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/AD_verification.png)
 
 
 
