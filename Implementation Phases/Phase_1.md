@@ -33,7 +33,7 @@ This section covers the steps taken :
    - Custom
    - Select [Create your partition](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Create_Partition.png) and choose the space you need --> Next
    - Now you should see on the screen [Installing process](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Installing_Win11.png)
-   - Choose country / Keyboard Language
+   - Choose Country / Keyboard Language
    - Choose Join Domain Instead ( capture join domain)
    - Put your name
    - Choose a password
@@ -42,7 +42,8 @@ This section covers the steps taken :
 
    - You can shoudl see now your [first screen](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/win11_first_screen.png)
    -  ⚙️Rename the machine; Go to :
-   -  Setting --> System --> About --> [Rename this PC](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/rename_win11.png) Ex : WIN11-01  -> Restart the machine 
+   -  
+     Setting --> System --> About --> [Rename this PC](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/rename_win11.png) Ex : WIN11-01  -> Restart the machine 
    
    -  [Confirmation of the name change](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/rename_confirmation.png)
 
