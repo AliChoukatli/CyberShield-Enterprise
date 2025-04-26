@@ -144,13 +144,11 @@ Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("127.0.0
 
 ### Instructions:
 
-1. After installing AD DS, click the yellow flag ➔ **Promote this server to a domain controller**.
+1. After installing AD DS, click the yellow flag ➔ **Promote this server to a domain controller**. [Screenshot](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Promote_server.png)
 2. Select **Add a new forest**.
 3. Enter your domain name (e.g., `corp.aclab.tech`).
 4. Keep default **Forest** and **Domain functional levels**.
-5. Configure the **DSRM password**.
-    [**Screenshot**](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Promote_server.png).
-
+5. Configure the **DSRM password**.[**Screenshot**](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/DSRM_password.png)
 6. Complete the wizard and install.
 
 🔁 **The server will automatically reboot after promotion.**
