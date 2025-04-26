@@ -48,6 +48,8 @@ To automate the process of adding users to AD, you can use the following PowerSh
    ![Delete_user](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/delete_user.png)
    
 4. Confirm the deletion when prompted.
+   
+   📌 **Note**: Deleted user accounts are **permanently removed** unless you have a backup or Active Directory Recycle Bin enabled.
 
 
 ### 🧑‍💻 **Pro Tip:**
@@ -57,12 +59,9 @@ To disable a user:
 - Right-click the user ➔ **Disable Account**.
 
 ---
+## 3. **Delete an Organizational unit**
 
-📌 **Note**: Deleted user accounts are **permanently removed** unless you have a backup or Active Directory Recycle Bin enabled.
-
-
-### 🧑‍💻 **Pro Tip:**
-To delete an Organizational Unit (OU), you must enable **Advanced Features** in Active Directory Users and Computers. Navigate to **View** > **Advanced Features**, then right-click the OU you wish to delete. 
+- Enable **Advanced Features** in Active Directory Users and Computers. Navigate to **View** > **Advanced Features**, then right-click the OU you wish to delete. 
 
 ![Advanced](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Advanced.png)
 
