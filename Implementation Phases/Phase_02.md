@@ -46,7 +46,7 @@ Before deleting, ensure that the **"Protect object from accidental deletion"** o
 2. Go to the **Object** tab.
 3. Uncheck the box for **Protect object from accidental deletion**.
  
- ![P¨rotect](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Protect_OU.png)
+ ![Protect](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Protect_OU.png)
 
 5. Click **OK** to confirm.
 
