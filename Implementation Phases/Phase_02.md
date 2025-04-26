@@ -23,9 +23,6 @@ Managing user accounts is fundamental to IT support and access control.
 6. Click [Finish]
 7. Alternatively, configure via [PowerShell](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_user.ps1)
   
-   ``` powershell
-
-   ```
 
 ---
 
