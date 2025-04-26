@@ -50,7 +50,7 @@ In this phase, you will:
 
 8. Select `Join Domain Instead` (do not sign in with a Microsoft account).
    
-   [🖼️ **Screenshot**:] https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/join%20domain.png
+   [🖼️ **Screenshot**:](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/join%20domain.png)
 
 9. Create a local user account:
    - Set a username.
