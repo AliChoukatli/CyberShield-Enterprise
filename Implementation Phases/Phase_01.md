@@ -165,6 +165,7 @@ In this phase, you will:
 2. Verify:
    - Your **domain name** appears.
    - Default **Organizational Units (OUs)** are visible.
+   ![AD-Verification](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/AD_verification.png)
 
 ---
 
