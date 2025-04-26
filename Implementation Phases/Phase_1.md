@@ -31,7 +31,7 @@ This section covers the steps taken :
    - Lance la VM avec l’ISO de Windows 11 monté.
    - Click ➡️ "Install now
    - Custom
-   - Select[Create your partition](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Create_Partition.png) and choose the space you need --> Next
+   - Select [Create your partition](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Create_Partition.png) and choose the space you need --> Next
    - [Installing Win11](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Installing_Win11.png)
    - Choose country / Keyboard Language
    - Choose Join Domain Instead ( capture join domain)
