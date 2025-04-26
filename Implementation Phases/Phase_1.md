@@ -34,7 +34,7 @@ This section covers the steps taken :
    - Select [Create your partition](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Create_Partition.png) and choose the space you need --> Next
    - Now you should see on the screen [Installing process](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Installing_Win11.png)
    - Choose Country / Keyboard Language
-   - Choose Join Domain Instead ( capture join domain)
+   - Choose [Join Domain Instead] (https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/join%20domain.png)
    - Put your name
    - Choose a password
    - Choose [Required only](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/Required%20only.png) -> Accept 
