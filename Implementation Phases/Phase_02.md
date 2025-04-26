@@ -34,7 +34,16 @@ To automate the process of adding users to AD, you can use the following PowerSh
 - For adding a single user, refer to this [Add_user.ps1](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_user.ps1)
 
 ### 🧑‍💻 **Pro Tip:**
-To delete an Organizational Unit (OU), you must enable **Advanced Features** in Active Directory Users and Computers. Navigate to **View** > **Advanced Features**, then right-click the OU you wish to delete.
+To delete an Organizational Unit (OU), you must enable **Advanced Features** in Active Directory Users and Computers. Navigate to **View** > **Advanced Features**, then right-click the OU you wish to delete. 
+
+Before deleting, ensure that the **"Protect object from accidental deletion"** option is unchecked:
+1. Right-click the OU and select **Properties**.
+2. Go to the **Object** tab.
+3. Uncheck the box for **Protect object from accidental deletion**.
+4. Click **OK** to confirm.
+
+Now you can safely delete the OU.
+
 
 ---
 
