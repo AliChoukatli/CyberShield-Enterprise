@@ -11,9 +11,12 @@ On Phase 2, we focus on the essential aspects of IT support operations, includin
 
 ---
 
-Step 0  Create OU for each departement hr sales management IT
+## Step 0  Create OU for each departement hr sales management IT
 
-Capture OU create 
+(Capture) OU create 
+
+then you should sse all your OU
+Show all OU (Capture)
 
 ## 🎯 1. **Creating Users in Active Directory**
 
