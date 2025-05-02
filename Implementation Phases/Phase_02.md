@@ -91,7 +91,7 @@ Disable the account before deleting to avoid accidental data loss.
 
 ### 🔧 **Steps:**
 1. Go to `Groups` OU > Right-click > **New** > **Group**
-2. Name the group (e.g., `IT-Admins`), choose type and scope
+2. Name the group (e.g., `IT-Admins`, IT-Users), choose type and scope
 3. Right-click group > **Properties** > **Members** > **Add**
 4. Assign this group permissions on folders via NTFS
 
