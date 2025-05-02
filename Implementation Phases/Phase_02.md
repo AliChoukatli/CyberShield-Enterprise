@@ -46,11 +46,11 @@ User account management is critical for maintaining access control, security, an
 
 **Screenshot:**
 - User creation window
-- List of users in the `IT`, `HR`, `Management`, and `Sales` OUs
+- List of users in the `IT` (capture ITusers)
 
 ### ⚙️ **PowerShell Automation:**
-- [Add 5 Users in IT](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_5_users_IT.ps1)
-- [Add Users in HR, Management, and Sales](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_Users_OUs.ps1)
+- [Add 5 Users in IT](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_5_users_IT.ps1) a verifier 
+- [Add Users in HR, Management, and Sales](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_Users_OUs.ps1) a verifier
 
 ---
 
