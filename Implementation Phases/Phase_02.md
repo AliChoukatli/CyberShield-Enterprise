@@ -19,7 +19,6 @@ Create the following Organizational Units directly under the domain `corp.aclab.
 - HR
 - Sales
 - Management
-- Groups
 - Service Accounts
 
 **Screenshot:**
@@ -90,10 +89,11 @@ Disable the account before deleting to avoid accidental data loss.
 ## 👥 Step 4: **Managing Groups and Permissions**
 
 ### 🔧 **Steps:**
-1. Go to `Groups` OU > Right-click > **New** > **Group**
-2. Name the group (e.g., `IT-SMB-Admins`), choose type and scope
-3. Right-click group > **Properties** > **Members** > **Add**
-4. Assign this group permissions on folders via NTFS
+1. Go to the appropriate **OU** (e.g., `IT` or `HR`) 
+2. Right-click the OU > **New** > **Group**
+3. Name the group (e.g., `IT-Admins`), choose type and scope
+4. Right-click group > **Properties** > **Members** > **Add**
+5. Assign this group permissions on folders via NTFS
 
 **Screenshot:**
 - Group properties with members
