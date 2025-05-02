@@ -39,7 +39,7 @@ User account management is critical for maintaining access control, security, an
 5. Set a **temporary password** and select **Force password change at next logon**
 6. Click **Finish**
 7. **Repeat until the following users are created:**
-   - 5 users in the **IT** OU
+   - 4 users in the **IT** OU
    - 2 users in the **HR** OU
    - 2 users in the **Management** OU
    - 2 users in the **Sales** OU
@@ -49,7 +49,7 @@ User account management is critical for maintaining access control, security, an
 - List of users in the `IT` (capture ITusers)
 
 ### ⚙️ **PowerShell Automation:**
-- [Add 5 Users in IT](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_5_users_IT.ps1) a verifier 
+- [Add 4 Users in IT](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_5_users_IT.ps1) a verifier 
 - [Add Users in HR, Management, and Sales](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_Users_OUs.ps1) a verifier
 
 ---
