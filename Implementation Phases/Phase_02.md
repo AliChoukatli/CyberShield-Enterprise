@@ -99,6 +99,47 @@ Disable the account before deleting to avoid accidental data loss.
 - Group properties with members (capture all groups)
 - NTFS permissions dialog (NTFS capture)
 
+- 🔐 Assign NTFS Permissions to AD Groups
+🎯 Objective
+Control access to shared folders based on group membership using NTFS permissions.
+
+📁 Steps
+Create or select a shared folder on your file server
+Example: D:\SharedFolders\IT-Docs
+
+Right-click the folder ➔ click Properties
+
+Go to the Security tab (this is for NTFS permissions)
+
+Click Edit… ➔ then Add…
+
+Enter the name of your Active Directory group
+Example: IT-Admins or IT-Users
+
+Select the group ➔ check the permissions to assign:
+
+Read
+
+Modify
+
+Full control (for admins)
+
+Click OK to apply
+
+📝 Important Note
+NTFS permissions apply at the file system level (even if accessed locally on the server).
+
+Share permissions (from the "Sharing" tab) apply only via network access (e.g., \\Server\Share).
+
+The effective permission = the most restrictive combination of both NTFS + Share.
+
+✅ Best Practice
+Always use Active Directory groups to assign permissions, never individual users.
+
+Store your groups in the Groups OU for clarity and good practice.
+
+
+
 ---
 
 ## 🔄 Step 5: **Password Resets & Account Unlock**
