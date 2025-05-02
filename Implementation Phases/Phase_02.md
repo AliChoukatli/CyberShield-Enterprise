@@ -14,10 +14,12 @@ On Phase 2, we focus on the essential aspects of IT support operations, includin
 ## Step 0 — Create OU for Each Department
 
 Create the following Organizational Units directly under the domain `corp.aclab.tech`:
+
 - IT
 - HR
 - Sales
 - Management
+- Groups
 - Service Accounts
 
 **Screenshot:**
@@ -38,19 +40,15 @@ User account management is critical for maintaining access control, security, an
 4. Fill in user details (Name and Logon Name)
 5. Set a **temporary password** and select **Force password change at next logon**
 6. Click **Finish**
-7. **Repeat until the following users are created:**
-   - 4 users in the **IT** OU
-   - 2 users in the **HR** OU
-   - 2 users in the **Management** OU
-   - 2 users in the **Sales** OU
+7. Repeat until 10 users are created
 
 **Screenshot:**
 - User creation window
-- List of users in the `IT` (capture ITusers)
+- List of 10 users in OU
 
 ### ⚙️ **PowerShell Automation:**
-- [Add 4 Users in IT](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_5_users_IT.ps1) a verifier 
-- [Add Users in HR, Management, and Sales](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_Users_OUs.ps1) a verifier
+- [Add 10 Users Script](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_10_users.ps1)
+- [Add Single User Script](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_user.ps1)
 
 ---
 
@@ -65,32 +63,35 @@ Safely remove a user account from Active Directory.
 3. Right-click the user > **Delete** > Confirm
 
 **Screenshot:**
-- Delete user prompt (capture)
+- Delete user prompt
 
 ### 🧑‍💻 **Pro Tip:**
 Disable the account before deleting to avoid accidental data loss.
 
 **Screenshot:**
-- Disable account dialog (capture )
+- Disable account dialog
 
 ---
 
 ## 🌟 Step 3: **Delete an Organizational Unit (OU)**
 
 ### 🔧 **Steps:**
-1. In ADUC, go to **View** > enable **Advanced Features** - Advanced Features enabled (capture)
+1. In ADUC, go to **View** > enable **Advanced Features**
 2. Right-click OU > **Properties** > **Object tab**
-3. Uncheck **Protect object from accidental deletion** > OK - protect (capture)
+3. Uncheck **Protect object from accidental deletion** > OK
 4. Right-click OU > **Delete**
 
+**Screenshot:**
+- Advanced Features enabled
+- OU properties (Object tab)
 
 ---
 
 ## 👥 Step 4: **Managing Groups and Permissions**
 
 ### 🔧 **Steps:**
-1. Go to the appropriate OU (e.g., `IT`) > Right-click > **New** > **Group**
-2. Name the group (e.g., `IT-Admins`), choose type and scope
+1. Go to `Groups` OU > Right-click > **New** > **Group**
+2. Name the group (e.g., `IT-SMB-Admins`), choose type and scope
 3. Right-click group > **Properties** > **Members** > **Add**
 4. Assign this group permissions on folders via NTFS
 
@@ -128,11 +129,10 @@ Disable the account before deleting to avoid accidental data loss.
 
 ### 🔧 **Steps:**
 - CMD:
-  ```cmd
+  ```
   ping 8.8.8.8
   ipconfig /all
   ```
-
   💪 Step 8: PowerShell Automation: Reset-UserPassword.ps1
 🔧 Usage:
 powershell
