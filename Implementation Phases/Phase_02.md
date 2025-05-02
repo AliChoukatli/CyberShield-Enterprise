@@ -22,8 +22,8 @@ Create the following Organizational Units directly under the domain `corp.aclab.
 - Service Accounts
 
 **Screenshot:**
-- OU creation window
-- Final view of all top-level OUs
+- OU creation (capture)
+- All OU (capture)
 
 ---
 
