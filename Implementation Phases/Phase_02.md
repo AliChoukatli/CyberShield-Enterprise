@@ -14,7 +14,6 @@ On Phase 2, we focus on the essential aspects of IT support operations, includin
 ## Step 0 — Create OU for Each Department
 
 Create the following Organizational Units directly under the domain `corp.aclab.tech`:
-
 - IT
 - HR
 - Sales
@@ -22,8 +21,8 @@ Create the following Organizational Units directly under the domain `corp.aclab.
 - Service Accounts
 
 **Screenshot:**
-- OU creation (capture)
-- All OU (capture)
+- OU creation window
+- Final view of all top-level OUs
 
 ---
 
@@ -39,15 +38,19 @@ User account management is critical for maintaining access control, security, an
 4. Fill in user details (Name and Logon Name)
 5. Set a **temporary password** and select **Force password change at next logon**
 6. Click **Finish**
-7. Repeat until 10 users are created
+7. **Repeat until the following users are created:**
+   - 5 users in the **IT** OU
+   - 2 users in the **HR** OU
+   - 2 users in the **Management** OU
+   - 2 users in the **Sales** OU
 
 **Screenshot:**
 - User creation window
-- List of 10 users in OU
+- List of users in the `IT`, `HR`, `Management`, and `Sales` OUs
 
 ### ⚙️ **PowerShell Automation:**
-- [Add 10 Users Script](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_10_users.ps1)
-- [Add Single User Script](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_user.ps1)
+- [Add 5 Users in IT](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_5_users_IT.ps1)
+- [Add Users in HR, Management, and Sales](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_Users_OUs.ps1)
 
 ---
 
@@ -89,11 +92,10 @@ Disable the account before deleting to avoid accidental data loss.
 ## 👥 Step 4: **Managing Groups and Permissions**
 
 ### 🔧 **Steps:**
-1. Go to the appropriate **OU** (e.g., `IT` or `HR`) 
-2. Right-click the OU > **New** > **Group**
-3. Name the group (e.g., `IT-Admins`), choose type and scope
-4. Right-click group > **Properties** > **Members** > **Add**
-5. Assign this group permissions on folders via NTFS
+1. Go to the appropriate OU (e.g., `IT`) > Right-click > **New** > **Group**
+2. Name the group (e.g., `IT-SMB-Admins`), choose type and scope
+3. Right-click group > **Properties** > **Members** > **Add**
+4. Assign this group permissions on folders via NTFS
 
 **Screenshot:**
 - Group properties with members
@@ -129,7 +131,7 @@ Disable the account before deleting to avoid accidental data loss.
 
 ### 🔧 **Steps:**
 - CMD:
-  ```
+  ```cmd
   ping 8.8.8.8
   ipconfig /all
   ```
