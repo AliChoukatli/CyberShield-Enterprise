@@ -96,8 +96,8 @@ Disable the account before deleting to avoid accidental data loss.
 4. Assign this group permissions on folders via NTFS
 
 **Screenshot:**
-- Group properties with members
-- NTFS permissions dialog
+- Group properties with members (capture all groups)
+- NTFS permissions dialog (NTFS capture)
 
 ---
 
