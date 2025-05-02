@@ -65,7 +65,7 @@ Safely remove a user account from Active Directory.
 3. Right-click the user > **Delete** > Confirm
 
 **Screenshot:**
-- Delete user prompt
+- Delete user prompt (capture)
 
 ### 🧑‍💻 **Pro Tip:**
 Disable the account before deleting to avoid accidental data loss.
