@@ -11,6 +11,10 @@ On Phase 2, we focus on the essential aspects of IT support operations, includin
 
 ---
 
+Step 0  Create OU for each departement hr sales management IT
+
+Capture OU create 
+
 ## 🎯 1. **Creating Users in Active Directory**
 
 ### **Why is this important?**
@@ -18,17 +22,17 @@ User account management is critical for maintaining access control, security, an
 
 ### 🔧 **Steps:**
 1. Open **Server Manager** > **Tools** > **Active Directory Users and Computers**
-2. Navigate to the target **Organizational Unit (OU)**, for instance, `Users`
+2. Navigate to the target **Organizational Unit (OU)**, for instance, `IT`
 3. Right-click on the OU > **New** > **User**
    
-   ![Step 3 Screenshot](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/AD_User_01.png)
+   ![Create user Screenshot](/////)
    
 5. Fill in user details, including **Name** and **Logon Name**
 6. Set a **temporary password** and select the option to **Force password change at next logon**
 7. Click **Finish**
 8. In this project, we will add 10 users to Active Directory
    
-   ![Step 7 Screenshot](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/10_users.png)
+   ![show screesnhot 10 users)
 
 ### ⚙️ **PowerShell Automation:**
 To automate the process of adding users to AD, you can use the following PowerShell script:
