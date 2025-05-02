@@ -44,10 +44,10 @@ User account management is critical for maintaining access control, security, an
 
 **Screenshot:**
 - User creation window
-- List of 10 users in OU
+- List of 4 users in IT OU
 
 ### ⚙️ **PowerShell Automation:**
-- [Add 10 Users Script](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_10_users.ps1)
+- [Add 4 Users_IT](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_10_users.ps1)
 - [Add Single User Script](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_user.ps1)
 
 ---
