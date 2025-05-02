@@ -129,6 +129,18 @@ Disable the account before deleting to avoid accidental data loss.
 
 ### 🔧 **Steps:**
 - CMD:
-  ```cmd
+  ```
   ping 8.8.8.8
   ipconfig /all
+  ```
+
+  💪 Step 8: PowerShell Automation: Reset-UserPassword.ps1
+🔧 Usage:
+powershell
+```
+.\Reset-UserPassword.ps1 -Username "jdoe" -NewPassword "P@ssw0rd!"
+Screenshot:
+```
+PowerShell script execution
+
+
