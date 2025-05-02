@@ -73,21 +73,16 @@ Disable the account before deleting to avoid accidental data loss.
 **Screenshot:**
 - Disable account dialog (capture )
 
-## rajouter Advanded features view to delete anything and remove the protect
-
 ---
 
 ## 🌟 Step 3: **Delete an Organizational Unit (OU)**
 
 ### 🔧 **Steps:**
-1. In ADUC, go to **View** > enable **Advanced Features**
+1. In ADUC, go to **View** > enable **Advanced Features** - Advanced Features enabled (capture)
 2. Right-click OU > **Properties** > **Object tab**
-3. Uncheck **Protect object from accidental deletion** > OK
+3. Uncheck **Protect object from accidental deletion** > OK - protect (capture)
 4. Right-click OU > **Delete**
 
-**Screenshot:**
-- Advanced Features enabled
-- OU properties (Object tab)
 
 ---
 
