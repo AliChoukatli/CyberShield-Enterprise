@@ -71,7 +71,9 @@ Safely remove a user account from Active Directory.
 Disable the account before deleting to avoid accidental data loss.
 
 **Screenshot:**
-- Disable account dialog
+- Disable account dialog (capture )
+
+## rajouter Advanded features view to delete anything and remove the protect
 
 ---
 
