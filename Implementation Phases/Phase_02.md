@@ -129,6 +129,10 @@ Disable the account before deleting to avoid accidental data loss.
 
 ![Add-member](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/add-member.png)
 
+5. Now you should see all IT member
+
+   ![IT-member](![image](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/IT-member.png)
+
 
 ### 🔐 **Assign NTFS Permissions to Groups:**
 
