@@ -123,7 +123,7 @@ DNS Servers
 
 🖼️ Screenshot: ipconfig /all output showing full network configuration
 
-🛠️ Step 4: Check Network Adapter via Device Manager
+## 🛠️ Step 4: Check Network Adapter via Device Manager
 🎯 Objective
 Ensure the physical or virtual network adapter is properly installed and working.
 
@@ -142,7 +142,7 @@ Right-click > Update driver if needed
 
 🖼️ Screenshot: Device Manager view of network adapter status
 
-☁️ Step 5: Deploy Office 365 via PowerShell
+## ☁️ Step 5: Deploy Office 365 via PowerShell
 🎯 Objective
 Automate Office 365 installation using a script.
 
@@ -159,12 +159,12 @@ The script silently installs Office 365 in the background
 
 🖼️ Screenshot: Script execution output in PowerShell
 
-📝 Notes
+##📝 Notes
 Ensure the script path is correct and signed if execution policies require it
 
 Office installation may take several minutes depending on network speed
 
-🧠 Pro Tips
+## 🧠 Pro Tips
 Use tracert for detailed routing diagnostics:
 ```
 
@@ -177,6 +177,4 @@ Document user actions to reproduce issues quickly
 
 Use scripts where possible to save time and reduce error
 
-
-Souhaites-tu que je t’aide à générer le fichier `.md` complet ou à le pousser sur ton GitHub ?
 
