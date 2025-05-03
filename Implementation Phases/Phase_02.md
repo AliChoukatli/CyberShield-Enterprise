@@ -46,7 +46,7 @@ User account management is critical for maintaining access control, security, an
 6. Click **Finish**
 7. Repeat this process to add:
 
-   * **5 users in `IT` OU**
+   * **4 users in `IT` OU**
    * **2 users in `HR` OU**
    * **2 users in `Management` OU**
    * **2 users in `Sales` OU**
