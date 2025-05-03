@@ -99,7 +99,8 @@ ping 192.168.2.1
 
 🖼️ Screenshot: Ping test output showing reply status
 
-🧪 Test 2: ipconfig
+### 🧪 Test 2: ipconfig
+
 🔧 Steps
 
 1- In CMD, run:
