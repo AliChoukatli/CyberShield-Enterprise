@@ -47,7 +47,7 @@ These tasks mirror real-world Tier 1–2 support responsibilities in enterprise 
 - **TeamViewer** for internet-based or external connections  
 ---
 
- ### Remote Desktop Protocol (RDP)
+ ### 🖥️ Remote Desktop Protocol (RDP)
 
   #### 🔧 Steps
 
@@ -65,7 +65,7 @@ These tasks mirror real-world Tier 1–2 support responsibilities in enterprise 
 
 ---
 
- ### TeamViewer
+ ### 🖥️ TeamViewer
 
   #### 🔧 Steps
 
