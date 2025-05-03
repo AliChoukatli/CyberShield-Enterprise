@@ -105,7 +105,7 @@ Disable the account before deleting to avoid accidental data loss.
    
 ![Protect](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/protect.png)
    
-4. Right-click the needed OU > **Delete**
+4. Right-click OU > **Delete**
 
 ---
 
