@@ -26,8 +26,6 @@ These tasks mirror real-world Tier 1–2 support responsibilities in enterprise 
 
  ### 🎯 Objective - Assist users who are locked out or need password resets using Active Directory Users and Computers (ADUC).
 
- ### 🔧 Steps
-
  1. Open **Active Directory Users and Computers**  
  2. Locate the target user  
  3. Right-click > **Reset Password**
@@ -49,8 +47,6 @@ These tasks mirror real-world Tier 1–2 support responsibilities in enterprise 
 
  ### 🖥️ Remote Desktop Protocol (RDP)
 
-  #### 🔧 Steps
-
 1. Open **Remote Desktop Connection**  
 2. Enter target hostname or IP (e.g., `ITClient01.corp.aclab.tech`)  
 3. Click **Connect**  
@@ -66,8 +62,6 @@ These tasks mirror real-world Tier 1–2 support responsibilities in enterprise 
 ---
 
  ### 🖥️ TeamViewer
-
-  #### 🔧 Steps
 
 1. Install and launch **TeamViewer** on both support and target machines  
 2. Retrieve **Partner ID** and **Password** from the target system  
@@ -87,8 +81,6 @@ These tasks mirror real-world Tier 1–2 support responsibilities in enterprise 
 
  ### 🧪 Test 1: Ping Command
 
- #### 🔧 Steps
-
 1. Open **Command Prompt (CMD)**  
 2. Run:
 
@@ -100,8 +92,6 @@ ping 192.168.2.1
 🖼️ Screenshot: Ping test output showing reply status
 
 ### 🧪 Test 2: ipconfig
-
-🔧 Steps
 
 1- In CMD, run:
 ```
@@ -123,7 +113,6 @@ ipconfig /all
 ## 🔴 Check Network Adapter via Device Manager
 🎯 Objective - Ensure the physical or virtual network adapter is properly installed and working.
 
- 🔧 Steps
  1. Right-click Start > Device Manager
 
  2. Expand Network Adapters
@@ -142,7 +131,6 @@ ipconfig /all
 ## 🔴 Deploy Office 365 via PowerShell
 🎯 Objective - Automate Office 365 installation using a script.
 
-🔧 Steps
  1. Open PowerShell as Administrator
 
  2. Run the deployment script:
