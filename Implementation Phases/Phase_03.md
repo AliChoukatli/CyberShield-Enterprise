@@ -13,19 +13,19 @@
 
 In this phase, you will simulate key helpdesk and IT support operations, including:
 
-- Reset Passwords & Unlock Accounts (ADUC)
+1- Reset Passwords & Unlock Accounts (ADUC)
 
-- Remote Support with RDP
+2- Remote Support with RDP
 
-- Remote Support with TeamViewer
+3- Remote Support with TeamViewer
 
-- Network Troubleshooting: ping
+4- Network Troubleshooting: ping
 
-- Network Troubleshooting: ipconfig
+5- Network Troubleshooting: ipconfig
 
-- Network Adapter Check (Device Manager)
+6- Network Adapter Check (Device Manager)
 
-- Deploy Office 365 via PowerShell
+7- Deploy Office 365 via PowerShell
 
 Captures d’écran
 
