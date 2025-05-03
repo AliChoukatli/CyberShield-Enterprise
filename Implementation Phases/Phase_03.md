@@ -62,7 +62,7 @@ Provide remote troubleshooting support using:
 
 🖼️ Screenshot: Remote session showing full control of the remote system
 
-#### 📝 Notes
+#### ⚠️  Notes
 
 - Ensure **Remote Desktop** is enabled (`System Properties > Remote`)  
 - The user must be part of the **Remote Desktop Users** group  
@@ -80,7 +80,7 @@ Provide remote troubleshooting support using:
 
 🖼️ Screenshot: TeamViewer active session or Partner ID window
 
-#### 📝 Notes
+#### ⚠️  Notes
 
 - TeamViewer requires internet on both ends  
 - Ensure firewall rules and antivirus are not blocking the session  
@@ -156,7 +156,7 @@ The script silently installs Office 365 in the background
 
 🖼️ Screenshot: Script execution output in PowerShell
 
-##📝 Notes
+##⚠️  Notes
 Ensure the script path is correct and signed if execution policies require it
 
 Office installation may take several minutes depending on network speed
