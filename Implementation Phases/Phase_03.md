@@ -13,10 +13,23 @@
 
 In this phase, you will simulate key helpdesk and IT support operations, including:
 
-- Resetting user passwords and unlocking accounts  
-- Performing remote support via RDP and TeamViewer  
-- Diagnosing and resolving network issues (ping, ipconfig, device drivers)  
-- Deploying Office 365 using a PowerShell automation script  
+- Reset Passwords & Unlock Accounts (ADUC)
+
+- Remote Support with RDP
+
+- Remote Support with TeamViewer
+
+- Network Troubleshooting: ping
+
+- Network Troubleshooting: ipconfig
+
+- Network Adapter Check (Device Manager)
+
+- Deploy Office 365 via PowerShell
+
+Captures d’écran
+
+Pro Tips 
 
 These tasks mirror real-world Tier 1–2 support responsibilities in enterprise environments.
 
