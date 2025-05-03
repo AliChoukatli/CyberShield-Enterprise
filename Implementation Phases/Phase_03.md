@@ -152,10 +152,10 @@ Use tracert for detailed routing diagnostics:
 ```
 tracert 8.8.8.8
 ```
-Always check if the firewall or antivirus is blocking RDP or TeamViewer
+- Always check if the firewall or antivirus is blocking RDP or TeamViewer
 
-Document user actions to reproduce issues quickly
+- Document user actions to reproduce issues quickly
 
-Use scripts where possible to save time and reduce error
+- Use scripts where possible to save time and reduce error
 
-
+---
