@@ -23,9 +23,10 @@ Create the following Organizational Units directly under the domain `corp.aclab.
 * Groups (for all AD security groups)
 * Service Accounts (for service-level accounts)
 
-**📸 Screenshots to capture:**
-
 ![* OU creation window](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Create_OU.png)
+
+Now you should see this : 
+
 ![* Final view showing all top-level OUs under the domain](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/All_OU.png)
 
 ---
