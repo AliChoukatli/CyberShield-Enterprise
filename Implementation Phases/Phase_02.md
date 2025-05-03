@@ -1,14 +1,16 @@
-# Phase 2: **Active Directory User Management**
+Phase 2: Active Directory User Management
 
-## 🌟 **Objectives**
+🌟 Objectives
 
-On Phase 2, we focus on the essential aspects of IT support operations, including:
+In this phase, we focus on core IT support tasks:
 
-* Creating and managing Active Directory (AD) user accounts and groups
-* Assigning permissions and auditing user access
-* Providing remote support (via RDP, TeamViewer)
-* Performing basic network diagnostics (ping, ipconfig)
-* Automating tasks using PowerShell
+Creating and managing Active Directory (AD) user accounts and groups
+
+Assigning permissions and auditing user access
+
+Performing essential user account operations (reset, unlock, delete)
+
+
 
 ---
 
@@ -25,7 +27,7 @@ Create the following Organizational Units directly under the domain `corp.aclab.
 
 ![* OU creation window](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Create_OU.png)
 
-Now you should see this : 
+Once done, verify the structure:
 
 ![* Final view showing all top-level OUs under the domain](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/All_OU.png)
 
@@ -33,33 +35,20 @@ Now you should see this :
 
 ## 🌟 Step 1: **Creating Users in Active Directory**
 
-### 🔧 **Why is this important?**
+🎯 **Objective** Create user accounts and place them in appropriate OUs by department.
 
-User account management is critical for maintaining access control, security, and efficient IT operations within the organization.
+🔧 Steps
 
-### 🔧 **Steps:**
+Open Server Manager > Tools > Active Directory Users and Computers (ADUC)
 
-1. Open **Server Manager** > **Tools** > **Active Directory Users and Computers**
-2. Navigate to the target **Organizational Unit (OU)** (e.g., `IT`)
-3. Right-click the OU > **New** > **User**
+Navigate to an OU (e.g., IT) > Right-click > New > User
   
 ![Create_user](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Create_User.png)]
    
-5. Fill in user details (Name and Logon Name)
-6. Set a **temporary password** and select **Force password change at next logon**
-7. Click **Finish**
-8. Repeat this process to add:
 
-   * **4 users in `IT` OU**
-   * **2 users in `HR` OU**
-   * **2 users in `Management` OU**
-   * **2 users in `Sales` OU**
-  
-Now you should see exanple of IT members
+Once done
 
 ![IT_Users](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/IT_users.png)
-
-
 
 
 ### ⚙️ **PowerShell Automation (Optional):**
@@ -71,9 +60,7 @@ Now you should see exanple of IT members
 
 ## 🌟 Step 2: **Delete a User in Active Directory**
 
-### 🎯 **Objective**
-
-Safely remove a user account from Active Directory.
+### 🎯 **Objective** Safely delete a user account.
 
 ### 🔧 **Steps:**
 
@@ -100,7 +87,7 @@ Disable the account before deleting to avoid accidental data loss.
 
 ![Advanced Features](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Adv_feature.png)
    
-2. Right-click the needed OU > **Properties** > **Object tab**  
+2. Right-click the OU → **Properties** → **Object tab**  
 3. Uncheck **Protect object from accidental deletion** > OK
    
 ![Protect](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/protect.png)
