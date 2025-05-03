@@ -1,10 +1,10 @@
-# Définir the information of the user FirstName.LastName
+# DEfine the user info
 $firstName = "John"
 $lastName = "Doe"
 $samAccountName = "$firstName.$lastName"
 $userPrincipalName = "$samAccountName@corp.aclab.tech"
 
-# Créer l'utilisateur Active Directory
+# Create User AD
 New-ADUser `
     -Name "$firstName.$lastName" `
     -GivenName $firstName `
