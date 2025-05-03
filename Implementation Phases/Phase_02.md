@@ -79,7 +79,7 @@ Safely remove a user account from Active Directory.
 
 1. Open **ADUC**
 2. Navigate to the appropriate OU
-3. Right-click the user > **Delete** > Confirm]
+3. Right-click the user > **Delete** > Confirm
 
 ![Delete-user](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/delete_user.png)
 
