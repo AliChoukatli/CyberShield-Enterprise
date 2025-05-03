@@ -101,6 +101,7 @@ ping 192.168.2.1
 
 🧪 Test 2: ipconfig
 🔧 Steps
+
 1- In CMD, run:
 ```
 ipconfig /all
