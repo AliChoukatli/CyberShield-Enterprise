@@ -110,15 +110,15 @@ Analyze response time or packet loss
 ```
 ipconfig /all
 ```
-Review:
+2- Review:
 
-IPv4 Address
+- IPv4 Address
 
-Subnet Mask
+- Subnet Mask
 
-Default Gateway
+- Default Gateway
 
-DNS Servers
+- DNS Servers
 
 🖼️ Screenshot: ipconfig /all output showing full network configuration
 
