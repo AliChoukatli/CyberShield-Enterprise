@@ -55,7 +55,7 @@ Once done
 
 ---
 
-## 🔴 **Step 2: Delete a User in Active Directory**
+## 🔴 **Step 2 - Delete a User in Active Directory**
 
 ### 🎯 **Objective** Safely delete a user account.
 
@@ -74,7 +74,7 @@ Disable the account before deleting to avoid accidental data loss.
 
 ---
 
-## 🔴 **Step 3: Delete an Organizational Unit (OU)**
+## 🔴 **Step 3 - Delete an Organizational Unit (OU)**
 
 1. In ADUC, go to **View** > enable **Advanced Features**
 
@@ -89,7 +89,7 @@ Disable the account before deleting to avoid accidental data loss.
 
 ---
 
-## 🔴 ** Step 4: Managing Groups and Permissions**
+## 🔴 ** Step 4 - Managing Groups and Permissions**
 
 ### 🔧 **Create AD Security Groups:**
 
