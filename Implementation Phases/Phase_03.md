@@ -22,10 +22,9 @@ These tasks mirror real-world Tier 1–2 support responsibilities in enterprise 
 
 ---
 
-## 🔴 Reset Passwords & Unlock Accounts
+## 🔴 **Reset Passwords & Unlock Accounts**
 
   ### 🎯 Objective
-  
   Assist users who are locked out or need password resets using Active Directory Users and Computers (ADUC).
 
  1. Open **Active Directory Users and Computers**  
@@ -39,7 +38,7 @@ These tasks mirror real-world Tier 1–2 support responsibilities in enterprise 
  6. OK
 ---
 
-## 🔴 Remote Support (RDP & TeamViewer)
+## 🔴 **Remote Support (RDP & TeamViewer)**
 
  ### 🎯 Objective - Provide remote troubleshooting support using:
 
@@ -47,7 +46,7 @@ These tasks mirror real-world Tier 1–2 support responsibilities in enterprise 
 - **TeamViewer** for internet-based or external connections  
 ---
 
- ### 🖥️ Remote Desktop Protocol (RDP)
+ ### 🖥️ **Remote Desktop Protocol (RDP)**
 
 1. Open **Remote Desktop Connection**  
 2. Enter target hostname or IP (e.g., `ITClient01.corp.aclab.tech`)  
@@ -63,7 +62,7 @@ These tasks mirror real-world Tier 1–2 support responsibilities in enterprise 
 
 ---
 
- ### 🖥️ TeamViewer
+ ### 🖥️ **TeamViewer**
 
 1. Install and launch **TeamViewer** on both support and target machines  
 2. Retrieve **Partner ID** and **Password** from the target system  
@@ -72,14 +71,14 @@ These tasks mirror real-world Tier 1–2 support responsibilities in enterprise 
 
 🖼️ Screenshot: TeamViewer active session or Partner ID window
 
-  #### ⚠️  Notes
+  #### ⚠️  **Notes**
 
 - TeamViewer requires internet on both ends  
 - Ensure firewall rules and antivirus are not blocking the session  
 
 ---
 
-## 🔴 Troubleshoot Network Connectivity
+## 🔴 **Troubleshoot Network Connectivity**
 
  ### 🧪 Test 1: Ping Command
 
@@ -112,7 +111,7 @@ ipconfig /all
 🖼️ Screenshot: ipconfig /all output showing full network configuration
 ---
 
-## 🔴 Check Network Adapter via Device Manager
+## 🔴 **Check Network Adapter via Device Manager**
 🎯 Objective - Ensure the physical or virtual network adapter is properly installed and working.
 
  1. Right-click Start > Device Manager
@@ -130,7 +129,7 @@ ipconfig /all
 🖼️ Screenshot: Device Manager view of network adapter status
 ---
 
-## 🔴 Deploy Office 365 via PowerShell
+## 🔴 **Deploy Office 365 via PowerShell**
 🎯 Objective - Automate Office 365 installation using a script.
 
  1. Open PowerShell as Administrator
@@ -143,13 +142,13 @@ ipconfig /all
 
 🖼️ Screenshot: Script execution output in PowerShell
 
-#### ⚠️ Notes
+#### **⚠️ Notes**
 - Ensure the script path is correct and signed if execution policies require it
 
 - Office installation may take several minutes depending on network speed
 ---
 
-#### 🧠 Pro Tips
+#### 🧠 **Pro Tips**
 Use tracert for detailed routing diagnostics:
 ```
 tracert 8.8.8.8
