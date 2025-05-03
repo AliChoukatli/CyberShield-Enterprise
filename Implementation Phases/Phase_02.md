@@ -96,9 +96,12 @@ Disable the account before deleting to avoid accidental data loss.
 
 ### 🔧 **Steps:**
 
-1. In ADUC, go to **View** > enable **Advanced Features** ![Advanced Features enabled](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Adv_feature.png)
-2. Right-click OU > **Properties** > **Object tab**  
-3. Uncheck **Protect object from accidental deletion** > OK
+1. In ADUC, go to **View** > enable **Advanced Features**
+
+2. [Advanced Features](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Adv_feature.png)
+   
+3. Right-click OU > **Properties** > **Object tab**  
+4. Uncheck **Protect object from accidental deletion** > OK
    
 ![Protect](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/protect.png)
    
