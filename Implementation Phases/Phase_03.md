@@ -47,9 +47,9 @@ These tasks mirror real-world Tier 1–2 support responsibilities in enterprise 
 - **TeamViewer** for internet-based or external connections  
 ---
 
-### Remote Desktop Protocol (RDP)
+ ### Remote Desktop Protocol (RDP)
 
-#### 🔧 Steps
+  #### 🔧 Steps
 
 1. Open **Remote Desktop Connection**  
 2. Enter target hostname or IP (e.g., `ITClient01.corp.aclab.tech`)  
@@ -58,16 +58,16 @@ These tasks mirror real-world Tier 1–2 support responsibilities in enterprise 
 
 🖼️ Screenshot: Remote session showing full control of the remote system
 
-#### ⚠️  Notes
+  #### ⚠️  Notes
 
 - Ensure **Remote Desktop** is enabled (`System Properties > Remote`)  
 - The user must be part of the **Remote Desktop Users** group  
 
 ---
 
-### TeamViewer
+ ### TeamViewer
 
-#### 🔧 Steps
+  #### 🔧 Steps
 
 1. Install and launch **TeamViewer** on both support and target machines  
 2. Retrieve **Partner ID** and **Password** from the target system  
@@ -76,7 +76,7 @@ These tasks mirror real-world Tier 1–2 support responsibilities in enterprise 
 
 🖼️ Screenshot: TeamViewer active session or Partner ID window
 
-#### ⚠️  Notes
+  #### ⚠️  Notes
 
 - TeamViewer requires internet on both ends  
 - Ensure firewall rules and antivirus are not blocking the session  
@@ -85,9 +85,9 @@ These tasks mirror real-world Tier 1–2 support responsibilities in enterprise 
 
 ## 🔴 Step 3: Troubleshoot Network Connectivity
 
-### 🧪 Test 1: Ping Command
+ ### 🧪 Test 1: Ping Command
 
-#### 🔧 Steps
+ #### 🔧 Steps
 
 1. Open **Command Prompt (CMD)**  
 2. Run:
@@ -121,18 +121,18 @@ ipconfig /all
 ## 🔴 Step 4: Check Network Adapter via Device Manager
 🎯 Objective - Ensure the physical or virtual network adapter is properly installed and working.
 
-🔧 Steps
-1. Right-click Start > Device Manager
+ 🔧 Steps
+ 1. Right-click Start > Device Manager
 
-2. Expand Network Adapters
+ 2. Expand Network Adapters
 
-3. Check for:
+ 3. Check for:
 
-- Warnings or disabled state
+  - Warnings or disabled state
 
-- Missing drivers
+ - Missing drivers
 
-4. Right-click > Update driver if needed
+ 4. Right-click > Update driver if needed
 
 🖼️ Screenshot: Device Manager view of network adapter status
 ---
@@ -141,13 +141,12 @@ ipconfig /all
 🎯 Objective - Automate Office 365 installation using a script.
 
 🔧 Steps
-1. Open PowerShell as Administrator
+ 1. Open PowerShell as Administrator
 
-2. Run the deployment script:
+ 2. Run the deployment script:
 ```
 .\DeployOffice365.ps1
 ```
-
 --> The script silently installs Office 365 in the background
 
 🖼️ Screenshot: Script execution output in PowerShell
