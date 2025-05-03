@@ -41,7 +41,10 @@ User account management is critical for maintaining access control, security, an
 
 1. Open **Server Manager** > **Tools** > **Active Directory Users and Computers**
 2. Navigate to the target **Organizational Unit (OU)** (e.g., `IT`)
-3. Right-click the OU > **New** > **User**![Create_user](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Create_User.png)]
+3. Right-click the OU > **New** > **User**
+  
+. ![Create_user](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Create_User.png)]
+   
 5. Fill in user details (Name and Logon Name)
 6. Set a **temporary password** and select **Force password change at next logon**
 7. Click **Finish**
@@ -51,11 +54,12 @@ User account management is critical for maintaining access control, security, an
    * **2 users in `HR` OU**
    * **2 users in `Management` OU**
    * **2 users in `Sales` OU**
+  
+     Now you should see exanple of IT memeber
+![IT_Users](ttps://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/IT_users.png)
 
-**📸 Screenshot to capture:**
 
-* Example: User creation window (for 1 user in IT)
-* Final view of users inside only **one** OU (e.g., `IT`) — sufficient to demonstrate the structure
+
 
 ### ⚙️ **PowerShell Automation (Optional):**
 
