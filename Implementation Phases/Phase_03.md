@@ -11,6 +11,16 @@ This phase covers common IT support tasks such as troubleshooting network issues
 
 ---
 
+## 🔄 Step 1: **Password Resets & Account Unlock**
+
+### 🔧 **Steps:**
+
+1. Locate the user in ADUC
+2. Right-click > **Reset Password**
+3. Enter new password and check **Unlock account** if needed
+
+   ![Reset-passwd](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/reset-password.png)
+   
 ## 🛠️ Remote Support (RDP & TeamViewer)
 
 ### 🎯 Objective
