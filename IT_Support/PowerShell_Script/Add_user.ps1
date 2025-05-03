@@ -11,7 +11,7 @@ New-ADUser `
     -Surname $lastName `
     -SamAccountName $samAccountName `
     -UserPrincipalName $userPrincipalName `
-    -Path "OU=CyberShield_Users,DC=corp,DC=aclab,DC=tech" `
+    -Path "OU=IT,DC=corp,DC=aclab,DC=tech" `
     -AccountPassword (ConvertTo-SecureString "TempPassw0rd123!" -AsPlainText -Force) `
     -Enabled $true `
     -PasswordNeverExpires $false `
