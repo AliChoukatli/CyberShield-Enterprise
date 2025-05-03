@@ -25,8 +25,8 @@ Create the following Organizational Units directly under the domain `corp.aclab.
 
 **📸 Screenshots to capture:**
 
-* OU creation window
-* Final view showing all top-level OUs under the domain
+![* OU creation window](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Create_OU.png)
+![* Final view showing all top-level OUs under the domain](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/All_OU.png)
 
 ---
 
@@ -40,7 +40,7 @@ User account management is critical for maintaining access control, security, an
 
 1. Open **Server Manager** > **Tools** > **Active Directory Users and Computers**
 2. Navigate to the target **Organizational Unit (OU)** (e.g., `IT`)
-3. Right-click the OU > **New** > **User**
+3. ![Right-click the OU > **New** > **User**](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Create_User.png)
 4. Fill in user details (Name and Logon Name)
 5. Set a **temporary password** and select **Force password change at next logon**
 6. Click **Finish**
@@ -73,7 +73,7 @@ Safely remove a user account from Active Directory.
 
 1. Open **ADUC**
 2. Navigate to the appropriate OU
-3. Right-click the user > **Delete** > Confirm
+3. ![Right-click the user > **Delete** > Confirm](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/delete_user.png)
 
 **📸 Screenshot:**
 
@@ -85,7 +85,7 @@ Disable the account before deleting to avoid accidental data loss.
 
 **📸 Screenshot:**
 
-* Disable account dialog
+![* Disable account dialog](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Disable_acc.png)
 
 ---
 
@@ -93,14 +93,14 @@ Disable the account before deleting to avoid accidental data loss.
 
 ### 🔧 **Steps:**
 
-1. In ADUC, go to **View** > enable **Advanced Features**
+1. In ADUC, go to **View** > enable **Advanced Features** ![Advanced Features enabled](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Adv_feature.png)
 2. Right-click OU > **Properties** > **Object tab**
-3. Uncheck **Protect object from accidental deletion** > OK
+3. ![Uncheck **Protect object from accidental deletion** > OK](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/protect.png)
 4. Right-click OU > **Delete**
 
 **📸 Screenshots:**
 
- [Advanced Features enabled](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Adv_feature.png)
+
 * OU properties (Object tab)
 
 ---
@@ -110,7 +110,7 @@ Disable the account before deleting to avoid accidental data loss.
 ### 🔧 **Create AD Security Groups:**
 
 1. Navigate to the `Groups` OU
-2. Right-click > **New** > **Group**
+2. ![Right-click > **New** > **Group**](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/create_group.png)
 3. Create the following groups:
 
    * `IT-Admins` (Security, Global)
@@ -119,7 +119,7 @@ Disable the account before deleting to avoid accidental data loss.
 
 **📸 Screenshot:**
 
-* Group properties showing members (IT-Admins and IT-Users)
+![* Group properties showing members (IT-Admins and IT-Users)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/allgroups.png)
 
 ### 🔐 **Assign NTFS Permissions to Groups:**
 
