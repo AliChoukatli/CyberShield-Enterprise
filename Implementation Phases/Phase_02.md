@@ -143,6 +143,7 @@ Disable the account before deleting to avoid accidental data loss.
 5. Assign desired permissions:
 
    * IT-Admins: **Full control**
+     
 ![NTFS-Admins](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/NTFS-admin.png)
      
    * IT-Users: **Read** or **Modify**
