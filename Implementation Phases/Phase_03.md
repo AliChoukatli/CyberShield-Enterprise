@@ -35,7 +35,6 @@ These tasks mirror real-world Tier 1–2 support responsibilities in enterprise 
  4. Enter the new password  
  5. Check **Unlock account** if applicable
  6. OK
-
 ---
 
 ## 🔴 Remote Support (RDP & TeamViewer)
