@@ -39,8 +39,6 @@ Assist users who are locked out or need password resets using Active Directory U
 4. Enter the new password  
 5. Check **Unlock account** if applicable  
 
-🖼️ Screenshot:  
-
 ---
 
 ## 🔴 Step 2: Remote Support (RDP & TeamViewer)
@@ -51,7 +49,6 @@ Provide remote troubleshooting support using:
 
 - **Remote Desktop Protocol (RDP)** for internal domain-joined machines  
 - **TeamViewer** for internet-based or external connections  
-
 ---
 
 ### Remote Desktop Protocol (RDP)
