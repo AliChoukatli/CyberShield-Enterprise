@@ -4,7 +4,7 @@ $users = @(
     @{ FirstName = "Ali"; LastName = "Chou" },
     @{ FirstName = "John"; LastName = "Doe" },
     @{ FirstName = "Sarah"; LastName = "Jones" },
-    @{ FirstName = "David"; LastName = "Miller" },
+    @{ FirstName = "David"; LastName = "Miller" }
  
 )
 
