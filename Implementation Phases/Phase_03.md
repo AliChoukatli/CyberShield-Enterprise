@@ -52,7 +52,7 @@ Provide remote troubleshooting support using:
 
 ---
 
-### 🪟 Remote Desktop Protocol (RDP)
+### Remote Desktop Protocol (RDP)
 
 #### 🔧 Steps
 
@@ -70,7 +70,7 @@ Provide remote troubleshooting support using:
 
 ---
 
-### 🧩 TeamViewer
+### TeamViewer
 
 #### 🔧 Steps
 
