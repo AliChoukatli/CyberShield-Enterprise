@@ -1,6 +1,6 @@
-Phase 2: Active Directory User Management
+# **Phase 2: Active Directory User Management**
 
-🌟 Objectives
+## 🌟 **Objectives**
 
 In this phase, we focus on core IT support tasks:
 
@@ -9,8 +9,6 @@ Creating and managing Active Directory (AD) user accounts and groups
 Assigning permissions and auditing user access
 
 Performing essential user account operations (reset, unlock, delete)
-
-
 
 ---
 
