@@ -99,7 +99,6 @@ Provide remote troubleshooting support using:
 
 ```bash
 ping 192.168.2.1
-
 ```
 Analyze response time or packet loss
 
@@ -152,7 +151,6 @@ Open PowerShell as Administrator
 Run the deployment script:
 ```
 .\DeployOffice365.ps1
-
 ```
 
 The script silently installs Office 365 in the background
@@ -167,10 +165,8 @@ Office installation may take several minutes depending on network speed
 ## 🧠 Pro Tips
 Use tracert for detailed routing diagnostics:
 ```
-
 tracert 8.8.8.8
 ```
-
 Always check if the firewall or antivirus is blocking RDP or TeamViewer
 
 Document user actions to reproduce issues quickly
