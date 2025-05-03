@@ -100,7 +100,7 @@ Disable the account before deleting to avoid accidental data loss.
 
 **📸 Screenshots:**
 
-* Advanced Features enabled
+ [Advanced Features enabled](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Adv_feature.png)
 * OU properties (Object tab)
 
 ---
