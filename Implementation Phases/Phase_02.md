@@ -84,7 +84,7 @@ Disable the account before deleting to avoid accidental data loss.
 
 ---
 
-## 🔴 ** Step 4 - Managing Groups and Permissions**
+## 🔴 **Step 4 - Managing Groups and Permissions**
 
 ### 🔧 **Create AD Security Groups:**
 
@@ -130,13 +130,3 @@ Disable the account before deleting to avoid accidental data loss.
 NTFS permissions apply at the file system level (locally or over network). Combine with Share permissions to define final access rights.
 
 ---
-
-## 🔄 Step 5: **Password Resets & Account Unlock**
-
-### 🔧 **Steps:**
-
-1. Locate the user in ADUC
-2. Right-click > **Reset Password**
-3. Enter new password and check **Unlock account** if needed
-
-   ![Reset-passwd](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/reset-password.png)
