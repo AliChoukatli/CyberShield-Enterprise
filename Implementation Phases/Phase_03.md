@@ -7,6 +7,57 @@
 ## Overview
 This day covers common IT support tasks such as troubleshooting network issues and remote support using tools like TeamViewer and Remote Desktop. Additionally, we will deploy Office 365 using PowerShell scripts.
 
+
+## 🛠️ Step 6: **Remote Support (RDP & TeamViewer)**
+ ---
+ 
+ ### 🔧 **Steps:**
+ ## 🛠️ Step 6: Remote Support (RDP & TeamViewer)
+ 
+ * **RDP**: Open Remote Desktop > Enter target hostname/IP > Login with admin credentials
+ * **TeamViewer**: Launch both ends > Input Partner ID > Connect
+ ### 🎯 Objective
+ Simulate IT Helpdesk remote support by connecting to another device using Remote Desktop Protocol (RDP) and TeamViewer. This is a key support function in real-world environments for troubleshooting user issues without being physically present.
+ 
+ ---
+ 
+ ### 🔧 Steps
+ 
+ #### 📡 Remote Desktop Protocol (RDP)
+ 1. On your main workstation, open the **Remote Desktop Connection** tool.
+ 2. Enter the target computer's **hostname or IP address** (example: `ITClient01.corp.aclab.tech`).
+ 3. Click **Connect**.
+ 4. When prompted, enter **admin credentials** (domain user with RDP rights).
+ 5. The remote session should open, giving you control of the target machine.
+ 
+ #### 💻 TeamViewer
+ 1. Install and launch **TeamViewer** on both the support and target computers.
+ 2. On the target computer, retrieve the **Partner ID** and **password**.
+ 3. On your support machine, enter the **Partner ID**, then click **Connect**.
+ 4. Enter the password when prompted to establish the remote session.
+ 
+ ---
+ 
+ ### 🖼️ Screenshots to Capture
+ 
+ - ✅ RDP session active (showing the remote desktop interface).
+ - ✅ TeamViewer connection window (showing the Partner ID screen or an active session).
+ 
+ ---
+ 
+ ### 🔐 Notes
+ 
+ - Ensure **Remote Desktop** is enabled on the target machine (via `System Properties > Remote` tab).
+ - The user account must be in the **Remote Desktop Users** group or have local admin rights.
+ - TeamViewer requires internet access and both clients must be online for the session to work.
+ 
+ ---
+ 
+ **📸 Screenshots:**
+ 
+ * RDP session open
+ * TeamViewer connection prompt
+
 ### **Step 1: Troubleshoot Network Connectivity**
 - **Ping Test:** 
     - Open Command Prompt (CMD) and run:
