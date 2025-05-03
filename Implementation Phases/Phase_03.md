@@ -120,46 +120,49 @@ ipconfig /all
 - DNS Servers
 
 🖼️ Screenshot: ipconfig /all output showing full network configuration
+---
 
 ## 🔴 Step 4: Check Network Adapter via Device Manager
 🎯 Objective
 Ensure the physical or virtual network adapter is properly installed and working.
 
 🔧 Steps
-Right-click Start > Device Manager
+1. Right-click Start > Device Manager
 
-Expand Network Adapters
+2. Expand Network Adapters
 
-Check for:
+3. Check for:
 
-Warnings or disabled state
+- Warnings or disabled state
 
-Missing drivers
+- Missing drivers
 
-Right-click > Update driver if needed
+4. Right-click > Update driver if needed
 
 🖼️ Screenshot: Device Manager view of network adapter status
+---
 
 ## 🔴 Step 5: Deploy Office 365 via PowerShell
 🎯 Objective
 Automate Office 365 installation using a script.
 
 🔧 Steps
-Open PowerShell as Administrator
+1. Open PowerShell as Administrator
 
-Run the deployment script:
+2. Run the deployment script:
 ```
 .\DeployOffice365.ps1
 ```
 
-The script silently installs Office 365 in the background
+--> The script silently installs Office 365 in the background
 
 🖼️ Screenshot: Script execution output in PowerShell
 
-##⚠️  Notes
-Ensure the script path is correct and signed if execution policies require it
+## ⚠️ Notes
+- Ensure the script path is correct and signed if execution policies require it
 
-Office installation may take several minutes depending on network speed
+- Office installation may take several minutes depending on network speed
+---
 
 ## 🧠 Pro Tips
 Use tracert for detailed routing diagnostics:
