@@ -24,7 +24,9 @@ These tasks mirror real-world Tier 1–2 support responsibilities in enterprise 
 
 ## 🔴 Reset Passwords & Unlock Accounts
 
- ### 🎯 Objective - Assist users who are locked out or need password resets using Active Directory Users and Computers (ADUC).
+  ### 🎯 Objective
+  
+  Assist users who are locked out or need password resets using Active Directory Users and Computers (ADUC).
 
  1. Open **Active Directory Users and Computers**  
  2. Locate the target user  
@@ -39,7 +41,7 @@ These tasks mirror real-world Tier 1–2 support responsibilities in enterprise 
 
 ## 🔴 Remote Support (RDP & TeamViewer)
 
-### 🎯 Objective - Provide remote troubleshooting support using:
+ ### 🎯 Objective - Provide remote troubleshooting support using:
 
 - **Remote Desktop Protocol (RDP)** for internal domain-joined machines  
 - **TeamViewer** for internet-based or external connections  
