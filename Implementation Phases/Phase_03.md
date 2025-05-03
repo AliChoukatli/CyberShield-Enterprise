@@ -24,18 +24,18 @@ These tasks mirror real-world Tier 1–2 support responsibilities in enterprise 
 
 ## 🔴 Step 1: Reset Passwords & Unlock Accounts
 
-### 🎯 Objective - Assist users who are locked out or need password resets using Active Directory Users and Computers (ADUC).
+ ### 🎯 Objective - Assist users who are locked out or need password resets using Active Directory Users and Computers (ADUC).
 
-### 🔧 Steps
+ ### 🔧 Steps
 
-1. Open **Active Directory Users and Computers**  
-2. Locate the target user  
-3. Right-click > **Reset Password**
+ 1. Open **Active Directory Users and Computers**  
+ 2. Locate the target user  
+ 3. Right-click > **Reset Password**
 
 ![Reset-passwd](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/reset-password.png)
 
-4. Enter the new password  
-5. Check **Unlock account** if applicable  
+ 4. Enter the new password  
+ 5. Check **Unlock account** if applicable  
 
 ---
 
