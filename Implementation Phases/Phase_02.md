@@ -143,11 +143,12 @@ Disable the account before deleting to avoid accidental data loss.
 5. Assign desired permissions:
 
    * IT-Admins: **Full control**
+![NTFS-Admins](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/NTFS-admin.png)
+     
    * IT-Users: **Read** or **Modify**
+  
+![NTFS-Users](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/NTFS-users.png)
 
-**📸 Screenshot:**
-
-* NTFS folder permission window with both groups and their permissions
 
 📝 **Note:**
 NTFS permissions apply at the file system level (locally or over network). Combine with Share permissions to define final access rights.
