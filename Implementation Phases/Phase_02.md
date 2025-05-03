@@ -1,6 +1,6 @@
 # **Phase 2: Active Directory User Management**
 
-## 🌟 **Objectives**
+## 🎯 **Objectives**
 
 In this phase, we focus on core IT support tasks:
 
@@ -33,9 +33,6 @@ Once done, verify the structure:
 
 ## 🔴 **Step 1 - Creating Users in Active Directory**
 
-🎯 **Objective** Create user accounts and place them in appropriate OUs by department.
-
-
 Open Server Manager > Tools > Active Directory Users and Computers (ADUC)
 
 Navigate to an OU (e.g., IT) > Right-click > New > User
@@ -56,8 +53,6 @@ Once done
 ---
 
 ## 🔴 **Step 2 - Delete a User in Active Directory**
-
-### 🎯 **Objective** Safely delete a user account.
 
 1. Open **ADUC**
 2. Navigate to the appropriate OU
