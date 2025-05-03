@@ -12,7 +12,7 @@ On Phase 2, we focus on the essential aspects of IT support operations, includin
 
 ---
 
-## 🌟 Step 0 — Create OUs for Each Department
+## Step 0 — Create OUs for Each Department
 
 Create the following Organizational Units directly under the domain `corp.aclab.tech`:
 
@@ -105,40 +105,39 @@ Disable the account before deleting to avoid accidental data loss.
 
 ---
 
-## 👥 Step 4: **Creating and Managing Security Groups**
+## 👥 Step 4: **Managing Groups and Permissions**
 
-### 🔧 **4.1 – Create Security Groups**
+### 🔧 **Create AD Security Groups:**
 
-1. Dans la console **Active Directory Users and Computers**, va dans l’OU `Groups`.
-2. Clic droit > **New > Group**.
-3. Donne un nom comme `IT-Admins` ou `IT-Users`.
-4. Type : **Security**, Scope : **Global**.
-5. Clique **OK** pour créer le groupe.
-6. Ensuite, fais clic droit sur le groupe > **Properties** > **Members** > **Add...**
-7. Ajoute les utilisateurs des différentes OUs (ex: les 5 users de l’OU IT pour `IT-Users`).
+1. Navigate to the `Groups` OU
+2. Right-click > **New** > **Group**
+3. Create the following groups:
 
-**📸 Captures d’écran à prendre :**
+   * `IT-Admins` (Security, Global)
+   * `IT-Users` (Security, Global)
+4. Right-click each group > **Properties** > **Members** > **Add** users from IT OU
 
-* Fenêtre de création d’un groupe
-* Propriétés du groupe montrant ses membres
+**📸 Screenshot:**
 
-### 🔐 **4.2 – Assign NTFS Permissions to Groups**
+* Group properties showing members (IT-Admins and IT-Users)
 
-1. Sur le serveur, crée un dossier partagé (ex: `C:\SharedFolders\IT`).
-2. Clic droit sur ce dossier > **Properties** > onglet **Security**.
-3. Clique sur **Edit** > **Add** > entre le nom du groupe (ex: `IT-Admins`).
-4. Sélectionne les permissions à attribuer (ex: **Read**, **Modify**, ou **Full control**).
-5. Clique **OK** pour valider.
+### 🔐 **Assign NTFS Permissions to Groups:**
 
-**📸 Captures d’écran à prendre :**
+1. Create a folder (e.g., `C:\SharedFolders\IT` or on the desktop for testing)
+2. Right-click the folder > **Properties** > **Security** tab
+3. Click **Edit...** > **Add...**
+4. Add `IT-Admins` and `IT-Users` groups
+5. Assign desired permissions:
 
-* Onglet Security avec le groupe ajouté
-* Boîte de dialogue de sélection des permissions NTFS
+   * IT-Admins: **Full control**
+   * IT-Users: **Read** or **Modify**
 
-💡 **Note** : On sépare bien :
+**📸 Screenshot:**
 
-* 🔧 **La création des groupes AD**
-* 🔐 **L’usage de ces groupes pour contrôler l’accès aux dossiers**
+* NTFS folder permission window with both groups and their permissions
+
+📝 **Note:**
+NTFS permissions apply at the file system level (locally or over network). Combine with Share permissions to define final access rights.
 
 ---
 
@@ -215,7 +214,7 @@ Disable the account before deleting to avoid accidental data loss.
 ## 🚀 At the End of Phase 2, You Will Have:
 
 * A clean and organized AD structure by department
-* 11 users spread across IT, HR, Sales, and Management
+* 10 users spread across IT, HR, Sales, and Management
 * All security groups stored under a central `Groups` OU
 * Helpdesk operations simulated (reset, delete, disable)
 * Folder permissions via NTFS assigned to groups
