@@ -118,7 +118,7 @@ Disable the account before deleting to avoid accidental data loss.
   
 ![New_group](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/create_group.png)
 
-5. Create the following groups:
+5. Create the following groups for each department:
 
    * `IT-Admins` (Security, Global)
    * `IT-Users` (Security, Global)
