@@ -57,7 +57,7 @@ User account management is critical for maintaining access control, security, an
   
      Now you should see exanple of IT memeber
 
-     ![IT_Users](ttps://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/IT_users.png)
+     ![IT_Users](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/IT_users.png)
 
 
 
