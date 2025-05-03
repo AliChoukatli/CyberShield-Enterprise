@@ -2,126 +2,181 @@
 
 ## 🧰 Prerequisites
 
-* Administrative rights on the local machine.
-* PowerShell 5.1+ installed for running scripts.
-
-## Overview
-
-This phase covers common IT support tasks such as troubleshooting network issues and providing remote support using tools like TeamViewer and Remote Desktop Protocol (RDP). Additionally, it includes the deployment of Office 365 using PowerShell scripts.
+- Administrative rights on the local workstation  
+- PowerShell 5.1+ installed  
+- RDP and/or TeamViewer installed and properly configured  
+- Internet access for TeamViewer functionality  
 
 ---
 
-## 🔄 Step 1: **Password Resets & Account Unlock**
+## 📌 **Overview**
 
-### 🔧 **Steps:**
+In this phase, you will simulate key helpdesk and IT support operations, including:
 
-1. Locate the user in ADUC
-2. Right-click > **Reset Password**
-3. Enter new password and check **Unlock account** if needed
+- Resetting user passwords and unlocking accounts  
+- Performing remote support via RDP and TeamViewer  
+- Diagnosing and resolving network issues (ping, ipconfig, device drivers)  
+- Deploying Office 365 using a PowerShell automation script  
 
-   ![Reset-passwd](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/reset-password.png)
-   
-## 🛠️ Remote Support (RDP & TeamViewer)
+These tasks mirror real-world Tier 1–2 support responsibilities in enterprise environments.
+
+---
+
+## 🔄 Step 1: Reset Passwords & Unlock Accounts
 
 ### 🎯 Objective
 
-Simulate IT Helpdesk remote support by connecting to another device using RDP and TeamViewer. This is a key support function in real-world environments for troubleshooting user issues remotely.
+Assist users who are locked out or need password resets using Active Directory Users and Computers (ADUC).
 
 ### 🔧 Steps
 
-#### 🛁 Remote Desktop Protocol (RDP)
+1. Open **Active Directory Users and Computers**  
+2. Locate the target user  
+3. Right-click > **Reset Password**  
+4. Enter the new password  
+5. Check **Unlock account** if applicable  
 
-1. On your main workstation, open the **Remote Desktop Connection** tool.
-2. Enter the target computer's **hostname or IP address** (e.g., `ITClient01.corp.aclab.tech`).
-3. Click **Connect**.
-4. When prompted, enter **admin credentials** (domain user with RDP rights).
-5. The remote session should open, giving you control of the target machine.
-
-#### 💻 TeamViewer
-
-1. Install and launch **TeamViewer** on both the support and target computers.
-2. On the target computer, retrieve the **Partner ID** and **password**.
-3. On your support machine, enter the **Partner ID**, then click **Connect**.
-4. Enter the password when prompted to establish the remote session.
-
-### 🖼️ Screenshots to Capture
-
-* ✅ RDP session active (showing the remote desktop interface).
-* ✅ TeamViewer connection window (showing the Partner ID screen or an active session).
-
-### 🔐 Notes
-
-* Ensure **Remote Desktop** is enabled on the target machine (`System Properties > Remote` tab).
-* The user account must be in the **Remote Desktop Users** group or have local admin rights.
-* TeamViewer requires internet access and both clients must be online for the session to work.
+🖼️ Screenshot:  
+![Reset-passwd](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/reset-password.png)
 
 ---
 
-## 🔢 Step 1: Troubleshoot Network Connectivity
+## 💻 Step 2: Remote Support (RDP & TeamViewer)
 
-* **Ping Test:**
+### 🎯 Objective
 
-  * Open Command Prompt (CMD) and run:
+Provide remote troubleshooting support using:
 
-    ```bash
-    ping 192.168.2.1
-    ```
-
-  * Verify if the server responds.
-
-  * If it does not, check the server’s network settings.
-
-  * 🖼️ Screenshot: CMD output for Ping Test.
+- **Remote Desktop Protocol (RDP)** for internal domain-joined machines  
+- **TeamViewer** for internet-based or external connections  
 
 ---
 
-## 📂 Step 2: Use Device Manager for Network Issues
+### 🪟 Remote Desktop Protocol (RDP)
 
-* Open **Device Manager** and check if the network adapter is functioning properly.
-* Right-click the adapter and choose **Update driver** if necessary.
+#### 🔧 Steps
 
-  * 🖼️ Screenshot: Device Manager showing network adapter status.
+1. Open **Remote Desktop Connection**  
+2. Enter target hostname or IP (e.g., `ITClient01.corp.aclab.tech`)  
+3. Click **Connect**  
+4. Enter **domain credentials** when prompted  
 
----
+🖼️ Screenshot: Remote session showing full control of the remote system
 
-## 🚪 Step 3: Remote Support Using TeamViewer
+#### 📝 Notes
 
-* Install **TeamViewer** and use it to troubleshoot remote machines.
-
-  * 🖼️ Screenshot: TeamViewer window connected to a remote machine.
-
----
-
-## 📊 Step 4: Troubleshoot Network with `ipconfig`
-
-* Open CMD and run:
-
-  ```bash
-  ipconfig /all
-  ```
-
-  * Check for the correct IP address, subnet mask, and gateway.
-
-  * 🖼️ Screenshot: `ipconfig` output showing network configuration.
+- Ensure **Remote Desktop** is enabled (`System Properties > Remote`)  
+- The user must be part of the **Remote Desktop Users** group  
 
 ---
 
-## 🛠️ Step 5: Deploy Office 365 Using PowerShell
+### 🧩 TeamViewer
 
-* Run the PowerShell script:
+#### 🔧 Steps
 
-  ```powershell
-  .\DeployOffice365.ps1
-  ```
+1. Install and launch **TeamViewer** on both support and target machines  
+2. Retrieve **Partner ID** and **Password** from the target system  
+3. On your support system, enter the **Partner ID** and click **Connect**  
+4. Provide password when prompted  
 
-  * This will silently install Office 365 on the client machine.
+🖼️ Screenshot: TeamViewer active session or Partner ID window
 
-  * 🖼️ Screenshot: PowerShell script execution.
+#### 📝 Notes
+
+- TeamViewer requires internet on both ends  
+- Ensure firewall rules and antivirus are not blocking the session  
 
 ---
 
-## 🔹 Pro Tips
+## 🌐 Step 3: Troubleshoot Network Connectivity
 
-* Ensure that Remote Desktop is enabled and properly configured.
-* Use `tracert` for more advanced network troubleshooting.
-* Keep firewall settings in check to allow RDP and TeamViewer connections.
+### 🧪 Test 1: Ping Command
+
+#### 🔧 Steps
+
+1. Open **Command Prompt (CMD)**  
+2. Run:
+
+```bash
+ping 192.168.2.1
+
+```
+Analyze response time or packet loss
+
+🖼️ Screenshot: Ping test output showing reply status
+
+🧪 Test 2: ipconfig
+🔧 Steps
+1- In CMD, run:
+```
+ipconfig /all
+```
+Review:
+
+IPv4 Address
+
+Subnet Mask
+
+Default Gateway
+
+DNS Servers
+
+🖼️ Screenshot: ipconfig /all output showing full network configuration
+
+🛠️ Step 4: Check Network Adapter via Device Manager
+🎯 Objective
+Ensure the physical or virtual network adapter is properly installed and working.
+
+🔧 Steps
+Right-click Start > Device Manager
+
+Expand Network Adapters
+
+Check for:
+
+Warnings or disabled state
+
+Missing drivers
+
+Right-click > Update driver if needed
+
+🖼️ Screenshot: Device Manager view of network adapter status
+
+☁️ Step 5: Deploy Office 365 via PowerShell
+🎯 Objective
+Automate Office 365 installation using a script.
+
+🔧 Steps
+Open PowerShell as Administrator
+
+Run the deployment script:
+```
+.\DeployOffice365.ps1
+
+```
+
+The script silently installs Office 365 in the background
+
+🖼️ Screenshot: Script execution output in PowerShell
+
+📝 Notes
+Ensure the script path is correct and signed if execution policies require it
+
+Office installation may take several minutes depending on network speed
+
+🧠 Pro Tips
+Use tracert for detailed routing diagnostics:
+```
+
+tracert 8.8.8.8
+```
+
+Always check if the firewall or antivirus is blocking RDP or TeamViewer
+
+Document user actions to reproduce issues quickly
+
+Use scripts where possible to save time and reduce error
+
+
+Souhaites-tu que je t’aide à générer le fichier `.md` complet ou à le pousser sur ton GitHub ?
+
