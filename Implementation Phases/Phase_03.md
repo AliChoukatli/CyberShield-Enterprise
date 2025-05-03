@@ -157,5 +157,3 @@ tracert 8.8.8.8
 - Document user actions to reproduce issues quickly
 
 - Use scripts where possible to save time and reduce error
-
----
