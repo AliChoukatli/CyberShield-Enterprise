@@ -22,7 +22,7 @@ These tasks mirror real-world Tier 1–2 support responsibilities in enterprise 
 
 ---
 
-## 🔄 Step 1: Reset Passwords & Unlock Accounts
+## 🔴 Step 1: Reset Passwords & Unlock Accounts
 
 ### 🎯 Objective
 
@@ -41,7 +41,7 @@ Assist users who are locked out or need password resets using Active Directory U
 
 ---
 
-## 💻 Step 2: Remote Support (RDP & TeamViewer)
+## 🔴 Step 2: Remote Support (RDP & TeamViewer)
 
 ### 🎯 Objective
 
@@ -88,7 +88,7 @@ Provide remote troubleshooting support using:
 
 ---
 
-## 🌐 Step 3: Troubleshoot Network Connectivity
+## 🔴 Step 3: Troubleshoot Network Connectivity
 
 ### 🧪 Test 1: Ping Command
 
@@ -122,7 +122,7 @@ DNS Servers
 
 🖼️ Screenshot: ipconfig /all output showing full network configuration
 
-## 🛠️ Step 4: Check Network Adapter via Device Manager
+## 🔴 Step 4: Check Network Adapter via Device Manager
 🎯 Objective
 Ensure the physical or virtual network adapter is properly installed and working.
 
@@ -141,7 +141,7 @@ Right-click > Update driver if needed
 
 🖼️ Screenshot: Device Manager view of network adapter status
 
-## ☁️ Step 5: Deploy Office 365 via PowerShell
+## 🔴 Step 5: Deploy Office 365 via PowerShell
 🎯 Objective
 Automate Office 365 installation using a script.
 
