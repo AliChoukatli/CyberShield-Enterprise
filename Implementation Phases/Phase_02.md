@@ -55,7 +55,7 @@ User account management is critical for maintaining access control, security, an
    * **2 users in `Management` OU**
    * **2 users in `Sales` OU**
   
-     Now you should see exanple of IT memeber
+     Now you should see exanple of IT members
 
      ![IT_Users](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/IT_users.png)
 
