@@ -1,16 +1,11 @@
 # Liste of 10 users to ad to AD
 
 $users = @(
+    @{ FirstName = "Ali"; LastName = "Chou" },
     @{ FirstName = "John"; LastName = "Doe" },
-    @{ FirstName = "Alice"; LastName = "Smith" },
-    @{ FirstName = "Bob"; LastName = "Johnson" },
-    @{ FirstName = "Emma"; LastName = "Williams" },
-    @{ FirstName = "Michael"; LastName = "Brown" },
     @{ FirstName = "Sarah"; LastName = "Jones" },
     @{ FirstName = "David"; LastName = "Miller" },
-    @{ FirstName = "Olivia"; LastName = "Davis" },
-    @{ FirstName = "James"; LastName = "Garcia" },
-    @{ FirstName = "Sophia"; LastName = "Martinez" }
+ 
 )
 
 # Loop to create the users
