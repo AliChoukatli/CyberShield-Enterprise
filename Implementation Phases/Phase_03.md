@@ -33,7 +33,8 @@ These tasks mirror real-world Tier 1–2 support responsibilities in enterprise 
 ![Reset-passwd](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/reset-password.png)
 
  4. Enter the new password  
- 5. Check **Unlock account** if applicable  
+ 5. Check **Unlock account** if applicable
+ 6. OK
 
 ---
 
