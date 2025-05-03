@@ -41,11 +41,11 @@ User account management is critical for maintaining access control, security, an
 
 1. Open **Server Manager** > **Tools** > **Active Directory Users and Computers**
 2. Navigate to the target **Organizational Unit (OU)** (e.g., `IT`)
-3. ![Right-click the OU > **New** > **User**](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Create_User.png)
-4. Fill in user details (Name and Logon Name)
-5. Set a **temporary password** and select **Force password change at next logon**
-6. Click **Finish**
-7. Repeat this process to add:
+3. Right-click the OU > **New** > **User**[Create_user](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Create_User.png)]
+5. Fill in user details (Name and Logon Name)
+6. Set a **temporary password** and select **Force password change at next logon**
+7. Click **Finish**
+8. Repeat this process to add:
 
    * **4 users in `IT` OU**
    * **2 users in `HR` OU**
