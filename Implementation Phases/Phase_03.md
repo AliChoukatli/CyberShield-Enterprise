@@ -141,13 +141,13 @@ ipconfig /all
 
 🖼️ Screenshot: Script execution output in PowerShell
 
-## ⚠️ Notes
+#### ⚠️ Notes
 - Ensure the script path is correct and signed if execution policies require it
 
 - Office installation may take several minutes depending on network speed
 ---
 
-## 🧠 Pro Tips
+#### 🧠 Pro Tips
 Use tracert for detailed routing diagnostics:
 ```
 tracert 8.8.8.8
