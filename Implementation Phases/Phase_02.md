@@ -99,7 +99,7 @@ Disable the account before deleting to avoid accidental data loss.
 - Group properties with members (capture all groups)
 - NTFS permissions dialog (NTFS capture)
 
-- 🔐 Assign NTFS Permissions to AD Groups
+## - 🔐 Assign NTFS Permissions to AD Groups
 🎯 Objective
 Control access to shared folders based on group membership using NTFS permissions.
 
