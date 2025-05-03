@@ -164,9 +164,7 @@ NTFS permissions apply at the file system level (locally or over network). Combi
 2. Right-click > **Reset Password**
 3. Enter new password and check **Unlock account** if needed
 
-**📸 Screenshot:**
-
-* Password reset dialog
+   ![Reset-passwd](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/reset-password.png)
 
 ---
 
