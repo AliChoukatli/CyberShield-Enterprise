@@ -100,7 +100,7 @@ Provide remote troubleshooting support using:
 ```bash
 ping 192.168.2.1
 ```
-Analyze response time or packet loss
+3. Analyze response time or packet loss
 
 🖼️ Screenshot: Ping test output showing reply status
 
