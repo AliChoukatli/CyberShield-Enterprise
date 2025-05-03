@@ -127,8 +127,7 @@ Disable the account before deleting to avoid accidental data loss.
  
 4. Right-click each group > **Properties** > **Members** > **Add** users from IT OU and for each departement
 
-   
-
+![Add-member](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/add-member.png)
 
 
 ### 🔐 **Assign NTFS Permissions to Groups:**
