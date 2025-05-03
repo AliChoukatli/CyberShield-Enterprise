@@ -118,13 +118,18 @@ Disable the account before deleting to avoid accidental data loss.
   
 ![New_group](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/create_group.png)
 
-5. Create the following groups for each department:
+3. Create the following groups for each department:
 
    * `IT-Admins` (Security, Global)
    * `IT-Users` (Security, Global)
-6. Right-click each group > **Properties** > **Members** > **Add** users from IT OU
+  
+ ![All-Groups)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/allgroups.png)
+ 
+4. Right-click each group > **Properties** > **Members** > **Add** users from IT OU and for each departement
 
-![All-Groups)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/allgroups.png)
+   
+
+
 
 ### 🔐 **Assign NTFS Permissions to Groups:**
 
