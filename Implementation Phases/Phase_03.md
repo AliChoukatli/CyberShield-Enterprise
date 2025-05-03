@@ -7,12 +7,8 @@
 ## Overview
 This day covers common IT support tasks such as troubleshooting network issues and remote support using tools like TeamViewer and Remote Desktop. Additionally, we will deploy Office 365 using PowerShell scripts.
 
-
-## 🛠️ Step 6: **Remote Support (RDP & TeamViewer)**
- ---
  
- ### 🔧 **Steps:**
- ## 🛠️ Step 6: Remote Support (RDP & TeamViewer)
+ ## 🛠️ Remote Support (RDP & TeamViewer)
  
  * **RDP**: Open Remote Desktop > Enter target hostname/IP > Login with admin credentials
  * **TeamViewer**: Launch both ends > Input Partner ID > Connect
