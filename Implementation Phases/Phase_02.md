@@ -4,11 +4,11 @@
 
 In this phase, we focus on core IT support tasks:
 
-- Creating and managing Active Directory (AD) user accounts and groups
+✅ Creating and managing Active Directory (AD) user accounts and groups
 
-- Assigning permissions and auditing user access
+✅ Assigning permissions and auditing user access
 
-- Performing essential user account operations (reset, unlock, delete)
+✅ Performing essential user account operations (reset, unlock, delete)
 
 ---
 
