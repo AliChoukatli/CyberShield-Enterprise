@@ -100,12 +100,12 @@ Disable the account before deleting to avoid accidental data loss.
 
 ![Advanced Features](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Adv_feature.png)
    
-3. Right-click OU > **Properties** > **Object tab**  
-4. Uncheck **Protect object from accidental deletion** > OK
+2. Right-click the needed OU > **Properties** > **Object tab**  
+3. Uncheck **Protect object from accidental deletion** > OK
    
 ![Protect](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/protect.png)
    
-5. Right-click OU > **Delete**
+4. Right-click the needed OU > **Delete**
 
 ---
 
