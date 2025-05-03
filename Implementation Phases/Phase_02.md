@@ -12,7 +12,7 @@ On Phase 2, we focus on the essential aspects of IT support operations, includin
 
 ---
 
-## Step 0 — Create OUs for Each Department
+## 🌟 Step 0 — Create OUs for Each Department
 
 Create the following Organizational Units directly under the domain `corp.aclab.tech`:
 
