@@ -1,6 +1,6 @@
 # DEfine the user info
-$firstName = "John"
-$lastName = "Doe"
+$firstName = "Ali"
+$lastName = "Chou"
 $samAccountName = "$firstName.$lastName"
 $userPrincipalName = "$samAccountName@corp.aclab.tech"
 
