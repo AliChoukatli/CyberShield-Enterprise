@@ -24,9 +24,7 @@ These tasks mirror real-world Tier 1–2 support responsibilities in enterprise 
 
 ## 🔴 Step 1: Reset Passwords & Unlock Accounts
 
-### 🎯 Objective
-
-Assist users who are locked out or need password resets using Active Directory Users and Computers (ADUC).
+### 🎯 Objective - Assist users who are locked out or need password resets using Active Directory Users and Computers (ADUC).
 
 ### 🔧 Steps
 
@@ -43,9 +41,7 @@ Assist users who are locked out or need password resets using Active Directory U
 
 ## 🔴 Step 2: Remote Support (RDP & TeamViewer)
 
-### 🎯 Objective
-
-Provide remote troubleshooting support using:
+### 🎯 Objective - Provide remote troubleshooting support using:
 
 - **Remote Desktop Protocol (RDP)** for internal domain-joined machines  
 - **TeamViewer** for internet-based or external connections  
@@ -123,8 +119,7 @@ ipconfig /all
 ---
 
 ## 🔴 Step 4: Check Network Adapter via Device Manager
-🎯 Objective
-Ensure the physical or virtual network adapter is properly installed and working.
+🎯 Objective - Ensure the physical or virtual network adapter is properly installed and working.
 
 🔧 Steps
 1. Right-click Start > Device Manager
@@ -143,8 +138,7 @@ Ensure the physical or virtual network adapter is properly installed and working
 ---
 
 ## 🔴 Step 5: Deploy Office 365 via PowerShell
-🎯 Objective
-Automate Office 365 installation using a script.
+🎯 Objective - Automate Office 365 installation using a script.
 
 🔧 Steps
 1. Open PowerShell as Administrator
