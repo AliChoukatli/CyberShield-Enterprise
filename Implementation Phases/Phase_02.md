@@ -156,14 +156,13 @@ C:\SharedFolders\IT
 
 ## 🧠 Professional Summary
 
-This phase demonstrates the implementation of foundational IT support and system administration tasks in a simulated small business environment. Key technical competencies covered include:
+This phase focuses on identity and access management using Active Directory:
 
-- **Active Directory Integration:** The Windows 11 Technician workstation was successfully joined to the Active Directory domain `corp.aclab.tech`, allowing centralized identity management and policy enforcement.
-- **User and Group Management:** Security groups such as `IT_Admins` and `IT_Users` were created to manage folder access through group-based permissions, following best practices for least privilege.
-- **Shared Folder Configuration:** A shared folder `C:\SharedFolders\IT` was created on the Windows Server 2022 Domain Controller and shared via the network (`\\DC01\IT`). Share and NTFS permissions were precisely configured to restrict or grant access based on group membership.
+- **Organizational Units (OUs):** Users, groups, and computers were organized into departmental OUs such as `IT`, `HR`, and `Sales`.
+- **User & Group Creation:** Specific AD users were created for each department. Groups like `IT_Admins` and `IT_Users` were created for security delegation.
+- **Home Folders:** Personal home folders were mapped via Active Directory Profiles, simulating redirection and backup practices.
 
-These exercises provide a solid foundation in enterprise IT operations and reflect real-world scenarios often encountered by junior IT technicians and support analysts.
-
+These steps represent foundational IT administration tasks critical for secure user provisioning and access control.
 
 
 
