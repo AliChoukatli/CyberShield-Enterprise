@@ -1,4 +1,4 @@
-# **Phase 2: Active Directory User Management**
+# **Phase 2 – Domain Integration & User Management**
 
 ## 🎯 **Objectives**
 
