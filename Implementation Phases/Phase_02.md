@@ -154,29 +154,49 @@ C:\SharedFolders\IT
 
 ---
 
-## 🧠 **Summary – Phase 2: Domain Integration & User Management**
+# 🧠 Professional Summary – Phase 2: Domain Integration & User Management
 
-This phase focused on setting up a structured and secure Active Directory environment to simulate enterprise IT operations.
+This phase demonstrates foundational enterprise IT administration through centralized identity and access management using Active Directory.
 
-### 🔹 **Organizational Units & Users**
-
-OUs were created for each department (`IT`, `HR`, `Sales`, etc.) and users were added manually and via PowerShell to reflect realistic onboarding.
-
-
-### 🔹 **Security Groups**
-
-AD groups like `IT-Admins` and `IT-Users` were created to apply group-based access control (GBAC), ensuring users receive the correct level of access based on role.
-
-
-### 🔹 **Shared Folder Access**
-
-A shared folder (`C:\SharedFolders\IT`) was hosted on the domain controller and shared as `\\DC01\IT`.  
-- **Share Permissions:** `IT-Admins` = Full, `IT-Users` = Read  
-- **NTFS Permissions:** `IT-Admins` = Full, `IT-Users` = Read & Execute
-
-This folder simulates a secure file-sharing environment aligned with Active Directory permissions, offering insight into the interaction between share-level and file-level security.
 ---
 
-### **This phase replicates real-world IT onboarding and access delegation workflows critical in any enterprise environment.**
+### 🔹 Active Directory Structuring
+
+Organizational Units (OUs) were created to mirror business departments, including `IT`, `HR`, `Sales`, and `Management`. Additional OUs like `Groups` and `Service Accounts` ensured clean separation of security groups and technical identities.
+
+- Structured OUs enable delegated administration and easier Group Policy management.
+- Advanced features were enabled to protect critical objects from accidental deletion.
+
+
+### 🔹 User Lifecycle Management
+
+- **Account Provisioning:** Department-specific users were created using the GUI and optionally automated with PowerShell scripts.
+- **Deprovisioning:** Proper procedures for user and OU deletion were followed, including disabling accounts and removing protection flags.
+- **Account Operations:** Tasks such as password resets, account unlocks, and attribute modifications simulate real-world Helpdesk interactions.
+
+### 🔹 Group-Based Access Control (GBAC)
+
+Security groups were created to align with business roles:
+
+- `IT-Admins` – Full access and administrative privileges
+- `IT-Users` – Limited, read-only access
+
+Users were added to appropriate groups to enforce least privilege.
+
+### 🔹 Shared Folder Configuration
+
+A shared folder `C:\SharedFolders\IT` was created on the Domain Controller and exposed via network path `\\DC01\IT`.
+
+- **Share Permissions:**  
+  `IT-Admins` granted Full Control, `IT-Users` granted Read-only access.
+
+- **NTFS Permissions:**  
+  Fine-grained control applied—`IT-Admins` (Full), `IT-Users` (Read & Execute).
+
+*This folder simulates a secure file-sharing environment aligned with Active Directory permissions, offering insight into the interaction between share-level and file-level security.*
+
+---
+
+### This phase replicates real-world IT onboarding and access delegation workflows critical in any enterprise environment.
 
 
