@@ -30,9 +30,7 @@ In this phase, you will:
 ---
 
 
-
-
-# 🔴 Step 2 – Windows Server 2022 Installation
+## 🔴 Step 1 – Windows Server 2022 Installation
 
 **🎯 Objective**: Set up the server that will host Active Directory services.
 
@@ -46,7 +44,7 @@ In this phase, you will:
 
 ---
 
-# 🔴 Step 3 – Rename the Server
+## 🔴 Step 2 – Rename the Server
 
 **🎯 Objective**: Assign a clear hostname to the server.
 
@@ -62,7 +60,7 @@ In this phase, you will:
 
 ---
 
-# 🔴 Step 4 – Set a Static IP Address
+## 🔴 Step 3 – Set a Static IP Address
 
 **🎯 Objective**: Ensure the server uses a fixed IP for Active Directory and DNS stability.
 
@@ -88,7 +86,7 @@ New-NetIPAddress -InterfaceAlias "Ethernet" -IPAddress 192.168.2.10 -PrefixLengt
 Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("127.0.0.1", "8.8.8.8")
 ```
 
-## 🔴 Step 5 – Install Active Directory Domain Services (AD DS)
+## 🔴 Step 4 – Install Active Directory Domain Services (AD DS)
 🎯 **Objective**: Add Active Directory role to the server.
 
 ### Instructions
@@ -102,7 +100,7 @@ Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("127.0.0
 
 ---
 
-## 🔴 Step 6 – Promote the Server to a Domain Controller
+## 🔴 Step 5 – Promote the Server to a Domain Controller
 🎯 **Objective**: Create a new Active Directory forest.
 
 ### Instructions
@@ -123,7 +121,7 @@ Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("127.0.0
 
 ---
 
-## 🔴 Step 7 – Verify Active Directory Installation
+## 🔴 Step 6 – Verify Active Directory Installation
 🎯 **Objective**: Confirm successful Active Directory deployment.
 
 ### Instructions
@@ -136,7 +134,7 @@ Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("127.0.0
 
 ---
 
-# 🔴 Step 1 – Windows 11 Client Machines
+## 🔴 Step 7 – Windows 11 Client Machines
 
 **🎯 Objective**: Install and prepare Windows 11 machines for later domain joining.
 
@@ -181,7 +179,7 @@ Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("127.0.0
 
 ---
 
-## 🔒 Domain Join – Windows 11 Workstation
+## 🔴 Step 8 - Domain Join – Windows 11 Workstation
 
 **Objective:** Integrate the Windows 11 workstation into the `corp.aclab.tech` domain to enable centralized management via Active Directory.
 
