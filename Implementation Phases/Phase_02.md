@@ -133,3 +133,7 @@ Disable the account before deleting to avoid accidental data loss.
 NTFS permissions apply at the file system level (locally or over network). Combine with Share permissions to define final access rights.
 
 ---
+
+### **Sharing** 
+
+![Sharing](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Sharing.png)
