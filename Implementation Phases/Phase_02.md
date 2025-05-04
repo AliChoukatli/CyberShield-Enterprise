@@ -154,12 +154,19 @@ C:\SharedFolders\IT
 
 ---
 
-### 🧪 Test Access from Client
+## 🧠 Professional Summary
 
-From the domain-joined client (`Win11-Technician`):
+This phase demonstrates the implementation of foundational IT support and system administration tasks in a simulated small business environment. Key technical competencies covered include:
 
-1. Open **File Explorer**  
-2. Access the share via UNC path:
+- **Active Directory Integration:** The Windows 11 Technician workstation was successfully joined to the Active Directory domain `corp.aclab.tech`, allowing centralized identity management and policy enforcement.
+- **User and Group Management:** Security groups such as `IT_Admins` and `IT_Users` were created to manage folder access through group-based permissions, following best practices for least privilege.
+- **Shared Folder Configuration:** A shared folder `C:\SharedFolders\IT` was created on the Windows Server 2022 Domain Controller and shared via the network (`\\DC01\IT`). Share and NTFS permissions were precisely configured to restrict or grant access based on group membership.
+- **Remote Support Tools:** The environment was equipped with both RDP and TeamViewer to simulate internal and external remote support scenarios, mimicking Tier 1–2 helpdesk operations.
+- **Network Troubleshooting:** Basic diagnostic tools like `ping`, `ipconfig`, `tracert`, and Device Manager were used to detect and resolve common connectivity issues.
+- **Office 365 Deployment:** A PowerShell script was used to automate the silent installation of Microsoft 365, demonstrating automation capabilities in IT support.
+
+These exercises provide a solid foundation in enterprise IT operations and reflect real-world scenarios often encountered by junior IT technicians and support analysts.
+
 
 
 
