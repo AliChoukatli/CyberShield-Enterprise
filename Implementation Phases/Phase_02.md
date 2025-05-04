@@ -174,11 +174,9 @@ A shared folder (`C:\SharedFolders\IT`) was hosted on the domain controller and 
 - **Share Permissions:** `IT-Admins` = Full, `IT-Users` = Read  
 - **NTFS Permissions:** `IT-Admins` = Full, `IT-Users` = Read & Execute
 
+This folder simulates a secure file-sharing environment aligned with Active Directory permissions, offering insight into the interaction between share-level and file-level security.
 ---
 
-## **This setup emulates secure resource sharing and permission management in a domain environment.**
-
-
-This phase builds a realistic foundation for IT support, account management, and access control.
+### **This phase replicates real-world IT onboarding and access delegation workflows critical in any enterprise environment.**
 
 
