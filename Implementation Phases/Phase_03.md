@@ -171,3 +171,15 @@ tracert 8.8.8.8
 - Document user actions to reproduce issues quickly
 
 - Use scripts where possible to save time and reduce error
+
+## 🧠 Professional Summary
+
+This phase simulates common Tier 1–2 helpdesk responsibilities:
+
+- **Shared Folder Configuration:** A shared folder `C:\SharedFolders\IT` was created on the Domain Controller (`DC01`) and shared as `\\DC01\IT`, with precise share and NTFS permissions based on AD group membership.
+- **Remote Support Tools:** RDP and TeamViewer were set up to simulate internal and remote support sessions.
+- **Network Troubleshooting:** Common tools like `ping`, `ipconfig`, and Device Manager were used to resolve connectivity issues.
+- **Office 365 Deployment:** A PowerShell script was used to silently install Microsoft 365 from the Technician workstation, simulating automation in software deployment.
+
+These tasks develop essential troubleshooting, remote assistance, and configuration skills for real-world support environments.
+
