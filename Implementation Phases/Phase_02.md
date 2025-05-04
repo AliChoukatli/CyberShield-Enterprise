@@ -197,6 +197,6 @@ A shared folder `C:\SharedFolders\IT` was created on the Domain Controller and e
 
 ---
 
-### This phase replicates real-world IT onboarding and access delegation workflows critical in any enterprise environment.
+🎯 ### This phase replicates real-world IT onboarding and access delegation workflows critical in any enterprise environment.
 
 
