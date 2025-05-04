@@ -154,11 +154,9 @@ C:\SharedFolders\IT
 
 ---
 
-# 🧠 Professional Summary – Phase 2: Domain Integration & User Management
+# 🧠 Summary – Phase 2: Domain Integration & User Management
 
 This phase demonstrates foundational enterprise IT administration through centralized identity and access management using Active Directory.
-
----
 
 ### 🔹 Active Directory Structuring
 
@@ -166,7 +164,6 @@ Organizational Units (OUs) were created to mirror business departments, includin
 
 - Structured OUs enable delegated administration and easier Group Policy management.
 - Advanced features were enabled to protect critical objects from accidental deletion.
-
 
 ### 🔹 User Lifecycle Management
 
