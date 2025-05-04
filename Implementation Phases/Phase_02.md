@@ -137,3 +137,54 @@ NTFS permissions apply at the file system level (locally or over network). Combi
 ### **Sharing** 
 
 ![Sharing](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Sharing.png)
+
+
+
+## 📁 Step: Create & Share an IT Support Folder on Windows Server
+
+### 🎯 Objective
+Simulate a secure file-sharing environment by configuring NTFS and share permissions on a central folder hosted on the domain controller.
+
+---
+
+### 🛠️ Steps
+
+1. On the **Windows Server 2022** (Domain Controller), create the folder:
+
+C:\SharedFolders\IT
+
+
+2. Right-click on the `IT` folder → **Properties** → go to the **Sharing** tab  
+   - Click **Advanced Sharing**
+   - Check **"Share this folder"**
+   - Set the Share Name to `IT`
+   - Click **Permissions** and configure as follows:
+
+| Group       | Share Permission |
+|-------------|------------------|
+| IT_Admins   | Full Control     |
+| IT_Users    | Read             |
+
+3. Go to the **Security** tab → Click **Edit**  
+   - Add and configure NTFS permissions for the same groups:
+
+| Group       | NTFS Permission    |
+|-------------|--------------------|
+| IT_Admins   | Full Control       |
+| IT_Users    | Read & Execute     |
+
+> ⚠️ You may remove the default `Everyone` group for better security.
+
+4. Click **Apply** and **OK** to save both sets of permissions.
+
+---
+
+### 🧪 Test Access from Client
+
+From the domain-joined client (`Win11-Technician`):
+
+1. Open **File Explorer**  
+2. Access the share via UNC path:
+
+
+
