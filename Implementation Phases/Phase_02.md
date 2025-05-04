@@ -154,15 +154,34 @@ C:\SharedFolders\IT
 
 ---
 
-## 🧠 Professional Summary
+# 🧠 Professional Summary – Phase 2: Domain Integration & User Management
 
-This phase focuses on identity and access management using Active Directory:
+This phase focused on setting up a structured and secure Active Directory environment to simulate enterprise IT operations.
 
-- **Organizational Units (OUs):** Users, groups, and computers were organized into departmental OUs such as `IT`, `HR`, and `Sales`.
-- **User & Group Creation:** Specific AD users were created for each department. Groups like `IT_Admins` and `IT_Users` were created for security delegation.
-- **Home Folders:** Personal home folders were mapped via Active Directory Profiles, simulating redirection and backup practices.
+---
 
-These steps represent foundational IT administration tasks critical for secure user provisioning and access control.
+### 🔹 Organizational Units & Users
 
+OUs were created for each department (`IT`, `HR`, `Sales`, etc.) and users were added manually and via PowerShell to reflect realistic onboarding.
+
+---
+
+### 🔹 Security Groups
+
+AD groups like `IT-Admins` and `IT-Users` were created to apply group-based access control (GBAC), ensuring users receive the correct level of access based on role.
+
+---
+
+### 🔹 Shared Folder Access
+
+A shared folder (`C:\SharedFolders\IT`) was hosted on the domain controller and shared as `\\DC01\IT`.  
+- **Share Permissions:** `IT-Admins` = Full, `IT-Users` = Read  
+- **NTFS Permissions:** `IT-Admins` = Full, `IT-Users` = Read & Execute  
+
+This setup emulates secure resource sharing and permission management in a domain environment.
+
+---
+
+This phase builds a realistic foundation for IT support, account management, and access control.
 
 
