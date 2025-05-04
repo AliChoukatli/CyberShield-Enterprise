@@ -109,36 +109,6 @@ Disable the account before deleting to avoid accidental data loss.
 ![IT-member](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/IT-member.png)
 
 
-### 🔐 **Assign NTFS Permissions to Groups:**
-
-1. Create a folder (e.g., `C:\SharedFolders\IT` or on the desktop for testing)
-
-   **📌 The shared folder must be created on the Windows Server 2022 (DC01)**
-   
-2. Right-click the folder > **Properties** > **Security** tab
-3. Click **Edit...** > **Add...**
-4. Add `IT-Admins` and `IT-Users` groups
-5. Assign desired permissions:
-
-   * IT-Admins: **Full control**
-     
-![NTFS-Admins](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/NTFS-admin.png)
-     
-   * IT-Users: **Read** or **Modify**
-  
-![NTFS-Users](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/NTFS-users.png)
-
-
-📝 **Note:**
-NTFS permissions apply at the file system level (locally or over network). Combine with Share permissions to define final access rights.
-
----
-
-### **Sharing** 
-
-![Sharing](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Sharing.png)
-
-
 
 ## 📁 Step: Create & Share an IT Support Folder on Windows Server
 
@@ -175,6 +145,8 @@ C:\SharedFolders\IT
 |-------------|--------------------|
 | IT_Admins   | Full Control       |
 | IT_Users    | Read & Execute     |
+
+![NTFS-admins](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/NTFS-admin.png)
 
 > ⚠️ You may remove the default `Everyone` group for better security.
 
