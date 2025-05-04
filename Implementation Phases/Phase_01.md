@@ -178,14 +178,13 @@ Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("127.0.0
 
 ---
 
-## ✅ Phase 1 Summary
+## 🧠 Summary
 
-## 🧠 Professional Summary
+This phase covers the initial setup of the server and workstation environment in a secure domain-based structure:
 
-This phase focuses on identity and access management using Active Directory:
+- **Windows Server 2022 Configuration:** A Domain Controller (`DC01`) was installed and configured with Active Directory Domain Services (AD DS) for the domain `corp.aclab.tech`.
+- **Workstation Installation:** A Windows 11 Pro machine (`Win11-Tech`) was installed to simulate an end-user or IT technician system.
+- **Domain Join:** The Windows 11 workstation was joined to the `corp.aclab.tech` domain, enabling centralized identity and device management from the Domain Controller.
 
-- **Organizational Units (OUs):** Users, groups, and computers were organized into departmental OUs such as `IT`, `HR`, and `Sales`.
-- **User & Group Creation:** Specific AD users were created for each department. Groups like `IT_Admins` and `IT_Users` were created for security delegation.
-- **Home Folders:** Personal home folders were mapped via Active Directory Profiles, simulating redirection and backup practices.
+These steps simulate real-world onboarding of new devices into an enterprise Active Directory environment.
 
-These steps represent foundational IT administration tasks critical for secure user provisioning and access control.
