@@ -165,6 +165,9 @@ C:\SharedFolders\IT
 | IT_Admins   | Full Control     |
 | IT_Users    | Read             |
 
+![Sharing](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Sharing.png)
+
+
 3. Go to the **Security** tab → Click **Edit**  
    - Add and configure NTFS permissions for the same groups:
 
