@@ -180,10 +180,12 @@ Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("127.0.0
 
 ## ✅ Phase 1 Summary
 
-At the end of **Phase 1**, you should have:
+## 🧠 Professional Summary
 
-- ✔️ **Windows Server 2022 installed and renamed.**
-- ✔️ **Static IP configuration completed.**
-- ✔️ **Active Directory Domain Services installed and configured.**
-- ✔️ **Domain created (`corp.aclab.tech`).**
-- ✔️ **2–3 Windows 11 client machines ready for domain join in future phases.**
+This phase focuses on identity and access management using Active Directory:
+
+- **Organizational Units (OUs):** Users, groups, and computers were organized into departmental OUs such as `IT`, `HR`, and `Sales`.
+- **User & Group Creation:** Specific AD users were created for each department. Groups like `IT_Admins` and `IT_Users` were created for security delegation.
+- **Home Folders:** Personal home folders were mapped via Active Directory Profiles, simulating redirection and backup practices.
+
+These steps represent foundational IT administration tasks critical for secure user provisioning and access control.
