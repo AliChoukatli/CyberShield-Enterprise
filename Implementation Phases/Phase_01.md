@@ -1,4 +1,4 @@
-# Phase 1: Environment Setup – Windows 11 Clients, Active Directory & Networking
+# Phase 1:  Installation & Domain Join
 
 ---
 
