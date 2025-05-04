@@ -178,7 +178,7 @@ Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("127.0.0
 
 ---
 
-## 🧠 Summary
+## 🧠 Summary **Step 1 - Installation & Domain Join**
 
 This phase covers the initial setup of the server and workstation environment in a secure domain-based structure:
 
