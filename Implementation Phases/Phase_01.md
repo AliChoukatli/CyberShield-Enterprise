@@ -183,7 +183,7 @@ Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("127.0.0
 This phase covers the initial setup of the server and workstation environment in a secure domain-based structure:
 
 - **Windows Server 2022 Configuration:** A Domain Controller (`DC01`) was installed and configured with Active Directory Domain Services (AD DS) for the domain `corp.aclab.tech`.
-- **Workstation Installation:** A Windows 11 Pro machine (`Win11-Tech`) was installed to simulate an end-user or IT technician system.
+- **Workstation Installation:** A Windows 11 Pro machine (`Win11-01`) was installed to simulate an end-user or IT technician system.
 - **Domain Join:** The Windows 11 workstation was joined to the `corp.aclab.tech` domain, enabling centralized identity and device management from the Domain Controller.
 
 These steps simulate real-world onboarding of new devices into an enterprise Active Directory environment.
