@@ -29,8 +29,6 @@ Once done, verify the structure:
 
 ![* Final view showing all top-level OUs under the domain](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/All_OU.png)
 
----
-
 ## 🔴 **Step 2 - Creating Users in Active Directory**
 
 Open Server Manager > Tools > Active Directory Users and Computers (ADUC)
@@ -67,7 +65,6 @@ Disable the account before deleting to avoid accidental data loss.
 
 ![* Disable account dialog](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Disable_acc.png)
 
----
 
 ## 🔴 **Step 4 - Delete an Organizational Unit (OU)**
 
@@ -82,7 +79,6 @@ Disable the account before deleting to avoid accidental data loss.
    
 4. Right-click OU > **Delete**
 
----
 
 ## 🔴 **Step 5 - Managing Groups and Permissions**
 
