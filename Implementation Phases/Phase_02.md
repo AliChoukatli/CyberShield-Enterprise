@@ -12,7 +12,7 @@ In this phase, we focus on core IT support tasks:
 
 ---
 
-## 🔴 **Step 0 - Create OUs for Each Department**
+## 🔴 **Step 1 - Create OUs for Each Department**
 
 Create the following Organizational Units directly under the domain `corp.aclab.tech`:
 
@@ -31,7 +31,7 @@ Once done, verify the structure:
 
 ---
 
-## 🔴 **Step 1 - Creating Users in Active Directory**
+## 🔴 **Step 2 - Creating Users in Active Directory**
 
 Open Server Manager > Tools > Active Directory Users and Computers (ADUC)
 
@@ -52,7 +52,7 @@ Once done
 
 ---
 
-## 🔴 **Step 2 - Delete a User in Active Directory**
+## 🔴 **Step 3 - Delete a User in Active Directory**
 
 1. Open **ADUC**
 2. Navigate to the appropriate OU
@@ -69,7 +69,7 @@ Disable the account before deleting to avoid accidental data loss.
 
 ---
 
-## 🔴 **Step 3 - Delete an Organizational Unit (OU)**
+## 🔴 **Step 4 - Delete an Organizational Unit (OU)**
 
 1. In ADUC, go to **View** > enable **Advanced Features**
 
@@ -84,7 +84,7 @@ Disable the account before deleting to avoid accidental data loss.
 
 ---
 
-## 🔴 **Step 4 - Managing Groups and Permissions**
+## 🔴 **Step 5 - Managing Groups and Permissions**
 
 ### 🔧 **Create AD Security Groups:**
 
