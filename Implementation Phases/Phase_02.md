@@ -48,7 +48,6 @@ Once done
 * [Add IT Users Script](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_IT_users.ps1)
 * [Add Single User Script](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_user.ps1)
 
----
 
 ## 🔴 **Step 3 - Delete a User in Active Directory**
 
