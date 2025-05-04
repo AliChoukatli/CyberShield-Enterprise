@@ -112,6 +112,9 @@ Disable the account before deleting to avoid accidental data loss.
 ### 🔐 **Assign NTFS Permissions to Groups:**
 
 1. Create a folder (e.g., `C:\SharedFolders\IT` or on the desktop for testing)
+
+   **📌 The shared folder must be created on the Windows Server 2022 (DC01)**
+   
 2. Right-click the folder > **Properties** > **Security** tab
 3. Click **Edit...** > **Add...**
 4. Add `IT-Admins` and `IT-Users` groups
