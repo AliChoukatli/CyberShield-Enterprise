@@ -158,29 +158,26 @@ C:\SharedFolders\IT
 
 This phase focused on setting up a structured and secure Active Directory environment to simulate enterprise IT operations.
 
----
-
 ### 🔹 **Organizational Units & Users**
 
 OUs were created for each department (`IT`, `HR`, `Sales`, etc.) and users were added manually and via PowerShell to reflect realistic onboarding.
 
----
 
 ### 🔹 **Security Groups**
 
 AD groups like `IT-Admins` and `IT-Users` were created to apply group-based access control (GBAC), ensuring users receive the correct level of access based on role.
 
----
 
 ### 🔹 **Shared Folder Access**
 
 A shared folder (`C:\SharedFolders\IT`) was hosted on the domain controller and shared as `\\DC01\IT`.  
 - **Share Permissions:** `IT-Admins` = Full, `IT-Users` = Read  
-- **NTFS Permissions:** `IT-Admins` = Full, `IT-Users` = Read & Execute  
-
-This setup emulates secure resource sharing and permission management in a domain environment.
+- **NTFS Permissions:** `IT-Admins` = Full, `IT-Users` = Read & Execute
 
 ---
+
+## **This setup emulates secure resource sharing and permission management in a domain environment.**
+
 
 This phase builds a realistic foundation for IT support, account management, and access control.
 
