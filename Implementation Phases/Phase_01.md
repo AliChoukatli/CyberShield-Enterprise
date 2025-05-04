@@ -183,8 +183,6 @@ Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("127.0.0
 
 **Objective:** Integrate the Windows 11 workstation into the `corp.aclab.tech` domain to enable centralized management via Active Directory.
 
----
-
 ### 🛠️ Steps:
 
 1. On the Windows 11 machine (`Win11-Technician`), go to:  
@@ -197,7 +195,13 @@ Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("127.0.0
 
 3. Enter credentials of a domain account with permission to join (e.g., `Administrator`)
 
-4. Once joined, you'll see a welcome message. Restart the workstation.
+4. Once joined, you'll see a welcome message.
+  
+  Capture - Domain join success confirmation window  
+
+7.    Restart the workstation.
+
+Capture Windows login screen with `corp\` domain option
 
 ---
 
@@ -205,15 +209,9 @@ Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("127.0.0
 
 - The machine appears under **Active Directory Users and Computers (ADUC)** in the **"Computers"** container.
 - You can now log in using domain credentials (e.g., `corp\it.jdoe`)
+Capture  ADUC view showing the joined computer 
 
 > 💡 *This step is required before deploying GPOs, endpoint protection, or centralized user policies.*
-
----
-
-### 📸 Screenshot Suggestions:
-- Domain join success confirmation window  
-- ADUC view showing the joined computer  
-- Windows login screen with `corp\` domain option
 
 ---
 
