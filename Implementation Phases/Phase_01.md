@@ -145,17 +145,18 @@ Instructions
 ![DHCP_Role](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/dhcp_server.png)
 
 5. Proceed with the installation.
+6. Click on Complete DHCP Configuration
    
 ![DHCP_installation](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/dhcp_complete.png)
 
-6. Autorize DHCP to Active Directory
-7. Put your score
+6. Autorize DHCP to Active Directory -> Next
+7. Put your scope ( in my case i chose to put : (192.168.2.100 - 192.168.2.200)
    
 ![DHCP_Scope](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/DHCP_Scope.png)
 
 8. Configure DHCP -> Yes i want to cofngure these option now
 9. add a Gateaway (if you have one)
-10. now you go to dhcp pool and you can see the score
+10. On the DHCP window, click on dhcp pool you can see your scope
     
 ![DHCP_Pool](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/dhcp_pool.png)
 
