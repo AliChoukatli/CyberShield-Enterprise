@@ -208,7 +208,7 @@ Capture Windows login screen with `corp\` domain option
 ### ✅ Result:
 
 - The machine appears under **Active Directory Users and Computers (ADUC)** in the **"Computers"** container.
-- You can now log in using domain credentials (e.g., `corp\it.jdoe`)
+- You can now log in using domain credentials (e.g., `corp\it.ali.chou`)
 Capture  ADUC view showing the joined computer 
 
 > 💡 *This step is required before deploying GPOs, endpoint protection, or centralized user policies.*
