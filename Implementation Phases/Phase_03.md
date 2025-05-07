@@ -11,27 +11,13 @@
 
 ## 📌 **Overview**
 
-In this phase, you will simulate key helpdesk and IT support operations, including:
+- Set up support tools (RSAT, PowerShell, Remote Assistance, Event Viewer)
 
-1- Reset Passwords & Unlock Accounts (ADUC)
+- Manage tickets and escalate technical issues
 
-2- Remote Support with RDP
+- Network diagnostics: IPConfig, ping, tracert, Netstat, Wireshark (introductory)
 
-3- Remote Support with TeamViewer
-
-4- Network Troubleshooting: ping
-
-5- Network Troubleshooting: ipconfig
-
-6- Network Adapter Check (Device Manager)
-
-7- Deploy Office 365 via PowerShell
-
-Captures d’écran
-
-Pro Tips 
-
-These tasks mirror real-world Tier 1–2 support responsibilities in enterprise environments.
+- Provide secure and tracked user support
 
 ---
 
