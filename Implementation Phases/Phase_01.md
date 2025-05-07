@@ -145,7 +145,8 @@ Instructions
 ![DHCP_Role](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/dhcp_server.png)
 
 5. Proceed with the installation.
-[dhcp_complete]
+   
+![DHCP_installation](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/dhcp_complete.png)
 
 6. Autorize DHCP to Active Directory
 7. Put your score
