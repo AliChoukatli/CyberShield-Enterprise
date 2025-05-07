@@ -154,9 +154,9 @@ Instructions
    
 ![DHCP_Scope](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/DHCP_Scope.png)
 
-8. Configure DHCP -> Yes i want to cofngure these option now
-9. add a Gateaway (if you have one)
-10. On the DHCP window, click on dhcp pool you can see your scope
+8. Configure DHCP -> Yes i want to configure these option now
+9. Add a Gateaway address (if you have one)
+10. On the DHCP window, click on DHCP Pool you can see your scope
     
 ![DHCP_Pool](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/dhcp_pool.png)
 
