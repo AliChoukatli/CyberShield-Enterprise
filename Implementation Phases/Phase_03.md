@@ -72,8 +72,6 @@ Grant the `IT-Support-RDP` group Remote Desktop rights on the domain-joined clie
 3. Navigate to:  System Tools > Local Users and Groups > Groups
 
 
-
-
 4. Double-click on **Remote Desktop Users**  
 5. Click **Add...**, then enter:  
 corp.aclab.tech\IT-Support-RDP
@@ -96,46 +94,38 @@ Add-LocalGroupMember -Group "Remote Desktop Users" -Member "corp.aclab.tech\IT-S
 
 ---
 
-## ✅ Step 4 – Enable and Test RDP on CL-WIN11-01
+### 🎯 Objective  
+Enable Remote Desktop on `CL-WIN01` and verify access settings for the domain group.
 
-### 🎯 Objective
+### 🛠️ Instructions
 
-Configure Remote Desktop settings and test access from a support machine.
+1. Log in to `CL-WIN01` locally or via Hyper-V  
+2. Right-click **This PC** > **Properties**  
+3. Click **Remote desktop settings**  
+- or go to: `Settings > System > Remote Desktop`  
+4. Enable:  
+✅ **Allow remote connections to this computer**  
+5. *(Optional)* Disable for compatibility:  
+❌ **Allow connections only from computers using Network Level Authentication (NLA)**  
+6. Click **OK** to apply changes  
+7. Open **Computer Management**  
+8. Confirm `corp.aclab.tech\IT-Support-RDP` is present in **Remote Desktop Users**
 
-1. Log in to `CL-WIN11-01`
-2. Go to **System Properties > Remote** tab
-3. Enable **Allow remote connections to this computer**
-
-![Enable-RDP](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_enable.png)
-
-4. *(Optional)* Disable NLA for compatibility
-5. Apply changes
-6. Add `corp.aclab.tech\IT-Support-RDP` to **Remote Desktop Users** group using Computer Management
-
-🖼️ Screenshot: Group members confirmed
+📸 **Screenshot to capture:**  
+- Remote Desktop settings enabled  
+- Group membership of `Remote Desktop Users` showing `IT-Support-RDP`
 
 ---
 
-## ✅ Step 5 – Initiate RDP Session from WIN11-01
+## ✅ Step 5 – Initiate RDP Session from SRV-DC01
 
-### 🎯 Objective
+### 🎯 Objective  
+Validate that `SRV-DC01` can connect to `CL-WIN01` using the domain account `ali.choukatli`.
 
-Validate remote access via RDP using domain credentials.
+### 🛠️ Instructions
 
-1. On `CL-Win11-01`, open **Remote Desktop Connection** (`mstsc.exe`)
-2. Enter: `CL-WIN11-01.corp.aclab.tech`
-
-
-3. Click **Show Options**
-4. Username: `corp.aclab.tech\ali.choukatli`
-
-![RDP-Before](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_before.png)
-
-5. Click **Connect**, enter password
-
-![RDP-After](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP-After.png)
-
-
+1. On `SRV-DC01`, press `Windows + R`, type `mstsc`, and hit **Enter**  
+2. In the **Computer** field, enter:  
 
 ---
 
