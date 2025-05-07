@@ -62,7 +62,7 @@ Create a dedicated group for IT support staff and assign relevant users. This gr
    - Type: Security
 
 2. **Add members to the group**:
-   - Example user: `ali.chou`
+   - Example user: `ali.choukatli`
   
 ![RDP_group](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_groupe.png)
 
