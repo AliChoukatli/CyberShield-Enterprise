@@ -115,7 +115,7 @@ Configure Remote Desktop settings and test access from a support machine.
 
 Validate remote access via RDP using domain credentials.
 
-1. On `SRV-DC01`, open **Remote Desktop Connection** (`mstsc.exe`)
+1. On `CL-Win11-01`, open **Remote Desktop Connection** (`mstsc.exe`)
 2. Enter: `CL-WIN11-01.corp.aclab.tech`
 
 
