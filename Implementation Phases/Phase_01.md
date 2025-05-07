@@ -185,6 +185,8 @@ Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("127.0.0
 
 ### 🛠️ Steps:
 
+1. Make sure your dns prerferd is 192.168.2.10 ( Dc ip)
+
 1. On the Windows 11 machine (`Win11-Technician`), go to:  
    `Settings` → `System` → `About` → Click **"Domain or workgroup"** → **Change settings**
 
