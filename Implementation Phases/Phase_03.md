@@ -124,7 +124,7 @@ Verify remote access works using domain credentials from the support workstation
 
 1. On `CL-WIN11-01`, press `Windows + R`, type `mstsc`, and hit **Enter**  
 2. In the **Computer** field, enter:
-   CL-WIN01.corp.aclab.tech
+   CL-WIN11-02.corp.aclab.tech
 
 3. Click **Show Options**  
 4. In the **Username** field, enter:  
