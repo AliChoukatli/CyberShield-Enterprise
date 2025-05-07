@@ -72,6 +72,9 @@ Grant `IT-Support-RDP` group remote desktop rights on the client machine.
 3. Navigate to: `Local Users and Groups > Groups`
 4. Open **Remote Desktop Users** group
 5. Click **Add...**, enter: `corp.aclab.tech\IT-Support-RDP`, click **Check Names**
+
+![RDP-Member](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_member.png)
+   
 6. Confirm and apply
 
 ### Method B – PowerShell
@@ -82,7 +85,7 @@ Run the following as Administrator:
 Add-LocalGroupMember -Group "Remote Desktop Users" -Member "corp.aclab.tech\IT-Support-RDP"
 ```
 
-![RDP-Member](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_member.png)
+
 
 ---
 
