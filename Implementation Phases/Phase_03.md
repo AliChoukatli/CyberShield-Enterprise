@@ -63,19 +63,26 @@ Create a domain security group for IT support staff to manage RDP permissions ce
 
 ### 🎯 Objective
 
-Grant `IT-Support-RDP` group remote desktop rights on the client machine.
+Grant the `IT-Support-RDP` group Remote Desktop rights on the domain-joined client `CL-WIN01`.
 
-### Method A – Graphical (Computer Management)
+### 🛠️ Method A – Graphical (Computer Management)
 
-1. Log in to `ITClient01` as Administrator
-2. Open **Computer Management** (`compmgmt.msc`)
-3. Navigate to: `Local Users and Groups > Groups`
-4. Open **Remote Desktop Users** group
-5. Click **Add...**, enter: `corp.aclab.tech\IT-Support-RDP`, click **Check Names**
+1. Log in to `CL-WIN01` as a **local administrator** or **domain admin**  
+2. Press `Windows + R`, type `compmgmt.msc`, and hit **Enter**  
+3. Navigate to:  System Tools > Local Users and Groups > Groups
+
+
+
+
+4. Double-click on **Remote Desktop Users**  
+5. Click **Add...**, then enter:  
+corp.aclab.tech\IT-Support-RDP
+
+6. Click **Check Names** to validate, then click **OK**
 
 ![RDP-Member](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_member.png)
-   
-6. Confirm and apply
+
+---
 
 ### Method B – PowerShell
 
