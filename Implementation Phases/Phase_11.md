@@ -4,25 +4,12 @@
 - Familiarity with compliance frameworks (ISO 27001, NIST CSF).
 - Access to **Microsoft Compliance Manager**.
 
-## Overview
-This day will guide you through mapping your security configurations to compliance frameworks like ISO 27001 and NIST CSF.
+Map deployed practices to standards:
 
-### **Step 1: Map Security Controls to NIST CSF**
-- Log into **Compliance Manager** and start mapping your organization’s security controls to NIST CSF.
+ISO 27001 (Annex A), NIST CSF, CIS Controls
 
-    - 📸 Screenshot: Mapping screen in Compliance Manager.
+Generate evidence (screenshots, logs, procedures)
 
-### **Step 2: Map Security Controls to ISO 27001**
-- Repeat the process for ISO 27001 standards.
+Prepare compliance report for internal or external audits
 
-    - 📸 Screenshot: ISO 27001 control mapping in Compliance Manager.
-
-### **Step 3: Create Compliance Documentation**
-- Export the mapped controls and include them in your project’s documentation.
-
-    - 📸 Screenshot: Exported compliance report.
-
-## Pro Tips:
-- Keep your documentation up to date with new regulations.
-- Use the **Compliance Manager** to automate future audits.
-
+Identify residual gaps for future remediation
