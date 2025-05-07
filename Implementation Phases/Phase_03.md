@@ -37,14 +37,7 @@
  6. OK
 ---
 
-## 🔴 **Remote Support (RDP & TeamViewer)**
-
- ### 🎯 Objective - Provide remote troubleshooting support using:
-
-- **Remote Desktop Protocol (RDP)** for internal domain-joined machines  
-- **TeamViewer** for internet-based or external connections  
----
-## 🔐 Remote Desktop Protocol (RDP) – IT Support Access
+## 🔴 Remote Desktop Protocol (RDP) – IT Support Access
 
 ### Objective
 Provide secure remote support from the IT technician workstation (`CL-WIN11-01`) to a domain-joined client (e.g., `ITClient01.corp.aclab.tech`).
@@ -60,7 +53,7 @@ Provide secure remote support from the IT technician workstation (`CL-WIN11-01`)
 
 ---
 
-### 🔧 Prerequisites for RDP Access
+### 🔴 Prerequisites for RDP Access
 
 - ✅ **Enable Remote Desktop** on the target system:  
   `System Properties > Remote > Allow remote connections`
