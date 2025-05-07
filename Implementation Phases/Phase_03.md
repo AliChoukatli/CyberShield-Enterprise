@@ -59,7 +59,7 @@ Create a domain security group for IT support staff to manage RDP permissions ce
 
 ---
 
-## ✅ Step 3 – Configure RDP Access on Client Machine (CL-WIN01)
+## ✅ Step 3 –  Configure RDP Permissions on Target Machine (CL-WIN11-02)
 
 ### 🎯 Objective
 
