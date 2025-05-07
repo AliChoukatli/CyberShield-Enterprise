@@ -133,16 +133,14 @@ Validate that `SRV-DC01` can connect to `CL-WIN01` using the domain account `ali
 3. Click **Show Options**  
 4. In the **Username** field, enter:  
 corp.aclab.tech\ali.choukatli
+![RDP-Before](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_before.png)
 
-5. Click **Connect**  
-6. Enter the password when prompted  
-7. A successful RDP session confirms that access is working
+6. Click **Connect**  
+7. Enter the password when prompted  
+8. A successful RDP session confirms that access is working
 
-📸 **Screenshot to capture:**  
-- Remote Desktop Connection window with correct FQDN and username  
-- Active desktop session after login
+![RDP-After](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP-After.png)
 
----
 
 ---
 
