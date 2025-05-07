@@ -42,6 +42,16 @@
 This section simulates a professional Remote Desktop setup where IT support personnel can securely access user workstations using domain-based group permissions.
 
 ---
+### 🛡️ Notes
+
+- Ensure **Remote Desktop is enabled** on ITClient01:
+Settings > System > Remote Desktop > Enable Remote Desktop
+
+![Enable-RDP](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_enable.png)
+
+- Verify that the firewall allows RDP (TCP 3389)
+- Membership in `Remote Desktop Users` does not grant **admin privileges**, only remote session rights.
+
 
 ### ✅ Part 1 – Active Directory Preparation (Domain Controller)
 
@@ -57,12 +67,11 @@ Create a dedicated group for IT support staff and assign relevant users. This gr
 
 2. **Add members to the group**:
    - Example user: `ali.chou`
+  
+![RDP_group](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_groupe.png)
 
 #### ✅ Outcome:
 The group `IT-Support-RDP` contains the IT staff who will be granted RDP access across selected domain-joined machines.
-
-🖼️ **Screenshot to take**:
-- ADUC showing the `IT-Support-RDP` group with members (e.g., `ali.chou`)
 
 ---
 
