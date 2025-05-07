@@ -65,6 +65,39 @@ New-ADGroup -Name "IT-Support-RDP" -SamAccountName "IT-Support-RDP" -GroupCatego
  ```
   Add-ADGroupMember -Identity "IT-Support-RDP" -Members "ali.chou"
    ```
+### ✅ Grant Remote Desktop Access to IT-Support-RDP Group (Client-Side)
+
+This step simulates how a company would allow IT support staff to remotely access user devices by assigning a domain group to the local "Remote Desktop Users" group.
+
+#### 🖥️ Target Machine: ITClient01  
+#### 👤 Domain Group: corp.aclab.tech\IT-Support-RDP
+
+---
+
+### 🅰️ Method 1 – Graphical (Computer Management)
+
+1. Log in to **ITClient01** with administrative rights
+2. Press `Windows + R`, type `compmgmt.msc`, and press Enter
+3. Navigate to:
+4. Double-click **Remote Desktop Users**
+5. Click **Add...**
+6. In the object name field, type:
+typoe : corp.aclab.tech\IT-Support-RDP
+
+7. Click **Check Names** to validate, then click **OK**
+
+🖼️ **Screenshot to take**: Remote Desktop Users group window showing `corp.aclab.tech\IT-Support-RDP` added.
+
+---
+
+### 🅱️ Method 2 – PowerShell (optional)
+
+Run this command in an **elevated PowerShell** window on ITClient01:
+
+```powershell
+Add-LocalGroupMember -Group "Remote Desktop Users" -Member "corp.aclab.tech\IT-Support-RDP"
+```
+🖼️ Screenshot to take: PowerShell showing success (no error) after running the command.
 
 ### Steps
 1. On `CL-WIN11-01`, open **Remote Desktop Connection**
