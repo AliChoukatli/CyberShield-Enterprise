@@ -31,11 +31,14 @@ Assist users who are locked out or need password resets using Active Directory U
 1. Open **Active Directory Users and Computers**
 2. Locate the target user account
 3. Right-click > **Reset Password**
+   
+![Reset-Password](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/reset-password.png)
+   
 4. Enter the new password and confirm it
 5. Check **Unlock account** if applicable
 6. Click **OK** to apply
 
-![Reset-Password](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/reset-password.png)
+
 
 
 ## ✅ Step 2 – Prepare Active Directory Group for RDP Access
