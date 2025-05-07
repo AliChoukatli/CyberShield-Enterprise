@@ -98,6 +98,9 @@ Configure Remote Desktop settings and test access from a support machine.
 1. Log in to `CL-WIN11-01`
 2. Go to **System Properties > Remote** tab
 3. Enable **Allow remote connections to this computer**
+
+![Enable-RDP](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_enable.png)
+
 4. *(Optional)* Disable NLA for compatibility
 5. Apply changes
 
