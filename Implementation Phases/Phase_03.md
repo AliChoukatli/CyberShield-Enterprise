@@ -66,8 +66,7 @@ Create a dedicated group for IT support staff and assign relevant users. This gr
   
 ![RDP_group](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_groupe.png)
 
-#### ✅ Outcome:
-The group `IT-Support-RDP` contains the IT staff who will be granted RDP access across selected domain-joined machines.
+#### ✅ The group `IT-Support-RDP` contains the IT staff (ali.choukatli) who will be granted RDP access across selected domain-joined machines.
 
 ---
 
