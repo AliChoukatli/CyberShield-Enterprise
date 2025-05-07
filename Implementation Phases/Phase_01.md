@@ -151,11 +151,12 @@ Instructions
 6. Autorize DHCP to Active Directory
 7. Put your score
    
-   ![DHCP_Scope](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/DHCP_Scope.png)
+![DHCP_Scope](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/DHCP_Scope.png)
 
 8. Configure DHCP -> Yes i want to cofngure these option now
 9. add a Gateaway (if you have one)
 10. now you go to dhcp pool and you can see the score
+    
 ![DHCP_Pool](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/dhcp_pool.png)
 
 ## 🔴 Step 8 – Windows 11 Client Machines
