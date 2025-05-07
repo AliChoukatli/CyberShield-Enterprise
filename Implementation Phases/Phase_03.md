@@ -66,17 +66,18 @@ Enable Remote Desktop on `CL-WIN11-02` and verify access settings for the domain
 
 ### 🛠️ Instructions
 
-1. Log in to `CL-WIN11-02` locally or via Hyper-V  
-2. Right-click **This PC** > **Properties**  
-3. Click **Remote desktop settings**  
-- or go to: `Settings > System > Remote Desktop`  
-4. Enable:  
- **Allow remote connections to this computer**
+1. Log in to CL-WIN11-02 as an Administrator.
+
+2. Open Settings (Win + I)
+
+3. Navigate to:
+System > Remote Desktop
+
+4. Toggle ON the switch next to:
+Remote Desktop
 
 ![RDP-Enable](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_enable.png)
  
-6. Click **OK** to apply changes 
-
 ---
 
 ## ✅ Step 4 –  Configure RDP Permissions on Target Machine (CL-WIN11-02)
