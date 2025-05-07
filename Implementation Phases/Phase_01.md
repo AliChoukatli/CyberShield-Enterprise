@@ -134,11 +134,24 @@ Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("127.0.0
 
 ---
 
-Step 7 : install DHCP Server 
+## 🔴 Step 7 : install DHCP Server 
+Instructions
 
+1. In Server Manager, click Add Roles and Features.
+2. Select Role-based or feature-based installation.
+3. Choose your server from the list.
+4. Under Roles, check DHCP Server [Capture DHCP_server]
 
+5. Proceed with the installation.
+[dhcp_complete]
 
-## 🔴 Step 7 – Windows 11 Client Machines
+6. Autorize DHCP to Active Directory
+7. Put your score [dhcp_scope capture]
+8. Configure DHCP -> Yes i want to cofngure these option now
+9. add a Gateaway (if you have one)
+10. now you go to dhcp pool and you can see the score (dhcp_pool Capture)
+
+## 🔴 Step 8 – Windows 11 Client Machines
 
 **🎯 Objective**: Install and prepare Windows 11 machines for later domain joining.
 
@@ -183,7 +196,7 @@ Step 7 : install DHCP Server
 
 ---
 
-## 🔴 Step 8 - Domain Join – Windows 11 Workstation
+## 🔴 Step 9 - Domain Join – Windows 11 Workstation
 
 **Objective:** Integrate the Windows 11 workstation into the `corp.aclab.tech` domain to enable centralized management via Active Directory.
 
@@ -221,7 +234,7 @@ Capture  ADUC view showing the joined computer
 
 ---
 
-## 🧠 Summary **Step 1 - Installation & Domain Join**
+## 🧠 Summary **Phase 1 - Installation & Domain Join**
 
 This phase covers the initial setup of the server and workstation environment in a secure domain-based structure:
 
