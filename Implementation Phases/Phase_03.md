@@ -55,8 +55,12 @@ Provide secure remote support from the IT technician workstation (`CL-WIN11-01`)
         4. Click **Add...**, type: `corp.aclab.tech\jdoe`, validate
     - **PowerShell**:
         ```powershell
-        Add-LocalGroupMember -Group "Remote Desktop Users" -Member "corp.aclab.tech\jdoe"
+        New-ADGroup -Name "IT-Support-RDP" -SamAccountName "IT-Support-RDP" -GroupCategory Security -GroupScope Global -Path "OU=Groups,DC=corp,DC=aclab,DC=tech"
+        
         ```
+        
+          ``` Add-ADGroupMember -Identity "IT-Support-RDP" -Members "ali.chou"
+          ```
 
 ### Steps
 1. On `CL-WIN11-01`, open **Remote Desktop Connection**
