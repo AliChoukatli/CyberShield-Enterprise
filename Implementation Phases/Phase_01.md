@@ -198,7 +198,6 @@ Instructions
 
 ### 📌 Notes:
 - Create **2–3** Windows 11 VMs.
-- **Do not** join them to Azure AD or local domain yet (planned for Phase 3).
 - Enable RDP and optionally install TeamViewer for remote support simulation.
 
 ---
