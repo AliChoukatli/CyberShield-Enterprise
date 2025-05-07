@@ -134,6 +134,10 @@ Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("127.0.0
 
 ---
 
+Step 7 : install DHCP Server 
+
+
+
 ## 🔴 Step 7 – Windows 11 Client Machines
 
 **🎯 Objective**: Install and prepare Windows 11 machines for later domain joining.
