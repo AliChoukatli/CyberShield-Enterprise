@@ -50,22 +50,20 @@ Provide secure remote support from the IT technician workstation (`CL-WIN11-01`)
 ![RDP_enable](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_enable.png)
 
 - ✅ **Create a dedicated AD group: `IT-Support-RDP`**
-
-
   
-- ✅ **Add user (ali.choukatli) to the IT-Support-RDP group:**
+- ✅ **Add user (eg: ali.choukatli) to the IT-Support-RDP group:**
 
 ![RDP_member](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_groupe.png)
 
-```powershell - Create IT-Support_RDP Group 
+#### powershell - Create IT-Support_RDP Group
+``` 
 New-ADGroup -Name "IT-Support-RDP" -SamAccountName "IT-Support-RDP" -GroupCategory Security -GroupScope Global -Path "OU=Groups,DC=corp,DC=aclab,DC=tech"
 
 ```
 
-```powershell - ADD user to the group
+  ```ADD user to the group with PowerShell
   Add-ADGroupMember -Identity "IT-Support-RDP" -Members "ali.chou"
-
-  ```
+   ```
 
 ### Steps
 1. On `CL-WIN11-01`, open **Remote Desktop Connection**
