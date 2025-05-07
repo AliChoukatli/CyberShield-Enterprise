@@ -55,13 +55,14 @@ Provide secure remote support from the IT technician workstation (`CL-WIN11-01`)
 
 ![RDP_member](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_groupe.png)
 
-#### powershell - Create IT-Support_RDP Group
+#### Create IT-Support_RDP Group with Powershell 
 ``` 
 New-ADGroup -Name "IT-Support-RDP" -SamAccountName "IT-Support-RDP" -GroupCategory Security -GroupScope Global -Path "OU=Groups,DC=corp,DC=aclab,DC=tech"
 
 ```
 
-  ```ADD user to the group with PowerShell
+ #### ADD user to the group with PowerShell
+ ```
   Add-ADGroupMember -Identity "IT-Support-RDP" -Members "ali.chou"
    ```
 
