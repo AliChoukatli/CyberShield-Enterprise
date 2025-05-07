@@ -35,14 +35,15 @@ Once done, verify the structure:
 
 ## 🔴 **Step 2 - Creating Users in Active Directory**
 
-Open Server Manager > Tools > Active Directory Users and Computers (ADUC)
+- Open Server Manager > Tools > Active Directory Users and Computers (ADUC)
 
-Navigate to an OU (e.g., IT) > Right-click > New > User
+- Navigate to an OU (e.g., IT) > Right-click > New > User
   
 ![Create_user](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Create_User.png)]
    
-
-Once done, you can see all your users
+- Put the credenitals
+- Choose a password 
+- Once done, you can see all your users
 
 ![IT_Users](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/IT_users.png)
 
