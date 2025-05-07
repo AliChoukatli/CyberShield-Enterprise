@@ -44,7 +44,7 @@ Provide secure remote support from the IT technician workstation (`CL-WIN11-01`)
 
 ### ⚠️ Prerequisites for RDP Access
 
-- ✅ **Enable Remote Desktop** on the target system:**
+- ✅ **Enable Remote Desktop on the target system:**
   `System Properties > Remote > Allow remote connections`
 
 - ✅ **Create a dedicated AD group: `IT-Support-RDP`**
