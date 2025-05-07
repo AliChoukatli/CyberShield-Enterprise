@@ -98,9 +98,70 @@ Open an elevated PowerShell session on **ITClient01** and run:
 ```powershell
 Add-LocalGroupMember -Group "Remote Desktop Users" -Member "corp.aclab.tech\IT-Support-RDP"
 ```
-🖼️ Screenshot to take:
+---
 
-PowerShell window confirming successful execution
+### ✅ Step 3 – Enable and Test Remote Desktop Access
+
+📍 This step demonstrates secure RDP configuration from the support machine `SRV-DC01` to the client `CL-WIN11-01`.
+
+---
+
+#### 🛡️ Enable Remote Desktop on CL-WIN11-01
+
+1. Log in locally or via Hyper-V to `CL-WIN11-01`.
+2. Open:
+System Properties > Remote tab
+3. Check **“Allow remote connections to this computer”**.
+4. (Optional) Uncheck “Allow connections only from computers running Remote Desktop with Network Level Authentication” for compatibility.
+5. Apply and confirm settings.
+
+🖼️ Screenshot: Remote Desktop settings with RDP enabled.
+
+---
+
+#### 👥 Assign RDP Permissions via Group
+
+1. Open **Computer Management** on `CL-WIN11-01`.
+2. Go to: System Tools > Local Users and Groups > Groups
+3. Double-click **Remote Desktop Users**.
+4. Click **Add…**
+5. Enter:
+corp.aclab.tech\IT-Support-RDP
+
+6. Validate and confirm.
+
+🖼️ Screenshot: "Remote Desktop Users" group showing `corp.aclab.tech\IT-Support-RDP` added.
+
+✅ This simulates domain group-based access control as done in real enterprise via GPO.
+
+---
+
+### 🖥️ Step 4 – Test RDP from SRV-DC01
+
+#### 🔹 From SRV-DC01, launch Remote Desktop Connection:
+
+1. Open `mstsc.exe`
+2. In **Computer**, enter:
+CL-WIN11-01.corp.aclab.tech
+3. Click “Show Options”
+4. Under **Username**, enter:
+   corp.aclab.tech\ali.choukatli
+
+🖼️ Screenshot: Remote Desktop Connection window filled with target hostname and username (before clicking Connect).
+
+---
+
+#### 🔹 Authenticate and Access
+
+1. Click **Connect**
+2. Enter the password for `ali.chou` when prompted
+3. Wait for the remote session to open
+
+🖼️ Screenshot: Windows 11 desktop of `CL-WIN11-01` accessed remotely, with RDP banner visible.
+
+✅ This demonstrates successful IT support access using Active Directory and group-based remote control permissions.
+
+
 
 ---
 
