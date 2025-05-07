@@ -93,6 +93,7 @@ Add-LocalGroupMember -Group "Remote Desktop Users" -Member "corp.aclab.tech\IT-S
 
 
 ---
+## ✅ Step 4 – Enable and Test RDP on CL-WIN01
 
 ### 🎯 Objective  
 Enable Remote Desktop on `CL-WIN01` and verify access settings for the domain group.
@@ -126,7 +127,6 @@ Validate that `SRV-DC01` can connect to `CL-WIN01` using the domain account `ali
 
 1. On `SRV-DC01`, press `Windows + R`, type `mstsc`, and hit **Enter**  
 2. In the **Computer** field, enter:  
-
 ---
 
 ## ✅ Step 6 – Remote Support with TeamViewer
