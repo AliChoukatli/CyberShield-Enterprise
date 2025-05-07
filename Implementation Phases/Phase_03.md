@@ -117,9 +117,14 @@ Validate remote access via RDP using domain credentials.
 
 1. On `SRV-DC01`, open **Remote Desktop Connection** (`mstsc.exe`)
 2. Enter: `CL-WIN11-01.corp.aclab.tech`
+
+![RDP-Before](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_before.png)
+
 3. Click **Show Options**
 4. Username: `corp.aclab.tech\ali.choukatli`
 5. Click **Connect**, enter password
+
+![RDP-After](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP-After.png)
 
 🖼️ Screenshot: RDP login and successful session
 
