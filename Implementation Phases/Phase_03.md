@@ -127,7 +127,23 @@ Validate that `SRV-DC01` can connect to `CL-WIN01` using the domain account `ali
 ### 🛠️ Instructions
 
 1. On `SRV-DC01`, press `Windows + R`, type `mstsc`, and hit **Enter**  
-2. In the **Computer** field, enter:  
+2. In the **Computer** field, enter:
+   CL-WIN01.corp.aclab.tech
+
+3. Click **Show Options**  
+4. In the **Username** field, enter:  
+corp.aclab.tech\ali.choukatli
+
+5. Click **Connect**  
+6. Enter the password when prompted  
+7. A successful RDP session confirms that access is working
+
+📸 **Screenshot to capture:**  
+- Remote Desktop Connection window with correct FQDN and username  
+- Active desktop session after login
+
+---
+
 ---
 
 ## ✅ Step 6 – Remote Support with TeamViewer
