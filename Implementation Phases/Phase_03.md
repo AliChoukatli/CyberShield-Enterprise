@@ -42,18 +42,7 @@
 ### Objective
 Provide secure remote support from the IT technician workstation (`CL-WIN11-01`) to a domain-joined client (e.g., `ITClient01.corp.aclab.tech`).
 
-### Steps
-1. On `CL-WIN11-01`, open **Remote Desktop Connection**
-2. Enter the target hostname: `ITClient01.corp.aclab.tech`
-3. Click **Connect**
-4. Enter domain credentials (e.g., `corp.aclab.tech\jdoe`)
-5. Session opens with full desktop control
-
-🖼️ **Screenshot**: Active RDP session from `CL-WIN11-01` to `ITClient01`
-
----
-
-### 🔴 Prerequisites for RDP Access
+### ⚠️ Prerequisites for RDP Access
 
 - ✅ **Enable Remote Desktop** on the target system:  
   `System Properties > Remote > Allow remote connections`
@@ -68,6 +57,19 @@ Provide secure remote support from the IT technician workstation (`CL-WIN11-01`)
         ```powershell
         Add-LocalGroupMember -Group "Remote Desktop Users" -Member "corp.aclab.tech\jdoe"
         ```
+
+### Steps
+1. On `CL-WIN11-01`, open **Remote Desktop Connection**
+2. Enter the target hostname: `ITClient01.corp.aclab.tech`
+3. Click **Connect**
+4. Enter domain credentials (e.g., `corp.aclab.tech\jdoe`)
+5. Session opens with full desktop control
+
+🖼️ **Screenshot**: Active RDP session from `CL-WIN11-01` to `ITClient01`
+
+---
+
+
 
 🖼️ **Screenshot**: User `jdoe` added to Remote Desktop Users group
 
