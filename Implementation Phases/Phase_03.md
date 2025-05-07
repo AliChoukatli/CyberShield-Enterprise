@@ -91,14 +91,14 @@ Add-LocalGroupMember -Group "Remote Desktop Users" -Member "corp.aclab.tech\IT-S
 
 
 ---
-## ✅ Step 4 – Enable and Test RDP on CL-WIN01
+## ✅ Step 4 – Enable Remote Desktop on CL-WIN11-02
 
 ### 🎯 Objective  
-Enable Remote Desktop on `CL-WIN01` and verify access settings for the domain group.
+Enable Remote Desktop on `CL-WIN11-02` and verify access settings for the domain group.
 
 ### 🛠️ Instructions
 
-1. Log in to `CL-WIN01` locally or via Hyper-V  
+1. Log in to `CL-WIN11-02` locally or via Hyper-V  
 2. Right-click **This PC** > **Properties**  
 3. Click **Remote desktop settings**  
 - or go to: `Settings > System > Remote Desktop`  
