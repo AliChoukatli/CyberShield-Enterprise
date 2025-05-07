@@ -35,7 +35,7 @@ Assist users who are locked out or need password resets using Active Directory U
 5. Check **Unlock account** if applicable
 6. Click **OK** to apply
 
-🖼️ Screenshot: ADUC with Reset Password and Unlock Account options
+![Reset-Password](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/reset-password.png)
 
 ---
 
@@ -53,7 +53,7 @@ Create a domain security group for IT support staff to manage RDP permissions ce
    * Type: Security
 3. Add support team users to the group (e.g., `ali.choukatli`)
 
-🖼️ Screenshot: Group `IT-Support-RDP` with member added
+![RDP-Member](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_groupe.png)
 
 ---
 
@@ -80,7 +80,7 @@ Run the following as Administrator:
 Add-LocalGroupMember -Group "Remote Desktop Users" -Member "corp.aclab.tech\IT-Support-RDP"
 ```
 
-🖼️ Screenshot: IT-Support-RDP added to Remote Desktop Users
+![RDP-Member](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_member.png)
 
 ---
 
