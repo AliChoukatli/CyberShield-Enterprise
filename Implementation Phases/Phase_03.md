@@ -37,82 +37,68 @@
  6. OK
 ---
 
-## 🔴 Remote Desktop Protocol (RDP) – IT Support Access
+## 🖥️ Remote Desktop Access Configuration – Enterprise-Style (RDP)
 
-### Objective
-Provide secure remote support from the IT technician workstation (`CL-WIN11-01`) to a domain-joined client (e.g., `ITClient01.corp.aclab.tech`).
-
-### ⚠️ Prerequisites for RDP Access
-
-- ✅ **Enable Remote Desktop on the target system:**
-  `System Properties > Remote > Allow remote connections`
-
-![RDP_enable](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_enable.png)
-
-- ✅ **Create a dedicated AD group: `IT-Support-RDP`**
-  
-- ✅ **Add user (eg: ali.choukatli) to the IT-Support-RDP group:**
-
-![RDP_member](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_groupe.png)
-
-#### Create IT-Support_RDP Group with Powershell 
-``` 
-New-ADGroup -Name "IT-Support-RDP" -SamAccountName "IT-Support-RDP" -GroupCategory Security -GroupScope Global -Path "OU=Groups,DC=corp,DC=aclab,DC=tech"
-
-```
-
- #### ADD user to the group with PowerShell
- ```
-  Add-ADGroupMember -Identity "IT-Support-RDP" -Members "ali.chou"
-   ```
-### ✅ Grant Remote Desktop Access to IT-Support-RDP Group (Client-Side)
-
-This step simulates how a company would allow IT support staff to remotely access user devices by assigning a domain group to the local "Remote Desktop Users" group.
-
-#### 🖥️ Target Machine: ITClient01  
-#### 👤 Domain Group: corp.aclab.tech\IT-Support-RDP
+This section simulates a professional Remote Desktop setup where IT support personnel can securely access user workstations using domain-based group permissions.
 
 ---
 
-### 🅰️ Method 1 – Graphical (Computer Management)
+### ✅ Part 1 – Active Directory Preparation (Domain Controller)
 
-1. Log in to **ITClient01** with administrative rights
-2. Press `Windows + R`, type `compmgmt.msc`, and press Enter
+#### 🎯 Objective:
+Create a dedicated group for IT support staff and assign relevant users. This group will later be granted remote access rights on workstations.
+
+#### 🛠️ Steps:
+
+1. **Create a new security group** in Active Directory:
+   - Name: `IT-Support-RDP`
+   - Scope: Global
+   - Type: Security
+
+2. **Add members to the group**:
+   - Example user: `ali.chou`
+
+#### ✅ Outcome:
+The group `IT-Support-RDP` contains the IT staff who will be granted RDP access across selected domain-joined machines.
+
+🖼️ **Screenshot to take**:
+- ADUC showing the `IT-Support-RDP` group with members (e.g., `ali.chou`)
+
+---
+
+### ✅ Part 2 – Client Machine Configuration (ITClient01)
+
+#### 🎯 Objective:
+Grant the `IT-Support-RDP` domain group the ability to initiate Remote Desktop connections to the local machine `ITClient01`.
+
+#### 🛠️ Method A – Graphical (Computer Management):
+
+1. Log in to **ITClient01** with local or domain administrator rights.
+2. Open **Computer Management**:
+   - Press `Windows + R` → type `compmgmt.msc` → press **Enter**
 3. Navigate to:
-4. Double-click **Remote Desktop Users**
+System Tools > Local Users and Groups > Groups
+4. Double-click on **Remote Desktop Users**
 5. Click **Add...**
-6. In the object name field, type:
-typoe : corp.aclab.tech\IT-Support-RDP
+6. In the object name field, enter:
+ corp.aclab.tech\IT-Support-RDP
+7. Click **Check Names** → then **OK**
 
-7. Click **Check Names** to validate, then click **OK**
-
-🖼️ **Screenshot to take**: Remote Desktop Users group window showing `corp.aclab.tech\IT-Support-RDP` added.
+🖼️ **Screenshot to take**:
+- `Remote Desktop Users` group window showing `corp.aclab.tech\IT-Support-RDP` listed.
 
 ---
 
-### 🅱️ Method 2 – PowerShell (optional)
+#### 🛠️ Method B – PowerShell (alternative):
 
-Run this command in an **elevated PowerShell** window on ITClient01:
+Open an elevated PowerShell session on **ITClient01** and run:
 
 ```powershell
 Add-LocalGroupMember -Group "Remote Desktop Users" -Member "corp.aclab.tech\IT-Support-RDP"
 ```
-🖼️ Screenshot to take: PowerShell showing success (no error) after running the command.
+🖼️ Screenshot to take:
 
-### Steps
-1. On `CL-WIN11-01`, open **Remote Desktop Connection**
-2. Enter the target hostname: `ITClient01.corp.aclab.tech`
-3. Click **Connect**
-4. Enter domain credentials (e.g., `corp.aclab.tech\jdoe`)
-5. Session opens with full desktop control
-
-🖼️ **Screenshot**: Active RDP session from `CL-WIN11-01` to `ITClient01`
-
----
-
-
-
-🖼️ **Screenshot**: User `jdoe` added to Remote Desktop Users group
+PowerShell window confirming successful execution
 
 ---
 
