@@ -63,11 +63,11 @@ Create a domain security group for IT support staff to manage RDP permissions ce
 
 ### 🎯 Objective
 
-Grant the `IT-Support-RDP` group Remote Desktop rights on the domain-joined client `CL-WIN01`.
+Grant the `IT-Support-RDP` group Remote Desktop rights on the domain-joined client `CL-WIN11-02`.
 
 ### 🛠️ Method A – Graphical (Computer Management)
 
-1. Log in to `CL-WIN01` as a **local administrator** or **domain admin**  
+1. Log in to `CL-WIN11-02` as a **local administrator** or **domain admin**  
 2. Press `Windows + R`, type `compmgmt.msc`, and hit **Enter**  
 3. Navigate to:  System Tools > Local Users and Groups > Groups
 4. Double-click on **Remote Desktop Users**  
@@ -111,14 +111,14 @@ Enable Remote Desktop on `CL-WIN01` and verify access settings for the domain gr
 
 ---
 
-## ✅ Step 5 – Initiate RDP Session from SRV-DC01
+## ✅ Step 5 – Initiate RDP Session from CL-WIN11-01
 
 ### 🎯 Objective  
-Validate that `SRV-DC01` can connect to `CL-WIN01` using the domain account `ali.choukatli`.
+Verify remote access works using domain credentials from the support workstation.
 
 ### 🛠️ Instructions
 
-1. On `SRV-DC01`, press `Windows + R`, type `mstsc`, and hit **Enter**  
+1. On `CL-WIN11-01`, press `Windows + R`, type `mstsc`, and hit **Enter**  
 2. In the **Computer** field, enter:
    CL-WIN01.corp.aclab.tech
 
