@@ -37,7 +37,6 @@ Assist users who are locked out or need password resets using Active Directory U
 
 ![Reset-Password](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/reset-password.png)
 
----
 
 ## ✅ Step 2 – Prepare Active Directory Group for RDP Access
 
