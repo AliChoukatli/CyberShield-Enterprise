@@ -69,21 +69,7 @@ Disable the account before deleting to avoid accidental data loss.
 ![* Disable account dialog](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Disable_acc.png)
 
 
-## 🔴 **Step 4 - Delete an Organizational Unit (OU)**
-
-1. In ADUC, go to **View** > enable **Advanced Features**
-
-![Advanced Features](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Adv_feature.png)
-   
-2. Right-click the OU → **Properties** → **Object tab**  
-3. Uncheck **Protect object from accidental deletion** > OK
-   
-![Protect](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/protect.png)
-   
-4. Right-click OU > **Delete**
-
-
-## 🔴 **Step 5 - Managing Groups and Permissions**
+## 🔴 **Step 4 - Managing Groups and Permissions**
 
 ### 🔧 **Create AD Security Groups:**
 
@@ -107,7 +93,18 @@ Disable the account before deleting to avoid accidental data loss.
 
 ![IT-member](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/IT-member.png)
 
+## 🔴 **Delete an Organizational Unit (OU)**
 
+1. In ADUC, go to **View** > enable **Advanced Features**
+
+![Advanced Features](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Adv_feature.png)
+   
+2. Right-click the OU → **Properties** → **Object tab**  
+3. Uncheck **Protect object from accidental deletion** > OK
+   
+![Protect](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/protect.png)
+   
+4. Right-click OU > **Delete**
 
 ## 📁 **Share a folder : Create & Share an IT Support Folder on Windows Server**
 
