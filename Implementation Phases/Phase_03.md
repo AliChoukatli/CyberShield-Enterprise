@@ -70,8 +70,6 @@ Grant the `IT-Support-RDP` group Remote Desktop rights on the domain-joined clie
 1. Log in to `CL-WIN01` as a **local administrator** or **domain admin**  
 2. Press `Windows + R`, type `compmgmt.msc`, and hit **Enter**  
 3. Navigate to:  System Tools > Local Users and Groups > Groups
-
-
 4. Double-click on **Remote Desktop Users**  
 5. Click **Add...**, then enter:  
 corp.aclab.tech\IT-Support-RDP
@@ -105,9 +103,12 @@ Enable Remote Desktop on `CL-WIN01` and verify access settings for the domain gr
 3. Click **Remote desktop settings**  
 - or go to: `Settings > System > Remote Desktop`  
 4. Enable:  
-✅ **Allow remote connections to this computer**  
+ **Allow remote connections to this computer**
+
+![RDP-Enable](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_enable.png)
+
 5. *(Optional)* Disable for compatibility:  
-❌ **Allow connections only from computers using Network Level Authentication (NLA)**  
+ **Allow connections only from computers using Network Level Authentication (NLA)**  
 6. Click **OK** to apply changes  
 7. Open **Computer Management**  
 8. Confirm `corp.aclab.tech\IT-Support-RDP` is present in **Remote Desktop Users**
