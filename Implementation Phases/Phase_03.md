@@ -44,10 +44,10 @@ Provide secure remote support from the IT technician workstation (`CL-WIN11-01`)
 
 ### ⚠️ Prerequisites for RDP Access
 
-- ✅ **Enable Remote Desktop** on the target system:  
+- ✅ **Enable Remote Desktop** on the target system:  **
   `System Properties > Remote > Allow remote connections`
 
-- ✅ 1. Create a dedicated AD group: `IT-Support-RDP`
+- ✅ **Create a dedicated AD group: `IT-Support-RDP`**
 
 ```powershell
 New-ADGroup -Name "IT-Support-RDP" -SamAccountName "IT-Support-RDP" -GroupCategory Security -GroupScope Global -Path "OU=Groups,DC=corp,DC=aclab,DC=tech"
@@ -56,7 +56,7 @@ New-ADGroup -Name "IT-Support-RDP" -SamAccountName "IT-Support-RDP" -GroupCatego
   🖼️ Screenshot: PowerShell output showing the group creation.
 
   
-- ✅ ** Add user (ali.choukatli) to the IT-Support-RDP group:**
+- ✅ **Add user (ali.choukatli) to the IT-Support-RDP group:**
 ```powershell
   Add-ADGroupMember -Identity "IT-Support-RDP" -Members "ali.chou"
 
