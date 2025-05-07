@@ -93,7 +93,7 @@ Disable the account before deleting to avoid accidental data loss.
 
 ![IT-member](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/IT-member.png)
 
-## 🔴 **Delete an Organizational Unit (OU)**
+## ⚠️ **Delete an Organizational Unit (OU)**
 
 1. In ADUC, go to **View** > enable **Advanced Features**
 
