@@ -9,270 +9,211 @@
 
 ---
 
-## 📌 **Overview**
+## 📌 Overview
 
-* Set up support tools (RSAT, PowerShell, Remote Assistance, Event Viewer)
-* Manage tickets and escalate technical issues
-* Network diagnostics: IPConfig, ping, tracert, Netstat, Wireshark (introductory)
-* Provide secure and tracked user support
+This phase simulates professional IT support practices in a small enterprise, covering remote assistance, user account management, network diagnostics, and software deployment.
+
+* Install and configure support tools (RSAT, PowerShell, Remote Access)
+* Resolve user account issues via Active Directory
+* Secure Remote Desktop Protocol (RDP) setup using domain groups
+* Remote support via TeamViewer as an alternative
+* Network connectivity diagnostics and troubleshooting
+* Automate Microsoft 365 deployment via PowerShell
 
 ---
 
-## 🔴 **Reset Passwords & Unlock Accounts**
+## ✅ Step 1 – Reset User Passwords & Unlock Accounts
 
 ### 🎯 Objective
 
 Assist users who are locked out or need password resets using Active Directory Users and Computers (ADUC).
 
 1. Open **Active Directory Users and Computers**
-2. Locate the target user
+2. Locate the target user account
 3. Right-click > **Reset Password**
-
-![Reset-passwd](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/reset-password.png)
-
-4. Enter the new password
+4. Enter the new password and confirm it
 5. Check **Unlock account** if applicable
-6. Click **OK**
+6. Click **OK** to apply
+
+🖼️ Screenshot: ADUC with Reset Password and Unlock Account options
 
 ---
 
-## 🖥️ Remote Desktop Access Configuration – Enterprise-Style (RDP)
+## ✅ Step 2 – Prepare Active Directory Group for RDP Access
 
-This section simulates a professional Remote Desktop setup where IT support personnel can securely access user workstations using domain-based group permissions.
+### 🎯 Objective
 
-### ⚠️ **Ensure Remote Desktop is enabled on ITClient01:**
+Create a domain security group for IT support staff to manage RDP permissions centrally.
 
-**Settings > System > Remote Desktop > Enable Remote Desktop**
-
-![Enable-RDP](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_enable.png)
-
-* Verify that the firewall allows RDP (TCP 3389)
-* Membership in `Remote Desktop Users` does not grant **admin privileges**, only remote session rights.
-
----
-
-### ✅ Part 1 – Active Directory Preparation (Domain Controller)
-
-#### 🎯 Objective:
-
-Create a dedicated group for IT support staff and assign relevant users. This group will later be granted remote access rights on workstations.
-
-#### 🛠️ Steps:
-
-1. **Create a new security group** in Active Directory:
+1. Open **Active Directory Users and Computers**
+2. Create a new **security group**:
 
    * Name: `IT-Support-RDP`
    * Scope: Global
    * Type: Security
+3. Add support team users to the group (e.g., `ali.choukatli`)
 
-2. **Add members to the group**:
-
-   * Example user: `ali.choukatli`
-
-![RDP\_group](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_groupe.png)
-
-✅ The group `IT-Support-RDP` contains the IT staff (ali.choukatli) who will be granted RDP access across selected domain-joined machines.
+🖼️ Screenshot: Group `IT-Support-RDP` with member added
 
 ---
 
-### ✅ Part 2 – Client Machine Configuration (ITClient01)
+## ✅ Step 3 – Configure RDP Access on Client Machine (ITClient01)
 
-#### 🎯 Objective:
+### 🎯 Objective
 
-Grant the `IT-Support-RDP` domain group the ability to initiate Remote Desktop connections to the local machine `ITClient01`.
+Grant `IT-Support-RDP` group remote desktop rights on the client machine.
 
-#### 🛠️ Method A – Graphical (Computer Management):
+### Method A – Graphical (Computer Management)
 
-1. Log in to **ITClient01** with local or domain administrator rights.
-2. Open **Computer Management**:
+1. Log in to `ITClient01` as Administrator
+2. Open **Computer Management** (`compmgmt.msc`)
+3. Navigate to: `Local Users and Groups > Groups`
+4. Open **Remote Desktop Users** group
+5. Click **Add...**, enter: `corp.aclab.tech\IT-Support-RDP`, click **Check Names**
+6. Confirm and apply
 
-   * Press `Windows + R` → type `compmgmt.msc` → press **Enter**
-3. Navigate to:
+### Method B – PowerShell
 
-   * `System Tools > Local Users and Groups > Groups`
-4. Double-click on **Remote Desktop Users**
-5. Click **Add...**
-6. In the object name field, enter:
-   `corp.aclab.tech\IT-Support-RDP`
-7. Click **Check Names** → then **OK**
-
-![RDP\_member](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_member.png)
-
-#### 🛠️ Method B – PowerShell (Alternative):
-
-Open an elevated PowerShell session on **ITClient01** and run:
+Run the following as Administrator:
 
 ```powershell
 Add-LocalGroupMember -Group "Remote Desktop Users" -Member "corp.aclab.tech\IT-Support-RDP"
 ```
 
----
-
-### ✅ Step 3 – Enable and Test Remote Desktop Access
-
-📍 This step demonstrates secure RDP configuration from the support machine `SRV-DC01` to the client `CL-WIN11-01`.
-
-#### 🛡️ Enable Remote Desktop on CL-WIN11-01
-
-1. Log in locally or via Hyper-V to `CL-WIN11-01`.
-2. Go to:
-
-   * `System Properties > Remote` tab
-3. Check **“Allow remote connections to this computer”**
-4. *(Optional)* Uncheck **“Allow connections only from computers running Remote Desktop with Network Level Authentication”** for compatibility.
-5. Apply and confirm settings.
-
-🖼️ Screenshot: Remote Desktop settings with RDP enabled.
-
-#### 👥 Assign RDP Permissions via Group
-
-1. Open **Computer Management** on `CL-WIN11-01`
-2. Navigate to: `System Tools > Local Users and Groups > Groups`
-3. Double-click **Remote Desktop Users**
-4. Click **Add…**
-5. Enter: `corp.aclab.tech\IT-Support-RDP`
-6. Validate and confirm
-
-🖼️ Screenshot: "Remote Desktop Users" group showing `corp.aclab.tech\IT-Support-RDP` added.
-
-✅ This simulates domain group-based access control as done in real enterprise via GPO.
+🖼️ Screenshot: IT-Support-RDP added to Remote Desktop Users
 
 ---
 
-### 🖥️ Step 4 – Test RDP from SRV-DC01
+## ✅ Step 4 – Enable and Test RDP on CL-WIN11-01
 
-#### 🔹 Launch Remote Desktop Connection:
+### 🎯 Objective
+
+Configure Remote Desktop settings and test access from a support machine.
+
+1. Log in to `CL-WIN11-01`
+2. Go to **System Properties > Remote** tab
+3. Enable **Allow remote connections to this computer**
+4. *(Optional)* Disable NLA for compatibility
+5. Apply changes
+
+🖼️ Screenshot: Remote Desktop settings enabled
+
+6. Add `corp.aclab.tech\IT-Support-RDP` to **Remote Desktop Users** group using Computer Management
+
+🖼️ Screenshot: Group members confirmed
+
+---
+
+## ✅ Step 5 – Initiate RDP Session from SRV-DC01
+
+### 🎯 Objective
+
+Validate remote access via RDP using domain credentials.
 
 1. On `SRV-DC01`, open **Remote Desktop Connection** (`mstsc.exe`)
-2. In **Computer**, enter:
-   `CL-WIN11-01.corp.aclab.tech`
+2. Enter: `CL-WIN11-01.corp.aclab.tech`
 3. Click **Show Options**
-4. Under **Username**, enter:
-   `corp.aclab.tech\ali.choukatli`
+4. Username: `corp.aclab.tech\ali.choukatli`
+5. Click **Connect**, enter password
 
-🖼️ Screenshot: Remote Desktop Connection window before login (with hostname and username filled in).
-
-#### 🔹 Authenticate and Access
-
-1. Click **Connect**
-2. Enter the password when prompted
-3. The session opens with full desktop access
-
-🖼️ Screenshot: Active RDP session on Windows 11 showing the user's desktop.
-
-✅ This demonstrates a working remote access workflow through Active Directory and proper permissions.
+🖼️ Screenshot: RDP login and successful session
 
 ---
 
-## 🔗 TeamViewer – Remote Support Alternative
+## ✅ Step 6 – Remote Support with TeamViewer
 
-### Steps
+### 🎯 Objective
 
-1. Install and launch TeamViewer on both `CL-WIN11-01` and the technician device (e.g., `ITClient01`)
-2. On `ITClient01`, retrieve the **Partner ID** and **Password**
-3. On `CL-WIN11-01`, enter the Partner ID and click **Connect**
-4. Input the password when prompted to initiate the session
+Provide internet-based support when RDP is not available.
 
-🖼️ Screenshot: TeamViewer session or Partner ID dialog
+1. Install TeamViewer on both `CL-WIN11-01` and `ITClient01`
+2. On technician device, enter **Partner ID** of client and connect
+3. Enter provided **password** to initiate session
 
-### ⚠️ Important Notes
+🖼️ Screenshot: TeamViewer Partner ID and session prompt
 
-* Requires internet access on both systems
-* Ensure firewall and antivirus do not block TeamViewer
-* Use Conditional Access and firewall rules to restrict RDP in production
+### ⚠️ Notes
+
+* Ensure internet access is available
+* Allow TeamViewer through firewalls and AV solutions
+* Disable unattended access when not in use
 
 ---
 
-## 🔴 Troubleshoot Network Connectivity
+## ✅ Step 7 – Troubleshoot Network Connectivity
 
-### 🧪 Test 1: Ping Command
-
-1. Open **Command Prompt (CMD)**
-2. Run:
+### Test 1 – Ping
 
 ```bash
 ping 192.168.2.1
 ```
 
-3. Analyze latency and packet response
+🖼️ Screenshot: Ping result
 
-🖼️ Screenshot: Ping test showing successful replies or failures
-
-### 🧪 Test 2: IP Configuration
-
-1. In CMD, run:
+### Test 2 – IP Configuration
 
 ```bash
 ipconfig /all
 ```
 
-2. Review:
-
-   * IPv4 Address
-   * Subnet Mask
-   * Default Gateway
-   * DNS Servers
-
-🖼️ Screenshot: `ipconfig /all` output
+🖼️ Screenshot: Network config output
 
 ---
 
-## 🔴 Check Network Adapter via Device Manager
+## ✅ Step 8 – Inspect Network Adapter Status
 
-🎯 Objective: Ensure the NIC is correctly recognized and functioning.
+### 🎯 Objective
 
-1. Right-click Start > **Device Manager**
+Verify the NIC is functioning properly.
+
+1. Open **Device Manager**
 2. Expand **Network Adapters**
-3. Look for:
+3. Check for issues: warning icons, missing drivers
+4. Right-click > **Update driver** if needed
 
-   * Yellow exclamation marks
-   * Missing drivers or disabled devices
-4. Right-click > **Update driver** if necessary
-
-🖼️ Screenshot: Device Manager with NIC status
+🖼️ Screenshot: NIC status in Device Manager
 
 ---
 
-## 🔴 Deploy Office 365 via PowerShell
+## ✅ Step 9 – Deploy Microsoft 365 via PowerShell
 
-🎯 Objective: Automate Microsoft 365 installation from the support station.
+### 🎯 Objective
+
+Automate Microsoft 365 installation from the support workstation.
 
 1. Open PowerShell as Administrator
-2. Run:
+2. Run deployment script:
 
 ```powershell
 .\DeployOffice365.ps1
 ```
 
-The script will initiate a silent installation.
-
-🖼️ Screenshot: PowerShell showing script execution
+🖼️ Screenshot: Script execution
 
 ### ⚠️ Notes
 
-* Ensure the script path is correct
-* Signed scripts may be required depending on execution policy
-* Installation duration may vary by bandwidth
+* Ensure execution policy allows script
+* Validate script path
+* Internet speed affects duration
 
 ---
 
 ## 🧠 Pro Tips
 
-* Use `tracert 8.8.8.8` for detailed network path analysis
-* Validate firewall/AV exclusions for RDP and TeamViewer
-* Document steps clearly when escalating issues
-* Use automation scripts for repetitive tasks
+* Use `tracert 8.8.8.8` to trace network routes
+* Keep RDP restricted using Conditional Access and firewalls
+* Use PowerShell for repeatable support tasks
+* Maintain documentation for escalated issues
 
 ---
 
-## 🧠 Professional Summary
+## 📌 Professional Summary
 
-This phase simulated real-world Tier 1–2 support workflows:
+Phase 3 simulated real-world Helpdesk & Tier 1/2 support scenarios:
 
-* **Remote Support:** Enabled secure RDP and TeamViewer sessions
-* **Active Directory Tasks:** Resolved lockouts and password issues
-* **Network Troubleshooting:** Verified local and remote connectivity
-* **Software Deployment:** Installed Office 365 using PowerShell automation
-* **Security Best Practices:** Implemented group-based access without full admin rights
+* 🔐 Remote support via RDP and TeamViewer
+* 👤 Active Directory management for user lockouts
+* 🌐 Network diagnostics using CLI tools and Device Manager
+* 💻 Microsoft 365 deployment with PowerShell automation
 
-✅ These are essential skills for aspiring IT Support and Helpdesk professionals in modern enterprise environments.
+✅ These are core operational skills for IT Support & Helpdesk professionals in enterprise settings.
