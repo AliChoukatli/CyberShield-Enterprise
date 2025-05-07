@@ -91,8 +91,6 @@ System Tools > Local Users and Groups > Groups
 ![RDP_member](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_member.png)
 
 
----
-
 #### 🛠️ Method B – PowerShell (alternative):
 
 Open an elevated PowerShell session on **ITClient01** and run:
