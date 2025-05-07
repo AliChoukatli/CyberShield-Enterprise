@@ -223,12 +223,11 @@ Instructions
 3. Enter credentials of a domain account with permission to join (e.g., `Administrator`)
 
 4. Once joined, you'll see a welcome message.
-  
-  Capture - Domain join success confirmation window  
 
-7.    Restart the workstation.
+5.    Restart the workstation.
+Windows login screen with `corp\` domain 
 
-Capture Windows login screen with `corp\` domain option
+![login_domain](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/login-domain.png)
 
 ---
 
