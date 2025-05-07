@@ -89,8 +89,8 @@ System Tools > Local Users and Groups > Groups
  corp.aclab.tech\IT-Support-RDP
 7. Click **Check Names** → then **OK**
 
-🖼️ **Screenshot to take**:
-- `Remote Desktop Users` group window showing `corp.aclab.tech\IT-Support-RDP` listed.
+![RDP_member](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_member.png)
+
 
 ---
 
