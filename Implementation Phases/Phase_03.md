@@ -44,36 +44,58 @@
 - **Remote Desktop Protocol (RDP)** for internal domain-joined machines  
 - **TeamViewer** for internet-based or external connections  
 ---
+## 🔐 Remote Desktop Protocol (RDP) – IT Support Access
 
- ### 🖥️ **Remote Desktop Protocol (RDP)**
+### Objective
+Provide secure remote support from the IT technician workstation (`CL-WIN11-01`) to a domain-joined client (e.g., `ITClient01.corp.aclab.tech`).
 
-1. Open **Remote Desktop Connection**  
-2. Enter target hostname or IP (e.g., `ITClient01.corp.aclab.tech`)  
-3. Click **Connect**  
-4. Enter **domain credentials** when prompted  
+### Steps
+1. On `CL-WIN11-01`, open **Remote Desktop Connection**
+2. Enter the target hostname: `ITClient01.corp.aclab.tech`
+3. Click **Connect**
+4. Enter domain credentials (e.g., `corp.aclab.tech\jdoe`)
+5. Session opens with full desktop control
 
-🖼️ Screenshot: Remote session showing full control of the remote system
-
-  #### ⚠️  Notes
-
-- Ensure **Remote Desktop** is enabled (`System Properties > Remote`)  
-- The user must be part of the **Remote Desktop Users** group  
+🖼️ **Screenshot**: Active RDP session from `CL-WIN11-01` to `ITClient01`
 
 ---
 
- ### 🖥️ **TeamViewer**
+### 🔧 Prerequisites for RDP Access
 
-1. Install and launch **TeamViewer** on both support and target machines  
-2. Retrieve **Partner ID** and **Password** from the target system  
-3. On your support system, enter the **Partner ID** and click **Connect**  
-4. Provide password when prompted  
+- ✅ **Enable Remote Desktop** on the target system:  
+  `System Properties > Remote > Allow remote connections`
+  
+- ✅ **Add user to "Remote Desktop Users" group** on target machine:
+    - **Graphical Method**:
+        1. Open `Computer Management` on `ITClient01`
+        2. Go to `Local Users and Groups > Groups`
+        3. Double-click `Remote Desktop Users`
+        4. Click **Add...**, type: `corp.aclab.tech\jdoe`, validate
+    - **PowerShell**:
+        ```powershell
+        Add-LocalGroupMember -Group "Remote Desktop Users" -Member "corp.aclab.tech\jdoe"
+        ```
 
-🖼️ Screenshot: TeamViewer active session or Partner ID window
+🖼️ **Screenshot**: User `jdoe` added to Remote Desktop Users group
 
-  #### ⚠️  **Notes**
+---
 
-- TeamViewer requires internet on both ends  
-- Ensure firewall rules and antivirus are not blocking the session  
+## 🔗 TeamViewer – Remote Support Alternative
+
+### Steps
+1. Install and launch TeamViewer on both `CL-WIN11-01` and the target (e.g., `ITClient01`)
+2. On `ITClient01`, retrieve the **Partner ID** and **Password**
+3. On `CL-WIN11-01`, enter Partner ID, click **Connect**
+4. Enter password to gain control
+
+🖼️ **Screenshot**: Active TeamViewer session or Partner ID window
+
+---
+
+### ⚠️ Important Notes
+- TeamViewer requires internet access on both systems
+- Ensure firewall and antivirus do not block TeamViewer
+- RDP should be restricted by firewall or Conditional Access in production
 
 ---
 
