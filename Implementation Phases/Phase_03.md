@@ -109,7 +109,7 @@ Configure Remote Desktop settings and test access from a support machine.
 
 ---
 
-## ✅ Step 5 – Initiate RDP Session from SRV-DC01
+## ✅ Step 5 – Initiate RDP Session from WIN11-01
 
 ### 🎯 Objective
 
