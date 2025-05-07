@@ -107,9 +107,7 @@ Enable Remote Desktop on `CL-WIN01` and verify access settings for the domain gr
 
 ![RDP-Enable](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_enable.png)
  
-6. Click **OK** to apply changes  
-7. Open **Computer Management**  
-8. Confirm `corp.aclab.tech\IT-Support-RDP` is present in **Remote Desktop Users**
+6. Click **OK** to apply changes 
 
 ---
 
