@@ -142,23 +142,23 @@ Instructions
 3. Choose your server from the list.
 4. Under Roles, check DHCP Server
    
-![DHCP_Role](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/dhcp_server.png)
+![DHCP_Role](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/dhcp_server.png)
 
 5. Proceed with the installation.
 6. Click on Complete DHCP Configuration
    
-![DHCP_installation](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/dhcp_complete.png)
+![DHCP_installation](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/dhcp_complete.png)
 
 6. Autorize DHCP to Active Directory -> Next
 7. Put your scope ( in my case i chose to put : (192.168.2.100 - 192.168.2.200)
    
-![DHCP_Scope](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/DHCP_Scope.png)
+![DHCP_Scope](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/DHCP_Scope.png)
 
 8. Configure DHCP -> Yes i want to configure these option now
 9. Add a Gateaway address (if you have one)
 10. On the DHCP window, click on DHCP Pool you can see your scope
     
-![DHCP_Pool](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/dhcp_pool.png)
+![DHCP_Pool](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/dhcp_pool.png)
 
 ## 🔴 Step 8 – Windows 11 Client Machines
 
@@ -219,7 +219,7 @@ Instructions
    - Select **Domain**  
    - Enter: `corp.aclab.tech`
   
-![Domain_Join](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/domain_join.png)
+![Domain_Join](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/domain_join.png)
 
 3. Enter credentials of a domain account with permission to join (e.g., `Administrator`)
 
