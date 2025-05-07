@@ -40,12 +40,8 @@
 ## 🖥️ Remote Desktop Access Configuration – Enterprise-Style (RDP)
 
 This section simulates a professional Remote Desktop setup where IT support personnel can securely access user workstations using domain-based group permissions.
-
----
-### 🛡️ Notes
-
-- Ensure **Remote Desktop is enabled** on ITClient01:
-Settings > System > Remote Desktop > Enable Remote Desktop
+### ⚠️ **Ensure Remote Desktop is enabled on ITClient01:**
+**Settings > System > Remote Desktop > Enable Remote Desktop**
 
 ![Enable-RDP](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_enable.png)
 
