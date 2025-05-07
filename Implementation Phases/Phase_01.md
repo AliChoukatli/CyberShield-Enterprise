@@ -188,9 +188,7 @@ Instructions
     ![Preparing PC](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/preparing%20pc.png)
 
 11. Once at the desktop, rename the machine:
-    - **Settings ➔ System ➔ About ➔ Rename this PC** (e.g., `WIN11-01`).
-
-    ![Rename Windows 11 PC](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/rename_win11.png)
+    - **Settings ➔ System ➔ About ➔ Rename this PC** (e.g., `CL-WIN11-01`).
 
 12. Restart the VM to apply the new hostname.
 
