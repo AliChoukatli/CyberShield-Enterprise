@@ -10,6 +10,10 @@ In this phase, we focus on core IT support tasks:
 
 ✅ Performing essential user account operations (reset, unlock, delete)
 
+✅ Apply baseline Group Policy Objects (GPOs) (lock screen, wallpaper, folder redirection)
+
+✅ Enforce password policies (length, complexity, expiration)
+
 ---
 
 ## 🔴 **Step 1 - Create OUs for Each Department**
