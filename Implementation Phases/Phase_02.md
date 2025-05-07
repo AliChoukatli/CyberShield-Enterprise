@@ -146,6 +146,9 @@ C:\SharedFolders\IT
 
 4. Click **Apply** and **OK** to save both sets of permissions.
 
+### On win11, you can access now to the IT folder
+capture
+
 ---
 
 # 🧠 Summary – Phase 2: Domain Integration & User Management
