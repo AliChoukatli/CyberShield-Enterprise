@@ -42,7 +42,7 @@ Navigate to an OU (e.g., IT) > Right-click > New > User
 ![Create_user](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Create_User.png)]
    
 
-Once done
+Once done, you can see all your users
 
 ![IT_Users](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/IT_users.png)
 
