@@ -128,7 +128,7 @@ Validate remote access via RDP using domain credentials.
 
 ![RDP-After](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP-After.png)
 
-🖼️ Screenshot: RDP login and successful session
+
 
 ---
 
