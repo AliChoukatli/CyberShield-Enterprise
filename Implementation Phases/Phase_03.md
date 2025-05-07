@@ -47,7 +47,7 @@ Provide secure remote support from the IT technician workstation (`CL-WIN11-01`)
 - ✅ **Enable Remote Desktop on the target system:**
   `System Properties > Remote > Allow remote connections`
 
-  ![RDP_enable](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_enable.png)
+![RDP_enable](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_enable.png)
 
 - ✅ **Create a dedicated AD group: `IT-Support-RDP`**
 
