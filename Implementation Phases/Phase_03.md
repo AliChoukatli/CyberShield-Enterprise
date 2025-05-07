@@ -59,7 +59,27 @@ Create a domain security group for IT support staff to manage RDP permissions ce
 
 ---
 
-## ✅ Step 3 –  Configure RDP Permissions on Target Machine (CL-WIN11-02)
+## ✅ Step 3 – Enable Remote Desktop on CL-WIN11-02
+
+### 🎯 Objective  
+Enable Remote Desktop on `CL-WIN11-02` and verify access settings for the domain group.
+
+### 🛠️ Instructions
+
+1. Log in to `CL-WIN11-02` locally or via Hyper-V  
+2. Right-click **This PC** > **Properties**  
+3. Click **Remote desktop settings**  
+- or go to: `Settings > System > Remote Desktop`  
+4. Enable:  
+ **Allow remote connections to this computer**
+
+![RDP-Enable](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_enable.png)
+ 
+6. Click **OK** to apply changes 
+
+---
+
+## ✅ Step 4 –  Configure RDP Permissions on Target Machine (CL-WIN11-02)
 
 ### 🎯 Objective
 
@@ -91,23 +111,6 @@ Add-LocalGroupMember -Group "Remote Desktop Users" -Member "corp.aclab.tech\IT-S
 
 
 ---
-## ✅ Step 4 – Enable Remote Desktop on CL-WIN11-02
-
-### 🎯 Objective  
-Enable Remote Desktop on `CL-WIN11-02` and verify access settings for the domain group.
-
-### 🛠️ Instructions
-
-1. Log in to `CL-WIN11-02` locally or via Hyper-V  
-2. Right-click **This PC** > **Properties**  
-3. Click **Remote desktop settings**  
-- or go to: `Settings > System > Remote Desktop`  
-4. Enable:  
- **Allow remote connections to this computer**
-
-![RDP-Enable](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_enable.png)
- 
-6. Click **OK** to apply changes 
 
 ---
 
