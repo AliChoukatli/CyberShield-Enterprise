@@ -140,16 +140,19 @@ Instructions
 1. In Server Manager, click Add Roles and Features.
 2. Select Role-based or feature-based installation.
 3. Choose your server from the list.
-4. Under Roles, check DHCP Server [Capture DHCP_server]
+4. Under Roles, check DHCP Server
+![DHCP_Role](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/dhcp_server.png)
 
-5. Proceed with the installation.
+6. Proceed with the installation.
 [dhcp_complete]
 
-6. Autorize DHCP to Active Directory
-7. Put your score [dhcp_scope capture]
-8. Configure DHCP -> Yes i want to cofngure these option now
-9. add a Gateaway (if you have one)
-10. now you go to dhcp pool and you can see the score (dhcp_pool Capture)
+7. Autorize DHCP to Active Directory
+8. Put your score
+   ![DHCP_Scope](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/DHCP_Scope.png)
+10. Configure DHCP -> Yes i want to cofngure these option now
+11. add a Gateaway (if you have one)
+12. now you go to dhcp pool and you can see the score
+![DHCP_Pool](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/dhcp_pool.png)
 
 ## 🔴 Step 8 – Windows 11 Client Machines
 
@@ -211,6 +214,8 @@ Instructions
    - Click **Change**  
    - Select **Domain**  
    - Enter: `corp.aclab.tech`
+  
+![Domain_Join](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/domain_join.png)
 
 3. Enter credentials of a domain account with permission to join (e.g., `Administrator`)
 
