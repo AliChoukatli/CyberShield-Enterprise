@@ -217,10 +217,10 @@ Instructions
    - Click **Change**  
    - Select **Domain**  
    - Enter: `corp.aclab.tech`
-  
-![Domain_Join](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/join%20domain.png)
 
 3. Enter credentials of a domain account with permission to join (e.g., `Administrator`)
+
+![Domain_Join](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/join%20domain.png)
 
 4. Once joined, you'll see a welcome message.
 
