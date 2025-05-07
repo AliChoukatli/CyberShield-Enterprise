@@ -46,21 +46,28 @@ Provide secure remote support from the IT technician workstation (`CL-WIN11-01`)
 
 - ✅ **Enable Remote Desktop** on the target system:  
   `System Properties > Remote > Allow remote connections`
+
+## 🔐 Remote Desktop – Enterprise-Style Group Access Control
+
+### 🎯 Objective  
+Simulate how enterprise environments grant RDP access using a **dedicated AD group** and **local group membership** (without assigning local admin rights).
+
+---
+
+### ✅ 1. Create a dedicated AD group: `IT-Support-RDP`
+
+```powershell
+New-ADGroup -Name "IT-Support-RDP" -SamAccountName "IT-Support-RDP" -GroupCategory Security -GroupScope Global -Path "OU=Groups,DC=corp,DC=aclab,DC=tech"
+```
+  🖼️ Screenshot: PowerShell output showing the group creation.
+
+
   
-- ✅ **Add user to "Remote Desktop Users" group** on target machine:
-    - **Graphical Method**:
-        1. Open `Computer Management` on `ITClient01`
-        2. Go to `Local Users and Groups > Groups`
-        3. Double-click `Remote Desktop Users`
-        4. Click **Add...**, type: `corp.aclab.tech\jdoe`, validate
-    - **PowerShell**:
-        ```powershell
-        New-ADGroup -Name "IT-Support-RDP" -SamAccountName "IT-Support-RDP" -GroupCategory Security -GroupScope Global -Path "OU=Groups,DC=corp,DC=aclab,DC=tech"
-        
-        ```
-        
-          ``` Add-ADGroupMember -Identity "IT-Support-RDP" -Members "ali.chou"
-          ```
+- ✅ ** Add user (ali.choukatli) to the IT-Support-RDP group:**
+  Add-ADGroupMember -Identity "IT-Support-RDP" -Members "ali.chou"
+🖼️ Screenshot: Confirmation in PowerShell or AD Users and Computers showing ali.chou as a member.
+
+
 
 ### Steps
 1. On `CL-WIN11-01`, open **Remote Desktop Connection**
