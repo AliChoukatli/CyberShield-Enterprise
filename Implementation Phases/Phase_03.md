@@ -103,9 +103,6 @@ Configure Remote Desktop settings and test access from a support machine.
 
 4. *(Optional)* Disable NLA for compatibility
 5. Apply changes
-
-🖼️ Screenshot: Remote Desktop settings enabled
-
 6. Add `corp.aclab.tech\IT-Support-RDP` to **Remote Desktop Users** group using Computer Management
 
 🖼️ Screenshot: Group members confirmed
