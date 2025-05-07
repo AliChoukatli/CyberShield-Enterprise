@@ -177,7 +177,7 @@ Instructions
 6. Choose your region and keyboard layout.
 7. Select **Join Domain Instead** (do not sign in with a Microsoft account).
 
-   ![Join Domain](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/join%20domain.png)
+   ![Join Domain](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/join-domain-instead.png)
 
 8. Create a local user account:
    - Username
