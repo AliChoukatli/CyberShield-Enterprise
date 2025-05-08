@@ -188,7 +188,7 @@ Instructions
     ![Preparing PC](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/preparing%20pc.png)
 
 11. Once at the desktop, rename the machine:
-    - **Settings ➔ System ➔ About ➔ Rename this PC** (e.g., `LTP-HLP`).
+    - **Settings ➔ System ➔ About ➔ Rename this PC** (e.g., `LTP-HLP01`).
 
 12. Restart the VM to apply the new hostname.
 
@@ -210,7 +210,7 @@ Instructions
 
 1. Make sure your dns prerferd is 192.168.2.10 ( Dc ip)
 
-1. On the Windows 11 machine (`Win11-Technician`), go to:  
+1. On the Windows 11 machine (`LTP-HLP01`), go to:  
    `Settings` → `System` → `About` → Click **"Domain or workgroup"** → **Change settings**
 
 2. In the **Computer Name/Domain Changes** window:  
