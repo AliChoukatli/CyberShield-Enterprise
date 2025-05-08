@@ -59,14 +59,14 @@ Create a domain security group for IT support staff to manage RDP permissions ce
 
 ---
 
-## ✅ Step 3 – Enable Remote Desktop on CL-WIN11-02
+## ✅ Step 3 – Enable Remote Desktop on LTP-EMP01
 
 ### 🎯 Objective  
-Enable Remote Desktop on `CL-WIN11-02` and verify access settings for the domain group.
+Enable Remote Desktop on `LTP-EMP01` and verify access settings for the domain group.
 
 ### 🛠️ Instructions
 
-1. Log in to CL-WIN11-02 as an Administrator.
+1. Log in to LTP-EMP01 as an Administrator.
 
 2. Open Settings (Win + I)
 
