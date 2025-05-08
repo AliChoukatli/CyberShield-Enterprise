@@ -138,27 +138,31 @@ corp.aclab.tech\sophia.martinez
 
 ![RDP-After](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP-After.png)
 
-#### **IF you can't connect**
+##### ✅ Remote Desktop Troubleshooting Guide
 
-1. Network Connectivity
-Confirm the target machine is reachable:
-```
+If you are unable to connect to a target machine via Remote Desktop Protocol (RDP), follow this structured checklist to identify and resolve the issue.
+
+---
+
+## 1. 🔌 Network Connectivity
+
+Confirm that the target machine is reachable from the source (e.g., Helpdesk PC or Server):
+
+```powershell
 ping <ComputerName or IP>
 Test-NetConnection -ComputerName <Target> -Port 3389
 ```
-2. Remote Desktop Enabled
-On the target machine (e.g., LTP-EMP01):
-
-Ensure RDP is enabled:
-```
+2. Remote Desktop Enabled (on target machine)
+Ensure RDP is properly enabled:
+```powershell
 Set-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Terminal Server" -Name "fDenyTSConnections" -Value 0
 ```
-Ensure the Remote Desktop firewall rules are enabled:
-```
+Enable required firewall rules:
+```powershell
 Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
 Enable-NetFirewallRule -Name FPS-ICMP4-*
-```
----
+```powershell
+
 
 ## ✅ Step 6 – Remote Support with TeamViewer
 
