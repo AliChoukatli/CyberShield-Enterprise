@@ -84,7 +84,7 @@ Remote Desktop
 
 ### 🎯 Objective
 
-Grant the `IT-Support-RDP` group Remote Desktop rights on the domain-joined client `CL-WIN11-02`.
+Grant the `IT-Support-RDP` group Remote Desktop rights on the domain-joined client `LTP-EMP01`.
 
 ### 🛠️ Method A – Graphical (Computer Management)
 
