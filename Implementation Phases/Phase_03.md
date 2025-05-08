@@ -138,9 +138,9 @@ corp.aclab.tech\sophia.martinez
 
 ![RDP-After](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP-After.png)
 
-##### ✅ If you are unable to connect to a target machine via Remote Desktop Protocol (RDP), follow this structured checklist to identify and resolve the issue.
+---
 
-
+### ✅ **If you are unable to connect to a target machine via Remote Desktop Protocol (RDP), follow this structured checklist to identify and resolve the issue.**
 
 ## 1. 🔌 Check Network Connectivity
 
