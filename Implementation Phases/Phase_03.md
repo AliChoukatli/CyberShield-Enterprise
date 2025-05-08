@@ -140,7 +140,7 @@ corp.aclab.tech\sophia.martinez
 
 ---
 
-### ✅ **If you are unable to connect to a target machine via Remote Desktop Protocol (RDP), follow this structured checklist to identify and resolve the issue.**
+### ✅ **If you are unable to connect to a target machine via Remote Desktop Protocol (RDP)**
 
 ## 1. 🔌 Check Network Connectivity
 
