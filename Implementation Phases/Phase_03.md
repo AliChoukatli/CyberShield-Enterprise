@@ -109,10 +109,6 @@ Run the following as Administrator:
 Add-LocalGroupMember -Group "Remote Desktop Users" -Member "corp.aclab.tech\IT-Support-RDP"
 ```
 
-
-
----
-
 ---
 
 ## ✅ Step 5 – Initiate RDP Session from LTP-HLP01
@@ -159,7 +155,6 @@ Enable required firewall rules:
 ```powershell
 Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
 Enable-NetFirewallRule -Name FPS-ICMP4-*
-```powershell
 ```
 ---
 ## ✅ Step 6 – Remote Support with TeamViewer
