@@ -140,7 +140,7 @@ corp.aclab.tech\sophia.martinez
 
 ---
 
-## ✅ **If you are unable to connect to a target machine via Remote Desktop Protocol (RDP)**
+## 🔴  **If you are unable to connect to a target machine via Remote Desktop Protocol (RDP)**
 
 ### 1. **Check Network Connectivity**
 
@@ -161,7 +161,7 @@ Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
 Enable-NetFirewallRule -Name FPS-ICMP4-*
 ```powershell
 ```
-
+---
 ## ✅ Step 6 – Remote Support with TeamViewer
 
 ### 🎯 Objective
