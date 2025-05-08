@@ -198,7 +198,6 @@ Instructions
 
 ### 📌 Notes:
 - Create **2–3** Windows 11 VMs.
-- Enable RDP and optionally install TeamViewer for remote support simulation.
 
 ---
 
