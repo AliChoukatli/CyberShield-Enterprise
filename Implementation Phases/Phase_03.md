@@ -124,7 +124,7 @@ Verify remote access works using domain credentials from the support workstation
 
 3. Click **Show Options**  
 4. In the **Username** field, enter:  
-corp.aclab.tech\sophia.martinez
+corp.aclab.tech\ali.choukatli
 
 ![RDP-Before](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_before.png)
 
