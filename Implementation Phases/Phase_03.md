@@ -80,7 +80,7 @@ Remote Desktop
  
 ---
 
-## ✅ Step 4 –  Configure RDP Permissions on Target Machine (CL-WIN11-02)
+## ✅ Step 4 –  Configure RDP Permissions on Target Machine (LTP-EMP01)
 
 ### 🎯 Objective
 
@@ -88,7 +88,7 @@ Grant the `IT-Support-RDP` group Remote Desktop rights on the domain-joined clie
 
 ### 🛠️ Method A – Graphical (Computer Management)
 
-1. Log in to `CL-WIN11-02` as a **local administrator** or **domain admin**  
+1. Log in to `LTP-EMP01` as a **local administrator** or **domain admin**  
 2. Press `Windows + R`, type `compmgmt.msc`, and hit **Enter**  
 3. Navigate to:  System Tools > Local Users and Groups > Groups
 4. Double-click on **Remote Desktop Users**  
@@ -115,14 +115,14 @@ Add-LocalGroupMember -Group "Remote Desktop Users" -Member "corp.aclab.tech\IT-S
 
 ---
 
-## ✅ Step 5 – Initiate RDP Session from CL-WIN11-01
+## ✅ Step 5 – Initiate RDP Session from LTP-HLP01
 
 ### 🎯 Objective  
 Verify remote access works using domain credentials from the support workstation.
 
 ### 🛠️ Instructions
 
-1. On `CL-WIN11-01`, press `Windows + R`, type `mstsc`, and hit **Enter**  
+1. On `LTP-HLP01`, press `Windows + R`, type `mstsc`, and hit **Enter**  
 2. In the **Computer** field, enter:
    LTP-EMP01.corp.aclab.tech
 
