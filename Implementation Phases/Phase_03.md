@@ -140,14 +140,24 @@ corp.aclab.tech\sophia.martinez
 
 #### **IF you can't connect**
 
-You need to active Remote Desktop (TCP 3389) and FPS-ICMP4-In (ping)
-
+1. Network Connectivity
+Confirm the target machine is reachable:
 ```
-Enable-NetFirewallRule -Name FPS-ICMP4-*
+ping <ComputerName or IP>
+Test-NetConnection -ComputerName <Target> -Port 3389
+```
+2. Remote Desktop Enabled
+On the target machine (e.g., LTP-EMP01):
+
+Ensure RDP is enabled:
+```
+Set-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Terminal Server" -Name "fDenyTSConnections" -Value 0
+```
+Ensure the Remote Desktop firewall rules are enabled:
+```
 Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
-
+Enable-NetFirewallRule -Name FPS-ICMP4-*
 ```
-
 ---
 
 ## ✅ Step 6 – Remote Support with TeamViewer
