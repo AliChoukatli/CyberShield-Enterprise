@@ -124,11 +124,11 @@ Verify remote access works using domain credentials from the support workstation
 
 1. On `CL-WIN11-01`, press `Windows + R`, type `mstsc`, and hit **Enter**  
 2. In the **Computer** field, enter:
-   CL-WIN11-02.corp.aclab.tech
+   LTP-EMP01.corp.aclab.tech
 
 3. Click **Show Options**  
 4. In the **Username** field, enter:  
-corp.aclab.tech\ali.choukatli
+corp.aclab.tech\sophia.martinez
 
 ![RDP-Before](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_before.png)
 
