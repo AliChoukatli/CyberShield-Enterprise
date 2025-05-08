@@ -138,6 +138,15 @@ corp.aclab.tech\sophia.martinez
 
 ![RDP-After](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP-After.png)
 
+#### **IF you can't connect**
+
+You need to active Remote Desktop (TCP 3389) and FPS-ICMP4-In (ping)
+
+```
+Enable-NetFirewallRule -Name FPS-ICMP4-*
+Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+
+```
 
 ---
 
