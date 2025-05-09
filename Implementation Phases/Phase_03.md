@@ -24,7 +24,7 @@ This phase simulates professional IT support practices in a small enterprise, co
 
 ## **3.1 – Active Directory User Support**
 
-## ✅ Reset User Passwords & Unlock Accounts
+### ✅ Reset User Passwords & Unlock Accounts
 
 ### 🎯 Objective
 
@@ -45,7 +45,7 @@ Steps:
 
 # **3.2 – Remote Support via RDP**
 
-## ✅ **Prepare Active Directory Group for RDP Access**
+### ✅ **Prepare Active Directory Group for RDP Access**
 
 ### 🎯 Objective
 
@@ -63,7 +63,7 @@ Create a domain security group for IT support staff to manage RDP permissions ce
 
 ---
 
-## ✅ **Enable Remote Desktop on LTP-EMP01**
+### ✅ **Enable Remote Desktop on LTP-EMP01**
 
 ### 🎯 Objective  
 Enable Remote Desktop on `LTP-EMP01` and verify access settings for the domain group.
@@ -84,7 +84,7 @@ Remote Desktop
  
 ---
 
-## ✅ **Configure RDP Permissions on Target Machine (LTP-EMP01)**
+### ✅ **Configure RDP Permissions on Target Machine (LTP-EMP01)**
 
 ### 🎯 Objective
 
@@ -115,7 +115,7 @@ Add-LocalGroupMember -Group "Remote Desktop Users" -Member "corp.aclab.tech\IT-S
 
 ---
 
-## ✅ **Initiate RDP Session from LTP-HLP01**
+### ✅ **Initiate RDP Session from LTP-HLP01**
 
 ### 🎯 Objective  
 Verify remote access works using domain credentials from the support workstation.
