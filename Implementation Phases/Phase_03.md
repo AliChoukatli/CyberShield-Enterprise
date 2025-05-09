@@ -223,8 +223,7 @@ Set up TeamViewer on both machines (support and end-user), ensure secure configu
 
 You should now have remote access to the user's desktop.
 
-📸 **Screenshot to take:**  
-   Screenshot of TeamViewer session in progress, showing remote control of LTP-EMP01 from LTP-HLP01.
+![Session-TV](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/session-TV.png)
 
 ---
 
