@@ -159,6 +159,7 @@ Enable required firewall rules:
 ```powershell
 Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
 Enable-NetFirewallRule -Name FPS-ICMP4-*
+netsh advfirewall firewall add rule name="Allow ICMPv4-In" protocol=icmpv4:8,any dir=in action=allow
 ```
 ---
 # 3.3 – TeamViewer Remote Assistance
