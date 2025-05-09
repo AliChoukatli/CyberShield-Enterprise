@@ -161,15 +161,13 @@ Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
 Enable-NetFirewallRule -Name FPS-ICMP4-*
 ```
 ---
-## ✅ Step 6 – TeamViewer Remote Support Setup & Usage
+# 3.3 – TeamViewer Remote Assistance
 
-### 🎯 Objective
+### 🎯 **Objective**
 
 Set up TeamViewer on both machines (support and end-user), ensure secure configuration, and simulate a remote support session from the helpdesk workstation.
 
----
-
-## 🧰 Prerequisites
+### 🧰 **Prerequisites**
 
 - TeamViewer installed on both **LTP-HLP01** (Helpdesk) and **LTP-EMP01** (Employee)
 - Internet connectivity
@@ -178,9 +176,7 @@ Set up TeamViewer on both machines (support and end-user), ensure secure configu
 
 ---
 
-## 🛠️ Step-by-Step Instructions
-
-### ✅ Step 6.1 – Download & Install TeamViewer
+### ✅ **Download & Install TeamViewer**
 
 #### 🔹 On both LTP-HLP01 and LTP-EMP01:
 
@@ -205,7 +201,7 @@ Set up TeamViewer on both machines (support and end-user), ensure secure configu
 
 ---
 
-### ✅ Step 6.2 – Simulate Remote Support from LTP-HLP01
+### ✅ **Simulate Remote Support from LTP-HLP01**
 
 1. On **LTP-EMP01**, ensure TeamViewer is open and note:
    - **Your ID**
@@ -225,7 +221,7 @@ Set up TeamViewer on both machines (support and end-user), ensure secure configu
 
 ---
 
-### ✅ Step 6.3 – End Support Session Securely
+### ✅ **End Support Session Securely**
 
 1. When support is complete, **click the X** in the TeamViewer window to end the session.
 
