@@ -186,12 +186,12 @@ Set up TeamViewer on both machines (support and end-user), ensure secure configu
 
 2. **On LTP-HLP01:**  
    Download the **TeamViewer Full Client** (for providing support).
+   
+![TV-Download](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/Teamviewer_Download.png)
 
 3. **On LTP-EMP01:**  
    Download the **TeamViewer QuickSupport** (for receiving support).
 
-📸 **Screenshot to take:**  
-   Screenshot of the TeamViewer download page on LTP-HLP01, showing the available version.
 
 4. Run the installer and select:
    - Default installation
@@ -212,7 +212,9 @@ Set up TeamViewer on both machines (support and end-user), ensure secure configu
    - Your ID
    - Password
 
-2. On **LTP-HLP01**, under the **Control Remote Computer** section:
+![TV-Download](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/EMP-ID.png)
+
+3. On **LTP-HLP01**, under the **Control Remote Computer** section:
    - Enter the Partner ID from **LTP-EMP01**
    - Ensure **Remote control** is selected
    - Click **Connect**
