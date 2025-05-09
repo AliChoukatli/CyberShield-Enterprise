@@ -22,11 +22,15 @@ This phase simulates professional IT support practices in a small enterprise, co
 
 ---
 
-## ✅ Step 1 – Reset User Passwords & Unlock Accounts
+## **3.1 – Active Directory User Support**
+
+## ✅ Reset User Passwords & Unlock Accounts
 
 ### 🎯 Objective
 
 Assist users who are locked out or need password resets using Active Directory Users and Computers (ADUC).
+
+Steps:
 
 1. Open **Active Directory Users and Computers**
 2. Locate the target user account
@@ -39,9 +43,9 @@ Assist users who are locked out or need password resets using Active Directory U
 6. Click **OK** to apply
 
 
+# **3.2 – Remote Support via RDP**
 
-
-## ✅ Step 2 – Prepare Active Directory Group for RDP Access
+## ✅ **Prepare Active Directory Group for RDP Access**
 
 ### 🎯 Objective
 
@@ -59,7 +63,7 @@ Create a domain security group for IT support staff to manage RDP permissions ce
 
 ---
 
-## ✅ Step 3 – Enable Remote Desktop on LTP-EMP01
+## ✅ **Enable Remote Desktop on LTP-EMP01**
 
 ### 🎯 Objective  
 Enable Remote Desktop on `LTP-EMP01` and verify access settings for the domain group.
@@ -80,7 +84,7 @@ Remote Desktop
  
 ---
 
-## ✅ Step 4 –  Configure RDP Permissions on Target Machine (LTP-EMP01)
+## ✅ **Configure RDP Permissions on Target Machine (LTP-EMP01)**
 
 ### 🎯 Objective
 
@@ -111,7 +115,7 @@ Add-LocalGroupMember -Group "Remote Desktop Users" -Member "corp.aclab.tech\IT-S
 
 ---
 
-## ✅ Step 5 – Initiate RDP Session from LTP-HLP01
+## ✅ **Initiate RDP Session from LTP-HLP01**
 
 ### 🎯 Objective  
 Verify remote access works using domain credentials from the support workstation.
