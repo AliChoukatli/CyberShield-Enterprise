@@ -236,8 +236,6 @@ You should now have remote access to the user's desktop.
    - Change their temporary password (optional)
    - Revoke access if using permanent ID or unattended access.
 
----
-
 ### 🔐 **Security Tips**  
 
 🔹 Ensure proper security measures are followed to protect the session and user credentials.
