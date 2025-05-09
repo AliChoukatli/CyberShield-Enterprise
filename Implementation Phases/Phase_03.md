@@ -177,68 +177,67 @@ Set up TeamViewer on both machines (support and end-user), ensure secure configu
 
 ---
 
-### ✅ **Download & Install TeamViewer**
+# Download & Install TeamViewer
 
-#### 🔹 On both LTP-HLP01 and LTP-EMP01:
+🔹 **On both LTP-HLP01 and LTP-EMP01:**
 
 1. Open a browser and navigate to:  
    [https://www.teamviewer.com/en/download](https://www.teamviewer.com/en/download)
 
-2. Download the **TeamViewer Full Client**
+2. **On LTP-HLP01:**  
+   Download the **TeamViewer Full Client** (for providing support).
 
-   📸 **Screenshot to take:**  
-   *Screenshot of the TeamViewer download page on LTP-HLP01, showing the available version.*
+3. **On LTP-EMP01:**  
+   Download the **TeamViewer QuickSupport** (for receiving support).
 
-3. Run the installer and select:
-   - **Default installation**
-   - **Personal / Non-commercial use** (or custom for simulation)
+📸 **Screenshot to take:**  
+   Screenshot of the TeamViewer download page on LTP-HLP01, showing the available version.
 
-4. Click **Accept – finish** and wait for the installation to complete.
+4. Run the installer and select:
+   - Default installation
+   - Personal / Non-commercial use (or custom for simulation)
+   
+5. Click **Accept** – finish and wait for the installation to complete.
 
-5. Launch TeamViewer on both machines.
+6. Launch TeamViewer on both machines.
 
-   📸 **Screenshot to take:**  
-   *Screenshot of the TeamViewer interface on LTP-EMP01, showing "Your ID" and "Password". (Blur password if publishing.)*
+📸 **Screenshot to take:**  
+   Screenshot of the TeamViewer interface on LTP-EMP01, showing "Your ID" and "Password". (Blur password if publishing.)
 
 ---
 
-### ✅ **Simulate Remote Support from LTP-HLP01**
+## Simulate Remote Support from LTP-HLP01
 
 1. On **LTP-EMP01**, ensure TeamViewer is open and note:
-   - **Your ID**
-   - **Password**
+   - Your ID
+   - Password
 
 2. On **LTP-HLP01**, under the **Control Remote Computer** section:
-   - Enter the Partner ID from LTP-EMP01
+   - Enter the Partner ID from **LTP-EMP01**
    - Ensure **Remote control** is selected
    - Click **Connect**
+   - When prompted, enter the **Password** from **LTP-EMP01**.
 
-3. When prompted, enter the **Password** from LTP-EMP01.
+You should now have remote access to the user's desktop.
 
-4. You should now have remote access to the user's desktop.
-
-   📸 **Screenshot to take:**  
-   *Screenshot of TeamViewer session in progress, showing remote control of LTP-EMP01 from LTP-HLP01.*
+📸 **Screenshot to take:**  
+   Screenshot of TeamViewer session in progress, showing remote control of LTP-EMP01 from LTP-HLP01.
 
 ---
 
-### ✅ **End Support Session Securely**
+## End Support Session Securely
 
-1. When support is complete, **click the X** in the TeamViewer window to end the session.
+1. When support is complete, click the **X** in the TeamViewer window to end the session.
 
 2. On **LTP-EMP01**, advise the user to:
    - Close TeamViewer if not needed
    - Change their temporary password (optional)
-   - Revoke access if using permanent ID or unattended access
+   - Revoke access if using permanent ID or unattended access.
 
 ---
 
-## 🔐 Security Tips
-
-- Never enable **unattended access** without explicit user approval.
-- Always confirm user identity before accepting remote control.
-- If used in a real environment, configure **Allowlist/Blocklist** under TeamViewer > Settings > Security.
-
+🔐 **Security Tips**  
+Ensure proper security measures are followed to protect the session and user credentials.
 ---
 
 
