@@ -242,7 +242,7 @@ Set up TeamViewer on both machines (support and end-user), ensure secure configu
 
 
 
-## ✅ Step 7 – Troubleshoot Network Connectivity
+# ✅ Troubleshoot Network Connectivity
 
 ### Test 1 – Ping
 
@@ -262,7 +262,7 @@ ipconfig /all
 
 ---
 
-## ✅ Step 8 – Inspect Network Adapter Status
+## ✅ Inspect Network Adapter Status
 
 ### 🎯 Objective
 
@@ -277,7 +277,7 @@ Verify the NIC is functioning properly.
 
 ---
 
-## ✅ Step 9 – Deploy Microsoft 365 via PowerShell
+## ✅ Deploy Microsoft 365 via PowerShell
 
 ### 🎯 Objective
 
