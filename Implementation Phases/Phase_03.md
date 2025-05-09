@@ -201,9 +201,6 @@ Set up TeamViewer on both machines (support and end-user), ensure secure configu
 
 6. Launch TeamViewer on both machines.
 
-📸 **Screenshot to take:**  
-   Screenshot of the TeamViewer interface on LTP-EMP01, showing "Your ID" and "Password". (Blur password if publishing.)
-
 ---
 
 ## Simulate Remote Support from LTP-HLP01
