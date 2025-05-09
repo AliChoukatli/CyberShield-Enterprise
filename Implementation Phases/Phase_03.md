@@ -238,7 +238,7 @@ You should now have remote access to the user's desktop.
 
 ---
 
-🔐 **Security Tips**  
+### 🔐 **Security Tips**  
 Ensure proper security measures are followed to protect the session and user credentials.
 ---
 
