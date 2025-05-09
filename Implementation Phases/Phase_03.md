@@ -215,6 +215,7 @@ Set up TeamViewer on both machines (support and end-user), ensure secure configu
 ![TV-Download](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/EMP-ID.png)
 
 3. On **LTP-HLP01**, under the **Control Remote Computer** section:
+ Note: You have to Sign-in
    - Enter the Partner ID from **LTP-EMP01**
    - Ensure **Remote control** is selected
    - Click **Connect**
