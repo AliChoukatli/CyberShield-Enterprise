@@ -20,7 +20,7 @@ This phase simulates professional IT support practices in a small enterprise, co
 
 ## ✅ **3.1 – Active Directory User Support**
 
-### Reset User Passwords & Unlock Accounts
+### 📌 Reset User Passwords & Unlock Accounts
 
 #### 🎯 Objective :*Assist users who are locked out or need password resets using Active Directory Users and Computers (ADUC).*
 
@@ -39,7 +39,7 @@ Steps:
 
 ## ✅ **3.2 – Remote Support via RDP**
 
-### **Prepare Active Directory Group for RDP Access**
+### 📌 **Prepare Active Directory Group for RDP Access**
 
 #### 🎯 Objective : *Create a domain security group for IT support staff to manage RDP permissions centrally.*
 
@@ -55,7 +55,7 @@ Steps:
 
 ---
 
-### **Enable Remote Desktop on LTP-EMP01**
+### 📌 **Enable Remote Desktop on LTP-EMP01**
 
 #### 🎯 Objective : *Enable Remote Desktop on `LTP-EMP01` and verify access settings for the domain group.*
 
@@ -75,7 +75,7 @@ Remote Desktop
  
 ---
 
-### **Configure RDP Permissions on Target Machine (LTP-EMP01)**
+### 📌 **Configure RDP Permissions on Target Machine (LTP-EMP01)**
 
 ### 🎯 *Objective : Grant the `IT-Support-RDP` group Remote Desktop rights on the domain-joined client `LTP-EMP01`.*
 
@@ -123,7 +123,7 @@ foreach ($computer in $computers) {
 ```
 ---
 
-###  **Initiate RDP Session from LTP-HLP01**
+###  📌 **Initiate RDP Session from LTP-HLP01**
 
 #### 🎯 Objective: *Verify remote access works using domain credentials from the support workstation.*
 
@@ -250,7 +250,7 @@ You should now have remote access to the user's desktop.
 
 ## ✅ 3.4 Troubleshoot Network Connectivity
 
-  ## 🔧 Test 1 – Ping
+  ## 📌 Test 1 – Ping
 
 #### 🎯 *Objective : Verify basic network connectivity by pinging the default gateway and the domain controller (DC).*
 
@@ -285,7 +285,7 @@ If the ping fails:
   ```bash
   ipconfig
 --- 
-## 🔧 Test 2 – IP Configuration
+## 📌 Test 2 – IP Configuration
 
 ```bash
 ipconfig /all
