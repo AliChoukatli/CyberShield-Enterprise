@@ -225,7 +225,6 @@ You should now have remote access to the user's desktop.
 
 ![Session-TV](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/session-TV.png)
 
----
 
 ## 🔴 **End Support Session Securely**
 
@@ -237,10 +236,9 @@ You should now have remote access to the user's desktop.
    - Revoke access if using permanent ID or unattended access.
 
 ### 🔐 **Security Tips**  
-
 🔹 Ensure proper security measures are followed to protect the session and user credentials.
----
 
+---
 
 
 # ✅ Troubleshoot Network Connectivity
