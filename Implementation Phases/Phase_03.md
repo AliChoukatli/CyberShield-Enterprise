@@ -177,6 +177,7 @@ Enable-NetFirewallRule -Name FPS-ICMP4-*
 netsh advfirewall firewall add rule name="Allow ICMPv4-In" protocol=icmpv4:8,any dir=in action=allow
 ```
 🛡️ Security Best Practice: Avoid exposing RDP to the internet. Use VPN or restrict RDP access via firewall rules (IP allowlist).
+
 ---
 ## 3.3 – TeamViewer Remote Assistance
 
