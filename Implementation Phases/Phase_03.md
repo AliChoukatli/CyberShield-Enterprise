@@ -372,7 +372,7 @@ You can monitor the installation progress via the PowerShell window or by checki
 - Ensure that PowerShell Execution Policy allows the script to run. If necessary, you can set the policy to allow script execution using the following command:
 
 ```powershell
-Set-ExecutionPolicy RemoteSigned
+Set-ExecutionPolicy RemoteSigned -Scope Process
    ```
 
 Validate the path to both setup.exe and config.xml before running the script to ensure they are correct.
