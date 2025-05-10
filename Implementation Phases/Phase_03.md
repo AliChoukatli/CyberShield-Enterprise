@@ -312,11 +312,11 @@ ipconfig /all
 ## **Step 1 – Uninstall Existing Office Installation (if applicable)**
 
 ### ✅ Recommended Method: Microsoft Support and Recovery Assistant (SaRA)
-- Run this script :
+1. Run this script :
 ```powershell
 iwr https://raw.githubusercontent.com/Admonstrator/msoffice-removal-tool/main/msoffice-removal-tool.ps1 -OutFile msoffice-removal-tool.ps1; powershell -ExecutionPolicy Bypass .\msoffice-removal-tool.ps1
 ```
-Restart the machine after uninstallation.
+2. Restart the machine after uninstallation.
 
 ---
 
@@ -328,12 +328,13 @@ Restart the machine after uninstallation.
 2. Extract the content to:  
    `C:\ODT`
 
-This folder should contain:
-C:\ODT
-│ setup.exe
-│ config.xml
-
-
+3.- This folder should contain:
+  
+    C:\ODT
+   
+      │ setup.exe
+      
+      │ config.xml
 ---
 
 ## **Step 3 – Customize `config.xml`**
