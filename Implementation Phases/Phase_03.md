@@ -301,7 +301,7 @@ ipconfig /all
      *(If no warning icons are present, it means no issues have been detected.)*
   4. If needed, right-click the network adapter and select **Update Driver** to check for driver updates.
 
-![update-driver](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/update-driver.png)
+ ![update-driver](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/update-driver.png)
 ---
 ## ✅ Deploy Microsoft 365 via PowerShell
 
