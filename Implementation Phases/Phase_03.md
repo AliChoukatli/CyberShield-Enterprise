@@ -245,10 +245,12 @@ You should now have remote access to the user's desktop.
 
 # ✅ Troubleshoot Network Connectivity
 
-## 🔧 Test 1 – Ping
+  ## 🔧 Test 1 – Ping
 
 ### 🎯 Objective
 Verify basic network connectivity by pinging the default gateway and another host on the same LAN.
+
+All commands below are executed from the employee workstation: **LTP-EMP01**.
 
 ---
 
@@ -257,7 +259,7 @@ Verify basic network connectivity by pinging the default gateway and another hos
 - **Command:**
   ```bash
   ping 192.168.2.1
-  ```
+
 - Purpose: Ensure the device can reach the router (gateway) and confirm LAN connectivity is functional.
 
 ▶️ Test B – Ping a Local Host (LTP-HLP01)
