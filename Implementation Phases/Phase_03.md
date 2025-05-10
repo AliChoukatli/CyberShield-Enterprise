@@ -7,8 +7,6 @@
 * RDP and/or TeamViewer installed and properly configured
 * Internet access for TeamViewer functionality
 
----
-
 ## 📌 Overview
 
 This phase simulates professional IT support practices in a small enterprise, covering remote assistance, user account management, network diagnostics, and software deployment.
@@ -19,8 +17,6 @@ This phase simulates professional IT support practices in a small enterprise, co
 * Remote support via TeamViewer as an alternative
 * Network connectivity diagnostics and troubleshooting
 * Automate Microsoft 365 deployment via PowerShell
-
----
 
 # **3.1 – Active Directory User Support**
 
