@@ -227,7 +227,7 @@ You should now have remote access to the user's desktop.
 
 ---
 
-## End Support Session Securely
+## 🔴 **End Support Session Securely**
 
 1. When support is complete, click the **X** in the TeamViewer window to end the session.
 
