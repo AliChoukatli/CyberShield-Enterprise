@@ -114,7 +114,6 @@ Add-LocalGroupMember -Group "Remote Desktop Users" -Member "corp.aclab.tech\IT-S
 ```
 #### 📌 **PowerShell Script to Add "IT-Support-RDP" to "Remote Desktop Users" on Multiple Machines**
 
-This script allows you to add the **"IT-Support-RDP"** group to the **"Remote Desktop Users"** group on multiple remote machines. It is designed to run remotely using PowerShell Remoting.
 ```powershell
 # List of computers
 $computers = @("Machine1", "Machine2", "Machine3")
