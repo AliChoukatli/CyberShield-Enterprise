@@ -18,9 +18,9 @@ This phase simulates professional IT support practices in a small enterprise, co
 * Network connectivity diagnostics and troubleshooting
 * Automate Microsoft 365 deployment via PowerShell
 
-## **3.1 – Active Directory User Support**
+## ✅ **3.1 – Active Directory User Support**
 
-### ✅ Reset User Passwords & Unlock Accounts
+### Reset User Passwords & Unlock Accounts
 
 #### 🎯 Objective :*Assist users who are locked out or need password resets using Active Directory Users and Computers (ADUC).*
 
@@ -37,9 +37,9 @@ Steps:
 6. Click **OK** to apply
 
 
-## **3.2 – Remote Support via RDP**
+## ✅ **3.2 – Remote Support via RDP**
 
-### ✅ **Prepare Active Directory Group for RDP Access**
+### **Prepare Active Directory Group for RDP Access**
 
 #### 🎯 Objective : *Create a domain security group for IT support staff to manage RDP permissions centrally.*
 
@@ -55,7 +55,7 @@ Steps:
 
 ---
 
-### ✅ **Enable Remote Desktop on LTP-EMP01**
+### **Enable Remote Desktop on LTP-EMP01**
 
 #### 🎯 Objective : *Enable Remote Desktop on `LTP-EMP01` and verify access settings for the domain group.*
 
@@ -75,7 +75,7 @@ Remote Desktop
  
 ---
 
-### ✅ **Configure RDP Permissions on Target Machine (LTP-EMP01)**
+### **Configure RDP Permissions on Target Machine (LTP-EMP01)**
 
 ### 🎯 *Objective : Grant the `IT-Support-RDP` group Remote Desktop rights on the domain-joined client `LTP-EMP01`.*
 
@@ -123,7 +123,7 @@ foreach ($computer in $computers) {
 ```
 ---
 
-### ✅ **Initiate RDP Session from LTP-HLP01**
+###  **Initiate RDP Session from LTP-HLP01**
 
 #### 🎯 Objective: *Verify remote access works using domain credentials from the support workstation.*
 
@@ -171,7 +171,7 @@ netsh advfirewall firewall add rule name="Allow ICMPv4-In" protocol=icmpv4:8,any
 🛡️ Security Best Practice: Avoid exposing RDP to the internet. Use VPN or restrict RDP access via firewall rules (IP allowlist).
 
 ---
-## 3.3 – TeamViewer Remote Assistance
+## ✅ 3.3 – TeamViewer Remote Assistance
 
 #### 🎯 Objective : *Set up TeamViewer on both machines (support and end-user), ensure secure configuration, and simulate a remote support session from the helpdesk workstation.*
 
@@ -248,7 +248,7 @@ You should now have remote access to the user's desktop.
 ---
 
 
-## 3.4 Troubleshoot Network Connectivity
+## ✅ 3.4 Troubleshoot Network Connectivity
 
   ## 🔧 Test 1 – Ping
 
@@ -294,7 +294,7 @@ ipconfig /all
 
 ---
 
-## 3.5 **Inspect Network Adapter Status**  
+## ✅ 3.5 **Inspect Network Adapter Status**  
 
 #### 🎯 Objective: *Verify if the network adapter is functioning properly.*
 
@@ -316,7 +316,7 @@ ipconfig /all
 
 #### Step 1 – Uninstall Existing Office Installation (if applicable)
 
-### ✅ Recommended Method: Microsoft Support and Recovery Assistant (SaRA)
+### Recommended Method: Microsoft Support and Recovery Assistant (SaRA)
 1. Run this script :
 ```powershell
 iwr https://raw.githubusercontent.com/Admonstrator/msoffice-removal-tool/main/msoffice-removal-tool.ps1 -OutFile msoffice-removal-tool.ps1; powershell -ExecutionPolicy Bypass .\msoffice-removal-tool.ps1
