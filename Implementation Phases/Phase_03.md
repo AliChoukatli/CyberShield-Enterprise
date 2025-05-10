@@ -161,12 +161,11 @@ Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
 Enable-NetFirewallRule -Name FPS-ICMP4-*
 netsh advfirewall firewall add rule name="Allow ICMPv4-In" protocol=icmpv4:8,any dir=in action=allow
 ```
+🛡️ Security Best Practice: Avoid exposing RDP to the internet. Use VPN or restrict RDP access via firewall rules (IP allowlist).
 ---
 # 3.3 – TeamViewer Remote Assistance
 
-### 🎯 **Objective**
-
-Set up TeamViewer on both machines (support and end-user), ensure secure configuration, and simulate a remote support session from the helpdesk workstation.
+### 🎯 **Objective** : Set up TeamViewer on both machines (support and end-user), ensure secure configuration, and simulate a remote support session from the helpdesk workstation.
 
 ### 🧰 **Prerequisites**
 
@@ -305,9 +304,7 @@ ipconfig /all
 
 # 📦 Office 365 Deployment via ODT – Lab Documentation
 
-## 🎯 Objective
-
-- Install Microsoft 365 Apps (Office 365) and Visio Pro using Office Deployment Tool (ODT) with a custom PowerShell script.
+## 🎯 Objective : Install Microsoft 365 Apps (Office 365) and Visio Pro using Office Deployment Tool (ODT) with a custom PowerShell script.
 
 ## **Step 1 – Uninstall Existing Office Installation (if applicable)**
 
@@ -403,4 +400,10 @@ Phase 3 simulated real-world Helpdesk & Tier 1/2 support scenarios:
 * 🌐 Network diagnostics using CLI tools and Device Manager
 * 💻 Microsoft 365 deployment with PowerShell automation
 
-✅ These are core operational skills for IT Support & Helpdesk professionals in enterprise settings.
+### 📝 Skills & Tools Practiced
+- Active Directory (password reset, unlock)
+- RDP setup & permission troubleshooting
+- TeamViewer configuration and usage
+- Network diagnostics (ping, ipconfig, Test-NetConnection)
+- PowerShell for firewall and RDP config
+
