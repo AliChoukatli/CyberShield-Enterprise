@@ -18,11 +18,11 @@ This phase simulates professional IT support practices in a small enterprise, co
 * Network connectivity diagnostics and troubleshooting
 * Automate Microsoft 365 deployment via PowerShell
 
-# **3.1 – Active Directory User Support**
+## **3.1 – Active Directory User Support**
 
 ### ✅ Reset User Passwords & Unlock Accounts
 
-### 🎯 Objective
+#### 🎯 Objective
 
 Assist users who are locked out or need password resets using Active Directory Users and Computers (ADUC).
 
@@ -39,11 +39,11 @@ Steps:
 6. Click **OK** to apply
 
 
-# **3.2 – Remote Support via RDP**
+## **3.2 – Remote Support via RDP**
 
 ### ✅ **Prepare Active Directory Group for RDP Access**
 
-### 🎯 Objective
+#### 🎯 Objective
 
 Create a domain security group for IT support staff to manage RDP permissions centrally.
 
@@ -61,7 +61,7 @@ Create a domain security group for IT support staff to manage RDP permissions ce
 
 ### ✅ **Enable Remote Desktop on LTP-EMP01**
 
-### 🎯 Objective  
+#### 🎯 Objective  
 Enable Remote Desktop on `LTP-EMP01` and verify access settings for the domain group.
 
 ### 🛠️ Instructions
@@ -178,20 +178,20 @@ netsh advfirewall firewall add rule name="Allow ICMPv4-In" protocol=icmpv4:8,any
 ```
 🛡️ Security Best Practice: Avoid exposing RDP to the internet. Use VPN or restrict RDP access via firewall rules (IP allowlist).
 ---
-# 3.3 – TeamViewer Remote Assistance
+## 3.3 – TeamViewer Remote Assistance
 
-### 🎯 **Objective** : Set up TeamViewer on both machines (support and end-user), ensure secure configuration, and simulate a remote support session from the helpdesk workstation.
+#### 🎯 **Objective** : Set up TeamViewer on both machines (support and end-user), ensure secure configuration, and simulate a remote support session from the helpdesk workstation.
 
-### 🧰 **Prerequisites**
+#### 🧰 **Prerequisites**
 
 - TeamViewer installed on both **LTP-HLP01** (Helpdesk) and **LTP-EMP01** (Employee)
 - Internet connectivity
-- TeamViewer account (optional for basic usage)
+- TeamViewer account
 - TeamViewer QuickSupport or Full Client on the employee machine
 
 ---
 
-# Download & Install TeamViewer
+#### Download & Install TeamViewer
 
 🔹 **On both LTP-HLP01 and LTP-EMP01:**
 
@@ -217,7 +217,7 @@ netsh advfirewall firewall add rule name="Allow ICMPv4-In" protocol=icmpv4:8,any
 
 ---
 
-## Simulate Remote Support from LTP-HLP01
+#### Simulate Remote Support from LTP-HLP01
 
 1. On **LTP-EMP01**, ensure TeamViewer is open and note:
    - Your ID
@@ -240,7 +240,7 @@ You should now have remote access to the user's desktop.
 ![Session-TV](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/session-TV.png)
 
 
-## 🔴**End Support Session Securely**
+#### 🔴**End Support Session Securely**
 
 1. When support is complete, click the **X** in the TeamViewer window to end the session.
 
@@ -255,18 +255,18 @@ You should now have remote access to the user's desktop.
 ---
 
 
-# ✅ Troubleshoot Network Connectivity
+## 3.4 Troubleshoot Network Connectivity
 
   ## 🔧 Test 1 – Ping
 
-### 🎯 Objective
+#### 🎯 Objective
 Verify basic network connectivity by pinging the default gateway and the domain controller (DC).
 
 All commands below are executed from the employee workstation: **LTP-EMP01**.
 
 ---
 
-### ▶️ Test A – Ping the Default Gateway
+#### ▶️ Test A – Ping the Default Gateway
 - Purpose: Ensure the device can reach the router (gateway) and confirm LAN connectivity is functional.
 - **Command:**
 ```bash
@@ -274,7 +274,7 @@ ping 192.168.2.1
 ```
 ![Ping-Router](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/Ping-Router.png)
   
-▶️ Test B – Ping the Domain Controller (DC)
+#### ▶️ Test B – Ping the Domain Controller (DC)
 - Purpose: Confirm that LTP-EMP01 can reach the Active Directory server (DC) over the network.
 - **Command:**
 ```bash
@@ -283,7 +283,7 @@ ping 192.168.2.10
 ![Ping-DC](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/Ping-DC.png)
 
 
-### 🧠 Notes:
+#### 🧠 Notes:
 If the ping fails:
 
 - ✅ Ensure the domain controller is powered on and properly connected to the network.
@@ -293,7 +293,7 @@ If the ping fails:
   ```bash
   ipconfig
 --- 
-### 🔧 Test 2 – IP Configuration
+## 🔧 Test 2 – IP Configuration
 
 ```bash
 ipconfig /all
@@ -302,7 +302,7 @@ ipconfig /all
 
 ---
 
-### ✅ **Inspect Network Adapter Status**  
+## **Inspect Network Adapter Status**  
 **Objective:** Verify if the network adapter is functioning properly.
 
 - **Why is this important?**  
