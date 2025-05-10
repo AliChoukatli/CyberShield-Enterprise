@@ -263,7 +263,7 @@ ping 192.168.2.1
 ![Ping-Router](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/Ping-Router.png)
   
 ▶️ Test B – Ping the Domain Controller (DC)
-- Purpose: Test communication from LTP-EMP01 to the IT support machine (LTP-HLP01) within the local network.
+- Purpose: Confirm that LTP-EMP01 can reach the Active Directory server (DC) over the network.
 - **Command:**
 ```bash
 ping 192.168.2.10
