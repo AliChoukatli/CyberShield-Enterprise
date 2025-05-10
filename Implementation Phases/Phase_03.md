@@ -112,6 +112,8 @@ Run the following as Administrator:
 ```powershell
 Add-LocalGroupMember -Group "Remote Desktop Users" -Member "corp.aclab.tech\IT-Support-RDP"
 ```
+---
+
 #### 📌 **PowerShell Script to Add "IT-Support-RDP" to "Remote Desktop Users" on Multiple Machines**
 
 ```powershell
