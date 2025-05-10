@@ -77,7 +77,7 @@ Remote Desktop
 
 ### 📌 **Configure RDP Permissions on Target Machine (LTP-EMP01)**
 
-### 🎯 *Objective : Grant the `IT-Support-RDP` group Remote Desktop rights on the domain-joined client `LTP-EMP01`.*
+#### 🎯 *Objective : Grant the `IT-Support-RDP` group Remote Desktop rights on the domain-joined client `LTP-EMP01`.*
 
 ### 🛠️ Method A – Graphical (Computer Management)
 
