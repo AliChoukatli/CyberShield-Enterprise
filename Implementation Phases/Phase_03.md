@@ -303,26 +303,26 @@ ipconfig /all
 
  ![update-driver](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/update-driver.png)
 ---
-## ✅ Deploy Microsoft 365 via PowerShell
+### ✅ **Deploy Microsoft 365 via PowerShell**  
+**Objective:** Automate the installation of Microsoft 365 from the support workstation.
 
-### 🎯 Objective
+- **Procedure:**
+  1. Open **PowerShell** as **Administrator**.
+  2. Run the deployment script using the following command:
+     ```powershell
+     .\DeployOffice365.ps1
+     ```
+  3. Monitor the script execution to ensure it completes without errors.
 
-Automate Microsoft 365 installation from the support workstation.
+- **🖼️ Screenshot to take:** Script execution output in PowerShell.
 
-1. Open PowerShell as Administrator
-2. Run deployment script:
-
-```powershell
-.\DeployOffice365.ps1
-```
-
-🖼️ Screenshot: Script execution
-
-### ⚠️ Notes
-
-* Ensure execution policy allows script
-* Validate script path
-* Internet speed affects duration
+- **⚠️ Notes:**
+  - Ensure that the **execution policy** allows the script to run. If necessary, adjust it by using the command:
+    ```powershell
+    Set-ExecutionPolicy RemoteSigned -Scope Process
+    ```
+  - **Validate the script path** to ensure that the `DeployOffice365.ps1` script is located in the correct directory.
+  - **Internet speed** may affect the installation duration, so ensure a stable and fast connection to avoid delays.
 
 ---
 
