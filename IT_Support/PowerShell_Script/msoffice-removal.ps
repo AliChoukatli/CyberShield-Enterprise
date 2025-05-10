@@ -1,36 +1,3 @@
-#requires -version 2
-#//Requires -RunAsAdministrator
-
-<#
-.SYNOPSIS
-  This script downloads the current Office uninstaller from Microsoft and tries to remove all Office installations on this computer.
-  By choosing -InstallOffice365 it tries to install Office 365 as well.
-.DESCRIPTION
-  By choosing -InstallOffice365 it tries to install Office 365 as well.
-.PARAMETER InstallOffice365
-  Will install Office365 after removal.
-.PARAMETER SuppressReboot
-  Will supress the reboot after finishing the script.
-.PARAMETER UseSetupRemoval
-  Will use the setup method to remove current Office installations instead of SaRA.
-.PARAMETER Force
-  Skip user-input.
-.PARAMETER RunAgain
-  Skip Stage validation and runs the whole script again.
-.PARAMETER SecondsToReboot
-  Seconds before the computer will reboot.
-.INPUTS
-  None
-.OUTPUTS
-  Just output on screen
-.NOTES
-  Version:        1.2
-  Author:         Singleton Factory GmbH
-  Creation Date:  2023-01-18
-  Purpose/Change: New company, new luck
-.EXAMPLE
-  .\msoffice-removal-tool.ps1 -InstallOffice365 -SupressReboot
-#>
 
 #---------------------------------------------------------[Initialisations]--------------------------------------------------------
 Param (
