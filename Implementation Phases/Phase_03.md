@@ -269,17 +269,17 @@ ping 192.168.2.10
 ![Ping-DC](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/Ping-DC.png)
 
 
-🧠 Notes:
+### 🧠 Notes:
 If the ping fails:
 
-Ensure the destination machine is powered on and connected.
-
-Check if ICMP traffic is allowed (Windows Firewall settings).
-
-Confirm both machines are on the same subnet.
-
-Use ipconfig on LTP-HLP01 to verify its actual IP address
-### Test 2 – IP Configuration
+- ✅ Ensure the domain controller is powered on and properly connected to the network.
+- 🔥 Check if ICMP traffic is allowed through Windows Firewall on the target machine.
+- 🧩 Confirm that both the source (LTP-EMP01) and target (DC) machines are on the same subnet.
+- 🛠️ Use the following command on the domain controller to verify its IP address:
+  ```bash
+  ipconfig
+--- 
+### 🔧 Test 2 – IP Configuration
 
 ```bash
 ipconfig /all
