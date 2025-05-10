@@ -303,26 +303,61 @@ ipconfig /all
 
  ![update-driver](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/update-driver.png)
 ---
-### ✅ **Deploy Microsoft 365 via PowerShell**  
-**Objective:** Automate the installation of Microsoft 365 from the support workstation.
+# Microsoft 365 Deployment via PowerShell
 
-- **Procedure:**
-  1. Open **PowerShell** as **Administrator**.
-  2. Run the deployment script using the following command:
+## Objective:
+Automate the installation of Microsoft 365 from the support workstation (LTP-HLP01).
+
+---
+
+### **Step 1: Download Office Deployment Tool (ODT)**
+
+1. **Download the Office Deployment Tool** from the official Microsoft website:
+   - [Download Office Deployment Tool](https://www.microsoft.com/en-us/download/details.aspx?id=49117)
+
+2. **Extract the downloaded ZIP file** to a directory of your choice (e.g., `C:\ODT`).
+
+---
+
+### **Step 2: Prepare the Deployment Script**
+
+1. **Create the PowerShell script (`DeployOffice365.ps1`)**:
+   - Open **Notepad** or any text editor of your choice.
+   - Paste the following script:
+
      ```powershell
-     .\DeployOffice365.ps1
+     # DeployOffice365.ps1 - Example script for deploying Office 365
+     $OfficeDeploymentPath = "C:\ODT"          # Path where ODT is extracted
+     $SetupFilePath = "$OfficeDeploymentPath\setup.exe"
+     $ConfigFilePath = "$OfficeDeploymentPath\config.xml"   # Path to the config.xml file
+
+     # Run the Office Deployment Tool setup
+     Start-Process -FilePath $SetupFilePath -ArgumentList "/configure $ConfigFilePath" -Wait
      ```
-  3. Monitor the script execution to ensure it completes without errors.
 
-- **🖼️ Screenshot to take:** Script execution output in PowerShell.
+2. **Save the script** as `DeployOffice365.ps1` in an accessible directory (e.g., `C:\Scripts`).
 
-- **⚠️ Notes:**
-  - Ensure that the **execution policy** allows the script to run. If necessary, adjust it by using the command:
-    ```powershell
-    Set-ExecutionPolicy RemoteSigned -Scope Process
-    ```
-  - **Validate the script path** to ensure that the `DeployOffice365.ps1` script is located in the correct directory.
-  - **Internet speed** may affect the installation duration, so ensure a stable and fast connection to avoid delays.
+---
+
+### **Step 3: Customize the `config.xml` File**
+
+- The **`config.xml`** file is used to specify the installation settings for Microsoft 365, including:
+  - The products to install (e.g., Word, Excel, PowerPoint).
+  - The language for installation.
+  - The installation options (e.g., 32-bit or 64-bit).
+  
+- You can customize the `config.xml` by referring to the Microsoft documentation for the Office Deployment Tool, or you can use the default configuration provided in the ODT folder.
+
+---
+
+### **Step 4: Run the Deployment Script**
+
+1. **Open PowerShell as Administrator** on **LTP-HLP01**.
+
+2. **Navigate to the directory** where you saved the `DeployOffice365.ps1` script:
+   ```powershell
+   cd C:\Scripts
+
 
 ---
 
