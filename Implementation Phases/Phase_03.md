@@ -140,7 +140,7 @@ corp.aclab.tech\ali.choukatli
 
 ---
 
-## 🔴  **If you are unable to connect to a target machine via Remote Desktop Protocol (RDP)**
+## 🔴 **If you are unable to connect to a target machine via Remote Desktop Protocol (RDP)**
 
 ### 1. **Check Network Connectivity**
 
@@ -226,7 +226,7 @@ You should now have remote access to the user's desktop.
 ![Session-TV](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/session-TV.png)
 
 
-## 🔴 **End Support Session Securely**
+## 🔴**End Support Session Securely**
 
 1. When support is complete, click the **X** in the TeamViewer window to end the session.
 
