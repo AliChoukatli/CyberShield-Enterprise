@@ -9,8 +9,8 @@ This phase enables you to:
 ## Prerequisites
 Before you begin, ensure you have:
 - A Microsoft 365 account with a license that includes Intune (e.g., Business Premium)
-- A local Active Directory domain set up (e.g., `acpracticelab.local`)
-- Your Microsoft account connected to Azure AD (e.g., `acpracticelab.onmicrosoft.com`)
+- A local Active Directory domain set up (e.g., `corp.aclab.tech`)
+- Your Microsoft account connected to Azure AD (e.g., `corp.aclab.tech.onmicrosoft.com`)
 - Azure AD Connect installed and configured (for Hybrid Join scenarios)
 - Deploy BitLocker on all endpoints (disk encryption)
   - Configure via GPO or Intune
