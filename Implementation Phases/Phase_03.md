@@ -105,7 +105,7 @@ corp.aclab.tech\IT-Support-RDP
 
 ---
 
-### **Method B – PowerShell**
+### 🛠️ **Method B – PowerShell**
 
 Run the following as Administrator:
 
