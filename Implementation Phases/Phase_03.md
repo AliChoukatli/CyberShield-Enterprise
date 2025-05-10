@@ -284,8 +284,7 @@ If the ping fails:
 ```bash
 ipconfig /all
 ```
-
-🖼️ Screenshot: Network config output
+![ipconfig](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/ipconfig.png)
 
 ---
 
