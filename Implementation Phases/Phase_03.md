@@ -22,7 +22,7 @@ This phase simulates professional IT support practices in a small enterprise, co
 
 ---
 
-## **3.1 – Active Directory User Support**
+# **3.1 – Active Directory User Support**
 
 ### ✅ Reset User Passwords & Unlock Accounts
 
