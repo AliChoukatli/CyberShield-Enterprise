@@ -288,21 +288,21 @@ ipconfig /all
 
 ---
 
-## ✅ Inspect Network Adapter Status
+### ✅ **Inspect Network Adapter Status**  
+**Objective:** Verify if the network adapter is functioning properly.
 
-### 🎯 Objective
+- **Why is this important?**  
+  This step helps diagnose any network connectivity issues related to the hardware. If the NIC (Network Interface Controller) is having issues, it could cause network disruptions, affecting access to network resources, including domain services.
 
-Verify the NIC is functioning properly.
+- **Procedure:**
+  1. Open **Device Manager**.
+  2. Expand the **Network Adapters** section.
+  3. Check for warning icons or missing devices.  
+     *(If no warning icons are present, it means no issues have been detected.)*
+  4. If needed, right-click the network adapter and select **Update Driver** to check for driver updates.
 
-1. Open **Device Manager**
-2. Expand **Network Adapters**
-3. Check for issues: warning icons, missing drivers
-4. Right-click > **Update driver** if needed
-
-🖼️ Screenshot: NIC status in Device Manager
-
+![update-driver](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/update-driver.png)
 ---
-
 ## ✅ Deploy Microsoft 365 via PowerShell
 
 ### 🎯 Objective
