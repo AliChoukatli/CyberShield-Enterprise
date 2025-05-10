@@ -318,11 +318,11 @@ ipconfig /all
 
  ![update-driver](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/update-driver.png)
 
-# 📦 Office 365 Deployment via ODT – Lab Documentation
+## 📦 Office 365 Deployment via ODT – Lab Documentation
 
-## 🎯 Objective : Install Microsoft 365 Apps (Office 365) and Visio Pro using Office Deployment Tool (ODT) with a custom PowerShell script.
+### 🎯 Objective : Install Microsoft 365 Apps (Office 365) and Visio Pro using Office Deployment Tool (ODT) with a custom PowerShell script.
 
-## **Step 1 – Uninstall Existing Office Installation (if applicable)**
+#### **Step 1 – Uninstall Existing Office Installation (if applicable)**
 
 ### ✅ Recommended Method: Microsoft Support and Recovery Assistant (SaRA)
 1. Run this script :
@@ -333,7 +333,7 @@ iwr https://raw.githubusercontent.com/Admonstrator/msoffice-removal-tool/main/ms
 
 ---
 
-## **Step 2 – Download and Prepare the Office Deployment Tool (ODT)**
+#### **Step 2 – Download and Prepare the Office Deployment Tool (ODT)**
 
 1. Download ODT from Microsoft:
    [https://www.microsoft.com/en-us/download/details.aspx?id=49117](https://www.microsoft.com/en-us/download/details.aspx?id=49117)
@@ -348,7 +348,7 @@ iwr https://raw.githubusercontent.com/Admonstrator/msoffice-removal-tool/main/ms
         │ config.xml
 ---
 
-## **Step 3 – Customize `config.xml`**
+#### **Step 3 – Customize `config.xml`**
 
 Create or edit `C:\ODT\config.xml` with the following content:
 ```xml
@@ -368,7 +368,7 @@ Create or edit `C:\ODT\config.xml` with the following content:
 </Configuration>
 ```
 
- ## **Step 4 – Create the PowerShell Script**
+#### **Step 4 – Create the PowerShell Script**
 - Create a new script file: C:\Scripts\DeployOffice365.ps1
 ```powershell
 # DeployOffice365.ps1
@@ -383,7 +383,7 @@ Set-ExecutionPolicy RemoteSigned -Scope Process -Force
 Start-Process -FilePath $SetupFilePath -ArgumentList "/configure $ConfigFilePath" -Wait
 ```
 
-## **Step 5 – Run the Script**
+#### **Step 5 – Run the Script**
 - Open PowerShell as Administrator
 
 - Run the script:
@@ -398,24 +398,8 @@ You should see Office 365 begin installing in the background.
 
 ----
 
-# Phase 3 - Helpdesk Support & Tier 1/2 Support
 
-## 🧠 Pro Tips
-- **Traceroute for Network Diagnostics:**  
-  Use `tracert 8.8.8.8` to trace the network path and identify any connectivity issues.
-
-- **Restrict RDP Access:**  
-  Ensure that RDP connections are limited through Conditional Access policies and configure firewalls to allow access only from trusted IP addresses.
-
-- **Automate Tasks with PowerShell:**  
-  Use PowerShell for repetitive tasks like adding users to AD groups, managing permissions, or applying network policies.
-
-- **Maintain Documentation for Escalated Issues:**  
-  Record more complex issues in a log, along with possible resolutions, so that they can be quickly referenced when future escalations arise.
-
----
-
-## 📌 Professional Summary  
+## 📌 Phase 3 -  Summary  
 **Phase 3 - Helpdesk & Tier 1/2 Support Scenarios:**
 
 - **🔐 Remote Support via RDP & TeamViewer:**  
