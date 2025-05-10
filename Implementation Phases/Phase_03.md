@@ -127,8 +127,7 @@ foreach ($computer in $computers) {
         Add-ADGroupMember -Identity "Remote Desktop Users" -Members "corp.aclab.tech\IT-Support-RDP"
     } -Credential (Get-Credential)
 }
-# # Explanation:
-
+# Explanation:
 $computers: Declares a list of remote machines where the script will be applied.
 
 Invoke-Command: Runs the command remotely on each machine in the list.
