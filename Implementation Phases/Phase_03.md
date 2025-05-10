@@ -303,7 +303,7 @@ ipconfig /all
 
 ---
 
-## **Inspect Network Adapter Status**  
+## 3.5 **Inspect Network Adapter Status**  
 **Objective:** Verify if the network adapter is functioning properly.
 
 - **Why is this important?**  
