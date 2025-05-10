@@ -302,14 +302,12 @@ ipconfig /all
   4. If needed, right-click the network adapter and select **Update Driver** to check for driver updates.
 
  ![update-driver](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/update-driver.png)
----
+
 # 📦 Office 365 Deployment via ODT – Lab Documentation
 
 ## 🎯 Objective
 
 Install Microsoft 365 Apps (Office 365) and Visio Pro using Office Deployment Tool (ODT) with a custom PowerShell script.
-
----
 
 ## **Step 1 – Uninstall Existing Office Installation (if applicable)**
 
