@@ -345,6 +345,19 @@ Automate the installation of Microsoft 365 from the support workstation (LTP-HLP
   - The products to install (e.g., Word, Excel, PowerPoint).
   - The language for installation.
   - The installation options (e.g., 32-bit or 64-bit).
+
+  ```xml
+  <?xml version="1.0" encoding="utf-8"?>
+    <Configuration>
+     <Add OfficeClientEdition="64" Channel="Current">
+       <Product ID="O365ProPlusRetail">
+        <Language ID="en-us" />
+       </Product>
+     </Add>
+  <Display Level="None" AcceptEULA="TRUE" />
+  <Property Name="AUTOACTIVATE" Value="1" />
+   </Configuration>
+  ```
   
 - You can customize the `config.xml` by referring to the Microsoft documentation for the Office Deployment Tool, or you can use the default configuration provided in the ODT folder.
 
