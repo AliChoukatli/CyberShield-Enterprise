@@ -307,7 +307,7 @@ ipconfig /all
 
 ## 🎯 Objective
 
-Install Microsoft 365 Apps (Office 365) and Visio Pro using Office Deployment Tool (ODT) with a custom PowerShell script.
+- Install Microsoft 365 Apps (Office 365) and Visio Pro using Office Deployment Tool (ODT) with a custom PowerShell script.
 
 ## **Step 1 – Uninstall Existing Office Installation (if applicable)**
 
@@ -317,8 +317,9 @@ Run this script :
 ```powershell
 
 iwr https://raw.githubusercontent.com/Admonstrator/msoffice-removal-tool/main/msoffice-removal-tool.ps1 -OutFile msoffice-removal-tool.ps1; powershell -ExecutionPolicy Bypass .\msoffice-removal-tool.ps1
-3. Restart the machine after uninstallation.
 ```
+Restart the machine after uninstallation.
+
 ---
 
 ## **Step 2 – Download and Prepare the Office Deployment Tool (ODT)**
