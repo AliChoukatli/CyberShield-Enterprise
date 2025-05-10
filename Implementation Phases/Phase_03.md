@@ -245,13 +245,37 @@ You should now have remote access to the user's desktop.
 
 # ✅ Troubleshoot Network Connectivity
 
-### Test 1 – Ping
+## 🔧 Test 1 – Ping
 
-```bash
-ping 192.168.2.1
+### 🎯 Objective
+Verify basic network connectivity by pinging the default gateway and another host on the same LAN.
+
+---
+
+### ▶️ Test A – Ping the Default Gateway
+
+- **Command:**
+  ```bash
+  ping 192.168.2.1
+  ```
+- Purpose: Ensure the device can reach the router (gateway) and confirm LAN connectivity is functional.
+
+▶️ Test B – Ping a Local Host (LTP-HLP01)
+- **Command:**
+ ```bash
+ping 192.168.2.10
 ```
 
-🖼️ Screenshot: Ping result
+🧠 Notes:
+If the ping fails:
+
+Ensure the target machine is powered on and connected.
+
+Check Windows Firewall settings (ICMP traffic might be blocked).
+
+Confirm both machines are on the same subnet.
+
+Use ipconfig on LTP-HLP01 to verify its actual IP address.
 
 ### Test 2 – IP Configuration
 
