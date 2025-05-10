@@ -255,22 +255,21 @@ All commands below are executed from the employee workstation: **LTP-EMP01**.
 ---
 
 ### ▶️ Test A – Ping the Default Gateway
-
+- Purpose: Ensure the device can reach the router (gateway) and confirm LAN connectivity is functional.
 - **Command:**
   ```bash
   ping 192.168.2.1
   
 🖼️ Screenshot to capture: Full output of the ping command to the gateway.
-- Purpose: Ensure the device can reach the router (gateway) and confirm LAN connectivity is functional.
+
 
 ▶️ Test B – Ping the Domain Controller (DC)
+- Purpose: Test communication from LTP-EMP01 to the IT support machine (LTP-HLP01) within the local network.
 - **Command:**
 ```bash
 ping 192.168.2.10
 ```
 🖼️ Screenshot to capture: Full output of the ping command to LTP-HLP01.
-
-Purpose: Test communication from LTP-EMP01 to the IT support machine (LTP-HLP01) within the local network.
 
 
 🧠 Notes:
