@@ -262,23 +262,26 @@ All commands below are executed from the employee workstation: **LTP-EMP01**.
 
 - Purpose: Ensure the device can reach the router (gateway) and confirm LAN connectivity is functional.
 
-▶️ Test B – Ping a Local Host (LTP-HLP01)
+▶️ Test B – Ping the IT Support Workstation (LTP-HLP01)
 - **Command:**
- ```bash
+```bash
 ping 192.168.2.10
 ```
+🖼️ Screenshot to capture: Full output of the ping command to LTP-HLP01.
+
+Purpose: Test communication from LTP-EMP01 to the IT support machine (LTP-HLP01) within the local network.
+
 
 🧠 Notes:
 If the ping fails:
 
-Ensure the target machine is powered on and connected.
+Ensure the destination machine is powered on and connected.
 
-Check Windows Firewall settings (ICMP traffic might be blocked).
+Check if ICMP traffic is allowed (Windows Firewall settings).
 
 Confirm both machines are on the same subnet.
 
-Use ipconfig on LTP-HLP01 to verify its actual IP address.
-
+Use ipconfig on LTP-HLP01 to verify its actual IP address
 ### Test 2 – IP Configuration
 
 ```bash
