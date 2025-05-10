@@ -357,8 +357,26 @@ Automate the installation of Microsoft 365 from the support workstation (LTP-HLP
 2. **Navigate to the directory** where you saved the `DeployOffice365.ps1` script:
    ```powershell
    cd C:\Scripts
+Run the script to start the deployment of Microsoft 365:
+```powershell
+.\DeployOffice365.ps1
+```
+The script will run the Office Deployment Tool (setup.exe) with the specified configuration (config.xml), and begin installing Microsoft 365 on the machine.
 
+Step 5: Monitor the Installation
+The installation may take some time depending on the speed of the internet connection and the number of Office apps being installed.
 
+You can monitor the installation progress via the PowerShell window or by checking the system's installation logs.
+
+⚠️ Important Notes:
+Ensure that PowerShell Execution Policy allows the script to run. If necessary, you can set the policy to allow script execution using the following command:
+Set-ExecutionPolicy RemoteSigned
+Validate the path to both setup.exe and config.xml before running the script to ensure they are correct.
+
+Internet speed will affect the duration of the installation. A stable connection is recommended for optimal performance.
+🖼️ Screenshot to take:
+
+Take a screenshot of the PowerShell window showing the script execution and the installation progress.
 ---
 
 ## 🧠 Pro Tips
