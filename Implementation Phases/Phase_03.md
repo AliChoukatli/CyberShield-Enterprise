@@ -128,7 +128,7 @@ foreach ($computer in $computers) {
     } -Credential (Get-Credential)
 }
 
-# $computers: Declares a list of remote machines where the script will be applied.
+# computers: Declares a list of remote machines where the script will be applied.
 # Invoke-Command: Runs the command remotely on each machine in the list.
 # Add-ADGroupMember: Adds the "IT-Support-RDP" group to the local "Remote Desktop Users" group on each machine.
 # Credential (Get-Credential): Prompts for credentials required to connect to each remote machine.
