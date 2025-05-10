@@ -311,19 +311,14 @@ Install Microsoft 365 Apps (Office 365) and Visio Pro using Office Deployment To
 
 ## **Step 1 – Uninstall Existing Office Installation (if applicable)**
 
-If Office is partially or already installed, the ODT setup may silently fail.
-
 ### ✅ Recommended Method: Microsoft Support and Recovery Assistant (SaRA)
+Run this script :
 
-1. Download the tool:
-   [https://aka.ms/SaRA-OfficeUninstall-Tool](https://aka.ms/SaRA-OfficeUninstall-Tool)
+```powershell
 
-2. Launch the tool and follow these options:
-   - **Select Office 365, 2019, or 2016** (as listed)
-   - Choose **"Completely remove Office"**
-
+iwr https://raw.githubusercontent.com/Admonstrator/msoffice-removal-tool/main/msoffice-removal-tool.ps1 -OutFile msoffice-removal-tool.ps1; powershell -ExecutionPolicy Bypass .\msoffice-removal-tool.ps1
 3. Restart the machine after uninstallation.
-
+```
 ---
 
 ## **Step 2 – Download and Prepare the Office Deployment Tool (ODT)**
@@ -390,11 +385,7 @@ You should see Office 365 begin installing in the background.
 ```
 
 If setup.exe opens a blank CMD and does nothing, Office is likely already installed.
-if you need to delete completly OFfice, run this script:
-```powershell
-
-iwr https://raw.githubusercontent.com/Admonstrator/msoffice-removal-tool/main/msoffice-removal-tool.ps1 -OutFile msoffice-removal-tool.ps1; powershell -ExecutionPolicy Bypass .\msoffice-removal-tool.ps1
-```
+If Office is partially or already installed, the ODT setup may silently fail.
 
 ----
 
