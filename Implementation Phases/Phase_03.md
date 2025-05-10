@@ -128,7 +128,7 @@ foreach ($computer in $computers) {
         Add-ADGroupMember -Identity "Remote Desktop Users" -Members "corp.aclab.tech\IT-Support-RDP"
     } -Credential (Get-Credential)
 }
-
+```
 ## Explanation:
 $computers: Declares a list of remote machines where the script will be applied.
 
@@ -137,7 +137,7 @@ Invoke-Command: Runs the command remotely on each machine in the list.
 Add-ADGroupMember: Adds the "IT-Support-RDP" group to the local "Remote Desktop Users" group on each machine.
 
 -Credential (Get-Credential): Prompts for credentials required to connect to each remote machine.
-```
+
 ---
 
 ### ✅ **Initiate RDP Session from LTP-HLP01**
