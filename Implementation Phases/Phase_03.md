@@ -382,28 +382,87 @@ You should see Office 365 begin installing in the background.
 
 ----
 
-## 🧠 Pro Tips
+# Phase 3 - Helpdesk Support & Tier 1/2 Support
 
-* Use `tracert 8.8.8.8` to trace network routes
-* Keep RDP restricted using Conditional Access and firewalls
-* Use PowerShell for repeatable support tasks
-* Maintain documentation for escalated issues
+## 🧠 Pro Tips
+- **Traceroute for Network Diagnostics:**  
+  Use `tracert 8.8.8.8` to trace the network path and identify any connectivity issues.
+
+- **Restrict RDP Access:**  
+  Ensure that RDP connections are limited through Conditional Access policies and configure firewalls to allow access only from trusted IP addresses.
+
+- **Automate Tasks with PowerShell:**  
+  Use PowerShell for repetitive tasks like adding users to AD groups, managing permissions, or applying network policies.
+
+- **Maintain Documentation for Escalated Issues:**  
+  Record more complex issues in a log, along with possible resolutions, so that they can be quickly referenced when future escalations arise.
 
 ---
 
-## 📌 Professional Summary
+## 📌 Professional Summary  
+**Phase 3 - Helpdesk & Tier 1/2 Support Scenarios:**
 
-Phase 3 simulated real-world Helpdesk & Tier 1/2 support scenarios:
+- **🔐 Remote Support via RDP & TeamViewer:**  
+  Connect to users' machines remotely to resolve issues without being on-site.
 
-* 🔐 Remote support via RDP and TeamViewer
-* 👤 Active Directory management for user lockouts
-* 🌐 Network diagnostics using CLI tools and Device Manager
-* 💻 Microsoft 365 deployment with PowerShell automation
+- **👤 Active Directory Management for User Lockouts:**  
+  Use AD tools to reset passwords and unlock accounts.
 
-### 📝 Skills & Tools Practiced
-- Active Directory (password reset, unlock)
-- RDP setup & permission troubleshooting
-- TeamViewer configuration and usage
-- Network diagnostics (ping, ipconfig, Test-NetConnection)
-- PowerShell for firewall and RDP config
+- **🌐 Network Diagnostics Using CLI Tools & Device Manager:**  
+  Identify network issues using commands like `ping`, `ipconfig`, `tracert`, or `Test-NetConnection`, as well as using Device Manager to detect hardware conflicts or missing drivers.
+
+- **💻 Microsoft 365 Deployment with PowerShell Automation:**  
+  Deploy applications and configure M365 settings via PowerShell to automate setup tasks.
+
+---
+
+## 📝 Skills & Tools Practiced
+
+1. **Active Directory Management:**  
+   - **Password Reset:**  
+     You can reset users' passwords in Active Directory via `Active Directory Users and Computers`.  
+     **Useful Command:**
+     ```powershell
+     Set-ADAccountPassword -Identity "username" -NewPassword (ConvertTo-SecureString "newPassword" -AsPlainText -Force)
+     ```
+
+   - **Unlocking Accounts:**  
+     If accounts are locked due to failed login attempts, you can unlock them using the AD interface or PowerShell.  
+     **Useful Command:**
+     ```powershell
+     Unlock-ADAccount -Identity "username"
+     ```
+
+2. **RDP Configuration & Permissions Troubleshooting:**  
+   - **Check RDP Settings:**  
+     Access the Remote Desktop settings under `System > Remote Desktop` to enable and configure access.  
+     **Pro Tip:** Use Conditional Access policies to enhance security.
+
+   - **Add Groups to "Remote Desktop Users":**  
+     Ensure that appropriate groups, such as "IT" and "Remote Desktop Users", are added to allow RDP access.  
+     **PowerShell Command to Add User to Group:**
+     ```powershell
+     Add-ADGroupMember -Identity "Remote Desktop Users" -Members "username"
+     ```
+
+3. **Using TeamViewer:**  
+   - **Configure TeamViewer for Remote Access:**  
+     Download and configure TeamViewer on remote machines, and use the session ID and password to connect.  
+     **Pro Tip:** Always secure remote access with unique session codes and strong passwords.
+
+4. **Network Diagnostics:**  
+   - **CLI Tools for Connectivity Issues:**  
+     Use the following commands to diagnose network problems:
+     - `ping <IP>`: Check connectivity between the source machine and target machine.
+     - `ipconfig`: Display the machine's network configuration (IP address, subnet mask, gateway).
+     - `Test-NetConnection`: Verify connectivity to a specific server (e.g., `Test-NetConnection -ComputerName google.com`).
+
+5. **PowerShell Automation:**  
+   - **Configure Firewall via PowerShell:**  
+     Automate firewall configuration to allow or block certain connections as needed.  
+     **Example Command:**
+     ```powershell
+     New-NetFirewallRule -DisplayName "Allow RDP" -Direction Inbound -Protocol TCP -Action Allow -LocalPort 3389
+     ```
+
 
