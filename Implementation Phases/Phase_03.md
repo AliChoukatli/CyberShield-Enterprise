@@ -328,13 +328,11 @@ iwr https://raw.githubusercontent.com/Admonstrator/msoffice-removal-tool/main/ms
 2. Extract the content to:  
    `C:\ODT`
 
-3.- This folder should contain:
-  
-    C:\ODT
+3. This folder should contain:
    
-      │ setup.exe
-      
-      │ config.xml
+        C:\ODT
+        │ setup.exe
+        │ config.xml
 ---
 
 ## **Step 3 – Customize `config.xml`**
