@@ -303,98 +303,40 @@ ipconfig /all
 
  ![update-driver](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/update-driver.png)
 ---
-# Microsoft 365 Deployment via PowerShell
+# 📦 Office 365 Deployment via ODT – Lab Documentation
 
-## Objective:
-Automate the installation of Microsoft 365 from the support workstation (LTP-HLP01).
+## 🎯 Objective
 
----
-
-### **Step 1: Download Office Deployment Tool (ODT)**
-
-1. **Download the Office Deployment Tool** from the official Microsoft website:
-   - [Download Office Deployment Tool](https://www.microsoft.com/en-us/download/details.aspx?id=49117)
-
-2. **Extract the downloaded ZIP file** to a directory of your choice (e.g., `C:\ODT`).
+Install Microsoft 365 Apps (Office 365) and Visio Pro using Office Deployment Tool (ODT) with a custom PowerShell script.
 
 ---
 
-### **Step 2: Prepare the Deployment Script**
+## 🧹 Step 1 – Uninstall Existing Office Installation (if applicable)
 
-1. **Create the PowerShell script (`DeployOffice365.ps1`)**:
-   - Open **Notepad** or any text editor of your choice.
-   - Paste the following script:
+If Office is partially or already installed, the ODT setup may silently fail.
 
-     ```powershell
-     # DeployOffice365.ps1 - Example script for deploying Office 365
-     $OfficeDeploymentPath = "C:\ODT"          # Path where ODT is extracted
-     $SetupFilePath = "$OfficeDeploymentPath\setup.exe"
-     $ConfigFilePath = "$OfficeDeploymentPath\config.xml"   # Path to the config.xml file
+### ✅ Recommended Method: Microsoft Support and Recovery Assistant (SaRA)
 
-     # Run the Office Deployment Tool setup
-     Start-Process -FilePath $SetupFilePath -ArgumentList "/configure $ConfigFilePath" -Wait
-     ```
+1. Download the tool:
+   [https://aka.ms/SaRA-OfficeUninstall-Tool](https://aka.ms/SaRA-OfficeUninstall-Tool)
 
-2. **Save the script** as `DeployOffice365.ps1` in an accessible directory (e.g., `C:\Scripts`).
+2. Launch the tool and follow these options:
+   - **Select Office 365, 2019, or 2016** (as listed)
+   - Choose **"Completely remove Office"**
+
+3. Restart the machine after uninstallation.
 
 ---
 
-### **Step 3: Customize the `config.xml` File**
+## 📥 Step 2 – Download and Prepare the Office Deployment Tool (ODT)
 
-- The **`config.xml`** file is used to specify the installation settings for Microsoft 365, including:
-  - The products to install (e.g., Word, Excel, PowerPoint).
-  - The language for installation.
-  - The installation options (e.g., 32-bit or 64-bit).
+1. Download ODT from Microsoft:
+   [https://www.microsoft.com/en-us/download/details.aspx?id=49117](https://www.microsoft.com/en-us/download/details.aspx?id=49117)
 
-  ```xml
-  <?xml version="1.0" encoding="utf-8"?>
-    <Configuration>
-     <Add OfficeClientEdition="64" Channel="Current">
-       <Product ID="O365ProPlusRetail">
-        <Language ID="en-us" />
-       </Product>
-     </Add>
-  <Display Level="None" AcceptEULA="TRUE" />
-  <Property Name="AUTOACTIVATE" Value="1" />
-   </Configuration>
-  ```
-  
-- You can customize the `config.xml` by referring to the Microsoft documentation for the Office Deployment Tool, or you can use the default configuration provided in the ODT folder.
+2. Extract the content to:  
+   `C:\ODT`
 
----
-
-### **Step 4: Run the Deployment Script**
-
-1. **Open PowerShell as Administrator** on **LTP-HLP01**.
-
-2. **Navigate to the directory** where you saved the `DeployOffice365.ps1` script:
-   ```powershell
-   cd C:\Scripts
-Run the script to start the deployment of Microsoft 365:
-```powershell
-.\DeployOffice365.ps1
-```
-The script will run the Office Deployment Tool (setup.exe) with the specified configuration (config.xml), and begin installing Microsoft 365 on the machine.
-
-Step 5: Monitor the Installation
-The installation may take some time depending on the speed of the internet connection and the number of Office apps being installed.
-
-You can monitor the installation progress via the PowerShell window or by checking the system's installation logs.
-
-## ⚠️ Important Notes:
-- Ensure that PowerShell Execution Policy allows the script to run. If necessary, you can set the policy to allow script execution using the following command:
-
-```powershell
-Set-ExecutionPolicy RemoteSigned -Scope Process
-   ```
-
-Validate the path to both setup.exe and config.xml before running the script to ensure they are correct.
-
-Internet speed will affect the duration of the installation. A stable connection is recommended for optimal performance.
-🖼️ Screenshot to take:
-
-Take a screenshot of the PowerShell window showing the script execution and the installation progress.
----
+This folder should contain:
 
 ## 🧠 Pro Tips
 
