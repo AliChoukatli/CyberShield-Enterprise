@@ -368,9 +368,13 @@ The installation may take some time depending on the speed of the internet conne
 
 You can monitor the installation progress via the PowerShell window or by checking the system's installation logs.
 
-⚠️ Important Notes:
-Ensure that PowerShell Execution Policy allows the script to run. If necessary, you can set the policy to allow script execution using the following command:
+## ⚠️ Important Notes:
+- Ensure that PowerShell Execution Policy allows the script to run. If necessary, you can set the policy to allow script execution using the following command:
+
+```powershell
 Set-ExecutionPolicy RemoteSigned
+   ```
+
 Validate the path to both setup.exe and config.xml before running the script to ensure they are correct.
 
 Internet speed will affect the duration of the installation. A stable connection is recommended for optimal performance.
