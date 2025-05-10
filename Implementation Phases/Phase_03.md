@@ -22,9 +22,7 @@ This phase simulates professional IT support practices in a small enterprise, co
 
 ### ✅ Reset User Passwords & Unlock Accounts
 
-#### 🎯 Objective
-
-Assist users who are locked out or need password resets using Active Directory Users and Computers (ADUC).
+#### 🎯 Objective :*Assist users who are locked out or need password resets using Active Directory Users and Computers (ADUC).*
 
 Steps:
 
@@ -43,9 +41,7 @@ Steps:
 
 ### ✅ **Prepare Active Directory Group for RDP Access**
 
-#### 🎯 Objective
-
-Create a domain security group for IT support staff to manage RDP permissions centrally.
+#### 🎯 Objective : *Create a domain security group for IT support staff to manage RDP permissions centrally.*
 
 1. Open **Active Directory Users and Computers**
 2. Create a new **security group**:
@@ -61,8 +57,7 @@ Create a domain security group for IT support staff to manage RDP permissions ce
 
 ### ✅ **Enable Remote Desktop on LTP-EMP01**
 
-#### 🎯 Objective  
-Enable Remote Desktop on `LTP-EMP01` and verify access settings for the domain group.
+#### 🎯 Objective : *Enable Remote Desktop on `LTP-EMP01` and verify access settings for the domain group.*
 
 ### 🛠️ Instructions
 
@@ -82,9 +77,7 @@ Remote Desktop
 
 ### ✅ **Configure RDP Permissions on Target Machine (LTP-EMP01)**
 
-### 🎯 Objective
-
-Grant the `IT-Support-RDP` group Remote Desktop rights on the domain-joined client `LTP-EMP01`.
+### 🎯 *Objective : Grant the `IT-Support-RDP` group Remote Desktop rights on the domain-joined client `LTP-EMP01`.*
 
 ### 🛠️ Method A – Graphical (Computer Management)
 
@@ -132,8 +125,7 @@ foreach ($computer in $computers) {
 
 ### ✅ **Initiate RDP Session from LTP-HLP01**
 
-### 🎯 Objective  
-Verify remote access works using domain credentials from the support workstation.
+#### 🎯 Objective: *Verify remote access works using domain credentials from the support workstation.*
 
 ### 🛠️ Instructions
 
@@ -181,7 +173,7 @@ netsh advfirewall firewall add rule name="Allow ICMPv4-In" protocol=icmpv4:8,any
 ---
 ## 3.3 – TeamViewer Remote Assistance
 
-#### 🎯 **Objective** : Set up TeamViewer on both machines (support and end-user), ensure secure configuration, and simulate a remote support session from the helpdesk workstation.
+#### 🎯 Objective : *Set up TeamViewer on both machines (support and end-user), ensure secure configuration, and simulate a remote support session from the helpdesk workstation.*
 
 #### 🧰 **Prerequisites**
 
@@ -250,7 +242,7 @@ You should now have remote access to the user's desktop.
    - Change their temporary password (optional)
    - Revoke access if using permanent ID or unattended access.
 
-#### 🔐 **Security Tips**  
+#### 🔐 Security Tips
 🔹 Ensure proper security measures are followed to protect the session and user credentials.
 
 ---
@@ -260,8 +252,7 @@ You should now have remote access to the user's desktop.
 
   ## 🔧 Test 1 – Ping
 
-#### 🎯 Objective
-Verify basic network connectivity by pinging the default gateway and the domain controller (DC).
+#### 🎯 *Objective : Verify basic network connectivity by pinging the default gateway and the domain controller (DC).*
 
 All commands below are executed from the employee workstation: **LTP-EMP01**.
 
@@ -304,7 +295,8 @@ ipconfig /all
 ---
 
 ## 3.5 **Inspect Network Adapter Status**  
-**Objective:** Verify if the network adapter is functioning properly.
+
+#### 🎯 Objective: *Verify if the network adapter is functioning properly.*
 
 - **Why is this important?**  
   This step helps diagnose any network connectivity issues related to the hardware. If the NIC (Network Interface Controller) is having issues, it could cause network disruptions, affecting access to network resources, including domain services.
@@ -318,11 +310,11 @@ ipconfig /all
 
  ![update-driver](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/update-driver.png)
 
-## 📦 Office 365 Deployment via ODT – Lab Documentation
+## 📦 Office 365 Deployment via ODT
 
-### 🎯 Objective : Install Microsoft 365 Apps (Office 365) and Visio Pro using Office Deployment Tool (ODT) with a custom PowerShell script.
+#### 🎯 *Objective : Install Microsoft 365 Apps (Office 365) and Visio Pro using Office Deployment Tool (ODT) with a custom PowerShell script.*
 
-#### **Step 1 – Uninstall Existing Office Installation (if applicable)**
+#### Step 1 – Uninstall Existing Office Installation (if applicable)
 
 ### ✅ Recommended Method: Microsoft Support and Recovery Assistant (SaRA)
 1. Run this script :
@@ -400,7 +392,6 @@ You should see Office 365 begin installing in the background.
 
 
 ## 📌 Phase 3 -  Summary  
-**Phase 3 - Helpdesk & Tier 1/2 Support Scenarios:**
 
 - **🔐 Remote Support via RDP & TeamViewer:**  
   Connect to users' machines remotely to resolve issues without being on-site.
