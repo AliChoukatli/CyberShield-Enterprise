@@ -24,8 +24,6 @@ This phase simulates professional IT support practices in a small enterprise, co
 
 #### 🎯 Objective :*Assist users who are locked out or need password resets using Active Directory Users and Computers (ADUC).*
 
-Steps:
-
 1. Open **Active Directory Users and Computers**
 2. Locate the target user account
 3. Right-click > **Reset Password**
