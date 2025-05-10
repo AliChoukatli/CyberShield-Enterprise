@@ -312,10 +312,8 @@ ipconfig /all
 ## **Step 1 – Uninstall Existing Office Installation (if applicable)**
 
 ### ✅ Recommended Method: Microsoft Support and Recovery Assistant (SaRA)
-Run this script :
-
+- Run this script :
 ```powershell
-
 iwr https://raw.githubusercontent.com/Admonstrator/msoffice-removal-tool/main/msoffice-removal-tool.ps1 -OutFile msoffice-removal-tool.ps1; powershell -ExecutionPolicy Bypass .\msoffice-removal-tool.ps1
 ```
 Restart the machine after uninstallation.
