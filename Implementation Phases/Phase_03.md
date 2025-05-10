@@ -259,6 +259,8 @@ All commands below are executed from the employee workstation: **LTP-EMP01**.
 - **Command:**
   ```bash
   ping 192.168.2.1
+
+![Ping-Router](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/Ping-Router.png)
   
 🖼️ Screenshot to capture: Full output of the ping command to the gateway.
 
@@ -269,7 +271,7 @@ All commands below are executed from the employee workstation: **LTP-EMP01**.
 ```bash
 ping 192.168.2.10
 ```
-🖼️ Screenshot to capture: Full output of the ping command to LTP-HLP01.
+![Ping-DC](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/Ping-DC.png)
 
 
 🧠 Notes:
