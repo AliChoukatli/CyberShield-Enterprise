@@ -340,7 +340,6 @@ C:\ODT
 ## **Step 3 – Customize `config.xml`**
 
 Create or edit `C:\ODT\config.xml` with the following content:
-
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <Configuration>
@@ -359,7 +358,7 @@ Create or edit `C:\ODT\config.xml` with the following content:
 ```
 
  ## **Step 4 – Create the PowerShell Script**
-Create a new script file: C:\Scripts\DeployOffice365.ps1
+- Create a new script file: C:\Scripts\DeployOffice365.ps1
 ```powershell
 # DeployOffice365.ps1
 $OfficeDeploymentPath = "C:\ODT"
@@ -374,15 +373,14 @@ Start-Process -FilePath $SetupFilePath -ArgumentList "/configure $ConfigFilePath
 ```
 
 ## **Step 5 – Run the Script**
-Open PowerShell as Administrator
+- Open PowerShell as Administrator
 
-Run the script:
+- Run the script:
 ```powershell
 cd C:\Scripts
 .\DeployOffice365.ps1
-You should see Office 365 begin installing in the background.
-
 ```
+You should see Office 365 begin installing in the background.
 
 If setup.exe opens a blank CMD and does nothing, Office is likely already installed.
 If Office is partially or already installed, the ODT setup may silently fail.
