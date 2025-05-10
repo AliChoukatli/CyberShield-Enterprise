@@ -381,8 +381,8 @@ cd C:\Scripts
 ```
 You should see Office 365 begin installing in the background.
 
-If setup.exe opens a blank CMD and does nothing, Office is likely already installed.
-If Office is partially or already installed, the ODT setup may silently fail.
+- If setup.exe opens a blank CMD and does nothing, Office is likely already installed.
+- If Office is partially or already installed, the ODT setup may silently fail.
 
 ----
 
