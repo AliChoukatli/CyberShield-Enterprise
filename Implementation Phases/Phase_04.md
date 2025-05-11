@@ -47,6 +47,7 @@ Run the following on each client machine:
 whoami /fqdn
 systeminfo | findstr /i "domain"
 ```
+![whoami-hlp01](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/whoami-hlp01.png)
 
 📸 Screenshot to capture: Command prompt showing that the machine is joined to corp.aclab.tech.
 
