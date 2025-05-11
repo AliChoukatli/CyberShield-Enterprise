@@ -22,18 +22,77 @@ Before you begin, ensure you have:
 
 ---
 
-## Step 1: Hybrid Join Your Devices to Azure AD
+# Step 1: Hybrid Join of On-Premises Devices to Azure AD
 
-### Objective
-Hybrid join allows your on-premises devices to connect to Azure AD.
+## 🎯 Objective
+Enable on-premises domain-joined devices (e.g., `LTP-HLP01`, `LTP-EMP01`) to also join Azure Active Directory (`Hybrid Azure AD Join`). This allows Intune to manage the devices later.
 
-### Prerequisites
-- Azure AD Connect must be installed and configured for Hybrid Join.
+---
 
-### Actions
-1. Open **Azure AD Connect** and ensure the synchronization is correctly configured for Hybrid Join.
-2. Verify that on-premises devices are set to join Azure AD in a hybrid configuration.
-3. Test Hybrid Join on an on-premises device using the **dsregcmd** tool.
+## 🧰 Prerequisites
+- Active Directory domain: `corp.aclab.tech`
+- Azure AD tenant: `corp.aclab.tech.onmicrosoft.com`
+- Devices are already joined to the on-prem AD domain
+- Azure AD Connect is installed on the domain controller
+- Admin access to the Entra portal (`https://entra.microsoft.com`)
+
+---
+
+## 🛠️ Technical Steps
+
+### ✅ 1.1 – Verify On-Prem Domain Join
+Run the following on each client machine:
+
+```bash
+whoami /fqdn
+systeminfo | findstr /i "domain"
+```
+
+📸 Screenshot to capture: Command prompt showing that the machine is joined to corp.aclab.tech.
+
+ 1.2 – Configure Azure AD Connect
+On your domain controller:
+
+Open Azure AD Connect
+
+Click Configure
+
+Select Configure device options
+
+Click Next through until Device options
+
+Select Configure Hybrid Azure AD Join
+
+Click Next
+
+📸 Screenshot to capture: The screen where "Configure Hybrid Azure AD Join" is selected.
+
+✅ 1.3 – Specify Local Domain
+Select Windows 10 or later domain-joined devices
+
+Choose your local domain: corp.aclab.tech
+
+Click Next, then Configure
+
+📸 Screenshot to capture: Domain selection screen showing corp.aclab.tech.
+
+✅ 1.4 – Force a Synchronization
+On the server with Azure AD Connect, run:
+```powershell
+Start-ADSyncSyncCycle -PolicyType Delta
+```
+📸 Screenshot to capture: Output of the PowerShell sync command.
+
+
+✅ 1.5 – Verify in Entra ID
+Go to: https://entra.microsoft.com
+
+Navigate to Devices > All Devices
+
+Check for devices showing Join Type = Hybrid Azure AD joined
+
+📸 Screenshot to capture: Table listing your joined device(s) with Hybrid Azure AD joined.
+
 
 ---
 
