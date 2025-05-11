@@ -54,6 +54,7 @@ Once done, verify the structure:
 * [Add Single User Script](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_user.ps1)
 
  ## 🔴 **Verification - Adding Users to Domain Users Group**
+ *Ensure that the user is part of the "Domain Users" group for basic domain access permissions.*
 
 If the user is not already a member of the **Domain Users** group, follow these steps:
 
