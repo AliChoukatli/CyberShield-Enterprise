@@ -73,6 +73,8 @@ If the user is not already a member of the **Domain Users** group, follow these 
 
 This will add the user to the **Domain Users** group, ensuring they have the basic domain access permissions.
 
+![domain-users](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/domain-users.png)
+
 
 ## 🔴 **Step 3 - Delete a User in Active Directory**
 
