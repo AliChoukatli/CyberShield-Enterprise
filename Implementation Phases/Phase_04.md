@@ -53,26 +53,27 @@ systeminfo | findstr /i "domain"
  1.2 – Configure Azure AD Connect
 On your domain controller:
 
-Open Azure AD Connect
+1. Open Azure AD Connect
 
-Click Configure
+2. Click Configure
 
-Select Configure device options
+3. Select Configure device options
 
-Click Next through until Device options
+4. Click Next through until Device options
 
-Select Configure Hybrid Azure AD Join
+5. Select Configure Hybrid Azure AD Join
 
-Click Next
+6. Click Next
 
 📸 Screenshot to capture: The screen where "Configure Hybrid Azure AD Join" is selected.
 
 ✅ 1.3 – Specify Local Domain
-Select Windows 10 or later domain-joined devices
 
-Choose your local domain: corp.aclab.tech
+1. Select Windows 10 or later domain-joined devices
 
-Click Next, then Configure
+2. Choose your local domain: corp.aclab.tech
+
+3. Click Next, then Configure
 
 📸 Screenshot to capture: Domain selection screen showing corp.aclab.tech.
 
@@ -85,11 +86,12 @@ Start-ADSyncSyncCycle -PolicyType Delta
 
 
 ✅ 1.5 – Verify in Entra ID
-Go to: https://entra.microsoft.com
 
-Navigate to Devices > All Devices
+1. Go to: https://entra.microsoft.com
 
-Check for devices showing Join Type = Hybrid Azure AD joined
+2. Navigate to Devices > All Devices
+
+3. Check for devices showing Join Type = Hybrid Azure AD joined
 
 📸 Screenshot to capture: Table listing your joined device(s) with Hybrid Azure AD joined.
 
