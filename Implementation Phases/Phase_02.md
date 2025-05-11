@@ -53,6 +53,31 @@ Once done, verify the structure:
 * [Add IT Users Script](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_IT_users.ps1)
 * [Add Single User Script](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_user.ps1)
 
+ ## 🔴 **NOTES - Adding User to Domain Users Group**
+
+If the user is not already a member of the **Domain Users** group, follow these steps:
+
+1. **Open Active Directory Users and Computers (ADUC)**
+
+   Open **Server Manager > Tools > Active Directory Users and Computers**.
+
+2. **Navigate to the Domain Users Group**
+
+   In the left pane, click on **corp.aclab.tech** > **Users**.
+
+3. **Check if the User is Already in the Group**
+
+   Look for the user (e.g., **sophia.martinez**) in the **Domain Users** group. If the user is not listed:
+
+4. **Add the User to Domain Users**
+
+   - Right-click on **Domain Users** > **Add**.
+   - Select the user (e.g., **sophia.martinez**) to add to the group.
+   - Click on **Add** and then **OK**.
+
+This will add the user to the **Domain Users** group, ensuring they have the basic domain access permissions.
+
+
 
 ## 🔴 **Step 3 - Delete a User in Active Directory**
 
