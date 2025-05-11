@@ -51,7 +51,6 @@ systeminfo | findstr /i "domain"
 
 ![whoami-emp01](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/whoami-emp01.png)
 
-📸 Screenshot to capture: Command prompt showing that the machine is joined to corp.aclab.tech.
 
  1.2 – Configure Azure AD Connect
 On your domain controller:
