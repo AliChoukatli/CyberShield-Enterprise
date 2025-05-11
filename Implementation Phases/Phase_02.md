@@ -61,13 +61,9 @@ If the user is not already a member of the **Domain Users** group, follow these 
 
    Open **Server Manager > Tools > Active Directory Users and Computers**.
 
-2. **Navigate to the Domain Users Group**
-
-   In the left pane, click on **corp.aclab.tech** > **Users**.
+2. **Navigate to Users --> Domain Users Group**
 
 3. **Check if the User is Already in the Group**
-
-   Look for the user (e.g., **sophia.martinez**) in the **Domain Users** group. If the user is not listed:
 
 4. **Add the User to Domain Users**
 
@@ -76,7 +72,6 @@ If the user is not already a member of the **Domain Users** group, follow these 
    - Click on **Add** and then **OK**.
 
 This will add the user to the **Domain Users** group, ensuring they have the basic domain access permissions.
-
 
 
 ## 🔴 **Step 3 - Delete a User in Active Directory**
