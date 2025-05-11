@@ -228,6 +228,8 @@ Instructions
 
 ![login_domain](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/login-domain.png)
 
+![domain-verification](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/domain-verificaiton.png)
+
 ---
 
 ### ✅ Result:
