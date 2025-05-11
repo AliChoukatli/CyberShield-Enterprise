@@ -222,11 +222,9 @@ Instructions
 ![Domain_Join](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/join%20domain.png)
 
 4. Once joined, you'll see a welcome message.
-
 5. Restart the workstation.
-6. Windows login screen with `corp\` domain 
-
-![login_domain](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/login-domain.png)
+6.  On the Windows 11 machine (`LTP-HLP01`), go to:  
+   `Settings` → `System` → `About`
 
 ![domain-verification](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/domain-verification.png)
 
