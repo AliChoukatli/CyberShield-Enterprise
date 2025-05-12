@@ -78,21 +78,9 @@ systeminfo | findstr /i "domain"
 - Click **Next**.
 
 #### 3. **Choose the Sign-In Method**:
-Before configuring device options and Hybrid Azure AD Join, you need to select the authentication method between your on-premises domain and Azure AD.
 
-- **Sign-In Method**: This option determines how users will sign in to Azure AD using their local domain accounts.
+- **Sign-In Method**:**Select "Password Hash Synchronization (Hash Sync)"** to synchronize your on-premises Active Directory passwords with Azure AD..
   
-  - **Hash Sync (Password Hash Synchronization)**:
-    - This is the simplest option. It synchronizes the **password hashes** from your on-premises Active Directory to Azure AD, allowing users to log in to Azure AD using the same password.
-    - **Recommendation**: Choose this option if you don’t require advanced features like Single Sign-On or complex password management.
-  
-  - **AD FS (Active Directory Federation Services)**:
-    - Choose **AD FS** if you want advanced features like Single Sign-On (SSO) and more granular control over authentication. This is useful if you need to integrate Azure AD with other systems or have specific security requirements.
-  
-  - **Federation (with third-party providers)**:
-    - Choose this option if you are using a third-party identity provider (such as Okta or PingFederate) to federate Azure AD with that provider.
-
-- **Recommendation**: For a simpler setup, choose **Hash Sync** and **Emable single sign-on**
 
 📸 **Screenshot to capture**: The screen where you select the **Sign-In Method** (Hash Sync, AD FS, etc.).
 
