@@ -43,65 +43,121 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 ```bash
 CyberShield-Enterprise/
 │
-├── 00_Architecture/                             # Contains architecture-related diagrams and documentation
-│   ├── Diagrams/                               # Network architecture diagrams
-│   ├── Before_After/                           # Before and after architecture comparisons
-│   └── README.md                               # Documentation of the architecture
+├── 01_Installation & Domain Join/
+│   ├── Documentation/
+│   │   ├── Domain_Controller_Configuration.md
+│   │   ├── Workstation_Configuration.md
+│   │   └── Domain_Join_Steps.md
+│   ├── Scripts/
+│   │   ├── Server_Join_Script.ps1
+│   │   └── Workstation_Join_Script.ps1
+│   └── Screenshots/
+│       ├── whoami-hlp01.png
+│       └── whoami-emp01.png
 │
-├── Implementation_Phases/                      # Main folder for implementation phases
-│   ├── Phase_01_Installation_Join_Domain/       # Details for Phase 1: Installation & Domain Join
-│   ├── Phase_02_Domain_Integration_User_Management/ # Details for Phase 2: Domain Integration & User Management
-│   ├── Phase_03_Helpdesk_Network_Troubleshooting/ # Details for Phase 3: Helpdesk & Network Troubleshooting
-│   ├── Phase_04_AzureAD_Sync_Endpoint_Security/ # Details for Phase 4: Azure AD Sync & Endpoint Security
-│   ├── Phase_05_AD_Security_Hardening/         # Details for Phase 5: Active Directory Security Hardening
-│   ├── Phase_06_Backup_Recovery_Preparation/   # Details for Phase 6: Backup & Recovery Preparation
-│   ├── Phase_07_Sentinel_Defender_Integration/ # Details for Phase 7: Sentinel & Defender Integration
-│   ├── Phase_08_Phishing_Simulation_User_Awareness/ # Details for Phase 8: Phishing Simulation & User Awareness
-│   ├── Phase_09_Forensics_Post_Attack/          # Details for Phase 9: Forensics Post-Attack
-│   ├── Phase_10_Post_Incident_Recovery_Integrity_Check/ # Details for Phase 10: Post-Incident Recovery & Integrity Check
-│   └── Phase_11_Compliance_Mapping_ISO_NIST/    # Details for Phase 11: Compliance Mapping (ISO/NIST)
+├── 02_Active Directory Integration/
+│   ├── Documentation/
+│   │   ├── OU_Structure.md
+│   │   ├── User_Management.md
+│   │   └── Access_Control.md
+│   ├── Scripts/
+│   │   ├── Create_OU_Script.ps1
+│   │   └── User_Group_Management_Script.ps1
+│   └── Screenshots/
+│       ├── OU_Structure_Example.png
+│       └── Group_Permissions_Example.png
 │
-├── 01_Zero_Trust_Security/                     # Contains Zero Trust policies and implementation
-│   ├── MFA_Configuration/                      # Multi-factor Authentication setup
-│   ├── Conditional_Access/                     # Conditional Access policies
-│   ├── Device_Compliance/                      # Device compliance policies
-│   └── README.md                               # Explanation of Zero Trust implementation
+├── 03_AzureAD Sync & Endpoint Security/
+│   ├── Documentation/
+│   │   ├── Hybrid_Join_Guide.md
+│   │   ├── Intune_Configuration.md
+│   │   └── Security_Policies.md
+│   ├── Scripts/
+│   │   ├── AzureAD_Join_Script.ps1
+│   │   └── Intune_Enrollment_Script.ps1
+│   └── Screenshots/
+│       ├── AzureAD_Connect_Screenshot.png
+│       └── Device_Management_Example.png
 │
-├── 02_Sentinel_Security_Operations/            # Contains Sentinel configurations, alerts, and playbooks
-│   ├── Alerts/                                 # Sentinel alert handling configurations
-│   ├── Playbooks/                              # Sentinel playbooks for automation
-│   ├── KQL_Queries/                            # Custom KQL queries for monitoring
-│   └── README.md                               # Documentation for Sentinel integration and alert management
+├── 04_Security Hardening/
+│   ├── Documentation/
+│   │   ├── Administrator_Account_Hardening.md
+│   │   ├── MFA_Enforcement.md
+│   │   └── Conditional_Access_Configuration.md
+│   ├── Scripts/
+│   │   ├── Rename_Administrator_Script.ps1
+│   │   └── MFA_Policy_Script.ps1
+│   └── Screenshots/
+│       ├── MFA_Enforcement_Screenshot.png
+│       └── Conditional_Access_Rules_Screenshot.png
 │
-├── 03_Forensics_Analysis/                      # Forensic analysis after incidents
-│   ├── Event_Logs/                             # Event logs collected post-attack
-│   ├── Evidence/                               # Forensic evidence and artifacts
-│   └── README.md                               # Explanation of forensic analysis workflow
+├── 05_Backup & Recovery Preparation/
+│   ├── Documentation/
+│   │   ├── Backup_Strategy.md
+│   │   ├── Recovery_Plan.md
+│   │   └── Test_Recovery_Procedure.md
+│   ├── Scripts/
+│   │   ├── Backup_Script.ps1
+│   │   └── Restore_Script.ps1
+│   └── Screenshots/
+│       ├── Backup_Procedure_Screenshot.png
+│       └── Recovery_Test_Screenshot.png
 │
-├── 04_IT_Support/                             # IT support scripts and troubleshooting tools
-│   ├── Scripts/                                # Common scripts (password resets, troubleshooting, etc.)
-│   ├── Troubleshooting/                        # Network troubleshooting guides and tools
-│   └── README.md                               # IT support guide and tools overview
+├── 06_Sentinel & Defender Integration/
+│   ├── Documentation/
+│   │   ├── Defender_Endpoint_Integration.md
+│   │   ├── Sentinel_Configuration.md
+│   │   └── Alert_Rules_Setup.md
+│   ├── Scripts/
+│   │   ├── Defender_Endpoint_Config.ps1
+│   │   └── Sentinel_Log_Integration.ps1
+│   └── Screenshots/
+│       ├── Defender_Endpoint_Screenshot.png
+│       └── Sentinel_Alert_Rules_Screenshot.png
 │
-├── 05_Compliance_NIST_ISO/                     # Documentation for ISO/NIST compliance mapping
-│   ├── ISO_27001_Mapping/                      # ISO/IEC 27001 controls and implementation
-│   ├── NIST_CSF_Mapping/                       # NIST CSF controls and implementation
-│   └── README.md                               # Summary of compliance mapping
+├── 07_Phishing Simulation & User Awareness/
+│   ├── Documentation/
+│   │   ├── Phishing_Simulation_Guide.md
+│   │   ├── Awareness_Training_Suggestions.md
+│   │   └── User_Vulnerability_Report.md
+│   ├── Screenshots/
+│       ├── Phishing_Simulation_Results.png
+│       └── Awareness_Training_Example.png
 │
-├── 06_Phishing_Simulation/                     # Phishing simulation and user awareness training
-│   ├── Phishing_Emails/                        # Sample phishing emails
-│   ├── User_Training/                          # User awareness training materials
-│   ├── Defender_Logs/                          # Logs from Microsoft Defender related to phishing
-│   └── README.md                               # Overview of phishing simulation process and lessons learned
+├── 08_Forensics Post-Attack/
+│   ├── Documentation/
+│   │   ├── Incident_Response_Plan.md
+│   │   ├── Forensic_Analysis_Guide.md
+│   │   └── Attack_Timeline.md
+│   ├── Scripts/
+│   │   ├── Log_Collection_Script.ps1
+│   │   └── IoC_Search_Script.ps1
+│   └── Screenshots/
+│       ├── Forensics_Screenshot.png
+│       └── Attack_Timeline_Screenshot.png
 │
-├── 07_Final_Documentation/                     # Final reports, conclusions, and cleanup
-│   ├── Final_Report/                           # Summary of the entire implementation and findings
-│   ├── Export_PDF/                             # Final exported PDF documentation
-│   ├── Conclusion_Reports/                     # Detailed conclusions and lessons learned
-│   └── README.md                               # Documentation for final project cleanup and summary
+├── 09_Post-Incident Recovery & Integrity Check/
+│   ├── Documentation/
+│   │   ├── Recovery_Guidelines.md
+│   │   ├── Integrity_Check_Procedure.md
+│   │   └── Service_Functionality_Test.md
+│   ├── Scripts/
+│   │   ├── Integrity_Check_Script.ps1
+│   │   └── Service_Test_Script.ps1
+│   └── Screenshots/
+│       ├── Integrity_Check_Results.png
+│       └── Service_Functionality_Screenshot.png
 │
-└── LICENSE                                      # Project license (e.g., MIT License)
-
+├── 10_Compliance Mapping (ISO/NIST)/
+│   ├── Documentation/
+│   │   ├── Compliance_Mapping_Guide.md
+│   │   ├── ISO_27001_Annex_A.md
+│   │   └── NIST_CSF_Controls.md
+│   └── Screenshots/
+│       ├── Compliance_Report_Example.png
+│       └── Gap_Analysis_Example.png
+│
+└── README.md
 ```
 ---
 
