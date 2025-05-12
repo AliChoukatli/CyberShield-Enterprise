@@ -18,7 +18,7 @@ In this phase, we focus on core IT support tasks:
 
 ## 🔴 **Create OUs for Each Department**
 
-Create the following Organizational Units directly under the domain `corp.aclab.tech`:
+Create the following Organizational Units directly under the domain `corp.aclab.tech`
 
 * IT
 * HR
@@ -27,7 +27,7 @@ Create the following Organizational Units directly under the domain `corp.aclab.
 * Groups (for all AD security groups)
 * Service Accounts (for service-level accounts)
 
-![* OU creation window](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Create_OU.png)
+![OU creation-window](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Create_OU.png)
 
 Once done, verify the structure:
 
@@ -54,7 +54,7 @@ Once done, verify the structure:
 * [Add Single User Script](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_user.ps1)
 
  ## 🔴 **Adding Users to Domain Users Group - Verification**
- *Ensure that the user is part of the "Domain Users" group for basic domain access permissions.*
+ *Ensure that the user is part of the `Domain Users` group for basic domain access permissions.*
 
 If the user is not already a member of the **Domain Users** group, follow these steps:
 
