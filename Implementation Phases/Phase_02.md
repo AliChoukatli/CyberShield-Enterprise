@@ -212,15 +212,12 @@ Ensure that selected users (e.g., `Sophia Martinez`) can securely connect via RD
 
 5. Test the Access:
 
-- Log in as Sophia Martinez from another device using RDP to LTP-EMP01.
-
-- If issues occur, check:
-
-- Group membership of the user.
-
-- GPO application (use gpresult /r).
-
-- The local Remote Desktop Users group if needed.
+ - Log in as Sophia Martinez from another device using RDP to LTP-EMP01.
+   
+ - If issues occur, check:
+   - Group membership of the user.
+   - GPO application (use gpresult /r).
+   - The local Remote Desktop Users group if needed.
  
  --- 
  
