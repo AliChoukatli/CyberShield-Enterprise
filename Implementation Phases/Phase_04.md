@@ -146,8 +146,6 @@ This structure ensures proper organization and easier management of cloud-origin
 To enable seamless Single Sign-On for hybrid identities:
 
 - Use a **Domain Admin** credential when prompted.
-- If you receive the error "`not a domain admin credential`", make sure the account is a member of the `Domain Admins` group in Active Directory.
-
 > 💡 Only accounts with domain-level privileges can configure SSO delegation settings.
 
 #### 10. Launch Synchronization
@@ -181,6 +179,26 @@ Start-ADSyncSyncCycle -PolicyType Delta
 
 
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### ✅ 1.5 – Verify in Entra ID
 - Go to: https://entra.microsoft.com
