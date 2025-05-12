@@ -82,7 +82,7 @@ systeminfo | findstr /i "domain"
 - **Select "Password Hash Synchronization (Hash Sync)"** to synchronize your on-premises Active Directory passwords with Azure AD..
   
 
-![Enable-SSO](
+![Enable-SSO](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/enable-sso.png)
 
 #### 4. Specify Azure AD Administrator Username for Synchronization
 
@@ -93,7 +93,7 @@ For Azure AD Connect to authenticate with your Azure AD tenant, specify the **ad
 
 This username will be used by Azure AD Connect to synchronize your on-premises Active Directory with Azure AD.
 
-![username-connect](
+![username-connect](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/username-connect.png)
 
 #### 5. Connect Your Directories
 
@@ -112,7 +112,7 @@ At this step, you will link your on-premises Active Directory (`corp.aclab.tech`
    - **Select**: `Use Existing Account` to connect to your on-premises Active Directory forest.
    - **Enter** the credentials of the sync account you just created (e.g., `corp.aclab.tech\syncadmin`).
   
-![dir-connect]()
+![dir-connect](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/dir-connect.png)
 
 3. Once the directory is validated, **click Next** to proceed.
    
@@ -120,7 +120,7 @@ At this step, you will link your on-premises Active Directory (`corp.aclab.tech`
 
 #### 7. Choose **"Users are represented only once across all directories".** & **Let Azrure manage the source anchor.
    
-![azure-manage](
+![azure-manage](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/azure-manage.png)
 
 
 #### 8. Enable Password Writeback and Group Writeback
@@ -139,6 +139,7 @@ When prompted to select the **on-premises destination for group writeback**, cre
 
 This structure ensures proper organization and easier management of cloud-originated groups within your on-premises Active Directory.
 
+![Groups-Writeback](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/Groups-Writeback.png)
 
 #### 9. Enable Single Sign-On (SSO)
 
@@ -155,83 +156,33 @@ After reviewing all settings and ensuring the configuration is correct:
 
 - Click **Install** to begin the installation and initial synchronization.
 - This process may take several minutes depending on the number of objects in Active Directory.
-- Once completed, the synchronization status can be reviewed via **Synchronization Service Manager** or the **Microsoft Entra admin portal**.
- ---
+ - Once the configuration is complete, on the server where **Azure AD Connect** is installed, open PowerShell and run the following command to force synchronization:
+
+```powershell
+Start-ADSyncSyncCycle -PolicyType Delta
+```
+![Sync-Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/Sync-Success.png)
+
+#### **Notes : The synchronization status can be reviewed via **Synchronization Service Manager** or the **Microsoft Entra admin portal**.
+
 
 ### ✅ 1.4 Verification in Microsoft Entra ID
 
-After the initial synchronization:
-
 - Open the [Microsoft Entra admin center](https://entra.microsoft.com)
-- Navigate to **Users** under **Identity**
+- Navigate to **Users** 
 - Confirm that your on-premises users (e.g., `ali.choukatli@corp.aclab.tech`) appear in the list.
-- Check the **Source** column to ensure it shows **"Windows Server AD"**
 
-📸 **Screenshot to include:**  
-A screenshot of the user list showing the synced users and their source as "Windows Server AD"
+![Users-Sync](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/Users-Sync.png)
+
+- Navigate to **Groups** 
+- Confirm that your Groups appear in the list.
+
+![Groups-Sync](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/Goups-Sync.png)
 
 
-After the initial synchronization:
+---
 
-- Open the [Microsoft Entra admin center](https://entra.microsoft.com)
-- Navigate to **Users** under **Identity**
-- Confirm that your on-premises users (e.g., `ali.choukatli@corp.aclab.tech`) appear in the list.
-- Check the **Source** column to ensure it shows **"Windows Server AD"**
-
-📸 **Screenshot to include:**  
-A screenshot of the user list showing the synced users and their source as "Windows Server AD"
-  
-### ✅ 1.5 - **Configure Device Options**:
-
-- Click on **"Configure device options"**.
-- Continue until you reach the **Device options** section.
-
-#### 7. **Enable Hybrid Azure AD Join**:
-- Select **"Configure Hybrid Azure AD Join"**. This is where you configure the Hybrid Azure AD Join for your on-premises Active Directory to Azure AD.
-
-📸 **Screenshot to capture**: The screen where **"Configure Hybrid Azure AD Join"** is selected.
-
-#### 8. **Specify the Devices to Sync**:
-- Select **Windows 10 or later domain-joined devices** to specify that you want to join Windows 10 or newer devices to Azure AD.
-- Choose your local domain **corp.aclab.tech**.
-
-📸 **Screenshot to capture**: The screen where you select your domain **corp.aclab.tech**.
-
-#### 9. **Configure and Force Synchronization**:
-- Click **Next**, then **Configure** to finalize the configuration.
-- Once the configuration is complete, on the server where **Azure AD Connect** is installed, open PowerShell and run the following command to force synchronization:
-
-```powershell
-Start-ADSyncSyncCycle -PolicyType Delta
-```
-📸 Screenshot to capture: The output of the PowerShell sync command.
-
-#### 10. Verify in Entra ID (Azure AD):
-- Go to https://entra.microsoft.com.
-
-- Navigate to Devices > All Devices.
-
-- Check that your devices are listed with Join Type = Hybrid Azure AD joined.
-
-📸 Screenshot to capture: The table showing your devices with Hybrid Azure AD joined.
-
-### ✅ 1.6 – Specify Local Domain
-- Select Windows 10 or later domain-joined devices.
-
-- Choose your local domain: `corp.aclab.tech`
-
-- Click Next, then click Configure.
-
-📸 Screenshot to capture: The domain selection screen showing corp.aclab.tech.
-
-### ✅ 1.7 – Force a Synchronization
-On the server with Azure AD Connect, run the following PowerShell command:
-```powershell
-Start-ADSyncSyncCycle -PolicyType Delta
-```
-📸 Screenshot to capture: The output of the PowerShell sync command.
-
-### ✅ 1.8 – Verify in Entra ID
+### ✅ 1.5 – Verify in Entra ID
 - Go to: https://entra.microsoft.com
 
 - Navigate to Devices > All Devices.
