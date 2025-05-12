@@ -58,28 +58,28 @@ systeminfo | findstr /i "domain"
 
 
 1.2 – Download and Install Azure AD Connect
-Go to the official Microsoft page for Azure AD Connect: Azure AD Connect - Microsoft.
+- Go to the official Microsoft page for Azure AD Connect: Azure AD Connect - Microsoft.
 
-Click Download to download the installer.
+- Click Download to download the installer.
 
-Once the download is complete, run the file to start the installation of Azure AD Connect.
+- Once the download is complete, run the file to start the installation of Azure AD Connect.
 
-Follow the installation instructions until the tool is ready for configuration.
+- Follow the installation instructions until the tool is ready for configuration.
 
 1.3 – Configure Azure AD Connect
-On your domain controller:
+-On your domain controller:
 
-Open Azure AD Connect.
+- Open Azure AD Connect.
 
-Click Configure.
+- Click Configure.
 
-Select Configure device options.
+- Select Configure device options.
 
-Click Next until you reach the Device options section.
+- Click Next until you reach the Device options section.
 
-Select Configure Hybrid Azure AD Join.
+- Select Configure Hybrid Azure AD Join.
 
-Click Next.
+- Click Next.
 
 📸 Screenshot to capture: The screen where "Configure Hybrid Azure AD Join" is selected.
 
