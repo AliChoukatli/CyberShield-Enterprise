@@ -58,7 +58,7 @@ systeminfo | findstr /i "domain"
 
 
 ### ✅ 1.2 – Download and Install Azure AD Connect
-- Go to the [official Microsoft page](https://www.microsoft.com/en-us/download/details.aspx?id=47594) for Azure AD Connect: Azure AD Connect - Microsoft.
+- Go to the official [Microsoft page](https://www.microsoft.com/en-us/download/details.aspx?id=47594) for Azure AD Connect: Azure AD Connect - Microsoft.
 
 - Click Download to download the installer.
 
