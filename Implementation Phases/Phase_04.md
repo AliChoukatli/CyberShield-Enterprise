@@ -92,7 +92,7 @@ Before configuring device options and Hybrid Azure AD Join, you need to select t
   - **Federation (with third-party providers)**:
     - Choose this option if you are using a third-party identity provider (such as Okta or PingFederate) to federate Azure AD with that provider.
 
-- **Recommendation**: For a simpler setup, choose **Hash Sync**.
+- **Recommendation**: For a simpler setup, choose **Hash Sync** and **Emable single sign-on**
 
 📸 **Screenshot to capture**: The screen where you select the **Sign-In Method** (Hash Sync, AD FS, etc.).
 
