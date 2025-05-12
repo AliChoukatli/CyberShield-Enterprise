@@ -84,11 +84,10 @@ systeminfo | findstr /i "domain"
 
 ![Enable-SSO](
 
-#### 4. Before proceeding with the synchronization, you will need to specify the **Azure AD administrator username** and **password** for Azure AD Connect to authenticate with your Azure AD tenant.
+#### 4. **Before proceeding with the synchronization, you will need to specify the **Azure AD administrator username** and **password** for Azure AD Connect to authenticate with your Azure AD tenant.**
 
 - If you have already set up your custom domain (**corp.aclab.tech**) in Azure AD, use the username associated with your domain, such as **admin@corp.aclab.tech**.
 - If you have not set up your custom domain and are still using the default **onmicrosoft.com** domain, use the username **admin@corpaclabtech.onmicrosoft.com**.
-
 
 #### 5. **Configure Device Options**:
 - Click on **"Configure device options"**.
