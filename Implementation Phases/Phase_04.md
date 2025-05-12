@@ -43,61 +43,70 @@ Enable on-premises domain-joined devices (e.g., `LTP-HLP01`, `LTP-EMP01`) to als
 ### ✅ 1.1 – Verify On-Prem Domain Join
 Run the following on each client machine:
 
+- Verify the fully qualified domain name (FQDN)
 ```bash
 whoami /fqdn
+```
+- Verify domain membership:
+```
 systeminfo | findstr /i "domain"
 ```
+
 ![whoami-hlp01](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/whoami-hlp01.png)
 
 ![whoami-emp01](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/whoami-emp01.png)
 
 
- 1.2 – Configure Azure AD Connect
+1.2 – Download and Install Azure AD Connect
+Go to the official Microsoft page for Azure AD Connect: Azure AD Connect - Microsoft.
+
+Click Download to download the installer.
+
+Once the download is complete, run the file to start the installation of Azure AD Connect.
+
+Follow the installation instructions until the tool is ready for configuration.
+
+1.3 – Configure Azure AD Connect
 On your domain controller:
 
-1. Open Azure AD Connect
+Open Azure AD Connect.
 
-2. Click Configure
+Click Configure.
 
-3. Select Configure device options
+Select Configure device options.
 
-4. Click Next through until Device options
+Click Next until you reach the Device options section.
 
-5. Select Configure Hybrid Azure AD Join
+Select Configure Hybrid Azure AD Join.
 
-6. Click Next
+Click Next.
 
 📸 Screenshot to capture: The screen where "Configure Hybrid Azure AD Join" is selected.
 
-✅ 1.3 – Specify Local Domain
+1.4 – Specify Local Domain
+- Select Windows 10 or later domain-joined devices.
 
-1. Select Windows 10 or later domain-joined devices
+- Choose your local domain: corp.aclab.tech.
 
-2. Choose your local domain: corp.aclab.tech
+- Click Next, then click Configure.
 
-3. Click Next, then Configure
+📸 Screenshot to capture: The domain selection screen showing corp.aclab.tech.
 
-📸 Screenshot to capture: Domain selection screen showing corp.aclab.tech.
-
-✅ 1.4 – Force a Synchronization
-On the server with Azure AD Connect, run:
+1.5 – Force a Synchronization
+On the server with Azure AD Connect, run the following PowerShell command:
 ```powershell
 Start-ADSyncSyncCycle -PolicyType Delta
 ```
-📸 Screenshot to capture: Output of the PowerShell sync command.
+📸 Screenshot to capture: The output of the PowerShell sync command.
 
+1.6 – Verify in Entra ID
+- Go to: https://entra.microsoft.com
 
-✅ 1.5 – Verify in Entra ID
+- Navigate to Devices > All Devices.
 
-1. Go to: https://entra.microsoft.com
+- Check for devices showing Join Type = Hybrid Azure AD joined.
 
-2. Navigate to Devices > All Devices
-
-3. Check for devices showing Join Type = Hybrid Azure AD joined
-
-📸 Screenshot to capture: Table listing your joined device(s) with Hybrid Azure AD joined.
-
-
+📸 Screenshot to capture: The table listing your joined device(s) with "Hybrid Azure AD joined".
 ---
 
 ## Step 2: Manage Devices Using Microsoft Intune
