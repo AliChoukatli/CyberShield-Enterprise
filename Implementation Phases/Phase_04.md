@@ -157,7 +157,7 @@ After reviewing all settings and ensuring the configuration is correct:
 - This process may take several minutes depending on the number of objects in Active Directory.
 - Once completed, the synchronization status can be reviewed via **Synchronization Service Manager** or the **Microsoft Entra admin portal**.
   
-### ✅ 1.3 - **Configure Device Options**:
+### ✅ 1.4 - **Configure Device Options**:
 
 - Click on **"Configure device options"**.
 - Continue until you reach the **Device options** section.
@@ -191,7 +191,7 @@ Start-ADSyncSyncCycle -PolicyType Delta
 
 📸 Screenshot to capture: The table showing your devices with Hybrid Azure AD joined.
 
-### ✅ 1.4 – Specify Local Domain
+### ✅ 1.5 – Specify Local Domain
 - Select Windows 10 or later domain-joined devices.
 
 - Choose your local domain: `corp.aclab.tech`
@@ -200,14 +200,14 @@ Start-ADSyncSyncCycle -PolicyType Delta
 
 📸 Screenshot to capture: The domain selection screen showing corp.aclab.tech.
 
-### ✅ 1.5 – Force a Synchronization
+### ✅ 1.6 – Force a Synchronization
 On the server with Azure AD Connect, run the following PowerShell command:
 ```powershell
 Start-ADSyncSyncCycle -PolicyType Delta
 ```
 📸 Screenshot to capture: The output of the PowerShell sync command.
 
-### ✅ 1.6 – Verify in Entra ID
+### ✅ 1.7 – Verify in Entra ID
 - Go to: https://entra.microsoft.com
 
 - Navigate to Devices > All Devices.
