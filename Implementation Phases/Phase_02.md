@@ -144,8 +144,8 @@ C:\SharedFolders\IT
 
 | Group       | Share Permission |
 |-------------|------------------|
-| IT_Admins   | Full Control     |
-| IT_Users    | Read             |
+| IT-Admins   | Full Control     |
+| IT-Users    | Read             |
 
 ![Sharing](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Sharing.png)
 
@@ -155,8 +155,8 @@ C:\SharedFolders\IT
 
 | Group       | NTFS Permission    |
 |-------------|--------------------|
-| IT_Admins   | Full Control       |
-| IT_Users    | Read & Execute     |
+| IT-Admins   | Full Control       |
+| IT-Users    | Read & Execute     |
 
 ![NTFS-admins](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/NTFS-admin.png)
 
