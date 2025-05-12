@@ -205,11 +205,19 @@ Ensure that users, like `Sophia Martinez`, can connect to a VM (LTP-EMP01) via R
    ```bash
    gpupdate /force
    ```
-5. Check User Access:
-   Verify that Sophia Martinez can log in via RDP on LTP-EMP01.
-   If you encounter any issues, check the Local Security Policy for any conflicting settings and confirm that the user is in the correct groups.
---- 
 
+5. Test the Access:
+
+- Log in as Sophia Martinez from another device using RDP to LTP-EMP01.
+
+- If issues occur, check:
+
+- Group membership of the user.
+
+ - GPO application (use gpresult /r).
+   
+ --- 
+ 
  ## ⚠️ **Delete an Organizational Unit (OU)**
 
 1. In ADUC, go to **View** > enable **Advanced Features**
