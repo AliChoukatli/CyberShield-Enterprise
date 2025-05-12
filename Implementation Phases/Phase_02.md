@@ -124,7 +124,7 @@ Disable the account before deleting to avoid accidental data loss.
 
 
 
-## 📁 **Share a folder : Create & Share an IT Support Folder on Windows Server**
+## 📁 **Step 5 - Share a folder : Create & Share an IT Support Folder on Windows Server**
 
 ### 🎯 Objective
 Simulate a secure file-sharing environment by configuring NTFS and share permissions on a central folder hosted on the domain controller.
