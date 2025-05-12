@@ -89,7 +89,7 @@ systeminfo | findstr /i "domain"
 For Azure AD Connect to authenticate with your Azure AD tenant, specify the **administrator username** associated with your Azure AD account:
 
 - If you have your custom domain (e.g., **corp.aclab.tech**) in Azure AD, use the associated username (e.g., **admin@corp.aclab.tech**).
-- If you're still using the default **onmicrosoft.com** domain, use a username like **admin@<yourtenant>.onmicrosoft.com**.
+- If you're still using the default **onmicrosoft.com** domain, use a username like **admin@[yourtenant].onmicrosoft.com**.
 
 This username will be used by Azure AD Connect to synchronize your on-premises Active Directory with Azure AD.
 
