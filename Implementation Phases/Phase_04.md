@@ -66,39 +66,19 @@ systeminfo | findstr /i "domain"
 
 - Follow the installation instructions until the tool is ready for configuration.
 
-### ✅ 1.3 – Configure Azure AD Connect (Hybrid Azure AD Join)
+### ✅ 1.3 – Configure Azure AD Connect (Custom Setup & Hybrid Azure AD Join)
 
-📍 On your **domain controller** (DC):
+1. **On your domain controller**:
+   - Launch **Azure AD Connect**.
+   - Select **Customize**.
 
-1. Open **Azure AD Connect**.
-2. Click **Configure**.
-3. Select **Configure device options**, then click **Next**.
-4. Choose **"Configure Hybrid Azure AD Join"**, then click **Next**.
-
-📸 **Screenshot to capture:** The screen where _"Configure Hybrid Azure AD Join"_ is selected.
-
----
-
-### 🔐 Azure AD Credentials
-
-When prompted, sign in using your **Azure AD Global Administrator account**, for example:
-`admin@corpaclabtech.onmicrosoft.com`
-
-📌 This account connects your local domain (`corp.aclab.tech`) with your Azure AD tenant (`admin@corpaclabtech.onmicrosoft.com`).
-
----
-
-5. Select **Windows 10 or later domain-joined devices**, then click **Next**.
-6. Choose your **local domain** (e.g., `corp.aclab.tech`), then click **Next**.
-7. Click **Configure** to complete the setup.
-
-📸 **Screenshot to capture:** The screen showing your local domain selection (`corp.aclab.tech`).
-
+2. **Connect to Azure AD**:
+   - Sign in with your **Azure AD Global Administrator account**, for example: `admin@corpaclabtech.onmicrosoft.com`
 
 ### ✅ 1.4 – Specify Local Domain
 - Select Windows 10 or later domain-joined devices.
 
-- Choose your local domain: corp.aclab.tech.
+- Choose your local domain: `corp.aclab.tech`
 
 - Click Next, then click Configure.
 
