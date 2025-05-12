@@ -84,10 +84,15 @@ systeminfo | findstr /i "domain"
 
 ![Enable-SSO](
 
-#### 4. For Azure AD Connect to authenticate with your Azure AD tenant, specify the **administrator username** associated with your Azure AD account:
+#### 4 – Specify Azure AD Administrator Username for Synchronization
 
-- If you have set up a custom domain (**corp.aclab.tech**) in Azure AD, use the associated username (**admin@corp.aclab.tech**).
-- If you are using the default **onmicrosoft.com** domain, use **admin@corpaclabtech.onmicrosoft.com**.
+For Azure AD Connect to authenticate with your Azure AD tenant, specify the **administrator username** associated with your Azure AD account:
+
+- If you have configured your custom domain (e.g., **corp.aclab.tech**) in Azure AD, use the associated username (e.g., **admin@corp.aclab.tech**).
+- If you're still using the default **onmicrosoft.com** domain, use a username like **admin@<yourtenant>.onmicrosoft.com**.
+
+This username will be used by Azure AD Connect to synchronize your on-premises Active Directory with Azure AD.
+
 
 
 #### 5. **Configure Device Options**:
