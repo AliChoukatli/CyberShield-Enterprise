@@ -106,7 +106,7 @@ At this step, you will link your on-premises Active Directory (`corp.aclab.tech`
 2. **Add Directory**:
    - **Click**: `Add Directory`
    - **Select**: `Use Existing Account` to connect to your on-premises Active Directory forest.
-   - **Enter** the credentials of the sync account you just created (e.g., `corp.aclab.tech\adconnectsync`).
+   - **Enter** the credentials of the sync account you just created (e.g., `corp.aclab.tech\syncadmin`).
 
 3. Once the directory is validated, **click Next** to proceed.
 📸 **Screenshot to capture**: The screen showing that your local domain `corp.aclab.tech` has been successfully added.
