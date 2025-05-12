@@ -79,7 +79,7 @@ systeminfo | findstr /i "domain"
 
 #### 3. **Choose the Sign-In Method**:
 
--**Select "Password Hash Synchronization (Hash Sync)"** to synchronize your on-premises Active Directory passwords with Azure AD..
+- **Select "Password Hash Synchronization (Hash Sync)"** to synchronize your on-premises Active Directory passwords with Azure AD..
   
 
 📸 **Screenshot to capture**: The screen where you select the **Sign-In Method** (Hash Sync, AD FS, etc.).
