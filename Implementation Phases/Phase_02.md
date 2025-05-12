@@ -172,35 +172,39 @@ capture
 ## 🔴 Step 6 - Configuring RDP Permissions
 
 ### 🎯 Objective
-Ensure that users, like `Sophia Martinez`, can connect to a VM (LTP-EMP01) via RDP by configuring the appropriate permissions.
+Ensure that selected users (e.g., `Sophia Martinez`) can securely connect via RDP to a VM (LTP-EMP01) by granting permissions only to an authorized group.
 
 ### 🛠️ Steps
 
-1. **Create and Configure a Group Policy Object (GPO) for RDP Permissions**:
-   
-   - Open the **Group Policy Management Console**.
-   - Right-click on the **Domain** > **Create a GPO in this domain, and Link it here...**.
-   - Name the GPO (e.g., `Allow Domain Users RDP`).
-   - Edit the GPO:
-     - Navigate to **Computer Configuration** > **Policies** > **Windows Settings** > **Security Settings** > **Local Policies** > **User Rights Assignment**.
-     - Double-click on **Allow log on through Remote Desktop Services**.
-     - Add **Domain Users** to the list of users and groups allowed.
-
-2. **Create the `RDP-Users` Group**:
+1. **Create the `RDP-Users` Group**:
 
    - Open **Active Directory Users and Computers (ADUC)**.
    - Right-click on the **Users** container > **New** > **Group**.
-   - Name the group `RDP-Users` and set it as a **Security Group**.
+   - Name the group `RDP-Users`.
+   - Set the group type to **Security**.
    - Click **OK**.
 
-3. **Add Users to the `RDP-Users` Group**:
+2. **Add Users to the `RDP-Users` Group**:
 
    - Right-click on the `RDP-Users` group > **Properties** > **Members** > **Add**.
-   - Add users, such as `Sophia Martinez`, who should be allowed to log in via RDP.
+   - Add users such as `Sophia Martinez`.
+
+3. **Create and Configure a GPO for RDP Access**:
+
+   - Open the **Group Policy Management Console**.
+   - Right-click on your **Domain** > **Create a GPO in this domain, and Link it here...**.
+   - Name the GPO (e.g., `RDP Access Policy`).
+   - Edit the GPO:
+     - Navigate to:  
+       **Computer Configuration** > **Policies** > **Windows Settings** >  
+       **Security Settings** > **Local Policies** > **User Rights Assignment**.
+     - Open **Allow log on through Remote Desktop Services**.
+     - **Remove** any unnecessary default entries (like `Domain Users`) if present.
+     - **Add only** the `RDP-Users` group.
 
 4. **Force a Group Policy Update**:
-   
-   On the target machine (**LTP-EMP01**), run the following command to apply the new settings immediately:
+
+   On the target VM (**LTP-EMP01**), run:
 
    ```bash
    gpupdate /force
@@ -214,8 +218,10 @@ Ensure that users, like `Sophia Martinez`, can connect to a VM (LTP-EMP01) via R
 
 - Group membership of the user.
 
- - GPO application (use gpresult /r).
-   
+- GPO application (use gpresult /r).
+
+- The local Remote Desktop Users group if needed.
+ 
  --- 
  
  ## ⚠️ **Delete an Organizational Unit (OU)**
