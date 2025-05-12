@@ -156,8 +156,32 @@ After reviewing all settings and ensuring the configuration is correct:
 - Click **Install** to begin the installation and initial synchronization.
 - This process may take several minutes depending on the number of objects in Active Directory.
 - Once completed, the synchronization status can be reviewed via **Synchronization Service Manager** or the **Microsoft Entra admin portal**.
+ ---
+
+### ✅ 1.4 Verification in Microsoft Entra ID
+
+After the initial synchronization:
+
+- Open the [Microsoft Entra admin center](https://entra.microsoft.com)
+- Navigate to **Users** under **Identity**
+- Confirm that your on-premises users (e.g., `ali.choukatli@corp.aclab.tech`) appear in the list.
+- Check the **Source** column to ensure it shows **"Windows Server AD"**
+
+📸 **Screenshot to include:**  
+A screenshot of the user list showing the synced users and their source as "Windows Server AD"
+
+
+After the initial synchronization:
+
+- Open the [Microsoft Entra admin center](https://entra.microsoft.com)
+- Navigate to **Users** under **Identity**
+- Confirm that your on-premises users (e.g., `ali.choukatli@corp.aclab.tech`) appear in the list.
+- Check the **Source** column to ensure it shows **"Windows Server AD"**
+
+📸 **Screenshot to include:**  
+A screenshot of the user list showing the synced users and their source as "Windows Server AD"
   
-### ✅ 1.4 - **Configure Device Options**:
+### ✅ 1.5 - **Configure Device Options**:
 
 - Click on **"Configure device options"**.
 - Continue until you reach the **Device options** section.
@@ -191,7 +215,7 @@ Start-ADSyncSyncCycle -PolicyType Delta
 
 📸 Screenshot to capture: The table showing your devices with Hybrid Azure AD joined.
 
-### ✅ 1.5 – Specify Local Domain
+### ✅ 1.6 – Specify Local Domain
 - Select Windows 10 or later domain-joined devices.
 
 - Choose your local domain: `corp.aclab.tech`
@@ -200,14 +224,14 @@ Start-ADSyncSyncCycle -PolicyType Delta
 
 📸 Screenshot to capture: The domain selection screen showing corp.aclab.tech.
 
-### ✅ 1.6 – Force a Synchronization
+### ✅ 1.7 – Force a Synchronization
 On the server with Azure AD Connect, run the following PowerShell command:
 ```powershell
 Start-ADSyncSyncCycle -PolicyType Delta
 ```
 📸 Screenshot to capture: The output of the PowerShell sync command.
 
-### ✅ 1.7 – Verify in Entra ID
+### ✅ 1.8 – Verify in Entra ID
 - Go to: https://entra.microsoft.com
 
 - Navigate to Devices > All Devices.
