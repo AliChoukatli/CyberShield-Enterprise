@@ -169,7 +169,7 @@ capture
 
 --- 
 
-## 🔴 Step 6 - Configuring RDP Permissions
+## 🔴 **Configuring RDP Permissions**
 
 ### 🎯 Objective
 Ensure that selected users (e.g., `Sophia Martinez`) can securely connect via RDP to a VM (LTP-EMP01) by granting permissions only to an authorized group.
