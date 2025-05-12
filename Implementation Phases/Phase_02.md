@@ -169,34 +169,46 @@ capture
 
 --- 
 
-## 🔴 **Configuring RDP and User Logon Permissions**
+#### 🔴 Step 6 - Configuring RDP and User Logon Permissions
 
-### 🎯 **Objective**
-Ensure users like `Sophia Martinez` can log on locally to a VM (LTP-EMP01) and connect via RDP by configuring appropriate permissions.
+### 🎯 Objective
+Ensure that users, like `Sophia Martinez`, can log on locally to a VM (LTP-EMP01) and connect via RDP by configuring the appropriate permissions.
 
-### 🛠️ **Steps**
+### 🛠️ Steps
 
-1. On the **Domain Controller**, create and configure a GPO to manage logon permissions for users in the domain:
+1. **Create and Configure a Group Policy Object (GPO) for Logon Permissions**:
    
-   - Open the Group Policy Management console.
+   - Open the **Group Policy Management Console**.
    - Right-click on the **Domain** > **Create a GPO in this domain, and Link it here...**.
    - Name the GPO (e.g., `Allow Domain Users RDP & Local Logon`).
    - Edit the GPO:
-     - Go to **Computer Configuration** > **Policies** > **Windows Settings** > **Security Settings** > **Local Policies** > **User Rights Assignment**.
+     - Navigate to **Computer Configuration** > **Policies** > **Windows Settings** > **Security Settings** > **Local Policies** > **User Rights Assignment**.
      - Double-click on **Allow log on through Remote Desktop Services**.
      - Add **Domain Users** to the list of users and groups allowed.
 
-![RDP-policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/RDP-policy.png)
+2. **Create the `RDP-Users` Group**:
 
+   - Open **Active Directory Users and Computers (ADUC)**.
+   - Right-click on the **Users** container > **New** > **Group**.
+   - Name the group `RDP-Users` and set it as a **Security Group**.
+   - Click **OK**.
 
-2. **Force a Group Policy update**:
+3. **Add Users to the `RDP-Users` Group**:
+
+   - Right-click on the `RDP-Users` group > **Properties** > **Members** > **Add**.
+   - Add users, such as `Sophia Martinez`, who should be allowed to log in via RDP.
+
+4. **Force a Group Policy Update**:
    
-   - On the target machine (LTP-EMP01), run `gpupdate /force` to apply the new settings immediately.
+   On the target machine (**LTP-EMP01**), run the following command to apply the new settings immediately:
 
-3. On the target machine (eg: LTP-EMP01), check if **Sophia Martinez** can now log in directly and via RDP.
-   
-   - If you encounter issues, verify the group membership and check the **Local Security Policy** for any conflicting settings.
+   ```bash
+   gpupdate /force
+5. Check User Access:
 
+   Verify that Sophia Martinez can log in both locally and via RDP on LTP-EMP01.
+
+    If you encounter any issues, check the Local Security Policy for any conflicting settings and confirm that the user is in the correct groups.
 
  ## ⚠️ **Delete an Organizational Unit (OU)**
 
