@@ -161,7 +161,7 @@ Start-ADSyncSyncCycle -PolicyType Delta
 ```
 ![Sync-Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/Sync-Success.png)
 
-#### **Notes : The synchronization status can be reviewed via **Synchronization Service Manager** or the **Microsoft Entra admin portal**.
+#### *Notes : The synchronization status can be reviewed via **Synchronization Service Manager** or the **Microsoft Entra admin portal*.**
 
 
 ### ✅ 1.4 Verification in Microsoft Entra ID
