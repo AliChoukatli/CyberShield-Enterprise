@@ -101,7 +101,7 @@ At this step, you will link your on-premises Active Directory (`corp.aclab.tech`
 
 1. **Click**: `Add Directory`
 2. **Select**: `Use Existing Account` to connect to your existing on-premises Active Directory forest
-3. **Enter** your local domain administrator credentials (e.g., `corp\administrator`)
+3. **Enter** your local domain administrator credentials (e.g., `corp.aclab.tech\administrator`)
 4. Azure AD Connect will automatically detect your on-premises Active Directory forest (`corp.aclab.tech`)
 5. **Click Next** to proceed once the directory is validated
 
