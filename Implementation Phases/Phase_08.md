@@ -1,4 +1,4 @@
-# Phase 7: Phishing Simulation & User Awareness
+# Phase 8: Phishing Simulation & User Awareness
 
 ## 🧰 Prerequisites
 - Access to Microsoft 365 Security & Compliance Center.
