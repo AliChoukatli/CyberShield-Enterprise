@@ -201,6 +201,8 @@ Ensure that selected users (e.g., `Sophia Martinez`) can securely connect via RD
      - Open **Allow log on through Remote Desktop Services**.
      - **Remove** any unnecessary default entries (like `Domain Users`) if present.
      - **Add only** the `RDP-Users` group.
+    
+  ![RDP-policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/RDP-policy.png)
 
 4. **Force a Group Policy Update**:
 
