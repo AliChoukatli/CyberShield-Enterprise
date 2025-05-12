@@ -169,18 +169,18 @@ capture
 
 --- 
 
-#### 🔴 Step 6 - Configuring RDP and User Logon Permissions
+## 🔴 Step 6 - Configuring RDP Permissions
 
 ### 🎯 Objective
-Ensure that users, like `Sophia Martinez`, can log on locally to a VM (LTP-EMP01) and connect via RDP by configuring the appropriate permissions.
+Ensure that users, like `Sophia Martinez`, can connect to a VM (LTP-EMP01) via RDP by configuring the appropriate permissions.
 
 ### 🛠️ Steps
 
-1. **Create and Configure a Group Policy Object (GPO) for Logon Permissions**:
+1. **Create and Configure a Group Policy Object (GPO) for RDP Permissions**:
    
    - Open the **Group Policy Management Console**.
    - Right-click on the **Domain** > **Create a GPO in this domain, and Link it here...**.
-   - Name the GPO (e.g., `Allow Domain Users RDP & Local Logon`).
+   - Name the GPO (e.g., `Allow Domain Users RDP`).
    - Edit the GPO:
      - Navigate to **Computer Configuration** > **Policies** > **Windows Settings** > **Security Settings** > **Local Policies** > **User Rights Assignment**.
      - Double-click on **Allow log on through Remote Desktop Services**.
@@ -204,11 +204,11 @@ Ensure that users, like `Sophia Martinez`, can log on locally to a VM (LTP-EMP01
 
    ```bash
    gpupdate /force
+   ```
 5. Check User Access:
-
-   Verify that Sophia Martinez can log in both locally and via RDP on LTP-EMP01.
-
-    If you encounter any issues, check the Local Security Policy for any conflicting settings and confirm that the user is in the correct groups.
+   Verify that Sophia Martinez can log in via RDP on LTP-EMP01.
+   If you encounter any issues, check the Local Security Policy for any conflicting settings and confirm that the user is in the correct groups.
+--- 
 
  ## ⚠️ **Delete an Organizational Unit (OU)**
 
