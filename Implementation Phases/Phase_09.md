@@ -1,4 +1,4 @@
-# Phase 8: Forensics Post-Attack
+# Phase 9: Forensics Post-Attack
 
 ## 🧰 Prerequisites
 - Familiarity with Windows Event Logs.
