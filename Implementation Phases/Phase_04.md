@@ -82,24 +82,30 @@ systeminfo | findstr /i "domain"
 - **Select "Password Hash Synchronization (Hash Sync)"** to synchronize your on-premises Active Directory passwords with Azure AD..
   
 
-📸 **Screenshot to capture**: The screen where you select the **Sign-In Method** (Hash Sync, AD FS, etc.).
+![Enable-SSO](
 
-#### 4. **Configure Device Options**:
+#### 4. Before proceeding with the synchronization, you will need to specify the **Azure AD administrator username** and **password** for Azure AD Connect to authenticate with your Azure AD tenant.
+
+- If you have already set up your custom domain (**corp.aclab.tech**) in Azure AD, use the username associated with your domain, such as **admin@corp.aclab.tech**.
+- If you have not set up your custom domain and are still using the default **onmicrosoft.com** domain, use the username **admin@corpaclabtech.onmicrosoft.com**.
+
+
+#### 5. **Configure Device Options**:
 - Click on **"Configure device options"**.
 - Continue until you reach the **Device options** section.
 
-#### 5. **Enable Hybrid Azure AD Join**:
+#### 6. **Enable Hybrid Azure AD Join**:
 - Select **"Configure Hybrid Azure AD Join"**. This is where you configure the Hybrid Azure AD Join for your on-premises Active Directory to Azure AD.
 
 📸 **Screenshot to capture**: The screen where **"Configure Hybrid Azure AD Join"** is selected.
 
-#### 6. **Specify the Devices to Sync**:
+#### 7. **Specify the Devices to Sync**:
 - Select **Windows 10 or later domain-joined devices** to specify that you want to join Windows 10 or newer devices to Azure AD.
 - Choose your local domain **corp.aclab.tech**.
 
 📸 **Screenshot to capture**: The screen where you select your domain **corp.aclab.tech**.
 
-#### 7. **Configure and Force Synchronization**:
+#### 8. **Configure and Force Synchronization**:
 - Click **Next**, then **Configure** to finalize the configuration.
 - Once the configuration is complete, on the server where **Azure AD Connect** is installed, open PowerShell and run the following command to force synchronization:
 
@@ -108,7 +114,7 @@ Start-ADSyncSyncCycle -PolicyType Delta
 ```
 📸 Screenshot to capture: The output of the PowerShell sync command.
 
-8. Verify in Entra ID (Azure AD):
+#### 9. Verify in Entra ID (Azure AD):
 - Go to https://entra.microsoft.com.
 
 - Navigate to Devices > All Devices.
