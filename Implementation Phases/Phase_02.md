@@ -119,48 +119,10 @@ Disable the account before deleting to avoid accidental data loss.
 
 ---
 
-## 🔴 **Step 5 - Configuring RDP and User Logon Permissions**
-
-### 🎯 **Objective**
-Ensure users like `Sophia Martinez` can log on locally to a VM (LTP-EMP01) and connect via RDP by configuring appropriate permissions.
-
-### 🛠️ **Steps**
-
-1. On the **Domain Controller**, create and configure a GPO to manage logon permissions for users in the domain:
-   
-   - Open the Group Policy Management console.
-   - Right-click on the **Domain** > **Create a GPO in this domain, and Link it here...**.
-   - Name the GPO (e.g., `Allow Domain Users RDP & Local Logon`).
-   - Edit the GPO:
-     - Go to **Computer Configuration** > **Policies** > **Windows Settings** > **Security Settings** > **Local Policies** > **User Rights Assignment**.
-     - Double-click on **Allow log on through Remote Desktop Services**.
-     - Add **Domain Users** to the list of users and groups allowed.
-
-![RDP-policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/RDP-policy.png)
-
-
-2. **Force a Group Policy update**:
-   
-   - On the target machine (LTP-EMP01), run `gpupdate /force` to apply the new settings immediately.
-
-3. On the target machine (eg: LTP-EMP01), check if **Sophia Martinez** can now log in directly and via RDP.
-   
-   - If you encounter issues, verify the group membership and check the **Local Security Policy** for any conflicting settings.
 
 ---
 
-## ⚠️ **Delete an Organizational Unit (OU)**
 
-1. In ADUC, go to **View** > enable **Advanced Features**
-
-![Advanced Features](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Adv_feature.png)
-   
-2. Right-click the OU → **Properties** → **Object tab**  
-3. Uncheck **Protect object from accidental deletion** > OK
-   
-![Protect](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/protect.png)
-   
-4. Right-click OU > **Delete**
 
 ## 📁 **Share a folder : Create & Share an IT Support Folder on Windows Server**
 
@@ -204,6 +166,51 @@ C:\SharedFolders\IT
 
 ### On win11, you can access now to the IT folder
 capture
+
+--- 
+
+## 🔴 **Step 6 - Configuring RDP and User Logon Permissions**
+
+### 🎯 **Objective**
+Ensure users like `Sophia Martinez` can log on locally to a VM (LTP-EMP01) and connect via RDP by configuring appropriate permissions.
+
+### 🛠️ **Steps**
+
+1. On the **Domain Controller**, create and configure a GPO to manage logon permissions for users in the domain:
+   
+   - Open the Group Policy Management console.
+   - Right-click on the **Domain** > **Create a GPO in this domain, and Link it here...**.
+   - Name the GPO (e.g., `Allow Domain Users RDP & Local Logon`).
+   - Edit the GPO:
+     - Go to **Computer Configuration** > **Policies** > **Windows Settings** > **Security Settings** > **Local Policies** > **User Rights Assignment**.
+     - Double-click on **Allow log on through Remote Desktop Services**.
+     - Add **Domain Users** to the list of users and groups allowed.
+
+![RDP-policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/RDP-policy.png)
+
+
+2. **Force a Group Policy update**:
+   
+   - On the target machine (LTP-EMP01), run `gpupdate /force` to apply the new settings immediately.
+
+3. On the target machine (eg: LTP-EMP01), check if **Sophia Martinez** can now log in directly and via RDP.
+   
+   - If you encounter issues, verify the group membership and check the **Local Security Policy** for any conflicting settings.
+
+
+ ## ⚠️ **Delete an Organizational Unit (OU)**
+
+1. In ADUC, go to **View** > enable **Advanced Features**
+
+![Advanced Features](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Adv_feature.png)
+   
+2. Right-click the OU → **Properties** → **Object tab**  
+3. Uncheck **Protect object from accidental deletion** > OK
+   
+![Protect](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/protect.png)
+   
+4. Right-click OU > **Delete**
+
 
 ---
 
