@@ -39,7 +39,7 @@ Once done, verify the structure:
 
 - Navigate to an OU (e.g., IT) > Right-click > New > User
   
-![Create_user](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Create_User.png)]
+![Create_user](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Create_User.png)
    
 - Put the credenitals
 - Choose a password 
