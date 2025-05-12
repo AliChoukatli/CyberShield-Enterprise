@@ -115,19 +115,56 @@ At this step, you will link your on-premises Active Directory (`corp.aclab.tech`
 ![dir-connect]()
 
 3. Once the directory is validated, **click Next** to proceed.
-📸 **Screenshot to capture**: The screen showing that your local domain `corp.aclab.tech` has been successfully added.
+   
+#### 6. Select **Conitnue without matching all UPN suffixes to verified domains
 
-4. Select **"Users are represented only once across all directories".** & **Let Azrure manage the source anchor.
+#### 7. Choose **"Users are represented only once across all directories".** & **Let Azrure manage the source anchor.
    
 ![azure-manage](
 
-##### Configure Password Writeback and Group Writeback (Optional for Hybrid Environments)
 
-1. **Password Writeback**: Enable this option if you need Azure AD password changes to be written back to your on-premises AD, ensuring password consistency between environments.
+#### 8. Enable Password Writeback and Group Writeback
 
-2. **Group Writeback**: Enable this option if you want groups created or modified in Azure AD to sync back to your on-premises Active Directory.
+- ✅ **Password writeback**
+- ✅ **Group writeback**
 
-- After selecting these options, click **Next** to proceed.
+When prompted to select the **on-premises destination for group writeback**, create or choose an appropriate Organizational Unit (OU) such as `AzureAD-Groups` to store the synced groups from Azure AD.
+
+> 📁 Recommended OU structure:
+> ```
+> corp.aclab.tech/
+> └── AzureAD-Groups/
+>     └── [Groups synced from Azure AD]
+> ```
+
+This structure ensures proper organization and easier management of cloud-originated groups within your on-premises Active Directory.
+
+
+#### 9. Enable Single Sign-On (SSO)
+
+To enable seamless Single Sign-On for hybrid identities:
+
+- Use a **Domain Admin** credential when prompted.
+- If you receive the error "`not a domain admin credential`", make sure the account is a member of the `Domain Admins` group in Active Directory.
+
+> 💡 Only accounts with domain-level privileges can configure SSO delegation settings.
+
+### 10. Launch Synchronization
+
+After reviewing all settings and ensuring the configuration is correct:
+
+- Click **Install** to begin the installation and initial synchronization.
+- This process may take several minutes depending on the number of objects in Active Directory.
+- Once completed, the synchronization status can be reviewed via **Synchronization Service Manager** or the **Microsoft Entra admin portal**.
+
+
+
+
+
+
+
+
+
 
 #### 6. **Configure Device Options**:
 - Click on **"Configure device options"**.
