@@ -121,6 +121,13 @@ At this step, you will link your on-premises Active Directory (`corp.aclab.tech`
    
 ![azure-manage](
 
+##### Configure Password Writeback and Group Writeback (Optional for Hybrid Environments)
+
+1. **Password Writeback**: Enable this option if you need Azure AD password changes to be written back to your on-premises AD, ensuring password consistency between environments.
+
+2. **Group Writeback**: Enable this option if you want groups created or modified in Azure AD to sync back to your on-premises Active Directory.
+
+- After selecting these options, click **Next** to proceed.
 
 #### 6. **Configure Device Options**:
 - Click on **"Configure device options"**.
