@@ -149,24 +149,16 @@ To enable seamless Single Sign-On for hybrid identities:
 
 > 💡 Only accounts with domain-level privileges can configure SSO delegation settings.
 
-### 10. Launch Synchronization
+#### 10. Launch Synchronization
 
 After reviewing all settings and ensuring the configuration is correct:
 
 - Click **Install** to begin the installation and initial synchronization.
 - This process may take several minutes depending on the number of objects in Active Directory.
 - Once completed, the synchronization status can be reviewed via **Synchronization Service Manager** or the **Microsoft Entra admin portal**.
+  
+### ✅ 1.3 - **Configure Device Options**:
 
-
-
-
-
-
-
-
-
-
-#### 6. **Configure Device Options**:
 - Click on **"Configure device options"**.
 - Continue until you reach the **Device options** section.
 
