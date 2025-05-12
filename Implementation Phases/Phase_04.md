@@ -100,7 +100,7 @@ This username will be used by Azure AD Connect to synchronize your on-premises A
 At this step, you will link your on-premises Active Directory (`corp.aclab.tech`) with Azure AD using Azure AD Connect.
 
 1. **Click**: `Add Directory`
-2. **Authentication Type**: Select "Password Hash Synchronization"
+2. **Select**: `Use Existing Account` to connect to your existing on-premises Active Directory forest
 3. **Enter** your local domain administrator credentials (e.g., `corp\administrator`)
 4. Azure AD Connect will automatically detect your on-premises Active Directory forest (`corp.aclab.tech`)
 5. **Click Next** to proceed once the directory is validated
