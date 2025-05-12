@@ -1,4 +1,4 @@
-# Phase 4: Endpoint Security & Device Management 
+# Phase 4: Domain Join - Endpoint Security & Device Management 
 
 ## Objective
 This phase enables you to:
