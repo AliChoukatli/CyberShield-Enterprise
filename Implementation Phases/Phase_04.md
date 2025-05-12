@@ -57,7 +57,7 @@ systeminfo | findstr /i "domain"
 ![whoami-emp01](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/whoami-emp01.png)
 
 
-1.2 – Download and Install Azure AD Connect
+### ✅ 1.2 – Download and Install Azure AD Connect
 - Go to the official Microsoft page for Azure AD Connect: Azure AD Connect - Microsoft.
 
 - Click Download to download the installer.
@@ -66,7 +66,7 @@ systeminfo | findstr /i "domain"
 
 - Follow the installation instructions until the tool is ready for configuration.
 
-1.3 – Configure Azure AD Connect
+### ✅ 1.3 – Configure Azure AD Connect
 -On your domain controller:
 
 - Open Azure AD Connect.
@@ -83,7 +83,7 @@ systeminfo | findstr /i "domain"
 
 📸 Screenshot to capture: The screen where "Configure Hybrid Azure AD Join" is selected.
 
-1.4 – Specify Local Domain
+### ✅ 1.4 – Specify Local Domain
 - Select Windows 10 or later domain-joined devices.
 
 - Choose your local domain: corp.aclab.tech.
@@ -92,14 +92,14 @@ systeminfo | findstr /i "domain"
 
 📸 Screenshot to capture: The domain selection screen showing corp.aclab.tech.
 
-1.5 – Force a Synchronization
+### ✅ 1.5 – Force a Synchronization
 On the server with Azure AD Connect, run the following PowerShell command:
 ```powershell
 Start-ADSyncSyncCycle -PolicyType Delta
 ```
 📸 Screenshot to capture: The output of the PowerShell sync command.
 
-1.6 – Verify in Entra ID
+### ✅ 1.6 – Verify in Entra ID
 - Go to: https://entra.microsoft.com
 
 - Navigate to Devices > All Devices.
