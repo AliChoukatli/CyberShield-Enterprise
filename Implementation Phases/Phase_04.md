@@ -99,12 +99,16 @@ This username will be used by Azure AD Connect to synchronize your on-premises A
 
 At this step, you will link your on-premises Active Directory (`corp.aclab.tech`) with Azure AD using Azure AD Connect.
 
-1. **Click**: `Add Directory`
-2. **Select**: `Use Existing Account` to connect to your existing on-premises Active Directory forest
-3. **Enter** your local domain administrator credentials (e.g., `corp.aclab.tech\administrator`)
-4. Azure AD Connect will automatically detect your on-premises Active Directory forest (`corp.aclab.tech`)
-5. **Click Next** to proceed once the directory is validated
+1. **Create a Dedicated Sync Account in Active Directory**:
+   - Create a non-domain admin account (for example, `adconnectsync` or any name you prefer).
+   - The account should have **Read-Only Domain Controller** (RODC) permissions and **Directory Synchronization** permissions.
 
+2. **Add Directory**:
+   - **Click**: `Add Directory`
+   - **Select**: `Use Existing Account` to connect to your on-premises Active Directory forest.
+   - **Enter** the credentials of the sync account you just created (e.g., `corp.aclab.tech\adconnectsync`).
+
+3. Once the directory is validated, **click Next** to proceed.
 📸 **Screenshot to capture**: The screen showing that your local domain `corp.aclab.tech` has been successfully added.
 
 
