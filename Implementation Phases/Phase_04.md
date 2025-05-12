@@ -74,6 +74,50 @@ systeminfo | findstr /i "domain"
 
 2. **Connect to Azure AD**:
    - Sign in with your **Azure AD Global Administrator account**, for example: `admin@corpaclabtech.onmicrosoft.com`
+   - Click **Next**.
+
+3. **Choose your authentication method**:
+- Select **Password Hash Synchronization** (recommended) or any other option based on your needs.
+- Click **Next**.
+
+4. **Select the directory**:
+- Choose **"corp.aclab.tech"** (your local domain) and click **Next**.
+
+5. **Configure Hybrid Azure AD Join**:
+- On the **"Device Options"** screen, select **"Configure Hybrid Azure AD Join"**.
+- Click **Next**.
+
+📸 **Screenshot to capture:** The screen where "Configure Hybrid Azure AD Join" is selected.
+
+6. **Select Windows 10 or later domain-joined devices**:
+- Choose **Windows 10 or later domain-joined devices** and click **Next**.
+
+7. **Configure local domain**:
+- Choose **"corp.aclab.tech"** as your local domain.
+- Click **Next**.
+
+📸 **Screenshot to capture:** The screen showing your domain selection (`corp.aclab.tech`).
+
+8. **Finish the setup**:
+- Click **Configure** to complete the configuration of Hybrid Azure AD Join.
+
+9. **Force a synchronization** (to sync devices immediately):
+- On your server with Azure AD Connect, run the following command in PowerShell:
+  
+```powershell
+Start-ADSyncSyncCycle -PolicyType Delta
+```
+   📸 Screenshot to capture: Output of the PowerShell sync command showing a successful sync.
+
+10. Verify synchronization in Entra ID:
+
+- Go to Entra ID.
+
+- Navigate to Devices > All Devices.
+
+- Check that the devices show Join Type = Hybrid Azure AD joined.
+
+📸 Screenshot to capture: Table listing your joined devices showing Hybrid Azure AD joined.
 
 ### ✅ 1.4 – Specify Local Domain
 - Select Windows 10 or later domain-joined devices.
