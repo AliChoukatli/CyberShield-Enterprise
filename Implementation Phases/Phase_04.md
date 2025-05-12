@@ -84,7 +84,7 @@ systeminfo | findstr /i "domain"
 
 ![Enable-SSO](
 
-#### 4 – Specify Azure AD Administrator Username for Synchronization
+#### 4. Specify Azure AD Administrator Username for Synchronization
 
 For Azure AD Connect to authenticate with your Azure AD tenant, specify the **administrator username** associated with your Azure AD account:
 
@@ -93,24 +93,37 @@ For Azure AD Connect to authenticate with your Azure AD tenant, specify the **ad
 
 This username will be used by Azure AD Connect to synchronize your on-premises Active Directory with Azure AD.
 
+![username-connect](
+
+#### 5. Connect Your Directories
+
+At this step, you will link your on-premises Active Directory (`corp.aclab.tech`) with Azure AD using Azure AD Connect.
+
+1. **Click**: `Add Directory`
+2. **Authentication Type**: Select "Password Hash Synchronization"
+3. **Enter** your local domain administrator credentials (e.g., `corp\administrator`)
+4. Azure AD Connect will automatically detect your on-premises Active Directory forest (`corp.aclab.tech`)
+5. **Click Next** to proceed once the directory is validated
+
+📸 **Screenshot to capture**: The screen showing that your local domain `corp.aclab.tech` has been successfully added.
 
 
-#### 5. **Configure Device Options**:
+#### 6. **Configure Device Options**:
 - Click on **"Configure device options"**.
 - Continue until you reach the **Device options** section.
 
-#### 6. **Enable Hybrid Azure AD Join**:
+#### 7. **Enable Hybrid Azure AD Join**:
 - Select **"Configure Hybrid Azure AD Join"**. This is where you configure the Hybrid Azure AD Join for your on-premises Active Directory to Azure AD.
 
 📸 **Screenshot to capture**: The screen where **"Configure Hybrid Azure AD Join"** is selected.
 
-#### 7. **Specify the Devices to Sync**:
+#### 8. **Specify the Devices to Sync**:
 - Select **Windows 10 or later domain-joined devices** to specify that you want to join Windows 10 or newer devices to Azure AD.
 - Choose your local domain **corp.aclab.tech**.
 
 📸 **Screenshot to capture**: The screen where you select your domain **corp.aclab.tech**.
 
-#### 8. **Configure and Force Synchronization**:
+#### 9. **Configure and Force Synchronization**:
 - Click **Next**, then **Configure** to finalize the configuration.
 - Once the configuration is complete, on the server where **Azure AD Connect** is installed, open PowerShell and run the following command to force synchronization:
 
@@ -119,7 +132,7 @@ Start-ADSyncSyncCycle -PolicyType Delta
 ```
 📸 Screenshot to capture: The output of the PowerShell sync command.
 
-#### 9. Verify in Entra ID (Azure AD):
+#### 10. Verify in Entra ID (Azure AD):
 - Go to https://entra.microsoft.com.
 
 - Navigate to Devices > All Devices.
