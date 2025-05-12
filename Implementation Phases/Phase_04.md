@@ -2,9 +2,9 @@
 
 ## Objective
 This phase enables you to:
-- Hybrid join your on-premises devices to Azure AD
-- Manage Windows devices using Microsoft Intune
-- Apply security and compliance policies
+1 - Hybrid join your on-premises devices to Azure AD
+2 - Manage Windows devices using Microsoft Intune
+3 - Apply security and compliance policies
 
 ## Prerequisites
 Before you begin, ensure you have:
@@ -182,25 +182,7 @@ Start-ADSyncSyncCycle -PolicyType Delta
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### ✅ 1.5 – Verify in Entra ID
+### ✅ 2 - Device MAnagement - Intune 
 - Go to: https://entra.microsoft.com
 
 - Navigate to Devices > All Devices.
