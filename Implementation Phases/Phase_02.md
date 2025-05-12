@@ -16,7 +16,7 @@ In this phase, we focus on core IT support tasks:
 
 ---
 
-## 🔴 **Step 1 - Create OUs for Each Department**
+## 🔴 **Create OUs for Each Department**
 
 Create the following Organizational Units directly under the domain `corp.aclab.tech`:
 
@@ -33,7 +33,7 @@ Once done, verify the structure:
 
 ![* Final view showing all top-level OUs under the domain](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/All_OU.png)
 
-## 🔴 **Step 2 - Creating Users in Active Directory**
+## 🔴 **Creating Users in Active Directory**
 
 - Open Server Manager > Tools > Active Directory Users and Computers (ADUC)
 
@@ -77,7 +77,7 @@ This will add the user to the **Domain Users** group, ensuring they have the bas
 ![domain-users](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/domain-users.png)
 
 
-## 🔴 **Step 3 - Delete a User in Active Directory**
+## 🔴 **Delete a User in Active Directory**
 
 1. Open **ADUC**
 2. Navigate to the appropriate OU
@@ -93,7 +93,7 @@ Disable the account before deleting to avoid accidental data loss.
 ![* Disable account dialog](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Disable_acc.png)
 
 
-## 🔴 **Step 4 - Managing Groups and Permissions**
+## 🔴 **Managing Groups and Permissions**
 
 ### 🔧 **Create AD Security Groups:**
 
@@ -124,7 +124,7 @@ Disable the account before deleting to avoid accidental data loss.
 
 
 
-## 📁 **Step 5 - Share a folder : Create & Share an IT Support Folder on Windows Server**
+## 📁 **Share a folder : Create & Share an IT Support Folder on Windows Server**
 
 ### 🎯 Objective
 Simulate a secure file-sharing environment by configuring NTFS and share permissions on a central folder hosted on the domain controller.
@@ -169,7 +169,7 @@ capture
 
 --- 
 
-## 🔴 **Step 6 - Configuring RDP and User Logon Permissions**
+## 🔴 **Configuring RDP and User Logon Permissions**
 
 ### 🎯 **Objective**
 Ensure users like `Sophia Martinez` can log on locally to a VM (LTP-EMP01) and connect via RDP by configuring appropriate permissions.
