@@ -1,126 +1,108 @@
-# **🛡️ CyberShield Entreprise - Small Business Simulation (25 Users)**
+# 🛡️ CyberShield Entreprise - Small Business Simulation (25 Users)
 
 This project simulates the implementation of a secure, cloud-based IT environment for a fictional small business with 25 employees. It follows modern best practices including the Zero Trust model, ISO/IEC 27001, and the NIST Cybersecurity Framework (CSF), using Microsoft 365, Azure AD (Entra ID), Intune, Microsoft Defender, and Sentinel.
 
+> **Company Context:**  
+> *CyberShield Entreprise is a fictional SMB in the financial services sector. Due to handling sensitive customer data, security and compliance are top priorities.*
+
+---
+
 ## 📑 Index
 
-1. [Architecture](https://github.com/AliChoukatli/CyberShield-Enterprise#-architecture-)
-2. [Objectives](https://github.com/AliChoukatli/CyberShield-Enterprise#-objectives)
-3. [Project Structure](https://github.com/AliChoukatli/CyberShield-Enterprise?tab=readme-ov-file#-project-structure)
-4. [Tools](https://github.com/AliChoukatli/CyberShield-Enterprise?tab=readme-ov-file#-tools)
-6. [How to Use This Project](https://github.com/AliChoukatli/CyberShield-Enterprise/tree/main?tab=readme-ov-file#-how-to-use-this-project)
-8. [Zero Trust Implementation](https://github.com/AliChoukatli/CyberShield-Enterprise?tab=readme-ov-file#-zero-trust-implementation-integrated)
-9. [PowerShell Tools (IT Support)](https://github.com/AliChoukatli/CyberShield-Enterprise?tab=readme-ov-file#%EF%B8%8F-powershell-tools-support-it)
-11. [Incident Response Simulation](https://github.com/AliChoukatli/CyberShield-Enterprise?tab=readme-ov-file#-incident-response-simulation)
-12. [Security Posture: Before & After](https://github.com/AliChoukatli/CyberShield-Enterprise?tab=readme-ov-file#-incident-response-simulation)
-13. [Compliance Mapping (Summary)](https://github.com/AliChoukatli/CyberShield-Enterprise?tab=readme-ov-file#-compliance-mapping-summary)
-14. [License](https://github.com/AliChoukatli/CyberShield-Enterprise?tab=readme-ov-file#%EF%B8%8F-license)
+1. [📐 Architecture & Objectives](#-architecture--objectives)
+2. [📁 Project Structure](#-project-structure)
+3. [🧩 Tools & Services](#-tools--services)
+4. [🚀 How to Use This Project (Phases)](#-how-to-use-this-project-phases)
+5. [🔐 Zero Trust Implementation](#-zero-trust-implementation-integrated)
+6. [⚙️ PowerShell Tools (Support IT)](#️-powershell-tools-support-it)
+7. [🧪 Incident Response Simulation](#-incident-response-simulation)
+8. [📊 Security Posture: Before & After](#-security-posture-before--after)
+9. [✅ Compliance Mapping (Summary)](#-compliance-mapping-summary)
+10. [📄 License](#️-license)
 
-## 🧱 **Architecture :** 
+---
+
+## 📐 Architecture & Objectives
+
 <p align="center">
   <img src="https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Architecture/Architecture.png" alt="Architecture" width="600"/>
 </p>
 
-
-
-## **🧱 Objectives**
+**Objectives:**
 
 - Deploy a modern cloud IT infrastructure
 - Apply cybersecurity best practices (Zero Trust, ISO/NIST)
 - Manage identities, endpoints, and security operations
-- Simulate a phishing attack and incident response workflow
+- Simulate phishing and incident response workflows
 - Automate common IT support tasks using PowerShell
 
+---
 
-## 📁 **Project Structure**
+## 📁 Project Structure
+
+```bash
+CyberShield-Enterprise/
+│
+├── 00_Architecture/                             # Contains architecture-related diagrams and documentation
+│   ├── Diagrams/                               # Network architecture diagrams
+│   ├── Before_After/                           # Before and after architecture comparisons
+│   └── README.md                               # Documentation of the architecture
+│
+├── Implementation_Phases/                      # Main folder for implementation phases
+│   ├── Phase_01_Installation_Join_Domain/       # Details for Phase 1: Installation & Domain Join
+│   ├── Phase_02_Domain_Integration_User_Management/ # Details for Phase 2: Domain Integration & User Management
+│   ├── Phase_03_Helpdesk_Network_Troubleshooting/ # Details for Phase 3: Helpdesk & Network Troubleshooting
+│   ├── Phase_04_AzureAD_Sync_Endpoint_Security/ # Details for Phase 4: Azure AD Sync & Endpoint Security
+│   ├── Phase_05_AD_Security_Hardening/         # Details for Phase 5: Active Directory Security Hardening
+│   ├── Phase_06_Backup_Recovery_Preparation/   # Details for Phase 6: Backup & Recovery Preparation
+│   ├── Phase_07_Sentinel_Defender_Integration/ # Details for Phase 7: Sentinel & Defender Integration
+│   ├── Phase_08_Phishing_Simulation_User_Awareness/ # Details for Phase 8: Phishing Simulation & User Awareness
+│   ├── Phase_09_Forensics_Post_Attack/          # Details for Phase 9: Forensics Post-Attack
+│   ├── Phase_10_Post_Incident_Recovery_Integrity_Check/ # Details for Phase 10: Post-Incident Recovery & Integrity Check
+│   └── Phase_11_Compliance_Mapping_ISO_NIST/    # Details for Phase 11: Compliance Mapping (ISO/NIST)
+│
+├── 01_Zero_Trust_Security/                     # Contains Zero Trust policies and implementation
+│   ├── MFA_Configuration/                      # Multi-factor Authentication setup
+│   ├── Conditional_Access/                     # Conditional Access policies
+│   ├── Device_Compliance/                      # Device compliance policies
+│   └── README.md                               # Explanation of Zero Trust implementation
+│
+├── 02_Sentinel_Security_Operations/            # Contains Sentinel configurations, alerts, and playbooks
+│   ├── Alerts/                                 # Sentinel alert handling configurations
+│   ├── Playbooks/                              # Sentinel playbooks for automation
+│   ├── KQL_Queries/                            # Custom KQL queries for monitoring
+│   └── README.md                               # Documentation for Sentinel integration and alert management
+│
+├── 03_Forensics_Analysis/                      # Forensic analysis after incidents
+│   ├── Event_Logs/                             # Event logs collected post-attack
+│   ├── Evidence/                               # Forensic evidence and artifacts
+│   └── README.md                               # Explanation of forensic analysis workflow
+│
+├── 04_IT_Support/                             # IT support scripts and troubleshooting tools
+│   ├── Scripts/                                # Common scripts (password resets, troubleshooting, etc.)
+│   ├── Troubleshooting/                        # Network troubleshooting guides and tools
+│   └── README.md                               # IT support guide and tools overview
+│
+├── 05_Compliance_NIST_ISO/                     # Documentation for ISO/NIST compliance mapping
+│   ├── ISO_27001_Mapping/                      # ISO/IEC 27001 controls and implementation
+│   ├── NIST_CSF_Mapping/                       # NIST CSF controls and implementation
+│   └── README.md                               # Summary of compliance mapping
+│
+├── 06_Phishing_Simulation/                     # Phishing simulation and user awareness training
+│   ├── Phishing_Emails/                        # Sample phishing emails
+│   ├── User_Training/                          # User awareness training materials
+│   ├── Defender_Logs/                          # Logs from Microsoft Defender related to phishing
+│   └── README.md                               # Overview of phishing simulation process and lessons learned
+│
+├── 07_Final_Documentation/                     # Final reports, conclusions, and cleanup
+│   ├── Final_Report/                           # Summary of the entire implementation and findings
+│   ├── Export_PDF/                             # Final exported PDF documentation
+│   ├── Conclusion_Reports/                     # Detailed conclusions and lessons learned
+│   └── README.md                               # Documentation for final project cleanup and summary
+│
+└── LICENSE                                      # Project license (e.g., MIT License)
+
 ```
-IT-Support-Cybersecurity-SMB/
-│
-├── 📁 00_Architecture            # High-level diagrams & docs
-│   ├── network_topology.png       # Diagram of network layout
-│   ├── zero_trust_overview.svg    # Zero Trust model flow
-│   └── README.md                  # Explanations of each diagram
-│
-├── 📄 README.md                   # Overview of the entire project
-├── 📄 LICENSE                     # (optional) License type if sharing publicly
-├── 📄 .gitignore                  # Files/folders ignored by Git
-│
-├── 📁 01_Installation_Config      # Windows Server installation, AD, static IP setup
-│   ├── README.md
-│   └── screenshots/
-│
-├── 📁 02_IT_Support               # Helpdesk tasks: RDP, password reset, network tools
-│   ├── README.md
-│   ├── scripts/
-│   └── network_troubleshooting/
-│ 
-└── 📁03_Identity_Endpoint_Management/
-│    │   │
-│    │   ├── 01_azure_ad_user_creation.png       ← capture de la création d’un user
-│    │   ├── 02_azure_ad_group_creation.png      ← capture de la création d’un groupe
-│    │   
-│    └── device_join_scripts/
-│        └── (intune enrollment, hybrid join scripts, etc.)
-│
-│
-├── 📁 04_Zero_Trust_Security      # MFA, Conditional Access, BitLocker, security baselines
-│   ├── README.md
-│   ├── scripts/
-│   └── configurations/
-│
-├── 📁 05_Sentinel_Security_Operations    # Microsoft Sentinel alert handling, KQL, automation
-│   ├── README.md
-│   ├── playbooks/
-│   └── alerts/
-│
-├── 📁 06_Phishing_Simulation      # Simulated phishing attack + Event Viewer & Defender logs
-│   ├── README.md
-│   ├── captures_logs/
-│   └── phishing_playbook/
-│
-├── 📁 07_Forensics_Analysis       # Post-attack forensic analysis (Event IDs, attacker traces)
-│   ├── README.md
-│   ├── evidence/
-│   └── forensic_tools/
-│
-├── 📁 08_Compliance_ISO_NIST      # ISO 27001 / NIST CSF mapping, policies
-│   ├── README.md
-│   ├── mappings/
-│   └── policies/
-│
-├── 📁 09_Final_Documentation      # Final README, technical notes, conclusions
-│   ├── README.md
-│   ├── export_pdf/
-│   └── conclusion_reports/
-│
-```
-
-## 🧩 **Tools**
-
-| Area                | Tools & Services                                                   |
-|---------------------|--------------------------------------------------------------------|
-| IAM                 | Microsoft 365, Azure AD (Entra ID), MFA, Conditional Access       |
-| Endpoint Management  | Windows 11, Intune, BitLocker, Microsoft Defender for Endpoint    |
-| Security Monitoring  | Microsoft Sentinel, KQL, Security Alerts, Logs                    |
-| Automation           | PowerShell scripting                                              |
-| Frameworks Applied   | ISO/IEC 27001, NIST CSF, Zero Trust                               |
-  
-
-## 🔧 **How to Use This Project**
-
-A 10-step guide to deploy and secure your SMB infrastructure.
-
-- [**Phase 1**: Installation & Base Configuration](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Implementation%20Phases/Phase_01.md)           # Windows Server, AD DS, DNS, static IPs, domain join
-- [**Phase 2**: AD User & Group Support](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Implementation%20Phases/Phase_02.md)                     # Création et gestion des comptes, groupes, GPO, droits
-- [**Phase 3**: Helpdesk & Network Troubleshooting](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Implementation%20Phases/Phase_03.md)          # Support IT : accès distant, ipconfig, drivers, outils
-- [**Phase 4:** Endpoint Security & Device Management](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Implementation%20Phases/Phase_04.md)       # Join Intune, compliance, scripts, config device                 
-- [**Phase 5**: Zero Trust (MFA, CA, BitLocker)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Implementation%20Phases/Phase_05.md)             # MFA, accès conditionnel, chiffrement, hardening
-- [**Phase 6**: Sentinel & Defender Integration](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Implementation%20Phases/Phase_06.md)             # Monitoring, alertes, règles KQL, automatisation     
-- [**Phase 7**: Phishing Simulation](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Implementation%20Phases/Phase_07.md)                         # Email piégé, Event Viewer, analyse Defender
-- [**Phase 8**: Post-Attack Forensics](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Implementation%20Phases/Phase_08.md)                       # Logs, artefacts, Event ID, rapport d’incident 
-- [**Phase 9**: ISO/NIST Compliance Mapping](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Implementation%20Phases/Phase_09.md)                 # Alignement ISO 27001 / NIST CSF, gouvernance
-- [**Phase 10**: Cleanup & Final Documentation](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Implementation%20Phases/Phase_10.md)              # README final, captures, PDF export, nettoyage
-
 ---
 
 ## 🔐 **Zero Trust Implementation (Integrated)**
