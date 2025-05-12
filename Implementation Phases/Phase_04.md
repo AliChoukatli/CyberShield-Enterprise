@@ -99,22 +99,22 @@ This username will be used by Azure AD Connect to synchronize your on-premises A
 
 At this step, you will link your on-premises Active Directory (`corp.aclab.tech`) with Azure AD using Azure AD Connect.
 
-1. **Create the `sync-admin` account** in Active Directory.
-2. **Add `sync-admin` to the following groups**:
+A. **Create the `sync-admin` account** in Active Directory.
+B. **Add `sync-admin` to the following groups**:
    - **Domain Admins** (for initial configuration)
    - **Administrators** (on the Azure AD Connect server)
    
-3. Once the initial configuration of Azure AD Connect is complete, remove `syncadmin` from the **Domain Admins** and **Administrators** groups to minimize privileges.
-4. Optionally, place the `sync-admin` account in a **Azure-AD-Connect** group with restricted access.
+C. Once the initial configuration of Azure AD Connect is complete, remove `syncadmin` from the **Domain Admins** and **Administrators** groups to minimize privileges.
+D. Optionally, place the `sync-admin` account in a **Azure-AD-Connect** group with restricted access.
 
-2. **Add Directory**:
+E. **Add Directory**:
    - **Click**: `Add Directory`
    - **Select**: `Use Existing Account` to connect to your on-premises Active Directory forest.
    - **Enter** the credentials of the sync account you just created (e.g., `corp.aclab.tech\syncadmin`).
   
 ![dir-connect](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/dir-connect.png)
 
-3. Once the directory is validated, **click Next** to proceed.
+F. Once the directory is validated, **click Next** to proceed.
    
 #### 6. Select **Conitnue without matching all UPN suffixes to verified domains
 
