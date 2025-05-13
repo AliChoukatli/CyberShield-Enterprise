@@ -1,8 +1,15 @@
-# 6. Backup & Recovery Preparation
-Regular backup of GPOs, ACLs, critical AD objects (e.g., krbtgt)
+# Phase 7: Sentinel & Defender Integration
 
-Export configurations via ntdsutil, gpo backup, etc.
+## 🧰 Prerequisites
+- Azure AD account with appropriate privileges.
+- Microsoft Defender and Sentinel already set up in the environment.
 
-Document recovery procedures (recovery plan)
+Deploy Microsoft Defender for Endpoint
 
-Test recovery in an isolated environment (lab)
+Real-time protection, detection of suspicious behaviors
+
+Integrate with Microsoft Sentinel (SIEM) to centralize logs
+
+Set up alert rules, dashboards, and KQL queries
+
+Continuous monitoring of authentication logs, access, and anomalies
