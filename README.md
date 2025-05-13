@@ -41,8 +41,18 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 ## 📁 Project Structure
 
 ```bash
-CyberShield-Enterprise/
-│
+├── 00_IT Support & Helpdesk/
+│   ├── Documentation/
+│   │   ├── Support_Tools_Overview.md
+│   │   ├── First_Level_Troubleshooting.md
+│   │   ├── Ticket_Simulation_Log.md
+│   ├── Scripts/
+│   │   ├── Network_Troubleshooting.ps1
+│   │   ├── Connectivity_Checker.ps1
+│   └── Resources/
+│       ├── Remote_Assistance_Tools.md
+│       └── Support_Flowchart.png
+
 ├── 01_Installation & Domain Join/
 │   ├── Documentation/
 │   │   ├── Domain_Controller_Configuration.md
@@ -54,7 +64,7 @@ CyberShield-Enterprise/
 │   └── Screenshots/
 │       ├── whoami-hlp01.png
 │       └── whoami-emp01.png
-│
+
 ├── 02_Active Directory Integration/
 │   ├── Documentation/
 │   │   ├── OU_Structure.md
@@ -66,7 +76,7 @@ CyberShield-Enterprise/
 │   └── Screenshots/
 │       ├── OU_Structure_Example.png
 │       └── Group_Permissions_Example.png
-│
+
 ├── 03_AzureAD Sync & Endpoint Security/
 │   ├── Documentation/
 │   │   ├── Hybrid_Join_Guide.md
@@ -78,19 +88,21 @@ CyberShield-Enterprise/
 │   └── Screenshots/
 │       ├── AzureAD_Connect_Screenshot.png
 │       └── Device_Management_Example.png
-│
+
 ├── 04_Security Hardening/
 │   ├── Documentation/
 │   │   ├── Administrator_Account_Hardening.md
 │   │   ├── MFA_Enforcement.md
-│   │   └── Conditional_Access_Configuration.md
+│   │   ├── Conditional_Access_Configuration.md
+│   │   ├── GPO_Segmentation_Principle.md
+│   │   └── Advanced_Auditing_Configuration.md
 │   ├── Scripts/
 │   │   ├── Rename_Administrator_Script.ps1
 │   │   └── MFA_Policy_Script.ps1
 │   └── Screenshots/
 │       ├── MFA_Enforcement_Screenshot.png
 │       └── Conditional_Access_Rules_Screenshot.png
-│
+
 ├── 05_Backup & Recovery Preparation/
 │   ├── Documentation/
 │   │   ├── Backup_Strategy.md
@@ -102,7 +114,7 @@ CyberShield-Enterprise/
 │   └── Screenshots/
 │       ├── Backup_Procedure_Screenshot.png
 │       └── Recovery_Test_Screenshot.png
-│
+
 ├── 06_Sentinel & Defender Integration/
 │   ├── Documentation/
 │   │   ├── Defender_Endpoint_Integration.md
@@ -114,16 +126,16 @@ CyberShield-Enterprise/
 │   └── Screenshots/
 │       ├── Defender_Endpoint_Screenshot.png
 │       └── Sentinel_Alert_Rules_Screenshot.png
-│
+
 ├── 07_Phishing Simulation & User Awareness/
 │   ├── Documentation/
 │   │   ├── Phishing_Simulation_Guide.md
 │   │   ├── Awareness_Training_Suggestions.md
 │   │   └── User_Vulnerability_Report.md
-│   ├── Screenshots/
+│   └── Screenshots/
 │       ├── Phishing_Simulation_Results.png
 │       └── Awareness_Training_Example.png
-│
+
 ├── 08_Forensics Post-Attack/
 │   ├── Documentation/
 │   │   ├── Incident_Response_Plan.md
@@ -135,7 +147,7 @@ CyberShield-Enterprise/
 │   └── Screenshots/
 │       ├── Forensics_Screenshot.png
 │       └── Attack_Timeline_Screenshot.png
-│
+
 ├── 09_Post-Incident Recovery & Integrity Check/
 │   ├── Documentation/
 │   │   ├── Recovery_Guidelines.md
@@ -147,8 +159,8 @@ CyberShield-Enterprise/
 │   └── Screenshots/
 │       ├── Integrity_Check_Results.png
 │       └── Service_Functionality_Screenshot.png
-│
-├── 10_Compliance Mapping (ISO/NIST)/
+
+├── 10_Compliance Mapping (ISO-NIST)/
 │   ├── Documentation/
 │   │   ├── Compliance_Mapping_Guide.md
 │   │   ├── ISO_27001_Annex_A.md
@@ -156,8 +168,9 @@ CyberShield-Enterprise/
 │   └── Screenshots/
 │       ├── Compliance_Report_Example.png
 │       └── Gap_Analysis_Example.png
-│
+
 └── README.md
+
 ```
 ---
 
