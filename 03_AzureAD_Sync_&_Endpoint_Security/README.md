@@ -1,457 +1,271 @@
-# **Phase 3: Helpdesk & Network Troubleshooting**
+# Phase 4: AzureAD Sync - Endpoint Security & Device Management 
+
+## Objective
+This phase enables you to:
+1 - Hybrid join your on-premises devices to Azure AD
+2 - Manage Windows devices using Microsoft Intune
+3 - Apply security and compliance policies
+
+## Prerequisites
+Before you begin, ensure you have:
+- A Microsoft 365 account with a license that includes Intune (e.g., Business Premium)
+- A local Active Directory domain set up (e.g., `corp.aclab.tech`)
+- Your Microsoft account connected to Azure AD (e.g., `corp.aclab.tech.onmicrosoft.com`)
+- Azure AD Connect installed and configured (for Hybrid Join scenarios)
+- Deploy BitLocker on all endpoints (disk encryption)
+  - Configure via GPO or Intune
+  - Backup recovery keys in Azure AD or Active Directory
+- Enable Windows Defender Antivirus and Firewall by default
+- Configure Windows Hello, SmartScreen, Exploit Protection
+- Enroll devices in Intune (MDM)
+- Ensure device compliance via Device Compliance Policies
+
+---
+
+# Step 1: Hybrid Join of On-Premises Devices to Azure AD
+
+## 🎯 Objective
+Enable on-premises domain-joined devices (e.g., `LTP-HLP01`, `LTP-EMP01`) to also join Azure Active Directory (`Hybrid Azure AD Join`). This allows Intune to manage the devices later.
+
+---
 
 ## 🧰 Prerequisites
-
-* Administrative rights on the local workstation
-* PowerShell 5.1+ installed
-* RDP and/or TeamViewer installed and properly configured
-* Internet access for TeamViewer functionality
-
-## 📌 Overview
-
-This phase simulates professional IT support practices in a small enterprise, covering remote assistance, user account management, network diagnostics, and software deployment.
-
-* Install and configure support tools (RSAT, PowerShell, Remote Access)
-* Resolve user account issues via Active Directory
-* Secure Remote Desktop Protocol (RDP) setup using domain groups
-* Remote support via TeamViewer as an alternative
-* Network connectivity diagnostics and troubleshooting
-* Automate Microsoft 365 deployment via PowerShell
-
-## ✅ **3.1 – Active Directory User Support**
-
-### 📌 Reset User Passwords & Unlock Accounts
-
-#### 🎯 Objective :*Assist users who are locked out or need password resets using Active Directory Users and Computers (ADUC).*
-
-1. Open **Active Directory Users and Computers**
-2. Locate the target user account
-3. Right-click > **Reset Password**
-   
-![Reset-Password](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/reset-password.png)
-   
-4. Enter the new password and confirm it
-5. Check **Unlock account** if applicable
-6. Click **OK** to apply
-
-
-## ✅ **3.2 – Remote Support via RDP**
-
-### 📌 **Prepare Active Directory Group for RDP Access**
-
-#### 🎯 Objective : *Create a domain security group for IT support staff to manage RDP permissions centrally.*
-
-1. Open **Active Directory Users and Computers**
-2. Create a new **security group**:
-
-   * Name: `IT-Support-RDP`
-   * Scope: Global
-   * Type: Security
-3. Add support team users to the group (e.g., `ali.choukatli`)
-
-![RDP-Member](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_groupe.png)
+- Active Directory domain: `corp.aclab.tech`
+- Azure AD tenant: `corp.aclab.tech.onmicrosoft.com`
+- Devices are already joined to the on-prem AD domain
+- Azure AD Connect is installed on the domain controller
+- Admin access to the Entra portal (`https://entra.microsoft.com`)
 
 ---
 
-### 📌 **Enable Remote Desktop on LTP-EMP01**
+## 🛠️ Technical Steps
 
-#### 🎯 Objective : *Enable Remote Desktop on `LTP-EMP01` and verify access settings for the domain group.*
+### ✅ 1.1 – Verify On-Prem Domain Join
+Run the following on each client machine:
 
-### 🛠️ Instructions
-
-1. Log in to LTP-EMP01 as an Administrator.
-
-2. Open Settings (Win + I)
-
-3. Navigate to:
-System > Remote Desktop
-
-4. Toggle ON the switch next to:
-Remote Desktop
-
-![RDP-Enable](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_enable.png)
- 
----
-
-### 📌 **Configure RDP Permissions on Target Machine (LTP-EMP01)**
-
-#### 🎯 *Objective : Grant the `IT-Support-RDP` group Remote Desktop rights on the domain-joined client `LTP-EMP01`.*
-
-### 🛠️ Method A – Graphical (Computer Management)
-
-1. Log in to `LTP-EMP01` as a **local administrator** or **domain admin**  
-2. Press `Windows + R`, type `compmgmt.msc`, and hit **Enter**  
-3. Navigate to:  System Tools > Local Users and Groups > Groups
-4. Double-click on **Remote Desktop Users**  
-5. Click **Add...**, then enter:  
-corp.aclab.tech\IT-Support-RDP
-
-6. Click **Check Names** to validate, then click **OK**
-
-![RDP-Member](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_member.png)
-
----
-
-### 🛠️ **Method B – PowerShell**
-
-Run the following as Administrator:
-
-```powershell
-Add-LocalGroupMember -Group "Remote Desktop Users" -Member "corp.aclab.tech\IT-Support-RDP"
-```
----
-
-#### 📌 **PowerShell Script to Add "IT-Support-RDP" to "Remote Desktop Users" on Multiple Machines**
-
-```powershell
-# List of computers
-$computers = @("Machine1", "Machine2", "Machine3")
-
-foreach ($computer in $computers) {
-    # Add the group to the "Remote Desktop Users" group
-    Invoke-Command -ComputerName $computer -ScriptBlock {
-        Add-ADGroupMember -Identity "Remote Desktop Users" -Members "corp.aclab.tech\IT-Support-RDP"
-    } -Credential (Get-Credential)
-}
-
-# computers: Declares a list of remote machines where the script will be applied.
-# Invoke-Command: Runs the command remotely on each machine in the list.
-# Add-ADGroupMember: Adds the "IT-Support-RDP" group to the local "Remote Desktop Users" group on each machine.
-# Credential (Get-Credential): Prompts for credentials required to connect to each remote machine.
-```
----
-
-###  📌 **Initiate RDP Session from LTP-HLP01**
-
-#### 🎯 Objective: *Verify remote access works using domain credentials from the support workstation.*
-
-### 🛠️ Instructions
-
-1. On `LTP-HLP01`, press `Windows + R`, type `mstsc`, and hit **Enter**  
-2. In the **Computer** field, enter:
-   LTP-EMP01.corp.aclab.tech
-
-3. Click **Show Options**  
-4. In the **Username** field, enter:  
-corp.aclab.tech\ali.choukatli
-
-![RDP-Before](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_before.png)
-
-6. Click **Connect**  
-7. Enter the password when prompted  
-8. A successful RDP session confirms that access is working
-
-![RDP-After](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP-After.png)
-
----
-
-## 🔴 **If you are unable to connect to a target machine via Remote Desktop Protocol (RDP)**
-
-### 1. **Check Network Connectivity**
-
-Confirm that the target machine is reachable from the source (e.g., Helpdesk PC or Server):
-
-```powershell
-ping <ComputerName or IP>
-Test-NetConnection -ComputerName <Target> -Port 3389
-```
-### 2. **Check if Remote Desktop Enabled (on target machine)**
-Ensure RDP is properly enabled:
-```powershell
-Set-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Terminal Server" -Name "fDenyTSConnections" -Value 0
-```
-Enable required firewall rules:
-```powershell
-Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
-Enable-NetFirewallRule -Name FPS-ICMP4-*
-netsh advfirewall firewall add rule name="Allow ICMPv4-In" protocol=icmpv4:8,any dir=in action=allow
-```
-🛡️ Security Best Practice: Avoid exposing RDP to the internet. Use VPN or restrict RDP access via firewall rules (IP allowlist).
-
----
-## ✅ 3.3 – TeamViewer Remote Assistance
-
-#### 🎯 Objective : *Set up TeamViewer on both machines (support and end-user), ensure secure configuration, and simulate a remote support session from the helpdesk workstation.*
-
-#### 🧰 **Prerequisites**
-
-- TeamViewer installed on both **LTP-HLP01** (Helpdesk) and **LTP-EMP01** (Employee)
-- Internet connectivity
-- TeamViewer account
-- TeamViewer QuickSupport or Full Client on the employee machine
-
----
-
-#### Download & Install TeamViewer
-
-🔹 **On both LTP-HLP01 and LTP-EMP01:**
-
-1. Open a browser and navigate to:  
-   [https://www.teamviewer.com/en/download](https://www.teamviewer.com/en/download)
-
-2. **On LTP-HLP01:**  
-   Download the **TeamViewer Full Client** (for providing support).
-   
-![TV-Download](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/Teamviewer_Download.png)
-
-3. **On LTP-EMP01:**  
-   Download the **TeamViewer QuickSupport** (for receiving support).
-
-
-4. Run the installer and select:
-   - Default installation
-   - Personal / Non-commercial use (or custom for simulation)
-   
-5. Click **Accept** – finish and wait for the installation to complete.
-
-6. Launch TeamViewer on both machines.
-
----
-
-#### Simulate Remote Support from LTP-HLP01
-
-1. On **LTP-EMP01**, ensure TeamViewer is open and note:
-   - Your ID
-   - Password
-
-![TV-Download](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/EMP-ID.png)
-
-3. On **LTP-HLP01**, under the **Control Remote Computer** section:
-   - Sign-in
-   - Go To **Remote Support** on the left side
-   - Enter the **Partner ID** from **LTP-EMP01**
-   - Click **Connect**
-     
-![Partner-ID](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/Partner-ID.png)
-
-   - When prompted, enter the **Password** from **LTP-EMP01**.
-
-You should now have remote access to the user's desktop.
-
-![Session-TV](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/session-TV.png)
-
-
-#### 🔴**End Support Session Securely**
-
-1. When support is complete, click the **X** in the TeamViewer window to end the session.
-
-2. On **LTP-EMP01**, advise the user to:
-   - Close TeamViewer if not needed
-   - Change their temporary password (optional)
-   - Revoke access if using permanent ID or unattended access.
-
-#### 🔐 Security Tips
-🔹 Ensure proper security measures are followed to protect the session and user credentials.
-
----
-
-
-## ✅ 3.4 Troubleshoot Network Connectivity
-
-  ## 📌 Test 1 – Ping
-
-#### 🎯 *Objective : Verify basic network connectivity by pinging the default gateway and the domain controller (DC).*
-
-All commands below are executed from the employee workstation: **LTP-EMP01**.
-
----
-
-#### ▶️ Test A – Ping the Default Gateway
-- Purpose: Ensure the device can reach the router (gateway) and confirm LAN connectivity is functional.
-- **Command:**
+- Verify the fully qualified domain name (FQDN)
 ```bash
-ping 192.168.2.1
+whoami /fqdn
 ```
-![Ping-Router](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/Ping-Router.png)
+- Verify domain membership:
+```
+systeminfo | findstr /i "domain"
+```
+
+![whoami-hlp01](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/whoami-hlp01.png)
+
+![whoami-emp01](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/whoami-emp01.png)
+
+
+### ✅ 1.2 – Download and Install Azure AD Connect
+- Go to the official [Microsoft page](https://www.microsoft.com/en-us/download/details.aspx?id=47594) for Azure AD Connect: Azure AD Connect - Microsoft.
+
+- Click Download to download the installer.
+
+- Once the download is complete, run the file to start the installation of Azure AD Connect.
+
+- Follow the installation instructions until the tool is ready for configuration.
+
+
+### ✅ 1.3 – **Configure Azure AD Connect** (Complete and Updated)
+
+#### 1. **Launch Azure AD Connect**:
+- Open **Azure AD Connect** on your domain controller.
+- Click on **"Configure"**.
+
+#### 2. **Choose "Customize" for Advanced Setup**:
+- Select **"Customize"** to have more control over the configuration.
+- Click **Next**.
+
+#### 3. **Choose the Sign-In Method**:
+
+- **Select "Password Hash Synchronization (Hash Sync)"** to synchronize your on-premises Active Directory passwords with Azure AD..
   
-#### ▶️ Test B – Ping the Domain Controller (DC)
-- Purpose: Confirm that LTP-EMP01 can reach the Active Directory server (DC) over the network.
-- **Command:**
-```bash
-ping 192.168.2.10
-```
-![Ping-DC](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/Ping-DC.png)
 
+![Enable-SSO](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/enable-sso.png)
 
-#### 🧠 Notes:
-If the ping fails:
+#### 4. Specify Azure AD Administrator Username for Synchronization
 
-- ✅ Ensure the domain controller is powered on and properly connected to the network.
-- 🔥 Check if ICMP traffic is allowed through Windows Firewall on the target machine.
-- 🧩 Confirm that both the source (LTP-EMP01) and target (DC) machines are on the same subnet.
-- 🛠️ Use the following command on the domain controller to verify its IP address:
-  ```bash
-  ipconfig
---- 
-## 📌 Test 2 – IP Configuration
+For Azure AD Connect to authenticate with your Azure AD tenant, specify the **administrator username** associated with your Azure AD account:
 
-```bash
-ipconfig /all
-```
-![ipconfig](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/ipconfig.png)
+- If you have your custom domain (e.g., **corp.aclab.tech**) in Azure AD, use the associated username (e.g., **admin@corp.aclab.tech**).
+- If you're still using the default **onmicrosoft.com** domain, use a username like `admin@[yourtenant].onmicrosoft.com`.
 
----
+This username will be used by Azure AD Connect to synchronize your on-premises Active Directory with Azure AD.
 
-## ✅ 3.5 **Inspect Network Adapter Status**  
+![username-connect](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/username-connect.png)
 
-#### 🎯 Objective: *Verify if the network adapter is functioning properly.*
+#### 5. Connect Your Directories
 
-- **Why is this important?**  
-  This step helps diagnose any network connectivity issues related to the hardware. If the NIC (Network Interface Controller) is having issues, it could cause network disruptions, affecting access to network resources, including domain services.
+At this step, you will link your on-premises Active Directory (`corp.aclab.tech`) with Azure AD using Azure AD Connect.
 
-- **Procedure:**
-  1. Open **Device Manager**.
-  2. Expand the **Network Adapters** section.
-  3. Check for warning icons or missing devices.  
-     *(If no warning icons are present, it means no issues have been detected.)*
-  4. If needed, right-click the network adapter and select **Update Driver** to check for driver updates.
-
- ![update-driver](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/update-driver.png)
-
-## 📦 Office 365 Deployment via ODT
-
-#### 🎯 *Objective : Install Microsoft 365 Apps (Office 365) and Visio Pro using Office Deployment Tool (ODT) with a custom PowerShell script.*
-
-#### Step 1 – Uninstall Existing Office Installation (if applicable)
-
-### Recommended Method: Microsoft Support and Recovery Assistant (SaRA)
-1. Run this script :
-```powershell
-iwr https://raw.githubusercontent.com/Admonstrator/msoffice-removal-tool/main/msoffice-removal-tool.ps1 -OutFile msoffice-removal-tool.ps1; powershell -ExecutionPolicy Bypass .\msoffice-removal-tool.ps1
-```
-2. Restart the machine after uninstallation.
-
----
-
-#### **Step 2 – Download and Prepare the Office Deployment Tool (ODT)**
-
-1. Download ODT from Microsoft:
-   [https://www.microsoft.com/en-us/download/details.aspx?id=49117](https://www.microsoft.com/en-us/download/details.aspx?id=49117)
-
-2. Extract the content to:  
-   `C:\ODT`
-
-3. This folder should contain:
+A. **Create the `sync-admin` account** in Active Directory.
+B. **Add `sync-admin` to the following groups**:
+   - **Domain Admins** (for initial configuration)
+   - **Administrators** (on the Azure AD Connect server)
    
-        C:\ODT
-        │ setup.exe
-        │ config.xml
+C. Once the initial configuration of Azure AD Connect is complete, remove `syncadmin` from the **Domain Admins** and **Administrators** groups to minimize privileges.
+D. Optionally, place the `sync-admin` account in a **Azure-AD-Connect** group with restricted access.
+
+E. **Add Directory**:
+   - **Click**: `Add Directory`
+   - **Select**: `Use Existing Account` to connect to your on-premises Active Directory forest.
+   - **Enter** the credentials of the sync account you just created (e.g., `corp.aclab.tech\syncadmin`).
+  
+![dir-connect](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/dir-connect.png)
+
+F. Once the directory is validated, **click Next** to proceed.
+   
+#### 6. Select **Conitnue without matching all UPN suffixes to verified domains
+
+#### 7. Choose **"Users are represented only once across all directories".** & **Let Azrure manage the source anchor.
+   
+![azure-manage](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/azure-manage.png)
+
+
+#### 8. Enable Password Writeback and Group Writeback
+
+- ✅ **Password writeback**
+- ✅ **Group writeback**
+
+When prompted to select the **on-premises destination for group writeback**, create or choose an appropriate Organizational Unit (OU) such as `AzureAD-Groups` to store the synced groups from Azure AD.
+
+> 📁 Recommended OU structure:
+> ```
+> corp.aclab.tech/
+> └── AzureAD-Groups/
+>     └── [Groups synced from Azure AD]
+> ```
+
+This structure ensures proper organization and easier management of cloud-originated groups within your on-premises Active Directory.
+
+![Groups-Writeback](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/Groups-Writeback.png)
+
+#### 9. Enable Single Sign-On (SSO)
+
+To enable seamless Single Sign-On for hybrid identities:
+
+- Use a **Domain Admin** credential when prompted.
+> 💡 Only accounts with domain-level privileges can configure SSO delegation settings.
+
+#### 10. Launch Synchronization
+
+After reviewing all settings and ensuring the configuration is correct:
+
+- Click **Install** to begin the installation and initial synchronization.
+- This process may take several minutes depending on the number of objects in Active Directory.
+ - Once the configuration is complete, on the server where **Azure AD Connect** is installed, open PowerShell and run the following command to force synchronization:
+
+```powershell
+Start-ADSyncSyncCycle -PolicyType Delta
+```
+![Sync-Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/Sync-Success.png)
+
+#### Notes : *The synchronization status can be reviewed via **Synchronization Service Manager** or the **Microsoft Entra admin portal*.**
+
+
+### ✅ 1.4 Verification in Microsoft Entra ID
+
+- Open the [Microsoft Entra admin center](https://entra.microsoft.com)
+- Navigate to **Users** 
+- Confirm that your on-premises users (e.g., `ali.choukatli@corp.aclab.tech`) appear in the list.
+
+![Users-Sync](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/Users-Sync.png)
+
+- Navigate to **Groups** 
+- Confirm that your Groups appear in the list.
+
+![Groups-Sync](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/Goups-Sync.png)
+
+
 ---
 
-#### **Step 3 – Customize `config.xml`**
-
-Create or edit `C:\ODT\config.xml` with the following content:
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<Configuration>
-    <Add OfficeClientEdition="64" Channel="Current">
-        <Product ID="O365ProPlusRetail">
-            <Language ID="en-us"/>
-        </Product>
-        <Product ID="VisioProRetail">
-            <Language ID="en-us"/>
-        </Product>
-    </Add>
-    <Updates Enabled="TRUE" Channel="Current" />
-    <Display Level="None" AcceptEULA="TRUE" />
-    <Property Name="AUTOACTIVATE" Value="1" />
-</Configuration>
-```
-
-#### **Step 4 – Create the PowerShell Script**
-- Create a new script file: C:\Scripts\DeployOffice365.ps1
-```powershell
-# DeployOffice365.ps1
-$OfficeDeploymentPath = "C:\ODT"
-$SetupFilePath = "$OfficeDeploymentPath\setup.exe"
-$ConfigFilePath = "$OfficeDeploymentPath\config.xml"
-
-# Temporarily allow script execution
-Set-ExecutionPolicy RemoteSigned -Scope Process -Force
-
-# Start the Office deployment
-Start-Process -FilePath $SetupFilePath -ArgumentList "/configure $ConfigFilePath" -Wait
-```
-
-#### **Step 5 – Run the Script**
-- Open PowerShell as Administrator
-
-- Run the script:
-```powershell
-cd C:\Scripts
-.\DeployOffice365.ps1
-```
-You should see Office 365 begin installing in the background.
-
-- If setup.exe opens a blank CMD and does nothing, Office is likely already installed.
-- If Office is partially or already installed, the ODT setup may silently fail.
-
-----
 
 
-## 📌 Phase 3 -  Summary  
+### ✅ 2 - Device MAnagement - Intune 
+- Go to: https://entra.microsoft.com
 
-- **🔐 Remote Support via RDP & TeamViewer:**  
-  Connect to users' machines remotely to resolve issues without being on-site.
+- Navigate to Devices > All Devices.
 
-- **👤 Active Directory Management for User Lockouts:**  
-  Use AD tools to reset passwords and unlock accounts.
+- Check for devices showing Join Type = Hybrid Azure AD joined.
 
-- **🌐 Network Diagnostics Using CLI Tools & Device Manager:**  
-  Identify network issues using commands like `ping`, `ipconfig`, `tracert`, or `Test-NetConnection`, as well as using Device Manager to detect hardware conflicts or missing drivers.
+📸 Screenshot to capture: The table listing your joined device(s) with "Hybrid Azure AD joined".
+---
 
-- **💻 Microsoft 365 Deployment with PowerShell Automation:**  
-  Deploy applications and configure M365 settings via PowerShell to automate setup tasks.
+## Step 2: Manage Devices Using Microsoft Intune
+
+### Objective
+Intune allows you to manage security and compliance on your Windows devices.
+
+### Prerequisites
+- You need a Microsoft 365 license with Intune enabled.
+
+### Actions
+1. Log in to **Microsoft Intune** through the **Azure portal**.
+2. Register your Windows devices in **Intune** either through automatic enrollment or manually adding the devices.
+3. Ensure the devices are enrolled in **MDM** (Mobile Device Management).
 
 ---
 
-## 📝 Skills & Tools Practiced
+## Step 3: Apply Security and Compliance Policies
 
-1. **Active Directory Management:**  
-   - **Password Reset:**  
-     You can reset users' passwords in Active Directory via `Active Directory Users and Computers`.  
-     **Useful Command:**
-     ```powershell
-     Set-ADAccountPassword -Identity "username" -NewPassword (ConvertTo-SecureString "newPassword" -AsPlainText -Force)
-     ```
+### Objective
+Apply necessary policies to secure and ensure the compliance of your devices.
 
-   - **Unlocking Accounts:**  
-     If accounts are locked due to failed login attempts, you can unlock them using the AD interface or PowerShell.  
-     **Useful Command:**
-     ```powershell
-     Unlock-ADAccount -Identity "username"
-     ```
+### Actions
+1. Create **security policies** in Intune (e.g., password policies, screen lock settings).
+2. Apply **compliance policies** on the Windows devices to ensure they meet the defined security criteria.
 
-2. **RDP Configuration & Permissions Troubleshooting:**  
-   - **Check RDP Settings:**  
-     Access the Remote Desktop settings under `System > Remote Desktop` to enable and configure access.  
-     **Pro Tip:** Use Conditional Access policies to enhance security.
+---
 
-   - **Add Groups to "Remote Desktop Users":**  
-     Ensure that appropriate groups, such as "IT" and "Remote Desktop Users", are added to allow RDP access.  
-     **PowerShell Command to Add User to Group:**
-     ```powershell
-     Add-ADGroupMember -Identity "Remote Desktop Users" -Members "username"
-     ```
+## Step 4: Deploy BitLocker on Endpoints
 
-3. **Using TeamViewer:**  
-   - **Configure TeamViewer for Remote Access:**  
-     Download and configure TeamViewer on remote machines, and use the session ID and password to connect.  
-     **Pro Tip:** Always secure remote access with unique session codes and strong passwords.
+### Objective
+Encrypt the disks of the devices with **BitLocker**.
 
-4. **Network Diagnostics:**  
-   - **CLI Tools for Connectivity Issues:**  
-     Use the following commands to diagnose network problems:
-     - `ping <IP>`: Check connectivity between the source machine and target machine.
-     - `ipconfig`: Display the machine's network configuration (IP address, subnet mask, gateway).
-     - `Test-NetConnection`: Verify connectivity to a specific server (e.g., `Test-NetConnection -ComputerName google.com`).
+### Actions
+1. Use **Intune** or **GPO** to deploy BitLocker on all endpoints.
+2. Ensure the BitLocker recovery keys are backed up in **Azure AD** or **Active Directory**.
 
-5. **PowerShell Automation:**  
-   - **Configure Firewall via PowerShell:**  
-     Automate firewall configuration to allow or block certain connections as needed.  
-     **Example Command:**
-     ```powershell
-     New-NetFirewallRule -DisplayName "Allow RDP" -Direction Inbound -Protocol TCP -Action Allow -LocalPort 3389
-     ```
+---
+
+## Step 5: Enable Windows Defender Antivirus and Firewall
+
+### Objective
+Ensure that **Windows Defender Antivirus** and the firewall are enabled by default on all devices.
+
+### Actions
+1. Configure **Windows Defender Antivirus** and **the firewall** through **Intune** or **GPO** to ensure they are enabled on all devices.
+
+---
+
+## Step 6: Configure Windows Hello, SmartScreen, and Exploit Protection
+
+### Objective
+Enable additional security features such as Windows Hello, SmartScreen, and Exploit Protection.
+
+### Actions
+1. Configure **Windows Hello**, **SmartScreen**, and **Exploit Protection** features within **Intune**.
+
+---
+
+## Step 7: Enroll Devices in Intune (MDM)
+
+### Objective
+Ensure that all devices are enrolled in **Intune** for management.
+
+### Actions
+1. Enroll devices into **Intune** via **MDM** (Mobile Device Management) to ensure they are properly managed.
+
+---
+
+## Step 8: Verify Device Compliance (Device Compliance Policies)
+
+### Objective
+Ensure that the devices comply with the defined compliance policies.
+
+### Actions
+1. Configure **Device Compliance Policies** in Intune and verify that all devices are in compliance.
+2. Ensure that devices meet the necessary security standards, such as password length, encryption, and anti-virus settings.
 
 
