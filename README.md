@@ -52,7 +52,6 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 | **OS Used**            | Windows Server 2022, Windows 11 Pro                                   |
 | **Management Tools**   | PowerShell scripts, Group Policy, Intune, Entra portal                |
 
----
 
 ## 📂 How to Navigate the Project
 
