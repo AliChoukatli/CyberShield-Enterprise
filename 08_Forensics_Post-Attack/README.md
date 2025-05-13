@@ -1,13 +1,15 @@
-# Phase 8: Phishing Simulation & User Awareness
+# Phase 8: Forensics Post-Attack
 
 ## 🧰 Prerequisites
-- Access to Microsoft 365 Security & Compliance Center.
-- Basic understanding of email filtering and Defender.
+- Familiarity with Windows Event Logs.
+- Access to Event Viewer and Defender.
 
-Run simulated phishing campaigns (Microsoft Attack Simulation Training)
+Collect logs from AD, Sentinel, Defender
 
-Track click rates, credential submission rates
+Search for Indicators of Compromise (IoC)
 
-Report vulnerable users
+Perform memory or disk analysis as needed (tools like FTK Imager, KAPE, etc.)
 
-Provide targeted training and continuous awareness
+Write attack timeline
+
+Containment, eradication, and recovery as per procedures
