@@ -1,15 +1,9 @@
-# Phase 9: Forensics Post-Attack
+# Phase 9 - Post-Incident Recovery & Integrity Check
+Restore GPOs, users, and groups from backups
 
-## 🧰 Prerequisites
-- Familiarity with Windows Event Logs.
-- Access to Event Viewer and Defender.
+Verify integrity of ACLs, logs, admin accounts
 
-Collect logs from AD, Sentinel, Defender
+Compare post-restoration state with baseline configuration
 
-Search for Indicators of Compromise (IoC)
+Perform consistency checks, and test the functionality of services
 
-Perform memory or disk analysis as needed (tools like FTK Imager, KAPE, etc.)
-
-Write attack timeline
-
-Containment, eradication, and recovery as per procedures
