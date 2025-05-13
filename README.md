@@ -8,10 +8,12 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 ---
 ## 📑 Index
 
-1. [🎯 Objectif Global du Projet](#-objectif-global-du-projet)
-2. [🏢 Environnement Cible](#-environnement-cible)
+1.## 📑 Index
+
+1. [🎯 Global Project Objective](#-global-project-objective)
+2. [🏢 Target Environment](#-target-environment)
 3. [📐 Architecture & Objectives](#-architecture--objectives)
-4. [📂 Comment Naviguer dans les Dossiers](#-comment-naviguer-dans-les-dossiers)
+4. [📂 How to Navigate the Folders](#-how-to-navigate-the-folders)
 5. [📁 Project Structure](#-project-structure)
 6. [🧩 Tools & Services](#-tools--services)
 7. [🚀 How to Use This Project (Phases)](#-how-to-use-this-project-phases)
