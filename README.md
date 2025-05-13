@@ -24,17 +24,65 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 
 ## 📐 Architecture & Objectives
 
-<p align="center">
-  <img src="https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Architecture/Architecture.png" alt="Architecture" width="600"/>
-</p>
+**CyberShield Entreprise** simulates the deployment of a modern, secure IT infrastructure for a fictional small business with 25 employees. The goal is to implement a cloud-based IT environment following cybersecurity best practices such as the **Zero Trust model**, **ISO/IEC 27001**, and the **NIST Cybersecurity Framework (CSF)**, leveraging **Microsoft 365**, **Azure AD**, **Intune**, **Defender**, and **Sentinel**.
 
-**Objectives:**
+**Project Goals:**
 
 - Deploy a modern cloud IT infrastructure
 - Apply cybersecurity best practices (Zero Trust, ISO/NIST)
 - Manage identities, endpoints, and security operations
 - Simulate phishing and incident response workflows
 - Automate common IT support tasks using PowerShell
+
+<p align="center">
+  <img src="https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Architecture/Architecture.png" alt="Architecture" width="600"/>
+</p>
+
+---
+
+## 🏢 Target Environment
+
+| Element                | Description                                                           |
+|------------------------|-----------------------------------------------------------------------|
+| **Company Type**       | Small Business (Financial Sector)                                     |
+| **User Base**          | 25 employees across multiple departments                              |
+| **Core Infrastructure**| 1 Domain Controller, 1 File Server, 3 Windows 11 workstations          |
+| **Technologies**       | Microsoft 365, Entra ID (Azure AD), Intune, Defender, Sentinel        |
+| **Security Standards** | Zero Trust Model, ISO/IEC 27001, NIST Cybersecurity Framework (CSF)   |
+| **OS Used**            | Windows Server 2022, Windows 11 Pro                                   |
+| **Management Tools**   | PowerShell scripts, Group Policy, Intune, Entra portal                |
+
+---
+
+## 📂 How to Navigate the Project
+
+Each folder in this repository corresponds to a **phase of the project**, aligned with key milestones in the secure IT deployment lifecycle.
+
+Inside each folder, you will typically find:
+- `Documentation/` – Guides and procedures
+- `Scripts/` – PowerShell scripts used
+- `Screenshots/` – Visual proof of implementation
+
+> Example:  
+> `03_AzureAD Sync & Endpoint Security/Documentation/Intune_Configuration.md` shows policy setup for device compliance.
+
+---
+
+## 🔗 Project Phase Index
+
+| Phase | Description |
+|-------|-------------|
+| [00_IT Support & Helpdesk](./00_IT%20Support%20&%20Helpdesk) | Simulated user support tools and troubleshooting scripts |
+| [01_Installation & Domain Join](./01_Installation%20&%20Domain%20Join) | Installation of server/workstations and local domain join |
+| [02_Active Directory Integration](./02_Active%20Directory%20Integration) | OU structure, user & group management, NTFS permissions |
+| [03_AzureAD Sync & Endpoint Security](./03_AzureAD%20Sync%20&%20Endpoint%20Security) | Hybrid join, Intune policies, BitLocker, Windows Defender |
+| [04_Security Hardening](./04_Security%20Hardening) | MFA, Conditional Access, GPO segmentation, auditing |
+| [05_Backup & Recovery Preparation](./05_Backup%20&%20Recovery%20Preparation) | Backup strategy, test restores, disaster readiness |
+| [06_Sentinel & Defender Integration](./06_Sentinel%20&%20Defender%20Integration) | SIEM setup, alert rules, Defender for Endpoint |
+| [07_Phishing Simulation & User Awareness](./07_Phishing%20Simulation%20&%20User%20Awareness) | User training, simulated phishing, vulnerability reporting |
+| [08_Forensics Post-Attack](./08_Forensics%20Post-Attack) | Log review, IOC detection, incident timeline |
+| [09_Post-Incident Recovery & Integrity Check](./09_Post-Incident%20Recovery%20&%20Integrity%20Check) | Service recovery validation and integrity checks |
+| [10_Compliance Mapping (ISO-NIST)](./10_Compliance%20Mapping%20(ISO-NIST)) | Mapping to ISO 27001 & NIST CSF controls |
 
 ---
 
