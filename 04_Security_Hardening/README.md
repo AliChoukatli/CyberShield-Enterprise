@@ -1,4 +1,4 @@
-# Phase 4 – Active Directory Security Hardening
+# Phase 4 – Security Hardening 
 Rename and disable the default “Administrator” account
 
 Create dedicated Admin accounts with a naming convention (e.g., ADM-jdupont)
