@@ -6,19 +6,21 @@ This project simulates the implementation of a secure, cloud-based IT environmen
 > *CyberShield Entreprise is a fictional SMB in the financial services sector. Due to handling sensitive customer data, security and compliance are top priorities.*
 
 ---
-
 ## 📑 Index
 
-1. [📐 Architecture & Objectives](#-architecture--objectives)
-2. [📁 Project Structure](#-project-structure)
-3. [🧩 Tools & Services](#-tools--services)
-4. [🚀 How to Use This Project (Phases)](#-how-to-use-this-project-phases)
-5. [🔐 Zero Trust Implementation](#-zero-trust-implementation-integrated)
-6. [⚙️ PowerShell Tools (Support IT)](#️-powershell-tools-support-it)
-7. [🧪 Incident Response Simulation](#-incident-response-simulation)
-8. [📊 Security Posture: Before & After](#-security-posture-before--after)
-9. [✅ Compliance Mapping (Summary)](#-compliance-mapping-summary)
-10. [📄 License](#️-license)
+1. [🎯 Objectif Global du Projet](#-objectif-global-du-projet)
+2. [🏢 Environnement Cible](#-environnement-cible)
+3. [📐 Architecture & Objectives](#-architecture--objectives)
+4. [📂 Comment Naviguer dans les Dossiers](#-comment-naviguer-dans-les-dossiers)
+5. [📁 Project Structure](#-project-structure)
+6. [🧩 Tools & Services](#-tools--services)
+7. [🚀 How to Use This Project (Phases)](#-how-to-use-this-project-phases)
+8. [🔐 Zero Trust Implementation](#-zero-trust-implementation-integrated)
+9. [⚙️ PowerShell Tools (Support IT)](#️-powershell-tools-support-it)
+10. [🧪 Incident Response Simulation](#-incident-response-simulation)
+11. [📊 Security Posture: Before & After](#-security-posture-before--after)
+12. [✅ Compliance Mapping (Summary)](#-compliance-mapping-summary)
+13. [📄 License](#️-license)
 
 ---
 
