@@ -1,4 +1,4 @@
-# Phase 4: AzureAD Sync - Endpoint Security & Device Management 
+# AzureAD Sync - Endpoint Security & Device Management 
 
 ## Objective
 This phase enables you to:
