@@ -140,7 +140,7 @@ Groupewriteback phoot
    
 A. Network Access:
 - Set to Enabled for allowing domain-joined devices to register with Azure AD.
-- 
+  
 B. Device Registration:
 - Enable automatic registration of domain-joined devices with Azure AD.
 
