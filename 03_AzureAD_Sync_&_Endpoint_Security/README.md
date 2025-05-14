@@ -67,7 +67,7 @@ systeminfo | findstr /i "domain"
 - Follow the installation instructions until the tool is ready for configuration.
 
 
-### ✅ 1.3 – **Configure Azure AD Connect** (Complete and Updated)
+### ✅ 1.3 – **Azure AD Connect Installation** (Complete and Updated)
 
 #### 1. **Launch Azure AD Connect**:
 - Open **Azure AD Connect** on your domain controller.
@@ -162,6 +162,121 @@ Start-ADSyncSyncCycle -PolicyType Delta
 ![Sync-Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/Sync-Success.png)
 
 #### Notes : *The synchronization status can be reviewed via **Synchronization Service Manager** or the **Microsoft Entra admin portal*.**
+
+### ✅ 1.3 – Configuration du Hybrid Azure AD Join (Windows + Azure AD Connect)
+
+This guide outlines the complete steps to configure **Hybrid Azure AD Join** for Windows devices in an on-premises Active Directory environment synchronized with **Azure AD Connect**.  
+Applies to the domain: `corp.aclab.tech`.
+
+---
+
+## 🧭 Goal
+
+Enable domain-joined Windows devices to automatically register in **Azure Active Directory (AAD)** as **Hybrid Azure AD joined**, unlocking management capabilities via **Intune**, **Microsoft Defender**, **Conditional Access**, and more.
+
+---
+
+## 🗂️ Configuration Steps
+
+### 1. Enable Hybrid Azure AD Join in Azure AD Connect
+
+#### 📍 On the server running Azure AD Connect:
+
+1. Launch **Azure AD Connect**.
+2. Go to:  
+   `Configure` → `Configure device options` → **Next**
+3. Select:  
+   `Configure Hybrid Azure AD Join` → **Next**
+4. Check:
+   - ✅ `Windows 10 or later domain-joined devices`
+   - (Optional) `Down-level devices (Windows 7/8.1)` if applicable
+5. Add your forest:
+   - Domain: `corp.aclab.tech`
+   - Use an AD account with read access to the domain
+6. Azure Authentication:
+   - Sign in with a **Global Administrator** Azure AD account
+7. Finish the wizard to apply the configuration
+
+✅ This step enables automatic device registration to Azure AD.
+
+---
+
+### 2. Create a GPO: Enable Automatic Hybrid Join
+
+#### 🔧 Purpose: Allow automatic registration of domain-joined Windows devices
+
+1. Open **Group Policy Management Console** (`gpmc.msc`)
+2. Create a new GPO linked to the OU containing your computers (e.g., `Workstations`):
+
+Name: GPO - Hybrid Azure AD Join
+
+
+```Shell
+3. Right-click → Edit the GPO and configure the following settings:
+```
+
+
+#### 🔹 a. Allow device registration
+
+
+Location:
+Computer Configuration > Windows Settings > Security Settings > Local Policies > Security Options
+
+Setting:
+→ Network access: Do not allow storage of passwords and credentials for network authentication = Disabled
+→ Network access: Allow domain-joined computers to be registered with Azure AD = Enabled
+
+
+```Shell
+
+#### 🔹 b. Join the device to Azure AD automatically
+```
+Location:
+Computer Configuration > Administrative Templates > System > Device Registration
+
+Setting:
+→ Register domain-joined computers as devices = Enabled
+
+
+> ℹ️ If the setting above is missing, install the **latest Windows 10 ADMX templates** or ensure you're running Server 2019+.
+
+---
+
+### 3. Apply the Policy and Test
+
+#### 🔁 Apply GPO
+
+- On a domain-joined machine (e.g., client workstation):
+
+```bash
+gpupdate /force
+```
+dsregcmd /status
+
+- Then restart the device.
+
+✅ Validate the join with PowerShell or CMD:
+
+```bash
+dsregcmd /status
+```
+
+Expected output:
+
+AzureAdJoined  : YES
+DomainJoined   : YES
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ### ✅ 1.4 Verification in Microsoft Entra ID
