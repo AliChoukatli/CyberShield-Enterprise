@@ -130,28 +130,33 @@ Groupewriteback phoot
 4. Apply the configuration to enable automatic device registration in Azure AD.
 
 ### 1.5 – Configure Group Policy for Automatic Hybrid Join
-1. Open Group Policy Management Console (gpmc.msc).
 
-2. Create a new GPO linked to the Devices Organizational Unit (OU).
+1. Open the **Group Policy Management Console** (`gpmc.msc`).
+2. Create a new **GPO** and link it to the **Devices Organizational Unit (OU)**.
+3. Move the targeted computers to this OU if needed.
 
-3. Redirect devices to a new OU if necessary.
+4.  GPO Configuration
 
-4. Configure the following settings:
-   
-5. Network Access:
-- Set to Enabled for allowing domain-joined devices to register with Azure AD.
-  
-6. Device Registration:
-- Enable automatic registration of domain-joined devices with Azure AD.
+- Navigate to:  
+  `Computer Configuration` → `Administrative Templates` → `Windows Components` → `Device Registration`
 
-7. Apply the GPO and force an update on client devices:
+- Enable:
+  - **Register domain-joined computers as devices** → `Enabled`
+
+> 🛡️ This setting ensures domain-joined devices register automatically with Azure AD during the next policy refresh.
+
+
+5. . Apply the GPO and force an update on client devices:
 ```bash
 gpupdate /force
 ```
-8. Validate the device registration with the following command:
+6. Validate the device registration with the following command:
 ```bash
 dsregcmd /status
 ```
+
+
+
 
 
 ## ✅ Step 2 – Device Management Using Microsoft Intune
