@@ -228,13 +228,13 @@ This redirects future domain-joined machines to that OU.
 
 #### 🔧 Allow automatic registration of domain-joined Windows devices
 
-1. Open **Group Policy Management Console** (`gpmc.msc`)
-2. Create a new GPO linked to the OU containing your computers (e.g., `Devices`):
+A. Open **Group Policy Management Console** (`gpmc.msc`)
+B. Create a new GPO linked to the OU containing your computers (e.g., `Devices`):
 
 Name: GPO - Hybrid Azure AD Join
 
 ```Shell
-3. Right-click → Edit the GPO and configure the following settings:
+C. Right-click → Edit the GPO and configure the following settings:
 ```
 
 #### 🔹 a. Allow device registration
