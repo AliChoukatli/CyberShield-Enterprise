@@ -132,7 +132,7 @@ corp.aclab.tech/
 ### 1.5 – Configure Group Policy for Automatic Hybrid Join
 
 1. Open the **Group Policy Management Console** (`gpmc.msc`).
-2. Create a new **GPO** and link it to the **Devices Organizational Unit (OU)**.
+2. Create a new **GPO** Auto Device Registration  and link it to the **Devices** Organizational Unit (OU).
 3. Move the targeted computers to this OU if needed.
 
 4.  GPO Configuration
