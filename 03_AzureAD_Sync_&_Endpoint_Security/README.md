@@ -187,6 +187,8 @@ Enable domain-joined Windows devices to automatically register in **Azure Active
    - **Configure device options** → **Next**
 3. On the next screen, select:
    - **Configure Hybrid Entra ID Join** → **Next**
+  
+![Hybrid_Join](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Hybrid_Join.png)
 4. Check:
    - ✅ `Windows 10 or later domain-joined devices`
    - (Optional) `Down-level devices (Windows 7/8.1)` if applicable
