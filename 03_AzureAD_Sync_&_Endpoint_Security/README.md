@@ -1,422 +1,236 @@
-# Phase 3 - AzureAD Sync & Endpoint Security 
-
-## Objective
-This phase enables you to:
-1 - Hybrid join your on-premises devices to Azure AD
-2 - Manage Windows devices using Microsoft Intune
-3 - Apply security and compliance policies
-
-## Prerequisites
-Before you begin, ensure you have:
-- A Microsoft 365 account with a license that includes Intune (e.g., Business Premium)
-- A local Active Directory domain set up (e.g., `corp.aclab.tech`)
-- Your Microsoft account connected to Azure AD (e.g., `corp.aclab.tech.onmicrosoft.com`)
-- Azure AD Connect installed and configured (for Hybrid Join scenarios)
-- Deploy BitLocker on all endpoints (disk encryption)
-  - Configure via GPO or Intune
-  - Backup recovery keys in Azure AD or Active Directory
-- Enable Windows Defender Antivirus and Firewall by default
-- Configure Windows Hello, SmartScreen, Exploit Protection
-- Enroll devices in Intune (MDM)
-- Ensure device compliance via Device Compliance Policies
-
----
-
-# Step 1: Hybrid Join of On-Premises Devices to Azure AD
+# Phase 3 – Azure AD Sync & Endpoint Security
 
 ## 🎯 Objective
-Enable on-premises domain-joined devices (e.g., `LTP-HLP01`, `LTP-EMP01`) to also join Azure Active Directory (`Hybrid Azure AD Join`). This allows Intune to manage the devices later.
+
+This phase enables you to:
+
+1. Hybrid join your on-premises devices to Azure AD  
+2. Manage Windows devices using Microsoft Intune  
+3. Apply security and compliance policies  
 
 ---
 
-## 🧰 Prerequisites
-- Active Directory domain: `corp.aclab.tech`
-- Azure AD tenant: `corp.aclab.tech.onmicrosoft.com`
-- Devices are already joined to the on-prem AD domain
-- Azure AD Connect is installed on the domain controller
-- Admin access to the Entra portal (`https://entra.microsoft.com`)
+## ✅ Prerequisites
+
+Before getting started, ensure the following:
+
+- A Microsoft 365 account with a license including Intune (e.g., Business Premium)
+- On-premises Active Directory domain (e.g., `corp.aclab.tech`)
+- Azure AD tenant linked to your domain (e.g., `corp.aclab.tech.onmicrosoft.com`)
+- Azure AD Connect installed and configured
+- BitLocker configured on all endpoints
+  - Deployed via Intune or Group Policy
+  - Recovery keys backed up to Azure AD or on-prem AD
+- Windows Defender Antivirus and Firewall enabled by default
+- Security features configured: Windows Hello, SmartScreen, Exploit Protection
+- Devices enrolled in Intune (MDM)
+- Device compliance policies created and enforced
 
 ---
 
-## 🛠️ Technical Steps
-
-### ✅ 1.1 – Verify On-Prem Domain Join
-Run the following on each client machine:
-
-- Verify the fully qualified domain name (FQDN)
-```bash
-whoami /fqdn
-```
-- Verify domain membership:
-```
-systeminfo | findstr /i "domain"
-```
-
-![whoami-hlp01](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/whoami-hlp01.png)
-
-![whoami-emp01](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/whoami-emp01.png)
-
-
-### ✅ 1.2 – Download and Install Azure AD Connect
-- Go to the official [Microsoft page](https://www.microsoft.com/en-us/download/details.aspx?id=47594) for Azure AD Connect: Azure AD Connect - Microsoft.
-
-- Click Download to download the installer.
-
-- Once the download is complete, run the file to start the installation of Azure AD Connect.
-
-- Follow the installation instructions until the tool is ready for configuration.
-
-
-### ✅ 1.3 – **Azure AD Connect Installation** (Complete and Updated)
-
-#### 1. **Launch Azure AD Connect**:
-- Open **Azure AD Connect** on your domain controller.
-- Click on **"Configure"**.
-
-#### 2. **Choose "Customize" for Advanced Setup**:
-- Select **"Customize"** to have more control over the configuration.
-- Click **Next**.
-
-#### 3. **Choose the Sign-In Method**:
-
-- **Select "Password Hash Synchronization (Hash Sync)"** to synchronize your on-premises Active Directory passwords with Azure AD..
-  
-
-![Enable-SSO](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/enable-sso.png)
-
-#### 4. Specify Azure AD Administrator Username for Synchronization
-
-For Azure AD Connect to authenticate with your Azure AD tenant, specify the **administrator username** associated with your Azure AD account:
-
-- If you have your custom domain (e.g., **corp.aclab.tech**) in Azure AD, use the associated username (e.g., **admin@corp.aclab.tech**).
-- If you're still using the default **onmicrosoft.com** domain, use a username like `admin@[yourtenant].onmicrosoft.com`.
-
-This username will be used by Azure AD Connect to synchronize your on-premises Active Directory with Azure AD.
-
-![username-connect](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/username-connect.png)
-
-#### 5. Connect Your Directories
-
-At this step, you will link your on-premises Active Directory (`corp.aclab.tech`) with Azure AD using Azure AD Connect.
-
-A. **Create the `sync-admin` account** in Active Directory.
-B. **Add `sync-admin` to the following groups**:
-   - **Domain Admins** (for initial configuration)
-   - **Administrators** (on the Azure AD Connect server)
-   
-C. Once the initial configuration of Azure AD Connect is complete, remove `syncadmin` from the **Domain Admins** and **Administrators** groups to minimize privileges.
-D. Optionally, place the `sync-admin` account in a **Azure-AD-Connect** group with restricted access.
-
-E. **Add Directory**:
-   - **Click**: `Add Directory`
-   - **Select**: `Use Existing Account` to connect to your on-premises Active Directory forest.
-   - **Enter** the credentials of the sync account you just created (e.g., `corp.aclab.tech\syncadmin`).
-  
-![dir-connect](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/dir-connect.png)
-
-F. Once the directory is validated, **click Next** to proceed.
-   
-#### 6. Select **Conitnue without matching all UPN suffixes to verified domains
-
-#### 7. Choose **"Users are represented only once across all directories".** & **Let Azrure manage the source anchor.
-   
-![azure-manage](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/azure-manage.png)
-
-
-#### 8. Enable Password Writeback and Group Writeback
-
-- ✅ **Password writeback**
-- ✅ **Group writeback**
-
-When prompted to select the **on-premises destination for group writeback**, create or choose an appropriate Organizational Unit (OU) such as `AzureAD-Groups` to store the synced groups from Azure AD.
-
-> 📁 Recommended OU structure:
-> ```
-> corp.aclab.tech/
-> └── AzureAD-Groups/
->     └── [Groups synced from Azure AD]
-> ```
-
-This structure ensures proper organization and easier management of cloud-originated groups within your on-premises Active Directory.
-
-![Groups-Writeback](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/Groups-Writeback.png)
-
-#### 9. Enable Single Sign-On (SSO)
-
-To enable seamless Single Sign-On for hybrid identities:
-
-- Use a **Domain Admin** credential when prompted.
-> 💡 Only accounts with domain-level privileges can configure SSO delegation settings.
-
-#### 10. Launch Synchronization
-
-After reviewing all settings and ensuring the configuration is correct:
-
-- Click **Install** to begin the installation and initial synchronization.
-- This process may take several minutes depending on the number of objects in Active Directory.
- - Once the configuration is complete, on the server where **Azure AD Connect** is installed, open PowerShell and run the following command to force synchronization:
-
-```powershell
-Start-ADSyncSyncCycle -PolicyType Delta
-```
-![Sync-Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/Sync-Success.png)
-
-#### Notes : *The synchronization status can be reviewed via **Synchronization Service Manager** or the **Microsoft Entra admin portal*.**
-
-### ✅ 1.4 – Configuration du Hybrid Azure AD Join (Windows + Azure AD Connect)
-
-This guide outlines the complete steps to configure **Hybrid Azure AD Join** for Windows devices in an on-premises Active Directory environment synchronized with **Azure AD Connect**.  
-Applies to the domain: `corp.aclab.tech`.
-
----
+# 🔗 Step 1 – Hybrid Azure AD Join of On-Premises Devices
 
 ## 🧭 Goal
 
-Enable domain-joined Windows devices to automatically register in **Azure Active Directory (AAD)** as **Hybrid Azure AD joined**, unlocking management capabilities via **Intune**, **Microsoft Defender**, **Conditional Access**, and more.
+Enable domain-joined Windows devices to be automatically registered in Azure AD as **Hybrid Azure AD joined**, allowing for modern device management (Intune, Conditional Access, Defender, etc.).
 
----
+### 1.1 – Verify On-Prem Domain Join
 
-## 🗂️ Configuration Steps
+Run the following on client machines:
 
-###$ $1. Enable Hybrid Azure AD Join in Azure AD Connect
-
-#### 📍 On the server running Azure AD Connect:
-
-1. Launch **Azure AD Connect**.
-2. In the Entra Connect Sync wizard, select:
-   - **Configure device options** → **Next**
-3. On the next screen, select:
-   - **Configure Hybrid Entra ID Join** → **Next**
-  
-![Hybrid_Join](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Hybrid_Join.png)
-4. Check:
-   - ✅ `Windows 10 or later domain-joined devices`
-   - (Optional) `Down-level devices (Windows 7/8.1)` if applicable
-5. Add your forest:
-   - Domain: `corp.aclab.tech`
-   - Use an AD account with read access to the domain
-6. Azure Authentication:
-   - Sign in with a **Global Administrator** Azure AD account
-7. Finish the wizard to apply the configuration
-
-✅ This step enables automatic device registration to Azure AD.
-
----
-
-### 1.5 - Create a GPO: Enable Automatic Hybrid Join
-
-1. Open **Group Policy Management Console** (`gpmc.msc`)
-2. Create a new GPO linked to the OU containing your computers (e.g., `Devices`):
-> 💡 **Important**: By default, domain-joined devices go into the built-in `Computers` container, which is **not an Organizational Unit (OU)** — and GPOs cannot be linked to containers.  
-> To apply policies properly, move your devices to an actual OU (e.g., `Devices`) and redirect the default join location:
-
-**Steps (one-time setup):**
-
-1. In **Active Directory Users and Computers (`dsa.msc`)**, create a new OU:
-   - Example: `Devices` or `Workstations`
-2. Move your existing computers from the `Computers` container into the new OU.
-3. Open **Command Prompt** on your domain controller (as Administrator) and run:
-   ```bash
-   redircmp "OU=Devices,DC=corp,DC=aclab,DC=tech"
-   ```
-This redirects future domain-joined machines to that OU.
-4. Open Group Policy Management Console (gpmc.msc)
-5. Create a new GPO linked to the OU containing your computers (e.g., Devices):
-
-----
-
-
-#### 🔧 Allow automatic registration of domain-joined Windows devices
-
-A. Open **Group Policy Management Console** (`gpmc.msc`)
-B. Create a new GPO linked to the OU containing your computers (e.g., `Devices`):
-
-Name: GPO - Hybrid Azure AD Join
-
-```Shell
-C. Right-click → Edit the GPO and configure the following settings:
+```powershell
+whoami /fqdn
+systeminfo | findstr /i "domain"
 ```
 
-#### 🔹 a. Allow device registration
+📸 Screenshots:
+whoami help01 (photo)
+whoamiemp01 (photo)
 
 
-Location:
-Computer Configuration > Windows Settings > Security Settings > Local Policies > Security Options
+### 1.2 – Download and Install Azure AD Connect
+Download Azure AD Connect
 
-Setting:
-→ Network access: Do not allow storage of passwords and credentials for network authentication = Disabled
-→ Network access: Allow domain-joined computers to be registered with Azure AD = Enabled
+Launch the installer and proceed through the wizard
+
+### 1.3 – Azure AD Connect Configuration (Custom)
+Open Azure AD Connect > Click "Configure"
+
+Choose "Customize"
+
+Select Password Hash Synchronization
+✅ Recommended for simplicity and security
 
 
-```Shell
 
-#### 🔹 b. Join the device to Azure AD automatically
+Sign in with your Azure AD Global Admin credentials
+(e.g., admin@corp.aclab.tech)
+
+
+
+Create a sync account (corp.aclab.tech\syncadmin)
+
+Temporarily add to Domain Admins and Administrators
+
+Remove privileges after setup
+
+Optionally place in a restricted group (e.g., Azure-AD-Connect)
+
+Link your directories
+
+Select "Use Existing Account" to connect to your on-premises AD forest.
+
+Enter the sync account credentials.
+
+
+
+7. Once directory validation is complete, click Next.
+
+8.Enable Password Writeback and Group Writeback.
+- Recommended to enable these features for hybrid identity management.
+
+📁 Recommended OU Structure:
+
+```sql
+corp.aclab.tech/
+└── AzureAD-Groups/
 ```
-Location:
-Computer Configuration > Administrative Templates > System > Device Registration
-
-Setting:
-→ Register domain-joined computers as devices = Enabled
+Groupewriteback phoot
 
 
-> ℹ️ If the setting above is missing, install the **latest Windows 10 ADMX templates** or ensure you're running Server 2019+.
 
----
+9. Enable Single Sign-On (SSO) for seamless login experience.
 
-### 3. Apply the Policy and Test
+💡 Only Domain Admin privileges are required for configuring SSO delegation.
 
-#### 🔁 Apply GPO
+10. Start the installation and synchronization process
+After reviewing the settings, click Install to begin synchronization.
+Once complete, run the following PowerShell command to force a delta sync:
+```powershell
+Start-ADSyncSyncCycle -PolicyType Delta
+```
+Screenshot of sync success:
 
-- On a domain-joined machine (e.g., client workstation):
 
+### 1.4 – Configure Hybrid Azure AD Join (Windows + Azure AD Connect)
+Launch Azure AD Connect and select Configure Device Options.
+
+Choose Configure Hybrid Azure AD Join.
+
+📸 Screenshot of Hybrid Join configuration:
+
+
+Add your domain (e.g., corp.aclab.tech) and sign in with a Global Administrator account.
+
+Apply the configuration to enable automatic device registration in Azure AD.
+
+### 1.5 – Configure Group Policy for Automatic Hybrid Join
+Open Group Policy Management Console (gpmc.msc).
+
+Create a new GPO linked to the Devices Organizational Unit (OU).
+
+Redirect devices to a new OU if necessary.
+
+Configure the following settings:
+
+Network Access:
+Set to Enabled for allowing domain-joined devices to register with Azure AD.
+
+Device Registration:
+Enable automatic registration of domain-joined devices with Azure AD.
+
+Apply the GPO and force an update on client devices:
 ```bash
 gpupdate /force
 ```
-dsregcmd /status
-
-- Then restart the device.
-
-✅ Validate the join with PowerShell or CMD:
-
+Validate the device registration with the following command:
 ```bash
 dsregcmd /status
 ```
 
-Expected output:
 
-AzureAdJoined  : YES
-DomainJoined   : YES
+# Step 2 – Device Management Using Microsoft Intune
+🎯 Objective
+Manage Windows devices through Microsoft Intune for security and compliance.
+
+Actions
+Log in to Microsoft Intune via the Azure Portal.
+
+Ensure all devices are enrolled for management (MDM).
+
+Apply security policies (e.g., password requirements, screen lock, etc.).
+
+Monitor compliance policies and manage device health.
+
+# Step 3 – Apply Security and Compliance Policies
+🎯 Objective
+Enforce security policies and ensure device compliance.
+
+Actions
+Create and assign security policies (e.g., password, encryption settings).
+
+Apply compliance policies to enforce required standards, such as antivirus, firewall, and disk encryption.
+
+# Step 4 – Deploy BitLocker on Endpoints
+🎯 Objective
+Encrypt all devices using BitLocker for data protection.
+
+Actions
+Deploy BitLocker via Intune or Group Policy.
+
+Ensure recovery keys are backed up to Azure AD or Active Directory.
+
+# Step 5 – Enable Windows Defender Antivirus and Firewall
+🎯 Objective
+Ensure Windows Defender Antivirus and Firewall are enabled by default on all devices.
+
+Actions
+Configure Windows Defender Antivirus and Firewall settings through Intune or Group Policy.
+
+# Step 6 – Configure Windows Hello, SmartScreen, and Exploit Protection
+🎯 Objective
+Enhance security by enabling Windows Hello, SmartScreen, and Exploit Protection.
+
+Actions
+Configure Windows Hello, SmartScreen, and Exploit Protection within Intune for added device security.
+
+# Step 7 – Enroll Devices in Intune (MDM)
+🎯 Objective
+Ensure all devices are enrolled in Intune for ongoing management.
+
+Actions
+Enroll devices via MDM (Mobile Device Management) to ensure consistent management and monitoring.
+
+# Step 8 – Verify Device Compliance
+🎯 Objective
+Verify that all devices are compliant with the defined security standards.
+
+Actions
+Create and monitor Device Compliance Policies in Intune.
+
+Verify compliance for devices across all security criteria, including password complexity, encryption, and antivirus settings.
 
 
-4. Check in Microsoft Entra
-📍 Go to: https://entra.microsoft.com
-Navigate to:
-Devices > All Devices
-
-You should see your devices listed with:
-
-Name	Join Type	Trust Type	Compliant
-PC-01	Hybrid Azure AD joined	ServerAD	✅
-
-🛠️ Troubleshooting
-Issue	Possible Cause	Quick Fix
-Device not visible in Entra	Azure AD Connect misconfigured or syncing wrong OUs	Re-run Azure AD Connect configuration
-AzureAdJoined : NO	GPO not applied or missing	Force GPO refresh, reboot device
-Error code 0x801c001d or similar	Device registration or discovery failed	Check internet access, certificates, or proxy
-Devices are powered off	✅ Expected: they still appear in Entra, but may be inactive	No impact on join visibility
-
-📎 Resources
-Microsoft Docs – Hybrid Azure AD Join Planning
-
-Check device status: dsregcmd /status
-
-Azure AD Connect Health
 
 
 
 
-### ✅ 1.5 Verification in Microsoft Entra ID
-
-- Open the [Microsoft Entra admin center](https://entra.microsoft.com)
-- Navigate to **Users** 
-- Confirm that your on-premises users (e.g., `ali.choukatli@corp.aclab.tech`) appear in the list.
-
-![Users-Sync](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/Users-Sync.png)
-
-- Navigate to **Groups** 
-- Confirm that your Groups appear in the list.
-
-![Groups-Sync](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%204/Goups-Sync.png)
-
-
----
 
 
 
-### ✅ 2 - Device MAnagement - Intune 
-- Go to: https://entra.microsoft.com
 
-- Navigate to Devices > All Devices.
 
-- Check for devices showing Join Type = Hybrid Azure AD joined.
 
-📸 Screenshot to capture: The table listing your joined device(s) with "Hybrid Azure AD joined".
----
 
-## Step 2: Manage Devices Using Microsoft Intune
 
-### Objective
-Intune allows you to manage security and compliance on your Windows devices.
 
-### Prerequisites
-- You need a Microsoft 365 license with Intune enabled.
 
-### Actions
-1. Log in to **Microsoft Intune** through the **Azure portal**.
-2. Register your Windows devices in **Intune** either through automatic enrollment or manually adding the devices.
-3. Ensure the devices are enrolled in **MDM** (Mobile Device Management).
 
----
 
-## Step 3: Apply Security and Compliance Policies
 
-### Objective
-Apply necessary policies to secure and ensure the compliance of your devices.
 
-### Actions
-1. Create **security policies** in Intune (e.g., password policies, screen lock settings).
-2. Apply **compliance policies** on the Windows devices to ensure they meet the defined security criteria.
 
----
 
-## Step 4: Deploy BitLocker on Endpoints
 
-### Objective
-Encrypt the disks of the devices with **BitLocker**.
-
-### Actions
-1. Use **Intune** or **GPO** to deploy BitLocker on all endpoints.
-2. Ensure the BitLocker recovery keys are backed up in **Azure AD** or **Active Directory**.
-
----
-
-## Step 5: Enable Windows Defender Antivirus and Firewall
-
-### Objective
-Ensure that **Windows Defender Antivirus** and the firewall are enabled by default on all devices.
-
-### Actions
-1. Configure **Windows Defender Antivirus** and **the firewall** through **Intune** or **GPO** to ensure they are enabled on all devices.
-
----
-
-## Step 6: Configure Windows Hello, SmartScreen, and Exploit Protection
-
-### Objective
-Enable additional security features such as Windows Hello, SmartScreen, and Exploit Protection.
-
-### Actions
-1. Configure **Windows Hello**, **SmartScreen**, and **Exploit Protection** features within **Intune**.
-
----
-
-## Step 7: Enroll Devices in Intune (MDM)
-
-### Objective
-Ensure that all devices are enrolled in **Intune** for management.
-
-### Actions
-1. Enroll devices into **Intune** via **MDM** (Mobile Device Management) to ensure they are properly managed.
-
----
-
-## Step 8: Verify Device Compliance (Device Compliance Policies)
-
-### Objective
-Ensure that the devices comply with the defined compliance policies.
-
-### Actions
-1. Configure **Device Compliance Policies** in Intune and verify that all devices are in compliance.
-2. Ensure that devices meet the necessary security standards, such as password length, encryption, and anti-virus settings.
 
 
