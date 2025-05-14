@@ -145,6 +145,8 @@ corp.aclab.tech/
 
 > 🛡️ This setting ensures domain-joined devices register automatically with Azure AD during the next policy refresh.
 
+![Auto-Device](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Auto-Device_Registration-GPO.png)
+
 
 5. . Apply the GPO and force an update on client devices:
 ```bash
