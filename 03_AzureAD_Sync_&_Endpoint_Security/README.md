@@ -163,7 +163,7 @@ Start-ADSyncSyncCycle -PolicyType Delta
 
 #### Notes : *The synchronization status can be reviewed via **Synchronization Service Manager** or the **Microsoft Entra admin portal*.**
 
-### ✅ 1.3 – Configuration du Hybrid Azure AD Join (Windows + Azure AD Connect)
+### ✅ 1.4 – Configuration du Hybrid Azure AD Join (Windows + Azure AD Connect)
 
 This guide outlines the complete steps to configure **Hybrid Azure AD Join** for Windows devices in an on-premises Active Directory environment synchronized with **Azure AD Connect**.  
 Applies to the domain: `corp.aclab.tech`.
@@ -267,19 +267,34 @@ AzureAdJoined  : YES
 DomainJoined   : YES
 
 
+4. Check in Microsoft Entra
+📍 Go to: https://entra.microsoft.com
+Navigate to:
+Devices > All Devices
+
+You should see your devices listed with:
+
+Name	Join Type	Trust Type	Compliant
+PC-01	Hybrid Azure AD joined	ServerAD	✅
+
+🛠️ Troubleshooting
+Issue	Possible Cause	Quick Fix
+Device not visible in Entra	Azure AD Connect misconfigured or syncing wrong OUs	Re-run Azure AD Connect configuration
+AzureAdJoined : NO	GPO not applied or missing	Force GPO refresh, reboot device
+Error code 0x801c001d or similar	Device registration or discovery failed	Check internet access, certificates, or proxy
+Devices are powered off	✅ Expected: they still appear in Entra, but may be inactive	No impact on join visibility
+
+📎 Resources
+Microsoft Docs – Hybrid Azure AD Join Planning
+
+Check device status: dsregcmd /status
+
+Azure AD Connect Health
 
 
 
 
-
-
-
-
-
-
-
-
-### ✅ 1.4 Verification in Microsoft Entra ID
+### ✅ 1.5 Verification in Microsoft Entra ID
 
 - Open the [Microsoft Entra admin center](https://entra.microsoft.com)
 - Navigate to **Users** 
