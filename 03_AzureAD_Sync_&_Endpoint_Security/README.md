@@ -51,7 +51,6 @@ whoamiemp01 (photo)
 1. **Download Azure AD Connect** from the official Microsoft website.
 2. Launch the installer and proceed through the wizard.
 
----
 
 ### 1.3 Azure AD Connect Configuration (Custom)
 
@@ -60,14 +59,12 @@ whoamiemp01 (photo)
 3. Select **Password Hash Synchronization**  
    ✅ *Recommended for simplicity and security*.
 
----
 
 #### Sign In
 
 4. Sign in with your **Azure AD Global Admin** credentials:  
    *(e.g., admin@corp.aclab.tech)*.
 
----
 
 #### Create a Sync Account
 
@@ -78,7 +75,6 @@ whoamiemp01 (photo)
    - Remove privileges after setup.
    - Optionally place in a restricted group (e.g., **Azure-AD-Connect**).
 
----
 
 #### Link Directories
 
@@ -86,11 +82,9 @@ whoamiemp01 (photo)
    - Select **"Use Existing Account"** to connect to your on-premises AD forest.
    - Enter the sync account credentials.
 
----
 
 7. Once directory validation is complete, click **Next**.
 
----
 
 ### 1.4 Enable Password Writeback and Group Writeback
 
@@ -104,7 +98,6 @@ corp.aclab.tech/
 └── AzureAD-Groups/
 ```
 Groupewriteback phoot
-
 
 
 ### 9. Enable Single Sign-On (SSO) for Seamless Login Experience
