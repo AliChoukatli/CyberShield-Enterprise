@@ -38,7 +38,7 @@ Enable domain-joined Windows devices to be automatically registered in Azure AD 
 
 ### 1.1 Verify On-Prem Domain Join
 
-Run the following command on client machines to verify the on-premises domain join status:
+1. Run the following command on client machines to verify the on-premises domain join status:
 
 ```powershell
 whoami /fqdn
