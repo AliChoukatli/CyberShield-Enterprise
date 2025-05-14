@@ -138,17 +138,17 @@ Groupewriteback phoot
 
 4. Configure the following settings:
    
-A. Network Access:
+5. Network Access:
 - Set to Enabled for allowing domain-joined devices to register with Azure AD.
   
-B. Device Registration:
+6. Device Registration:
 - Enable automatic registration of domain-joined devices with Azure AD.
 
-5. Apply the GPO and force an update on client devices:
+7. Apply the GPO and force an update on client devices:
 ```bash
 gpupdate /force
 ```
-6. Validate the device registration with the following command:
+8. Validate the device registration with the following command:
 ```bash
 dsregcmd /status
 ```
