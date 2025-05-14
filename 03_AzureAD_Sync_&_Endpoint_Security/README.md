@@ -28,7 +28,7 @@ Before getting started, ensure the following:
 
 ---
 
-# 🔗 Step 1 – Hybrid Azure AD Join of On-Premises Devices
+## ✅ Step 1 – Hybrid Azure AD Join of On-Premises Devices
 
 --> Enable domain-joined Windows devices to be automatically registered in Azure AD as **Hybrid Azure AD joined**, allowing for modern device management (Intune, Conditional Access, Defender, etc.).
 
@@ -161,7 +161,7 @@ dsregcmd /status
 ```
 
 
-# Step 2 – Device Management Using Microsoft Intune
+## ✅ Step 2 – Device Management Using Microsoft Intune
 🎯 Objective
 Manage Windows devices through Microsoft Intune for security and compliance.
 
@@ -174,7 +174,7 @@ Manage Windows devices through Microsoft Intune for security and compliance.
 4. Monitor compliance policies and manage device health.
 ---
 
-# Step 3 – Apply Security and Compliance Policies
+## ✅ Step 3 – Apply Security and Compliance Policies
 🎯 Objective
 Enforce security policies and ensure device compliance.
 
@@ -183,7 +183,7 @@ Enforce security policies and ensure device compliance.
 2. Apply compliance policies to enforce required standards, such as antivirus, firewall, and disk encryption.
 ---
 
-# Step 4 – Deploy BitLocker on Endpoints
+## ✅ Step 4 – Deploy BitLocker on Endpoints
 🎯 Objective
 Encrypt all devices using BitLocker for data protection.
 
@@ -191,25 +191,27 @@ Encrypt all devices using BitLocker for data protection.
 2. Ensure recovery keys are backed up to Azure AD or Active Directory.
 ---
 
-# Step 5 – Enable Windows Defender Antivirus and Firewall
+## ✅ Step 5 – Enable Windows Defender Antivirus and Firewall
 🎯 Objective
 Ensure Windows Defender Antivirus and Firewall are enabled by default on all devices.
 
 1. Configure Windows Defender Antivirus and Firewall settings through Intune or Group Policy.
 ---
 
-# Step 6 – Configure Windows Hello, SmartScreen, and Exploit Protection
+# ✅ Step 6 – Configure Windows Hello, SmartScreen, and Exploit Protection
 🎯 Objective
 Enhance security by enabling Windows Hello, SmartScreen, and Exploit Protection.
 
 1. Configure Windows Hello, SmartScreen, and Exploit Protection within Intune for added device security.
 
+# ✅Step 6 – Configure Windows Hello, SmartScreen, and Exploit Protection
 # Step 7 – Enroll Devices in Intune (MDM)
 🎯 Objective
 Ensure all devices are enrolled in Intune for ongoing management.
 
 1. Enroll devices via MDM (Mobile Device Management) to ensure consistent management and monitoring.
 
+# ✅Step 6 – Configure Windows Hello, SmartScreen, and Exploit Protection
 # Step 8 – Verify Device Compliance
 🎯 Objective
 Verify that all devices are compliant with the defined security standards.
