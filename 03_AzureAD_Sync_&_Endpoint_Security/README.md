@@ -183,10 +183,10 @@ Enable domain-joined Windows devices to automatically register in **Azure Active
 #### 📍 On the server running Azure AD Connect:
 
 1. Launch **Azure AD Connect**.
-2. In the Azure AD Connect wizard, select:
+2. In the Entra Connect Sync wizard, select:
    - **Configure device options** → **Next**
 3. On the next screen, select:
-   - **Configure Hybrid Azure AD Join** → **Next**
+   - **Configure Hybrid Entra ID Join** → **Next**
 4. Check:
    - ✅ `Windows 10 or later domain-joined devices`
    - (Optional) `Down-level devices (Windows 7/8.1)` if applicable
