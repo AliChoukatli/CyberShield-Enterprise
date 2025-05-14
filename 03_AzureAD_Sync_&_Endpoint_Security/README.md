@@ -203,12 +203,32 @@ Enable domain-joined Windows devices to automatically register in **Azure Active
 
 ---
 
+1. Open **Group Policy Management Console** (`gpmc.msc`)
+2. Create a new GPO linked to the OU containing your computers (e.g., `Devices`):
+> 💡 **Important**: By default, domain-joined devices go into the built-in `Computers` container, which is **not an Organizational Unit (OU)** — and GPOs cannot be linked to containers.  
+> To apply policies properly, move your devices to an actual OU (e.g., `Devices`) and redirect the default join location:
+
+**Steps (one-time setup):**
+
+1. In **Active Directory Users and Computers (`dsa.msc`)**, create a new OU:
+   - Example: `Devices` or `Workstations`
+2. Move your existing computers from the `Computers` container into the new OU.
+3. Open **Command Prompt** on your domain controller (as Administrator) and run:
+   ```bash
+   redircmp "OU=Devices,DC=corp,DC=aclab,DC=tech"
+   ```
+This redirects future domain-joined machines to that OU.
+4. Open Group Policy Management Console (gpmc.msc)
+5. Create a new GPO linked to the OU containing your computers (e.g., Devices):
+
+----
+
 ### 2. Create a GPO: Enable Automatic Hybrid Join
 
 #### 🔧 Purpose: Allow automatic registration of domain-joined Windows devices
 
 1. Open **Group Policy Management Console** (`gpmc.msc`)
-2. Create a new GPO linked to the OU containing your computers (e.g., `Workstations`):
+2. Create a new GPO linked to the OU containing your computers (e.g., `Devices`):
 
 Name: GPO - Hybrid Azure AD Join
 
