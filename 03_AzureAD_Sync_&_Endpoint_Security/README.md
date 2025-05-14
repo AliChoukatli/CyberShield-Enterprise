@@ -178,7 +178,7 @@ Enable domain-joined Windows devices to automatically register in **Azure Active
 
 ## 🗂️ Configuration Steps
 
-### 1. Enable Hybrid Azure AD Join in Azure AD Connect
+###$ $1. Enable Hybrid Azure AD Join in Azure AD Connect
 
 #### 📍 On the server running Azure AD Connect:
 
@@ -203,6 +203,8 @@ Enable domain-joined Windows devices to automatically register in **Azure Active
 
 ---
 
+### 1.5 - Create a GPO: Enable Automatic Hybrid Join
+
 1. Open **Group Policy Management Console** (`gpmc.msc`)
 2. Create a new GPO linked to the OU containing your computers (e.g., `Devices`):
 > 💡 **Important**: By default, domain-joined devices go into the built-in `Computers` container, which is **not an Organizational Unit (OU)** — and GPOs cannot be linked to containers.  
@@ -223,20 +225,17 @@ This redirects future domain-joined machines to that OU.
 
 ----
 
-### 2. Create a GPO: Enable Automatic Hybrid Join
 
-#### 🔧 Purpose: Allow automatic registration of domain-joined Windows devices
+#### 🔧 Allow automatic registration of domain-joined Windows devices
 
 1. Open **Group Policy Management Console** (`gpmc.msc`)
 2. Create a new GPO linked to the OU containing your computers (e.g., `Devices`):
 
 Name: GPO - Hybrid Azure AD Join
 
-
 ```Shell
 3. Right-click → Edit the GPO and configure the following settings:
 ```
-
 
 #### 🔹 a. Allow device registration
 
