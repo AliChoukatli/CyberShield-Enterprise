@@ -42,8 +42,8 @@ systeminfo | findstr /i "domain"
 ```
 
 📸 Screenshots:
-whoami help01 (photo)
-whoamiemp01 (photo)
+[whoami-help01](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/whoami-hlp01.png)
+[whoami-emp01](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/whoami-emp01.png)
 
 
 ### 1.2 Download and Install Azure AD Connect
@@ -97,7 +97,7 @@ whoamiemp01 (photo)
 corp.aclab.tech/
 └── AzureAD-Groups/
 ```
-Groupewriteback phoot
+[Groupe-writeback](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Groups-Writeback.png)
 
 
 ### 9. Enable Single Sign-On (SSO) for Seamless Login Experience
@@ -116,14 +116,14 @@ Groupewriteback phoot
    ```powershell
    Start-ADSyncSyncCycle -PolicyType Delta
    ```
-📸 Screenshot of sync success: 
+![Sync_Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Sync-Success.png)
 
 
 ### 1.4 – Configure Hybrid Azure AD Join (Windows + Azure AD Connect)
-1. Launch Azure AD Connect and select Configure Device Options.
-2. Choose Configure Hybrid Azure AD Join.
+1. Launch AzureAD Connect (Entra Connect Sync) and select Configure Device Options.
+2. Choose Configure Hybrid Microsoft Entra ID Join.
 
-📸 Screenshot of Hybrid Join configuration:
+![Hybrid_Join](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Hybrid_Join.png)
 
 3. Add your domain (e.g., corp.aclab.tech) and sign in with a Global Administrator account.
 
