@@ -32,8 +32,6 @@ Before getting started, ensure the following:
 
 --> Enable domain-joined Windows devices to be automatically registered in Azure AD as **Hybrid Azure AD joined**, allowing for modern device management (Intune, Conditional Access, Defender, etc.).
 
----
-
 ### 1.1 Verify On-Prem Domain Join
 
 1. Run the following command on client machines to verify the on-premises domain join status:
