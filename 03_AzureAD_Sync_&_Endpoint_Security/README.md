@@ -139,7 +139,9 @@ corp.aclab.tech/
   `Computer Configuration` → `Administrative Templates` → `Windows Components` → `Device Registration`
 
 - Double-click **Register domain-joined computers as devices** and set it to **Enabled**.
+  
   [Auto-Device-REG](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Auto-Device_Registration-GPO.png)
+  
 ---
 
 #### K.2 - Add Scheduled Task to Force Hybrid Azure AD Join
