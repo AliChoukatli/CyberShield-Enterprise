@@ -125,53 +125,55 @@ corp.aclab.tech/
 
 4. Apply the configuration to enable automatic device registration in Azure AD.
 
-### K. Configure Group Policy for Automatic Hybrid Join
+### K. Configure Hybrid Azure AD Join with Auto Device Registration GPO
 
 1. Open the **Group Policy Management Console** (`gpmc.msc`).
-2. Create a new **GPO** Auto Device Registration  and link it to the **Devices** Organizational Unit (OU).
-3. Move the targeted computers to this OU if needed.
 
-4.  GPO Configuration
+2. Locate and **edit your existing “Auto Device Registration” GPO** linked to the OU containing your target machines (e.g., `Devices`).
+
+---
+
+#### K.1 - Enable Automatic Device Registration
 
 - Navigate to:  
   `Computer Configuration` → `Administrative Templates` → `Windows Components` → `Device Registration`
 
-- Enable:
-  - **Register domain-joined computers as devices** → `Enabled`
+- Double-click **Register domain-joined computers as devices** and set it to **Enabled**.
+  [Auto-Device-REG](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Auto-Device_Registration-GPO.png)
+---
 
-> 🛡️ This setting ensures domain-joined devices register automatically with Azure AD during the next policy refresh.
+#### K.2 - Add Scheduled Task to Force Hybrid Azure AD Join
 
-![Auto-Device](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Auto-Device_Registration-GPO.png)
+- Navigate to:  
+  `Computer Configuration` → `Preferences` → `Control Panel Settings` → **Scheduled Tasks**
 
+- Right-click → **New** → **Scheduled Task (Windows Vista and later)**
 
-### K.5 - Create Scheduled Task via GPO to Force Hybrid Azure AD Join
+- Configure the scheduled task as follows:
 
-1. Open the **Group Policy Management Console** (`gpmc.msc`).
+| Field                       | Value                 |
+|-----------------------------|-----------------------|
+| **Name**                    | HybridAzureADJoin     |
+| **Action**                  | Create                |
+| **Run as user**             | SYSTEM                |
+| **Trigger**                 | At startup            |
+| **Program/script**          | `dsregcmd.exe`        |
+| **Arguments**               | `/join`               |
+| **Run with highest privileges** | Checked          |
 
-2. Create a new **GPO** (e.g., `Auto Device Registration`) and **link it** to the same OU containing your target machines (Devices) or your Domain.
+- Click **OK** to save.
 
-3. Edit this GPO:  
-   Navigate to:  
-   `Computer Configuration` → `Preferences` → `Control Panel Settings` → **Scheduled Tasks**
+![Join-Task](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Join-Task.png)
 
-4. Right-click → **New** → **Scheduled Task (Windows Vista and later)**
+---
 
-5. Configure the task as follows:
+#### K.3 - Apply and Validate
 
-| Field                     | Value                 |
-|---------------------------|-----------------------|
-| **Name**                  | HybridAzureADJoin     |
-| **Action**                | Create                |
-| **Run as user**           | SYSTEM                |
-| **Trigger**               | At startup            |
-| **Program/script**        | `dsregcmd.exe`        |
-| **Arguments**             | `/join`               |
-| **Run with highest privileges** | Checked        |
-
-6. Apply the GPO, then force a Group Policy update on client machines:
+- On client machines, run:
 
 ```powershell
 gpupdate /force
+
 
 
 
