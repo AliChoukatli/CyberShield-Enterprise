@@ -32,7 +32,7 @@ Before getting started, ensure the following:
 
 --> Enable domain-joined Windows devices to be automatically registered in Azure AD as **Hybrid Azure AD joined**, allowing for modern device management (Intune, Conditional Access, Defender, etc.).
 
-### 1.1 Verify On-Prem Domain Join
+### A. Verify On-Prem Domain Join
 
 1. Run the following command on client machines to verify the on-premises domain join status:
 
@@ -44,29 +44,28 @@ systeminfo | findstr /i "domain"
 ![whoami-emp01](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/whoami-emp01.png)
 
 
-### 1.2 Download and Install Azure AD Connect
+### B. Download and Install Azure AD Connect
 
 1. **Download Azure AD Connect** from the official Microsoft website.
 2. Launch the installer and proceed through the wizard.
 
 
-### 1.3 Azure AD Connect Configuration (Custom)
-
+### C. Azure AD Connect Configuration (Custom)
 1. Open **Azure AD Connect** > Click **"Configure"**.
 2. Choose **"Customize"**.
 3. Select **Password Hash Synchronization**  
    ✅ *Recommended for simplicity and security*.
 
 
-#### Sign In
+### D. Sign In
 
-4. Sign in with your **Azure AD Global Admin** credentials:  
+1. Sign in with your **Azure AD Global Admin** credentials:  
    *(e.g., admin@corp.aclab.tech)*.
 
 
-#### Create a Sync Account
+### E. Create a Sync Account
 
-5. Create a sync account:  
+1. Create a sync account:  
    `corp.aclab.tech\syncadmin`
 
    - Temporarily add to **Domain Admins** and **Administrators** groups.
@@ -74,19 +73,18 @@ systeminfo | findstr /i "domain"
    - Optionally place in a restricted group (e.g., **Azure-AD-Connect**).
 
 
-#### Link Directories
+### F. Link Directories
 
-6. Link your directories:
+1. Link your directories:
    - Select **"Use Existing Account"** to connect to your on-premises AD forest.
    - Enter the sync account credentials.
 
+2. Once directory validation is complete, click **Next**.
 
-7. Once directory validation is complete, click **Next**.
 
+### G. Enable Password Writeback and Group Writeback
 
-### 1.4 Enable Password Writeback and Group Writeback
-
-8. Enable **Password Writeback** and **Group Writeback**:
+1. Enable **Password Writeback** and **Group Writeback**:
    - *Recommended to enable these features for hybrid identity management*.
 
 📁 Recommended OU Structure:
@@ -98,15 +96,15 @@ corp.aclab.tech/
 ![Groupe-writeback](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Groups-Writeback.png)
 
 
-### 9. Enable Single Sign-On (SSO) for Seamless Login Experience
+### H. Enable Single Sign-On (SSO) for Seamless Login Experience
 
-- Enable **Single Sign-On (SSO)** for a seamless login experience.
+1. Enable **Single Sign-On (SSO)** for a seamless login experience.
 
    💡 *Only Domain Admin privileges are required for configuring SSO delegation*.
 
 ---
 
-### 10. Start the Installation and Synchronization Process
+### I. Start the Installation and Synchronization Process
 
 1. After reviewing the settings, click **Install** to begin synchronization.
 2. Once complete, run the following PowerShell command to force a delta sync:
@@ -117,7 +115,7 @@ corp.aclab.tech/
 ![Sync_Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Sync-Success.png)
 
 
-### 1.4 – Configure Hybrid Azure AD Join (Windows + Azure AD Connect)
+### J. Configure Hybrid Azure AD Join (Windows + Azure AD Connect)
 1. Launch AzureAD Connect (Entra Connect Sync) and select Configure Device Options.
 2. Choose Configure Hybrid Microsoft Entra ID Join.
 
@@ -127,7 +125,7 @@ corp.aclab.tech/
 
 4. Apply the configuration to enable automatic device registration in Azure AD.
 
-### 1.5 – Configure Group Policy for Automatic Hybrid Join
+### K. Configure Group Policy for Automatic Hybrid Join
 
 1. Open the **Group Policy Management Console** (`gpmc.msc`).
 2. Create a new **GPO** Auto Device Registration  and link it to the **Devices** Organizational Unit (OU).
