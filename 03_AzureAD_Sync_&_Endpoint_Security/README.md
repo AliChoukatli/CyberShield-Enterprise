@@ -95,7 +95,7 @@ systeminfo | findstr /i "domain"
 corp.aclab.tech/
 └── AzureAD-Groups/
 ```
-[Groupe-writeback](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Groups-Writeback.png)
+![Groupe-writeback](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Groups-Writeback.png)
 
 
 ### 9. Enable Single Sign-On (SSO) for Seamless Login Experience
