@@ -171,15 +171,7 @@ corp.aclab.tech/
 
 #### K.3 - Apply and Validate
 
-- On client machines, run:
-
-```powershell
-gpupdate /force
-
-
-
-
-5. . Apply the GPO and force an update on client devices:
+Apply the GPO and force an update on client devices:
 ```bash
 gpupdate /force
 ```
@@ -187,9 +179,6 @@ gpupdate /force
 ```bash
 dsregcmd /status
 ```
-
-
-
 
 
 ## ✅ Step 2 – Device Management Using Microsoft Intune
