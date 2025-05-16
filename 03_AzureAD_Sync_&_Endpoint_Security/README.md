@@ -268,12 +268,47 @@ Ensure all devices are enrolled in Intune for centralized management, security, 
 
 ---
 
-### Part 4 – Enroll Devices
-- For new devices: during OOBE (Out-of-Box Experience), sign in with Azure AD credentials to auto-enroll  
-- For existing devices: users sign in and enroll via **Settings > Accounts > Access work or school > Connect**  
-- Alternatively, use Group Policy or provisioning packages for bulk enrollment if needed  
+# Part 4 – Enroll Devices
+
+## Device Enrollment Steps
+
+### For New Devices (During OOBE)
+- When setting up a new device for the first time (Out-of-Box Experience), **sign in using Azure AD credentials**.
+- This will automatically enroll the device into Azure AD and Intune.
+
+### For Existing Devices
+- Users can manually enroll their devices by:
+  - Going to **Settings**  
+  - Selecting **Accounts**  
+  - Clicking on **Access work or school**  
+  - Choosing **Connect** and signing in with their Azure AD account.
 
 ![Enroll-Device](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Enroll-Connect.png)
+
+### Bulk Enrollment (Optional)
+- For multiple devices, you can automate enrollment by:
+  - Deploying **Group Policy** that configures automatic enrollment, or  
+  - Using **provisioning packages** for quick setup.
+
+---
+
+## DNS Forwarder Configuration (On Domain Controller)
+
+To ensure devices can communicate properly with Azure AD and other Microsoft services during enrollment, the Domain Controller’s DNS must be able to resolve internet addresses:
+
+1. Open **DNS Manager** on your Domain Controller.
+2. Right-click your server name and select **Properties**.
+3. Go to the **Forwarders** tab.
+4. Add a reliable public DNS server IP (e.g., `8.8.8.8` for Google DNS).
+5. Click **OK** to save.
+
+This configuration allows your DNS server to forward requests it cannot resolve locally to public DNS servers, ensuring smooth device enrollment and internet access.
+
+---
+
+If DNS forwarders are not configured, devices may fail to reach Azure AD endpoints, resulting in enrollment errors.
+
+
 
 ---
 
