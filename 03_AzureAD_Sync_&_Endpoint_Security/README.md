@@ -182,6 +182,37 @@ dsregcmd /status
 
 ![dsreg-Status](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/dsregcmd_status_emp01.png)
 
+## L. Entra ID – Device Verification
+
+Once the Hybrid Azure AD Join configuration and device registration GPO are applied, you should verify that your domain-joined devices are correctly registered in Microsoft Entra ID.
+
+### Important Note on Device Ownership
+
+In the **Devices** list, the **Owner** field may display **None** for hybrid Azure AD joined devices. This is normal because:
+
+- Hybrid joined devices are automatically registered without an explicit owner assigned.
+- Assigning an owner manually is optional and not required for device management or compliance enforcement.
+
+### How to Verify Device Registration
+
+1. Access the [Microsoft Entra Admin Center](https://entra.microsoft.com/).
+2. Navigate to:  
+Identity → Devices → All devices
+3. Locate your devices and verify the following:
+- **Join Type**: `Hybrid Azure AD joined`
+- **Registered**: `Yes`
+- **Owner**: May be `None` (expected)
+- **Device Name**: Corresponds to the actual device hostname
+
+### Screenshot Example
+
+> ![Entra Devices List](./Screenshots/entra_devices_none_owner.png)  
+> *Hybrid Azure AD joined devices with Owner field showing None*
+
+---
+
+This confirms your devices are successfully registered and managed via Microsoft Entra ID.
+
 
 ## ✅ Step 2 – Device Management Using Microsoft Intune
 🎯 Objective
