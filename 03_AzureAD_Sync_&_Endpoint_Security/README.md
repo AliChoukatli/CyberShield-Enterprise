@@ -233,42 +233,61 @@ Ensure all devices are enrolled in Intune for centralized management, security, 
 
 ---
 
+### Prerequisites
+- Microsoft 365 tenant with Intune licenses assigned (e.g., Business Premium)  
+- Devices must be Hybrid Azure AD Joined or Azure AD Joined  
+- Network connectivity allowing devices to reach Intune endpoints  
+- User accounts with appropriate permissions to enroll devices  
+
+---
+
 ### Step 1 – Access the Intune Portal
-- Log in to the [Microsoft Endpoint Manager Admin Center](https://endpoint.microsoft.com/)
-- Confirm your admin account has the **Intune Administrator** role or equivalent
+- Log in to the [Microsoft Endpoint Manager Admin Center](https://endpoint.microsoft.com/)  
+- Confirm your admin account has the **Intune Administrator** role or equivalent  
+
+> **Screenshot recommended:**  
+> Capture the **Microsoft Endpoint Manager dashboard** showing your login and role for a professional environment overview.
 
 ---
 
 ### Step 2 – Configure Automatic Enrollment
-- Navigate to **Devices > Enroll devices > Automatic Enrollment**
-- Enable **MDM user scope** for targeted groups (e.g., All or specific Azure AD groups)
-- Save the configuration
+- Navigate to **Devices > Enroll devices > Automatic Enrollment**  
+- Enable **MDM user scope** for targeted groups (e.g., All or specific Azure AD groups)  
+- Save the configuration  
+
+> **Screenshot highly recommended:**  
+> Show the **Automatic Enrollment settings** page with MDM user scope enabled to prove configuration.
 
 ---
 
 ### Step 3 – Prepare Devices for Enrollment
-- Ensure devices are Hybrid Azure AD Joined or Azure AD Joined
-- Confirm devices are up to date with Windows Updates
-- Ensure device users have valid Intune licenses assigned
+- Ensure devices are Hybrid Azure AD Joined or Azure AD Joined  
+- Confirm devices are up to date with Windows Updates  
+- Ensure device users have valid Intune licenses assigned  
+
+> **Screenshot optional:**  
+> You may include a screenshot of **Azure AD Licenses assigned** to users or a device’s update status for clarity.
 
 ---
 
 ### Step 4 – Enroll Devices
-- For new devices: during OOBE (Out-of-Box Experience), sign in with Azure AD credentials to auto-enroll
-- For existing devices: users sign in and enroll via **Settings > Accounts > Access work or school > Connect**
-- Alternatively, use Group Policy or provisioning packages for bulk enrollment if needed
+- For new devices: during OOBE (Out-of-Box Experience), sign in with Azure AD credentials to auto-enroll  
+- For existing devices: users sign in and enroll via **Settings > Accounts > Access work or school > Connect**  
+- Alternatively, use Group Policy or provisioning packages for bulk enrollment if needed  
+
+> **Screenshot highly recommended:**  
+> Capture the **device enrollment process** on a client machine (Settings > Access work or school) showing a device connected and enrolled.
 
 ---
 
 ### Step 5 – Verify Enrollment Status
-- In the Endpoint Manager portal, go to **Devices > All devices**
-- Confirm devices appear with status **Compliant** or **Enrolled**
+- In the Endpoint Manager portal, go to **Devices > All devices**  
+- Confirm devices appear with status **Compliant** or **Enrolled**  
 - On client devices, run:
 
 ```powershell
 dsregcmd /status
 ```
-
 
 ## ✅ Step 3 – Apply Security and Compliance Policies via Intune
 🎯 Objective  
