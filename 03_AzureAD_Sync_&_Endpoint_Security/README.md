@@ -264,7 +264,7 @@ Ensure all devices are enrolled in Intune for centralized management, security, 
 
 ---
 
-### 📍 GPO Path:
+#### 📍 GPO Path:
 
 Computer Configuration
 → Policies
@@ -273,7 +273,7 @@ Computer Configuration
 → MDM
 
 
-### 🛠️ Enable the following policy:
+#### 🛠️ Enable the following policy:
 - **Policy Name**: *Enable automatic MDM enrollment using default Azure AD credentials*
 - **State**: Enabled  
 - **Option**: User Credential  
@@ -281,22 +281,23 @@ Computer Configuration
 
 📎 This policy ensures automatic enrollment into **Microsoft Intune** after Hybrid Azure AD Join.
 
----
-
-### ✅ Additional Device Preparation Checklist:
-- Ensure devices are **Hybrid Azure AD Joined** or **Azure AD Joined**
-- Confirm all devices are **fully updated** with Windows Updates
-- Verify each device user has a **valid Intune license** assigned
-
----
-
-### 🔄 Apply the GPO:
+#### 🔄 Apply the GPO:
 Run the following command on the device or via deployment:
 
 ```bash
 gpupdate /force
 ```
---
+---
+
+#### ✅ Additional Device Preparation Checklist:
+
+- Ensure devices are **Hybrid Azure AD Joined** or **Azure AD Joined**
+- Confirm all devices are **fully updated** with Windows Updates
+- Verify each device user has a **valid Intune license** assigned
+
+
+---
+
 
 ### 🔹Part 4 – Device Enrollment
 
