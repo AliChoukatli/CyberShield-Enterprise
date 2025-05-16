@@ -287,8 +287,6 @@ Run the following command on the device or via deployment:
 ```bash
 gpupdate /force
 ```
----
-
 #### ✅ Additional Device Preparation Checklist:
 
 - Ensure devices are **Hybrid Azure AD Joined** or **Azure AD Joined**
