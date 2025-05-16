@@ -268,46 +268,47 @@ Ensure all devices are enrolled in Intune for centralized management, security, 
 
 ---
 
-# Part 4 – Enroll Devices
 
-## Device Enrollment Steps
+### Part 4 – Device Enrollment
 
-### For New Devices (During OOBE)
-- When setting up a new device for the first time (Out-of-Box Experience), **sign in using Azure AD credentials**.
+Before enrolling devices, ensure your Domain Controller’s DNS can resolve internet domain names by configuring DNS forwarders. This step is essential for devices to communicate properly with Azure AD and Microsoft services during enrollment.
+
+**Steps to configure DNS forwarders:**  
+1. Open **DNS Manager** on your Domain Controller.  
+2. Right-click your server name and select **Properties**.  
+3. Go to the **Forwarders** tab.  
+4. Add one or more reliable public DNS server IPs, such as:  
+   - `8.8.8.8` (Google DNS)  
+   - `1.1.1.1` (Cloudflare DNS)  
+5. Click **OK** to save the settings.
+
+This setup enables your DNS server to forward unresolved queries to public DNS servers, ensuring smooth device enrollment and uninterrupted internet access.
+
+---
+
+## Device Enrollment
+
+#### Enrolling New Devices (During OOBE)
+- When setting up a new device for the first time (Out-of-Box Experience), **sign in with your Azure AD credentials**.
 - This will automatically enroll the device into Azure AD and Intune.
 
-### For Existing Devices
-- Users can manually enroll their devices by:
-  - Going to **Settings**  
-  - Selecting **Accounts**  
-  - Clicking on **Access work or school**  
-  - Choosing **Connect** and signing in with their Azure AD account.
+#### Enrolling Existing Devices
+- Users can manually enroll their existing devices by:  
+  1. Opening **Settings**  
+  2. Navigating to **Accounts**  
+  3. Selecting **Access work or school**  
+  4. Clicking **Connect** and signing in with their Azure AD account.
 
-![Enroll-Device](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Enroll-Connect.png)
+![Enroll Device Screenshot](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Enroll-Connect.png)
 
-### Bulk Enrollment (Optional)
-- For multiple devices, you can automate enrollment by:
-  - Deploying **Group Policy** that configures automatic enrollment, or  
-  - Using **provisioning packages** for quick setup.
-
----
-
-## DNS Forwarder Configuration (On Domain Controller)
-
-To ensure devices can communicate properly with Azure AD and other Microsoft services during enrollment, the Domain Controller’s DNS must be able to resolve internet addresses:
-
-1. Open **DNS Manager** on your Domain Controller.
-2. Right-click your server name and select **Properties**.
-3. Go to the **Forwarders** tab.
-4. Add a reliable public DNS server IP (e.g., `8.8.8.8` for Google DNS).
-5. Click **OK** to save.
-
-This configuration allows your DNS server to forward requests it cannot resolve locally to public DNS servers, ensuring smooth device enrollment and internet access.
+#### Bulk Enrollment (Optional)
+- For enrolling multiple devices at once, consider automating enrollment through:  
+  - Group Policy for automatic enrollment configuration, or  
+  - Provisioning packages for streamlined deployment.
 
 ---
 
-If DNS forwarders are not configured, devices may fail to reach Azure AD endpoints, resulting in enrollment errors.
-
+> **Note:** If devices fail to enroll, double-check your DNS forwarder settings to ensure connectivity to Azure AD endpoints.
 
 
 ---
