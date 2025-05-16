@@ -225,33 +225,6 @@ This confirms your devices are successfully registered and managed via Microsoft
 
 ---
 
-## 💡 Next Steps
-
-Now that your devices are successfully Hybrid Azure AD joined and synchronized with Microsoft Entra ID, you can centrally manage their configurations and security through **Microsoft Intune**. Intune enables you to deploy compliance policies, manage updates, and protect your endpoints effectively.
-
-The next phase will guide you through enrolling devices in Intune and configuring endpoint security policies to ensure your environment remains secure and compliant.
-
----
-
-## 🔐 Security Best Practices
-
-- **Remove elevated privileges promptly:** Immediately remove the **sync account** from the Domain Admins and Administrators groups after Azure AD Connect setup is complete to reduce security risks.
-- **Backup BitLocker recovery keys securely:** Ensure all BitLocker recovery keys are backed up either to Azure AD or your on-premises Active Directory to prevent data loss in case of device recovery scenarios.
-- **Maintain backup and rollback plans:** Keep regular backups of your Azure AD Connect configuration and on-premises AD to quickly recover from any synchronization issues or misconfigurations.
-
----
-
-## 🛠 Troubleshooting Tips
-
-If device synchronization or Hybrid Azure AD Join does not work as expected, consider these steps:
-
-- **Check Event Viewer logs** on the Azure AD Connect server for errors related to sync or authentication.
-- Use the **Azure AD Connect Health portal** to monitor synchronization status and alerts.
-- Run the following command on client devices to check device registration status:
-
-  ```powershell
-  dsregcmd /status
-
 
 ## ✅ Step 2 – Device Enrollment in Microsoft Intune (MDM)
 🎯 Objective  
