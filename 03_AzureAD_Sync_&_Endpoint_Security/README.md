@@ -206,8 +206,7 @@ Identity → Devices → All devices
 
 ### Screenshot Example
 
-> ![Entra Devices List](./Screenshots/entra_devices_none_owner.png)  
-> *Hybrid Azure AD joined devices with Owner field showing None*
+![Entra Devices List](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Entra-Devices.png)
 
 ---
 
