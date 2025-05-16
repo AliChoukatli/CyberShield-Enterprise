@@ -298,7 +298,7 @@ This setup enables your DNS server to forward unresolved queries to public DNS s
 ![Enroll Device Screenshot](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Enroll-Connect.png)
 
 
-When you sign in, you will be prompted to secure your account using the Microsoft Authenticator app.
+- When you sign in, you will be prompted to secure your account using the Microsoft Authenticator app.
 Simply follow the on-screen instructions and scan the provided QR code to complete the setup
 
 ![Enroll-Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Enroll-Success.png)
