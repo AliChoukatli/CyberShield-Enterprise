@@ -258,11 +258,35 @@ Ensure all devices are enrolled in Intune for centralized management, security, 
 
 ---
 
+### 🔹 2.1 – Add MDM Enrollment to the Existing `Auto Device Registration` GPO
+
+> 💡 If you already created a GPO named `Auto Device Registration` for Hybrid Azure AD Join, you can now **extend** it by adding the MDM enrollment policy.
+
+📍 Path:
+Computer Configuration
+→ Policies
+→ Administrative Templates
+→ Windows Components
+→ MDM
+
+
 ### Part 3 – Prepare Devices for Enrollment
 - Ensure devices are Hybrid Azure AD Joined or Azure AD Joined  
 - Confirm devices are up to date with Windows Updates  
 - Ensure device users have valid Intune licenses assigned  
 
+
+🛠️ Enable the following policy:
+- **Enable automatic MDM enrollment using default Azure AD credentials**
+  - State: `Enabled`
+  - Option: `User Credential`
+
+📎 This policy enables automatic enrollment into Microsoft Intune after Hybrid Azure AD Join.
+
+✅ After updating the GPO, run:
+```bash
+gpupdate /force
+```
 ---
 
 ### Part 4 – Device Enrollment
