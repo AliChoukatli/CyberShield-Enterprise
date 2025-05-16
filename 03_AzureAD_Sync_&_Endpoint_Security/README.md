@@ -249,7 +249,7 @@ Ensure all devices are enrolled in Intune for centralized management, security, 
 
 ---
 
-### Part 2 – Configure Automatic Enrollment
+### 🔹Part 2 – Configure Automatic Enrollment
 - Navigate to **Devices > Enroll devices > Automatic Enrollment**  
 - Enable **MDM user scope** for targeted groups (e.g., All or specific Azure AD groups)  
 - Save the configuration  
@@ -258,7 +258,7 @@ Ensure all devices are enrolled in Intune for centralized management, security, 
 
 ---
 
-## 🔹 Part 3 – Prepare Devices for Intune Enrollment via GPO
+### 🔹 Part 3 – Prepare Devices for Intune Enrollment via GPO
 
 💡 If you already created a GPO named `Auto Device Registration` for Hybrid Azure AD Join, you can now **extend** it to include Intune MDM auto-enrollment.
 
@@ -298,7 +298,7 @@ gpupdate /force
 ```
 --
 
-### Part 4 – Device Enrollment
+### 🔹Part 4 – Device Enrollment
 
 Before enrolling devices, ensure your Domain Controller’s DNS can resolve internet domain names by configuring DNS forwarders. This step is essential for devices to communicate properly with Azure AD and Microsoft services during enrollment.
 
@@ -315,7 +315,7 @@ This setup enables your DNS server to forward unresolved queries to public DNS s
 
 ---
 
-### Part 5 - Device Enrollment
+### 🔹 Part 5 - Device Enrollment
 
 #### Enrolling New Devices (During OOBE)
 - When setting up a new device for the first time (Out-of-Box Experience), **sign in with your Azure AD credentials**.
@@ -345,7 +345,7 @@ Simply follow the on-screen instructions and scan the provided QR code to comple
 ---
 
 
-### Part 5 – Verify Enrollment Status
+### Part 6 – Verify Enrollment Status
 - In the Endpoint Manager portal, go to **Devices > All devices**  
 - Confirm devices appear with status **Compliant** or **Enrolled**  
 - On client devices, run:
