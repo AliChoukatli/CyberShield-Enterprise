@@ -245,9 +245,7 @@ Ensure all devices are enrolled in Intune for centralized management, security, 
 - Log in to the [Microsoft Endpoint Manager Admin Center](https://endpoint.microsoft.com/)  
 - Confirm your admin account has the **Intune Administrator** role or equivalent  
 
-> **Screenshot recommended:**  
-> Capture the **Microsoft Endpoint Manager dashboard** showing your login and role for a professional environment overview.
-
+![Intune-Admin](
 ---
 
 ### Part 2 – Configure Automatic Enrollment
@@ -255,8 +253,7 @@ Ensure all devices are enrolled in Intune for centralized management, security, 
 - Enable **MDM user scope** for targeted groups (e.g., All or specific Azure AD groups)  
 - Save the configuration  
 
-> **Screenshot highly recommended:**  
-> Show the **Automatic Enrollment settings** page with MDM user scope enabled to prove configuration.
+![Auto-Enrollement](
 
 ---
 
