@@ -232,14 +232,6 @@ Ensure all devices are enrolled in Intune for centralized management, security, 
 
 ---
 
-### Prerequisites
-- Microsoft 365 tenant with Intune licenses assigned (e.g., Business Premium)
-- Devices must be Hybrid Azure AD Joined or Azure AD Joined
-- Network connectivity allowing devices to reach Intune endpoints
-- User accounts with appropriate permissions to enroll devices
-
----
-
 ### Step 1 – Access the Intune Portal
 - Log in to the [Microsoft Endpoint Manager Admin Center](https://endpoint.microsoft.com/)
 - Confirm your admin account has the **Intune Administrator** role or equivalent
