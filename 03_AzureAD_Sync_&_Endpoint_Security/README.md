@@ -245,7 +245,7 @@ Ensure all devices are enrolled in Intune for centralized management, security, 
 - Log in to the [Microsoft Endpoint Manager Admin Center](https://endpoint.microsoft.com/)  
 - Confirm your admin account has the **Intune Administrator** role or equivalent  
 
-![Intune-Admin](
+![Intune-Admin](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/intune-admin.png)
 
 ---
 
@@ -254,7 +254,7 @@ Ensure all devices are enrolled in Intune for centralized management, security, 
 - Enable **MDM user scope** for targeted groups (e.g., All or specific Azure AD groups)  
 - Save the configuration  
 
-![Auto-Enrollement](
+![Auto-Enrollement](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/auto-enrollement.png)
 
 ---
 
@@ -273,8 +273,7 @@ Ensure all devices are enrolled in Intune for centralized management, security, 
 - For existing devices: users sign in and enroll via **Settings > Accounts > Access work or school > Connect**  
 - Alternatively, use Group Policy or provisioning packages for bulk enrollment if needed  
 
-> **Screenshot highly recommended:**  
-> Capture the **device enrollment process** on a client machine (Settings > Access work or school) showing a device connected and enrolled.
+![Enroll-Device](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Enroll-Connect.png)
 
 ---
 
