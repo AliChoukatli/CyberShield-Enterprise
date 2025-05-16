@@ -246,6 +246,7 @@ Ensure all devices are enrolled in Intune for centralized management, security, 
 - Confirm your admin account has the **Intune Administrator** role or equivalent  
 
 ![Intune-Admin](
+
 ---
 
 ### Part 2 – Configure Automatic Enrollment
