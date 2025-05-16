@@ -180,6 +180,8 @@ gpupdate /force
 dsregcmd /status
 ```
 
+![dsreg-Status](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/dsregcmd_status_emp01.png)
+
 
 ## ✅ Step 2 – Device Management Using Microsoft Intune
 🎯 Objective
