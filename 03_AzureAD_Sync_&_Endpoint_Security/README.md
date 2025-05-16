@@ -238,86 +238,61 @@ If device synchronization or Hybrid Azure AD Join does not work as expected, con
   dsregcmd /status
 
 
-## ✅ Step 2 – Device Management Using Microsoft Intune
-🎯 Objective
-Manage Windows devices through Microsoft Intune for security and compliance.
+## ✅ Step 2 – Device Enrollment in Microsoft Intune (MDM)
+🎯 Objective  
+Ensure all devices are enrolled in Intune for centralized management and monitoring.
 
-1. Log in to Microsoft Intune via the Azure Portal.
+- Log in to Microsoft Intune via the Azure Portal.
+- Enroll all Windows devices via MDM.
+- Verify enrollment status on all devices.
 
-2. Ensure all devices are enrolled for management (MDM).
-
-3. Apply security policies (e.g., password requirements, screen lock, etc.).
-
-4. Monitor compliance policies and manage device health.
 ---
 
-## ✅ Step 3 – Apply Security and Compliance Policies
-🎯 Objective
-Enforce security policies and ensure device compliance.
+## ✅ Step 3 – Apply Security and Compliance Policies via Intune
+🎯 Objective  
+Manage security baselines and compliance rules to protect devices.
 
-1. Create and assign security policies (e.g., password, encryption settings).
+- Create and assign security policies (password requirements, screen lock, etc.).
+- Enforce compliance policies covering antivirus, firewall, encryption status, etc.
+- Monitor device compliance through the Intune portal.
 
-2. Apply compliance policies to enforce required standards, such as antivirus, firewall, and disk encryption.
 ---
 
-## ✅ Step 4 – Deploy BitLocker on Endpoints
-🎯 Objective
-Encrypt all devices using BitLocker for data protection.
+## ✅ Step 4 – Deploy BitLocker Encryption
+🎯 Objective  
+Protect data on devices by enabling BitLocker encryption.
 
-1. Deploy BitLocker via Intune or Group Policy.
-2. Ensure recovery keys are backed up to Azure AD or Active Directory.
+- Deploy BitLocker policies via Intune or Group Policy.
+- Ensure BitLocker recovery keys are backed up securely to Azure AD or on-premises AD.
+- Monitor BitLocker encryption status on devices.
+
 ---
 
 ## ✅ Step 5 – Enable Windows Defender Antivirus and Firewall
-🎯 Objective
-Ensure Windows Defender Antivirus and Firewall are enabled by default on all devices.
+🎯 Objective  
+Ensure endpoint protection is active on all devices.
 
-1. Configure Windows Defender Antivirus and Firewall settings through Intune or Group Policy.
+- Configure Windows Defender Antivirus and Firewall via Intune or Group Policy.
+- Monitor antivirus status and firewall settings compliance.
+
 ---
 
-# ✅ Step 6 – Configure Windows Hello, SmartScreen, and Exploit Protection
-🎯 Objective
-Enhance security by enabling Windows Hello, SmartScreen, and Exploit Protection.
+## ✅ Step 6 – Configure Additional Security Features
+🎯 Objective  
+Enhance device security with advanced protections.
 
-1. Configure Windows Hello, SmartScreen, and Exploit Protection within Intune for added device security.
+- Enable Windows Hello for Business.
+- Configure SmartScreen filtering.
+- Apply Exploit Protection settings through Intune.
 
-# ✅Step 6 – Configure Windows Hello, SmartScreen, and Exploit Protection
-# Step 7 – Enroll Devices in Intune (MDM)
-🎯 Objective
-Ensure all devices are enrolled in Intune for ongoing management.
+---
 
-1. Enroll devices via MDM (Mobile Device Management) to ensure consistent management and monitoring.
+## ✅ Step 7 – Verify Device Compliance
+🎯 Objective  
+Confirm all devices meet security standards.
 
-# ✅Step 6 – Configure Windows Hello, SmartScreen, and Exploit Protection
-# Step 8 – Verify Device Compliance
-🎯 Objective
-Verify that all devices are compliant with the defined security standards.
+- Create and monitor compliance policies in Intune.
+- Verify compliance on key security criteria including encryption, antivirus, firewall, and password policies.
 
-1. Create and monitor Device Compliance Policies in Intune.
-
-2. Verify compliance for devices across all security criteria, including password complexity, encryption, and antivirus settings.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+---
 
