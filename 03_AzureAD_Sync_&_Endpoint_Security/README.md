@@ -18,12 +18,12 @@ Before getting started, ensure the following:
 - On-premises Active Directory domain (e.g., `corp.aclab.tech`)
 - Azure AD tenant linked to your domain (e.g., `corp.aclab.tech.onmicrosoft.com`)
 - Azure AD Connect installed and configured
+- Devices enrolled in Intune (MDM)
 - BitLocker configured on all endpoints
   - Deployed via Intune or Group Policy
   - Recovery keys backed up to Azure AD or on-prem AD
 - Windows Defender Antivirus and Firewall enabled by default
 - Security features configured: Windows Hello, SmartScreen, Exploit Protection
-- Devices enrolled in Intune (MDM)
 - Device compliance policies created and enforced
 
 ---
