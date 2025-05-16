@@ -215,7 +215,7 @@ In the **Devices** list, the **Owner** field may display **None** for hybrid Azu
 Identity → Devices → All devices
 3. Locate your devices and verify the following:
 - **Join Type**: `Hybrid Azure AD joined`
-- **Registered**: `Yes`
+- **Registered**: `Date`
 - **Owner**: May be `None` (expected)
 - **Device Name**: Corresponds to the actual device hostname
 
