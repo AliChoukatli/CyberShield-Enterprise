@@ -263,9 +263,6 @@ Ensure all devices are enrolled in Intune for centralized management, security, 
 - Confirm devices are up to date with Windows Updates  
 - Ensure device users have valid Intune licenses assigned  
 
-> **Screenshot optional:**  
-> You may include a screenshot of **Azure AD Licenses assigned** to users or a device’s update status for clarity.
-
 ---
 
 ### Part 4 – Device Enrollment
