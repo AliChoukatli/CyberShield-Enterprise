@@ -225,16 +225,57 @@ This confirms your devices are successfully registered and managed via Microsoft
 
 ---
 
-
 ## ✅ Step 2 – Device Enrollment in Microsoft Intune (MDM)
-🎯 Objective  
-Ensure all devices are enrolled in Intune for centralized management and monitoring.
 
-- Log in to Microsoft Intune via the Azure Portal.
-- Enroll all Windows devices via MDM.
-- Verify enrollment status on all devices.
+### 🎯 Objective
+Ensure all devices are enrolled in Intune for centralized management, security, and compliance monitoring.
 
 ---
+
+### Prerequisites
+- Microsoft 365 tenant with Intune licenses assigned (e.g., Business Premium)
+- Devices must be Hybrid Azure AD Joined or Azure AD Joined
+- Network connectivity allowing devices to reach Intune endpoints
+- User accounts with appropriate permissions to enroll devices
+
+---
+
+### Step 1 – Access the Intune Portal
+- Log in to the [Microsoft Endpoint Manager Admin Center](https://endpoint.microsoft.com/)
+- Confirm your admin account has the **Intune Administrator** role or equivalent
+
+---
+
+### Step 2 – Configure Automatic Enrollment
+- Navigate to **Devices > Enroll devices > Automatic Enrollment**
+- Enable **MDM user scope** for targeted groups (e.g., All or specific Azure AD groups)
+- Save the configuration
+
+---
+
+### Step 3 – Prepare Devices for Enrollment
+- Ensure devices are Hybrid Azure AD Joined or Azure AD Joined
+- Confirm devices are up to date with Windows Updates
+- Ensure device users have valid Intune licenses assigned
+
+---
+
+### Step 4 – Enroll Devices
+- For new devices: during OOBE (Out-of-Box Experience), sign in with Azure AD credentials to auto-enroll
+- For existing devices: users sign in and enroll via **Settings > Accounts > Access work or school > Connect**
+- Alternatively, use Group Policy or provisioning packages for bulk enrollment if needed
+
+---
+
+### Step 5 – Verify Enrollment Status
+- In the Endpoint Manager portal, go to **Devices > All devices**
+- Confirm devices appear with status **Compliant** or **Enrolled**
+- On client devices, run:
+
+```powershell
+dsregcmd /status
+```
+
 
 ## ✅ Step 3 – Apply Security and Compliance Policies via Intune
 🎯 Objective  
