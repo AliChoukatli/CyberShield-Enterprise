@@ -43,12 +43,14 @@ systeminfo | findstr /i "domain"
 ![whoami-help01](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/whoami-hlp01.png)
 ![whoami-emp01](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/whoami-emp01.png)
 
+---
 
 ### B. Download and Install Azure AD Connect
 
 1. **Download Azure AD Connect** from the [official Microsoft website](https://www.microsoft.com/en-us/download/details.aspx?id=47594)
 2. Launch the installer and proceed through the wizard.
 
+---
 
 ### C. Azure AD Connect Configuration (Custom)
 1. Open **Azure AD Connect** > Click **"Configure"**.
@@ -56,22 +58,29 @@ systeminfo | findstr /i "domain"
 3. Select **Password Hash Synchronization**  
    ✅ *Recommended for simplicity and security*.
 
+---
 
 ### D. Sign In
 
 1. Sign in with your **Azure AD Global Admin** credentials:  
    *(e.g., admin@corp.aclab.tech)*.
 
+---
 
 ### E. Create a Sync Account
 
-1. Create a sync account:  
-   `corp.aclab.tech\syncadmin`
+Create a dedicated sync account used by Azure AD Connect to synchronize data between on-premises AD and Azure AD:
 
-   - Temporarily add to **Domain Admins** and **Administrators** groups.
-   - Remove privileges after setup.
-   - Optionally place in a restricted group (e.g., **Azure-AD-Connect**).
+`corp.aclab.tech\syncadmin`
 
+- Requires permissions to read/write directory data.
+- Temporarily add to Domain Admins and Administrators during setup.
+- Remove elevated privileges immediately after setup.
+- Optionally place in a restricted group (e.g., Azure-AD-Connect) for better management.
+
+This dedicated account improves security and allows better auditing of sync operations.
+
+---
 
 ### F. Link Directories
 
@@ -81,6 +90,7 @@ systeminfo | findstr /i "domain"
 
 2. Once directory validation is complete, click **Next**.
 
+---
 
 ### G. Enable Password Writeback and Group Writeback
 
@@ -94,6 +104,7 @@ corp.aclab.tech/
 ```
 ![Groupe-writeback](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Groups-Writeback.png)
 
+---
 
 ### H. Enable Single Sign-On (SSO) for Seamless Login Experience
 
@@ -113,6 +124,7 @@ corp.aclab.tech/
    ```
 ![Sync_Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Sync-Success.png)
 
+---
 
 ### J. Configure Hybrid Azure AD Join (Windows + Azure AD Connect)
 1. Launch AzureAD Connect (Entra Connect Sync) and select Configure Device Options.
@@ -123,6 +135,8 @@ corp.aclab.tech/
 3. Add your domain (e.g., corp.aclab.tech) and sign in with a Global Administrator account.
 
 4. Apply the configuration to enable automatic device registration in Azure AD.
+
+---
 
 ### K. Configure Hybrid Azure AD Join with Auto Device Registration GPO
 
@@ -180,6 +194,8 @@ dsregcmd /status
 ```
 
 ![dsreg-Status](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/dsregcmd_status_emp01.png)
+
+---
 
 ## L. Entra ID – Device Verification
 
