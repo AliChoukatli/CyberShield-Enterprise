@@ -297,7 +297,7 @@ gpupdate /force
 ---
 
 
-### 🔹Part 4 – Device Enrollment
+### 🔹Part 4 – DNS Forwarders
 
 Before enrolling devices, ensure your Domain Controller’s DNS can resolve internet domain names by configuring DNS forwarders. This step is essential for devices to communicate properly with Azure AD and Microsoft services during enrollment.
 
@@ -344,7 +344,7 @@ Simply follow the on-screen instructions and scan the provided QR code to comple
 ---
 
 
-### Part 6 – Verify Enrollment Status
+### 🔹 Part 6 – Verify Enrollment Status
 - In the Endpoint Manager portal, go to **Devices > All devices**  
 - Confirm devices appear with status **Compliant** or **Enrolled**  
 - On client devices, run:
