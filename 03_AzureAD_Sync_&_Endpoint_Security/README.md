@@ -241,7 +241,7 @@ Ensure all devices are enrolled in Intune for centralized management, security, 
 
 ---
 
-### Step 1 – Access the Intune Portal
+### Part 1 – Access the Intune Portal
 - Log in to the [Microsoft Endpoint Manager Admin Center](https://endpoint.microsoft.com/)  
 - Confirm your admin account has the **Intune Administrator** role or equivalent  
 
@@ -250,7 +250,7 @@ Ensure all devices are enrolled in Intune for centralized management, security, 
 
 ---
 
-### Step 2 – Configure Automatic Enrollment
+### Part 2 – Configure Automatic Enrollment
 - Navigate to **Devices > Enroll devices > Automatic Enrollment**  
 - Enable **MDM user scope** for targeted groups (e.g., All or specific Azure AD groups)  
 - Save the configuration  
@@ -260,7 +260,7 @@ Ensure all devices are enrolled in Intune for centralized management, security, 
 
 ---
 
-### Step 3 – Prepare Devices for Enrollment
+### Part 3 – Prepare Devices for Enrollment
 - Ensure devices are Hybrid Azure AD Joined or Azure AD Joined  
 - Confirm devices are up to date with Windows Updates  
 - Ensure device users have valid Intune licenses assigned  
@@ -270,7 +270,7 @@ Ensure all devices are enrolled in Intune for centralized management, security, 
 
 ---
 
-### Step 4 – Enroll Devices
+### Part 4 – Enroll Devices
 - For new devices: during OOBE (Out-of-Box Experience), sign in with Azure AD credentials to auto-enroll  
 - For existing devices: users sign in and enroll via **Settings > Accounts > Access work or school > Connect**  
 - Alternatively, use Group Policy or provisioning packages for bulk enrollment if needed  
@@ -280,7 +280,7 @@ Ensure all devices are enrolled in Intune for centralized management, security, 
 
 ---
 
-### Step 5 – Verify Enrollment Status
+### Part 5 – Verify Enrollment Status
 - In the Endpoint Manager portal, go to **Devices > All devices**  
 - Confirm devices appear with status **Compliant** or **Enrolled**  
 - On client devices, run:
