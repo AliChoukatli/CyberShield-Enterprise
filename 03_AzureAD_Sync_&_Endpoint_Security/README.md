@@ -268,7 +268,6 @@ Ensure all devices are enrolled in Intune for centralized management, security, 
 
 ---
 
-
 ### Part 4 – Device Enrollment
 
 Before enrolling devices, ensure your Domain Controller’s DNS can resolve internet domain names by configuring DNS forwarders. This step is essential for devices to communicate properly with Azure AD and Microsoft services during enrollment.
@@ -286,7 +285,7 @@ This setup enables your DNS server to forward unresolved queries to public DNS s
 
 ---
 
-## Device Enrollment
+### Part 5 - Device Enrollment
 
 #### Enrolling New Devices (During OOBE)
 - When setting up a new device for the first time (Out-of-Box Experience), **sign in with your Azure AD credentials**.
