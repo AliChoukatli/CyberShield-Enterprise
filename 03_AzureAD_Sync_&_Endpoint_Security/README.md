@@ -88,7 +88,6 @@ systeminfo | findstr /i "domain"
    - *Recommended to enable these features for hybrid identity management*.
 
 📁 Recommended OU Structure:
-
 ```sql
 corp.aclab.tech/
 └── AzureAD-Groups/
