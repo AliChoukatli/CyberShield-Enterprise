@@ -1,4 +1,4 @@
-# Phase 3 – Azure AD Sync & Endpoint Security
+# Phase 1 - Azure AD Sync & Endpoint Security
 
 ## 🎯 Objective
 
