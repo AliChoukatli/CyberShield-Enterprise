@@ -346,12 +346,17 @@ Simply follow the on-screen instructions and scan the provided QR code to comple
 
 ### 🔹 Part 6 – Verify Enrollment Status
 - In the Endpoint Manager portal, go to **Devices > All devices**  
-- Confirm devices appear with status **Compliant** or **Enrolled**  
+- Confirm devices appear with status **Compliant** or **Enrolled**
+
+![Devices-List](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Devices-List.png)
+  
 - On client devices, run:
 
 ```powershell
 dsregcmd /status
 ```
+
+--- 
 
 ## ✅ Step 3 – Apply Security and Compliance Policies via Intune
 🎯 Objective  
