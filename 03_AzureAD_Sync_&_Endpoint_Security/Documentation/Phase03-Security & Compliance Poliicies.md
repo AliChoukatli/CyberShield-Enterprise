@@ -83,7 +83,15 @@ This guide provides a complete and recommended configuration for enabling and ma
 | Deny write access to fixed drives not protected by BitLocker | **Enabled**                                         |
 ---
 
+#### E. Removables Data Drives
 
+| Setting                                                                  | Recommended Value                                   |
+|--------------------------------------------------------------------------------------------------------------------------------|
+| Control use of bitlocker on removables drives                            | **Enabled**                                         | 
+| Allow users to apply Bitlocker protection                                | **False**                                           |
+| Enforce drive encryption type on removable data drives                   | **False**                                           |
+| Deny write access to removable drives not protected by BitLocker         | **Enabled**                                         |     
+| Do not Allow Write Access to Devices Confighured in another organization | **True**                                            | 
 ---
 
 
