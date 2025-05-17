@@ -6,7 +6,7 @@ Establish a professional-grade deployment of BitLocker via Microsoft Intune to e
 
 ---
 
-### ✅ Step 0 – Test Group
+### ✅ Step 1 – Test Group
 
 1. Go to **Microsoft Entra Admin Center** → **Groups**  
 2. Click **+ New group**, then configure:
@@ -20,7 +20,7 @@ Establish a professional-grade deployment of BitLocker via Microsoft Intune to e
 #### 💡 *Use this group to safely validate and troubleshoot your BitLocker policy before full deployment.*
 ---
 
-### ✅ Step 1 – Create a Dynamic Group for Windows 10/11 Devices
+### ✅ Step 2 – Create a Dynamic Group for Windows 10/11 Devices
 
 1. Return to **Groups** > **New group**
 2. Select:
@@ -42,7 +42,7 @@ Establish a professional-grade deployment of BitLocker via Microsoft Intune to e
 
 ---
 
-### ✅ Step 2 - Configure BitLocker Policy in Intune
+### ✅ Step 3 - Configure BitLocker Policy in Intune
 
 ### 1. Navigate to BitLocker Policy Creation
 
@@ -115,7 +115,7 @@ Establish a professional-grade deployment of BitLocker via Microsoft Intune to e
 
 ---
 
-## ✅ Step 3 - Assign the Policy in Intune
+## ✅ Step 4 - Assign the Policy in Intune
 
 * Go to **Intune** > **Endpoint security** > **Disk encryption** > Select your policy
 * Click **Assignments**
