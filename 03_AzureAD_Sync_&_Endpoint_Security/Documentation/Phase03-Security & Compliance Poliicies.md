@@ -154,7 +154,7 @@ This guide provides a complete and recommended configuration for enabling and ma
 ---
 
 
-## ✅ Step 3 – Assign Policy in Intune
+## ✅ Assign Policy in Intune
 In Intune portal → Endpoint security > Disk encryption > your BitLocker policy
 
 Click Assignments
@@ -163,12 +163,9 @@ Add groups:
 
 First, assign BitLocker-Test-Group to test
 
-Then, assign All Windows 10/11 Devices after successful validation
+Then, assign to Windows 10/11 Devices after successful validation.
 
-
-
-
-
+![BitLocker-Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/BitLocker-Policy.png)
 
 
 ---
