@@ -1,4 +1,4 @@
-# 🔐 Phase 3 – Apply Security with BitLocker 🔐
+# 🔐 Phase 3 – Endpoint Protection: BitLocker Deployment with Intune
 
 ## 🌟 Objective
 
