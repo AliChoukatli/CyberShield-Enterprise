@@ -49,21 +49,21 @@ This guide provides a complete and recommended configuration for enabling and ma
 
 #### C. Operating System Drives
 
-| Setting                                                              | Recommended Value                                 |
-|----------------------------------------------------------------------|---------------------------------------------------|
-| Enforce drive encryption type on OS drives                           | **Enabled** - Full encryption                     |
-| Require additional authentication at startup                         | **Enabled**                                       |
-| Allow BitLocker without a compatible TPM                             | **True**                                          |
-| Configure TPM startup                                                | **Required**                                      |
-| Configure TPM startup key                                            | **Do not allow**                                  |
-| Configure TPM startup PIN                                            | **Require PIN with TPM**                          |
-| Configure minimum PIN length for startup                             | **Enabled** / **6+ character**                    |
-| Allow enhanced PIN                                                   | **Enabled**                                       |
-| Disallow standard users from changing PIN or password                | **Disabled**                                      |
-| Choose how BitLocker-protected OS drives can be recovered            | **Enabled** - 256-bit key and 48-digit password   |
-| Configure storage of recovery info to AD DS                          | **Enabled**                                       |
-| Save BitLocker recovery info to AD DS for OS devices                 | **Enabled** - Recovery password and key package   |
-| Enable BitLocker until recovery info is stored to AD DS              | **Enabled** (Prevents activation before backup)   |
+| Setting                                                              | Recommended Value                                   |
+|----------------------------------------------------------------------|-----------------------------------------------------|
+| Enforce drive encryption type on OS drives                           | **Enabled** - Full encryption                       |
+| Require additional authentication at startup                         | **Enabled**                                         |
+| Allow BitLocker without a compatible TPM                             | **True**                                            |
+| Configure TPM startup                                                | **Required**                                        |
+| Configure TPM startup key                                            | **Do not allow**                                    |
+| Configure TPM startup PIN                                            | **Require PIN with TPM**                            |
+| Configure minimum PIN length for startup                             | **Enabled** / **6+ character**                      |
+| Allow enhanced PIN                                                   | **Enabled**                                         |
+| Disallow standard users from changing PIN or password                | **Disabled**                                        |
+| Choose how BitLocker-protected OS drives can be recovered            | **Enabled** - **256-bit key and 48-digit password** |
+| Configure storage of recovery info to AD DS                          | **Store Recovery Password and Key Packages**        |
+| Save BitLocker recovery info to AD DS for OS drives                  | **Enabled** - Recovery password and key package     |
+| Enable BitLocker until recovery info is stored to AD DS              | **Enabled** (Prevents activation before backup)     |
 
 ---
 
