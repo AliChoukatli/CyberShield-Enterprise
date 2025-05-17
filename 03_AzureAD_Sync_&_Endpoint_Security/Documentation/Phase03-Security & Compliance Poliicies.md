@@ -38,7 +38,7 @@ Establish a professional-grade deployment of BitLocker via Microsoft Intune to e
 
 ![Windows-Device-Group](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Windows-Device-Group.png)
 
-. Alternatively 
+5. Alternatively with KQL
 ```kql
 (device.deviceOSType -eq "Windows") and
 (device.deviceOSVersion -startsWith "10" or device.deviceOSVersion -startsWith "11")
