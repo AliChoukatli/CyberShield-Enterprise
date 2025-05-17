@@ -1,4 +1,4 @@
-## ✅ Step 6 – Configure Additional Security Features
+## ✅ Phase  – Configure Additional Security Features
 🎯 Objective  
 Enhance device security with advanced protections.
 
