@@ -6,22 +6,18 @@ Establish a professional-grade deployment of BitLocker via Microsoft Intune to e
 
 ---
 
-## ✅ Step 0 – Create a Test Group (Recommended for Validation)
+### ✅ Step 0 – Create a Test Group in Entra
 
-1. Navigate to **Microsoft Entra Admin Center**
-2. Go to **Groups** from the left-side menu
-3. Click **+ New group**
-4. Fill in the following:
+1. Go to **Microsoft Entra Admin Center** → **Groups**  
+2. Click **+ New group**, then configure:
+   - **Group type**: Security  
+   - **Group name**: `BitLocker-Test-Group`  
+   - **Description**: Testing BitLocker policy deployment  
+   - **Membership type**: Assigned  
+3. Add 1–2 test devices (e.g., a VM or a controlled PC)  
+4. Click **Create**
 
-   * **Group type**: Security
-   * **Group name**: `BitLocker-Test-Group`
-   * **Description**: Group for testing BitLocker policy deployment
-   * **Membership type**: Assigned
-5. Add 1 or 2 test devices (e.g., lab VM or controlled PC)
-6. Click **Create**
-
-⚡ This allows safe testing and troubleshooting before broader rollout.
-
+💡 *Use this group to safely validate and troubleshoot your BitLocker policy before full deployment.*
 ---
 
 ## ✅ Step 1 – Create a Dynamic Group for All Windows 10/11 Devices
