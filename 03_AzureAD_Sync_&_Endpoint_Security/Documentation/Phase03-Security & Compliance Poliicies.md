@@ -17,7 +17,7 @@ Establish a professional-grade deployment of BitLocker via Microsoft Intune to e
 3. Add 1–2 test devices (e.g., a VM or a controlled PC)  
 4. Click **Create**
 
-💡 *Use this group to safely validate and troubleshoot your BitLocker policy before full deployment.*
+#### 💡 *Use this group to safely validate and troubleshoot your BitLocker policy before full deployment.*
 ---
 
 ## ✅ Step 1 – Create a Dynamic Group for All Windows 10/11 Devices
