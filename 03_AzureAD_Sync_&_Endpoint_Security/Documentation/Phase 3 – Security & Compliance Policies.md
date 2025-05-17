@@ -1,4 +1,4 @@
-# ✅ Phase03 - Security & Compliance Policies
+# ✅ Phase 3 - Security & Compliance Policies
 
 Now that device and user management is in place, this phase focuses on implementing key **security and compliance policies** to protect organizational resources.
 
