@@ -1,10 +1,10 @@
-## ✅ Phase03 – Apply Security and Compliance Policies via Intune
+# ✅ Phase03 – Apply Security and Compliance Policies via Intune
 
 🎯 **Objective**  
 Manage security baselines and compliance rules to protect devices.
 
 
-# 🔐 BitLocker Configuration via Intune – Endpoint Protection Policy
+## 🔐 BitLocker Configuration via Intune – Endpoint Protection Policy
 
 ## 🎯 Objective
 To enforce BitLocker encryption on Windows 10/11 devices using Microsoft Intune, ensuring OS drives are secured and recovery information is safely stored in Azure AD.
