@@ -367,7 +367,7 @@ Manage security baselines and compliance rules to protect devices.
 
 1. Go to **Intune Admin Center** → **Endpoint security** → **Security baselines**.
 2. Click **+ Create profile**.
-3. Choose a baseline (e.g., *Microsoft Defender for Endpoint Baseline*).
+3. Choose a baseline (e.g., *Microsoft Defender for Endpoint Baseline -Security Baseline for Windows 10 and later*).
 4. Configure the settings as needed (password length, screen lock timeout, etc.).
 5. Click **Next**, assign to a group (e.g., *All Devices* or a test group).
 6. Click **Create**.
