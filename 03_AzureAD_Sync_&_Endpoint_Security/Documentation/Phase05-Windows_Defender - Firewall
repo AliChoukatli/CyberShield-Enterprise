@@ -1,0 +1,6 @@
+## ✅ Step 5 – Enable Windows Defender Antivirus and Firewall
+🎯 Objective  
+Ensure endpoint protection is active on all devices.
+
+- Configure Windows Defender Antivirus and Firewall via Intune or Group Policy.
+- Monitor antivirus status and firewall settings compliance.
