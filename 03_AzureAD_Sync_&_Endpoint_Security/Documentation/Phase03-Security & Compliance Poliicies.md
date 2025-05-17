@@ -94,16 +94,57 @@ This guide provides a complete and recommended configuration for enabling and ma
 | Do not Allow Write Access to Devices Confighured in another organization | **True**            | 
 ---
 
+---
+
+### 4. 🎯 Assignments – BitLocker Policy Deployment Strategy
+
+To ensure a professional and scalable deployment, BitLocker configuration profiles must be assigned properly in Microsoft Intune. Below is the recommended assignment strategy for production-grade environments.
+
+#### 🔹 1. Testing Phase (Pre-production)
+Before deploying to the full organization, test the policy on a limited set of machines.
+
+| Group Name              | Type          | Description                                |
+|-------------------------|---------------|--------------------------------------------|
+| `BitLocker-Test-Group` | Static group  | 2–3 test devices or users                  |
+
+- ✅ Allows validation without impacting the organization.
+- ✅ Use test machines with different BitLocker scenarios (TPM/no TPM, removable drive, etc.)
+
+---
+
+#### 🔹 2. Production Rollout
+
+Once tested and validated, apply the policy to your production environment:
+
+| Group Name                  | Type            | Description                               |
+|-----------------------------|------------------|-------------------------------------------|
+| `All Windows 10/11 Devices` | Dynamic group    | Automatically includes all Windows devices|
+
+**How to create a dynamic group in Azure AD**:
+
+```kql
+(device.deviceOSType -eq "Windows") and (device.deviceOSVersion -startsWith "10" or device.deviceOSVersion -startsWith "11")
+```
+
+
+⚙️ Best Practices
+
+- ✅ Exclude non-compliant or legacy devices from assignments.
+
+- ✅ Monitor device compliance post-assignment using Intune Reports > Endpoint security > Disk encryption report.
+
+- ✅ Use Filters if needed to apply to only devices with TPM or other hardware-specific attributes.
 
 
 
 
 
+📌 Final Assignment Recommendation
+- Initial: Assign to BitLocker-Test-Group
 
+- After Validation: Assign to All Windows 10/11 Devices
 
-
-
-
+- Optional: Use Azure AD device filters to fine-tune assignment based on hardware capabilities
 
 
 
