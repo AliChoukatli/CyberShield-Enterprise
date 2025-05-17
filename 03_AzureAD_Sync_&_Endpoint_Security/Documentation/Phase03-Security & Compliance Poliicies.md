@@ -1,6 +1,6 @@
 # ✅ Phase03 – Apply Security and Compliance Policies via Intune
 
-🎯 **Objective**  
+## 🎯 **Objective**  
 Manage security baselines and compliance rules to protect devices.
 
 
@@ -23,13 +23,13 @@ To enforce BitLocker encryption on Windows 10/11 devices using Microsoft Intune,
 - Click **Create**
 
 ---
-# 🔐 BitLocker Policy Configuration via Intune (MDM)
+### 3. 🔐 BitLocker Configuration Setting
 
 This guide provides a complete and recommended configuration for enabling and managing BitLocker via Microsoft Intune on Windows 10/11 devices.
 
 ---
 
-## 1. 🔒 Require Device Encryption
+#### A. 🔒 Require Device Encryption
 
 | Setting                                      | Recommended Value                          |
 |---------------------------------------------|---------------------------------------------|
@@ -39,7 +39,7 @@ This guide provides a complete and recommended configuration for enabling and ma
 
 ---
 
-## 2. 💽 BitLocker Drive Encryption Settings
+#### B. 💽 BitLocker Drive Encryption Settings
 
 | Setting                                            | Recommended Value   |
 |----------------------------------------------------|----------------------|
@@ -47,7 +47,7 @@ This guide provides a complete and recommended configuration for enabling and ma
 
 ---
 
-## 3. 🧩 Operating System Drives
+#### C. 🧩 Operating System Drives
 
 | Setting                                                              | Recommended Value                                 |
 |----------------------------------------------------------------------|---------------------------------------------------|
@@ -66,7 +66,7 @@ This guide provides a complete and recommended configuration for enabling and ma
 
 ---
 
-## 4. 💾 Fixed Data Drives
+#### D. 💾 Fixed Data Drives
 
 | Setting                                                   | Recommended Value                              |
 |------------------------------------------------------------|-------------------------------------------------|
@@ -78,7 +78,7 @@ This guide provides a complete and recommended configuration for enabling and ma
 
 ---
 
-## 5. 🔌 Removable Data Drives
+#### E. 🔌 Removable Data Drives
 
 | Setting                                | Recommended Value            |
 |----------------------------------------|-------------------------------|
