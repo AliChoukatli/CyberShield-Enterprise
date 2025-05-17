@@ -1,4 +1,4 @@
-## ✅ Step 2 – Device Enrollment in Microsoft Intune (MDM)
+## ✅ Phase 2 – Device Enrollment in Microsoft Intune (MDM)
 
 ### 🎯 Objective
 Ensure all devices are enrolled in Intune for centralized management, security, and compliance monitoring.
