@@ -29,7 +29,7 @@ This guide provides a complete and recommended configuration for enabling and ma
 
 ---
 
-#### A. 🔒 Require Device Encryption
+#### A. Require Device Encryption
 
 | Setting                                      | Recommended Value                          |
 |---------------------------------------------|---------------------------------------------|
@@ -39,7 +39,7 @@ This guide provides a complete and recommended configuration for enabling and ma
 
 ---
 
-#### B. 💽 BitLocker Drive Encryption Settings
+#### B. BitLocker Drive Encryption Settings
 
 | Setting                                            | Recommended Value   |
 |----------------------------------------------------|----------------------|
@@ -47,7 +47,7 @@ This guide provides a complete and recommended configuration for enabling and ma
 
 ---
 
-#### C. 🧩 Operating System Drives
+#### C. Operating System Drives
 
 | Setting                                                              | Recommended Value                                 |
 |----------------------------------------------------------------------|---------------------------------------------------|
@@ -66,7 +66,7 @@ This guide provides a complete and recommended configuration for enabling and ma
 
 ---
 
-#### D. 💾 Fixed Data Drives
+#### D. Fixed Data Drives
 
 | Setting                                                   | Recommended Value                              |
 |------------------------------------------------------------|-------------------------------------------------|
@@ -78,7 +78,7 @@ This guide provides a complete and recommended configuration for enabling and ma
 
 ---
 
-#### E. 🔌 Removable Data Drives
+#### E. Removable Data Drives
 
 | Setting                                | Recommended Value            |
 |----------------------------------------|-------------------------------|
@@ -94,9 +94,6 @@ This guide provides a complete and recommended configuration for enabling and ma
 - The **"Enable BitLocker until recovery info is stored"** setting ensures BitLocker doesn’t activate before the keys are saved.
 
 ---
-
-**Created by:** Ali Choukatli  
-**Project:** Cybershield – BitLocker Intune Policy Configuration  
 
 
 
