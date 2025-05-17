@@ -1,5 +1,5 @@
 
-# 🛡️ Phase 4 - Windows Security Baseline – Defender, Firewall & User Rights (via Intune)
+# 🛡️ Defender, Firewall & User Rights (via Intune)
 
 ## 🎯 Objective
 To apply Microsoft recommended security configurations using the **Windows 10 and later Security Baseline** in Intune.  
