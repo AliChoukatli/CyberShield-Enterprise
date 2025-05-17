@@ -1,4 +1,4 @@
-# 🔐 Phase 5 – Endpoint Protection: BitLocker Deployment with Intune
+# 🔐 Phase 5 – BitLocker Deployment with Intune
 
 ## 🌟 Objective
 
