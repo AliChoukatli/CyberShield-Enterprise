@@ -57,7 +57,7 @@ This guide provides a complete and recommended configuration for enabling and ma
 | Configure TPM startup                                                | **Required**                                      |
 | Configure TPM startup key                                            | **Do not allow**                                  |
 | Configure TPM startup PIN                                            | **Require PIN with TPM**                          |
-| Configure minimum PIN length for startup                             | **Enabled** + **6 character**                    |
+| Configure minimum PIN length for startup                             | **Enabled** / **6+ character**                    |
 | Allow enhanced PIN                                                   | **Enabled**                                       |
 | Disallow standard users from changing PIN or password                | **Disabled**                                      |
 | Choose how BitLocker-protected OS drives can be recovered            | **Enabled** - 256-bit key and 48-digit password   |
