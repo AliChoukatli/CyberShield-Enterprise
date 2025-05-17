@@ -13,7 +13,6 @@ Establish a professional-grade deployment of BitLocker via Microsoft Intune to e
 ---
 
 ## 📋 Table of Contents
-- [🌟 Objective](#-objective)
 - [✅ Step 1 – Test Group](#-step-1--test-group)
 - [✅ Step 2 – Create a Dynamic Group](#-step-2--create-a-dynamic-group-for-windows-1011-devices)
 - [✅ Step 3 – Configure BitLocker Policy in Intune](#-step-3---configure-bitlocker-policy-in-intune)
