@@ -31,19 +31,19 @@ This guide provides a complete and recommended configuration for enabling and ma
 
 #### A. Require Device Encryption
 
-| Setting                                      | Recommended Value                          |
-|---------------------------------------------|---------------------------------------------|
-| Require Device Encryption                   | **Enabled**                                 |
-| Allow warning for other disk encryption     | **Enabled**                                 |
-| Configure recovery password rotation        | **Enabled** - Refresh on Azure AD joined & Hybrid-Joined Devices |
+| Setting                                      | Recommended Value                                     |
+|---------------------------------------------|--------------------------------------------------------|
+| Require Device Encryption                   | **Enabled**                                            |
+| Allow warning for other disk encryption     | **Enabled**                                            |
+| Configure recovery password rotation        | **Refresh on Azure AD joined & Hybrid-Joined Devices** |
 
 ---
 
 #### B. BitLocker Drive Encryption Settings
 
-| Setting                                            | Recommended Value   |
-|----------------------------------------------------|----------------------|
-| Choose drive encryption method (OS, Fixed, Removable) | **XTS-AES 256-bit**   |
+| Setting                                               | Recommended Value      |
+|-------------------------------------------------------|------------------------|
+| Choose drive encryption method (OS, Fixed, Removable) | **XTS-AES 256-bit**    |
 
 ---
 
