@@ -1,17 +1,5 @@
 # 🔐 Phase 3 – Apply Security with BitLocker 🔐
 
-## 🌟 Objective
-
-Establish a professional-grade deployment of BitLocker via Microsoft Intune to ensure enterprise-grade security, compliance, and operational reliability across Windows devices.
-
----
-
-### 🔧 Prerequisites
-- Microsoft Intune configured and licensed
-- Devices Azure AD joined or Hybrid-joined
-- Admin access to Intune and Entra Admin Center
----
-
 ## 📋 Table of Contents
 - [🌟 Objective](#-objective)
 - [✅ Step 1 – Test Group](#-step-1--test-group)
@@ -19,6 +7,19 @@ Establish a professional-grade deployment of BitLocker via Microsoft Intune to e
 - [✅ Step 3 – Configure BitLocker Policy in Intune](#-step-3---configure-bitlocker-policy-in-intune)
 - [✅ Step 4 – Assign the Policy in Intune](#-step-4---assign-the-policy-in-intune)
 ---
+
+## 🌟 Objective
+
+Establish a professional-grade deployment of BitLocker via Microsoft Intune to ensure enterprise-grade security, compliance, and operational reliability across Windows devices.
+
+---
+
+## 🔧 Prerequisites
+- Microsoft Intune configured and licensed
+- Devices Azure AD joined or Hybrid-joined
+- Admin access to Intune and Entra Admin Center
+---
+
 
 ### ✅ Step 1 – Test Group
 
