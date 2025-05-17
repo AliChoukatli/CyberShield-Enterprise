@@ -41,10 +41,12 @@ This guide provides a complete and recommended configuration for enabling and ma
 
 #### B. BitLocker Drive Encryption Settings
 
-| Setting                                               | Recommended Value      |
-|-------------------------------------------------------|------------------------|
-| Choose drive encryption method (OS, Fixed, Removable) | **XTS-AES 256-bit**    |
-
+| Setting                                                    | Recommended Value      |
+|------------------------------------------------------------|------------------------|
+| Choose drive encryption method (OS, Fixed, Removable)      | **Enabled**            |
+| Select the encryption method for fixed data drives:        | **XTS-AES 256-bit**    |
+| Select the encryption method for operating system drives:  | **XTS-AES 256-bit**    |
+| Select the encryption method for removable data drives:    | **XTS-AES 256-bit**    |
 ---
 
 #### C. Operating System Drives
@@ -54,9 +56,10 @@ This guide provides a complete and recommended configuration for enabling and ma
 | Enforce drive encryption type on OS drives                           | **Enabled** - Full encryption                       |
 | Require additional authentication at startup                         | **Enabled**                                         |
 | Allow BitLocker without a compatible TPM                             | **True**                                            |
-| Configure TPM startup                                                | **Required**                                        |
-| Configure TPM startup key                                            | **Do not allow**                                    |
-| Configure TPM startup PIN                                            | **Require PIN with TPM**                            |
+| Configure TPM startup key and PIN                                    | **Do not allow startup key and PIN with TPM**       |
+| Configure TPM startup key                                            | **Do not allow statrup key with TPM**               |
+| Configure TPM startup PIN                                            | **Require Startup PIN with TPM**                    |
+| Configure TPM startup:                                               | **Require TPM**                                     |
 | Configure minimum PIN length for startup                             | **Enabled** / **6+ character**                      |
 | Allow enhanced PIN                                                   | **Enabled**                                         |
 | Disallow standard users from changing PIN or password                | **Disabled**                                        |
@@ -70,33 +73,15 @@ This guide provides a complete and recommended configuration for enabling and ma
 
 #### D. Fixed Data Drives
 
-| Setting                                                   | Recommended Value                              |
-|------------------------------------------------------------|-------------------------------------------------|
-| Enforce drive encryption type                              | **Enabled** - Full encryption                   |
-| Choose encryption method                                   | **XTS-AES 256-bit**                             |
-| Choose how fixed drives can be recovered                   | **Enabled** - 256-bit key and 48-digit password |
-| Allow data recovery agent                                  | **False**                                       |
-| Configure storage of BitLocker recovery info to AD DS      | **Enabled**                                     |
-
+| Setting                                                      | Recommended Value                               |
+|--------------------------------------------------------------|-----------------------------------------------------|
+| Enforce drive encryption type                                | **Enabled** - **Full encryption**                   |
+| Choose encryption method                                     | **XTS-AES 256-bit**                                 |
+| Choose how fixed drives can be recovered                     | **Enabled** - **256-bit key and 48-digit password** |
+| Allow data recovery agent                                    | **False**                                           |
+| Configure storage of BitLocker recovery info to AD DS        | **Enabled**                                         |
+| Deny write access to fixed drives not protected by BitLocker | **Enabled**                                         |
 ---
-
-#### E. Removable Data Drives
-
-| Setting                                | Recommended Value            |
-|----------------------------------------|-------------------------------|
-| Enforce drive encryption type          | **Enabled** - Full encryption |
-| Choose encryption method               | **XTS-AES 256-bit**           |
-
----
-
-## 📌 Notes
-
-- All recovery keys are backed up to Azure AD.
-- Automatic rotation of recovery passwords is enabled for Azure AD joined devices.
-- The **"Enable BitLocker until recovery info is stored"** setting ensures BitLocker doesn’t activate before the keys are saved.
-
----
-
 
 
 ---
