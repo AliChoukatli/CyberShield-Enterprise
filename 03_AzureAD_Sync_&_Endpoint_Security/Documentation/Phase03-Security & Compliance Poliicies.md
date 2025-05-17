@@ -6,6 +6,20 @@ Establish a professional-grade deployment of BitLocker via Microsoft Intune to e
 
 ---
 
+### 🔧 Prerequisites
+- Microsoft Intune configured and licensed
+- Devices Azure AD joined or Hybrid-joined
+- Admin access to Intune and Entra Admin Center
+---
+
+## 📋 Table of Contents
+- [🌟 Objective](#-objective)
+- [✅ Step 1 – Test Group](#-step-1--test-group)
+- [✅ Step 2 – Create a Dynamic Group](#-step-2--create-a-dynamic-group-for-windows-1011-devices)
+- [✅ Step 3 – Configure BitLocker Policy in Intune](#-step-3---configure-bitlocker-policy-in-intune)
+- [✅ Step 4 – Assign the Policy in Intune](#-step-4---assign-the-policy-in-intune)
+---
+
 ### ✅ Step 1 – Test Group
 
 1. Go to **Microsoft Entra Admin Center** → **Groups**  
@@ -34,7 +48,7 @@ Establish a professional-grade deployment of BitLocker via Microsoft Intune to e
 
 ![Windows-Device-Group](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Windows-Device-Group.png)
 
-5. Alternatively with KQL
+5. 📌 Optional: Use KQL for more precision
 ```kql
 (device.deviceOSType -eq "Windows") and
 (device.deviceOSVersion -startsWith "10" or device.deviceOSVersion -startsWith "11")
