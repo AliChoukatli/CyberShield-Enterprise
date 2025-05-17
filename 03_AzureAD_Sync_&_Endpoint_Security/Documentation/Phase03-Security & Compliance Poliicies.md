@@ -73,7 +73,7 @@ This guide provides a complete and recommended configuration for enabling and ma
 
 #### D. Fixed Data Drives
 
-| Setting                                                      | Recommended Value                               |
+| Setting                                                      | Recommended Value                                   |
 |--------------------------------------------------------------|-----------------------------------------------------|
 | Enforce drive encryption type                                | **Enabled** - **Full encryption**                   |
 | Choose encryption method                                     | **XTS-AES 256-bit**                                 |
