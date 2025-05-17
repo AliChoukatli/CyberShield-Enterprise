@@ -1,4 +1,4 @@
-# ✅ Phase03 – Apply Security and Compliance Policies via Intune
+# ✅ Phase 3 – Apply Security and Compliance Policies via Intune
 
 ## 🎯 **Objective**  
 Manage security baselines and compliance rules to protect devices.
