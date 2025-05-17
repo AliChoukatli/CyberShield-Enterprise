@@ -1,12 +1,12 @@
-## 📅 Phase 3 – Apply Security with BitLocker
+# 🔐 Phase 3 – Apply Security with BitLocker 🔐
 
-### 🌟 Objective
+## 🌟 Objective
 
 Establish a professional-grade deployment of BitLocker via Microsoft Intune to ensure enterprise-grade security, compliance, and operational reliability across Windows devices.
 
 ---
 
-### ✅ Step 0 – Create a Test Group in Entra
+### ✅ Step 0 – Test Group
 
 1. Go to **Microsoft Entra Admin Center** → **Groups**  
 2. Click **+ New group**, then configure:
@@ -20,7 +20,7 @@ Establish a professional-grade deployment of BitLocker via Microsoft Intune to e
 #### 💡 *Use this group to safely validate and troubleshoot your BitLocker policy before full deployment.*
 ---
 
-## ✅ Step 1 – Create a Dynamic Group for All Windows 10/11 Devices
+### ✅ Step 1 – Create a Dynamic Group for Windows 10/11 Devices
 
 1. Return to **Groups** > **New group**
 2. Select:
@@ -39,17 +39,10 @@ Establish a professional-grade deployment of BitLocker via Microsoft Intune to e
 (device.deviceOSType -eq "Windows") and
 (device.deviceOSVersion -startsWith "10" or device.deviceOSVersion -startsWith "11")
 ```
----
-
-## 🔐 BitLocker Configuration via Intune
-
-### 🌟 Objective
-
-Use Microsoft Intune to enforce BitLocker drive encryption on Windows 10/11, ensuring data protection and recovery key compliance.
 
 ---
 
-## ✅ Step 2 - Configure BitLocker Policy in Intune
+### ✅ Step 2 - Configure BitLocker Policy in Intune
 
 ### 1. Navigate to BitLocker Policy Creation
 
