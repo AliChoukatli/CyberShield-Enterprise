@@ -1,4 +1,4 @@
-## 📅 Phase 3 – Apply Security and Compliance Policies via Intune
+## 📅 Phase 3 – Apply Security with BitLocker
 
 ### 🌟 Objective
 
