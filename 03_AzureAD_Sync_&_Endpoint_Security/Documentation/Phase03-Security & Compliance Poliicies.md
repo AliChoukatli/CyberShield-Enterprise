@@ -23,41 +23,106 @@ To enforce BitLocker encryption on Windows 10/11 devices using Microsoft Intune,
 - Click **Create**
 
 ---
+# 🔐 BitLocker Policy Configuration via Intune (MDM)
 
-### 3. Configure BitLocker Settings
-
-#### 🔐 OS Drive Settings (BitLocker)
-| Setting | Value | Description |
-|--------|-------|-------------|
-| **Enable full disk encryption for OS drives** | ✅ Yes | Enforces encryption of the system drive |
-| **Encryption method for OS drive** | 🔐 XTS-AES 256-bit | Strongest recommended encryption |
-| **Require device to back up recovery key to Azure AD** | ✅ Yes | Ensures recovery keys are securely saved |
-| **Allow standard users to enable encryption during setup** | ✅ Yes | Useful if devices are enrolled by users |
-| **Hide prompt about encryption method** | ✅ Yes | Simplifies the user experience |
+This guide provides a complete and recommended configuration for enabling and managing BitLocker via Microsoft Intune on Windows 10/11 devices.
 
 ---
 
-### 4. Assign the Policy
-- In the **Assignments** section:
-  - Choose a group (e.g., `All Devices`, or `Security-Test` group)
-- Click **Next** → then **Create**
+## 1. 🔒 Require Device Encryption
+
+| Setting                                      | Recommended Value                          |
+|---------------------------------------------|---------------------------------------------|
+| Require Device Encryption                   | **Enabled**                                 |
+| Allow warning for other disk encryption     | **Enabled**                                 |
+| Configure recovery password rotation        | **Enabled** - Refresh on Azure AD joined devices |
 
 ---
 
-## 📊 Monitoring
-- Go to: **Endpoint security** → **Disk encryption**
-- Click on your policy → Check **Per device status** and **Encryption compliance**
+## 2. 💽 BitLocker Drive Encryption Settings
+
+| Setting                                            | Recommended Value   |
+|----------------------------------------------------|----------------------|
+| Choose drive encryption method (OS, Fixed, Removable) | **XTS-AES 256-bit**   |
+
+---
+
+## 3. 🧩 Operating System Drives
+
+| Setting                                                              | Recommended Value                                 |
+|----------------------------------------------------------------------|---------------------------------------------------|
+| Enforce drive encryption type on OS drives                           | **Enabled** - Full encryption                     |
+| Require additional authentication at startup                         | **Enabled**                                       |
+| Allow BitLocker without a compatible TPM                             | **True**                                          |
+| Configure TPM startup                                                | **Required**                                      |
+| Configure TPM startup key                                            | **Do not allow**                                  |
+| Configure TPM startup PIN                                            | **Require PIN with TPM**                          |
+| Allow enhanced PIN                                                   | **Enabled**                                       |
+| Disallow standard users from changing PIN or password                | **Disabled**                                      |
+| Choose how BitLocker-protected OS drives can be recovered            | **Enabled** - 256-bit key and 48-digit password   |
+| Configure storage of recovery info to AD DS                          | **Enabled**                                       |
+| Save BitLocker recovery info to AD DS for OS devices                 | **Enabled** - Recovery password and key package   |
+| Enable BitLocker until recovery info is stored to AD DS              | **Enabled** (Prevents activation before backup)   |
+
+---
+
+## 4. 💾 Fixed Data Drives
+
+| Setting                                                   | Recommended Value                              |
+|------------------------------------------------------------|-------------------------------------------------|
+| Enforce drive encryption type                              | **Enabled** - Full encryption                   |
+| Choose encryption method                                   | **XTS-AES 256-bit**                             |
+| Choose how fixed drives can be recovered                   | **Enabled** - 256-bit key and 48-digit password |
+| Allow data recovery agent                                  | **False**                                       |
+| Configure storage of BitLocker recovery info to AD DS      | **Enabled**                                     |
+
+---
+
+## 5. 🔌 Removable Data Drives
+
+| Setting                                | Recommended Value            |
+|----------------------------------------|-------------------------------|
+| Enforce drive encryption type          | **Enabled** - Full encryption |
+| Choose encryption method               | **XTS-AES 256-bit**           |
 
 ---
 
 ## 📌 Notes
-- BitLocker policies are applied **separately** from security baselines.
-- Ensure the device has TPM enabled in BIOS/UEFI for BitLocker to work.
-- For best results, deploy this policy **at enrollment** or before shipping devices.
+
+- All recovery keys are backed up to Azure AD.
+- Automatic rotation of recovery passwords is enabled for Azure AD joined devices.
+- The **"Enable BitLocker until recovery info is stored"** setting ensures BitLocker doesn’t activate before the keys are saved.
 
 ---
 
-> This configuration is part of a layered security approach to ensure endpoint protection using encryption best practices.
+**Created by:** Ali Choukatli  
+**Project:** Cybershield – BitLocker Intune Policy Configuration  
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
 
 
 
