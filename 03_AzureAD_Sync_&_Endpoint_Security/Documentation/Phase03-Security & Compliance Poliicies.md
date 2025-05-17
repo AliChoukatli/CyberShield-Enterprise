@@ -4,6 +4,63 @@
 Manage security baselines and compliance rules to protect devices.
 
 
+### . 🎯 Assignments – BitLocker Policy Deployment Strategy
+
+To ensure a professional and scalable deployment, BitLocker configuration profiles must be assigned properly in Microsoft Intune. Below is the recommended assignment strategy for production-grade environments.
+
+# 🎯 Objective
+Create a group to assign your BitLocker policy in Intune.
+
+---
+
+## ✅ Step 1 – Create a Test Group (Recommended for Validation)
+1. Go to the Microsoft Entra portal  
+2. Left menu → Groups  
+3. Click **+ New group**  
+4. Choose:  
+   - **Group type**: Security  
+   - **Group name**: BitLocker-Test-Group  
+   - **Description**: BitLocker test group  
+   - **Membership type**: Assigned  
+5. Add 1 or 2 devices you control (e.g., a personal PC or VM)  
+6. Click **Create**
+
+🧪 This group lets you test your BitLocker policy before rolling it out broadly.
+
+---
+
+## ✅ Step 2 – (After Testing) Create a Dynamic Group for All Windows Devices
+1. Go back to **Groups** → **New group**  
+2. Choose:  
+   - **Group type**: Security  
+   - **Group name**: All Windows 10/11 Devices  
+   - **Membership type**: Dynamic Device  
+3. Click **Add dynamic query** and create a rule:  
+   - Property: `device.deviceOSType`  
+   - Operator: `Equals`  
+   - Value: `Windows`  
+4. Add another clause:  
+   - Property: `device.deviceOSVersion`  
+   - Operator: `StartsWith`  
+   - Value: `10`  
+5. Add another clause:  
+   - Property: `device.deviceOSVersion`  
+   - Operator: `StartsWith`  
+   - Value: `11`  
+6. Combine the clauses with **OR** for Windows 10 or 11
+7. . Click Save, then Create
+
+![Windows-Device-Group](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Windows-Device-Group.png)
+
+Alternatively, use this full KQL rule:
+```kql
+(device.deviceOSType -eq "Windows") and 
+(device.deviceOSVersion -startsWith "10" or device.deviceOSVersion -startsWith "11")
+```
+
+---
+
+
 ## 🔐 BitLocker Configuration via Intune – Endpoint Protection Policy
 
 ## 🎯 Objective
@@ -95,59 +152,6 @@ This guide provides a complete and recommended configuration for enabling and ma
 ---
 
 ---
-
-### 4. 🎯 Assignments – BitLocker Policy Deployment Strategy
-
-To ensure a professional and scalable deployment, BitLocker configuration profiles must be assigned properly in Microsoft Intune. Below is the recommended assignment strategy for production-grade environments.
-
-# 🎯 Objective
-Create a group to assign your BitLocker policy in Intune.
-
----
-
-## ✅ Step 1 – Create a Test Group (Recommended for Validation)
-1. Go to the Microsoft Entra portal  
-2. Left menu → Groups  
-3. Click **+ New group**  
-4. Choose:  
-   - **Group type**: Security  
-   - **Group name**: BitLocker-Test-Group  
-   - **Description**: BitLocker test group  
-   - **Membership type**: Assigned  
-5. Add 1 or 2 devices you control (e.g., a personal PC or VM)  
-6. Click **Create**
-
-🧪 This group lets you test your BitLocker policy before rolling it out broadly.
-
----
-
-## ✅ Step 2 – (After Testing) Create a Dynamic Group for All Windows Devices
-1. Go back to **Groups** → **New group**  
-2. Choose:  
-   - **Group type**: Security  
-   - **Group name**: All Windows 10/11 Devices  
-   - **Membership type**: Dynamic Device  
-3. Click **Add dynamic query** and create a rule:  
-   - Property: `device.deviceOSType`  
-   - Operator: `Equals`  
-   - Value: `Windows`  
-4. Add another clause:  
-   - Property: `device.deviceOSVersion`  
-   - Operator: `StartsWith`  
-   - Value: `10`  
-5. Add another clause:  
-   - Property: `device.deviceOSVersion`  
-   - Operator: `StartsWith`  
-   - Value: `11`  
-6. Combine the clauses with **OR** for Windows 10 or 11
-
-Alternatively, use this full KQL rule:
-
-```kql
-(device.deviceOSType -eq "Windows") and 
-(device.deviceOSVersion -startsWith "10" or device.deviceOSVersion -startsWith "11")
-```
-7. Click Save, then Create
 
 
 ## ✅ Step 3 – Assign Policy in Intune
