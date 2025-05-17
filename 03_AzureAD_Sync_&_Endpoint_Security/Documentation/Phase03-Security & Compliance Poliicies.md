@@ -100,54 +100,66 @@ This guide provides a complete and recommended configuration for enabling and ma
 
 To ensure a professional and scalable deployment, BitLocker configuration profiles must be assigned properly in Microsoft Intune. Below is the recommended assignment strategy for production-grade environments.
 
-#### 🔹 1. Testing Phase (Pre-production)
-Before deploying to the full organization, test the policy on a limited set of machines.
-
-| Group Name              | Type          | Description                                |
-|-------------------------|---------------|--------------------------------------------|
-| `BitLocker-Test-Group` | Static group  | 2–3 test devices or users                  |
-
-- ✅ Allows validation without impacting the organization.
-- ✅ Use test machines with different BitLocker scenarios (TPM/no TPM, removable drive, etc.)
+# 🎯 Objective
+Create a group to assign your BitLocker policy in Intune.
 
 ---
 
-#### 🔹 2. Production Rollout
+## ✅ Step 1 – Create a Test Group (Recommended for Validation)
+1. Go to the Microsoft Entra portal  
+2. Left menu → Groups  
+3. Click **+ New group**  
+4. Choose:  
+   - **Group type**: Security  
+   - **Group name**: BitLocker-Test-Group  
+   - **Description**: BitLocker test group  
+   - **Membership type**: Assigned  
+5. Add 1 or 2 devices you control (e.g., a personal PC or VM)  
+6. Click **Create**
 
-Once tested and validated, apply the policy to your production environment:
+🧪 This group lets you test your BitLocker policy before rolling it out broadly.
 
-| Group Name                  | Type            | Description                               |
-|-----------------------------|------------------|-------------------------------------------|
-| `All Windows 10/11 Devices` | Dynamic group    | Automatically includes all Windows devices|
+---
 
-**How to create a dynamic group in Azure AD**:
+## ✅ Step 2 – (After Testing) Create a Dynamic Group for All Windows Devices
+1. Go back to **Groups** → **New group**  
+2. Choose:  
+   - **Group type**: Security  
+   - **Group name**: All Windows 10/11 Devices  
+   - **Membership type**: Dynamic Device  
+3. Click **Add dynamic query** and create a rule:  
+   - Property: `device.deviceOSType`  
+   - Operator: `Equals`  
+   - Value: `Windows`  
+4. Add another clause:  
+   - Property: `device.deviceOSVersion`  
+   - Operator: `StartsWith`  
+   - Value: `10`  
+5. Add another clause:  
+   - Property: `device.deviceOSVersion`  
+   - Operator: `StartsWith`  
+   - Value: `11`  
+6. Combine the clauses with **OR** for Windows 10 or 11
+
+Alternatively, use this full KQL rule:
 
 ```kql
-(device.deviceOSType -eq "Windows") and (device.deviceOSVersion -startsWith "10" or device.deviceOSVersion -startsWith "11")
+(device.deviceOSType -eq "Windows") and 
+(device.deviceOSVersion -startsWith "10" or device.deviceOSVersion -startsWith "11")
 ```
+7. Click Save, then Create
 
 
-⚙️ Best Practices
+## ✅ Step 3 – Assign Policy in Intune
+In Intune portal → Endpoint security > Disk encryption > your BitLocker policy
 
-- ✅ Exclude non-compliant or legacy devices from assignments.
+Click Assignments
 
-- ✅ Monitor device compliance post-assignment using Intune Reports > Endpoint security > Disk encryption report.
+Add groups:
 
-- ✅ Use Filters if needed to apply to only devices with TPM or other hardware-specific attributes.
+First, assign BitLocker-Test-Group to test
 
-
-
-
-
-📌 Final Assignment Recommendation
-- Initial: Assign to BitLocker-Test-Group
-
-- After Validation: Assign to All Windows 10/11 Devices
-
-- Optional: Use Azure AD device filters to fine-tune assignment based on hardware capabilities
-
-
-
+Then, assign All Windows 10/11 Devices after successful validation
 
 
 
