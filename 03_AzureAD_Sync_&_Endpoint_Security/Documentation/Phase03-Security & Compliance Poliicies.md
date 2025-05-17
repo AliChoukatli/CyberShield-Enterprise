@@ -35,7 +35,7 @@ This guide provides a complete and recommended configuration for enabling and ma
 |---------------------------------------------|---------------------------------------------|
 | Require Device Encryption                   | **Enabled**                                 |
 | Allow warning for other disk encryption     | **Enabled**                                 |
-| Configure recovery password rotation        | **Enabled** - Refresh on Azure AD joined devices |
+| Configure recovery password rotation        | **Enabled** - Refresh on Azure AD joined & Hybrid-Joined Devices |
 
 ---
 
