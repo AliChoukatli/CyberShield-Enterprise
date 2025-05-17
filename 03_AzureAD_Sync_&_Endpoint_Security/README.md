@@ -378,6 +378,77 @@ Manage security baselines and compliance rules to protect devices.
 
 ---
 
+## 🔒 Recommended Settings – Windows Security Baseline (24H2)
+
+This section highlights the most important security settings to enforce for Windows 10/11 endpoints in a small business environment.
+
+---
+
+### 🟦 BitLocker
+
+| Setting | Recommended Value | Why |
+|--------|--------------------|-----|
+| Require BitLocker | ✅ Yes | Ensures full disk encryption |
+| OS drive encryption method | XTS-AES 256-bit | Provides strong encryption |
+| Back up recovery info to Azure AD | ✅ Yes | Automatically stores recovery key securely |
+
+---
+
+### 🟩 Windows Defender Antivirus
+
+| Setting | Recommended Value | Why |
+|--------|--------------------|-----|
+| Real-time Protection | ✅ Enabled | Protects system continuously |
+| Cloud-delivered protection | ✅ Enabled | Faster detection using Microsoft cloud |
+| Submit samples automatically | ✅ Safe samples only | Helps improve Microsoft threat intelligence |
+| Behavior Monitoring | ✅ Enabled | Detects suspicious behavior patterns |
+
+---
+
+### 🟥 Windows Defender Firewall
+
+| Setting | Recommended Value | Why |
+|--------|--------------------|-----|
+| Firewall state (Domain/Private/Public) | ✅ On | Ensures network protection across all profiles |
+| Inbound connections | Block (default) | Blocks unsolicited inbound traffic |
+
+---
+
+### 🟧 Security Options
+
+| Setting | Recommended Value | Why |
+|--------|--------------------|-----|
+| Require password when computer wakes | ✅ Yes | Prevents unauthorized access after sleep |
+| Administrator account status | ✅ Disabled | Disables the default local admin |
+| Limit local accounts with blank passwords | ✅ Enabled | Prevents insecure logins |
+
+---
+
+### 🟨 Microsoft Defender SmartScreen
+
+| Setting | Recommended Value | Why |
+|--------|--------------------|-----|
+| SmartScreen for Edge | ✅ Enabled | Blocks malicious sites and downloads |
+| Prevent override | ✅ Enabled | Stops users from bypassing warnings |
+
+---
+
+### 🟪 User Rights Assignment
+
+| Setting | Recommended Value | Why |
+|--------|--------------------|-----|
+| Deny log on locally (Guests) | ✅ Add Guests group | Prevents guest account usage |
+| Allow log on locally | ✅ Users, Administrators | Restricts access to approved users |
+
+---
+
+📸 **Suggested Screenshots for GitHub:**
+- Baseline configuration settings (full or by section)
+- "Review + create" summary before creating
+- Compliance status after deployment
+
+---
+
 ### 📋 2. Create and Enforce a Compliance Policy
 
 1. Go to **Devices** → **Compliance policies** → **+ Create policy**.
