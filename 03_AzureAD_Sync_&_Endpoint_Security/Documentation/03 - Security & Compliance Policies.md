@@ -25,7 +25,7 @@ This project implements Multi-Factor Authentication (MFA) using multiple modern 
 
 ## 🔐 Multi-Factor Authentication (MFA) – Recommended Methods
 
-### A. Microsoft Authenticator – Recommended Settings
+### ✅ A. Microsoft Authenticator – Recommended Settings
 
 | Setting                                            | Recommended Value       | Description                                                                                   |
 |----------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------------------|
@@ -42,7 +42,7 @@ This project implements Multi-Factor Authentication (MFA) using multiple modern 
 ---
 
 
-### B. Temporary Access Pass (TAP) – Recommended Settings
+### ✅ B. Temporary Access Pass (TAP) – Recommended Settings
 
 | Setting                   | Recommended Value  | Description                                                                                   |
 |---------------------------|--------------------|-----------------------------------------------------------------------------------------------|
@@ -63,7 +63,7 @@ This project implements Multi-Factor Authentication (MFA) using multiple modern 
 
 ---
 
-### C. FIDO2 Security Key (Passkey) – Recommended Settings
+### ✅  C. FIDO2 Security Key (Passkey) – Recommended Settings
 
 | Setting                     | Recommended Value | Description                                                                 |
 |----------------------------|-------------------|-----------------------------------------------------------------------------|
@@ -88,7 +88,7 @@ This project implements Multi-Factor Authentication (MFA) using multiple modern 
 ---
 
 
-### D. Windows Hello for Business – Hybrid Key Trust Deployment Guide
+### ✅ D. Windows Hello for Business – Hybrid Key Trust Deployment Guide
 
 This guide explains how to configure **Windows Hello for Business** in a **hybrid environment** (on-premises Active Directory + Azure AD) using the **Key Trust model**.
 
