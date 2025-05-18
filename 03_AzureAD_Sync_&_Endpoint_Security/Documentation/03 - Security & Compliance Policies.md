@@ -4,7 +4,7 @@ Now that device and user management is in place, this phase focuses on implement
 
 ---
 
-## Authentication Methods Overview
+# Authentication Methods Overview
 
 This project implements Multi-Factor Authentication (MFA) using multiple modern methods:
 
@@ -100,7 +100,7 @@ It is a key component of modern, passwordless authentication strategies and inte
 
 ---
 
-### 🔗 For more information, refer to the official Microsoft documentation:
+#### 🔗 For more information, refer to the official Microsoft documentation:
 
   - [FIDO2 Security Keys in Microsoft Entra ID](https://learn.microsoft.com/en-us/entra/identity/authentication/how-to-enable-passkey-fido2)
 
@@ -127,9 +127,9 @@ This guide explains how to configure **Windows Hello for Business** in a **hybri
 
 ---
 
-## Step 1: Verify Prerequisites on Client Device
+#### Step 1: Verify Prerequisites on Client Device
 
-Open PowerShell as an administrator and run:
+- Open PowerShell as an administrator and run:
 
 ```powershell
 dsregcmd /status
@@ -142,58 +142,64 @@ Check the output:
 
 Also verify TPM status by running tpm.msc.
 
+---
 
+#### Step 2: Create and Configure the GPO for Windows Hello for Business
 
-###Step 2: Create and Configure the GPO for Windows Hello for Business
-Open Group Policy Management Console (GPMC) on your domain controller (gpmc.msc).
+ 1. Open Group Policy Management Console (GPMC) on your domain controller (gpmc.msc)
 
-Navigate to the appropriate Organizational Unit (OU) or domain.
+ 2. Navigate to the appropriate Organizational Unit (OU) or domain.
 
-Right-click → Create a GPO in this domain, and Link it here...
+3. Right-click → Create a GPO in this domain, and Link it here...
 
-Name the GPO (e.g., Windows Hello for Business - Key Trust).
+4.  Name the GPO (e.g., Windows Hello for Business - Key Trust).
 
-Edit the GPO:
+5.  Edit the GPO:
 
-Go to:
+  - Go to:
 ```rust
 Computer Configuration → Policies → Administrative Templates → Windows Components → Windows Hello for Business
 ```
 
-Enable these policies:
+ - Enable these policies:
 
-Use Windows Hello for Business → Enabled
+  - Use Windows Hello for Business → Enabled
 
-Use biometrics → Enabled
+  - Use biometrics → Enabled
 
-Configure PIN complexity → Configure as needed (e.g., minimum length 6)
+  - Configure PIN complexity → Configure as needed (e.g., minimum length 6)
 
-Require TPM → Enabled
+  - Require TPM → Enabled
 
+---
 
-Step 3: Force Group Policy Update on Client Devices
-On each Windows client device, open PowerShell as admin and run:
+#### Step 3: Force Group Policy Update on Client Devices
+1. On each Windows client device, open PowerShell as admin and run:
 ```Powershell
 gpupdate /force
 ```
 
-Then reboot the device to apply the policy.
+2. Then reboot the device to apply the policy.
 
-Step 4: Register Windows Hello for Business on Client
-Go to Settings → Accounts → Sign-in options.
+---
 
-Set up Windows Hello PIN.
+#### Step 4: Register Windows Hello for Business on Client
 
-Enable biometric sign-in if supported (fingerprint or facial recognition).
+1. Go to Settings → Accounts → Sign-in options.
 
-Confirm that Windows Hello sign-in works correctly.
+2. Set up Windows Hello PIN.
 
-Step 5: Verify Device Registration Status
-On the client device, open PowerShell and run:
+3. Enable biometric sign-in if supported (fingerprint or facial recognition).
+
+4. Confirm that Windows Hello sign-in works correctly.
+
+#### Step 5: Verify Device Registration Status
+
+1. On the client device, open PowerShell and run:
 ```powershell
 dsregcmd /status
 ```
-Ensure that the device shows as Hybrid Azure AD joined and Windows Hello authentication is active.
+2. Ensure that the device shows as Hybrid Azure AD joined and Windows Hello authentication is active.
 
 
 ---
