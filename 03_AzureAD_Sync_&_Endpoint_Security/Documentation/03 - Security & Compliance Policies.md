@@ -116,7 +116,7 @@ dsregcmd /status
 
   - Device State should indicate Hybrid Azure AD joined
 
-- Also verify TPM status by running tpm.msc.
+- Also verify TPM status by running **tpm.msc**
 
 ---
 
