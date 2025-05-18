@@ -29,20 +29,6 @@ This project implements Multi-Factor Authentication (MFA) using multiple modern 
 
 ## 🔐 Multi-Factor Authentication (MFA) – Recommended Methods
 
-### FIDO2 Security Key (Passkey) – Recommended Settings
-
-| Setting                     | Recommended Value | Description                                                                 |
-|----------------------------|-------------------|-----------------------------------------------------------------------------|
-| Allow self-service set up  | ✅ Yes            | Allows users to register their own FIDO2 security keys                      |
-| Enforce attestation        | ❌ No             | Not required unless you need verified device metadata                      |
-| Enforce key restrictions   | ✅ Yes            | Prevents use of unapproved or unknown FIDO2 keys                           |
-| Restrict specific keys     | 🔒 Block          | Blocks specific keys by AAGUID (only if you want to restrict certain vendors) |
-| Microsoft Authenticator    | ❌ No             | Not applicable for FIDO2; Microsoft Authenticator is a separate method     |
-
-![Fido2-Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/FIDO2-Policy.png)
-
----
-
 ### Microsoft Authenticator – Recommended Settings
 
 | Setting                                            | Recommended Value       | Description                                                                                   |
@@ -56,6 +42,26 @@ This project implements Multi-Factor Authentication (MFA) using multiple modern 
 | **Authenticator on companion apps**                | ☁️ Microsoft-managed     | Controls the use of Authenticator on devices like Apple Watch or other paired apps           |
 
 ![Authenticator-Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Authenticator-Policy.png)
+
+---
+
+### 👤 Windows Hello for Business – Recommended Settings
+
+**Windows Hello for Business** allows users to sign in using biometrics (facial recognition, fingerprint) or a PIN, instead of passwords.  
+It is a key component of modern, passwordless authentication strategies and integrates directly with Microsoft Entra ID.
+
+| Setting                              | Recommended Value     | Description                                                                 |
+|--------------------------------------|------------------------|-----------------------------------------------------------------------------|
+| Configure for Windows 10/11 devices  | ✅ Enabled             | Enables Windows Hello on all supported endpoints                            |
+| Use biometric authentication         | ✅ Yes                | Allows facial recognition or fingerprint sign-in                            |
+| Use PIN as fallback                  | ✅ Yes                | Allows sign-in with PIN if biometrics fail                                  |
+| Trust model                          | Key Trust (Cloud-only) | Recommended for hybrid or cloud-native Azure AD-joined devices             |
+| Require TPM                          | ✅ Yes                | Ensures private keys are stored securely in hardware (TPM chip)             |
+
+> **Note:** Windows Hello uses the FIDO2 standard behind the scenes when configured with key trust.  
+> It enhances both user experience and security by eliminating passwords and reducing phishing risks.
+
+![Windows-Hello-Settings](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Windows-Hello.png)
 
 ---
 
@@ -77,6 +83,20 @@ This project implements Multi-Factor Authentication (MFA) using multiple modern 
 > > **Note:** TAP is not usable for Self-Service Password Reset (SSPR)
 
 ![TAP-Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/TAP-Policy.png)
+
+---
+
+### FIDO2 Security Key (Passkey) – Recommended Settings
+
+| Setting                     | Recommended Value | Description                                                                 |
+|----------------------------|-------------------|-----------------------------------------------------------------------------|
+| Allow self-service set up  | ✅ Yes            | Allows users to register their own FIDO2 security keys                      |
+| Enforce attestation        | ❌ No             | Not required unless you need verified device metadata                      |
+| Enforce key restrictions   | ✅ Yes            | Prevents use of unapproved or unknown FIDO2 keys                           |
+| Restrict specific keys     | 🔒 Block          | Blocks specific keys by AAGUID (only if you want to restrict certain vendors) |
+| Microsoft Authenticator    | ❌ No             | Not applicable for FIDO2; Microsoft Authenticator is a separate method     |
+
+![Fido2-Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/FIDO2-Policy.png)
 
 ---
 
