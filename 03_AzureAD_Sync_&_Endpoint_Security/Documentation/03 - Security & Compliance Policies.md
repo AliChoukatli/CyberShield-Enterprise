@@ -18,6 +18,20 @@ Now that device and user management is in place, this phase focuses on implement
 | Microsoft Authenticator    | ❌ No             | Not applicable for FIDO2; Microsoft Authenticator is a separate method     |
 
 
+### In this project, I configured Multi-Factor Authentication (MFA) using FIDO2 security keys with USB device support via Microsoft Entra ID.
+
+#### What I did:
+- Enabled FIDO2 security key authentication method in Microsoft Entra Admin Center.
+- Configured policy to allow all users to register USB security keys.
+- Registered a security key using the USB device option.
+- Tested authentication using a PIN with the security key.
+- Validated that the key is recognized and works for secure login.
+
+#### Important Notes:
+- FIDO2 USB device refers to a physical security key (e.g., YubiKey) plugged into a USB port.
+- In my setup, I simulated the key registration without an actual physical key, likely via Windows Hello (PIN/biometrics).
+- For real passwordless login with FIDO2, a physical USB security key is recommended.
+- Alternatively, Microsoft Authenticator app or Windows Hello can be used for MFA without a physical key.
 
 ---
 
