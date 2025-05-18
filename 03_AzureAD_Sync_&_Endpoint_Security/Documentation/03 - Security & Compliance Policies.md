@@ -23,6 +23,8 @@ This project implements Multi-Factor Authentication (MFA) using multiple modern 
 > This setup demonstrates a passwordless and strong MFA implementation using Microsoft Authenticator and Windows Hello, both of which support the FIDO2 standard.  
 > For full hardware-based passwordless authentication, organizations typically deploy physical FIDO2 keys like YubiKey.
 
+![Auth-Methods](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Auth-Methods.png)
+
 ---
 
 ## 🔐 Multi-Factor Authentication (MFA) – Recommended Methods
@@ -38,6 +40,8 @@ This project implements Multi-Factor Authentication (MFA) using multiple modern 
 | **Show application name in notifications**         | ☁️ Microsoft-managed     | App name will be shown in push/passwordless notifications when rolled out by Microsoft       |
 | **Show geographic location in notifications**      | ☁️ Microsoft-managed     | Location info is shown to help users detect suspicious logins                                |
 | **Authenticator on companion apps**                | ☁️ Microsoft-managed     | Controls the use of Authenticator on devices like Apple Watch or other paired apps           |
+
+![Authenticator-Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Authenticator-Policy.png)
 
 ---
 
@@ -57,6 +61,8 @@ This project implements Multi-Factor Authentication (MFA) using multiple modern 
 > &nbsp;&nbsp;- MFA registration (bootstrap)  
 > &nbsp;&nbsp;- Recovery when other methods are unavailable  
 > > **Note:** TAP is not usable for Self-Service Password Reset (SSPR)
+
+![TAP-Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/TAP-Policy.png)
 
 ---
 
