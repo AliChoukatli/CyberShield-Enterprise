@@ -18,18 +18,8 @@ Now that device and user management is in place, this phase focuses on implement
 | Microsoft Authenticator    | ❌ No             | Not applicable for FIDO2; Microsoft Authenticator is a separate method     |
 
 
-📘 Notes:
-Allow self-service set up = Yes 👉 facilite l’enregistrement par l’utilisateur, recommandé.
 
-Enforce attestation = No 👉 sauf si ton organisation exige une validation stricte du matériel.
-
-Enforce key restrictions = Yes 👉 utile pour contrôler le type exact de clé autorisée.
-
-Restrict specific keys = Block (si tu as une politique précise) sinon laisse vide.
-
-Microsoft Authenticator est une méthode séparée (push / OTP), elle ne s’applique pas ici.
 ---
-
 
 
 ## 📱 Microsoft Authenticator – Recommended Settings
