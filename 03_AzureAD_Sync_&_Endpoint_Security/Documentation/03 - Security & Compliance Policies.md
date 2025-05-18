@@ -121,6 +121,7 @@ dsregcmd /status
 ![TPM](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/TPM.png)
 
 ✅ Result: TPM is present and ready (Hyper-V secure boot & TPM enabled)
+
 ---
 
 #### Step 2: Create and Configure the GPO for Windows Hello for Business
