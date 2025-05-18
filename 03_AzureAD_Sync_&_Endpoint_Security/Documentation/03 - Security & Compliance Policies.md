@@ -25,7 +25,7 @@ This project implements Multi-Factor Authentication (MFA) using multiple modern 
 
 ## 🔐 Multi-Factor Authentication (MFA) – Recommended Methods
 
-### Microsoft Authenticator – Recommended Settings
+### A. Microsoft Authenticator – Recommended Settings
 
 | Setting                                            | Recommended Value       | Description                                                                                   |
 |----------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------------------|
@@ -42,7 +42,7 @@ This project implements Multi-Factor Authentication (MFA) using multiple modern 
 ---
 
 
-### 🕒 Temporary Access Pass (TAP) – Recommended Settings
+### B. Temporary Access Pass (TAP) – Recommended Settings
 
 | Setting                   | Recommended Value  | Description                                                                                   |
 |---------------------------|--------------------|-----------------------------------------------------------------------------------------------|
@@ -63,7 +63,7 @@ This project implements Multi-Factor Authentication (MFA) using multiple modern 
 
 ---
 
-### FIDO2 Security Key (Passkey) – Recommended Settings
+### C. FIDO2 Security Key (Passkey) – Recommended Settings
 
 | Setting                     | Recommended Value | Description                                                                 |
 |----------------------------|-------------------|-----------------------------------------------------------------------------|
@@ -88,9 +88,9 @@ This project implements Multi-Factor Authentication (MFA) using multiple modern 
 ---
 
 
-### Windows Hello for Business – Hybrid Key Trust Deployment Guide
+### D. Windows Hello for Business – Hybrid Key Trust Deployment Guide
 
-This guide explains how to configure **Windows Hello for Business** in a **hybrid environment** (on-premises Active Directory + Azure AD) using the **Key Trust model**. This setup enables passwordless authentication on Windows 10/11 devices joined to both AD and Azure AD.
+This guide explains how to configure **Windows Hello for Business** in a **hybrid environment** (on-premises Active Directory + Azure AD) using the **Key Trust model**.
 
 ---
 
