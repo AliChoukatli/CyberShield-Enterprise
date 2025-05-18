@@ -92,135 +92,118 @@ Inside each folder, you will typically find:
 ## 📁 Project Structure
 
 ```bash
-├── 00_IT Support & Helpdesk/
-│   ├── Documentation/
-│   │   ├── Support_Tools_Overview.md
-│   │   ├── First_Level_Troubleshooting.md
-│   │   ├── Ticket_Simulation_Log.md
-│   ├── Scripts/
-│   │   ├── Network_Troubleshooting.ps1
-│   │   ├── Connectivity_Checker.ps1
-│   └── Resources/
-│       ├── Remote_Assistance_Tools.md
-│       └── Support_Flowchart.png
+CyberShield_Enterprise/
+├── 00_IT_Support_and_Helpdesk/                   # Support team workflows & troubleshooting
+│   ├── Documentation/                             # Guides and procedures for support staff
+│   │   ├── Support_Tools_Overview.md             # Overview of remote assistance and helpdesk tools
+│   │   ├── First_Level_Troubleshooting.md        # Step-by-step common issues resolution guide
+│   │   ├── Ticket_Simulation_Log.md               # Example logs simulating ticket handling scenarios
+│   ├── Scripts/                                   # Automation scripts for common support tasks
+│   │   ├── Network_Troubleshooting.ps1            # PowerShell script for network diagnostics
+│   │   └── Connectivity_Checker.ps1               # Script to verify network connectivity status
+│   └── Resources/                                 # Additional materials for support use
+│       ├── Remote_Assistance_Tools.md             # Details on software used for remote help
+│       └── Support_Flowchart.png                   # Visual workflow for support escalation
 
-├── 01_Installation & Domain Join/
-│   ├── Documentation/
-│   │   ├── Domain_Controller_Configuration.md
-│   │   ├── Workstation_Configuration.md
-│   │   └── Domain_Join_Steps.md
-│   ├── Scripts/
-│   │   ├── Server_Join_Script.ps1
-│   │   └── Workstation_Join_Script.ps1
-│   └── Screenshots/
-│       ├── whoami-hlp01.png
-│       └── whoami-emp01.png
+├── 01_Installation_and_Domain_Join/              # Initial setup and domain joining steps
+│   ├── Documentation/                             # Written guides for installation/configuration
+│   │   ├── Domain_Controller_Configuration.md     # Setting up and configuring the domain controller
+│   │   ├── Workstation_Configuration.md           # Standard workstation setup documentation
+│   │   └── Domain_Join_Steps.md                    # Step-by-step instructions for joining devices to domain
+│   ├── Scripts/                                   # Scripts automating installation and join processes
+│   │   ├── Server_Join_Script.ps1                  # Script to automate domain join for servers
+│   │   └── Workstation_Join_Script.ps1             # Script to join workstations to domain
+│   └── Screenshots/                               # Visual proof of steps/configuration
 
-├── 02_Active Directory Integration/
-│   ├── Documentation/
-│   │   ├── OU_Structure.md
-│   │   ├── User_Management.md
-│   │   └── Access_Control.md
-│   ├── Scripts/
-│   │   ├── Create_OU_Script.ps1
-│   │   └── User_Group_Management_Script.ps1
-│   └── Screenshots/
-│       ├── OU_Structure_Example.png
-│       └── Group_Permissions_Example.png
+├── 02_Active_Directory_Integration/              # Managing AD structure and access control
+│   ├── Documentation/                             # AD design and user/group management
+│   │   ├── OU_Structure.md                         # Design and organization of Organizational Units (OUs)
+│   │   ├── User_Management.md                      # Procedures for creating and managing user accounts
+│   │   └── Access_Control.md                        # Group policies and permissions management
+│   ├── Scripts/                                   # Scripts for AD automation
+│   │   ├── Create_OU_Script.ps1                     # Script to create OUs programmatically
+│   │   └── User_Group_Management_Script.ps1          # Script for user and group automation
+│   └── Screenshots/                               # Screenshots of AD consoles, OU trees, permissions
 
-├── 03_AzureAD Sync & Endpoint Security/
-│   ├── Documentation/
-│   │   ├── Hybrid_Join_Guide.md
-│   │   ├── Intune_Configuration.md
-│   │   └── Security_Policies.md
-│   ├── Scripts/
-│   │   ├── AzureAD_Join_Script.ps1
-│   │   └── Intune_Enrollment_Script.ps1
-│   └── Screenshots/
-│       ├── AzureAD_Connect_Screenshot.png
-│       └── Device_Management_Example.png
+├── 03_AzureAD_Sync_and_Endpoint_Security/        # Cloud identity & device management with compliance
+│   ├── Documentation/                             # Cloud join and endpoint protection best practices
+│   │   ├── Hybrid_Join_Guide.md                    # Guide to configuring Hybrid Azure AD join
+│   │   ├── Intune_Configuration.md                  # Intune setup for device enrollment and management
+│   │   ├── Device_Compliance_Policies.md            # Compliance policy definitions for endpoint security
+│   │   ├── Endpoint_Security_Policies.md            # Endpoint protection policies including Defender
+│   │   └── Security_Baselines.md                     # Microsoft security baselines applied on devices
+│   ├── Scripts/                                   # Scripts related to Azure AD join and Intune enrollment
+│   │   ├── AzureAD_Join_Script.ps1                   # Automate Azure AD join tasks
+│   │   └── Intune_Enrollment_Script.ps1               # Automate device enrollment to Intune
+│   └── Screenshots/                               # Visuals showing device compliance and endpoint management
 
-├── 04_Security Hardening/
-│   ├── Documentation/
-│   │   ├── Administrator_Account_Hardening.md
-│   │   ├── MFA_Enforcement.md
-│   │   ├── Conditional_Access_Configuration.md
-│   │   ├── GPO_Segmentation_Principle.md
-│   │   └── Advanced_Auditing_Configuration.md
-│   ├── Scripts/
-│   │   ├── Rename_Administrator_Script.ps1
-│   │   └── MFA_Policy_Script.ps1
-│   └── Screenshots/
-│       ├── MFA_Enforcement_Screenshot.png
-│       └── Conditional_Access_Rules_Screenshot.png
+├── 04_Zero_Trust_and_Security_Hardening/          # Core security policies and Zero Trust implementation
+│   ├── Documentation/                             # Zero Trust principles and hardening procedures
+│   │   ├── MFA_Enforcement.md                       # MFA policy deployment and enforcement details
+│   │   ├── Conditional_Access_Configuration.md      # Configuration of Conditional Access policies
+│   │   ├── Privileged_Account_Hardening.md          # Securing admin and privileged accounts
+│   │   ├── GPO_Segmentation_Principle.md             # Group Policy design for network segmentation
+│   │   └── Advanced_Auditing_Configuration.md        # Auditing and logging configurations for security
+│   ├── Scripts/                                   # Automation of security policy enforcement
+│   │   ├── Rename_Administrator_Script.ps1           # Script to rename default admin accounts
+│   │   └── MFA_Policy_Script.ps1                       # Script to enforce MFA via policies
+│   └── Screenshots/                               # Policy and enforcement confirmation screenshots
 
-├── 05_Backup & Recovery Preparation/
-│   ├── Documentation/
-│   │   ├── Backup_Strategy.md
-│   │   ├── Recovery_Plan.md
-│   │   └── Test_Recovery_Procedure.md
-│   ├── Scripts/
-│   │   ├── Backup_Script.ps1
-│   │   └── Restore_Script.ps1
-│   └── Screenshots/
-│       ├── Backup_Procedure_Screenshot.png
-│       └── Recovery_Test_Screenshot.png
+├── 05_Backup_Recovery_and_Business_Continuity/    # Backup strategy and disaster recovery planning
+│   ├── Documentation/                             # Backup and recovery process documents
+│   │   ├── Backup_Strategy.md                        # Backup types, schedules, and tools used
+│   │   ├── Recovery_Plan.md                          # Step-by-step recovery procedures
+│   │   └── Test_Recovery_Procedure.md                 # Documentation of recovery drills/tests
+│   ├── Scripts/                                   # Backup and restore automation scripts
+│   │   ├── Backup_Script.ps1                          # Automates backup tasks
+│   │   └── Restore_Script.ps1                         # Automates restore procedures
+│   └── Screenshots/                               # Proof of successful backup/restore runs
 
-├── 06_Sentinel & Defender Integration/
-│   ├── Documentation/
-│   │   ├── Defender_Endpoint_Integration.md
-│   │   ├── Sentinel_Configuration.md
-│   │   └── Alert_Rules_Setup.md
-│   ├── Scripts/
-│   │   ├── Defender_Endpoint_Config.ps1
-│   │   └── Sentinel_Log_Integration.ps1
-│   └── Screenshots/
-│       ├── Defender_Endpoint_Screenshot.png
-│       └── Sentinel_Alert_Rules_Screenshot.png
+├── 06_Microsoft_Defender_and_Sentinel_Integration/ # Endpoint protection and security monitoring setup
+│   ├── Documentation/                             # Defender and Sentinel deployment guides
+│   │   ├── Defender_Endpoint_Integration.md           # How Defender is deployed and configured
+│   │   ├── Sentinel_Configuration.md                   # Setting up Microsoft Sentinel for SIEM
+│   │   └── Alert_Rules_Setup.md                         # Custom alert rules and incident response setup
+│   ├── Scripts/                                   # Scripts to configure Defender and Sentinel
+│   │   ├── Defender_Endpoint_Config.ps1                 # Automate Defender deployment/config
+│   │   └── Sentinel_Log_Integration.ps1                  # Integrate logs to Sentinel workspace
+│   └── Screenshots/                               # Dashboards and alert rule screenshots
 
-├── 07_Phishing Simulation & User Awareness/
-│   ├── Documentation/
-│   │   ├── Phishing_Simulation_Guide.md
-│   │   ├── Awareness_Training_Suggestions.md
-│   │   └── User_Vulnerability_Report.md
-│   └── Screenshots/
-│       ├── Phishing_Simulation_Results.png
-│       └── Awareness_Training_Example.png
+├── 07_Phishing_Simulation_and_User_Awareness/       # Security awareness and phishing simulations
+│   ├── Documentation/                             # Guides and reports on user training
+│   │   ├── Phishing_Simulation_Guide.md               # How to run phishing campaigns
+│   │   ├── Awareness_Training_Suggestions.md           # Best practices for end-user training
+│   │   └── User_Vulnerability_Report.md                 # Report on user susceptibility results
+│   └── Screenshots/                               # Campaign results and training examples
 
-├── 08_Forensics Post-Attack/
-│   ├── Documentation/
-│   │   ├── Incident_Response_Plan.md
-│   │   ├── Forensic_Analysis_Guide.md
-│   │   └── Attack_Timeline.md
-│   ├── Scripts/
-│   │   ├── Log_Collection_Script.ps1
-│   │   └── IoC_Search_Script.ps1
-│   └── Screenshots/
-│       ├── Forensics_Screenshot.png
-│       └── Attack_Timeline_Screenshot.png
+├── 08_Forensics_Post_Attack/                         # Incident investigation and forensic analysis
+│   ├── Documentation/                             # Procedures and tools for forensic analysis
+│   │   ├── Incident_Response_Plan.md                  # Plan for responding to security incidents
+│   │   ├── Forensic_Analysis_Guide.md                 # Step-by-step forensic investigation procedures
+│   │   └── Attack_Timeline.md                           # Timeline and root cause analysis
+│   ├── Scripts/                                   # Scripts for log collection and IOC search
+│   │   ├── Log_Collection_Script.ps1                    # Automate event/log collection
+│   │   └── IoC_Search_Script.ps1                         # Search for Indicators of Compromise
+│   └── Screenshots/                               # Screenshots from forensic tools and reports
 
-├── 09_Post-Incident Recovery & Integrity Check/
-│   ├── Documentation/
-│   │   ├── Recovery_Guidelines.md
-│   │   ├── Integrity_Check_Procedure.md
-│   │   └── Service_Functionality_Test.md
-│   ├── Scripts/
-│   │   ├── Integrity_Check_Script.ps1
-│   │   └── Service_Test_Script.ps1
-│   └── Screenshots/
-│       ├── Integrity_Check_Results.png
-│       └── Service_Functionality_Screenshot.png
+├── 09_Post_Incident_Recovery_and_Integrity_Check/    # Restore services and verify system integrity
+│   ├── Documentation/                             # Guidelines for post-incident recovery
+│   │   ├── Recovery_Guidelines.md                      # Best practices for recovery after incidents
+│   │   ├── Integrity_Check_Procedure.md                # Methods to verify system integrity post-attack
+│   │   └── Service_Functionality_Test.md                # Testing restored services for functionality
+│   ├── Scripts/                                   # Automation for integrity checks and tests
+│   │   ├── Integrity_Check_Script.ps1                   # Scripts to verify file and system integrity
+│   │   └── Service_Test_Script.ps1                       # Scripts to test service availability
+│   └── Screenshots/                               # Evidence of recovery and system health
 
-├── 10_Compliance Mapping (ISO-NIST)/
-│   ├── Documentation/
-│   │   ├── Compliance_Mapping_Guide.md
-│   │   ├── ISO_27001_Annex_A.md
-│   │   └── NIST_CSF_Controls.md
-│   └── Screenshots/
-│       ├── Compliance_Report_Example.png
-│       └── Gap_Analysis_Example.png
+├── 10_Compliance_Mapping_ISO_NIST/                   # Mapping cybersecurity controls to standards
+│   ├── Documentation/                             # Compliance documentation and mapping guides
+│   │   ├── Compliance_Mapping_Guide.md                 # How controls map to ISO 27001 and NIST CSF
+│   │   ├── ISO_27001_Annex_A.md                          # Annex A control catalog documentation
+│   │   └── NIST_CSF_Controls.md                           # NIST CSF control framework details
+│   └── Screenshots/                               # Compliance reports and gap analysis visuals
 
-└── README.md
+└── README.md                                       # Project overview, goals, and instructions
 
 ```
 ---
