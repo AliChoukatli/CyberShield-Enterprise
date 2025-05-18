@@ -16,7 +16,7 @@ This project implements Multi-Factor Authentication (MFA) using multiple modern 
    Windows Hello uses the **FIDO2 protocol** to secure authentication without the need for passwords.
 
 3. **FIDO2 Security Keys (Optional)**  
-   Although not used in this project setup, physical FIDO2 security keys (e.g., YubiKey USB devices) can also be registered and used for authentication in Microsoft Entra ID.  
+   Although not used in this project setup, physical FIDO2 security keys (e.g., YubiKey USB devices) can also be registered and used for authentication in Microsoft Entra ID (Previously AzureAD).  
    These hardware keys provide a high level of security and are commonly used in enterprise environments.
 
 > **Note:**  
