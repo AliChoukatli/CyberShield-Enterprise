@@ -80,6 +80,30 @@ This project implements Multi-Factor Authentication (MFA) using multiple modern 
 
 ---
 
+🔗 Advanced Security – Microsoft Documentation Links
+- For more information, refer to the official Microsoft documentation:
+
+  - FIDO2 Security Keys in Microsoft Entra ID
+
+  - Microsoft Authenticator App
+
+  - Temporary Access Pass (TAP)
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## 🎯 Conditional Access Policies
 
 **Objective:** Define conditions and controls for secure sign-in and resource access.
