@@ -112,6 +112,120 @@ It is a key component of modern, passwordless authentication strategies and inte
 
 
 
+### Windows Hello for Business – Hybrid Key Trust Deployment Guide
+
+This guide explains how to configure **Windows Hello for Business** in a **hybrid environment** (on-premises Active Directory + Azure AD) using the **Key Trust model**. This setup enables passwordless authentication on Windows 10/11 devices joined to both AD and Azure AD.
+
+---
+
+#### Prerequisites
+
+- Windows Server 2016 or later for domain controllers
+- Azure AD Connect configured for hybrid Azure AD join
+- Windows 10/11 client device with TPM enabled and compatible with Windows Hello
+- Administrative privileges to create and edit Group Policy Objects (GPO)
+
+---
+
+## Step 1: Verify Prerequisites on Client Device
+
+Open PowerShell as an administrator and run:
+
+```powershell
+dsregcmd /status
+```
+Check the output:
+
+- AzureAdJoined or DomainJoined should be YES
+
+- Device State should indicate Hybrid Azure AD joined
+
+Also verify TPM status by running tpm.msc.
+
+
+
+###Step 2: Create and Configure the GPO for Windows Hello for Business
+Open Group Policy Management Console (GPMC) on your domain controller (gpmc.msc).
+
+Navigate to the appropriate Organizational Unit (OU) or domain.
+
+Right-click → Create a GPO in this domain, and Link it here...
+
+Name the GPO (e.g., Windows Hello for Business - Key Trust).
+
+Edit the GPO:
+
+Go to:
+```rust
+Computer Configuration → Policies → Administrative Templates → Windows Components → Windows Hello for Business
+```
+
+Enable these policies:
+
+Use Windows Hello for Business → Enabled
+
+Use biometrics → Enabled
+
+Configure PIN complexity → Configure as needed (e.g., minimum length 6)
+
+Require TPM → Enabled
+
+
+Step 3: Force Group Policy Update on Client Devices
+On each Windows client device, open PowerShell as admin and run:
+```Powershell
+gpupdate /force
+```
+
+Then reboot the device to apply the policy.
+
+Step 4: Register Windows Hello for Business on Client
+Go to Settings → Accounts → Sign-in options.
+
+Set up Windows Hello PIN.
+
+Enable biometric sign-in if supported (fingerprint or facial recognition).
+
+Confirm that Windows Hello sign-in works correctly.
+
+Step 5: Verify Device Registration Status
+On the client device, open PowerShell and run:
+```powershell
+dsregcmd /status
+```
+Ensure that the device shows as Hybrid Azure AD joined and Windows Hello authentication is active.
+
+
+---
+
+### Windows Hello for Business – Hybrid Key Trust Deployment
+
+This configuration enables passwordless authentication using Windows Hello for Business in a hybrid Active Directory and Azure AD environment, leveraging the Key Trust model.
+
+| Setting                          | Recommended Value | Description                                 |
+|---------------------------------|-------------------|---------------------------------------------|
+| Use Windows Hello for Business   | ✅ Enabled        | Enables Hello sign-in on hybrid devices     |
+| Use biometrics                  | ✅ Enabled        | Allows face/fingerprint sign-in             |
+| Use PIN                         | ✅ Enabled        | PIN fallback when biometrics are unavailable |
+| Trust model                     | Key Trust         | No certificate infrastructure required; simpler setup |
+| Require TPM                    | ✅ Enabled        | Credentials secured in hardware TPM         |
+
+> Devices are hybrid Azure AD joined and authenticate without passwords, improving security and user experience.
+
+---
+
+![Windows Hello for Business GPO Screenshot](./Screenshots/windows-hello-gpo.png)
+
+
+Step 7: Capture Screenshot
+Take a screenshot of the configured GPO policies and add it to your repository under /Screenshots/windows-hello-gpo.png.
+Additional Notes
+The Key Trust model is preferred for hybrid environments as it requires no PKI infrastructure.
+
+This configuration aligns with Microsoft’s recommended best practices for hybrid Windows Hello deployments.
+
+For further reading, see the official Microsoft documentation:
+Windows Hello for Business deployment
 
 
 
@@ -123,6 +237,12 @@ It is a key component of modern, passwordless authentication strategies and inte
 
 
 
+
+
+
+
+
+---
 ## 🎯 Conditional Access Policies
 
 **Objective:** Define conditions and controls for secure sign-in and resource access.
