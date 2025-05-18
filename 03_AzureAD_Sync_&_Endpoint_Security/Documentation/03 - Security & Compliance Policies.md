@@ -34,16 +34,29 @@ Now that device and user management is in place, this phase focuses on implement
 | **Show geographic location in notifications**      | ☁️ Microsoft-managed     | Location info is shown to help users detect suspicious logins                                |
 | **Authenticator on companion apps**                | ☁️ Microsoft-managed     | Controls the use of Authenticator on devices like Apple Watch or other paired apps           |
 
+---
 
-| Method Name                  | Details                                                                 | Recommended Configuration                                                   |
-|-----------------------------|-------------------------------------------------------------------------|------------------------------------------------------------------------------|
-| Microsoft Authenticator     | Mobile app with push notifications. Most common and user-friendly.     | Enable push, number matching, and location context                          |
-| Authenticator App (TOTP)    | Time-based one-time passcodes without push (offline mode).             | Enable as backup; enforce 6-digit codes, time-based                         |
-| FIDO2 Security Key          | Physical security keys (e.g., YubiKey). Passwordless and phishing-resistant. | Require key registration; restrict to trusted devices                       |
-| Temporary Access Pass (TAP) | Temporary one-time passcode used for first-time registration or recovery. | Enable one-time use, short lifetime (e.g., 1 hour), for registration only   |
-| Windows Hello for Business  | Uses biometrics (face/fingerprint) or PIN tied to the device.          | Enable on compliant, hybrid-joined or Azure AD-joined devices               |
-| SMS OTP                     | One-time passcode sent via text message. Convenient but less secure.   | Enable only as fallback; monitor for misuse; enforce phone number registration |
+## 🕒 Temporary Access Pass (TAP) – Recommended Settings
 
+| Setting                   | Recommended Value  | Description                                                                                   |
+|---------------------------|--------------------|-----------------------------------------------------------------------------------------------|
+| **Enable and Target**     | ✅ Enabled         | TAP is enabled for targeted users or groups                                                   |
+| **Minimum lifetime**      | 1 hour             | Minimum duration the pass is valid                                                            |
+| **Maximum lifetime**      | 8 hours            | Maximum allowed validity for a TAP                                                            |
+| **Default lifetime**      | 1 hour             | Default value assigned when generating a TAP                                                  |
+| **One-time use**          | ✅ Yes             | Pass is valid for only one sign-in (recommended for security)                                 |
+| **Length**                | 8 characters       | Length of the Temporary Access Pass code (minimum recommended for security)                   |
+
+### 🔐 Important Notes:
+- ✅ TAP is used only by administrators, typically during:
+
+  - MFA registration (bootstrap)
+
+  - Recovery when other methods are unavailable
+
+  - ❌ TAP is not usable for Self-Service Password Reset (SSPR)
+
+  
 
 ---
 
