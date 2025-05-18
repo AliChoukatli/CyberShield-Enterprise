@@ -6,6 +6,45 @@ Now that device and user management is in place, this phase focuses on implement
 
 ## 🔐 Multi-Factor Authentication (MFA) – Recommended Methods
 
+
+### FIDO2 Security Key (Passkey) – Recommended Settings
+
+| Setting                     | Recommended Value | Description                                                                 |
+|----------------------------|-------------------|-----------------------------------------------------------------------------|
+| Allow self-service set up  | ✅ Yes            | Allows users to register their own FIDO2 security keys                      |
+| Enforce attestation        | ❌ No             | Not required unless you need verified device metadata                      |
+| Enforce key restrictions   | ✅ Yes            | Prevents use of unapproved or unknown FIDO2 keys                           |
+| Restrict specific keys     | 🔒 Block          | Blocks specific keys by AAGUID (only if you want to restrict certain vendors) |
+| Microsoft Authenticator    | ❌ No             | Not applicable for FIDO2; Microsoft Authenticator is a separate method     |
+
+
+📘 Notes:
+Allow self-service set up = Yes 👉 facilite l’enregistrement par l’utilisateur, recommandé.
+
+Enforce attestation = No 👉 sauf si ton organisation exige une validation stricte du matériel.
+
+Enforce key restrictions = Yes 👉 utile pour contrôler le type exact de clé autorisée.
+
+Restrict specific keys = Block (si tu as une politique précise) sinon laisse vide.
+
+Microsoft Authenticator est une méthode séparée (push / OTP), elle ne s’applique pas ici.
+---
+
+
+
+## 📱 Microsoft Authenticator – Recommended Settings
+
+| Setting                                            | Recommended Value       | Description                                                                                   |
+|----------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------------------|
+| **Enable and Target**                              | ✅ Enabled               | Method is enabled for users                                                                   |
+| **Target**                                         | 🎯 All users             | Include all users or a specific security group                                                |
+| **Allow use of Microsoft Authenticator OTP**       | ✅ Yes                  | Allows use of TOTP codes from the app in addition to push notifications                      |
+| **Require number matching for push notifications** | ✅ Enabled (mandatory)   | Prevents MFA fatigue attacks by requiring users to enter the number shown on the screen      |
+| **Show application name in notifications**         | ☁️ Microsoft-managed     | App name will be shown in push/passwordless notifications when rolled out by Microsoft       |
+| **Show geographic location in notifications**      | ☁️ Microsoft-managed     | Location info is shown to help users detect suspicious logins                                |
+| **Authenticator on companion apps**                | ☁️ Microsoft-managed     | Controls the use of Authenticator on devices like Apple Watch or other paired apps           |
+
+
 | Method Name                  | Details                                                                 | Recommended Configuration                                                   |
 |-----------------------------|-------------------------------------------------------------------------|------------------------------------------------------------------------------|
 | Microsoft Authenticator     | Mobile app with push notifications. Most common and user-friendly.     | Enable push, number matching, and location context                          |
