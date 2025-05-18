@@ -28,23 +28,6 @@ This project implements Multi-Factor Authentication (MFA) using multiple modern 
 ## 🔐 Multi-Factor Authentication (MFA) – Recommended Methods
 
 
-### FIDO2 Security Key (Passkey) – Recommended Settings
-
-| Setting                     | Recommended Value | Description                                                                 |
-|----------------------------|-------------------|-----------------------------------------------------------------------------|
-| Allow self-service set up  | ✅ Yes            | Allows users to register their own FIDO2 security keys                      |
-| Enforce attestation        | ❌ No             | Not required unless you need verified device metadata                      |
-| Enforce key restrictions   | ✅ Yes            | Prevents use of unapproved or unknown FIDO2 keys                           |
-| Restrict specific keys     | 🔒 Block          | Blocks specific keys by AAGUID (only if you want to restrict certain vendors) |
-| Microsoft Authenticator    | ❌ No             | Not applicable for FIDO2; Microsoft Authenticator is a separate method     |
-
-
-
-
-
----
-
-
 ###  Microsoft Authenticator – Recommended Settings
 
 | Setting                                            | Recommended Value       | Description                                                                                   |
@@ -58,6 +41,7 @@ This project implements Multi-Factor Authentication (MFA) using multiple modern 
 | **Authenticator on companion apps**                | ☁️ Microsoft-managed     | Controls the use of Authenticator on devices like Apple Watch or other paired apps           |
 
 ---
+
 
 ### 🕒 Temporary Access Pass (TAP) – Recommended Settings
 
@@ -79,6 +63,16 @@ This project implements Multi-Factor Authentication (MFA) using multiple modern 
 
   - ❌ TAP is not usable for Self-Service Password Reset (SSPR)
 
+
+### FIDO2 Security Key (Passkey) – Recommended Settings
+
+| Setting                     | Recommended Value | Description                                                                 |
+|----------------------------|-------------------|-----------------------------------------------------------------------------|
+| Allow self-service set up  | ✅ Yes            | Allows users to register their own FIDO2 security keys                      |
+| Enforce attestation        | ❌ No             | Not required unless you need verified device metadata                      |
+| Enforce key restrictions   | ✅ Yes            | Prevents use of unapproved or unknown FIDO2 keys                           |
+| Restrict specific keys     | 🔒 Block          | Blocks specific keys by AAGUID (only if you want to restrict certain vendors) |
+| Microsoft Authenticator    | ❌ No             | Not applicable for FIDO2; Microsoft Authenticator is a separate method     |
   
 
 ---
