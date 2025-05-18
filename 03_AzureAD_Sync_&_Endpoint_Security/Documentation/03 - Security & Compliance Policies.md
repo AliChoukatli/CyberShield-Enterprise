@@ -118,6 +118,28 @@ dsregcmd /status
 
 - Also verify TPM status by running **tpm.msc**
 
+
+#### In this lab, the project is running on a virtual machine.  
+After running the `tpm.msc` command to check Trusted Platform Module (TPM) status, the result showed:
+
+> ❌ "Compatible TPM not found"
+
+##### 📌 Explanation:
+TPM is a hardware-based security chip used by Windows Hello for Business (especially with **Key Trust** model) to securely store authentication keys.  
+Most virtual environments (such as VMware Workstation, VirtualBox, or Hyper-V with default settings) **do not expose a virtual TPM module**, unless explicitly configured.
+
+##### ✅ Recommended Practice:
+In a production environment, TPM version **2.0** must be:
+- **Present**
+- **Ready for use**
+- **Owned by the system**
+
+This ensures secure key generation and storage for passwordless authentication.
+
+##### 🧠 Note:
+This limitation does **not block** documentation of Windows Hello for Business.  
+You can still simulate the GPO or Intune configuration steps and clearly indicate the TPM limitation in your test lab environment.
+
 ---
 
 #### Step 2: Create and Configure the GPO for Windows Hello for Business
