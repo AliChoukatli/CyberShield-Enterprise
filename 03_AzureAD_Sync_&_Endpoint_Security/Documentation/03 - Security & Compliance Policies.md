@@ -112,9 +112,9 @@ dsregcmd /status
 ```
 - Check the output:
 
- - AzureAdJoined or DomainJoined should be YES
+  - AzureAdJoined or DomainJoined should be YES
 
- - Device State should indicate Hybrid Azure AD joined
+  - Device State should indicate Hybrid Azure AD joined
 
 - Also verify TPM status by running tpm.msc.
 
