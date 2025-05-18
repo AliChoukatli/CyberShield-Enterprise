@@ -1,10 +1,4 @@
-# ✅ Security & Compliance Policies
-
-Now that device and user management is in place, this phase focuses on implementing key **security and compliance policies** to protect organizational resources.
-
----
-
-# Authentication Methods Overview
+# ✅ Authentication Methods  & Compliance Policies
 
 This project implements Multi-Factor Authentication (MFA) using multiple modern methods:
 
