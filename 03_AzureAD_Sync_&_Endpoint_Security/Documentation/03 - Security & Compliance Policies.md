@@ -141,7 +141,7 @@ dsregcmd /status
 Computer Configuration → Policies → Administrative Templates → Windows Components → Windows Hello for Business
 ```
 
- - Enable these policies:
+- Enable these policies:
 
   - Use Windows Hello for Business → Enabled
 
@@ -150,6 +150,9 @@ Computer Configuration → Policies → Administrative Templates → Windows Com
   - Configure PIN complexity → Configure as needed (e.g., minimum length 6)
 
   - Use a Hardware Security Device (TPM) → Enabled
+ 
+![Hello-GPO](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Hello-GPO.png)
+
 
 ---
 
