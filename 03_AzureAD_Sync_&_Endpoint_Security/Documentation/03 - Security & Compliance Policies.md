@@ -22,7 +22,7 @@ Now that device and user management is in place, this phase focuses on implement
 ---
 
 
-## 📱 Microsoft Authenticator – Recommended Settings
+###  Microsoft Authenticator – Recommended Settings
 
 | Setting                                            | Recommended Value       | Description                                                                                   |
 |----------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------------------|
@@ -36,7 +36,7 @@ Now that device and user management is in place, this phase focuses on implement
 
 ---
 
-## 🕒 Temporary Access Pass (TAP) – Recommended Settings
+### 🕒 Temporary Access Pass (TAP) – Recommended Settings
 
 | Setting                   | Recommended Value  | Description                                                                                   |
 |---------------------------|--------------------|-----------------------------------------------------------------------------------------------|
@@ -47,7 +47,7 @@ Now that device and user management is in place, this phase focuses on implement
 | **One-time use**          | ✅ Yes             | Pass is valid for only one sign-in (recommended for security)                                 |
 | **Length**                | 8 characters       | Length of the Temporary Access Pass code (minimum recommended for security)                   |
 
-### 🔐 Important Notes:
+#### 🔐 Important Notes:
 - ✅ TAP is used only by administrators, typically during:
 
   - MFA registration (bootstrap)
