@@ -11,13 +11,15 @@ This project implements Multi-Factor Authentication (MFA) using multiple modern 
 1. **Microsoft Authenticator App**  
    Used for push notifications and one-time passcodes (OTP) as a second factor for secure login.
 
-2. **Windows Hello**  
-   Provides a passwordless experience by leveraging built-in biometric sensors (face or fingerprint) and PIN on Windows devices.  
-   Windows Hello uses the **FIDO2 protocol** to secure authentication without the need for passwords.
+2. **Temporary Access Pass (TAP) – Recommended Settings**
 
-3. **FIDO2 Security Keys (Optional)**  
+3. **FIDO2 Security Keys**  
    Although not used in this project setup, physical FIDO2 security keys (e.g., YubiKey USB devices) can also be registered and used for authentication in Microsoft Entra ID (Previously AzureAD).  
    These hardware keys provide a high level of security and are commonly used in enterprise environments.
+
+4. **Windows Hello**  
+   Provides a passwordless experience by leveraging built-in biometric sensors (face or fingerprint) and PIN on Windows devices.  
+   Windows Hello uses the **FIDO2 protocol** to secure authentication without the need for passwords.
 
 > **Note:**  
 > This setup demonstrates a passwordless and strong MFA implementation using Microsoft Authenticator and Windows Hello, both of which support the FIDO2 standard.  
@@ -45,25 +47,6 @@ This project implements Multi-Factor Authentication (MFA) using multiple modern 
 
 ---
 
-### 👤 Windows Hello for Business – Recommended Settings
-
-**Windows Hello for Business** allows users to sign in using biometrics (facial recognition, fingerprint) or a PIN, instead of passwords.  
-It is a key component of modern, passwordless authentication strategies and integrates directly with Microsoft Entra ID.
-
-| Setting                              | Recommended Value     | Description                                                                 |
-|--------------------------------------|------------------------|-----------------------------------------------------------------------------|
-| Configure for Windows 10/11 devices  | ✅ Enabled             | Enables Windows Hello on all supported endpoints                            |
-| Use biometric authentication         | ✅ Yes                | Allows facial recognition or fingerprint sign-in                            |
-| Use PIN as fallback                  | ✅ Yes                | Allows sign-in with PIN if biometrics fail                                  |
-| Trust model                          | Key Trust (Cloud-only) | Recommended for hybrid or cloud-native Azure AD-joined devices             |
-| Require TPM                          | ✅ Yes                | Ensures private keys are stored securely in hardware (TPM chip)             |
-
-> **Note:** Windows Hello uses the FIDO2 standard behind the scenes when configured with key trust.  
-> It enhances both user experience and security by eliminating passwords and reducing phishing risks.
-
-![Windows-Hello-Settings](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Windows-Hello.png)
-
----
 
 ### 🕒 Temporary Access Pass (TAP) – Recommended Settings
 
@@ -109,7 +92,6 @@ It is a key component of modern, passwordless authentication strategies and inte
   - [Temporary Access Pass (TAP)](https://learn.microsoft.com/en-us/entra/identity/authentication/howto-authentication-temporary-access-pass)
 
 ---
-
 
 
 ### Windows Hello for Business – Hybrid Key Trust Deployment Guide
