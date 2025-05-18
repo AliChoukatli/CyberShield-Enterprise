@@ -4,18 +4,17 @@ Now that device and user management is in place, this phase focuses on implement
 
 ---
 
-## 🔐 Multi-Factor Authentication (MFA)
+## 🔐 Multi-Factor Authentication (MFA) – Recommended Methods
 
-**Objective:** Enforce MFA for all users to ensure secure access.
+| Method Name                  | Details                                                                 | Recommended Configuration                                                   |
+|-----------------------------|-------------------------------------------------------------------------|------------------------------------------------------------------------------|
+| Microsoft Authenticator     | Mobile app with push notifications. Most common and user-friendly.     | Enable push, number matching, and location context                          |
+| Authenticator App (TOTP)    | Time-based one-time passcodes without push (offline mode).             | Enable as backup; enforce 6-digit codes, time-based                         |
+| FIDO2 Security Key          | Physical security keys (e.g., YubiKey). Passwordless and phishing-resistant. | Require key registration; restrict to trusted devices                       |
+| Temporary Access Pass (TAP) | Temporary one-time passcode used for first-time registration or recovery. | Enable one-time use, short lifetime (e.g., 1 hour), for registration only   |
+| Windows Hello for Business  | Uses biometrics (face/fingerprint) or PIN tied to the device.          | Enable on compliant, hybrid-joined or Azure AD-joined devices               |
+| SMS OTP                     | One-time passcode sent via text message. Convenient but less secure.   | Enable only as fallback; monitor for misuse; enforce phone number registration |
 
-### ✅ Steps:
-1. Go to **Microsoft Entra Admin Center**.
-2. Navigate to **Protection** > **Authentication Methods** > **Policies**.
-3. Enable **Microsoft Authenticator** and other preferred methods (e.g., SMS, FIDO2).
-4. Under **Users**, include **All Users** (or create a group-based policy).
-5. Save and monitor user registration status.
-
-📸 *Insert screenshot: MFA registration policy screen.*
 
 ---
 
