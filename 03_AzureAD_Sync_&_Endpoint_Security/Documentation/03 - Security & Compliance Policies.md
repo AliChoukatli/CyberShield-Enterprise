@@ -1,4 +1,4 @@
-# ✅ Authentication Methods  & Compliance Policies
+#  Authentication Methods  & Compliance Policies
 
 This project implements Multi-Factor Authentication (MFA) using multiple modern methods:
 
@@ -23,9 +23,9 @@ This project implements Multi-Factor Authentication (MFA) using multiple modern 
 
 ---
 
-## 🔐 Multi-Factor Authentication (MFA) – Recommended Methods
+# 🔐 Multi-Factor Authentication (MFA) – Recommended Methods
 
-### ✅ A. Microsoft Authenticator – Recommended Settings
+## ✅ A. Microsoft Authenticator – Recommended Settings
 
 | Setting                                            | Recommended Value       | Description                                                                                   |
 |----------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------------------|
@@ -42,7 +42,7 @@ This project implements Multi-Factor Authentication (MFA) using multiple modern 
 ---
 
 
-### ✅ B. Temporary Access Pass (TAP) – Recommended Settings
+## ✅ B. Temporary Access Pass (TAP) – Recommended Settings
 
 | Setting                   | Recommended Value  | Description                                                                                   |
 |---------------------------|--------------------|-----------------------------------------------------------------------------------------------|
@@ -63,7 +63,7 @@ This project implements Multi-Factor Authentication (MFA) using multiple modern 
 
 ---
 
-### ✅  C. FIDO2 Security Key (Passkey) – Recommended Settings
+## ✅  C. FIDO2 Security Key (Passkey) – Recommended Settings
 
 | Setting                     | Recommended Value | Description                                                                 |
 |----------------------------|-------------------|-----------------------------------------------------------------------------|
@@ -77,7 +77,7 @@ This project implements Multi-Factor Authentication (MFA) using multiple modern 
 
 ---
 
-#### 🔗 For more information, refer to the official Microsoft documentation:
+### 🔗 For more information, refer to the official Microsoft documentation:
 
   - [FIDO2 Security Keys in Microsoft Entra ID](https://learn.microsoft.com/en-us/entra/identity/authentication/how-to-enable-passkey-fido2)
 
@@ -88,13 +88,13 @@ This project implements Multi-Factor Authentication (MFA) using multiple modern 
 ---
 
 
-### ✅ D. Windows Hello for Business – Hybrid Key Trust Deployment Guide
+## ✅ D. Windows Hello for Business – Hybrid Key Trust Deployment Guide
 
 This guide explains how to configure **Windows Hello for Business** in a **hybrid environment** (on-premises Active Directory + Azure AD) using the **Key Trust model**.
 
 ---
 
-#### Prerequisites
+### Prerequisites
 
 - Windows Server 2016 or later for domain controllers
 - Azure AD Connect configured for hybrid Azure AD join
@@ -103,7 +103,7 @@ This guide explains how to configure **Windows Hello for Business** in a **hybri
 
 ---
 
-#### Step 1: Verify Prerequisites on Client Device
+### Step 1: Verify Prerequisites on Client Device
 
 - Open PowerShell as an administrator and run:
 
@@ -124,7 +124,7 @@ dsregcmd /status
 
 ---
 
-#### Step 2: Create and Configure the GPO for Windows Hello for Business
+### Step 2: Create and Configure the GPO for Windows Hello for Business
 
  1. Open Group Policy Management Console (GPMC) on your domain controller (gpmc.msc)
 
@@ -153,7 +153,7 @@ Computer Configuration → Policies → Administrative Templates → Windows Com
 
 ---
 
-#### Step 3: Force Group Policy Update on Client Devices
+### Step 3: Force Group Policy Update on Client Devices
 1. On each Windows client device, open PowerShell as admin and run:
 ```Powershell
 gpupdate /force
@@ -163,7 +163,7 @@ gpupdate /force
 
 ---
 
-#### Step 4: Register Windows Hello for Business on Client
+### Step 4: Register Windows Hello for Business on Client
 
 1. Go to Settings → Accounts → Sign-in options.
 
@@ -173,7 +173,7 @@ gpupdate /force
 
 4. Confirm that Windows Hello sign-in works correctly.
 
-#### Step 5: Verify Device Registration Status
+### Step 5: Verify Device Registration Status
 
 1. On the client device, open PowerShell and run:
 ```powershell
@@ -181,10 +181,7 @@ dsregcmd /status
 ```
 2. Ensure that the device shows as Hybrid Azure AD joined and Windows Hello authentication is active.
 
-
----
-
-### Windows Hello for Business – Hybrid Key Trust Deployment
+#### Windows Hello for Business – Hybrid Key Trust Deployment
 
 This configuration enables passwordless authentication using Windows Hello for Business in a hybrid Active Directory and Azure AD environment, leveraging the Key Trust model.
 
@@ -201,6 +198,10 @@ This configuration enables passwordless authentication using Windows Hello for B
 ---
 
 ![Windows Hello for Business GPO Screenshot](./Screenshots/windows-hello-gpo.png)
+
+
+---
+
 
 
 Step 7: Capture Screenshot
