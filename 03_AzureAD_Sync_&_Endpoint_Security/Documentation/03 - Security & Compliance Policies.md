@@ -83,11 +83,11 @@ This project implements Multi-Factor Authentication (MFA) using multiple modern 
 🔗 Advanced Security – Microsoft Documentation Links
 - For more information, refer to the official Microsoft documentation:
 
-  - FIDO2 Security Keys in Microsoft Entra ID
+  - [FIDO2 Security Keys in Microsoft Entra ID](https://learn.microsoft.com/en-us/entra/identity/authentication/how-to-enable-passkey-fido2)
 
-  - Microsoft Authenticator App
+  - [Microsoft Authenticator App](
 
-  - Temporary Access Pass (TAP)
+  - [Temporary Access Pass (TAP)](https://learn.microsoft.com/en-us/entra/identity/authentication/howto-authentication-temporary-access-pass)
 
 ---
 
