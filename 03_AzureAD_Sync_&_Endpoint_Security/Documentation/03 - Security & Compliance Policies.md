@@ -149,7 +149,7 @@ Computer Configuration → Policies → Administrative Templates → Windows Com
 
   - Configure PIN complexity → Configure as needed (e.g., minimum length 6)
 
-  - Require TPM → Enabled
+  - Use a Hardware Security Device (TPM) → Enabled
 
 ---
 
