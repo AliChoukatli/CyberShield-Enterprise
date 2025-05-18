@@ -18,17 +18,16 @@ This project implements Multi-Factor Authentication (MFA) using multiple modern 
 3. **FIDO2 Security Keys (Optional)**  
    Although not used in this project setup, physical FIDO2 security keys (e.g., YubiKey USB devices) can also be registered and used for authentication in Microsoft Entra ID.  
    These hardware keys provide a high level of security and are commonly used in enterprise environments.
-   ### Notes
 
-- This setup demonstrates a passwordless and strong MFA implementation using Microsoft Authenticator and Windows Hello, both of which support the FIDO2 standard.  
-- For full hardware-based passwordless authentication, organizations typically deploy physical FIDO2 keys like YubiKey.
+> **Note:**  
+> This setup demonstrates a passwordless and strong MFA implementation using Microsoft Authenticator and Windows Hello, both of which support the FIDO2 standard.  
+> For full hardware-based passwordless authentication, organizations typically deploy physical FIDO2 keys like YubiKey.
 
 ---
 
 ## 🔐 Multi-Factor Authentication (MFA) – Recommended Methods
 
-
-###  Microsoft Authenticator – Recommended Settings
+### Microsoft Authenticator – Recommended Settings
 
 | Setting                                            | Recommended Value       | Description                                                                                   |
 |----------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------------------|
@@ -42,7 +41,6 @@ This project implements Multi-Factor Authentication (MFA) using multiple modern 
 
 ---
 
-
 ### 🕒 Temporary Access Pass (TAP) – Recommended Settings
 
 | Setting                   | Recommended Value  | Description                                                                                   |
@@ -54,15 +52,13 @@ This project implements Multi-Factor Authentication (MFA) using multiple modern 
 | **One-time use**          | ✅ Yes             | Pass is valid for only one sign-in (recommended for security)                                 |
 | **Length**                | 8 characters       | Length of the Temporary Access Pass code (minimum recommended for security)                   |
 
-#### 🔐 Important Notes:
-- ✅ TAP is used only by administrators, typically during:
+> **Important Notes:**  
+> - TAP is used only by administrators, typically during:  
+> &nbsp;&nbsp;- MFA registration (bootstrap)  
+> &nbsp;&nbsp;- Recovery when other methods are unavailable  
+> > **Note:** TAP is not usable for Self-Service Password Reset (SSPR)
 
-  - MFA registration (bootstrap)
-
-  - Recovery when other methods are unavailable
-
-  - ❌ TAP is not usable for Self-Service Password Reset (SSPR)
-
+---
 
 ### FIDO2 Security Key (Passkey) – Recommended Settings
 
@@ -73,7 +69,7 @@ This project implements Multi-Factor Authentication (MFA) using multiple modern 
 | Enforce key restrictions   | ✅ Yes            | Prevents use of unapproved or unknown FIDO2 keys                           |
 | Restrict specific keys     | 🔒 Block          | Blocks specific keys by AAGUID (only if you want to restrict certain vendors) |
 | Microsoft Authenticator    | ❌ No             | Not applicable for FIDO2; Microsoft Authenticator is a separate method     |
-  
+
 
 ---
 
