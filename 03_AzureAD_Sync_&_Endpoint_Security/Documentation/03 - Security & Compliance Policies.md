@@ -143,13 +143,18 @@ Computer Configuration → Policies → Administrative Templates → Windows Com
 
 - Enable these policies:
 
-  - Use Windows Hello for Business → Enabled
 
-  - Use biometrics → Enabled
 
-  - Configure PIN complexity → Configure as needed (e.g., minimum length 6)
 
-  - Use a Hardware Security Device (TPM) → Enabled
+
+ ) → Enabled
+
+| Setting                             | Recommended Value | Description                                 |
+|-------------------------------------|-------------------|---------------------------------------------|
+| Use Windows Hello for Business      | ✅ Enabled        | Enables Hello sign-in on hybrid devices     |
+| Use biometrics                      | ✅ Enabled        | Allows face/fingerprint sign-in             |
+| Use PIN  minimum length 6           | ✅ Enabled        | PIN fallback when biometrics are unavailable|
+| Use a Hardware Security Device (TPM)| ✅ Enabled        | Credentials secured in hardware TPM         |
  
 ![Hello-GPO](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Hello-GPO.png)
 
@@ -188,13 +193,7 @@ dsregcmd /status
 
 This configuration enables passwordless authentication using Windows Hello for Business in a hybrid Active Directory and Azure AD environment, leveraging the Key Trust model.
 
-| Setting                          | Recommended Value | Description                                 |
-|---------------------------------|-------------------|---------------------------------------------|
-| Use Windows Hello for Business   | ✅ Enabled        | Enables Hello sign-in on hybrid devices     |
-| Use biometrics                  | ✅ Enabled        | Allows face/fingerprint sign-in             |
-| Use PIN                         | ✅ Enabled        | PIN fallback when biometrics are unavailable |
-| Trust model                     | Key Trust         | No certificate infrastructure required; simpler setup |
-| Require TPM                    | ✅ Enabled        | Credentials secured in hardware TPM         |
+
 
 > Devices are hybrid Azure AD joined and authenticate without passwords, improving security and user experience.
 
