@@ -143,12 +143,6 @@ Computer Configuration → Policies → Administrative Templates → Windows Com
 
 - Enable these policies:
 
-
-
-
-
- ) → Enabled
-
 | Setting                             | Recommended Value | Description                                 |
 |-------------------------------------|-------------------|---------------------------------------------|
 | Use Windows Hello for Business      | ✅ Enabled        | Enables Hello sign-in on hybrid devices     |
