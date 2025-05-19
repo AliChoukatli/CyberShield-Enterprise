@@ -200,27 +200,10 @@ This configuration enables passwordless authentication using Windows Hello for B
 
 ---
 
-![Windows Hello for Business GPO Screenshot](./Screenshots/windows-hello-gpo.png)
+![Hello-Intunet](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Hello-Config-Intune.png)
 
 
 ---
-
-
-
-Step 7: Capture Screenshot
-Take a screenshot of the configured GPO policies and add it to your repository under /Screenshots/windows-hello-gpo.png.
-Additional Notes
-The Key Trust model is preferred for hybrid environments as it requires no PKI infrastructure.
-
-This configuration aligns with Microsoft’s recommended best practices for hybrid Windows Hello deployments.
-
-For further reading, see the official Microsoft documentation:
-Windows Hello for Business deployment
-
-
-
-
-
 
 
 
