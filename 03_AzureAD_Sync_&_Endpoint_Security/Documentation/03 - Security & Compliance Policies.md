@@ -182,16 +182,8 @@ gpupdate /force
 dsregcmd /status
 ```
 2. Ensure that the device shows as Hybrid Azure AD joined and Windows Hello authentication is active.
-
-#### Windows Hello for Business – Hybrid Key Trust Deployment
-
 This configuration enables passwordless authentication using Windows Hello for Business in a hybrid Active Directory and Azure AD environment, leveraging the Key Trust model.
-
-
-
 > Devices are hybrid Azure AD joined and authenticate without passwords, improving security and user experience.
-
----
 
 ![Hello-Intunet](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Hello-Config-Intune.png)
 
