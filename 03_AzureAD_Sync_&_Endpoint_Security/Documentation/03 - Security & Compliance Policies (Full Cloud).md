@@ -4,7 +4,7 @@ This section covers security compliance settings and policies essential to secur
 
 ---
 
-## Security Policies Overview
+# 🔒 Security Policies Overview
 
 | Policy Area                 | Description                                                        |
 |----------------------------|--------------------------------------------------------------------|
@@ -15,7 +15,7 @@ This section covers security compliance settings and policies essential to secur
 
 ---
 
-## Recommended Security Compliance Policies
+## 🔒 Recommended Security Compliance Policies
 
 ### Conditional Access Policies
 
@@ -32,7 +32,7 @@ This section covers security compliance settings and policies essential to secur
 
 The project implements MFA using the following modern methods:
 
-1. **Microsoft Authenticator App – Recommended Settings**
+1. ✅  **Microsoft Authenticator App – Recommended Settings**
 
 | Setting                                            | Recommended Value       | Description                                                                                   |
 |----------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------------------|
@@ -48,7 +48,7 @@ The project implements MFA using the following modern methods:
 
 ---
 
-2. **Temporary Access Pass (TAP) – Recommended Settings**
+2. ✅  **Temporary Access Pass (TAP) – Recommended Settings**
 
 | Setting                   | Recommended Value  | Description                                                                                   |
 |---------------------------|--------------------|-----------------------------------------------------------------------------------------------|
@@ -65,7 +65,7 @@ The project implements MFA using the following modern methods:
 
 ---
 
-3. **FIDO2 Security Key (Passkey) – Recommended Settings**
+3. ✅  **FIDO2 Security Key (Passkey) – Recommended Settings**
 
 | Setting                     | Recommended Value | Description                                                                 |
 |----------------------------|-------------------|-----------------------------------------------------------------------------|
@@ -83,7 +83,7 @@ The project implements MFA using the following modern methods:
 
 ---
 
-## Hybrid Deployment (Azure AD + On-premises Active Directory)
+## ✅ Hybrid Deployment (Azure AD + On-premises Active Directory)
 
 ### Overview
 
@@ -93,7 +93,7 @@ The project implements MFA using the following modern methods:
 - Supports TPM, biometrics (face/fingerprint), and PIN.  
 - Strong authentication integrated with local domain and cloud.
 
-### Key Configuration Points
+###  Key Configuration Points
 
 - Enable Windows Hello for Business in GPO or Intune hybrid profile.  
 - Configure PKI for WHfB certificates.  
@@ -107,7 +107,7 @@ The project implements MFA using the following modern methods:
 
 ---
 
-## Full Cloud Deployment (Azure AD Join only)
+## ✅  Full Cloud Deployment (Azure AD Join only)
 
 ### Overview
 
