@@ -149,6 +149,19 @@ Computer Configuration → Policies → Administrative Templates → Windows Com
  ```
 ![Hello-GPO](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Hello-GPO.png)
 
+---
+
+- In **Microsoft Endpoint Manager**, navigate to:
+ ```pgsql
+Devices > Windows > Configuration profiles > Create profile
+  ```
+- Platform: Windows 10 and later  
+- Profile type: Identity protection  
+- Settings:  
+  - Enable Windows Hello for Business: Yes  
+  - Use biometrics: True  
+  - Minimum PIN length: 6 characters  
+  - Use Require a Security Device (TPM): Enabled  
 - Enable these policies:
 
 | Setting                             | Recommended Value | Description                                 |
