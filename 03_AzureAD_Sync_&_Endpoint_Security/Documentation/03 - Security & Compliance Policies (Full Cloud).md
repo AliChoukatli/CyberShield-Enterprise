@@ -169,8 +169,6 @@ Go to **Settings → Accounts → Sign-in options**
 
 > Devices are hybrid Azure AD joined and authenticate without passwords, improving security and user experience.
 
----
-
 > ⚠️ Note: For Hybrid Azure AD Join scenarios, Windows Hello for Business configuration should be done via Group Policy (GPO).  
 > The previous method using Intune’s "Identity Protection" profile is deprecated and no longer supported.
 
