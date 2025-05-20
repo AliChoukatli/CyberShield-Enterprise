@@ -200,38 +200,60 @@ Go to **Settings → Accounts → Sign-in options**
 
 ---
 
-### ✅  Full Cloud Deployment (Azure AD Join only)
+## ✅ Full Cloud Deployment (Azure AD Join only)
 
 ### Overview
 
-- Devices joined directly to Azure AD (no on-prem AD).  
-- Managed via Microsoft Endpoint Manager (Intune).  
-- Passwordless experience using biometrics and PIN secured by TPM.  
-- Requires Azure AD Premium licenses.  
-- Conditional Access enforces MFA and device compliance.
+- Devices are joined directly to Azure AD (no on-prem AD)
+- Managed via Microsoft Intune (Microsoft Endpoint Manager)
+- Passwordless sign-in using biometrics and PIN secured by TPM
+- Requires Azure AD Premium P1 or P2 licenses
+- Conditional Access used to enforce MFA and device compliance
 
-### Configure Windows Hello for Business in Intune
+---
 
-- In **Microsoft Endpoint Manager**, navigate to:
- ```pgsql
-Devices > Windows > Configuration profiles > Create profile
-  ```
-- Choose the following options:
+## 🔧 Configure Windows Hello for Business via Intune (Modern Method)
 
-   - **Platform**: *Windows 10 and later*  
-   - **Profile type**: *Templates → Identity protection* 
-- Settings:  
-  - Enable Windows Hello for Business: Yes  
-  - Use biometrics: True  
-  - Minimum PIN length: 6 characters  
-  - Use Require a Security Device (TPM): Enabled  
+1. Go to **Microsoft Intune Admin Center**:  
+   `https://intune.microsoft.com`
 
-![Hello-Config](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Hello-Config-Intune.png)
+2. Navigate to:  
+   **Endpoint security > Account protection** → Click **+ Create Policy**
 
-- Assign to targeted user/device groups.
-- Create
+3. Choose:
 
+   - **Platform**: *Windows 10 and later*
+   - **Profile**: *Account protection*
 
+4. Click **Create**, then fill in:
+
+   - **Name**: *Windows Hello for Business - Cloud Only*
+   - **Description** (optional)
+
+5. In **Configuration settings**, set:
+
+   | Setting                                       | Value   |
+   |-----------------------------------------------|---------|
+   | **Configure Windows Hello for Business**       | Enabled |
+   | **Use biometrics**                             | Yes     |
+   | **Minimum PIN length**                         | 6       |
+   | **Use security device (TPM)**                  | Enabled |
+
+6. Click **Next**, assign to appropriate user or device groups.
+
+7. Complete and click **Create**.
+
+---
+
+### 🔐 User Setup
+
+Once the policy is applied, users will:
+
+1. Go to **Settings → Accounts → Sign-in options**
+2. Click **Set up** under **PIN (Windows Hello)**
+3. Optionally enable **Fingerprint** or **Face Recognition**, if available
+
+> ✅ The device is now fully cloud-joined and uses passwordless sign-in with TPM-backed credentials.
 
 
 ---
