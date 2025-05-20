@@ -198,10 +198,9 @@ dsregcmd /status
 - Profile type: Identity protection  
 - Settings:  
   - Enable Windows Hello for Business: Yes  
-  - Use biometrics: Enabled  
+  - Use biometrics: True  
   - Minimum PIN length: 6 characters  
-  - Allow convenience PIN: As per policy  
-  - Use a Hardware Security DeviceTPM: Enabled  
+  - Use Require a Security Device (TPM): Enabled  
 
 ![Hello-Config](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Hello-Config-Intune.png)
 
