@@ -1,5 +1,7 @@
 # 03 - Security Compliance & Policies
 
+Modern enterprise environments face constant threats targeting user identities, devices, and cloud resources. Implementing robust security policies—such as Conditional Access, Multi-Factor Authentication, and compliance enforcement—is critical to support Zero Trust principles and meet compliance requirements.
+
 This section covers security compliance settings and policies essential to secure the environment and enforce best practices.
 
 ---
