@@ -207,28 +207,31 @@ Go to **Settings → Accounts → Sign-in options**
 
 4. Click **Create**, then fill in:
 
-   - **Name**: *Windows Hello for Business - Cloud Only*
+   - **Name**: *Windows Hello for Business
    - **Description** (optional)
 
 5. ## Recommended Settings
  
 | Setting                                          | Recommended Value                                                                                                 
 |--------------------------------------------------|-----------------------------|
-| **Facial Features Use Enhanced Anti Spoofing**   | ✅ Enabled (or value 1)       
-| **Enable PIN Recovery**                          | ✅ Enabled                 
-| **Expiration**                                   | ✅ 0                     
-| **PIN History**                                  | ✅ 0                        
-| **Lowercase Letters**                            | ✅ 0 (Not required)       
-| **Uppercase Letters**                            | ✅ 0 (Not required)        
-| **Minimum PIN Length**                           | ✅ 6                        
+| **Facial Features Use Enhanced Anti Spoofing**   | ✅ True     
+| **Enable PIN Recovery**                          | ✅ True                 
+| **Expiration**                                   | ✅ 90                     
+| **PIN History**                                  | ✅ 5                       
+| **Lowercase & Uppercase Letters**                | ✅ Required        
+| **Minimum PIN Length**                           | ✅ 8                        
 | **Maximum PIN Length**                           | ✅ 127                     
-| **Special Characters**                           | ✅ 0 (Not required)                          
-| **Require Security Device (TPM)**                | ✅ Enabled                  
-| **Use Certificate For On-Prem Auth**             | ✅ Disabled or Not Configured     
+| **Special Characters**                           | ✅ Required                          
+| **Require Security Device (TPM)**                | ✅ True                  
+| **Use Certificate For On-Prem Auth**             | ✅ Disabled    
+
+![Hello-Policy-Config](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Hello-Policy-Config.png)
 
 6. Click **Next**, assign to appropriate user or device groups.
 
 7. Complete and click **Create**.
+
+![Hello-Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Hello-Policy.png)
 
 ---
 
