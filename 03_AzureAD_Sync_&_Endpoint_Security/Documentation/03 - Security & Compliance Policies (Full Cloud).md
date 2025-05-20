@@ -131,14 +131,6 @@ The project implements MFA using the following modern methods:
 
 - Assign to targeted user/device groups.
 
-### Conditional Access Policies
-
-| Policy                       | Description                                   | Key Settings                                          |
-|------------------------------|----------------------------------------------|-------------------------------------------------------|
-| Block Legacy Authentication  | Block legacy auth protocols                    | All users, all cloud apps, block legacy auth clients  |
-| Require MFA for All Users     | Enforce MFA on all sign-ins                    | All users, all cloud apps, require MFA                 |
-| Require Compliant Devices     | Restrict access to compliant or Azure AD joined devices | All users, device state compliant or Azure AD joined, grant if compliant |
-| Block Risky Sign-ins          | Block sign-ins flagged risky                   | All users, sign-in risk medium+, block access          |
 
 ### References
 
