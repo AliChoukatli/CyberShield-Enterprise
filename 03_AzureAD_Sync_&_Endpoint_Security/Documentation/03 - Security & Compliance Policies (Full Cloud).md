@@ -172,9 +172,9 @@ gpupdate /force
 ### Step 5: Verify Device Registration Status
 
 1. On the client device, open PowerShell and run:
-powershell
+```powershell
 dsregcmd /status
-
+```
 2. Ensure that the device shows as Hybrid Azure AD joined and Windows Hello authentication is active..
 > Devices are hybrid Azure AD joined and authenticate without passwords, improving security and user experience.
 
@@ -201,16 +201,13 @@ dsregcmd /status
   - Use biometrics: Enabled  
   - Minimum PIN length: 6 characters  
   - Allow convenience PIN: As per policy  
-  - Use TPM: Enabled  
+  - Use a Hardware Security DeviceTPM: Enabled  
+
+![Hello-Config](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Hello-Config-Intune.png)
 
 - Assign to targeted user/device groups.
+- Create
 
-
-### References
-
-- [Windows Hello Full Cloud Deployment](https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/hello-identity-verification)  
-- [Configure Windows Hello with Intune](https://learn.microsoft.com/en-us/mem/intune/configuration/device-profiles#windows-hello-for-business)  
-- [Azure AD Conditional Access](https://learn.microsoft.com/en-us/azure/active-directory/conditional-access/overview)  
 
 ---
 
