@@ -43,9 +43,12 @@ Establish a professional-grade deployment of BitLocker via Microsoft Intune to e
    * **Membership type**: Dynamic Device
 3. Click **Add dynamic query**
 4. Define the rule with the following properties:
-5. Click **Save** > **Create**
 
 ![Windows-Device-Group](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Windows-Device-Group.png)
+
+5. Click **Save** > **Create**
+
+
 
 #### 📌 Optional: Use KQL for more precision
 ```kql
