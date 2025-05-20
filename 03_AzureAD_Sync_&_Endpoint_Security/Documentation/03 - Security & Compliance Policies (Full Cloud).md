@@ -70,6 +70,10 @@ The project implements MFA using the following modern methods:
 
 ![TAP Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/TAP-Policy.png)
 
+<p align="center">
+  <img src="(https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/TAP-Policy.png" alt="Authenticator Policy" width="100%" style="max-height: 20px; object-fit: contain;" />
+</p>
+
 ---
 
 3. ✅  **FIDO2 Security Key (Passkey) – Recommended Settings**
