@@ -170,13 +170,6 @@ gpupdate /force
 
 4. Confirm that Windows Hello sign-in works correctly.
 
-### Step 5: Verify Device Registration Status
-
-1. On the client device, open PowerShell and run:
-```powershell
-dsregcmd /status
-```
-2. Ensure that the device shows as Hybrid Azure AD joined and Windows Hello authentication is active..
 > Devices are hybrid Azure AD joined and authenticate without passwords, improving security and user experience.
 
 ---
