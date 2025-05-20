@@ -51,8 +51,6 @@ The project implements MFA using the following modern methods:
 </p>
 
 
-
-
 ---
 
 2. ✅  **Temporary Access Pass (TAP) – Recommended Settings**
