@@ -15,9 +15,8 @@ This section covers security compliance settings and policies essential to secur
 
 ---
 
-## 🔴 Recommended Security Compliance Policies
 
-### Conditional Access Policies
+## 🔴 **Conditional Access Policies - Recommended Settings**
 
 | Policy Name                    | Purpose                                             | Key Settings                                                         |
 |-------------------------------|-----------------------------------------------------|----------------------------------------------------------------------|
@@ -28,7 +27,7 @@ This section covers security compliance settings and policies essential to secur
 
 ---
 
-### 🔴 Multi-Factor Authentication (MFA)
+## 🔴 Multi-Factor Authentication (MFA)
 
 The project implements MFA using the following modern methods:
 
@@ -79,7 +78,7 @@ The project implements MFA using the following modern methods:
 
 ---
 
-### 🔴 Windows Hello for Business
+## 🔴 Windows Hello for Business
 
 ---
 
