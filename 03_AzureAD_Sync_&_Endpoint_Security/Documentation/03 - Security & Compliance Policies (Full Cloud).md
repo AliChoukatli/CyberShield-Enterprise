@@ -70,9 +70,6 @@ The project implements MFA using the following modern methods:
 
 ![TAP Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/TAP-Policy.png)
 
-<p align="center">
-  <img src="https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/TAP-Policy.png" alt="Authenticator Policy" width="80" style="max-height: 10px; object-fit: contain;" />
-</p>
 
 ---
 
