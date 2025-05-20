@@ -155,8 +155,10 @@ Computer Configuration → Policies → Administrative Templates → Windows Com
  ```pgsql
 Devices > Windows > Configuration profiles > Create profile
   ```
-- Platform: Windows 10 and later  
-- Profile type: Identity protection  
+- Choose the following options:
+
+   - **Platform**: *Windows 10 and later*  
+   - **Profile type**: *Templates → Identity protection*
 - Settings:  
   - Enable Windows Hello for Business: Yes  
   - Use biometrics: True  
@@ -214,8 +216,10 @@ Go to **Settings → Accounts → Sign-in options**
  ```pgsql
 Devices > Windows > Configuration profiles > Create profile
   ```
-- Platform: Windows 10 and later  
-- Profile type: Identity protection  
+- Choose the following options:
+
+   - **Platform**: *Windows 10 and later*  
+   - **Profile type**: *Templates → Identity protection* 
 - Settings:  
   - Enable Windows Hello for Business: Yes  
   - Use biometrics: True  
