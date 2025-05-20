@@ -174,13 +174,12 @@ gpupdate /force
 
 ### Step 4: Register Windows Hello for Business on Client
 
-1. Go to Settings → Accounts → Sign-in options.
+Go to **Settings → Accounts → Sign-in options**
 
-2. Set up Windows Hello PIN.
-
-3. Enable biometric sign-in if supported (fingerprint or facial recognition).
-
-4. Confirm that Windows Hello sign-in works correctly.
+1. Set up a **Windows Hello PIN**.
+2. If supported, enable **biometric sign-in** (fingerprint or facial recognition).
+3. Follow the on-screen instructions to complete setup.
+4. Ensure the device allows passwordless sign-in using Hello credentials.
 
 > Devices are hybrid Azure AD joined and authenticate without passwords, improving security and user experience.
 
