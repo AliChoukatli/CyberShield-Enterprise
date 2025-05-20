@@ -91,6 +91,7 @@ The project implements MFA using the following modern methods:
 ### Prerequisites
 
 - Windows Server 2016 or later for domain controllers
+- Domain Verified
 - Azure AD Connect configured for hybrid Azure AD join
 - Windows 10/11 client device with TPM enabled and compatible with Windows Hello
 - Administrative privileges to create and edit Group Policy Objects (GPO)
