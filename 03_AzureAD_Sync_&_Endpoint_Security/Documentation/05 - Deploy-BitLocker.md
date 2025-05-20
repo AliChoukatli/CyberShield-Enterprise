@@ -39,7 +39,7 @@ Establish a professional-grade deployment of BitLocker via Microsoft Intune to e
 2. Select:
 
    * **Group type**: Security
-   * **Group name**: `All Windows 10/11 Devices`
+   * **Group name**: `Windows 10/11 Devices`
    * **Membership type**: Dynamic Device
 3. Click **Add dynamic query**
 4. Define the rule with the following properties:
