@@ -206,13 +206,15 @@ gpupdate /force
 
 ### 🔐 Compliance Mapping
 
-| Security Standard         | Control ID / Section        | Implementation in this Project                          |
+| Security Standard         | Control ID / Section        | Implementation in this Project                           |
 |---------------------------|-----------------------------|----------------------------------------------------------|
-| ISO/IEC 27001             | A.9.4.2 – Secure log-on     | MFA via Conditional Access & Authenticator App          |
-| NIST SP 800-53 Rev. 5     | IA-2 – Identification & Auth| FIDO2 Keys, Temporary Access Pass, Number Matching MFA  |
-| CIS Critical Security Controls | Control 16 – Application Security | Device Compliance, Windows Hello for Business         |
-
+| ISO/IEC 27001             | A.9.4.2 – Secure log-on     | MFA via Conditional Access & Authenticator App           |
+| NIST SP 800-53 Rev. 5     | IA-2 – Identification & Auth| FIDO2 Keys, Temporary Access Pass, Number Matching MFA   |
+| CIS Critical Security Controls | Control 16 – Application Security | Device Compliance, Windows Hello for Business |
 
 
 ---
+
+By enforcing granular Conditional Access rules, multi-factor authentication, and secure passwordless sign-in options like FIDO2 and Windows Hello for Business, this configuration strengthens both security posture and user experience—while aligning with industry best practices and compliance standards.
+
 
