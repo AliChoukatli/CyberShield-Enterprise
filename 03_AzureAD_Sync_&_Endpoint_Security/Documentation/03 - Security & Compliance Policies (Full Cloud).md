@@ -46,9 +46,12 @@ The project implements MFA using the following modern methods:
 | **Authenticator on companion apps**                | ☁️ Microsoft-managed     | Controls use on devices like Apple Watch                                                    |
 
 
-  <img src="https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Authenticator-Policy.png" alt="Authenticator Policy" width="100%"/>
+<p align="center">
+  <img src="https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Authenticator-Policy.png" alt="Authenticator Policy" width="100%" style="max-height: 400px; object-fit: contain;" />
+</p>
 
 
+![Authenticator](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Authenticator-Policy.png)
 
 ---
 
