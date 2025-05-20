@@ -133,7 +133,8 @@ dsregcmd /status
   - Go to:
 rust
 Computer Configuration → Policies → Administrative Templates → Windows Components → Windows Hello for Business
-
+ 
+![Hello-GPO](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Hello-GPO.png)
 
 - Enable these policies:
 
@@ -143,9 +144,8 @@ Computer Configuration → Policies → Administrative Templates → Windows Com
 | Use biometrics                      | ✅ Enabled        | Allows face/fingerprint sign-in             |
 | Use PIN  minimum length 6           | ✅ Enabled        | PIN fallback when biometrics are unavailable|
 | Use a Hardware Security Device (TPM)| ✅ Enabled        | Credentials secured in hardware TPM         |
- 
-![Hello-GPO](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Hello-GPO.png)
 
+![Hello-Config](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Hello-Config-Intune.png)
 
 ---
 
