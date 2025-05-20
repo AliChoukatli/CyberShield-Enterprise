@@ -1,10 +1,10 @@
-# 03 Security Compliance & Policies
+# 03 - Security Compliance & Policies
 
 This section covers security compliance settings and policies essential to secure the environment and enforce best practices.
 
 ---
 
-# 🔴 Security Policies Overview
+## 🔴 Security Policies Overview
 
 | Policy Area                 | Description                                                        |
 |----------------------------|--------------------------------------------------------------------|
