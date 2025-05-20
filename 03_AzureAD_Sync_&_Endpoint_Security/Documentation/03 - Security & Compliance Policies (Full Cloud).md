@@ -198,8 +198,10 @@ gpupdate /force
 
 ### Configure Windows Hello for Business in Intune
 
-- In **Microsoft Endpoint Manager**, navigate to:  
-  `Devices > Windows > Configuration profiles` → Create new profile  
+- In **Microsoft Endpoint Manager**, navigate to:
+ ```pgsql
+Devices > Windows > Configuration profiles > Create profile
+  ```
 - Platform: Windows 10 and later  
 - Profile type: Identity protection  
 - Settings:  
