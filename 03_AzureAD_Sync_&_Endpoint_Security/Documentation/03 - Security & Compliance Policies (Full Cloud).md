@@ -89,7 +89,7 @@ The project implements MFA using the following modern methods:
 
 ---
 
-## ✅ Hybrid Deployment (Azure AD + On-premises Active Directory)
+### ✅ Hybrid Deployment (Azure AD + On-premises Active Directory)
 
 ### Prerequisites
 
@@ -117,7 +117,7 @@ dsregcmd /status
 
 ![TPM](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/TPM.png)
 
-✅ Result: TPM is present and ready (Hyper-V secure boot & TPM enabled)
+> **Result:** TPM is present and ready (Hyper-V secure boot & TPM enabled)
 
 ---
 
@@ -183,7 +183,7 @@ dsregcmd /status
 
 ---
 
-## ✅  Full Cloud Deployment (Azure AD Join only)
+### ✅  Full Cloud Deployment (Azure AD Join only)
 
 ### Overview
 
