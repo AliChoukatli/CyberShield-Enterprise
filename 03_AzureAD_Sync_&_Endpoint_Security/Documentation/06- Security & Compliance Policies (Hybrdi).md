@@ -284,17 +284,4 @@ dsregcmd /status
 
 ---
 
-## ✅ Summary
-
-| Policy | Purpose | Status |
-|--------|---------|--------|
-| MFA for all users | Stronger authentication | ✅ Enabled |
-| Block legacy authentication | Prevent insecure access | ✅ Enabled |
-| Conditional Access: MFA | Enforce MFA in real-world | ✅ Enabled |
-| Device compliance access | Secure endpoints only | ✅ Enabled |
-| Block risky sign-ins | Stop known threats | ✅ Enabled |
-
----
-
-**Next Step →** Phase04 - Endpoint Security & Device Compliance
 
