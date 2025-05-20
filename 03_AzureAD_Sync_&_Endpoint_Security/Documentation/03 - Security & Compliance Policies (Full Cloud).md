@@ -213,10 +213,10 @@ Go to **Settings → Accounts → Sign-in options**
 5. ## Recommended Settings
  
 | Setting                                          | Recommended Value                                                                                                 
-|----------------------------------|----------------------------|---------------------------------------------------------------------------------------------------------|
+|--------------------------------------------------|-----------------------------|
 | **Facial Features Use Enhanced Anti Spoofing**   | ✅ Enabled (or value 1)       
 | **Enable PIN Recovery**                          | ✅ Enabled                 
-| **Expiration**                                   | ✅ 0                      
+| **Expiration**                                   | ✅ 0                     
 | **PIN History**                                  | ✅ 0                        
 | **Lowercase Letters**                            | ✅ 0 (Not required)       
 | **Uppercase Letters**                            | ✅ 0 (Not required)        
@@ -225,6 +225,7 @@ Go to **Settings → Accounts → Sign-in options**
 | **Special Characters**                           | ✅ 0 (Not required)                          
 | **Require Security Device (TPM)**                | ✅ Enabled                  
 | **Use Certificate For On-Prem Auth**             | ✅ Disabled or Not Configured     
+
 
 6. Click **Next**, assign to appropriate user or device groups.
 
