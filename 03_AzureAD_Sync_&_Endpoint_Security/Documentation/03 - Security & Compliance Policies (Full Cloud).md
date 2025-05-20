@@ -167,6 +167,12 @@ Go to **Settings → Accounts → Sign-in options**
 3. Follow the on-screen instructions to complete setup.
 4. Ensure the device allows passwordless sign-in using Hello credentials.
 
+### Step 4 Verify Passwordless Sign-in is Enabled
+
+1. Open **Settings** → **Accounts** → **Sign-in options**.
+2. Confirm that **Windows Hello PIN** or **Biometric sign-in** (fingerprint or facial recognition) is set up.
+3. Check under **Security settings** or **Sign-in options** that **Passwordless sign-in** or **Windows Hello** is enabled.
+
 ---
 
 > ⚠️ Note: For Hybrid Azure AD Join scenarios, Windows Hello for Business configuration should be done via Group Policy (GPO).  
