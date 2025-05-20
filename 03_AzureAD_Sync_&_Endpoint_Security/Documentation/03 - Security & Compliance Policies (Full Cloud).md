@@ -91,25 +91,95 @@ The project implements MFA using the following modern methods:
 
 ## ✅ Hybrid Deployment (Azure AD + On-premises Active Directory)
 
-### Overview
+### Prerequisites
 
-- Devices joined to on-premises Active Directory and synced with Azure AD via Azure AD Connect.  
-- Uses internal PKI for certificate-based authentication.  
-- Managed by Group Policy Objects (GPO) or Intune hybrid.  
-- Supports TPM, biometrics (face/fingerprint), and PIN.  
-- Strong authentication integrated with local domain and cloud.
+- Windows Server 2016 or later for domain controllers
+- Azure AD Connect configured for hybrid Azure AD join
+- Windows 10/11 client device with TPM enabled and compatible with Windows Hello
+- Administrative privileges to create and edit Group Policy Objects (GPO)
 
-###  Key Configuration Points
+---
 
-- Enable Windows Hello for Business in GPO or Intune hybrid profile.  
-- Configure PKI for WHfB certificates.  
-- Deploy PIN complexity and biometrics policies.  
-- Ensure Azure AD Connect sync up to date.
+### Step 1: Verify Prerequisites on Client Device
 
-### References
+- Open PowerShell as an administrator and run:
 
-- [Windows Hello Hybrid Key Trust](https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/hello-hybrid-key-trust)  
-- [PKI Configuration for WHfB](https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/hello-pki)  
+powershell
+dsregcmd /status
+
+- Check the output:
+
+  - AzureAdJoined or DomainJoined should be YES
+
+  - Device State should indicate Hybrid Azure AD joined
+
+- Also verify TPM status by running **tpm.msc**
+
+![TPM](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/TPM.png)
+
+✅ Result: TPM is present and ready (Hyper-V secure boot & TPM enabled)
+
+---
+
+### Step 2: Create and Configure the GPO for Windows Hello for Business
+
+ 1. Open Group Policy Management Console (GPMC) on your domain controller (gpmc.msc)
+
+ 2. Navigate to the appropriate Organizational Unit (OU) or domain.
+
+3. Right-click → Create a GPO in this domain, and Link it here...
+
+4.  Name the GPO (e.g., Windows Hello for Business - Key Trust).
+
+5.  Edit the GPO:
+
+  - Go to:
+rust
+Computer Configuration → Policies → Administrative Templates → Windows Components → Windows Hello for Business
+
+
+- Enable these policies:
+
+| Setting                             | Recommended Value | Description                                 |
+|-------------------------------------|-------------------|---------------------------------------------|
+| Use Windows Hello for Business      | ✅ Enabled        | Enables Hello sign-in on hybrid devices     |
+| Use biometrics                      | ✅ Enabled        | Allows face/fingerprint sign-in             |
+| Use PIN  minimum length 6           | ✅ Enabled        | PIN fallback when biometrics are unavailable|
+| Use a Hardware Security Device (TPM)| ✅ Enabled        | Credentials secured in hardware TPM         |
+ 
+![Hello-GPO](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Hello-GPO.png)
+
+
+---
+
+### Step 3: Force Group Policy Update on Client Devices
+1. On each Windows client device, open PowerShell as admin and run:
+Powershell
+gpupdate /force
+
+
+2. Then reboot the device to apply the policy.
+
+---
+
+### Step 4: Register Windows Hello for Business on Client
+
+1. Go to Settings → Accounts → Sign-in options.
+
+2. Set up Windows Hello PIN.
+
+3. Enable biometric sign-in if supported (fingerprint or facial recognition).
+
+4. Confirm that Windows Hello sign-in works correctly.
+
+### Step 5: Verify Device Registration Status
+
+1. On the client device, open PowerShell and run:
+powershell
+dsregcmd /status
+
+2. Ensure that the device shows as Hybrid Azure AD joined and Windows Hello authentication is active..
+> Devices are hybrid Azure AD joined and authenticate without passwords, improving security and user experience.
 
 ---
 
