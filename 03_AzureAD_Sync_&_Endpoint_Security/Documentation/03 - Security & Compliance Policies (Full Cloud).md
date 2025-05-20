@@ -211,21 +211,20 @@ Go to **Settings → Accounts → Sign-in options**
    - **Description** (optional)
 
 5. ## Recommended Settings
-
-| Setting                            | Recommended Value          | Description                                                                                             |
+ 
+| Setting                                          | Recommended Value                                                                                                 
 |----------------------------------|----------------------------|---------------------------------------------------------------------------------------------------------|
-| **Facial Features Use Enhanced Anti Spoofing** | ✅ Enabled (or value 1)          | Requires enhanced anti-spoofing for face authentication, improving security against spoofing attempts. |
-| **Enable PIN Recovery**            | ✅ Enabled                  | Allows users to recover their PIN using the cloud-based PIN recovery service.                            |
-| **Expiration**                    | ✅ 0                        | PIN expiration period in days (0 means PINs do not expire).                                            |
-| **PIN History**                   | ✅ 0                        | Number of previous PINs that cannot be reused (0 disables PIN history).                                |
-| **Lowercase Letters**             | ✅ 0 (Not required)         | Configure whether lowercase letters are required or disallowed in PIN.                                 |
-| **Uppercase Letters**             | ✅ 0 (Not required)         | Configure whether uppercase letters are required or disallowed in PIN.                                 |
-| **Minimum PIN Length**            | ✅ 6                        | Minimum number of characters for the PIN.                                                             |
-| **Maximum PIN Length**            | ✅ 127                      | Maximum number of characters allowed for the PIN.                                                     |
-| **Special Characters**            | ✅ 0 (Not required)         | Configure whether special characters are required or disallowed in the PIN.                            |
-| **Require Security Device (TPM)** | ✅ Enabled                  | Requires a Trusted Platform Module (TPM) for Windows Hello for Business.                               |
-| **Use Certificate For On-Prem Auth** | ✅ Disabled or Not Configured | Whether to wait for certificate payload before provisioning PIN for on-premises authentication.         |
-
+| **Facial Features Use Enhanced Anti Spoofing**   | ✅ Enabled (or value 1)       
+| **Enable PIN Recovery**                          | ✅ Enabled                 
+| **Expiration**                                   | ✅ 0                      
+| **PIN History**                                  | ✅ 0                        
+| **Lowercase Letters**                            | ✅ 0 (Not required)       
+| **Uppercase Letters**                            | ✅ 0 (Not required)        
+| **Minimum PIN Length**                           | ✅ 6                        
+| **Maximum PIN Length**                           | ✅ 127                     
+| **Special Characters**                           | ✅ 0 (Not required)                          
+| **Require Security Device (TPM)**                | ✅ Enabled                  
+| **Use Certificate For On-Prem Auth**             | ✅ Disabled or Not Configured     
 
 6. Click **Next**, assign to appropriate user or device groups.
 
