@@ -1,5 +1,16 @@
 #  Authentication Methods  & Compliance Policies
 
+### ⚠️ Important Deployment Note (Lab Limitations)
+
+> **Note:**  
+> The initial deployment was performed in a test lab environment using a non-verified custom domain. As a result, certain functionalities such as **Windows Hello for Business**, **Multi-Factor Authentication (MFA)**, and some **Intune Conditional Access policies** could not be fully validated, particularly in a hybrid identity scenario.  
+>  
+> In a **production environment** with a **properly verified domain** (including DNS TXT and MX records configured in Azure AD), these features would function as expected and could be deployed following the same steps outlined in this guide.  
+>  
+> To ensure a fully functional and demonstrable result, the next section includes a **cloud-only deployment scenario**, which leverages Azure AD cloud-native users and devices (Azure AD Join), allowing a streamlined and modern configuration of **Windows Hello for Business**, **MFA**, and **Conditional Access** — fully managed through **Microsoft Intune**
+
+---
+
 This project implements Multi-Factor Authentication (MFA) using multiple modern methods:
 
 1. **Microsoft Authenticator App**  
@@ -185,14 +196,7 @@ dsregcmd /status
 > Devices are hybrid Azure AD joined and authenticate without passwords, improving security and user experience.
 
 ---
-### ⚠️ Important Deployment Note (Lab Limitations)
 
-> **Note:**  
-> The initial deployment was performed in a test lab environment using a non-verified custom domain. As a result, certain functionalities such as **Windows Hello for Business**, **Multi-Factor Authentication (MFA)**, and some **Intune Conditional Access policies** could not be fully validated, particularly in a hybrid identity scenario.  
->  
-> In a **production environment** with a **properly verified domain** (including DNS TXT and MX records configured in Azure AD), these features would function as expected and could be deployed following the same steps outlined in this guide.  
->  
-> To ensure a fully functional and demonstrable result, the next section includes a **cloud-only deployment scenario**, which leverages Azure AD cloud-native users and devices (Azure AD Join), allowing a streamlined and modern configuration of **Windows Hello for Business**, **MFA**, and **Conditional Access** — fully managed through **Microsoft Intune**.
 
 
 ---
