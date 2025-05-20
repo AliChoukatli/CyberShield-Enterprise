@@ -149,6 +149,13 @@ Computer Configuration → Policies → Administrative Templates → Windows Com
  ```
 ![Hello-GPO](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Hello-GPO.png)
 
+6. On each Windows client device, open PowerShell as admin and run:
+```Powershell
+gpupdate /force
+```
+
+2. Then reboot the device to apply the policy.
+
 ---
 
 - In **Microsoft Endpoint Manager**, navigate to:
@@ -177,13 +184,6 @@ Devices > Windows > Configuration profiles > Create profile
 
 ---
 
-### Step 3: Force Group Policy Update on Client Devices
-1. On each Windows client device, open PowerShell as admin and run:
-```Powershell
-gpupdate /force
-```
-
-2. Then reboot the device to apply the policy.
 
 ---
 
