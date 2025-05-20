@@ -206,12 +206,13 @@ Go to **Settings → Accounts → Sign-in options**
 
 5. In **Configuration settings**, set:
 
-   | Setting                                       | Value   |
-   |-----------------------------------------------|---------|
-   | **Configure Windows Hello for Business**       | Enabled |
-   | **Use biometrics**                             | Yes     |
-   | **Minimum PIN length**                         | 6       |
-   | **Use security device (TPM)**                  | Enabled |
+  
+| Setting                              | Recommended Value | Description                                   |
+|--------------------------------------|-------------------|-----------------------------------------------|
+| Configure Windows Hello for Business | ✅ Enabled        | Enables Windows Hello sign-in                 |
+| Use biometrics                       | ✅ Yes            | Allows biometric sign-in (face/fingerprint)  |
+| Minimum PIN length                   | ✅ 6              | Minimum PIN length requirement               |
+| Use security device (TPM)            | ✅ Enabled        | Credentials secured in hardware TPM   
 
 6. Click **Next**, assign to appropriate user or device groups.
 
