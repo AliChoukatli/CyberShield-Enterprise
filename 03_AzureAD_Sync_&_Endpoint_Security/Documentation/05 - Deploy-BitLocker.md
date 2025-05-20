@@ -69,24 +69,24 @@ Establish a professional-grade deployment of BitLocker via Microsoft Intune to e
 
 ### 2. Configure Required Settings
 
-#### A. Device Encryption
+#### A. Device Encryption BitLcoker
 
 | Setting                                 | Recommended Value                                  |
 | --------------------------------------- | -------------------------------------------------- |
 | Require Device Encryption               | Enabled                                            |
 | Allow warning for other disk encryption | Enabled                                            |
-| Configure recovery password rotation    | Refresh on Azure AD joined & Hybrid-Joined Devices |
+| Configure recovery password rotation    | Refresh on Both Azure AD joined & Hybrid-Joined Devices |
 
 #### B. Drive Encryption Settings
 
 | Setting                                          | Recommended Value |
 | ------------------------------------------------ | ----------------- |
 | Drive encryption method for OS, Fixed, Removable | Enabled           |
-| Fixed drives method                              | XTS-AES 256-bit   |
-| OS drives method                                 | XTS-AES 256-bit   |
-| Removable drives method                          | XTS-AES 256-bit   |
+| Encryption Fixed drives method                   | XTS-AES 256-bit   |
+| Encryption OS drives method                      | XTS-AES 256-bit   |
+| Encryption Removable drives method               | XTS-AES 256-bit   |
 
-#### C. OS Drive Protection
+#### C. OS Drive Setting
 
 | Setting                                                | Recommended Value                           |
 | ------------------------------------------------------ | ------------------------------------------- |
@@ -107,14 +107,15 @@ Establish a professional-grade deployment of BitLocker via Microsoft Intune to e
 
 #### D. Fixed Drives
 
-| Setting                             | Recommended Value                           |
-| ----------------------------------- | ------------------------------------------- |
-| Enforce encryption type             | Enabled - Full encryption                   |
-| Encryption method                   | XTS-AES 256-bit                             |
-| Recovery options                    | Enabled - 256-bit key and 48-digit password |
-| Allow recovery agents               | False                                       |
-| Store recovery info in AD DS        | Enabled                                     |
-| Deny unprotected drive write access | Enabled                                     |
+| Setting                                                                | Recommended Value                           |
+| -----------------------------------------------------------------------| ------------------------------------------- |
+| Enforce encryption type                                                | Enabled - Full encryption                   |
+| Encryption method                                                      | XTS-AES 256-bit                             |
+| Choose how BitLocker can be recovered                                  | Enabled - 256-bit key and 48-digit password |
+| Allow recovery agents                                                  | False                                       |
+| Do not enable BitLocker until recovery information is stored to AD DS  | True
+| Save BitLocker recovery information to AD DS                           | Enabled                                     |
+| Deny write access to fixed drives not protected by BitLocker           | Enabled                                     |
 
 #### E. Removable Drives
 
