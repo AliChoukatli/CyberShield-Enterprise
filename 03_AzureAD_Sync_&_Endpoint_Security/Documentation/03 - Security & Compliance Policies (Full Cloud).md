@@ -47,7 +47,7 @@ The project implements MFA using the following modern methods:
 
 
 <p align="center">
-  <img src="https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Authenticator-Policy.png" alt="Authenticator Policy" width="100%" style="max-height: 50px; object-fit: contain;" />
+  <img src="https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Authenticator-Policy.png" alt="Authenticator Policy" width="80%" style="max-height: 50px; object-fit: contain;" />
 </p>
 
 
