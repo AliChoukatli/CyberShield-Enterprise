@@ -51,7 +51,7 @@ The project implements MFA using the following modern methods:
 </p>
 
 
-![Authenticator](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Authenticator-Policy.png)
+
 
 ---
 
