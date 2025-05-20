@@ -158,37 +158,7 @@ gpupdate /force
 
 ---
 
-### Step 3 : Policy Configuration  
-- In **Microsoft Endpoint Manager**, navigate to:
- ```pgsql
-Devices > Windows > Configuration profiles > Create profile
-  ```
-- Choose the following options:
-
-   - **Platform**: *Windows 10 and later*  
-   - **Profile type**: *Templates → Identity protection*
-- Settings:  
-  - Enable Windows Hello for Business: Yes  
-  - Use biometrics: True  
-  - Minimum PIN length: 6 characters  
-  - Use Require a Security Device (TPM): Enabled  
-- Enable these policies:
-
-| Setting                             | Recommended Value | Description                                 |
-|-------------------------------------|-------------------|---------------------------------------------|
-| Use Windows Hello for Business      | ✅ Enabled        | Enables Hello sign-in on hybrid devices     |
-| Use biometrics                      | ✅ Enabled        | Allows face/fingerprint sign-in             |
-| Use PIN  minimum length 6           | ✅ Enabled        | PIN fallback when biometrics are unavailable|
-| Use a Hardware Security Device (TPM)| ✅ Enabled        | Credentials secured in hardware TPM         |
-
-![Hello-Config](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Hello-Config-Intune.png)
-
----
-
-
----
-
-### Step 4: Register Windows Hello for Business on Client
+### Step 3: Register Windows Hello for Business on Client
 
 Go to **Settings → Accounts → Sign-in options**
 
@@ -198,6 +168,11 @@ Go to **Settings → Accounts → Sign-in options**
 4. Ensure the device allows passwordless sign-in using Hello credentials.
 
 > Devices are hybrid Azure AD joined and authenticate without passwords, improving security and user experience.
+
+---
+
+> ⚠️ Note: For Hybrid Azure AD Join scenarios, Windows Hello for Business configuration should be done via Group Policy (GPO).  
+> The previous method using Intune’s "Identity Protection" profile is deprecated and no longer supported.
 
 ---
 
