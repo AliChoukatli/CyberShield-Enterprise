@@ -1,4 +1,4 @@
-#  Authentication Methods  & Compliance Policies
+#  Authentication Methods  & Compliance Policies (Hybrid Scenario)
 
 ### ⚠️ Important Deployment Note (Lab Limitations)
 
