@@ -158,6 +158,7 @@ gpupdate /force
 
 ---
 
+### Step 3 : Policy Configuration  
 - In **Microsoft Endpoint Manager**, navigate to:
  ```pgsql
 Devices > Windows > Configuration profiles > Create profile
