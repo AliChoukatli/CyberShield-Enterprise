@@ -226,7 +226,6 @@ Go to **Settings → Accounts → Sign-in options**
 | **Require Security Device (TPM)**                | ✅ Enabled                  
 | **Use Certificate For On-Prem Auth**             | ✅ Disabled or Not Configured     
 
-
 6. Click **Next**, assign to appropriate user or device groups.
 
 7. Complete and click **Create**.
