@@ -122,6 +122,8 @@ dsregcmd /status
   - AzureAdJoined or DomainJoined should be YES
 
   - Device State should indicate Hybrid Azure AD joined
+ 
+![dsregcmd_status](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/dsregcmd_status_emp01.png)
 
 - Also verify TPM status by running **tpm.msc**
 
