@@ -225,7 +225,7 @@ Go to **Settings → Accounts → Sign-in options**
 | **Maximum PIN Length**                           | ✅ 127                     
 | **Special Characters**                           | ✅ Required                          
 | **Require Security Device (TPM)**                | ✅ True                  
-| **Use Certificate For On-Prem Auth**             | ✅ Disabled    
+| **Use Certificate For On-Prem Auth**             | ✅ Enabled    
 
 ![Hello-Policy-Config](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Hello-Policy-Config.png)
 
