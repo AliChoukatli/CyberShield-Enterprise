@@ -243,10 +243,14 @@ Once the policy is applied, users will:
 
 1. Go to **Settings → Accounts → Sign-in options**
 2. Click **Set up** under **PIN (Windows Hello)**
-3. Optionally enable **Fingerprint** or **Face Recognition**, if available
+
+![Hello-Verif](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Hello-Verif.png)
+
+5. Optionally enable **Fingerprint** or **Face Recognition**, if available
 
 > ✅ The device is now fully cloud-joined and uses passwordless sign-in with TPM-backed credentials.
 
+![Hello-Set](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/hello-set.png)
 
 ---
 
