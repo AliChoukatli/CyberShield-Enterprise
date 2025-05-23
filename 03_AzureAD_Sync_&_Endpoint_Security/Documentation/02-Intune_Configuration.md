@@ -122,7 +122,7 @@ Simply follow the on-screen instructions and scan the provided QR code to comple
 
 ![Devices-List](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Devices-List.png)
   
-- On client devices, run:
+- On client devices, run and you will see the MDM URL
 
 ```powershell
 dsregcmd /status
