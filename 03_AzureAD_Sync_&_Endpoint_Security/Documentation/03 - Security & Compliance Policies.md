@@ -39,7 +39,7 @@ The project implements MFA using the following modern methods:
 ![TAP Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/TAP-Policy.png)
 
 
-## 👤 First-Time Authentication using TAP (Temporary Access Pass)
+## 👤  End-User MFA Experience (Temporary Access Pass Flow Sophia Martinez)
 
 This scenario demonstrates how a new employee, **Sophia Martinez**, securely registers her first authentication method using a **Temporary Access Pass (TAP)**.
 
