@@ -65,13 +65,13 @@ She clicks **Next**, and the system asks her to enter her **Microsoft password**
 
 ---
 
-### 🔹 Step 2: Number matching Verification  
+### 🔹 Step 2: Random Number displayed 
 After the password is verified, a **random number** is displayed on the screen:
 Sophia opens the **Microsoft Authenticator App** on her smartphone and selects her account.
 
 ---
 
-### 🔹 Step 3: Approval with biometrics  
+### 🔹 Step 3: Enter number + Approval with biometrics  
 In the Authenticator app, Sophia is prompted to enter the number shown on the login screen:
 
 ![MFA-Number-Matching](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/MFA-number-matching.png)
