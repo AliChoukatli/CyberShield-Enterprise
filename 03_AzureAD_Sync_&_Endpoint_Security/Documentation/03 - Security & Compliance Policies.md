@@ -59,7 +59,7 @@ After entering her email address, Sophia is prompted to set up the **Microsoft A
 
 > _“Start by getting the app.”_
 
-![Sophia MFA 1](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/sophia-MFA1.png)
+![Sophia MFA 1](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Sophia-Auth.png)
 
 She clicks **Next**, and the system asks her to enter her **Microsoft password** to proceed.
 
