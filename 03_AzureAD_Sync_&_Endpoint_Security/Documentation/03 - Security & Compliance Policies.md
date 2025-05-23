@@ -251,12 +251,10 @@ Once the policy is applied, users will:
 
 ![Hello-Set](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/hello-set.png)
 
----
 
 By enforcing granular Conditional Access rules, multi-factor authentication, and secure passwordless sign-in options like FIDO2 and Windows Hello for Business, this configuration strengthens both security posture and user experience—while aligning with industry best practices and compliance standards.
 
 ---
-
 
 ## 3. ✅  **Microsoft Authenticator App – Recommended Settings**
 
@@ -318,14 +316,7 @@ Upon successful verification, access is granted:
 - Number matching ensures the user is physically present at the time of sign-in.
 - Biometric or PIN-based confirmation ensures that only the legitimate user can approve the login.
 
---
-
---- 
-
-
-
 ---
-
 
 ## 4. ✅  **FIDO2 Security Key (Passkey) – Recommended Settings**
 
