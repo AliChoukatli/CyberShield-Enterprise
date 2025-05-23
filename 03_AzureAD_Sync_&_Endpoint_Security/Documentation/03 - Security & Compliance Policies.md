@@ -141,13 +141,19 @@ Configuration example:
 
 The temporary password will be shown on the screen : 
 
-![Temp-TAP](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Temp-TAP.png)
+![Temp-TAP-Details](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Temp-TAP.png)
 
 ---
 
 ### 🔹 Step 2: User signs in with TAP
 
 At her first login, Sophia selects **“Sign in using Temporary Access Pass”**, and enters the code provided by the admin.
+
+![Temp-TAP](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Temp-TAP.png)
+
+She is then prompted to set a new PIN
+
+[New-PIN](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/New-PIN.png)
 
 She is then prompted to configure her preferred authentication method — for example:
 
