@@ -50,17 +50,43 @@ The project implements MFA using the following modern methods:
 | **Authenticator on companion apps**                | ☁️ Microsoft-managed     | Controls use on devices like Apple Watch                                                    |
 
 
-![Authenticator-Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Authenticator-Policy.png)
+#### 👤 End-User Experience – Example: Sophia Martinez
 
-Next tiem a user connect, he will authenticate with Authenticator ( capture)
+When user **Sophia Martinez** signs in, she is prompted to verify her identity using the **Microsoft Authenticator App** as part of the enforced MFA policy.
 
-Example of the user Sophia Martinez
+##### 🔹 Step 1: App registration prompt  
+After entering her email address, Sophia is prompted to set up the **Microsoft Authenticator App**:
 
-![sophia-MFA](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/sophia-MFA1.png)
+> _“Start by getting the app.”_
 
-![sophia-MFA2](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/sophia-MFA2.png)
+![Sophia MFA 1](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/sophia-MFA1.png)
 
-![sophia-MFA-Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/sophia-MFA-success.png)
+She clicks **Next**, and the system asks her to enter her **Microsoft password** to proceed.
+
+---
+
+##### 🔹 Step 2: Number matching Verification  
+After the password is verified, a **random number** is displayed on the screen:
+Sophia opens the **Microsoft Authenticator App** on her smartphone and selects her account.
+
+---
+
+##### 🔹 Step 3: Approval with biometrics  
+In the Authenticator app, Sophia is prompted to enter the number shown on the login screen:
+
+![MFA-Number-Matching](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/MFA-number-matching.png)
+
+After entering the correct number, she confirms the request using her **fingerprint (biometric authentication) or her phone password**.
+
+---
+
+##### ✅ Step 4: Successful authentication  
+Upon verification, access is granted:
+
+![Sophia MFA Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Sophia-MFA-successful.png)
+
+> 🔒 This MFA flow protects against phishing, token theft, and MFA fatigue attacks by combining number matching and biometric confirmation.
+![Uploading image.png…]()
 
 ---
 
