@@ -54,6 +54,14 @@ The project implements MFA using the following modern methods:
 
 Next tiem a user connect, he will authenticate with Authenticator ( capture)
 
+Example of the user Sophia Martinez
+
+![sophia-MFA](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/sophia-MFA1.png)
+
+![sophia-MFA2](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/sophia-MFA2.png)
+
+![sophia-MFA-Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/sophia-MFA-success.png)
+
 ---
 
 2. ✅  **Temporary Access Pass (TAP) – Recommended Settings**
