@@ -350,7 +350,7 @@ After choosing USB, Sophia is asked to:
 
 ![PassKey-Saved](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Passkey-Saved.png)
 
-4. Once complete, she gives the key a **custom name** (e.g., "Sophia Work Key").
+4. Once complete, she gives the key a **custom name** (e.g., "Sophia Key").
 
 ![Sophia-Key](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Sofia-Key.png)
 
@@ -367,9 +367,10 @@ The next time Sophia signs in, she selects:
 
 1. Inserts her key
 2. Enters the key PIN
+   
 ![Sophia-KeyPIN](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Sophia-KeyPIN.png)
 
-4. Touches the key when prompted
+3. Touches the key when prompted
 
 ![Signin-Key](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Signin-key.png)
 
