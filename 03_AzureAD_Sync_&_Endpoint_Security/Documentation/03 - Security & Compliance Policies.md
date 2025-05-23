@@ -37,71 +37,7 @@ The project implements MFA using the following modern methods:
 ![Auth-Methods](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Auth-Methods.png)
 
 
-## 1. ✅  **Microsoft Authenticator App – Recommended Settings**
-
-| Setting                                            | Recommended Value       | Description                                                                                   |
-|----------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------------------|
-| **Enable and Target**                              | ✅ Enabled               | Method is enabled for users                                                                   |
-| **Target**                                         | 🎯 All users             | Include all users or a specific security group                                                |
-| **Allow use of Microsoft Authenticator OTP**       | ✅ Yes                  | Allows use of TOTP codes from the app in addition to push notifications                      |
-| **Require number matching for push notifications** | ✅ Enabled (mandatory)   | Prevents MFA fatigue attacks by requiring users to enter the number shown on the screen      |
-| **Show application name in notifications**         | ☁️ Microsoft-managed     | App name shown in push/passwordless notifications                                            |
-| **Show geographic location in notifications**      | ☁️ Microsoft-managed     | Location info shown to detect suspicious logins                                             |
-| **Authenticator on companion apps**                | ☁️ Microsoft-managed     | Controls use on devices like Apple Watch                                                    |
-
-
-## 👤 End-User MFA Experience: Microsoft Authenticator Flow (Sophia Martinez)
-
-This example demonstrates a typical end-user multi-factor authentication (MFA) flow in a Microsoft 365 cloud-only environment.  
-The scenario features **Sophia Martinez**, an employee at CyberShield, logging in securely using **Microsoft Authenticator** with number matching and biometric confirmation.
-
----
-
-### 🔹 Step 1: Microsoft Authenticator App Setup Prompt  
-After entering her corporate email address, Sophia is prompted to configure the **Microsoft Authenticator App** as part of her initial sign-in experience.
-
-> _“Start by getting the app.”_
-
-![Sophia MFA 1](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Sophia-Auth.png)
-
-She clicks **Next**, and is then asked to enter her **Microsoft account password** to continue.
-
----
-
-### 🔹 Step 2: Number Matching Prompt Displayed  
-Once the password is verified, a **number matching prompt** appears on the screen.  
-Sophia opens the **Microsoft Authenticator App** on her mobile device and selects her corporate account.
-
----
-
-### 🔹 Step 3: Number Matching and Biometric Verification  
-In the app, Sophia is prompted to enter the number shown on the login screen:
-
-![MFA-Number-Matching](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/MFA-number-matching.png)
-
-After entering the correct number, she approves the request using her **fingerprint** or **device passcode**.
-
----
-
-### 🔹 Step 4: Successful Authentication  
-Upon successful verification, access is granted:
-
-![Sophia MFA Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Sophia-MFA-successful.png)
-
-> 🔒 This MFA flow protects against phishing, token theft, and MFA fatigue attacks by combining number matching and biometric confirmation.
-
----
-
-### 🔑 Key Takeaways:
-- Microsoft Authenticator enforces a modern, phishing-resistant MFA experience.
-- Number matching ensures the user is physically present at the time of sign-in.
-- Biometric or PIN-based confirmation ensures that only the legitimate user can approve the login.
-
---
-
---- 
-
-## 2. ✅  **Temporary Access Pass (TAP) – Recommended Settings**
+## 1. ✅  **Temporary Access Pass (TAP) – Recommended Settings**
 
 | Setting                   | Recommended Value  | Description                                                                                   |
 |---------------------------|--------------------|-----------------------------------------------------------------------------------------------|
@@ -154,32 +90,6 @@ At her first login, Sophia selects **“Sign in using Temporary Access Pass”**
 She is then prompted to set a new PIN since we configured alreadywindows Hello for business
 
 ![New-PIN](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/New-PIN.png)
-
-
----
-
-
-## 3. ✅  **FIDO2 Security Key (Passkey) – Recommended Settings**
-
-| Setting                     | Recommended Value | Description                                                                 |
-|----------------------------|-------------------|-----------------------------------------------------------------------------|
-| Allow self-service set up  | ✅ Yes            | Users can register their own FIDO2 keys                                    |
-| Enforce attestation        | ❌ No             | Not required unless verified device metadata needed                         |
-| Enforce key restrictions   | ✅ Yes            | Prevent use of unapproved or unknown FIDO2 keys                            |
-| Restrict specific keys     | 🔒 Block          | Block specific keys by vendor AAGUID                                       |
-| Microsoft Authenticator    | ❌ No             | Separate method from FIDO2                                                 |
-
-![FIDO2 Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/FIDO2-Policy.png)
-
----
-
-### 🔐 Compliance Mapping
-
-| Security Standard         | Control ID / Section        | Implementation in this Project                           |
-|---------------------------|-----------------------------|----------------------------------------------------------|
-| ISO/IEC 27001             | A.9.4.2 – Secure log-on     | MFA via Conditional Access & Authenticator App           |
-| NIST SP 800-53 Rev. 5     | IA-2 – Identification & Auth| FIDO2 Keys, Temporary Access Pass, Number Matching MFA   |
-| CIS Critical Security Controls | Control 16 – Application Security | Device Compliance, Windows Hello for Business |
 
 ---
 
@@ -344,5 +254,101 @@ Once the policy is applied, users will:
 ---
 
 By enforcing granular Conditional Access rules, multi-factor authentication, and secure passwordless sign-in options like FIDO2 and Windows Hello for Business, this configuration strengthens both security posture and user experience—while aligning with industry best practices and compliance standards.
+
+---
+
+
+## 3. ✅  **Microsoft Authenticator App – Recommended Settings**
+
+| Setting                                            | Recommended Value       | Description                                                                                   |
+|----------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------------------|
+| **Enable and Target**                              | ✅ Enabled               | Method is enabled for users                                                                   |
+| **Target**                                         | 🎯 All users             | Include all users or a specific security group                                                |
+| **Allow use of Microsoft Authenticator OTP**       | ✅ Yes                  | Allows use of TOTP codes from the app in addition to push notifications                      |
+| **Require number matching for push notifications** | ✅ Enabled (mandatory)   | Prevents MFA fatigue attacks by requiring users to enter the number shown on the screen      |
+| **Show application name in notifications**         | ☁️ Microsoft-managed     | App name shown in push/passwordless notifications                                            |
+| **Show geographic location in notifications**      | ☁️ Microsoft-managed     | Location info shown to detect suspicious logins                                             |
+| **Authenticator on companion apps**                | ☁️ Microsoft-managed     | Controls use on devices like Apple Watch                                                    |
+
+
+## 👤 End-User MFA Experience: Microsoft Authenticator Flow (Sophia Martinez)
+
+This example demonstrates a typical end-user multi-factor authentication (MFA) flow in a Microsoft 365 cloud-only environment.  
+The scenario features **Sophia Martinez**, an employee at CyberShield, logging in securely using **Microsoft Authenticator** with number matching and biometric confirmation.
+
+---
+
+### 🔹 Step 1: Microsoft Authenticator App Setup Prompt  
+After entering her corporate email address, Sophia is prompted to configure the **Microsoft Authenticator App** as part of her initial sign-in experience.
+
+> _“Start by getting the app.”_
+
+![Sophia MFA 1](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Sophia-Auth.png)
+
+She clicks **Next**, and is then asked to enter her **Microsoft account password** to continue.
+
+---
+
+### 🔹 Step 2: Number Matching Prompt Displayed  
+Once the password is verified, a **number matching prompt** appears on the screen.  
+Sophia opens the **Microsoft Authenticator App** on her mobile device and selects her corporate account.
+
+---
+
+### 🔹 Step 3: Number Matching and Biometric Verification  
+In the app, Sophia is prompted to enter the number shown on the login screen:
+
+![MFA-Number-Matching](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/MFA-number-matching.png)
+
+After entering the correct number, she approves the request using her **fingerprint** or **device passcode**.
+
+---
+
+### 🔹 Step 4: Successful Authentication  
+Upon successful verification, access is granted:
+
+![Sophia MFA Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Sophia-MFA-successful.png)
+
+> 🔒 This MFA flow protects against phishing, token theft, and MFA fatigue attacks by combining number matching and biometric confirmation.
+
+---
+
+### 🔑 Key Takeaways:
+- Microsoft Authenticator enforces a modern, phishing-resistant MFA experience.
+- Number matching ensures the user is physically present at the time of sign-in.
+- Biometric or PIN-based confirmation ensures that only the legitimate user can approve the login.
+
+--
+
+--- 
+
+
+
+---
+
+
+## 4. ✅  **FIDO2 Security Key (Passkey) – Recommended Settings**
+
+| Setting                     | Recommended Value | Description                                                                 |
+|----------------------------|-------------------|-----------------------------------------------------------------------------|
+| Allow self-service set up  | ✅ Yes            | Users can register their own FIDO2 keys                                    |
+| Enforce attestation        | ❌ No             | Not required unless verified device metadata needed                         |
+| Enforce key restrictions   | ✅ Yes            | Prevent use of unapproved or unknown FIDO2 keys                            |
+| Restrict specific keys     | 🔒 Block          | Block specific keys by vendor AAGUID                                       |
+| Microsoft Authenticator    | ❌ No             | Separate method from FIDO2                                                 |
+
+![FIDO2 Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/FIDO2-Policy.png)
+
+---
+
+### 🔐 Compliance Mapping
+
+| Security Standard         | Control ID / Section        | Implementation in this Project                           |
+|---------------------------|-----------------------------|----------------------------------------------------------|
+| ISO/IEC 27001             | A.9.4.2 – Secure log-on     | MFA via Conditional Access & Authenticator App           |
+| NIST SP 800-53 Rev. 5     | IA-2 – Identification & Auth| FIDO2 Keys, Temporary Access Pass, Number Matching MFA   |
+| CIS Critical Security Controls | Control 16 – Application Security | Device Compliance, Windows Hello for Business |
+
+---
 
 
