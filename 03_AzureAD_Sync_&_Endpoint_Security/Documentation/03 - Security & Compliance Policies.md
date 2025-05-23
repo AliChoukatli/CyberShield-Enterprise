@@ -6,7 +6,7 @@ This section covers security compliance settings and policies essential to secur
 
 ---
 
-## 🔴 Security Policies Overview
+# 🔴 Security Policies Overview
 
 | Policy Area                 | Description                                                        |
 |----------------------------|--------------------------------------------------------------------|
@@ -19,7 +19,7 @@ This section covers security compliance settings and policies essential to secur
 ---
 
 
-## 🔴 **Conditional Access Policies - Recommended Settings**
+# 🔴 **Conditional Access Policies - Recommended Settings**
 
 | Policy Name                    | Purpose                                             | Key Settings                                                         |
 |-------------------------------|-----------------------------------------------------|----------------------------------------------------------------------|
@@ -30,14 +30,14 @@ This section covers security compliance settings and policies essential to secur
 
 ---
 
-## 🔴 Multi-Factor Authentication (MFA)
+# 🔴 Multi-Factor Authentication (MFA)
 
 The project implements MFA using the following modern methods:
 
 ![Auth-Methods](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Auth-Methods.png)
 
 
-1. ✅  **Microsoft Authenticator App – Recommended Settings**
+## 1. ✅  **Microsoft Authenticator App – Recommended Settings**
 
 | Setting                                            | Recommended Value       | Description                                                                                   |
 |----------------------------------------------------|--------------------------|-----------------------------------------------------------------------------------------------|
@@ -50,11 +50,11 @@ The project implements MFA using the following modern methods:
 | **Authenticator on companion apps**                | ☁️ Microsoft-managed     | Controls use on devices like Apple Watch                                                    |
 
 
-#### 👤 End-User Experience – Example: Sophia Martinez
+## 👤 End-User Experience – Example: Sophia Martinez
 
 When user **Sophia Martinez** signs in, she is prompted to verify her identity using the **Microsoft Authenticator App** as part of the enforced MFA policy.
 
-##### 🔹 Step 1: App registration prompt  
+### 🔹 Step 1: App registration prompt  
 After entering her email address, Sophia is prompted to set up the **Microsoft Authenticator App**:
 
 > _“Start by getting the app.”_
@@ -65,32 +65,32 @@ She clicks **Next**, and the system asks her to enter her **Microsoft password**
 
 ---
 
-##### 🔹 Step 2: Number matching Verification  
+### 🔹 Step 2: Number matching Verification  
 After the password is verified, a **random number** is displayed on the screen:
 Sophia opens the **Microsoft Authenticator App** on her smartphone and selects her account.
 
 ---
 
-##### 🔹 Step 3: Approval with biometrics  
+### 🔹 Step 3: Approval with biometrics  
 In the Authenticator app, Sophia is prompted to enter the number shown on the login screen:
 
 ![MFA-Number-Matching](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/MFA-number-matching.png)
 
-After entering the correct number, she confirms the request using her **fingerprint (biometric authentication) or her phone password**.
+After entering the correct number, she confirms the request using her **fingerprint (biometric authentication)** or her **phone password**.
 
 ---
 
-##### ✅ Step 4: Successful authentication  
+### 🔹 Step 4: Successful authentication  
 Upon verification, access is granted:
 
 ![Sophia MFA Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Sophia-MFA-successful.png)
 
 > 🔒 This MFA flow protects against phishing, token theft, and MFA fatigue attacks by combining number matching and biometric confirmation.
-![Uploading image.png…]()
+
 
 ---
 
-2. ✅  **Temporary Access Pass (TAP) – Recommended Settings**
+## 2. ✅  **Temporary Access Pass (TAP) – Recommended Settings**
 
 | Setting                   | Recommended Value  | Description                                                                                   |
 |---------------------------|--------------------|-----------------------------------------------------------------------------------------------|
@@ -108,7 +108,7 @@ Upon verification, access is granted:
 
 ---
 
-3. ✅  **FIDO2 Security Key (Passkey) – Recommended Settings**
+## 3. ✅  **FIDO2 Security Key (Passkey) – Recommended Settings**
 
 | Setting                     | Recommended Value | Description                                                                 |
 |----------------------------|-------------------|-----------------------------------------------------------------------------|
