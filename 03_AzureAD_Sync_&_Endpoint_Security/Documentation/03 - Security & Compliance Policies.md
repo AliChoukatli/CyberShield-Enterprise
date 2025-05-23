@@ -384,13 +384,6 @@ Access is granted using **strong phishing-resistant authentication**:
 
 ---
 
-### 🔍 Notes:
-
-- FIDO2 is compliant with **NIST SP 800-63B**, **NIST 800-53 IA-2**, and **ISO/IEC 27001 A.9.4.2**
-- Used for both **interactive sign-in** and **SSPR** (if enabled)
-
-
----
 
 ### ✅ Final State: Secure Authentication Profile  
 
