@@ -215,7 +215,7 @@ In the **Devices** list, the **Owner** field may display **None** for hybrid Azu
 2. Navigate to:  
 Identity → Devices → All devices
 3. Locate your devices and verify the following:
-- **Join Type**: `Entra Hybrid Joined`
+- **Join Type**: `Microsoft Entra Hybrid Joined`
 
 ![Entra Devices List](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Entra-Devices.png)
 
