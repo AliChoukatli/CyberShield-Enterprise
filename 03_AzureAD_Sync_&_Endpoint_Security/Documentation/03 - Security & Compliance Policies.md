@@ -50,43 +50,52 @@ The project implements MFA using the following modern methods:
 | **Authenticator on companion apps**                | ☁️ Microsoft-managed     | Controls use on devices like Apple Watch                                                    |
 
 
-## 👤 End-User Experience – Example: Sophia Martinez
+## 👤 End-User MFA Experience: Microsoft Authenticator Flow (Sophia Martinez)
 
-When user **Sophia Martinez** signs in, she is prompted to verify her identity using the **Microsoft Authenticator App** as part of the enforced MFA policy.
+This example demonstrates a typical end-user multi-factor authentication (MFA) flow in a Microsoft 365 cloud-only environment.  
+The scenario features **Sophia Martinez**, an employee at CyberShield, logging in securely using **Microsoft Authenticator** with number matching and biometric confirmation.
 
-### 🔹 Step 1: App registration prompt  
-After entering her email address, Sophia is prompted to set up the **Microsoft Authenticator App**:
+---
+
+### 🔹 Step 1: Microsoft Authenticator App Setup Prompt  
+After entering her corporate email address, Sophia is prompted to configure the **Microsoft Authenticator App** as part of her initial sign-in experience.
 
 > _“Start by getting the app.”_
 
 ![Sophia MFA 1](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Sophia-Auth.png)
 
-She clicks **Next**, and the system asks her to enter her **Microsoft password** to proceed.
+She clicks **Next**, and is then asked to enter her **Microsoft account password** to continue.
 
 ---
 
-### 🔹 Step 2: Random Number displayed 
-After the password is verified, a **random number** is displayed on the screen:
-Sophia opens the **Microsoft Authenticator App** on her smartphone and selects her account.
+### 🔹 Step 2: Number Matching Prompt Displayed  
+Once the password is verified, a **number matching prompt** appears on the screen.  
+Sophia opens the **Microsoft Authenticator App** on her mobile device and selects her corporate account.
 
 ---
 
-### 🔹 Step 3: Enter number + Approval with biometrics  
-In the Authenticator app, Sophia is prompted to enter the number shown on the login screen:
+### 🔹 Step 3: Number Matching and Biometric Verification  
+In the app, Sophia is prompted to enter the number shown on the login screen:
 
 ![MFA-Number-Matching](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/MFA-number-matching.png)
 
-After entering the correct number, she confirms the request using her **fingerprint (biometric authentication)** or her **phone password**.
+After entering the correct number, she approves the request using her **fingerprint** or **device passcode**.
 
 ---
 
-### 🔹 Step 4: Successful authentication  
-Upon verification, access is granted:
+### 🔹 Step 4: Successful Authentication  
+Upon successful verification, access is granted:
 
 ![Sophia MFA Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Sophia-MFA-successful.png)
 
 > 🔒 This MFA flow protects against phishing, token theft, and MFA fatigue attacks by combining number matching and biometric confirmation.
 
+---
+
+### 🔑 Key Takeaways:
+- Microsoft Authenticator enforces a modern, phishing-resistant MFA experience.
+- Number matching ensures the user is physically present at the time of sign-in.
+- Biometric or PIN-based confirmation ensures that only the legitimate user can approve the login.
 
 ---
 
