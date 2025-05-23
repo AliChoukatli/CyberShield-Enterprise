@@ -220,7 +220,7 @@ Go to **Settings → Accounts → Sign-in options**
 
 ---
 
-### 👤 End-User MFA Experience: Windows Hello for Business (Sophia Martinez)
+## 👤 End-User MFA Experience: Windows Hello for Business (Sophia Martinez)
 
 Once the policy is applied, users will:
 
@@ -316,11 +316,9 @@ Upon successful verification, access is granted:
 
 ---
 
-## 👤 End-User Experience – Example: Sophia Martinez (FIDO2 Security Key)
+## 👤 End-User Experience: FIDO2 Security Key (Sophia Martinez)
 
 Sophia is required to register and use a **FIDO2 security key** as part of her passwordless authentication methods. This key allows strong, phishing-resistant authentication.
-
----
 
 ### 🔹 Step 1: Add FIDO2 Security Key via Security Info Portal
 
