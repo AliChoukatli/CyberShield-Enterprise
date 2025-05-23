@@ -127,7 +127,7 @@ This scenario demonstrates how a new employee, **Sophia Martinez**, securely reg
 
 In Microsoft Entra ID (Azure AD), the admin navigates to:
 
-**Users > Sophia Martinez > Authentication Methods > Add Temporary Access Pass**
+**Users > Sophia Martinez > Authentication Methods > Add Auth Method > Temporary Access Pass**
 
 Configuration example:
 
@@ -137,7 +137,11 @@ Configuration example:
 | One-time use   | Yes           |
 | Length         | 8 characters  |
 
-![TAP Admin Setup](./Screenshots/TAP-Admin-Create.png)
+![TAP-SOphia-Steps](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/TAP-Sophia-Steps.png)
+
+The temporary password will be shown on the screen : 
+
+![Temp-TAP](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Temp-TAP.png)
 
 ---
 
@@ -150,7 +154,7 @@ She is then prompted to configure her preferred authentication method — for ex
 - Microsoft Authenticator
 - FIDO2 Security Key
 
-![TAP Sign-In Flow](./Screenshots/TAP-SignIn.png)
+![TAP Sign-In Flow]()
 
 ---
 
