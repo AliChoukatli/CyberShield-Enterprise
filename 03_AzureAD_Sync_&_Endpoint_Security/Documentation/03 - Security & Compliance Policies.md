@@ -346,11 +346,13 @@ After choosing USB, Sophia is asked to:
 1. Insert the key into a USB port.
 
 ![Connecting-DeviceKey](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Connecting-DeviceKey.png)
-3. Create or enter the PIN for the key.
-4. Touch the key sensor to confirm.
+
+2. Create or enter the PIN for the key.
+3. Touch the key sensor to confirm.
+
 ![PassKey-Saved](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Passkey-Saved.png)
 
-Once complete, she gives the key a **custom name** (e.g., "Sophia Work Key").
+4. Once complete, she gives the key a **custom name** (e.g., "Sophia Work Key").
 
 ![Sophia-Key](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Sofia-Key.png)
 
