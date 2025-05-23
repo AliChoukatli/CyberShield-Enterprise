@@ -333,8 +333,6 @@ She is prompted to choose the type of key:
 - USB Key (e.g., YubiKey)
 - NFC Key
 
-![FIDO2-Add-Method](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/FIDO2-add-method.png)
-
 ---
 
 ### 🔹 Step 2: Register the Key
