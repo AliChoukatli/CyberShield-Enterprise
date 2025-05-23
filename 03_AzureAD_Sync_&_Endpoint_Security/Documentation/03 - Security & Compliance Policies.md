@@ -220,7 +220,7 @@ Go to **Settings → Accounts → Sign-in options**
 
 ---
 
-### 🔐 User Setup
+###👤 End-User MFA Experience: Windows Hello for Business (Sophia Martinez)
 
 Once the policy is applied, users will:
 
