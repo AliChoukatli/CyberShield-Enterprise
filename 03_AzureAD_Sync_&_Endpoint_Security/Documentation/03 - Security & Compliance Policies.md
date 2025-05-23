@@ -365,11 +365,15 @@ The next time Sophia signs in, she selects:
 
 > **"Sign-in options"** → **Use security key**
 
+![Signin-Options](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Signin-Options.png)
+
 1. Inserts her key
 2. Enters the key PIN
-3. Touches the key when prompted
+![Sophia-KeyPIN](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Sophia-KeyPIN.png)
 
-![FIDO2-Signin](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/FIDO2-signin.png)
+4. Touches the key when prompted
+
+![Signin-Key](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Signin-key.png)
 
 ---
 
