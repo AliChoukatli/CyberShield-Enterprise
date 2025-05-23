@@ -151,21 +151,9 @@ At her first login, Sophia selects **“Sign in using Temporary Access Pass”**
 
 ![Temp-TAP](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Temp-TAP.png)
 
-She is then prompted to set a new PIN
+She is then prompted to set a new PIN since we configured alreadywindows Hello for business
 
 ![New-PIN](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/New-PIN.png)
-
-She is then prompted to configure her preferred authentication method — for example:
-
-- Microsoft Authenticator
-- FIDO2 Security Key
-
-![TAP Sign-In Flow]()
-
----
-
-> 🔐 **Security Note:** TAP allows secure registration of passwordless or MFA methods without requiring an initial password, and is single-use by design.
-
 
 
 ---
