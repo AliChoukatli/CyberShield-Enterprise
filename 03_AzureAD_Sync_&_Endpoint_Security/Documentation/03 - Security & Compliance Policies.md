@@ -177,7 +177,7 @@ Go to **Settings → Accounts → Sign-in options**
 
 ---
 
-## 🔧 Configure Windows Hello for Business via Intune (Modern Method)
+## 🔧 Configure Windows Hello for Business via Intune
 
 1. Go to **Microsoft Intune Admin Center**:  
    `https://intune.microsoft.com`
