@@ -15,7 +15,6 @@ This section covers security compliance settings and policies essential to secur
 | **Device Compliance**       | Ensures devices meet security baselines (patching, encryption, antivirus). |
 | **Identity Protection**     | Uses risk detection and mitigation to prevent compromised accounts. |
 
-![Auth-Methods](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Auth-Methods.png)
 
 ---
 
@@ -34,6 +33,9 @@ This section covers security compliance settings and policies essential to secur
 ## 🔴 Multi-Factor Authentication (MFA)
 
 The project implements MFA using the following modern methods:
+
+![Auth-Methods](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Auth-Methods.png)
+
 
 1. ✅  **Microsoft Authenticator App – Recommended Settings**
 
