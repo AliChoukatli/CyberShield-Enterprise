@@ -97,7 +97,24 @@ Upon successful verification, access is granted:
 - Number matching ensures the user is physically present at the time of sign-in.
 - Biometric or PIN-based confirmation ensures that only the legitimate user can approve the login.
 
----
+--
+
+--- 
+
+## 2. ✅  **Temporary Access Pass (TAP) – Recommended Settings**
+
+| Setting                   | Recommended Value  | Description                                                                                   |
+|---------------------------|--------------------|-----------------------------------------------------------------------------------------------|
+| **Enable and Target**     | ✅ Enabled         | TAP enabled for targeted users or groups                                                     |
+| **Minimum lifetime**      | 1 hour             | Minimum validity period                                                                      |
+| **Maximum lifetime**      | 8 hours            | Maximum validity                                                                            |
+| **Default lifetime**      | 1 hour             | Default value assigned on generation                                                        |
+| **One-time use**          | ✅ Yes             | Pass valid for only one sign-in (recommended for security)                                   |
+| **Length**                | 8 characters       | Length of the TAP code                                                                       |
+
+> **Note:** TAP is used mainly by admins during MFA registration bootstrap or recovery; not for SSPR.
+
+![TAP Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/TAP-Policy.png)
 
 
 ## 👤 First-Time Authentication using TAP (Temporary Access Pass)
@@ -139,25 +156,10 @@ She is then prompted to configure her preferred authentication method — for ex
 
 > 🔐 **Security Note:** TAP allows secure registration of passwordless or MFA methods without requiring an initial password, and is single-use by design.
 
---- 
-
-## 2. ✅  **Temporary Access Pass (TAP) – Recommended Settings**
-
-| Setting                   | Recommended Value  | Description                                                                                   |
-|---------------------------|--------------------|-----------------------------------------------------------------------------------------------|
-| **Enable and Target**     | ✅ Enabled         | TAP enabled for targeted users or groups                                                     |
-| **Minimum lifetime**      | 1 hour             | Minimum validity period                                                                      |
-| **Maximum lifetime**      | 8 hours            | Maximum validity                                                                            |
-| **Default lifetime**      | 1 hour             | Default value assigned on generation                                                        |
-| **One-time use**          | ✅ Yes             | Pass valid for only one sign-in (recommended for security)                                   |
-| **Length**                | 8 characters       | Length of the TAP code                                                                       |
-
-> **Note:** TAP is used mainly by admins during MFA registration bootstrap or recovery; not for SSPR.
-
-![TAP Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/TAP-Policy.png)
 
 
 ---
+
 
 ## 3. ✅  **FIDO2 Security Key (Passkey) – Recommended Settings**
 
