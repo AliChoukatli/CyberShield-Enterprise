@@ -16,20 +16,6 @@ This section covers security compliance settings and policies essential to secur
 | **Identity Protection**     | Uses risk detection and mitigation to prevent compromised accounts. |
 
 
----
-
-
-# 🔴 **Conditional Access Policies - Recommended Settings**
-
-| Policy Name                    | Purpose                                             | Key Settings                                                         |
-|-------------------------------|-----------------------------------------------------|----------------------------------------------------------------------|
-| Block Legacy Authentication    | Block insecure protocols like IMAP, POP, SMTP      | Target: All users<br>Client apps: Legacy auth<br>Access: Block      |
-| Require MFA for All Users      | Enforce MFA for all sign-ins                        | Target: All users<br>Access: Require MFA                            |
-| Require Compliant Devices      | Allow access only from compliant or Azure AD joined devices | Target: All users<br>Device state: Require compliant or Azure AD joined<br>Access: Grant if compliant |
-| Block Risky Sign-ins           | Block sign-ins flagged as risky                      | Target: All users<br>Sign-in risk: Medium or higher<br>Access: Block|
-
----
-
 # 🔴 Multi-Factor Authentication (MFA)
 
 The project implements MFA using the following modern methods:
@@ -93,9 +79,7 @@ She is then prompted to set a new PIN since we configured alreadywindows Hello f
 
 ---
 
-## 🔴 Windows Hello for Business
-
----
+##  Windows Hello for Business
 
 ### ✅ Hybrid Deployment (Azure AD + On-premises Active Directory)
 
@@ -342,4 +326,12 @@ Upon successful verification, access is granted:
 
 ---
 
+# 🔴 **Conditional Access Policies - Recommended Settings**
+
+| Policy Name                    | Purpose                                             | Key Settings                                                         |
+|-------------------------------|-----------------------------------------------------|----------------------------------------------------------------------|
+| Block Legacy Authentication    | Block insecure protocols like IMAP, POP, SMTP      | Target: All users<br>Client apps: Legacy auth<br>Access: Block      |
+| Require MFA for All Users      | Enforce MFA for all sign-ins                        | Target: All users<br>Access: Require MFA                            |
+| Require Compliant Devices      | Allow access only from compliant or Azure AD joined devices | Target: All users<br>Device state: Require compliant or Azure AD joined<br>Access: Grant if compliant |
+| Block Risky Sign-ins           | Block sign-ins flagged as risky                      | Target: All users<br>Sign-in risk: Medium or higher<br>Access: Block|
 
