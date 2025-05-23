@@ -127,5 +127,6 @@ Simply follow the on-screen instructions and scan the provided QR code to comple
 ```powershell
 dsregcmd /status
 ```
+![dsregcmd-MDM](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/dsregcmd_mdm.png)
 
 --- 
