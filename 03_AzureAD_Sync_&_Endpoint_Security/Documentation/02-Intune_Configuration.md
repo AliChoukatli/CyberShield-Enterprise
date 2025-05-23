@@ -115,6 +115,9 @@ Simply follow the on-screen instructions and scan the provided QR code to comple
 
 ---
 
+In full cloud mode the enrollemenet will be at the installaltion Out of the box
+
+---
 
 ### 🔹 Part 6 – Verify Enrollment Status
 - In the Endpoint Manager portal, go to **Devices > All devices**  
