@@ -316,6 +316,71 @@ Upon successful verification, access is granted:
 
 ---
 
+## 👤 End-User Experience – Example: Sophia Martinez (FIDO2 Security Key)
+
+Sophia is required to register and use a **FIDO2 security key** as part of her passwordless authentication methods. This key allows strong, phishing-resistant authentication.
+
+---
+
+### 🔹 Step 1: Add FIDO2 Security Key via Security Info Portal
+
+Sophia visits [https://myprofile.microsoft.com](https://myprofile.microsoft.com) and navigates to:
+
+> **Security Info** → **Add sign-in method** → Selects `Security Key`
+
+She is prompted to choose the type of key:
+
+- USB Key (e.g., YubiKey)
+- NFC Key
+
+![FIDO2-Add-Method](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/FIDO2-add-method.png)
+
+---
+
+### 🔹 Step 2: Register the Key
+
+After choosing USB, Sophia is asked to:
+
+1. Insert the key into a USB port.
+2. Create or enter the PIN for the key.
+3. Touch the key sensor to confirm.
+
+Once complete, she gives the key a **custom name** (e.g., "Sophia Work Key").
+
+![FIDO2-Register](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/FIDO2-register.png)
+
+---
+
+### 🔹 Step 3: Sign-in using Security Key
+
+The next time Sophia signs in, she selects:
+
+> **"Sign-in options"** → **Use security key**
+
+1. Inserts her key
+2. Enters the key PIN
+3. Touches the key when prompted
+
+![FIDO2-Signin](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/FIDO2-signin.png)
+
+---
+
+### ✅ Result: Secure Passwordless Login
+
+Access is granted using **strong phishing-resistant authentication**:
+
+> 🔐 FIDO2 offers hardware-backed protection against password theft, phishing, and MFA fatigue.
+
+---
+
+### 🔍 Notes:
+
+- FIDO2 is compliant with **NIST SP 800-63B**, **NIST 800-53 IA-2**, and **ISO/IEC 27001 A.9.4.2**
+- Used for both **interactive sign-in** and **SSPR** (if enabled)
+
+
+---
+
 ### ✅ Final State: Secure Authentication Profile  
 
 | Authentication Method        | Status         | Purpose                         |
