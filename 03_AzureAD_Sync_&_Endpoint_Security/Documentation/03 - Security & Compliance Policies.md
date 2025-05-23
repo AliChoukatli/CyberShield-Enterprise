@@ -99,6 +99,48 @@ Upon successful verification, access is granted:
 
 ---
 
+
+## 👤 First-Time Authentication using TAP (Temporary Access Pass)
+
+This scenario demonstrates how a new employee, **Sophia Martinez**, securely registers her first authentication method using a **Temporary Access Pass (TAP)**.
+
+---
+
+### 🔹 Step 1: Admin generates TAP for new user
+
+In Microsoft Entra ID (Azure AD), the admin navigates to:
+
+**Users > Sophia Martinez > Authentication Methods > Add Temporary Access Pass**
+
+Configuration example:
+
+| Setting        | Value         |
+|----------------|---------------|
+| Lifetime       | 1 hour        |
+| One-time use   | Yes           |
+| Length         | 8 characters  |
+
+![TAP Admin Setup](./Screenshots/TAP-Admin-Create.png)
+
+---
+
+### 🔹 Step 2: User signs in with TAP
+
+At her first login, Sophia selects **“Sign in using Temporary Access Pass”**, and enters the code provided by the admin.
+
+She is then prompted to configure her preferred authentication method — for example:
+
+- Microsoft Authenticator
+- FIDO2 Security Key
+
+![TAP Sign-In Flow](./Screenshots/TAP-SignIn.png)
+
+---
+
+> 🔐 **Security Note:** TAP allows secure registration of passwordless or MFA methods without requiring an initial password, and is single-use by design.
+
+--- 
+
 ## 2. ✅  **Temporary Access Pass (TAP) – Recommended Settings**
 
 | Setting                   | Recommended Value  | Description                                                                                   |
