@@ -1,4 +1,4 @@
-# 03 - Security Compliance & Policies
+![image](https://github.com/user-attachments/assets/d4ff6462-6e8e-4c3a-a7ca-2e9f05096756)# 03 - Security Compliance & Policies
 
 Modern enterprise environments face constant threats targeting user identities, devices, and cloud resources. Implementing robust security policies—such as Conditional Access, Multi-Factor Authentication, and compliance enforcement—is critical to support Zero Trust principles and meet compliance requirements.
 
@@ -326,6 +326,8 @@ Sophia visits [https://myprofile.microsoft.com](https://myprofile.microsoft.com)
 
 > **Security Info** → **Add sign-in method** → Selects `Security Key`
 
+![Security-Key](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Security-Key.png)
+
 She is prompted to choose the type of key:
 
 - USB Key (e.g., YubiKey)
@@ -337,15 +339,21 @@ She is prompted to choose the type of key:
 
 ### 🔹 Step 2: Register the Key
 
-After choosing USB, Sophia is asked to:
+After choosing USB, Sophia is asked to: 
+
+![Insert-Key](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Insert-Key.png)
 
 1. Insert the key into a USB port.
-2. Create or enter the PIN for the key.
-3. Touch the key sensor to confirm.
+
+![Connecting-DeviceKey](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Connecting-DeviceKey.png)
+3. Create or enter the PIN for the key.
+4. Touch the key sensor to confirm.
+![PassKey-Saved](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Passkey-Saved.png)
 
 Once complete, she gives the key a **custom name** (e.g., "Sophia Work Key").
 
-![FIDO2-Register](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/FIDO2-register.png)
+![Sophia-Key](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Sofia-Key.png)
+
 
 ---
 
