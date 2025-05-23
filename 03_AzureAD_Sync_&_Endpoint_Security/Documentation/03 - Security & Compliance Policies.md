@@ -52,6 +52,8 @@ The project implements MFA using the following modern methods:
 
 ![Authenticator-Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Authenticator-Policy.png)
 
+Next tiem a user connect, he will authenticate with Authenticator ( capture)
+
 ---
 
 2. ✅  **Temporary Access Pass (TAP) – Recommended Settings**
