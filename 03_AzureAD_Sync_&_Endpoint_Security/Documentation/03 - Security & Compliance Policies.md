@@ -316,6 +316,17 @@ Upon successful verification, access is granted:
 
 ---
 
+### ✅ Final State: Secure Authentication Profile  
+
+| Authentication Method        | Status         | Purpose                         |
+|-----------------------------|----------------|---------------------------------|
+| Temporary Access Pass (TAP) | ✔️ Completed   | Initial sign-in                 |
+| WHfB PIN (TPM-backed)       | ✔️ Enrolled    | Passwordless sign-in on device |
+| Microsoft Authenticator MFA | ✔️ Enrolled    | Second factor                   |
+| FIDO2 Security Key          | ⬜️ Optional    | Hardware passwordless option    |
+
+---
+
 ### 🔐 Compliance Mapping
 
 | Security Standard         | Control ID / Section        | Implementation in this Project                           |
@@ -323,6 +334,8 @@ Upon successful verification, access is granted:
 | ISO/IEC 27001             | A.9.4.2 – Secure log-on     | MFA via Conditional Access & Authenticator App           |
 | NIST SP 800-53 Rev. 5     | IA-2 – Identification & Auth| FIDO2 Keys, Temporary Access Pass, Number Matching MFA   |
 | CIS Critical Security Controls | Control 16 – Application Security | Device Compliance, Windows Hello for Business |
+
+Sophia now has a secure, modern identity that supports **Zero Trust principles**, including **phishing resistance**, **passwordless access**, and **strong user verification**.
 
 ---
 
