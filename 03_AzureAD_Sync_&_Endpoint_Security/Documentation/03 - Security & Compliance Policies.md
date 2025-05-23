@@ -339,9 +339,9 @@ She is prompted to choose the type of key:
 
 After choosing USB, Sophia is asked to: 
 
-![Insert-Key](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Insert-Key.png)
-
 1. Insert the key into a USB port.
+
+![Insert-Key](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Insert-Key.png)
 
 ![Connecting-DeviceKey](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Connecting-DeviceKey.png)
 
