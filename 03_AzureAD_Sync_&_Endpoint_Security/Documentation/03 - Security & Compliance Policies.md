@@ -391,10 +391,6 @@ Access is granted using **strong phishing-resistant authentication**
 
 ---
 
-### 📚 Reference
-
-- [Microsoft Docs – Enable passwordless security key sign-in](https://learn.microsoft.com/en-us/azure/active-directory/authentication/howto-authentication-passwordless-security-key)
-
 
 ### ✅ Final State: Secure Authentication Profile  
 
