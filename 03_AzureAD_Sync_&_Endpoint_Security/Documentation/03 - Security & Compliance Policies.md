@@ -296,6 +296,8 @@ Upon successful verification, access is granted:
 
 > 🔒 This MFA flow protects against phishing, token theft, and MFA fatigue attacks by combining number matching and biometric confirmation.
 
+![Sophia-Auth_Methods](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Sophia-Auth_Methods.png)
+
 ---
 
 ### 🔑 Key Takeaways:
