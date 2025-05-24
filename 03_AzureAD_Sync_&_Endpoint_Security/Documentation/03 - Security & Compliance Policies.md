@@ -374,7 +374,6 @@ The next time Sophia signs in, she selects:
 
 ![Signin-Key](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Signin-key.png)
 
----
 
 ### ✅ Result: Secure Passwordless Login
 
