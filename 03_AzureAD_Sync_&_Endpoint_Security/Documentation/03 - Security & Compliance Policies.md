@@ -379,9 +379,8 @@ The next time Sophia signs in, she selects:
 
 ![Signin-Key](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Signin-key.png)
 
----
 
-### ✅ Result: Secure Passwordless Login
+> ✅ Result: Secure Passwordless Login
 
 Access is granted using **strong phishing-resistant authentication**
 
@@ -389,7 +388,6 @@ Access is granted using **strong phishing-resistant authentication**
 
 > 🔐 FIDO2 offers hardware-backed protection against password theft, phishing, and MFA fatigue.
 
----
 🔗 For official guidance on FIDO2 setup and supported authentication methods, refer to the Microsoft documentation:
 > [FIDO2 registration steps – Microsoft Learn](https://learn.microsoft.com/en-us/entra/identity/authentication/how-to-enable-passkey-fido2)
 
