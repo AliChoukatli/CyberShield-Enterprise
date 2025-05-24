@@ -321,10 +321,6 @@ Upon successful verification, access is granted:
 
 ---
 
-
-
----
-
 ## 👤 End-User Experience: FIDO2 Security Key (Sophia Martinez)
 
 Sophia is required to register and use a **FIDO2 security key** as part of her passwordless authentication methods. This key allows strong, phishing-resistant authentication.
@@ -419,10 +415,6 @@ Access is granted using **strong phishing-resistant authentication**
 | CIS Critical Security Controls | Control 16 – Application Security | Device Compliance, Windows Hello for Business |
 
 Sophia now has a secure, modern identity that supports **Zero Trust principles**, including **phishing resistance**, **passwordless access**, and **strong user verification**.
-
----
-
-
 
 ---
 
