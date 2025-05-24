@@ -353,7 +353,7 @@ After choosing USB, Sophia is asked to:
 3. Create or enter the PIN for the key
 4. Touch the key sensor to confirm
 
-> 🧪 *This step requires physical interaction with the key (touching the sensor). Since no physical key was used, this demonstration reflects the expected process as documented by Microsoft.*
+> 🧪 *This step requires physical interaction with the key (touching the sensor). Since no physical key was used, this demonstration reflects the expected process.*
 
 ![PassKey-Saved](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Passkey-Saved.png)
 
