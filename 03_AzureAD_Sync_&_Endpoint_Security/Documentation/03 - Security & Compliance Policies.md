@@ -304,112 +304,6 @@ Upon successful verification, access is granted:
 - Biometric or PIN-based confirmation ensures that only the legitimate user can approve the login.
 
 ---
-
-## 4. ✅  **FIDO2 Security Key (Passkey) – Recommended Settings**
-
-| Setting                     | Recommended Value | Description                                                                 |
-|----------------------------|-------------------|-----------------------------------------------------------------------------|
-| Allow self-service set up  | ✅ Yes            | Users can register their own FIDO2 keys                                    |
-| Enforce attestation        | ❌ No             | Not required unless verified device metadata needed                         |
-| Enforce key restrictions   | ✅ Yes            | Prevent use of unapproved or unknown FIDO2 keys                            |
-| Restrict specific keys     | 🔒 Block          | Block specific keys by vendor AAGUID                                       |
-| Microsoft Authenticator    | ❌ No             | Separate method from FIDO2                                                 |
-
-![FIDO2 Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/FIDO2-Policy.png)
-
----
-
-## 👤 End-User Experience: FIDO2 Security Key (Sophia Martinez)
-
-Sophia is required to register and use a **FIDO2 security key** as part of her passwordless authentication methods. This key allows strong, phishing-resistant authentication.
-
-### 🔹 Step 1: Add FIDO2 Security Key via Security Info Portal
-
-Sophia visits [https://myprofile.microsoft.com](https://myprofile.microsoft.com) and navigates to:
-
-> **Security Info** → **Add sign-in method** → Selects `Security Key`
-
-![Security-Key](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Security-Key.png)
-
-She is prompted to choose the type of key:
-
-- USB Key (e.g., YubiKey)
-- NFC Key
-
----
-
-### 🔹 Step 2: Register the Key
-
-After choosing USB, Sophia is asked to: 
-
-1. Insert the key into a USB port.
-
-![Insert-Key](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Insert-Key.png)
-
-2. Windows will check the device
-3. Create or enter the PIN for the key.
-3. Touch the key sensor to confirm.
-
-![PassKey-Saved](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Passkey-Saved.png)
-
-4. Once complete, she gives the key a **custom name** (e.g., "Sophia Key").
-
-![Sophia-Key](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Sofia-Key.png)
-
-
----
-
-### 🔹 Step 3: Sign-in using Security Key
-
-The next time Sophia signs in, she selects:
-
-> **"Sign-in options"** → **Use security key**
-
-![Signin-Options](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Signin-Options.png)
-
-1. Inserts her key
-2. Enters the key PIN
-   
-![Sophia-KeyPIN](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Sophia-KeyPIN.png)
-
-3. Touches the key when prompted
-
-![Signin-Key](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Signin-key.png)
-
-
-### ✅ Result: Secure Passwordless Login
-
-Access is granted using **strong phishing-resistant authentication**:
-
-> 🔐 FIDO2 offers hardware-backed protection against password theft, phishing, and MFA fatigue.
-
----
-
-
-### ✅ Final State: Secure Authentication Profile  
-
-| Authentication Method        | Status         | Purpose                         |
-|-----------------------------|----------------|---------------------------------|
-| Temporary Access Pass (TAP) | ✔️ Completed   | Initial sign-in                 |
-| WHfB PIN (TPM-backed)       | ✔️ Enrolled    | Passwordless sign-in on device |
-| Microsoft Authenticator MFA | ✔️ Enrolled    | Second factor                   |
-| FIDO2 Security Key          | ⬜️ Optional    | Hardware passwordless option    |
-
----
-
-### 🔐 Compliance Mapping
-
-| Security Standard         | Control ID / Section        | Implementation in this Project                           |
-|---------------------------|-----------------------------|----------------------------------------------------------|
-| ISO/IEC 27001             | A.9.4.2 – Secure log-on     | MFA via Conditional Access & Authenticator App           |
-| NIST SP 800-53 Rev. 5     | IA-2 – Identification & Auth| FIDO2 Keys, Temporary Access Pass, Number Matching MFA   |
-| CIS Critical Security Controls | Control 16 – Application Security | Device Compliance, Windows Hello for Business |
-
-Sophia now has a secure, modern identity that supports **Zero Trust principles**, including **phishing resistance**, **passwordless access**, and **strong user verification**.
-
----
-
-
 ## 4. ✅  **FIDO2 Security Key (Passkey) – Recommended Settings**
 
 | Setting                     | Recommended Value | Description                                                                 |
@@ -500,6 +394,35 @@ Access is granted using **strong phishing-resistant authentication**:
 
 - [Microsoft Docs – Enable passwordless security key sign-in](https://learn.microsoft.com/en-us/azure/active-directory/authentication/howto-authentication-passwordless-security-key)
 - [YouTube: Microsoft FIDO2 Sign-in Demo](https://www.youtube.com/watch?v=A5iUO0nUhJU)
+
+
+---
+
+
+### ✅ Final State: Secure Authentication Profile  
+
+| Authentication Method        | Status         | Purpose                         |
+|-----------------------------|----------------|---------------------------------|
+| Temporary Access Pass (TAP) | ✔️ Completed   | Initial sign-in                 |
+| WHfB PIN (TPM-backed)       | ✔️ Enrolled    | Passwordless sign-in on device |
+| Microsoft Authenticator MFA | ✔️ Enrolled    | Second factor                   |
+| FIDO2 Security Key          | ⬜️ Optional    | Hardware passwordless option    |
+
+---
+
+### 🔐 Compliance Mapping
+
+| Security Standard         | Control ID / Section        | Implementation in this Project                           |
+|---------------------------|-----------------------------|----------------------------------------------------------|
+| ISO/IEC 27001             | A.9.4.2 – Secure log-on     | MFA via Conditional Access & Authenticator App           |
+| NIST SP 800-53 Rev. 5     | IA-2 – Identification & Auth| FIDO2 Keys, Temporary Access Pass, Number Matching MFA   |
+| CIS Critical Security Controls | Control 16 – Application Security | Device Compliance, Windows Hello for Business |
+
+Sophia now has a secure, modern identity that supports **Zero Trust principles**, including **phishing resistance**, **passwordless access**, and **strong user verification**.
+
+---
+
+
 
 ---
 
