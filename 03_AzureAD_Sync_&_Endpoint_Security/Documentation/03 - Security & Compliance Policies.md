@@ -273,6 +273,9 @@ She clicks **Next**, and is then asked to enter her **Microsoft account password
 
 ### 🔹 Step 2: Number Matching Prompt Displayed  
 Once the password is verified, a **number matching prompt** appears on the screen.  
+
+![MFA-Number-Matching](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/MFA-number-matching.png)
+
 Sophia opens the **Microsoft Authenticator App** on her mobile device and selects her corporate account.
 
 ---
@@ -280,7 +283,9 @@ Sophia opens the **Microsoft Authenticator App** on her mobile device and select
 ### 🔹 Step 3: Number Matching and Biometric Verification  
 In the app, Sophia is prompted to enter the number shown on the login screen:
 
-![MFA-Number-Matching](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/MFA-number-matching.png)
+![Phone-Number-Matching](
+
+
 
 After entering the correct number, she approves the request using her **fingerprint** or **device passcode**.
 
@@ -343,9 +348,8 @@ After choosing USB, Sophia is asked to:
 
 ![Insert-Key](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Insert-Key.png)
 
-![Connecting-DeviceKey](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Connecting-DeviceKey.png)
-
-2. Create or enter the PIN for the key.
+2. Windows will check the device
+3. Create or enter the PIN for the key.
 3. Touch the key sensor to confirm.
 
 ![PassKey-Saved](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Passkey-Saved.png)
