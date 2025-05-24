@@ -317,7 +317,7 @@ Upon successful verification, access is granted:
 
 ---
 
-> ⚠️ **Disclaimer**: The following FIDO2 setup and demonstration are based on Microsoft's official documentation and simulated screenshots. A physical FIDO2 security key was not used in this environment. This section aims to illustrate the configuration steps and typical user experience in an enterprise passwordless authentication scenario.
+> ⚠️ Disclaimer: Due to the absence of a physical FIDO2 key, the Microsoft Authenticator method was enabled solely for demonstration purposes. The registration and sign-in steps illustrated below reflect the FIDO2 process as documented by Microsoft, but use the Authenticator interface to simulate user interaction.
 
 ---
 
