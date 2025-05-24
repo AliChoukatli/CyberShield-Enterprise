@@ -390,7 +390,10 @@ Access is granted using **strong phishing-resistant authentication**
 > 🔐 FIDO2 offers hardware-backed protection against password theft, phishing, and MFA fatigue.
 
 ---
+🔗 For official guidance on FIDO2 setup and supported authentication methods, refer to the Microsoft documentation:
+> [FIDO2 registration steps – Microsoft Learn](https://learn.microsoft.com/en-us/entra/identity/authentication/how-to-enable-passkey-fido2)
 
+---
 
 ### ✅ Final State: Secure Authentication Profile  
 
