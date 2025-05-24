@@ -409,6 +409,100 @@ Sophia now has a secure, modern identity that supports **Zero Trust principles**
 
 ---
 
+
+## 4. ✅  **FIDO2 Security Key (Passkey) – Recommended Settings**
+
+| Setting                     | Recommended Value | Description                                                                 |
+|----------------------------|-------------------|-----------------------------------------------------------------------------|
+| Allow self-service set up  | ✅ Yes            | Users can register their own FIDO2 keys                                    |
+| Enforce attestation        | ❌ No             | Not required unless verified device metadata needed                         |
+| Enforce key restrictions   | ✅ Yes            | Prevent use of unapproved or unknown FIDO2 keys                            |
+| Restrict specific keys     | 🔒 Block          | Block specific keys by vendor AAGUID                                       |
+| Microsoft Authenticator    | ❌ No             | Separate method from FIDO2                                                 |
+
+![FIDO2 Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/FIDO2-Policy.png)
+
+---
+
+> ⚠️ **Disclaimer**: The following FIDO2 setup and demonstration are based on Microsoft's official documentation and simulated screenshots. A physical FIDO2 security key was not used in this environment. This section aims to illustrate the configuration steps and typical user experience in an enterprise passwordless authentication scenario.
+
+---
+
+## 👤 End-User Experience: FIDO2 Security Key (Sophia Martinez)
+
+Sophia is required to register and use a **FIDO2 security key** as part of her passwordless authentication methods. This key allows strong, phishing-resistant authentication.
+
+### 🔹 Step 1: Add FIDO2 Security Key via Security Info Portal
+
+Sophia visits [https://myprofile.microsoft.com](https://myprofile.microsoft.com) and navigates to:
+
+> **Security Info** → **Add sign-in method** → Selects `Security Key`
+
+![Security-Key](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Security-Key.png)
+
+She is prompted to choose the type of key:
+
+- USB Key (e.g., YubiKey)
+- NFC Key
+
+---
+
+### 🔹 Step 2: Register the Key
+
+After choosing USB, Sophia is asked to: 
+
+1. Insert the key into a USB port.
+
+![Insert-Key](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Insert-Key.png)
+
+2. Windows will check the device
+3. Create or enter the PIN for the key
+4. Touch the key sensor to confirm
+
+> 🧪 *This step requires physical interaction with the key (touching the sensor). Since no physical key was used, this demonstration reflects the expected process as documented by Microsoft.*
+
+![PassKey-Saved](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Passkey-Saved.png)
+
+5. Once complete, she gives the key a **custom name** (e.g., "Sophia Key")
+
+![Sophia-Key](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Sofia-Key.png)
+
+---
+
+### 🔹 Step 3: Sign-in using Security Key
+
+The next time Sophia signs in, she selects:
+
+> **"Sign-in options"** → **Use security key**
+
+![Signin-Options](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Signin-Options.png)
+
+1. Inserts her key  
+2. Enters the key PIN
+
+![Sophia-KeyPIN](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Sophia-KeyPIN.png)
+
+3. Touches the key when prompted
+
+![Signin-Key](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Signin-key.png)
+
+---
+
+### ✅ Result: Secure Passwordless Login
+
+Access is granted using **strong phishing-resistant authentication**:
+
+> 🔐 FIDO2 offers hardware-backed protection against password theft, phishing, and MFA fatigue.
+
+---
+
+### 📚 Reference
+
+- [Microsoft Docs – Enable passwordless security key sign-in](https://learn.microsoft.com/en-us/azure/active-directory/authentication/howto-authentication-passwordless-security-key)
+- [YouTube: Microsoft FIDO2 Sign-in Demo](https://www.youtube.com/watch?v=A5iUO0nUhJU)
+
+---
+
 # 🔴 **Conditional Access Policies - Recommended Settings**
 
 | Policy Name                    | Purpose                                             | Key Settings                                                         |
