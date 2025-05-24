@@ -384,7 +384,9 @@ The next time Sophia signs in, she selects:
 
 ### ✅ Result: Secure Passwordless Login
 
-Access is granted using **strong phishing-resistant authentication**:
+Access is granted using **strong phishing-resistant authentication**
+
+![Sign-In_ACtivity](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Sign-in_Activity.png)
 
 > 🔐 FIDO2 offers hardware-backed protection against password theft, phishing, and MFA fatigue.
 
