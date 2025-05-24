@@ -283,9 +283,7 @@ Sophia opens the **Microsoft Authenticator App** on her mobile device and select
 ### 🔹 Step 3: Number Matching and Biometric Verification  
 In the app, Sophia is prompted to enter the number shown on the login screen:
 
-![Phone-Number-Matching](
-
-
+![Phone_N-Matching](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Phone_N-Matching.jpg)
 
 After entering the correct number, she approves the request using her **fingerprint** or **device passcode**.
 
