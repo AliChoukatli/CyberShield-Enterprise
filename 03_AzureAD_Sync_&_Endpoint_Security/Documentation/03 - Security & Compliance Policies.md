@@ -313,7 +313,7 @@ Upon successful verification, access is granted:
 | Restrict specific keys     | 🔒 Block          | Block specific keys by vendor AAGUID                                       |
 | Microsoft Authenticator    | ❌ No             | Separate passwordless method, can be enabled alongside FIDO2   |
 
-![FIDO2 Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/FIDO2-Policy.png)
+![FIDO2 Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Fido2-Policy.png)
 
 ---
 
