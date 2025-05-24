@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/d4ff6462-6e8e-4c3a-a7ca-2e9f05096756)# 03 - Security Compliance & Policies
+# 03 - Security Compliance & Policies
 
 Modern enterprise environments face constant threats targeting user identities, devices, and cloud resources. Implementing robust security policies—such as Conditional Access, Multi-Factor Authentication, and compliance enforcement—is critical to support Zero Trust principles and meet compliance requirements.
 
