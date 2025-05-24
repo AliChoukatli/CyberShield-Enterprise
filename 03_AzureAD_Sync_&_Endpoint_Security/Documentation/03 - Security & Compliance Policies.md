@@ -308,7 +308,7 @@ Upon successful verification, access is granted:
 | Setting                     | Recommended Value | Description                                                                 |
 |----------------------------|-------------------|-----------------------------------------------------------------------------|
 | Allow self-service set up  | ✅ Yes            | Users can register their own FIDO2 keys                                    |
-| Enforce attestation        | ❌ No             | Not required unless verified device metadata needed                         |
+| Enforce attestation        | ✅ Yes           | Not required unless verified device metadata needed                         |
 | Enforce key restrictions   | ✅ Yes            | Prevent use of unapproved or unknown FIDO2 keys                            |
 | Restrict specific keys     | 🔒 Block          | Block specific keys by vendor AAGUID                                       |
 | Microsoft Authenticator    | ❌ No             | Separate passwordless method, can be enabled alongside FIDO2   |
