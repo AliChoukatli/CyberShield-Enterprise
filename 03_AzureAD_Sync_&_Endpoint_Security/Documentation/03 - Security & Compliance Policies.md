@@ -311,13 +311,17 @@ Upon successful verification, access is granted:
 | Enforce attestation        | ✅ Yes           | Not required unless verified device metadata needed                         |
 | Enforce key restrictions   | ✅ Yes            | Prevent use of unapproved or unknown FIDO2 keys                            |
 | Restrict specific keys     | 🔒 Block          | Block specific keys by vendor AAGUID                                       |
-| Microsoft Authenticator    | ❌ No             | Separate passwordless method, can be enabled alongside FIDO2   |
+| Microsoft Authenticator    | ❌ No             | Separate passwordless method, can be enabled alongside FIDO2               |
+
+---
+
+> ⚠️ Disclaimer: Due to the absence of a physical FIDO2 key, the Microsoft Authenticator method was enabled solely for demonstration purposes. The registration and sign-in steps illustrated below reflect the FIDO2 process as documented by Microsoft, but use the Authenticator interface to simulate user interaction.
 
 ![FIDO2 Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Fido2-Policy.png)
 
 ---
 
-> ⚠️ Disclaimer: Due to the absence of a physical FIDO2 key, the Microsoft Authenticator method was enabled solely for demonstration purposes. The registration and sign-in steps illustrated below reflect the FIDO2 process as documented by Microsoft, but use the Authenticator interface to simulate user interaction.
+
 
 ---
 
