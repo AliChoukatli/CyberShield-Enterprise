@@ -395,10 +395,6 @@ Access is granted using **strong phishing-resistant authentication**
 ### 📚 Reference
 
 - [Microsoft Docs – Enable passwordless security key sign-in](https://learn.microsoft.com/en-us/azure/active-directory/authentication/howto-authentication-passwordless-security-key)
-- [YouTube: Microsoft FIDO2 Sign-in Demo](https://www.youtube.com/watch?v=A5iUO0nUhJU)
-
-
----
 
 
 ### ✅ Final State: Secure Authentication Profile  
