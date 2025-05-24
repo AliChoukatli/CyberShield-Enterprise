@@ -395,7 +395,7 @@ Access is granted using **strong phishing-resistant authentication**
 
 ---
 
-### ✅ Final State: Secure Authentication Profile  
+### ✅ Final State: Secure Authentication Profile (Sophia Martinez)
 
 | Authentication Method        | Status         | Purpose                         |
 |-----------------------------|----------------|---------------------------------|
