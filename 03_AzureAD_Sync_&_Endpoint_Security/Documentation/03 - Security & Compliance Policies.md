@@ -446,31 +446,30 @@ To apply this to all users:
 Get-CASMailbox -ResultSize Unlimited | Set-CASMailbox -PopEnabled $false -ImapEnabled $false -MAPIEnabled $false -ActiveSyncEnabled $false -SmtpClientAuthenticationDisabled $true
 ```
 
-### 🛡️ Option B — Use Conditional Access to Block Legacy Authentication (Partial)
+### 🛡️ Option B — Use Conditional Access to Block Legacy Authentication
 
-Although the specific checkbox **"Legacy authentication clients"** no longer exists, you can still apply some protection using Conditional Access.
-
----
+Microsoft has reintroduced a simplified option to block legacy authentication clients in Conditional Access.
 
 #### 🧭 Steps:
 
 1. Go to: [https://entra.microsoft.com](https://entra.microsoft.com)
 2. Navigate to: `Protection > Conditional Access`
 3. Click **+ New policy**
-4. Name the policy: **Block legacy protocols**
-5. Assign to: **All users** (exclude break-glass accounts if needed)
-6. Target: **All cloud apps**
+4. Name the policy: **Block Legacy Authentication**
+5. Under **Assignments > Users**, select: **All users**
+   - (Optional) Exclude break-glass accounts
+6. Under **Assignments > Cloud apps**, select: **All cloud apps**
 7. Under **Conditions > Client apps**:
    - Click **Configure = Yes**
-   - Select:
-     - **Browser**
-     - **Mobile apps and desktop clients**
-8. Under **Access controls > Grant**:
-   - Select **Block access**
+   - Select only:
+     - ✅ **Legacy authentication clients**
+     - ❌ *(Do not select Modern, Browser, or Mobile apps)*
+8. Under **Access controls > Grant**, select:
+   - ✅ **Block access**
 9. Enable the policy: **On**
 10. Click **Create**
 
-> ⚠️ This method doesn't catch all legacy traffic. For complete coverage, use PowerShell to disable legacy protocols at the mailbox level.
+> ⚠️ This Conditional Access policy helps block basic authentication (IMAP, POP, SMTP AUTH, etc.), but you should also disable these protocols in Exchange Online for full protection.
 
 ---
 
@@ -479,8 +478,20 @@ Although the specific checkbox **"Legacy authentication clients"** no longer exi
 1. Go to: `Monitoring > Sign-in logs`
 2. Add filter: **Client app**
 3. Look for sign-ins using:
-   - Legacy protocols (IMAP, POP, SMTP)
-   - "Other clients"
+   - Legacy authentication clients
+   - Other clients (e.g., non-modern)
+
+---
+
+### 📸 Suggested Screenshots
+
+- **Conditional Access policy summary**
+- **Client apps condition** showing only "Legacy authentication clients" checked
+- **Sign-in logs** filtered by client app
+- **PowerShell output** disabling legacy protocols (optional)
+
+---
+
 
 ---
 
