@@ -427,28 +427,34 @@ Conditional Access (CA) in Microsoft Entra ID enables IT admins to enforce polic
 
 ## ✅ 1. Block Legacy Authentication
 
-**Purpose**: Block outdated and insecure authentication methods (IMAP, POP, SMTP, etc.) that don’t support modern security controls such as MFA.
+**Purpose:** Prevent the use of outdated and insecure authentication protocols such as IMAP, POP3, SMTP AUTH, and MAPI that do not support modern security features like Multi-Factor Authentication (MFA).
 
-#### 🧭 How to Configure:
+> 📌 **Important:** Microsoft has deprecated the "Legacy authentication clients" option in Conditional Access. The recommended way to block legacy authentication is now through **Authentication Methods Policies** and **Exchange Online settings**.
 
-1. Go to: [https://entra.microsoft.com](https://entra.microsoft.com)
-2. In the left menu, select: **Protection** > **Conditional Access**
-3. Click **+ New policy**
-4. Name the policy: `Block Legacy Authentication`
-5. Under **Assignments** > **Users**, select **All users**
-6. Under **Assignments** > **Target resources**, choose **All cloud apps**
-7. Under **Conditions**:
-   - Select **Client apps**
-   - Click **Configure** > Check **Legacy authentication clients**
-8. Under **Access controls** > **Grant**, select **Block access**
-9. Enable the policy: **On**
-10. Click **Create**
+---
 
-📸 **Screenshot Instructions**:
-- Screenshot of **Assignments**: All users, all apps
-- Screenshot of **Conditions**: Legacy authentication clients selected
-- Screenshot of **Access controls**: Block access
+### 🛠️ Recommended Method: Disable Legacy Protocols via Authentication Methods Policy
 
+1. Go to [https://entra.microsoft.com](https://entra.microsoft.com)
+2. Navigate to: `Protection > Authentication methods > Policies`
+3. Click on **Legacy Authentication**
+4. Set each of the following to **Disabled**:
+   - IMAP
+   - POP
+   - SMTP AUTH
+   - MAPI
+   - Exchange ActiveSync
+5. Click **Save**
+
+---
+
+### 🔒 Optional: Disable Legacy Protocols per Mailbox (Exchange Online PowerShell)
+
+If needed, disable legacy authentication on a per-user basis using the following PowerShell command:
+
+```powershell
+Set-CASMailbox user@domain.com -PopEnabled $false -ImapEnabled $false -MAPIEnabled $false -ActiveSyncEnabled $false -SmtpClientAuthenticationDisabled $true
+```
 ---
 
 ## ✅ 2. Require MFA for All Users
