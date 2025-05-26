@@ -560,7 +560,7 @@ Enforce Multi-Factor Authentication (MFA) specifically for all users with admini
 
 ---
 
-## ✅ 3. Require Compliant or Azure AD Joined Devices
+## ✅ 3. Require Compliant Devices
 
 **Purpose**: Ensure that only secure, managed, and compliant devices can access organizational resources.
 
@@ -572,18 +572,14 @@ Enforce Multi-Factor Authentication (MFA) specifically for all users with admini
 4. Under **Assignments** > **Users**, select **All users**
 5. Under **Cloud apps**, choose **All cloud apps**
 6. Under **Conditions**:
-   - Go to **Device platforms** > *Configure* (Optional: include Windows, macOS, iOS, Android)
-   - Go to **Device state** > *Configure*
-     - Select **Require Hybrid Azure AD joined** or **Require compliant device**
+   - Go to **Device platforms** > *Configure* (include Windows, macOS)
 7. Under **Access controls** > **Grant**, choose:
    - **Grant access**
    - Check **Require device to be marked as compliant**
 8. Enable the policy
 9. Click **Create**
 
-📸 **Screenshot Instructions**:
-- Screenshot of **Device state** configuration
-- Screenshot of **Grant access** settings with compliant device selected
+![Compliance_Devices_Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Compliance_Devices_Policy.png)
 
 ---
 
