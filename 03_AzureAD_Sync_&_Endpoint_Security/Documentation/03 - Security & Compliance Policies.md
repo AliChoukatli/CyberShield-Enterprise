@@ -511,16 +511,6 @@ Microsoft has reintroduced a simplified option to block legacy authentication cl
 
 ---
 
-### 📊 Monitor Legacy Usage (Sign-in Logs)
-
-1. Go to: `Monitoring > Sign-in logs`
-2. Add filter: **Client app**
-3. Look for sign-ins using:
-   - Legacy authentication clients
-   - Other clients (e.g., non-modern)
-
----
-
 
 ## ✅ 2. Require MFA for All Users
 
