@@ -583,30 +583,61 @@ Enforce Multi-Factor Authentication (MFA) specifically for all users with admini
 
 ---
 
-## ✅ 4. Block Risky Sign-ins
+## ✅ 4. Block Access from Unsupported Countries
 
-**Purpose**: Block sign-ins that Microsoft detects as risky (e.g. unfamiliar location, impossible travel, credential leaks).
+**Purpose:**  
+Restrict access to organizational resources from untrusted or high-risk geographic locations by allowing only selected trusted countries.
 
-### 🧭 How to Configure:
-
-1. Go to **Microsoft Entra Admin Center** > **Protection** > **Conditional Access**
-2. Click **+ New policy**
-3. Name it: `Block Risky Sign-ins`
-4. Under **Assignments** > **Users**, select **All users**
-5. Under **Cloud apps**, choose **All cloud apps**
-6. Under **Conditions**:
-   - Go to **Sign-in risk** > *Configure*
-   - Choose **Medium and above**
-7. Under **Access controls** > **Grant**, choose:
-   - **Block access**
-8. Enable the policy
-9. Click **Create**
-
-📸 **Screenshot Instructions**:
-- Screenshot of **Sign-in risk condition**
-- Screenshot of **Access controls** set to block
+This policy helps mitigate the risk of unauthorized access from regions where your organization has no presence or operational need.
 
 ---
 
-> 💡 **Tip**: Always test Conditional Access policies on a pilot group or break-glass account before enforcing them globally to prevent accidental lockouts.
+### 🌍 Step 1 — Define Trusted Locations
+
+Before creating the Conditional Access policy, define your trusted countries in Microsoft Entra:
+
+1. Go to: [https://entra.microsoft.com](https://entra.microsoft.com)
+2. Navigate to: **Protection > Named locations**
+3. Click **+ Countries location**
+4. Name it: `Trusted Countries`
+5. Select countries you trust (e.g., ✅ France, ✅ Canada, ✅ Netherlands)
+6. Click **Create**
+
+> 💡 You can later reuse this location group in other Conditional Access policies.
+
+---
+
+### 🛡️ Step 2 — Create the Conditional Access Policy
+
+1. Go to: [https://entra.microsoft.com](https://entra.microsoft.com)
+2. Navigate to: **Protection > Conditional Access**
+3. Click **+ New policy**
+4. Name it: `Block Access from Unsupported Countries`
+
+#### 🔹 Assignments:
+- **Users**: `All users` *(or pilot group)*
+- **Cloud apps**: `All cloud apps`
+
+#### 🔹 Conditions:
+- **Locations**:
+  - Set **Configure** to ✅ **Yes**
+  - **Include**: `Any location`
+  - **Exclude**: `Trusted Countries` *(created earlier)*
+
+#### 🔹 Access controls:
+- Under **Grant**:
+  - Choose ❌ `Block access`
+
+5. Enable the policy: ✅ **On**
+6. Click **Create**
+
+---
+
+![Block_Unsupported_Countries](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Block_Unsupported_Countries.png)
+
+---
+
+> ⚠️ **Tip:** Be careful not to lock yourself out. Exclude break-glass accounts or test on a pilot group before applying it to all users.
+
+---
 
