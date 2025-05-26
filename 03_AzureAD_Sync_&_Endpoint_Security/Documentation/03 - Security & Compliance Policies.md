@@ -511,8 +511,33 @@ Microsoft has reintroduced a simplified option to block legacy authentication cl
 
 ---
 
+## ✅ 2. Require MFA for All Admin Roles
 
-## ✅ 2. Require MFA for All Users
+**Purpose:**  
+Enforce Multi-Factor Authentication (MFA) specifically for all users with administrative roles to better protect privileged accounts against credential theft and phishing.
+
+## How to Configure:
+
+1. Go to **Microsoft Entra Admin Center** > **Protection** > **Conditional Access**  
+2. Click **+ New policy**  
+3. Name the policy: `Require MFA for All Admin Roles`  
+4. Under **Assignments** > **Users**, click **Select users and groups**  
+5. Select **Directory roles**  
+6. Choose all administrative roles (e.g. Global administrator, Security administrator, etc.)  
+7. Under **Cloud apps**, select **All cloud apps**  
+8. Leave **Conditions** empty (optional: configure risk-based conditions)  
+9. Under **Access controls** > **Grant**, select:  
+   - **Grant access**  
+   - Check **Require multi-factor authentication**  
+10. Enable the policy  
+11. Click **Create**
+
+---
+
+*Note:* This policy ensures that all privileged accounts are protected by MFA, reducing the risk of compromise.
+
+
+## ✅ 3. Require MFA for All Users
 
 **Purpose**: Enforce Multi-Factor Authentication (MFA) to protect user sign-ins from credential theft and phishing.
 
