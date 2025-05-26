@@ -480,7 +480,7 @@ Get-CASMailbox -ResultSize Unlimited | Select Name, UserPrincipalName, PopEnable
 ```
 ![Disable Legacy Protocols-PS](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Disable%20Legacy%20Protocols-PS.png)
 
-### 🛡️ Option B — Use Conditional Access to Block Legacy Authentication
+### 🔒 Option B — Use Conditional Access to Block Legacy Authentication
 
 Microsoft has reintroduced a simplified option to block legacy authentication clients in Conditional Access.
 
