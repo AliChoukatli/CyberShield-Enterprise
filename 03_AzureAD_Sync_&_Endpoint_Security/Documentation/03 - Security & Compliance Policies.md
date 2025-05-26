@@ -418,12 +418,63 @@ Sophia now has a secure, modern identity that supports **Zero Trust principles**
 
 ---
 
-# 🔴 **Conditional Access Policies - Recommended Settings**
 
-| Policy Name                    | Purpose                                             | Key Settings                                                         |
-|-------------------------------|-----------------------------------------------------|----------------------------------------------------------------------|
-| Block Legacy Authentication    | Block insecure protocols like IMAP, POP, SMTP      | Target: All users<br>Client apps: Legacy auth<br>Access: Block      |
-| Require MFA for All Users      | Enforce MFA for all sign-ins                        | Target: All users<br>Access: Require MFA                            |
-| Require Compliant Devices      | Allow access only from compliant or Azure AD joined devices | Target: All users<br>Device state: Require compliant or Azure AD joined<br>Access: Grant if compliant |
-| Block Risky Sign-ins           | Block sign-ins flagged as risky                      | Target: All users<br>Sign-in risk: Medium or higher<br>Access: Block|
+# 🔴 Conditional Access Policies – Recommended Settings
+
+Conditional Access (CA) is a core feature in Microsoft Entra ID (formerly Azure AD) that helps enforce access controls based on conditions like user risk, device compliance, and app types.
+
+---
+
+## ✅ 1. Block Legacy Authentication
+
+**Policy Name**: Block Legacy Authentication  
+**Purpose**: Block outdated and insecure protocols like IMAP, POP, and SMTP that do not support modern authentication.  
+**Key Settings**:
+- **Target**: All users  
+- **Client Apps**: Legacy authentication clients only  
+- **Access Control**: Block access  
+
+🔒 *Why?* Legacy protocols do not support MFA or token-based authentication, making them a critical security vulnerability.
+
+---
+
+## ✅ 2. Require MFA for All Users
+
+**Policy Name**: Require MFA for All Users  
+**Purpose**: Enforce multi-factor authentication for all sign-ins.  
+**Key Settings**:
+- **Target**: All users  
+- **Grant Control**: Require multi-factor authentication  
+
+🛡️ *Why?* MFA provides an extra layer of protection against credential theft and phishing attacks.
+
+---
+
+## ✅ 3. Require Compliant or Azure AD Joined Devices
+
+**Policy Name**: Require Compliant Devices  
+**Purpose**: Allow access only from compliant or Azure AD joined devices.  
+**Key Settings**:
+- **Target**: All users  
+- **Device State**: Require compliant or Azure AD joined  
+- **Grant Control**: Grant access if the device is compliant  
+
+🔐 *Why?* Prevents access from personal or unmanaged devices that may not meet the organization's security standards.
+
+---
+
+## ✅ 4. Block Risky Sign-ins
+
+**Policy Name**: Block Risky Sign-ins  
+**Purpose**: Automatically block sign-ins that are flagged as risky by Microsoft Entra ID.  
+**Key Settings**:
+- **Target**: All users  
+- **Sign-in Risk Level**: Medium and above  
+- **Access Control**: Block access  
+
+🚨 *Why?* Microsoft uses machine learning and threat intelligence to detect risky sign-in behaviors (e.g., unfamiliar locations, atypical access patterns).
+
+---
+
+> 💡 **Tip**: Always test these policies with a pilot group before rolling them out organization-wide to avoid unintentional lockouts.
 
