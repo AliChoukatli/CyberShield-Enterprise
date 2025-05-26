@@ -597,10 +597,10 @@ This policy helps mitigate the risk of unauthorized access from regions where yo
 Before creating the Conditional Access policy, define your trusted countries in Microsoft Entra:
 
 1. Go to: [https://entra.microsoft.com](https://entra.microsoft.com)
-2. Navigate to: **Protection > Named locations**
+2. Navigate to: **Protection > Risky Activities > Named locations**
 3. Click **+ Countries location**
 4. Name it: `Trusted Countries`
-5. Select countries you trust (e.g., ✅ France, ✅ Canada, ✅ Netherlands)
+5. Select countries you trust (e.g., ✅ France, ✅ Canada, ✅ Netherlands, ✅ USA)
 6. Click **Create**
 
 > 💡 You can later reuse this location group in other Conditional Access policies.
