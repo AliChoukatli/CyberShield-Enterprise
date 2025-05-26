@@ -435,16 +435,53 @@ Conditional Access (CA) in Microsoft Entra ID enables IT admins to enforce polic
 
 ### 🔒 Option A — Disable Legacy Protocols via Exchange Online (Recommended)
 
-Use the following PowerShell commands to block legacy protocols per mailbox:
+Modern security best practices recommend disabling legacy authentication protocols such as POP, IMAP, MAPI, ActiveSync, and SMTP basic auth, which do not support modern authentication (MFA, Conditional Access, etc.).
+
+#### 🛠️ Prerequisites
+
+Before running the commands, make sure you:
+
+1. Have the **Exchange Online Management Module (EXO V2)** installed.
+2. Are connected to Exchange Online PowerShell with appropriate permissions.
+
+To connect, open PowerShell and run:
 
 ```powershell
-Set-CASMailbox user@domain.com -PopEnabled $false -ImapEnabled $false -MAPIEnabled $false -ActiveSyncEnabled $false -SmtpClientAuthenticationDisabled $true
+Connect-ExchangeOnline -UserPrincipalName your_admin@domain.com
 ```
-To apply this to all users:
+> Replace your_admin@domain.com with your actual admin account.
+
+#### Disable Legacy Protocols for a Single Mailbox
+Use this command to disable legacy protocols on one specific user:
+```powershell
+Set-CASMailbox user@domain.com `
+  -PopEnabled $false `
+  -ImapEnabled $false `
+  -MAPIEnabled $false `
+  -ActiveSyncEnabled $false `
+  -SmtpClientAuthenticationDisabled $true
+```
+> Replace user@domain.com with the actual user's email.
+
+#### Disable Legacy Protocols for All Mailboxes
+Apply the same settings to all users in the organization:
+```powershell
+Get-CASMailbox -ResultSize Unlimited | Set-CASMailbox `
+  -PopEnabled $false `
+  -ImapEnabled $false `
+  -MAPIEnabled $false `
+  -ActiveSyncEnabled $false `
+  -SmtpClientAuthenticationDisabled $true
+```
+✅ If no errors are shown, the command has run successfully.
+
+#### Verify Status
+Run the following to confirm that the protocols are disabled:
 
 ```powershell
-Get-CASMailbox -ResultSize Unlimited | Set-CASMailbox -PopEnabled $false -ImapEnabled $false -MAPIEnabled $false -ActiveSyncEnabled $false -SmtpClientAuthenticationDisabled $true
+Get-CASMailbox -ResultSize Unlimited | Select Name, UserPrincipalName, PopEnabled, ImapEnabled, MAPIEnabled, ActiveSyncEnabled, SmtpClientAuthenticationDisabled
 ```
+
 
 ### 🛡️ Option B — Use Conditional Access to Block Legacy Authentication
 
