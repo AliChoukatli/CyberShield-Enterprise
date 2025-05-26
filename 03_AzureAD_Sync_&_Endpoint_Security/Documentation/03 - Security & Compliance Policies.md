@@ -592,7 +592,7 @@ This policy helps mitigate the risk of unauthorized access from regions where yo
 
 ---
 
-### 🌍 Step 1 — Define Trusted Locations
+### 🛡️ Step 1 — Define Trusted Locations
 
 Before creating the Conditional Access policy, define your trusted countries in Microsoft Entra:
 
@@ -602,6 +602,8 @@ Before creating the Conditional Access policy, define your trusted countries in 
 4. Name it: `Trusted Countries`
 5. Select countries you trust (e.g., ✅ France, ✅ Canada, ✅ Netherlands, ✅ USA)
 6. Click **Create**
+
+![Trusted_Locations](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Trusted_Locations.png)
 
 > 💡 You can later reuse this location group in other Conditional Access policies.
 
@@ -631,11 +633,7 @@ Before creating the Conditional Access policy, define your trusted countries in 
 5. Enable the policy: ✅ **On**
 6. Click **Create**
 
----
-
-![Block_Unsupported_Countries](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Block_Unsupported_Countries.png)
-
----
+![Block_Countries](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Block_Countries.png)
 
 > ⚠️ **Tip:** Be careful not to lock yourself out. Exclude break-glass accounts or test on a pilot group before applying it to all users.
 
