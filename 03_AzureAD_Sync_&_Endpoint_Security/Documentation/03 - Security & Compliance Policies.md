@@ -471,6 +471,8 @@ Microsoft has reintroduced a simplified option to block legacy authentication cl
 9. Enable the policy: **On**
 10. Click **Create**
 
+![Block_Legacy-Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Block_Legacy-Policy.png)
+
 > ⚠️ This Conditional Access policy helps block basic authentication (IMAP, POP, SMTP AUTH, etc.), but you should also disable these protocols in Exchange Online for full protection.
 
 ---
@@ -485,28 +487,6 @@ Microsoft has reintroduced a simplified option to block legacy authentication cl
 
 ---
 
-### 📸 Suggested Screenshots
-
-- **Conditional Access policy summary**
-- **Client apps condition** showing only "Legacy authentication clients" checked
-- **Sign-in logs** filtered by client app
-- **PowerShell output** disabling legacy protocols (optional)
-
----
-
-
----
-
-### 📸 Suggested Screenshots
-
-- Conditional Access policy summary
-- Sign-in logs filtered by client app
-- PowerShell output showing legacy protocols disabled
-
----
-
-
----
 
 ## ✅ 2. Require MFA for All Users
 
