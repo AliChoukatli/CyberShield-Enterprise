@@ -530,9 +530,7 @@ Microsoft has reintroduced a simplified option to block legacy authentication cl
 8. Enable the policy
 9. Click **Create**
 
-📸 **Screenshot Instructions**:
-- Screenshot of **Assignments**: All users, all apps
-- Screenshot of **Access controls**: Grant access + Require MFA
+![MFA-Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/MFA-Policy.png)
 
 ---
 
