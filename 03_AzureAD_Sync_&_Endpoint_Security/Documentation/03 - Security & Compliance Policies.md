@@ -421,85 +421,111 @@ Sophia now has a secure, modern identity that supports **Zero Trust principles**
 
 # 🔴 Conditional Access Policies – Recommended Settings
 
-Conditional Access (CA) is a core feature in Microsoft Entra ID (formerly Azure AD) that helps enforce access controls based on conditions like user risk, device compliance, and app types.
+Conditional Access (CA) in Microsoft Entra ID enables IT admins to enforce policies that restrict or allow access to cloud resources based on conditions such as device state, user risk, and app types. These policies implement Zero Trust principles and are critical to securing identity infrastructure.
 
 ---
 
 ## ✅ 1. Block Legacy Authentication
 
-**Policy Name**: Block Legacy Authentication  
-**Purpose**: Block outdated and insecure protocols like IMAP, POP, and SMTP that do not support modern authentication.  
-**Key Settings**:
-- **Target**: All users  
-- **Client Apps**: Legacy authentication clients only  
-- **Access Control**: Block access  
+**Purpose**: Block outdated and insecure authentication methods (IMAP, POP, SMTP, etc.) that don’t support modern security controls such as MFA.
 
-🔒 *Why?* Legacy protocols do not support MFA or token-based authentication, making them a critical security vulnerability.
+#### 🧭 How to Configure:
+
+1. Go to: [https://entra.microsoft.com](https://entra.microsoft.com)
+2. In the left menu, select: **Protection** > **Conditional Access**
+3. Click **+ New policy**
+4. Name the policy: `Block Legacy Authentication`
+5. Under **Assignments** > **Users**, select **All users**
+6. Under **Assignments** > **Target resources**, choose **All cloud apps**
+7. Under **Conditions**:
+   - Select **Client apps**
+   - Click **Configure** > Check **Legacy authentication clients**
+8. Under **Access controls** > **Grant**, select **Block access**
+9. Enable the policy: **On**
+10. Click **Create**
 
 📸 **Screenshot Instructions**:
-Go to **Microsoft Entra Admin Center** > **Protection** > **Conditional Access**, then create this policy and take screenshots of:
-- **Assignments**: Targeted users and legacy client apps.
-- **Conditions**: Client apps set to "Legacy authentication clients".
-- **Access Controls**: Set to "Block access".
+- Screenshot of **Assignments**: All users, all apps
+- Screenshot of **Conditions**: Legacy authentication clients selected
+- Screenshot of **Access controls**: Block access
 
 ---
 
 ## ✅ 2. Require MFA for All Users
 
-**Policy Name**: Require MFA for All Users  
-**Purpose**: Enforce multi-factor authentication for all sign-ins.  
-**Key Settings**:
-- **Target**: All users  
-- **Grant Control**: Require multi-factor authentication  
+**Purpose**: Enforce Multi-Factor Authentication (MFA) to protect user sign-ins from credential theft and phishing.
 
-🛡️ *Why?* MFA provides an extra layer of protection against credential theft and phishing attacks.
+### 🧭 How to Configure:
+
+1. Go to **Microsoft Entra Admin Center** > **Protection** > **Conditional Access**
+2. Click **+ New policy**
+3. Name it: `Require MFA for All Users`
+4. Under **Assignments** > **Users**, select **All users** (or a pilot group)
+5. Under **Cloud apps**, select **All cloud apps**
+6. Leave **Conditions** empty (optional: configure risk-based conditions)
+7. Under **Access controls** > **Grant**, choose:
+   - **Grant access**
+   - Check **Require multi-factor authentication**
+8. Enable the policy
+9. Click **Create**
 
 📸 **Screenshot Instructions**:
-From **Microsoft Entra Admin Center** > **Protection** > **Conditional Access**:
-- **Assignments**: All users selected.
-- **Cloud apps or actions**: Include "All cloud apps".
-- **Access Controls**: Grant access if MFA is required.
+- Screenshot of **Assignments**: All users, all apps
+- Screenshot of **Access controls**: Grant access + Require MFA
 
 ---
 
 ## ✅ 3. Require Compliant or Azure AD Joined Devices
 
-**Policy Name**: Require Compliant Devices  
-**Purpose**: Allow access only from compliant or Azure AD joined devices.  
-**Key Settings**:
-- **Target**: All users  
-- **Device State**: Require compliant or Azure AD joined  
-- **Grant Control**: Grant access if the device is compliant  
+**Purpose**: Ensure that only secure, managed, and compliant devices can access organizational resources.
 
-🔐 *Why?* Prevents access from personal or unmanaged devices that may not meet the organization's security standards.
+### 🧭 How to Configure:
+
+1. Go to **Microsoft Entra Admin Center** > **Protection** > **Conditional Access**
+2. Click **+ New policy**
+3. Name the policy: `Require Compliant Devices`
+4. Under **Assignments** > **Users**, select **All users**
+5. Under **Cloud apps**, choose **All cloud apps**
+6. Under **Conditions**:
+   - Go to **Device platforms** > *Configure* (Optional: include Windows, macOS, iOS, Android)
+   - Go to **Device state** > *Configure*
+     - Select **Require Hybrid Azure AD joined** or **Require compliant device**
+7. Under **Access controls** > **Grant**, choose:
+   - **Grant access**
+   - Check **Require device to be marked as compliant**
+8. Enable the policy
+9. Click **Create**
 
 📸 **Screenshot Instructions**:
-In the Conditional Access policy creation screen:
-- **Assignments**: All users.
-- **Conditions > Device platforms**: (Optional, for scope).
-- **Conditions > Device state**: Require compliant or Azure AD joined.
-- **Access Controls**: Grant if device is compliant or Azure AD joined.
+- Screenshot of **Device state** configuration
+- Screenshot of **Grant access** settings with compliant device selected
 
 ---
 
 ## ✅ 4. Block Risky Sign-ins
 
-**Policy Name**: Block Risky Sign-ins  
-**Purpose**: Automatically block sign-ins that are flagged as risky by Microsoft Entra ID.  
-**Key Settings**:
-- **Target**: All users  
-- **Sign-in Risk Level**: Medium and above  
-- **Access Control**: Block access  
+**Purpose**: Block sign-ins that Microsoft detects as risky (e.g. unfamiliar location, impossible travel, credential leaks).
 
-🚨 *Why?* Microsoft uses machine learning and threat intelligence to detect risky sign-in behaviors (e.g., unfamiliar locations, atypical access patterns).
+### 🧭 How to Configure:
+
+1. Go to **Microsoft Entra Admin Center** > **Protection** > **Conditional Access**
+2. Click **+ New policy**
+3. Name it: `Block Risky Sign-ins`
+4. Under **Assignments** > **Users**, select **All users**
+5. Under **Cloud apps**, choose **All cloud apps**
+6. Under **Conditions**:
+   - Go to **Sign-in risk** > *Configure*
+   - Choose **Medium and above**
+7. Under **Access controls** > **Grant**, choose:
+   - **Block access**
+8. Enable the policy
+9. Click **Create**
 
 📸 **Screenshot Instructions**:
-While configuring this policy:
-- **Assignments**: All users.
-- **Conditions > Sign-in risk**: Set to "Medium and above".
-- **Access Controls**: Block access.
+- Screenshot of **Sign-in risk condition**
+- Screenshot of **Access controls** set to block
 
 ---
 
-> 💡 **Tip**: Always test these policies with a pilot group before applying them organization-wide to avoid accidental lockouts.
+> 💡 **Tip**: Always test Conditional Access policies on a pilot group or break-glass account before enforcing them globally to prevent accidental lockouts.
 
