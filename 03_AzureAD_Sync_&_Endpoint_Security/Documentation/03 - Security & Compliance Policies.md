@@ -481,7 +481,7 @@ Run the following to confirm that the protocols are disabled:
 ```powershell
 Get-CASMailbox -ResultSize Unlimited | Select Name, UserPrincipalName, PopEnabled, ImapEnabled, MAPIEnabled, ActiveSyncEnabled, SmtpClientAuthenticationDisabled
 ```
-
+![Disable Legacy Protocols-PS](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Disable%20Legacy%20Protocols-PS.png)
 
 ### 🛡️ Option B — Use Conditional Access to Block Legacy Authentication
 
