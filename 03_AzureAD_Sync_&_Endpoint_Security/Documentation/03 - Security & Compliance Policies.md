@@ -429,32 +429,70 @@ Conditional Access (CA) in Microsoft Entra ID enables IT admins to enforce polic
 
 **Purpose:** Prevent the use of outdated and insecure authentication protocols such as IMAP, POP3, SMTP AUTH, and MAPI that do not support modern security features like Multi-Factor Authentication (MFA).
 
-> 📌 **Important:** Microsoft has deprecated the "Legacy authentication clients" option in Conditional Access. The recommended way to block legacy authentication is now through **Authentication Methods Policies** and **Exchange Online settings**.
+> 📌 **Note:** Microsoft no longer provides a dedicated "Legacy Authentication" setting under Authentication Methods in Entra ID. You must now block legacy authentication using Exchange Online settings and Conditional Access alternatives.
 
 ---
 
-### 🛠️ Recommended Method: Disable Legacy Protocols via Authentication Methods Policy
+### 🔒 Option A — Disable Legacy Protocols via Exchange Online (Recommended)
 
-1. Go to [https://entra.microsoft.com](https://entra.microsoft.com)
-2. Navigate to: `Protection > Authentication methods > Policies`
-3. Click on **Legacy Authentication**
-4. Set each of the following to **Disabled**:
-   - IMAP
-   - POP
-   - SMTP AUTH
-   - MAPI
-   - Exchange ActiveSync
-5. Click **Save**
-
----
-
-### 🔒 Optional: Disable Legacy Protocols per Mailbox (Exchange Online PowerShell)
-
-If needed, disable legacy authentication on a per-user basis using the following PowerShell command:
+Use the following PowerShell commands to block legacy protocols per mailbox:
 
 ```powershell
 Set-CASMailbox user@domain.com -PopEnabled $false -ImapEnabled $false -MAPIEnabled $false -ActiveSyncEnabled $false -SmtpClientAuthenticationDisabled $true
 ```
+To apply this to all users:
+
+```powershell
+Get-CASMailbox -ResultSize Unlimited | Set-CASMailbox -PopEnabled $false -ImapEnabled $false -MAPIEnabled $false -ActiveSyncEnabled $false -SmtpClientAuthenticationDisabled $true
+```
+
+### 🛡️ Option B — Use Conditional Access to Block Legacy Authentication (Partial)
+
+Although the specific checkbox **"Legacy authentication clients"** no longer exists, you can still apply some protection using Conditional Access.
+
+---
+
+#### 🧭 Steps:
+
+1. Go to: [https://entra.microsoft.com](https://entra.microsoft.com)
+2. Navigate to: `Protection > Conditional Access`
+3. Click **+ New policy**
+4. Name the policy: **Block legacy protocols**
+5. Assign to: **All users** (exclude break-glass accounts if needed)
+6. Target: **All cloud apps**
+7. Under **Conditions > Client apps**:
+   - Click **Configure = Yes**
+   - Select:
+     - **Browser**
+     - **Mobile apps and desktop clients**
+8. Under **Access controls > Grant**:
+   - Select **Block access**
+9. Enable the policy: **On**
+10. Click **Create**
+
+> ⚠️ This method doesn't catch all legacy traffic. For complete coverage, use PowerShell to disable legacy protocols at the mailbox level.
+
+---
+
+### 📊 Monitor Legacy Usage (Sign-in Logs)
+
+1. Go to: `Monitoring > Sign-in logs`
+2. Add filter: **Client app**
+3. Look for sign-ins using:
+   - Legacy protocols (IMAP, POP, SMTP)
+   - "Other clients"
+
+---
+
+### 📸 Suggested Screenshots
+
+- Conditional Access policy summary
+- Sign-in logs filtered by client app
+- PowerShell output showing legacy protocols disabled
+
+---
+
+
 ---
 
 ## ✅ 2. Require MFA for All Users
