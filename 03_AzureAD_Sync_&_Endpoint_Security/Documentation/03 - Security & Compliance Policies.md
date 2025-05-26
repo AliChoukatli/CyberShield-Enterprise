@@ -484,7 +484,7 @@ Get-CASMailbox -ResultSize Unlimited | Select Name, UserPrincipalName, PopEnable
 
 Microsoft has reintroduced a simplified option to block legacy authentication clients in Conditional Access.
 
-#### 🧭 Steps:
+### 🧭 How to Configure:
 
 1. Go to: [https://entra.microsoft.com](https://entra.microsoft.com)
 2. Navigate to: `Protection > Conditional Access`
@@ -516,7 +516,7 @@ Microsoft has reintroduced a simplified option to block legacy authentication cl
 **Purpose:**  
 Enforce Multi-Factor Authentication (MFA) specifically for all users with administrative roles to better protect privileged accounts against credential theft and phishing.
 
-## How to Configure:
+### 🧭 How to Configure:
 
 1. Go to **Microsoft Entra Admin Center** > **Protection** > **Conditional Access**  
 2. Click **+ New policy**  
