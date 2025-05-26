@@ -532,6 +532,8 @@ Enforce Multi-Factor Authentication (MFA) specifically for all users with admini
 10. Enable the policy  
 11. Click **Create**
 
+![MFA-All_Admin](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/MFA-All_Admin.png)
+
 ---
 
 *Note:* This policy ensures that all privileged accounts are protected by MFA, reducing the risk of compromise.
