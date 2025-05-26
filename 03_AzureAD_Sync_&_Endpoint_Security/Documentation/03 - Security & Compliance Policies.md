@@ -462,12 +462,12 @@ Microsoft has reintroduced a simplified option to block legacy authentication cl
 7. Under **Conditions > Client apps**:
    - Click **Configure = Yes**
    - Select only:
-     - ✅ **Legacy authentication clients**
-     - ✅ **Exchange ActiveSync clients**
-     - ✅ **Other clients**
-     - ❌ **Do not select**: Browser, Mobile apps and desktop clients, or Modern authentication clients
+     - **Legacy authentication clients**
+       - ✅ **Exchange ActiveSync clients**
+       - ✅ **Other clients**
+       - ❌ **Do not select**: Browser, Mobile apps and desktop clients, or Modern authentication clients
 8. Under **Access controls > Grant**, select:
-   - ✅ **Block access**
+     - ❌ **Block access**
 9. Enable the policy: **On**
 10. Click **Create**
 
