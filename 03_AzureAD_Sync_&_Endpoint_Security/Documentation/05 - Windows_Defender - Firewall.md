@@ -29,13 +29,81 @@ Apply Microsoft recommended Defender Antivirus settings using Intune Endpoint Se
 
 # Microsoft Defender for Endpoint Configuration
 
-| Setting                                      | Policy Name / Description                          | Expected Value / Notes                             |
-|----------------------------------------------|--------------------------------------------------|---------------------------------------------------|
-| Turn on Microsoft Defender Antivirus          | Allow Realtime Monitoring                         | Enable                                            |
-| Cloud-delivered protection                    | Allow Cloud Protection                            | Enable                                            |
-| Submit samples automatically                  | Submit Samples Consent                            | Send safe samples automatically (no user prompt) |
-| Scan all downloaded files and attachments    | Allow scanning of all downloaded files and attachments | Enable                                    |
-| Scan mapped network drives during full scan  | Allow Full Scan On Mapped Network Drives         | Enable                                            |
+# 🎯 Microsoft Defender Antivirus – Enterprise Security Best Practices
+
+This document outlines the recommended configuration for Microsoft Defender Antivirus to ensure strong endpoint protection in a professional IT environment.
+
+---
+
+## 🔒 Core Protection Settings
+
+- **Turn on Microsoft Defender Antivirus**: ✔️ Enabled  
+- **Real-Time Protection**: ✔️ Enabled  
+- **Cloud-Delivered Protection**: ✔️ Enabled  
+- **Automatic Sample Submission**: ✔️ Always send (no user prompt)  
+- **Potentially Unwanted Application (PUA) Protection**: ✔️ Enabled  
+- **Network Protection**: ✔️ Enabled (Block mode)  
+
+---
+
+## 🧠 Behavior Monitoring & File Scanning
+
+- **Behavior Monitoring**: ✔️ Enabled  
+- **Script Scanning (PowerShell, JavaScript, etc.)**: ✔️ Enabled  
+- **Archive File Scanning (.zip, .rar, etc.)**: ✔️ Enabled  
+- **Email Attachments & Downloads Scanning**: ✔️ Enabled  
+- **Email Body Scanning**: ✔️ Enabled  
+- **Network Files Scanning**: ✔️ Enabled  
+- **Removable & Network Drive Scanning**: ✔️ Enabled  
+
+---
+
+## 🕒 Scheduled Scans
+
+- **Scan Type**: Full Scan  
+- **Frequency**: Daily  
+- **Scheduled Time**: 2:00 AM  
+- **Catch-up Scan (if device was off)**: ✔️ Enabled  
+- **Low CPU Priority During Scan**: ✔️ Enabled  
+
+---
+
+## 🔁 Remediation & Quarantine
+
+- **Automatic Actions**: ✔️ Enabled (Remove or Quarantine)  
+- **User Interaction**: ❌ Disabled (no end-user decision)  
+- **Quarantine Retention Period**: 30 Days  
+- **Real-Time Threat Mitigation**: ✔️ Enabled  
+
+---
+
+## 🛡️ Attack Surface Reduction (ASR) Rules (Recommended)
+
+- Block executable content from email/webmail  
+- Block credential stealing from LSASS  
+- Use advanced protection against ransomware  
+- Block Office macros from the internet  
+- Enable AMSI for Office applications  
+
+---
+
+## 📈 Reporting & Alerts
+
+- **Alert Notifications**: ✔️ Enabled  
+- **Device Compliance Reporting**: ✔️ Enabled  
+- **Send data to Microsoft Security Center**: ✔️ Enabled  
+- **Tamper Protection**: ✔️ Enabled (prevents settings changes)  
+
+---
+
+## 🔐 Additional Recommendations
+
+- Integrate with **Microsoft Defender for Endpoint** for EDR, threat analytics, and advanced hunting.  
+- Apply **Endpoint Detection and Response (EDR) in block mode**.  
+- Combine with **Zero Trust policies** and **Conditional Access**.  
+- Keep Defender and platform updates enabled via Windows Update or WSUS.  
+
+
 
 3. Click **Next**  
 
