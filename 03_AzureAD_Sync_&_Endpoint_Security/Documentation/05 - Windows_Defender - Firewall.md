@@ -6,45 +6,59 @@ Focus: Defender Antivirus, Firewall settings, and User Rights assignments.
 
 # Deploy Microsoft Defender Antivirus Baseline via Intune
 
-## Step 1 – Create a Security Baseline Profile
+## Objective  
+Apply Microsoft recommended security configurations for Microsoft Defender Antivirus using the Windows 10 and later Security Baseline (version 24H2) in Intune.
 
-- Go to https://intune.microsoft.com  
-- Navigate to **Devices → Configuration profiles**  
-- Click **+ Create profile**  
-- Select:  
-  - Platform: Windows 10 and later  
-  - Profile type: Security baseline  
-- Click **Create**  
-- Select **Security Baseline for Windows 10 and later (version 24H2)**  
-- Click **Next**  
+---
 
-## Step 2 – Configure the Profile
+## Prerequisites  
+- Access to [Microsoft Endpoint Manager Admin Center](https://intune.microsoft.com)  
+- Device groups already created in Azure AD for assignment
 
-- Name your profile (e.g., Defender Antivirus Baseline 24H2)  
-- Click **Next** to browse the settings  
-- In the **Microsoft Defender Antivirus** section, verify the following are enabled:  
-  - Turn on Microsoft Defender Antivirus: Enabled  
-  - Cloud-delivered protection: Enabled  
-  - Submit samples automatically: Send safe samples automatically  
-  - Scan all downloaded files and attachments: Enabled  
-  - Check for latest virus definitions before each scan: Enabled  
-  - Scan mapped network drives during full scan: Enabled  
-- Leave other settings at default  
-- Click **Next**  
+---
 
-## Step 3 – Assign the Profile
+## Step-by-Step Deployment Guide
 
-- In the **Assignments** page, click **Add groups**  
-- Select your test devices group (e.g., Test Devices)  
-- Click **Next** then **Create**  
+### Step 1 – Access Devices Configuration  
+1. Log in to [https://intune.microsoft.com](https://intune.microsoft.com)  
+2. In the left-hand menu, click **Devices**  
+3. Click on **Configuration** (or **Configuration profiles**)  
 
-## Step 4 – Validate Deployment
+### Step 2 – Create Security Baseline Profile  
+1. Click **+ Create profile** (top menu)  
+2. In the profile creation window, select the tab **Templates**  
+3. From the list, select **Security baselines**  
+4. Choose **Security Baseline for Windows 10 and later (version 24H2)**  
+5. Click **Create**  
 
-- On a target device, open PowerShell and run:  
-  ```powershell
-  Get-MpPreference
+### Step 3 – Configure Profile  
+1. Provide a clear name for your profile, e.g., `Defender Antivirus Baseline 24H2`  
+2. Click **Next** to navigate through configuration pages until you reach **Microsoft Defender Antivirus** settings  
+3. Verify the following settings are enabled by default (Microsoft recommended):  
 
+| Setting                              | Value           | Description                                     |
+|------------------------------------|-----------------|-------------------------------------------------|
+| Turn on Microsoft Defender Antivirus | ✅ Enabled       | Real-time malware protection activated          |
+| Cloud-delivered protection          | ✅ Enabled       | Leverages Microsoft cloud protection             |
+| Submit samples automatically        | ✅ Send safe samples automatically | Avoids user prompts during scans               |
+| Scan all downloaded files and attachments | ✅ Enabled | Ensures downloaded files are scanned             |
+| Check for latest virus definitions before each scan | ✅ Enabled | Keeps virus signatures up to date                |
+| Scan mapped network drives during full scan | ✅ Enabled  | Detects lateral network threats                   |
 
+4. Leave other settings as default or customize if needed  
+5. Click **Next**
+
+### Step 4 – Assign the Profile  
+1. Under **Assignments**, click **Add groups**  
+2. Select the device group(s) to which you want to apply this baseline (e.g., your test devices)  
+3. Click **Next** then **Create** to finish the deployment  
+
+---
+
+## Step 5 – Validation (Optional)  
+On a targeted device, open PowerShell and run:  
+```powershell
+Get-MpPreference
 
 ---
 
