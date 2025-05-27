@@ -1,20 +1,10 @@
-# 03 - Security Compliance & Policies
+# 03 - Authentification
 
 Modern enterprise environments face constant threats targeting user identities, devices, and cloud resources. Implementing robust security policies—such as Conditional Access, Multi-Factor Authentication, and compliance enforcement—is critical to support Zero Trust principles and meet compliance requirements.
 
 This section covers security compliance settings and policies essential to secure the environment and enforce best practices.
 
 ---
-
-# 🔴 Security Policies Overview
-
-| Policy Area                 | Description                                                        |
-|----------------------------|--------------------------------------------------------------------|
-| **Conditional Access (CA)**| Enforces granular access controls based on user, device, location, and risk level. |
-| **Multi-Factor Authentication (MFA)** | Adds a second layer of verification to strengthen identity security.        |
-| **Device Compliance**       | Ensures devices meet security baselines (patching, encryption, antivirus). |
-| **Identity Protection**     | Uses risk detection and mitigation to prevent compromised accounts. |
-
 
 # 🔴 Multi-Factor Authentication (MFA)
 
