@@ -27,14 +27,21 @@ Apply Microsoft recommended Defender Antivirus settings using Intune Endpoint Se
 1. Give your policy a name, e.g., `Defender Antivirus Baseline 24H2`  
 2. Configure the following settings:  
 
-| Setting                              | Value           | Description                                     |
-|------------------------------------|-----------------|-------------------------------------------------|
-| Turn on Microsoft Defender Antivirus | ✅ Enabled       | Real-time protection enabled                      |
-| Cloud-delivered protection          | ✅ Enabled       | Use Microsoft cloud for advanced threat protection |
-| Submit samples automatically        | ✅ Send safe samples automatically | Automate sample submission, avoid user prompts   |
-| Scan all downloaded files and attachments | ✅ Enabled | Ensures all downloads are scanned                 |
-| Check for latest virus definitions before scan | ✅ Enabled | Keeps virus signatures updated                     |
-| Scan mapped network drives during full scan | ✅ Enabled  | Detect lateral network threats                      |
+# Microsoft Defender for Endpoint Configuration
+
+| Setting                                      | Policy Name / Description                          | Expected Value / Notes                             |
+|----------------------------------------------|--------------------------------------------------|---------------------------------------------------|
+| Turn on Microsoft Defender Antivirus          | Allow Realtime Monitoring                         | Enable                                            |
+| Cloud-delivered protection                    | Allow Cloud Protection                            | Enable                                            |
+| Submit samples automatically                  | Submit Samples Consent                            | Send safe samples automatically (no user prompt) |
+| Scan all downloaded files and attachments    | Allow scanning of all downloaded files and attachments | Enable                                    |
+| Scan mapped network drives during full scan  | Allow Full Scan On Mapped Network Drives         | Enable                                            |
+
+
+You only need to configure these five policies to meet the required settings.
+
+If you want, I can help you create the OMA-URI or JSON configuration for Intune or other management tools.
+
 
 3. Leave other settings as default unless your company needs other specific settings  
 4. Click **Next**  
