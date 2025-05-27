@@ -4,62 +4,62 @@
 To apply Microsoft recommended security configurations using the **Windows 10 and later Security Baseline** in Intune.  
 Focus: Defender Antivirus, Firewall settings, and User Rights assignments.
 
-# Deploy Microsoft Defender Antivirus Baseline via Intune
+# Deploy Microsoft Defender Antivirus Baseline via Intune (2025 Updated)
 
 ## Objective  
-Apply Microsoft recommended security configurations for Microsoft Defender Antivirus using the Windows 10 and later Security Baseline (version 24H2) in Intune.
+Apply Microsoft recommended security configurations for Microsoft Defender Antivirus on Windows 10/11 devices via Intune.
 
 ---
 
 ## Prerequisites  
-- Access to [Microsoft Endpoint Manager Admin Center](https://intune.microsoft.com)  
-- Device groups already created in Azure AD for assignment
+- Access to [Microsoft Endpoint Manager](https://intune.microsoft.com)  
+- Azure AD device groups ready for assignment
 
 ---
 
 ## Step-by-Step Deployment Guide
 
 ### Step 1 – Access Devices Configuration  
-1. Log in to [https://intune.microsoft.com](https://intune.microsoft.com)  
-2. In the left-hand menu, click **Devices**  
-3. Click on **Configuration** (or **Configuration profiles**)  
+1. Sign in to [https://intune.microsoft.com](https://intune.microsoft.com)  
+2. In the left menu, click **Devices**  
+3. Click on **Configuration**  
 
-### Step 2 – Create Security Baseline Profile  
-1. Click **+ Create profile** (top menu)  
-2. In the profile creation window, select the tab **Templates**  
-3. From the list, select **Security baselines**  
-4. Choose **Security Baseline for Windows 10 and later (version 24H2)**  
+### Step 2 – Create Defender Antivirus Profile  
+1. Click **+ Create profile**  
+2. Under **Platform**, select **Windows 10 and later**  
+3. Under **Profile type**, select **Templates**  
+4. From the list of templates, select **Microsoft Defender for Endpoint (Desktop devices running Windows 10 or later)**  
 5. Click **Create**  
 
 ### Step 3 – Configure Profile  
-1. Provide a clear name for your profile, e.g., `Defender Antivirus Baseline 24H2`  
-2. Click **Next** to navigate through configuration pages until you reach **Microsoft Defender Antivirus** settings  
-3. Verify the following settings are enabled by default (Microsoft recommended):  
+1. Give the profile a clear name (e.g., `Defender Antivirus Baseline 24H2`)  
+2. Click **Next** to navigate to configuration pages  
+3. Configure Microsoft Defender Antivirus settings as follows:  
 
 | Setting                              | Value           | Description                                     |
 |------------------------------------|-----------------|-------------------------------------------------|
-| Turn on Microsoft Defender Antivirus | ✅ Enabled       | Real-time malware protection activated          |
-| Cloud-delivered protection          | ✅ Enabled       | Leverages Microsoft cloud protection             |
-| Submit samples automatically        | ✅ Send safe samples automatically | Avoids user prompts during scans               |
-| Scan all downloaded files and attachments | ✅ Enabled | Ensures downloaded files are scanned             |
-| Check for latest virus definitions before each scan | ✅ Enabled | Keeps virus signatures up to date                |
-| Scan mapped network drives during full scan | ✅ Enabled  | Detects lateral network threats                   |
+| Turn on Microsoft Defender Antivirus | ✅ Enabled       | Real-time protection enabled                      |
+| Cloud-delivered protection          | ✅ Enabled       | Use Microsoft cloud for advanced threat protection |
+| Submit samples automatically        | ✅ Send safe samples automatically | Automate sample submission, avoid user prompts   |
+| Scan all downloaded files and attachments | ✅ Enabled | Ensures all downloads are scanned                 |
+| Check for latest virus definitions before scan | ✅ Enabled | Keeps virus signatures updated                     |
+| Scan mapped network drives during full scan | ✅ Enabled  | Detect lateral network threats                      |
 
-4. Leave other settings as default or customize if needed  
-5. Click **Next**
+4. Leave other settings as default or adjust based on your organization's needs  
+5. Click **Next**  
 
 ### Step 4 – Assign the Profile  
 1. Under **Assignments**, click **Add groups**  
-2. Select the device group(s) to which you want to apply this baseline (e.g., your test devices)  
-3. Click **Next** then **Create** to finish the deployment  
+2. Select your device groups to apply the profile  
+3. Click **Next** and then **Create**  
 
 ---
 
-## Step 5 – Validation (Optional)  
-On a targeted device, open PowerShell and run:  
+## Step 5 – Validate Deployment  
+- On a target device, open PowerShell and run:  
 ```powershell
 Get-MpPreference
-
+```
 ---
 
 ## 🔥 Windows Firewall Settings
