@@ -28,79 +28,29 @@ Apply Microsoft recommended Defender Antivirus settings using Intune Endpoint Se
 2. Configure the following settings:  
 
 # Microsoft Defender for Endpoint Configuration
+# Microsoft Defender Key Settings
 
-## 🔒 Core Protection Settings
+| Parameter                                      | Value / Status                          |
+|-----------------------------------------------|---------------------------------------|
+| Allow Realtime Monitoring                      | Allowed. Turns on and runs the real-time monitoring service. |
+| Allow Cloud Protection                         | Allowed. Turns on Cloud Protection.   |
+| Submit Samples Consent                         | Send safe samples automatically.      |
+| Allow scanning of all downloaded files and attachments | Allowed.                       |
+| Check For Signatures Before Running Scan      | Enabled                               |
+| Allow Full Scan On Mapped Network Drives      | Allowed. Scans mapped network drives. |
+| Allow Archive Scanning                         | Allowed. Scans the archive files.     |
+| Allow Behavior Monitoring                      | Allowed. Turns on real-time behavior monitoring. |
+| Allow Email Scanning                           | Allowed. Turns on email scanning.     |
+| Allow Full Scan Removable Drive Scanning      | Allowed. Scans removable drives.      |
+| Allow Scanning Network Files                   | Allowed. Scans network files.         |
+| Enable Network Protection                      | Enabled (audit mode)                   |
+| PUA Protection                                | PUA Protection on. Detected items are blocked. They will show in history along with other threats. |
+| Scan Parameter                                | Full scan                            |
+| Real Time Scan Direction                       | Monitor all files (bi-directional).   |
+| Schedule Scan Day                             | Every day                            |
+| Schedule Scan Time                            | 120                                  |
 
-- **Turn on Microsoft Defender Antivirus**: ✔️ Enabled  
-- **Real-Time Protection**: ✔️ Enabled  
-- **Cloud-Delivered Protection**: ✔️ Enabled  
-- **Automatic Sample Submission**: ✔️ Always send (no user prompt)  
-- **Potentially Unwanted Application (PUA) Protection**: ✔️ Enabled  
-- **Network Protection**: ✔️ Enabled (Block mode)  
-
----
-
-## 🧠 Behavior Monitoring & File Scanning
-
-- **Behavior Monitoring**: ✔️ Enabled  
-- **Script Scanning (PowerShell, JavaScript, etc.)**: ✔️ Enabled  
-- **Archive File Scanning (.zip, .rar, etc.)**: ✔️ Enabled  
-- **Email Attachments & Downloads Scanning**: ✔️ Enabled  
-- **Email Body Scanning**: ✔️ Enabled  
-- **Network Files Scanning**: ✔️ Enabled  
-- **Removable & Network Drive Scanning**: ✔️ Enabled  
-
----
-
-## 🕒 Scheduled Scans
-
-- **Scan Type**: Full Scan  
-- **Frequency**: Daily  
-- **Scheduled Time**: 2:00 AM  
-- **Catch-up Scan (if device was off)**: ✔️ Enabled  
-- **Low CPU Priority During Scan**: ✔️ Enabled  
-
----
-
-## 🔁 Remediation & Quarantine
-
-- **Automatic Actions**: ✔️ Enabled (Remove or Quarantine)  
-- **User Interaction**: ❌ Disabled (no end-user decision)  
-- **Quarantine Retention Period**: 30 Days  
-- **Real-Time Threat Mitigation**: ✔️ Enabled  
-
----
-
-## 🛡️ Attack Surface Reduction (ASR) Rules (Recommended)
-
-- Block executable content from email/webmail  
-- Block credential stealing from LSASS  
-- Use advanced protection against ransomware  
-- Block Office macros from the internet  
-- Enable AMSI for Office applications  
-
----
-
-## 📈 Reporting & Alerts
-
-- **Alert Notifications**: ✔️ Enabled  
-- **Device Compliance Reporting**: ✔️ Enabled  
-- **Send data to Microsoft Security Center**: ✔️ Enabled  
-- **Tamper Protection**: ✔️ Enabled (prevents settings changes)  
-
----
-
-## 🔐 Additional Recommendations
-
-- Integrate with **Microsoft Defender for Endpoint** for EDR, threat analytics, and advanced hunting.  
-- Apply **Endpoint Detection and Response (EDR) in block mode**.  
-- Combine with **Zero Trust policies** and **Conditional Access**.  
-- Keep Defender and platform updates enabled via Windows Update or WSUS.  
-
-
-
-3. Click **Next**  
-
+![Defender_Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Defender_Policy.png)
 ---
 
 ## 🛡️ Step 4 – Assign Policy  
@@ -110,7 +60,6 @@ Apply Microsoft recommended Defender Antivirus settings using Intune Endpoint Se
 
 3. Then click Create to deploy the policy to all devices in that group.
 
-![Defender_Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Defender_Policy.png)
 
 ## 🛡️ Step 5 – Validation  
 - On a client machine, open PowerShell and run:  
