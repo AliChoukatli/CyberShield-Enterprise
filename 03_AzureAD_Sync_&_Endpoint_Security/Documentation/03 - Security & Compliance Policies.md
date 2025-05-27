@@ -637,5 +637,7 @@ Before creating the Conditional Access policy, define your trusted countries in 
 
 > ⚠️ **Tip:** Be careful not to lock yourself out. Exclude break-glass accounts or test on a pilot group before applying it to all users.
 
+![All_Condi_Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/All_Condi_policy.png)
+
 ---
 
