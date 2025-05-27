@@ -60,6 +60,7 @@ Apply Microsoft recommended security configurations for Microsoft Defender Antiv
 ```powershell
 Get-MpPreference
 ```
+- Confirm Defender Antivirus is enabled and configured per the baseline
 ---
 
 ## 🔥 Windows Firewall Settings
