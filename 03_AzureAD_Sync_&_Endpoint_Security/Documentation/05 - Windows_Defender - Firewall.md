@@ -47,8 +47,11 @@ If you want, I can help you create the OMA-URI or JSON configuration for Intune 
 4. Click **Next**  
 
 ## Step 4 – Assign Policy  
-1. On the **Assignments** page, select the device groups to apply the policy to (e.g., your test devices group)  
-2. Click **Next** and then **Create**  
+1. On the Assignments page, select the device group named Windows11/10 devices.
+
+2. Click Next.
+
+3. Then click Create to deploy the policy to all devices in that group.
 
 ## Step 5 – Validation  
 - On a client machine, open PowerShell and run:  
