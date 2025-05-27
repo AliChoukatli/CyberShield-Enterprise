@@ -38,11 +38,6 @@ Apply Microsoft recommended Defender Antivirus settings using Intune Endpoint Se
 | Scan mapped network drives during full scan  | Allow Full Scan On Mapped Network Drives         | Enable                                            |
 
 
-You only need to configure these five policies to meet the required settings.
-
-If you want, I can help you create the OMA-URI or JSON configuration for Intune or other management tools.
-
-
 3. Leave other settings as default unless your company needs other specific settings  
 4. Click **Next**  
 
@@ -52,6 +47,8 @@ If you want, I can help you create the OMA-URI or JSON configuration for Intune 
 2. Click Next.
 
 3. Then click Create to deploy the policy to all devices in that group.
+
+![Defender_Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Defender_Policy.png)
 
 ## Step 5 – Validation  
 - On a client machine, open PowerShell and run:  
