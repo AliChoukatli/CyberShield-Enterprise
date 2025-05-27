@@ -4,37 +4,28 @@
 To apply Microsoft recommended security configurations using the **Windows 10 and later Security Baseline** in Intune.  
 Focus: Defender Antivirus, Firewall settings, and User Rights assignments.
 
-# Deploy Microsoft Defender Antivirus Baseline via Intune (2025 Updated)
+# Configure Microsoft Defender Antivirus via Intune Endpoint Security
 
 ## Objective  
-Apply Microsoft recommended security configurations for Microsoft Defender Antivirus on Windows 10/11 devices via Intune.
+Apply Microsoft recommended Defender Antivirus settings using Intune Endpoint Security Antivirus policy.
 
 ---
 
-## Prerequisites  
-- Access to [Microsoft Endpoint Manager](https://intune.microsoft.com)  
-- Azure AD device groups ready for assignment
+## Step 1 – Access Endpoint Security Policies  
+1. Go to [https://intune.microsoft.com](https://intune.microsoft.com)  
+2. In the left menu, click **Endpoint security**  
+3. Click on **Antivirus**  
 
----
+## Step 2 – Create Antivirus Policy  
+1. Click **+ Create Policy**  
+2. Select:  
+   - Platform: **Windows 10 and later**  
+   - Profile: **Microsoft Defender Antivirus**  
+3. Click **Create**  
 
-## Step-by-Step Deployment Guide
-
-### Step 1 – Access Devices Configuration  
-1. Sign in to [https://intune.microsoft.com](https://intune.microsoft.com)  
-2. In the left menu, click **Devices**  
-3. Click on **Configuration**  
-
-### Step 2 – Create Defender Antivirus Profile  
-1. Click **+ Create profile**  
-2. Under **Platform**, select **Windows 10 and later**  
-3. Under **Profile type**, select **Templates**  
-4. From the list of templates, select **Microsoft Defender for Endpoint (Desktop devices running Windows 10 or later)**  
-5. Click **Create**  
-
-### Step 3 – Configure Profile  
-1. Give the profile a clear name (e.g., `Defender Antivirus Baseline 24H2`)  
-2. Click **Next** to navigate to configuration pages  
-3. Configure Microsoft Defender Antivirus settings as follows:  
+## Step 3 – Configure Antivirus Settings  
+1. Give your policy a name, e.g., `Defender Antivirus Baseline 24H2`  
+2. Configure the following settings:  
 
 | Setting                              | Value           | Description                                     |
 |------------------------------------|-----------------|-------------------------------------------------|
@@ -45,22 +36,18 @@ Apply Microsoft recommended security configurations for Microsoft Defender Antiv
 | Check for latest virus definitions before scan | ✅ Enabled | Keeps virus signatures updated                     |
 | Scan mapped network drives during full scan | ✅ Enabled  | Detect lateral network threats                      |
 
-4. Leave other settings as default or adjust based on your organization's needs  
-5. Click **Next**  
+3. Leave other settings as default unless your company needs other specific settings  
+4. Click **Next**  
 
-### Step 4 – Assign the Profile  
-1. Under **Assignments**, click **Add groups**  
-2. Select your device groups to apply the profile  
-3. Click **Next** and then **Create**  
+## Step 4 – Assign Policy  
+1. On the **Assignments** page, select the device groups to apply the policy to (e.g., your test devices group)  
+2. Click **Next** and then **Create**  
 
----
-
-## Step 5 – Validate Deployment  
-- On a target device, open PowerShell and run:  
-```powershell
-Get-MpPreference
-```
-- Confirm Defender Antivirus is enabled and configured per the baseline
+## Step 5 – Validation  
+- On a client machine, open PowerShell and run:  
+  ```powershell
+  Get-MpPreference
+  ```
 ---
 
 ## 🔥 Windows Firewall Settings
