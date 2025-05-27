@@ -29,12 +29,6 @@ Apply Microsoft recommended Defender Antivirus settings using Intune Endpoint Se
 
 # Microsoft Defender for Endpoint Configuration
 
-# 🎯 Microsoft Defender Antivirus – Enterprise Security Best Practices
-
-This document outlines the recommended configuration for Microsoft Defender Antivirus to ensure strong endpoint protection in a professional IT environment.
-
----
-
 ## 🔒 Core Protection Settings
 
 - **Turn on Microsoft Defender Antivirus**: ✔️ Enabled  
