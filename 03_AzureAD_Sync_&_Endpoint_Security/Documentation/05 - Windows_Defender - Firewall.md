@@ -27,9 +27,6 @@ Apply Microsoft recommended Defender Antivirus settings using Intune Endpoint Se
 1. Give your policy a name, e.g., `Defender Antivirus Baseline 24H2`  
 2. Configure the following settings:  
 
-# Microsoft Defender for Endpoint Configuration
-# Microsoft Defender Key Settings
-
 | Parameter                                      | Value / Status                          |
 |-----------------------------------------------|---------------------------------------|
 | Allow Realtime Monitoring                      | Allowed. Turns on and runs the real-time monitoring service. |
