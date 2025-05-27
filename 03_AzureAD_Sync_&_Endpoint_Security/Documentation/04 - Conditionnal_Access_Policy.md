@@ -135,43 +135,18 @@ Prevent users — especially privileged roles — from accessing administrative 
 
 - **Users**:  
   - Choose `All users`  
-  - *(Optional: select only Directory roles if you want to restrict it to admins)*
 
 - **Target Resources > Cloud Apps or Actions**:  
   - Select: **Microsoft Admin Portals**  
     *(Includes Microsoft Entra, Intune, M365 Admin Center, Defender Portal, etc.)*
-
----
-
-### 🔹 Conditions
-
-- Leave **Conditions** empty unless you want to apply:
-  - **Device Platforms**: Windows/macOS
-  - **Locations**: Exclude trusted named locations (e.g., head office country)
-
----
-
-### 🔹 Access Controls
-
-- Under **Grant**, select:
-  - ✅ `Block access`
-  - ⛔ But **only if device is not compliant**
-
-➡️ To do that:
-
-- Click **Grant**
-- Choose:
-  - ✅ `Require device to be marked as compliant`
-- Then:
-  - ❌ Uncheck all other options
-  - ✔️ Click `Select`
-
----
-
-### 🔹 Enable Policy
-
-- Set **Enable policy** to `On`
-- Click **Create**
+    
+5. Under **Access controls > Grant**, select:
+   - ✅ **Grant access**
+   - ✅ **Require device to be marked as compliant**
+   - ❌ Uncheck all other options
+   - Click **Select**
+   - **Enable policy** to `On`
+   - Click **Create**
 
 ---
 
