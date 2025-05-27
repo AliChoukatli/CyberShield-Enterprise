@@ -37,9 +37,9 @@ Apply Microsoft recommended Defender Antivirus settings using Intune Endpoint Se
 | Scan all downloaded files and attachments    | Allow scanning of all downloaded files and attachments | Enable                                    |
 | Scan mapped network drives during full scan  | Allow Full Scan On Mapped Network Drives         | Enable                                            |
 
+3. Click **Next**  
 
-3. Leave other settings as default unless your company needs other specific settings  
-4. Click **Next**  
+---
 
 ## Step 4 – Assign Policy  
 1. On the Assignments page, select the device group named Windows11/10 devices.
