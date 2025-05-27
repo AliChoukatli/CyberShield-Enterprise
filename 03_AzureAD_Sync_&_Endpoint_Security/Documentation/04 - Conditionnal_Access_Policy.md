@@ -118,6 +118,79 @@ Enforce Multi-Factor Authentication (MFA) specifically for all users with admini
 
 ---
 
+## ✅ 3. Block Admin Portal Access from Unmanaged Devices
+
+Prevent users — especially privileged roles — from accessing administrative portals (e.g., Microsoft Entra, Intune, Microsoft 365 Admin Center, etc.) from **unmanaged or personal devices**.
+
+## 🧭 How to Configure
+
+1. Go to: [https://entra.microsoft.com](https://entra.microsoft.com)
+2. Navigate to: `Protection > Conditional Access`
+3. Click **+ New policy**
+4. Name the policy: `Block Admin Portal Access from Unmanaged Devices`
+
+---
+
+### 🔹 Assignments
+
+- **Users**:  
+  - Choose `All users`  
+  - *(Optional: select only Directory roles if you want to restrict it to admins)*
+
+- **Target Resources > Cloud Apps or Actions**:  
+  - Select: **Microsoft Admin Portals**  
+    *(Includes Microsoft Entra, Intune, M365 Admin Center, Defender Portal, etc.)*
+
+---
+
+### 🔹 Conditions
+
+- Leave **Conditions** empty unless you want to apply:
+  - **Device Platforms**: Windows/macOS
+  - **Locations**: Exclude trusted named locations (e.g., head office country)
+
+---
+
+### 🔹 Access Controls
+
+- Under **Grant**, select:
+  - ✅ `Block access`
+  - ⛔ But **only if device is not compliant**
+
+➡️ To do that:
+
+- Click **Grant**
+- Choose:
+  - ✅ `Require device to be marked as compliant`
+- Then:
+  - ❌ Uncheck all other options
+  - ✔️ Click `Select`
+
+---
+
+### 🔹 Enable Policy
+
+- Set **Enable policy** to `On`
+- Click **Create**
+
+---
+
+## 📸 Screenshot Example (Optional)
+
+_Add a screenshot of the policy summary once created in the Entra portal._
+
+---
+
+## ✅ Result
+
+With this policy:
+- Access to sensitive admin interfaces is **blocked on unmanaged devices**
+- Only corporate-managed, compliant endpoints can reach Microsoft admin services
+- Enforces your **Zero Trust architecture**
+
+---
+
+
 ## ✅ 3. Require MFA for All Users
 
 **Purpose**: Enforce Multi-Factor Authentication (MFA) to protect user sign-ins from credential theft and phishing.
