@@ -104,7 +104,7 @@ Enforce Multi-Factor Authentication (MFA) specifically for all users with admini
 4. Under **Assignments** > **Users**, click Select **users and groups**
 5. Select **Directory roles**  
 6. Choose all administrative roles (e.g. Global administrator, Security administrator,Conditional Access administrator, Intune Administrator etc.)
-7. Under **Target Resources**, select all admin ressources: ✅ **Microsoft Admin Portals** ✅ **Azure Resource Manager** etc.
+7. Under **Target Resources**, select all cloud apps
 8. Leave **Conditions** empty (optional: configure risk-based conditions)  
 9. Under **Access controls** > **Grant**, select:  
    - **Grant access**  
@@ -148,22 +148,12 @@ Prevent users — especially privileged roles — from accessing administrative 
    - **Enable policy** to `On`
    - Click **Create**
 
----
 
-## 📸 Screenshot Example (Optional)
-
-_Add a screenshot of the policy summary once created in the Entra portal._
+![Admin_Portal_Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Admin_Portal_Policy.png)
 
 ---
 
-## ✅ Result
 
-With this policy:
-- Access to sensitive admin interfaces is **blocked on unmanaged devices**
-- Only corporate-managed, compliant endpoints can reach Microsoft admin services
-- Enforces your **Zero Trust architecture**
-
----
 
 
 ## ✅ 3. Require MFA for All Users
@@ -176,7 +166,7 @@ With this policy:
 2. Click **+ New policy**
 3. Name it: `Require MFA for All Users`
 4. Under **Assignments** > **Users**, select **All users** (or a pilot group)
-5. Under **Cloud apps**, select **All cloud apps**
+5. Under **Target Resources**, select **All cloud apps**
 6. Leave **Conditions** empty (optional: configure risk-based conditions)
 7. Under **Access controls** > **Grant**, choose:
    - **Grant access**
@@ -198,7 +188,7 @@ With this policy:
 2. Click **+ New policy**
 3. Name the policy: `Require Compliant Devices`
 4. Under **Assignments** > **Users**, select **All users**
-5. Under **Cloud apps**, choose **All cloud apps**
+5. Under **Target Resources**, choose **All cloud apps**
 6. Under **Conditions**:
    - Go to **Device platforms** > *Configure* (include Windows, macOS)
 7. Under **Access controls** > **Grant**, choose:
