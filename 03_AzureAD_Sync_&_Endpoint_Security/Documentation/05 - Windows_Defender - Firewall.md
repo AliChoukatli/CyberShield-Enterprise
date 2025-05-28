@@ -82,7 +82,7 @@ Apply Microsoft recommended Defender Antivirus settings using Intune Endpoint Se
   ```
 ![Defender_Validation](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Defender_Validation.png)
 
-## Step 6 - Report
+## 🛡️ Step 6 - Report
 - OR Go to Devices > Configuration > Defender Antivirus Baseline 24H2
 - Select View Report
 
