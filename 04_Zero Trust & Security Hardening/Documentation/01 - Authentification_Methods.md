@@ -29,7 +29,7 @@ The project implements MFA using the following modern methods:
 ![TAP Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/TAP-Policy.png)
 
 
-## 👤  End-User MFA Experience: Temporary Access Pass Flow (Sophia Martinez)
+#### 👤  End-User MFA Experience: Temporary Access Pass Flow (Sophia Martinez)
 
 This scenario demonstrates how a new employee, **Sophia Martinez**, securely registers her first authentication method using a **Temporary Access Pass (TAP)**.
 
@@ -155,7 +155,7 @@ Go to **Settings → Accounts → Sign-in options**
 
 ---
 
-## ✅ Full Cloud Deployment (Azure AD Join only)
+### ✅ Full Cloud Deployment (Azure AD Join only)
 
 ### Overview
 
@@ -167,7 +167,7 @@ Go to **Settings → Accounts → Sign-in options**
 
 ---
 
-## 🔧 Configure Windows Hello for Business via Intune
+#### 🔧 Configure Windows Hello for Business via Intune
 
 1. Go to **Microsoft Intune Admin Center**:  
    `https://intune.microsoft.com`
@@ -210,7 +210,7 @@ Go to **Settings → Accounts → Sign-in options**
 
 ---
 
-## 👤 End-User MFA Experience: Windows Hello for Business (Sophia Martinez)
+#### 👤 End-User MFA Experience: Windows Hello for Business (Sophia Martinez)
 
 Once the policy is applied, users will:
 
@@ -243,7 +243,7 @@ By enforcing granular Conditional Access rules, multi-factor authentication, and
 | **Authenticator on companion apps**                | ☁️ Microsoft-managed     | Controls use on devices like Apple Watch                                                    |
 
 
-## 👤 End-User MFA Experience: Microsoft Authenticator Flow (Sophia Martinez)
+#### 👤 End-User MFA Experience: Microsoft Authenticator Flow (Sophia Martinez)
 
 This example demonstrates a typical end-user multi-factor authentication (MFA) flow in a Microsoft 365 cloud-only environment.  
 The scenario features **Sophia Martinez**, an employee at CyberShield, logging in securely using **Microsoft Authenticator** with number matching and biometric confirmation.
@@ -287,7 +287,7 @@ Upon successful verification, access is granted:
 > 🔒 This MFA flow protects against phishing, token theft, and MFA fatigue attacks by combining number matching and biometric confirmation.
 ---
 
-### 🔑 Key Takeaways:
+#### 🔑 Key Takeaways:
 - Microsoft Authenticator enforces a modern, phishing-resistant MFA experience.
 - Number matching ensures the user is physically present at the time of sign-in.
 - Biometric or PIN-based confirmation ensures that only the legitimate user can approve the login.
@@ -311,7 +311,7 @@ Upon successful verification, access is granted:
 
 ---
 
-## 👤 End-User Experience: FIDO2 Security Key (Sophia Martinez)
+#### 👤 End-User Experience: FIDO2 Security Key (Sophia Martinez)
 
 Sophia is required to register and use a **FIDO2 security key** as part of her passwordless authentication methods. This key allows strong, phishing-resistant authentication.
 
@@ -383,7 +383,7 @@ Access is granted using **strong phishing-resistant authentication**
 
 ---
 
-### ✅ Final State: Secure Authentication Profile (Sophia Martinez)
+## ✅ Final State: Secure Authentication Profile (Sophia Martinez)
 
 | Authentication Method        | Status         | Purpose                         |
 |-----------------------------|----------------|---------------------------------|
