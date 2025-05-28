@@ -61,8 +61,27 @@ Apply Microsoft recommended Defender Antivirus settings using Intune Endpoint Se
 ## 🛡️ Step 5 – Validation  
 - On a client machine, open PowerShell and run:  
   ```powershell
-  Get-MpPreference
+    Get-MpPreference | Select-Object `
+    DisableRealtimeMonitoring, `
+    CloudBlockLevel, `
+    SubmitSamplesConsent, `
+    DisableScriptScanning, `
+    CheckForSignaturesBeforeRunningScan, `
+    DisableScanningMappedNetworkDrivesForFullScan, `
+    DisableArchiveScanning, `
+    DisableBehaviorMonitoring, `
+    DisableEmailScanning, `
+    DisableRemovableDriveScanning, `
+    DisableScanningNetworkFiles, `
+    EnableNetworkProtection, `
+    PUAProtection, `
+    ScanParameters, `
+    RealTimeScanDirection, `
+    ScanScheduleDay, `
+    ScanScheduleOffset
   ```
+![Defender_Validation](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Defender_Validation.png)
+
 ---
 
 ## 🔥 Windows Firewall Settings
