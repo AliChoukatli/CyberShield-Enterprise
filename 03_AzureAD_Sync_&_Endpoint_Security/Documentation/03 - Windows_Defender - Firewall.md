@@ -1,4 +1,4 @@
-# 🛡️ Defender, Firewall & User Rights (via Intune)
+# 🛡️  Microsof Defender
 
 ## 🎯 Objective
 To apply Microsoft recommended security configurations using the **Windows 10 and later Security Baseline** in Intune.  
