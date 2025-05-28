@@ -1,4 +1,4 @@
-🔴 # Authentification Methods
+# 🔴 Authentification Methods
 
 Modern enterprise environments face constant threats targeting user identities, devices, and cloud resources. Implementing robust security policies—such as Conditional Access, Multi-Factor Authentication, and compliance enforcement—is critical to support Zero Trust principles and meet compliance requirements.
 
