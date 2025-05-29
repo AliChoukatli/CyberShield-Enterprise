@@ -66,31 +66,10 @@ Used for on-premise Active Directory environments with GPO-based management.
 | Apply local firewall rules             | **Yes**         |
 | Apply local connection security rules  | **Yes**         |
 
-5. Apply and close
+![GPO-Firewall](ttps://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/GPO-Firewall.png)
 
----
+5. Apply this options on Public and Private Profile and close
 
-## ✅ Best Practices
 
-- Enable logging for dropped packets and successful connections
-- Use firewall rules to explicitly allow required apps and ports
-- Block all unsolicited inbound connections by default
-- Regularly review and audit firewall policies
-
----
-
-## 📸 Screenshots
-
-Place all relevant screenshots in the `/04 Azure AD and Endpoint Security/Firewall Configuration/` folder:
-
-- `intune-firewall-policy.png`  
-- `domain-profile-settings.png`  
-- `private-profile-settings.png`  
-- `public-profile-settings.png`  
-- `gpo-domain-profile.png` *(if applicable)*  
-- `gpo-private-profile.png` *(if applicable)*  
-- `gpo-public-profile.png` *(if applicable)*  
-
----
 
 > ✅ This dual-method approach ensures your project is adaptable for both modern and legacy enterprise environments.
