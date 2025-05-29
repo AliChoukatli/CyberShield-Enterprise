@@ -66,7 +66,7 @@ Used for on-premise Active Directory environments with GPO-based management.
 | Apply local firewall rules             | **Yes**         |
 | Apply local connection security rules  | **Yes**         |
 
-![GPO-Firewall](ttps://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/GPO-Firewall.png)
+![GPO-Firewall](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/GPO-Firewall.png)
 
 5. Apply this options on Public and Private Profile and close
 
