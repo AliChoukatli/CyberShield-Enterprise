@@ -8,7 +8,6 @@ Focus: Defender Antivirus, Firewall settings, and User Rights assignments.
 
 ## Objective  
 Apply Microsoft recommended Defender Antivirus settings using Intune Endpoint Security Antivirus policy.
-
 ---
 
 ## 🛡️ Step 1 – Access Endpoint Security Policies  
@@ -21,7 +20,10 @@ Apply Microsoft recommended Defender Antivirus settings using Intune Endpoint Se
 2. Select:  
    - Platform: **Windows 10 and later**  
    - Profile: **Microsoft Defender Antivirus**  
-3. Click **Create**  
+3. Click **Create**
+
+![AV](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Antivirus.png)
+---
 
 ## 🛡️ Step 3 – Configure Antivirus Settings  
 1. Give your policy a name, e.g., `Defender Antivirus Baseline 24H2`  
@@ -56,7 +58,7 @@ Apply Microsoft recommended Defender Antivirus settings using Intune Endpoint Se
 2. Click Next.
 
 3. Then click Create to deploy the policy to all devices in that group.
-
+---
 
 ## 🛡️ Step 5 – Validation  
 - On a client machine, open PowerShell and run:  
