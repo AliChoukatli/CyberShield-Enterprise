@@ -1,4 +1,4 @@
-# ✅ Phase 1 - Azure AD Sync & Endpoint Security
+# ✅ Hybrid Join Guide 
 
 ## 🎯 Objective
 
