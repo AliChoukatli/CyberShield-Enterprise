@@ -58,13 +58,23 @@ Used for on-premise Active Directory environments with GPO-based management.
 3. Click **Windows Defender Firewall Properties**
 4. Configure each profile (**Domain**, **Private**, **Public**) as follows:
 
-| Setting                                | Value           |
-|----------------------------------------|-----------------|
-| Firewall state                         | **On (recommended)** |
-| Inbound connections                    | **Block (default)** |
-| Outbound connections                   | **Allow (default)** |
-| Apply local firewall rules             | **Yes**         |
-| Apply local connection security rules  | **Yes**         |
+## 🔥 Windows Defender Firewall – Recommended Global Settings
+
+| Setting | Value | Description |
+|---------|-------|-------------|
+| **Firewall State** | ✅ Enabled (All Profiles) | Ensures firewall protection is active in all scenarios (Domain, Private, Public) |
+| **Inbound Connections** | ✅ Block (Default) | Blocks all unsolicited incoming traffic unless explicitly allowed |
+| **Outbound Connections** | ✅ Allow (Default) | Permits outbound traffic unless specifically blocked |
+| **Inbound Rules** | 🎯 Allow only what's necessary | Define explicit rules for allowed services (e.g., RDP, SMB) |
+| **Display a notification** | ❌ Disabled | Prevents unnecessary pop-ups and reduces exposure of blocked actions |
+| **Allow unicast responses to multicast or broadcast** | ❌ Disabled | Prevents attackers from discovering devices through network scanning |
+| **Logging: Dropped Packets** | ✅ Enabled | Helps in troubleshooting and auditing rejected connections |
+| **Logging: Successful Connections** | ✅ Enabled (Hybrid only) | Useful in hybrid/on-prem environments for visibility, not required in full cloud |
+| **Log File Path** | `%systemroot%\system32\LogFiles\Firewall\pfirewall.log` | Default location for firewall logs |
+| **Log File Size Limit** | `16,384 KB` or more | Ensures sufficient history for auditing |
+
+> 📝 **Note:** In Full Cloud deployments, logging successful connections may be optional to reduce noise and storage usage.
+
 
 ![GPO-Firewall](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/GPO-Firewall.png)
 
