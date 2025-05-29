@@ -58,6 +58,9 @@ Apply Microsoft recommended Defender Antivirus settings using Intune Endpoint Se
 2. Click Next.
 
 3. Then click Create to deploy the policy to all devices in that group.
+
+![AV-ASSI](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/AV-ass.png)
+
 ---
 
 ## 🛡️ Step 5 – Validation  
