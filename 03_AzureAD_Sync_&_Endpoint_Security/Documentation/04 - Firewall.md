@@ -40,6 +40,7 @@ Used for Azure AD-joined devices managed through Intune.
 
 ![Firewall_Setting](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Firewall_Setting.png)
 
+4. Do the same setting to Public and Private network
 5. Assign the policy to a target Azure AD group  
 6. Save and deploy
 
