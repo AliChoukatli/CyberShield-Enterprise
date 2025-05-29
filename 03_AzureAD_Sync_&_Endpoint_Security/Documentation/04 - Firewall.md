@@ -34,19 +34,14 @@ Used for Azure AD-joined devices managed through Intune.
    `Endpoint security` → `Firewall` → `+ Create Policy`
 2. Choose:
    - **Platform**: Windows 10 and later  
-   - **Profile**: Microsoft Defender Firewall
-3. For each network profile (**Domain**, **Private**, **Public**), configure the following:
+   - **Profile**: Windows Firewall
 
-| Setting                                | Value           |
-|----------------------------------------|-----------------|
-| Firewall state                         | **Enabled**     |
-| Inbound connections                    | **Block (default)** |
-| Outbound connections                   | **Allow (default)** |
-| Allow local firewall rules             | **Yes**         |
-| Allow local connection security rules  | **Yes**         |
+3. Recommanded Setting
 
-4. Assign the policy to a target Azure AD group  
-5. Save and deploy
+![Firewall_Setting](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Firewall_Setting.png)
+
+5. Assign the policy to a target Azure AD group  
+6. Save and deploy
 
 ---
 
