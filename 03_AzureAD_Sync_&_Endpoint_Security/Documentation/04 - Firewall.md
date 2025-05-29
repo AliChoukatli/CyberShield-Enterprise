@@ -68,8 +68,7 @@ Used for on-premise Active Directory environments with GPO-based management.
 
 ![GPO-Firewall](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/GPO-Firewall.png)
 
-5. Apply this options on Public and Private Profile and close
-
-
+5. Apply this options on Public and Private Profile and Select `Ok`
 
 > ✅ This dual-method approach ensures your project is adaptable for both modern and legacy enterprise environments.
+
