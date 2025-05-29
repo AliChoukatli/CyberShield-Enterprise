@@ -54,7 +54,7 @@ Used for on-premise Active Directory environments with GPO-based management.
 
 1. Open the **Local Group Policy Editor**: `gpedit.msc`
 2. Navigate to:  
-   `Computer Configuration` → `Windows Settings` → `Security Settings` → `Windows Defender Firewall with Advanced Security`
+   `Computer Configuration` → `Policies` → `Windows Settings` → `Security Settings` → `Windows Defender Firewall with Advanced Security`
 3. Click **Windows Defender Firewall Properties**
 4. Configure each profile (**Domain**, **Private**, **Public**) as follows:
 
