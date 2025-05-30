@@ -1,4 +1,4 @@
-# 🛡️  Microsof Defender
+# 🛡️  Microsof Defender Antivirus
 
 ## 🎯 Objective
 To apply Microsoft recommended security configurations using the **Windows 10 and later Security Baseline** in Intune.  
