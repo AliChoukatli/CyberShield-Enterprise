@@ -10,24 +10,23 @@ Focus: Defender Antivirus, Firewall settings, and User Rights assignments.
 Apply Microsoft recommended Defender Antivirus settings using Intune Endpoint Security Antivirus policy.
 ---
 
-## 🛡️ Step 1 – Access Endpoint Security Policies  
-1. Go to [https://intune.microsoft.com](https://intune.microsoft.com)  
-2. In the left menu, click **Endpoint security**  
-3. Click on **Antivirus**  
+## 🛡️ Step 1 – Access Endpoint Security Policies 
 
+1. Go to [https://intune.microsoft.com](https://intune.microsoft.com)  
+- Navigate to **Endpoint security > Antivirus**
+  
 ## 🛡️ Step 2 – Create Antivirus Policy  
-1. Click **+ Create Policy**  
-2. Select:  
-   - Platform: **Windows 10 and later**  
-   - Profile: **Microsoft Defender Antivirus**  
-3. Click **Create**
+
+1. Click **+ Create Policy**
+2. Platform: **Windows 10 and later**
+3. Profile: **Microsoft Defender Antivirus**
+4. Name e.g., `Defender Antivirus Baseline 24H2`
+5. Click **Create**
 
 ![AV](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Antivirus.png)
 ---
 
 ## 🛡️ Step 3 – Configure Antivirus Settings  
-1. Give your policy a name, e.g., `Defender Antivirus Baseline 24H2`  
-2. Configure the following settings:  
 
 | Parameter                                      | Value / Status                          |
 |-----------------------------------------------|---------------------------------------|
@@ -53,17 +52,16 @@ Apply Microsoft recommended Defender Antivirus settings using Intune Endpoint Se
 ---
 
 ## 🛡️ Step 4 – Assign Policy  
-1. On the Assignments page, select the device group named Windows11/10 devices.
 
-2. Click Next.
-
-3. Then click Create to deploy the policy to all devices in that group.
+- Assign to group: `Windows 10/11 devices`
+- Click **Next** then **Create**
 
 ![AV-ASSI](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/AV-ass.png)
 
 ---
 
-## 🛡️ Step 5 – Validation  
+## 🛡️ Step 5 – Validation (PowerShell)
+
 - On a client machine, open PowerShell and run:  
   ```powershell
     Get-MpPreference | Select-Object `
@@ -88,7 +86,8 @@ Apply Microsoft recommended Defender Antivirus settings using Intune Endpoint Se
 ![Defender_Validation](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Defender_Validation.png)
 
 ## 🛡️ Step 6 - Report
-- OR Go to Devices > Configuration > Defender Antivirus Baseline 24H2
+- Go to Devices > Configuration
+- Select policy: Defender Antivirus Baseline 24H2
 - Select View Report
 
 ![Defender_Report](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Defender_Report.png)
@@ -96,17 +95,5 @@ Apply Microsoft recommended Defender Antivirus settings using Intune Endpoint Se
 ---
 
 
----
-
-
-
-## 🧠 Notes
-
-- These settings apply automatically once assigned to a device group.
-- Devices must check in to Intune to receive policy updates.
-- User Rights hardening helps prevent lateral movement in case of compromise.
-- Defender AV and Firewall ensure compliance with endpoint protection baselines.
-
----
-
-> This baseline is essential for maintaining core endpoint protection on all corporate-managed Windows devices.
+✅ Conclusion
+This Defender configuration ensures real-time protection and basic hardening, making it ready for integration with Microsoft Sentinel.
