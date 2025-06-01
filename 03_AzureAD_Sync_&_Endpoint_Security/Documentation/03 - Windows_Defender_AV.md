@@ -2,7 +2,7 @@
 
 # Part 1 - Configure Microsoft Defender Antivirus via Intune Endpoint Security
 
-## 🎯  Objective  
+## 🎯 Objective  
 Apply Microsoft recommended Defender Antivirus settings using Intune Endpoint Security Antivirus policy.
 ---
 
