@@ -1,4 +1,4 @@
-## 🔹 Part 2 - Onboard Devices to Microsoft Defender for Endpoint
+# 🔹Defender_for_Endpoint_Onboarding.
 
 -> To enable full integration between your Windows devices and Microsoft Defender for Endpoint (MDE), each device must be properly onboarded. Below are two common methods: **Local Script** and **Group Policy (GPO)**.
 
