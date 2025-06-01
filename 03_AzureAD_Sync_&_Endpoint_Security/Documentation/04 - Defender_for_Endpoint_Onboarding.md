@@ -96,10 +96,10 @@ This will download a `.zip` file containing:
 
 1. Edit or create a GPO that targets the devices you want to onboard.  
 2. Navigate to:  
-   `Computer Configuration → Administrative Templates → Windows Components → Windows Defender Antivirus → Microsoft Defender for Endpoint`  
-3. Open the policy **Specify onboarding script** (or similar name).  
-4. Set the policy to **Enabled**.  
-5. In the script path field, enter the UNC path to the onboarding script:  
+   `Computer Configuration → Policies → Windows Settings → Scripts (Startup/Shutdown)`  
+- Select **Startup**, then click **Properties**.
+- Click **Add...**, then **Browse** to locate the onboarding script (`WindowsDefenderATPOnboardingScript.cmd`) on your shared folder (e.g., `\\DC1\Onboarding\WindowsDefenderATPOnboardingScript.cmd`).
+- Add the script and confirm.
 
 7. **Apply the Group Policy:**
    - On target machines, run the following command to force policy update:
