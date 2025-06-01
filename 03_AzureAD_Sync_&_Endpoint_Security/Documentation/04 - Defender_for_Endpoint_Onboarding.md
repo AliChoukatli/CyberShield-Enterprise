@@ -8,7 +8,7 @@
 
 ### Steps:
 
-1. **Go to the Microsoft 365 Defender portal**:  [https://security.microsoft.com](https://security.microsoft.com)
+1. Go to the Microsoft 365 Defender portal:  [https://security.microsoft.com](https://security.microsoft.com)
 
 2. Navigate to:  
    `Settings` → `Endpoints` → `Onboarding`
