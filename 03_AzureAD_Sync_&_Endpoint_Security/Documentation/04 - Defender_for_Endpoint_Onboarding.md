@@ -75,8 +75,7 @@ This will download a `.zip` file containing:
 
 1. On your Domain Controller (DC) or a file server, create a folder, e.g., `C:\Onboarding`.  
 2. Copy the following files into this folder:  
-   - `WindowsDefenderATPOnboardingScript.cmd`  
-   - Optionally, copy the `.admx` and `.adml` files if you want to add the template to the Group Policy Central Store.  
+   - `WindowsDefenderATPOnboardingScript.cmd`   
 3. Share this folder over the network with read permissions for the computers and users that will apply the GPO.  
    - Example share path: `\\DC1\Onboarding`  
 4. Make sure the shared folder is accessible by target devices.
