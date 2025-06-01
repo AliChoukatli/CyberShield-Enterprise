@@ -90,10 +90,6 @@ This will download a `.zip` file containing:
 2. If you want to add the template to the Central Store:  
    - Copy the `.admx` file to `\\<domain>\SYSVOL\<domain>\Policies\PolicyDefinitions\`  
    - Copy the `.adml` file to the corresponding language folder, e.g., `en-US`  
-3. If you don't use a Central Store, add the template locally in GPMC:  
-   - In GPMC, right-click **Administrative Templates** under a GPO → **Add/Remove Templates...**  
-   - Click **Add**, then select the `WindowsDefenderATPOnboarding.admx` file.
-
 ---
 
 ## 📦 Step 5 – Configure the onboarding policy in GPO
