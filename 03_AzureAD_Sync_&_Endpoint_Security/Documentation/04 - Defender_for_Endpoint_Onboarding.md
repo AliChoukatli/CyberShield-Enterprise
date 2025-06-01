@@ -89,7 +89,10 @@ This will download a `.zip` file containing:
 1. Open **Group Policy Management Console (GPMC)** by running `gpmc.msc` on the DC.  
 2. If you want to add the template to the Central Store:  
    - Copy the `.admx` file to `\\<domain>\SYSVOL\<domain>\Policies\PolicyDefinitions\`  
-   - Copy the `.adml` file to the corresponding language folder, e.g., `en-US`  
+   - Copy the `.adml` file to the corresponding language folder, e.g., `en-US`
+  
+![ADMX](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/admx.png)
+
 ---
 
 ## 📦 Step 5 – Configure the onboarding policy in GPO
@@ -127,4 +130,5 @@ if ($senseService.Status -eq 'Running') {
     Write-Output "❌ Sense service is NOT running."
 }
 ```
+![Verif_Onboard_PS](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/verif_onboard_PS.png)
 
