@@ -107,12 +107,24 @@ This will download a `.zip` file containing:
    ```
 ## 📦 Step 6 - Verify onboarding success:
 
-   - On client devices, use PowerShell to confirm:
-  ```powershell
-   Get-SenseManaged
-   ```
+On client devices, use PowerShell to confirm onboarding status:
 
-   - If it returns True, the device is successfully onboarded to Microsoft Defender for Endpoint.
----
+```powershell
+# Check onboarding state from registry (1 = onboarded)
+$onboardingState = (Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows Advanced Threat Protection\Status" -ErrorAction SilentlyContinue).OnboardingState
 
-## 📌 Once onboarded, the device will begin sending telemetry and alerts to the Microsoft 365 Defender portal, visible under Device inventory.
+if ($onboardingState -eq 1) {
+    Write-Output "✅ Device is successfully onboarded to Microsoft Defender for Endpoint."
+} else {
+    Write-Output "❌ Device is NOT onboarded to Microsoft Defender for Endpoint."
+}
+
+# Optional: Check that the Sense service is running
+$senseService = Get-Service -Name Sense -ErrorAction SilentlyContinue
+if ($senseService.Status -eq 'Running') {
+    Write-Output "✅ Sense service is running."
+} else {
+    Write-Output "❌ Sense service is NOT running."
+}
+```
+
