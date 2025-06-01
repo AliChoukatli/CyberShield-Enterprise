@@ -4,7 +4,7 @@
 To apply Microsoft recommended security configurations using the **Windows 10 and later Security Baseline** in Intune.  
 Focus: Defender Antivirus, Firewall settings, and User Rights assignments.
 
-# Configure Microsoft Defender Antivirus via Intune Endpoint Security
+## Configure Microsoft Defender Antivirus via Intune Endpoint Security
 
 ## Objective  
 Apply Microsoft recommended Defender Antivirus settings using Intune Endpoint Security Antivirus policy.
