@@ -23,7 +23,7 @@
 
 ![OnBoarding_Page](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/OnBoarding_Page.png)
 
-. On the target machine:
+7. On the target machine:
    - Extract the `.zip` file.
    - Open **PowerShell as Administrator**.
    - Run the onboarding script:
