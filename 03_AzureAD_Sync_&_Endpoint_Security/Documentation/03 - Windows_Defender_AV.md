@@ -1,6 +1,6 @@
 # 🛡️  Microsoft Defender Antivirus & Defender for Endpoint Integration
 
-# 🔹 Part 1 - Configure Microsoft Defender Antivirus via Intune
+## 🔹 Part 1 - Configure Microsoft Defender Antivirus via Intune
 
 ### 🛡️ Step 1 – Access Endpoint Security Policies 
 
@@ -86,24 +86,13 @@
 
 ---
 
-# Part 2 - Onboard Devices to Microsoft Defender for Endpoint
+## 🔹 Part 2 - Onboard Devices to Microsoft Defender for Endpoint
 
-
-# Microsoft Defender for Endpoint - Onboarding Windows Devices
-
-To enable full integration between your Windows devices and Microsoft Defender for Endpoint (MDE), each device must be properly onboarded. Below are two common methods: **Local Script** and **Group Policy (GPO)**.
+-> To enable full integration between your Windows devices and Microsoft Defender for Endpoint (MDE), each device must be properly onboarded. Below are two common methods: **Local Script** and **Group Policy (GPO)**.
 
 ---
 
-## ✅ Prerequisites
-
-- A valid Microsoft Defender for Endpoint license (Plan 1/Plan 2, or Microsoft 365 E5 Security).
-- Admin access on each machine.
-- Internet connectivity for communication with MDE.
-
----
-
-## 🔸 Method 1: Onboarding via Local Script (Recommended for testing or small environments)
+### 🔸 Method 1: Onboarding via Local Script (Recommended for testing or small environments)
 
 ### Steps:
 
@@ -133,7 +122,7 @@ To enable full integration between your Windows devices and Microsoft Defender f
 
 ---
 
-## 🔸 Method 2: Onboarding via Group Policy (GPO)
+### 🔸 Method 2: Onboarding via Group Policy (GPO)
 
 This method is recommended for organizations managing domain-joined Windows devices via Group Policy.
 
