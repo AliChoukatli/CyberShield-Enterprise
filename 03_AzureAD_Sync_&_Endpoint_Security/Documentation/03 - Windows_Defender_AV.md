@@ -92,7 +92,7 @@
 
 ---
 
-### 🟢 Method 1: Onboarding via Local Script (Recommended for testing or small environments)
+### 🟢 Method 1: Onboarding via Local Script (Full Cloud)
 
 ### Steps:
 
@@ -122,7 +122,7 @@
 
 ---
 
-### 🟢  Method 2: Onboarding via Group Policy (GPO)
+### 🟢  Method 2: Onboarding via Group Policy (GPO) (Hybride / On-premises)
 
 This method is recommended for organizations managing domain-joined Windows devices via Group Policy.
 
