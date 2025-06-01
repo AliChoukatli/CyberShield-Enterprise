@@ -97,7 +97,7 @@ This will download a `.zip` file containing:
 1. Edit or create a GPO that targets the devices you want to onboard.  
 2. Navigate to: `Computer Configuration → Policies → Windows Settings → Scripts (Startup/Shutdown)`  
 3. Select **Startup**, then click **Properties**.
-4. Click **Add...**, then **Browse** to locate the onboarding script (`WindowsDefenderATPOnboardingScript.cmd`) on your shared folder (e.g., `\\DC1\Onboarding\WindowsDefenderATPOnboardingScript.cmd`).
+4. Click **Add...**, then **type the path of on your shared folder** (e.g., `\\DC1\Onboarding\WindowsDefenderATPOnboardingScript.cmd`).
 5. Add the script and confirm.
 6. **Apply the Group Policy:**
    - On target machines, run the following command to force policy update:
