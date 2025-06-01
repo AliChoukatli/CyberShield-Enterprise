@@ -63,12 +63,12 @@ This will download a `.zip` file containing:
 ### 📦 Step 2 – Prepare the Files
 
 1. Extract the `.zip` package
-2. Copy:
-   - The `.cmd` onboarding script to a shared location (e.g. `\\DC1\Onboarding\WindowsDefenderATPOnboardingScript.cmd`)
-   - The `.admx` file to: `C:\Windows\PolicyDefinitions`
-   - The `.adml` file to: `C:\Windows\PolicyDefinitions\en-US` (or your language folder)
-
----
+2. Locate the following files inside the extracted folder:  
+   - `WindowsDefenderATPOnboardingScript.cmd` (the onboarding script)  
+   - `WindowsDefenderATPOnboarding.admx` (administrative template)  
+   - `WindowsDefenderATPOnboarding.adml` (language file for the ADMX)
+   
+--- 
 ## 📦 Step 3 – Create a network shared folder for onboarding files
 
 1. On your Domain Controller (DC) or a file server, create a folder, e.g., `C:\Onboarding`.  
