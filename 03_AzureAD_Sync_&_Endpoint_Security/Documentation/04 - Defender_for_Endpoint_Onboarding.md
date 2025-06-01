@@ -44,24 +44,37 @@
 This method is recommended for organizations managing domain-joined Windows devices via Group Policy.
 
 
-1. **Download the onboarding package:**
-   - Go to the Microsoft 365 Defender portal: [https://security.microsoft.com](https://security.microsoft.com)
-   - Navigate to: `Settings → Endpoints → Onboarding`
-   - Choose: **Windows 10 and 11**
-   - Deployment method: **Group Policy**
-   - Click **Download package** to get a `.zip` file
+### 📦 Step 1 – Download the Onboarding Package
 
-2. **Prepare the onboarding files:**
-   - Extract the ZIP package
-   - Locate:
-     - The `.cmd` onboarding script
-     - The `.adm` administrative template
+1. Go to the Microsoft 365 Defender portal: [https://security.microsoft.com](https://security.microsoft.com)
+2. Navigate to: **Settings → Endpoints → Onboarding**
+3. Platform: **Windows 10 and 11**
+4. Deployment Method: **Group Policy**
+5. Click **Download package**
+
+This will download a `.zip` file containing:
+
+- `WindowsDefenderATPOnboardingScript.cmd`
+- `WindowsDefenderATPOnboarding.admx`
+- `WindowsDefenderATPOnboarding.adml`
+
+---
+
+### 📦 Step 2 – Prepare the Files
+
+1. Extract the `.zip` package
+2. Copy:
+   - The `.cmd` onboarding script to a shared location (e.g. `\\DC1\Onboarding\WindowsDefenderATPOnboardingScript.cmd`)
+   - The `.admx` file to: `C:\Windows\PolicyDefinitions`
+   - The `.adml` file to: `C:\Windows\PolicyDefinitions\en-US` (or your language folder)
+
+---
    - Copy both files to a central and accessible location (e.g., a shared folder on the network)
 
 3. **Open the Group Policy Management Console (GPMC)**:
    - On a domain controller, open `gpmc.msc`
 
-4. **Create or edit an existing GPO** targeting the devices you want to onboard.
+4. **Create or edit an existing GPO** targeting the devices you want to onboard. `eg: Devices`
 
 5. **Add the onboarding ADM template:**
    - Navigate to:  
