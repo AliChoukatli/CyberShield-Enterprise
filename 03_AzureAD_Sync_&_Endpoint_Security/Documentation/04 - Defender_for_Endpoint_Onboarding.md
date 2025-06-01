@@ -44,7 +44,7 @@ This method is recommended for organizations managing domain-joined Windows devi
 ### 🪟 Steps:
 
 1. **Download the onboarding package:**
-   - Go to [https://security.microsoft.com](https://security.microsoft.com)
+   - Go to the Microsoft 365 Defender portal:[https://security.microsoft.com](https://security.microsoft.com)
    - Navigate to: `Settings → Endpoints → Onboarding`
    - Choose: **Windows 10 and 11**
    - Deployment method: **Group Policy**
