@@ -81,7 +81,7 @@ This will download a `.zip` file containing:
    - Example share path: `\\DC1\Onboarding`  
 4. Make sure the shared folder is accessible by target devices.
 
-![Onboarding_Sharing](Https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Onboarding_Sharing.png)
+![Onboarding_Sharing](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Onboarding_Sharing.png)
 
 ---
 
