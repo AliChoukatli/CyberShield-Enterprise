@@ -21,7 +21,9 @@
 
 6. Click **Download package** to get a `.zip` file containing the onboarding script.
 
-7. On the target machine:
+![OnBoarding_Page](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/OnBoarding_Page.png)
+
+. On the target machine:
    - Extract the `.zip` file.
    - Open **PowerShell as Administrator**.
    - Run the onboarding script:
@@ -29,7 +31,11 @@
    ```cmd
    WindowsDefenderATPOnboardingScript.cmd
    ```
+![Script_Successful](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Successful_Onboard_cmd.png)
+
 8. Wait a few minutes. The device should appear in the Defender portal under Device inventory.
+
+![LTP-HLP_DEF_Status](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/LTP-HLP_DEF_Status.png)
 
 ---
 
