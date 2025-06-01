@@ -77,7 +77,7 @@ This will download a `.zip` file containing:
 2. Copy the following files into this folder:  
    - `WindowsDefenderATPOnboardingScript.cmd`   
 3. Share this folder over the network with read permissions for the computers and users that will apply the GPO.  
-   - Example share path: `\\DC1\Onboarding`  
+   - Example share path: `\\DC01\Onboarding`  
 4. Make sure the shared folder is accessible by target devices.
 
 ![Onboarding_Sharing](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Onboarding_Sharing.png)
