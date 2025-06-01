@@ -58,6 +58,8 @@ This will download a `.zip` file containing:
 - `WindowsDefenderATPOnboarding.admx`
 - `WindowsDefenderATPOnboarding.adml`
 
+![Onboarding_H](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/OnBoarding_Page_H.png)
+
 ---
 
 ### 📦 Step 2 – Prepare the Files
@@ -78,6 +80,8 @@ This will download a `.zip` file containing:
 3. Share this folder over the network with read permissions for the computers and users that will apply the GPO.  
    - Example share path: `\\DC1\Onboarding`  
 4. Make sure the shared folder is accessible by target devices.
+
+![Onboarding_Sharing](Https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Onboarding_Sharing.png)
 
 ---
 
