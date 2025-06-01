@@ -132,3 +132,14 @@ if ($senseService.Status -eq 'Running') {
 ```
 ![Verif_Onboard_PS](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/verif_onboard_PS.png)
 
+---
+
+## 🔹 Conclusion
+
+Onboarding devices to **Microsoft Defender for Endpoint** enables enhanced security and centralized management.
+
+- Use **Local Script** for cloud-only or standalone devices.
+- Use **Group Policy (GPO)** for domain-joined devices.
+
+Verify onboarding by checking the registry and ensuring the **Sense service** is running. Once onboarded, manage and monitor devices via the Microsoft 365 Defender portal.
+
