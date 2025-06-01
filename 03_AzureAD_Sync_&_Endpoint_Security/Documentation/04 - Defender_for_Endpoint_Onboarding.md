@@ -14,15 +14,17 @@
 2. Navigate to:  
    `Settings` → `Endpoints` → `Onboarding`
 
-3. Select the device type:  
+3. Connectivity type : Standard 
+
+4. Select the device type:  
    ➤ *Windows 10 and 11*
 
-4. Under **Deployment method**, choose:  
+5. Under **Deployment method**, choose:  
    ➤ *Local Script*
 
-5. Click **Download package** to get a `.zip` file containing the onboarding script.
+6. Click **Download package** to get a `.zip` file containing the onboarding script.
 
-6. On the target machine:
+7. On the target machine:
    - Extract the `.zip` file.
    - Open **PowerShell as Administrator**.
    - Run the onboarding script:
@@ -30,7 +32,7 @@
    ```cmd
    WindowsDefenderATPOnboardingScript.cmd
    ```
-7. Wait a few minutes. The device should appear in the Defender portal under Device inventory.
+8. Wait a few minutes. The device should appear in the Defender portal under Device inventory.
 
 ---
 
