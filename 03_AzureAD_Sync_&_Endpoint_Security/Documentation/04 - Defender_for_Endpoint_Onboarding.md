@@ -122,7 +122,7 @@ if ($onboardingState -eq 1) {
     Write-Output "❌ Device is NOT onboarded to Microsoft Defender for Endpoint."
 }
 
-# Optional: Check that the Sense service is running
+# Optional: Check that the Sense Service((Windows Defender Advanced Threat Protection) is running
 $senseService = Get-Service -Name Sense -ErrorAction SilentlyContinue
 if ($senseService.Status -eq 'Running') {
     Write-Output "✅ Sense service is running."
