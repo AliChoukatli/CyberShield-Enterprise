@@ -6,8 +6,6 @@
 
 ### 🟢 Method 1: Onboarding via Local Script (Full Cloud)
 
-### Steps:
-
 1. Go to the Microsoft 365 Defender portal:  [https://security.microsoft.com](https://security.microsoft.com)
 
 2. Navigate to:  
@@ -39,9 +37,6 @@
 
 This method is recommended for organizations managing domain-joined Windows devices via Group Policy.
 
----
-
-### 🪟 Steps:
 
 1. **Download the onboarding package:**
    - Go to the Microsoft 365 Defender portal: [https://security.microsoft.com](https://security.microsoft.com)
