@@ -69,25 +69,38 @@ This will download a `.zip` file containing:
    - The `.adml` file to: `C:\Windows\PolicyDefinitions\en-US` (or your language folder)
 
 ---
-   - Copy both files to a central and accessible location (e.g., a shared folder on the network)
+## 📦 Step 3 – Create a network shared folder for onboarding files
 
-3. **Open the Group Policy Management Console (GPMC)**:
-   - On a domain controller, open `gpmc.msc`
+1. On your Domain Controller (DC) or a file server, create a folder, e.g., `C:\Onboarding`.  
+2. Copy the following files into this folder:  
+   - `WindowsDefenderATPOnboardingScript.cmd`  
+   - Optionally, copy the `.admx` and `.adml` files if you want to add the template to the Group Policy Central Store.  
+3. Share this folder over the network with read permissions for the computers and users that will apply the GPO.  
+   - Example share path: `\\DC1\Onboarding`  
+4. Make sure the shared folder is accessible by target devices.
 
-4. **Create or edit an existing GPO** targeting the devices you want to onboard. `eg: Devices`
+---
 
-5. **Add the onboarding ADM template:**
-   - Navigate to:  
-     `Computer Configuration → Administrative Templates`
-   - Right-click **Administrative Templates** and select **Add/Remove Templates**
-   - Click **Add**, then select the `.adm` file from the extracted onboarding package
+## 📦 Step 4 – Add the onboarding ADMX template to Group Policy
 
-6. **Configure the onboarding policy:**
-   - Go to:  
-     `Computer Configuration → Administrative Templates → Windows Components → Windows Defender Antivirus → Microsoft Defender for Endpoint`
-   - Open the policy setting: **"Specify onboarding script"** (or similar, based on template)
-   - Enable the policy
-   - Provide the path to the `.cmd` script (e.g., `\\server\share\WindowsDefenderATPOnboardingScript.cmd`)
+1. Open **Group Policy Management Console (GPMC)** by running `gpmc.msc` on the DC.  
+2. If you want to add the template to the Central Store:  
+   - Copy the `.admx` file to `\\<domain>\SYSVOL\<domain>\Policies\PolicyDefinitions\`  
+   - Copy the `.adml` file to the corresponding language folder, e.g., `en-US`  
+3. If you don't use a Central Store, add the template locally in GPMC:  
+   - In GPMC, right-click **Administrative Templates** under a GPO → **Add/Remove Templates...**  
+   - Click **Add**, then select the `WindowsDefenderATPOnboarding.admx` file.
+
+---
+
+## 📦 Step 5 – Configure the onboarding policy in GPO
+
+1. Edit or create a GPO that targets the devices you want to onboard.  
+2. Navigate to:  
+   `Computer Configuration → Administrative Templates → Windows Components → Windows Defender Antivirus → Microsoft Defender for Endpoint`  
+3. Open the policy **Specify onboarding script** (or similar name).  
+4. Set the policy to **Enabled**.  
+5. In the script path field, enter the UNC path to the onboarding script:  
 
 7. **Apply the Group Policy:**
    - On target machines, run the following command to force policy update:
@@ -95,7 +108,7 @@ This will download a `.zip` file containing:
    ```cmd
    gpupdate /force
    ```
-8. Verify onboarding success:
+## 📦 Step 6 - Verify onboarding success:
 
    - On client devices, use PowerShell to confirm:
   ```powershell
