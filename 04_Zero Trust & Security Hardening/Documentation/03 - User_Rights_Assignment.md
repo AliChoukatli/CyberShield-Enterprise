@@ -1,5 +1,5 @@
 
-## 👤 User Rights Assignment – Hardening Settings (GPO) ( Hybrid or Local AD Environnment)
+## 👤 User Rights Assignment – Hardening Settings (Hybrid or Local AD Environnment)
 
 ## 📋 Overview
 User Rights Assignment controls which users or groups have specific privileges on a system. Hardening these settings is essential to reduce attack surfaces and limit lateral movement.
