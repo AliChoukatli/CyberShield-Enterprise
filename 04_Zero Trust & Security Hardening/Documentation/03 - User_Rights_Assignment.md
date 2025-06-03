@@ -15,7 +15,7 @@ Computer Configuration → Windows Settings → Security Settings → Local Poli
 gpmc.msc
 
 ### 2. 🛠️ Create or Edit a GPO
-- Right-click on the target OU (e.g., `Workstations` or `Servers`)  
+- Right-click on the target OU (e.g., `Devices`)  
 - Select `Create a GPO in this domain and Link it here...`  
 - Name it: `Baseline – User Rights Assignment`  
 - Right-click the GPO → `Edit`
