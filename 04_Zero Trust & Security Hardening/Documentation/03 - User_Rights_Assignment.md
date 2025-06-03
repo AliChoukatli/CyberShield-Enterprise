@@ -4,10 +4,6 @@
 ## 📋 Overview
 User Rights Assignment controls which users or groups have specific privileges on a system. Hardening these settings is essential to reduce attack surfaces and limit lateral movement.
 
-These settings are typically configured via **Group Policy**:
-Computer Configuration → Windows Settings → Security Settings → Local Policies → User Rights Assignment
-
-
 ## 🧭 Step-by-Step Guide (GPO)
 
 ### 1. 🎯 Open Group Policy Management Console (GPMC)
