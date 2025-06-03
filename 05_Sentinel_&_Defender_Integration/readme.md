@@ -134,6 +134,21 @@ A user endpoint triggered a Defender alert for suspicious PowerShell activity at
 **Result:** Device `DESKTOP-01` was successfully isolated from the network to contain the threat.
 
 ---
+- Query 1 – Endpoint alert overview
+```kusto
+SecurityAlert
+| where ProductName == "Microsoft Defender for Endpoint"
+| project TimeGenerated, AlertName, Computer, Severity, Description
+| sort by TimeGenerated desc
+```
+- Query 2 – Timeline of a specific host
+```kusto
+DeviceEvents
+| where DeviceName == "DESKTOP-01"
+| where Timestamp > ago(1d)
+| sort by Timestamp asc
+```
+
 
 ## 📌 Notes
 
