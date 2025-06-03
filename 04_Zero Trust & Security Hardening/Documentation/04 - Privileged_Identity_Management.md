@@ -1,4 +1,3 @@
-
 # 🔐 Azure AD Privileged Identity Management (PIM) – Configuration & Best Practices
 
 ## 📋 Overview
@@ -6,6 +5,8 @@
 Privileged Identity Management (PIM) in Azure AD provides just-in-time (JIT) privileged access, conditional activation, approval workflows, and detailed auditing for high-privilege roles. This approach supports Zero Trust principles by minimizing the attack surface and preventing persistent elevated access.
 
 This documentation outlines how to implement PAM using Azure AD PIM in a cloud-only environment.
+
+> **⚠️ Note:** This project environment uses **Microsoft 365 Business Premium**, which does **not** include **Azure AD Premium P2**—a prerequisite for using PIM. The configurations below are documented based on best practices and Microsoft standards, even though hands-on testing was not performed. This demonstrates familiarity with enterprise-level Zero Trust architecture.
 
 ---
 
@@ -17,7 +18,7 @@ This documentation outlines how to implement PAM using Azure AD PIM in a cloud-o
 
 ## 🧱 Prerequisites
 
-- Azure AD Premium P2 license
+- Azure AD Premium **P2** license (not included in M365 Business Premium)
 - Global Administrator or Privileged Role Administrator privileges to configure PIM
 
 ---
@@ -133,5 +134,5 @@ Include in your GitHub:
 
 Azure AD PIM provides a robust, cloud-native way to implement Privileged Access Management in modern environments. By enforcing just-in-time access, MFA, and audit trails, PIM strengthens security posture and supports Zero Trust architecture.
 
-For any privileged role: **If it’s always active, it’s always a risk. Use PIM.**
+> If a privileged role is **always active**, it’s **always a risk**. Use PIM where possible—even documenting it demonstrates strong security awareness.
 
