@@ -134,6 +134,9 @@ A user endpoint triggered a Defender alert for suspicious PowerShell activity at
 **Result:** Device `DESKTOP-01` was successfully isolated from the network to contain the threat.
 
 ---
+
+### 🧾 Sample KQL Queries
+
 - Query 1 – Endpoint alert overview
 ```kusto
 SecurityAlert
@@ -150,14 +153,6 @@ DeviceEvents
 ```
 
 
-## 📌 Notes
-
-- This scenario demonstrates end-to-end visibility and response using cloud-native Microsoft security tools.
-- Timeline, device forensics, and alert correlation were all handled through **Microsoft Sentinel** and **Defender for Endpoint**.
-- Automation ensured rapid containment and SOC notification.
-
----
-
 ## 📸 Recommended Screenshots
 
 - Defender for Endpoint alert screen
@@ -167,6 +162,19 @@ DeviceEvents
 - Isolation confirmation response
 
 ---
+
+## ✅ Best Practices
+
+| 🧩 Area                  | 💡 Recommendation                                                   |
+|--------------------------|---------------------------------------------------------------------|
+| Alert Ingestion          | Use unified Microsoft 365 Defender connector                        |
+| Alert Correlation        | Enable advanced fusion rules                                        |
+| Automation               | Use Logic Apps for isolation, tagging, and escalation               |
+| Alert Noise Reduction    | Fine-tune analytic rules and filters                                |
+| Incident Enrichment      | Use entity behavior analytics and workbook dashboards               |
+| Endpoint Visibility      | Onboard all Windows 10/11 devices and servers to Defender for Endpoint |
+
+
 
 ## ✅ Outcome
 
