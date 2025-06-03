@@ -107,15 +107,6 @@ Access logs via:
 
 ---
 
-## 📸 Screenshots (Recommended)
-
-Include in your GitHub:
-- Role assignment panel in PIM
-- JIT role activation with justification and MFA
-- Audit log of role activation
-- Alert configuration panel
-
----
 
 ## 🧾 Comparison: Azure AD PIM vs On-Prem PAM
 
