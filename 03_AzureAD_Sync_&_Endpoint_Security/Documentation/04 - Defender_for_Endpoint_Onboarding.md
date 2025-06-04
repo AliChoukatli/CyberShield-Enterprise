@@ -59,7 +59,7 @@ This guide explains how to onboard Windows 10/11 devices to Microsoft Defender f
 | Setting                                | Value      | Description                                                                |
 |----------------------------------------|------------|----------------------------------------------------------------------------|
 | Sample sharing for all files           | ❌ Block   | Blocks automatic sample sharing to Microsoft for privacy.                  |
-| Expedite telemetry reporting frequency | Enable     | Enables more frequent telemetry data reporting for faster threat detection. |
+| Expedite telemetry reporting frequency | ✅ Enable     | Enables more frequent telemetry data reporting for faster threat detection. |
 
 10. Click **Next**.
 
@@ -75,8 +75,8 @@ This guide explains how to onboard Windows 10/11 devices to Microsoft Defender f
 
 | Rule Type          | Property     | Value(s)                                                        | Description                                                  |
 |--------------------|--------------|-----------------------------------------------------------------|--------------------------------------------------------------|
-| Assign profile if  | OS version   | From `10.0.19041.0` to `10.0.99999.99999`                       | Apply to Windows 10 (2004+) and all Windows 11 versions      |
-| Assign profile if  | OS edition   | Enterprise, Professional, Education, Professional Education     | Only apply to supported business editions                    |
+|✅ Assign profile if  | OS version   | From `10.0.19041.0` to `10.0.99999.99999`                       | Apply to Windows 10 (2004+) and all Windows 11 versions      |
+|✅ Assign profile if  | OS edition   | Enterprise, Professional, Education, Professional Education     | Only apply to supported business editions                    |
 
 
 > **Note:** Adjust version numbers or add rules as needed to target specific devices.
