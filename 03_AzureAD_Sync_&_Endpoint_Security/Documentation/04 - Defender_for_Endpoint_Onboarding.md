@@ -63,6 +63,8 @@ This guide explains how to onboard Windows 10/11 devices to Microsoft Defender f
 
 10. Click **Next**.
 
+---
+
 ### Step 2 – Assignments
 
 1. Under **Assignments**, select the Azure AD groups that include the devices to onboard.
