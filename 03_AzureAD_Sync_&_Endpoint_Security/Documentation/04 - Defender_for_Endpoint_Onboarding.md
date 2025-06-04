@@ -39,7 +39,7 @@
 
 ---
 
-## 🟢 Microsoft Defender for Endpoint Onboarding via Intune (2+ Machines / Full Cloud)
+## 🟢 Microsoft Defender for Endpoint Onboarding via Intune (Mulitple Machines / Full Cloud)
 
 This guide explains how to onboard Windows 10/11 devices to Microsoft Defender for Endpoint using Microsoft Intune in a full cloud environment (Azure AD joined devices).
 
