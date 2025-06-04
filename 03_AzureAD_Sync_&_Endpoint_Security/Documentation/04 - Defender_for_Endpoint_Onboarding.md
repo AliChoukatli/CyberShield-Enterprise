@@ -73,7 +73,7 @@ This guide explains how to onboard Windows 10/11 devices to Microsoft Defender f
 
 ---
 
-### Step3 - Applicability Scope
+### Step3 - Applicability Rules
 
 | Rule Type          | Property     | Value(s)                                                        | Description                                                  |
 |--------------------|--------------|-----------------------------------------------------------------|--------------------------------------------------------------|
