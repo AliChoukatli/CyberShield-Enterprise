@@ -17,13 +17,9 @@ This document outlines the integration of Microsoft Sentinel with Microsoft Defe
 
 ---
 
-## 🛠️ Setup & Integration Steps
 
-# 🛠️ Setup & Integration: Microsoft Defender for Endpoint with Microsoft Sentinel
 
-This guide provides a step-by-step process to onboard devices to Microsoft Defender for Endpoint and integrate it with Microsoft Sentinel.
-
----
+##  🛠️ Setup & Integration: Microsoft Defender for Endpoint with Microsoft Sentinel
 
 ## 1. 🎛️ Enable Microsoft Defender for Endpoint
 
