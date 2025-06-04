@@ -89,8 +89,6 @@ This guide explains how to onboard Windows 10/11 devices to Microsoft Defender f
 
 3. Click **Create** to deploy the profile.
 
-The onboarding profile will be applied to targeted devices on their next Intune sync.
-
 ---
 
 ### Step 4 – Verify onboarding on target devices
