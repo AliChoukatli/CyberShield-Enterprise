@@ -56,10 +56,10 @@ This guide explains how to onboard Windows 10/11 devices to Microsoft Defender f
 8. Give the profile a name, e.g., `Defender for Endpoint Onboarding`.
 9. Configure the following settings:
     
-| Setting                          | Value    | Description                                                    |
-|---------------------------------|----------|----------------------------------------------------------------|
-| Sample sharing for all files     | Block    | Blocks automatic sample sharing to Microsoft for privacy.      |
-| Expedite telemetry reporting frequency | Enable   | Enables more frequent telemetry data reporting for faster threat detection. |
+| Setting                                | Value      | Description                                                                |
+|----------------------------------------|------------|----------------------------------------------------------------------------|
+| Sample sharing for all files           | ❌ Block   | Blocks automatic sample sharing to Microsoft for privacy.                  |
+| Expedite telemetry reporting frequency | Enable     | Enables more frequent telemetry data reporting for faster threat detection. |
 
 10. Click **Next**.
 
