@@ -4,7 +4,7 @@
 
 ---
 
-## 🟢 Method 1 - Onboarding via Local Script (For One or Few Machines, Full Cloud Environment)
+## 🟢 Method 1 - Onboarding via Local Script (Single / Few Devices, Full Cloud)
 
 1. Go to the Microsoft 365 Defender portal:  [https://security.microsoft.com](https://security.microsoft.com)
 
