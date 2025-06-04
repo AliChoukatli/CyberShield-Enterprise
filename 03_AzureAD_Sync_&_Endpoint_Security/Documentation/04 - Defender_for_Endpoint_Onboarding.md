@@ -4,7 +4,7 @@
 
 ---
 
-## 🟢 Method 1 - Onboarding via Local Script (Single/Few Devices, Full Cloud)
+## 🟢 Method 1 - Onboarding via Local Script (Single Device, Full Cloud)
 
 1. Go to the Microsoft 365 Defender portal:  [https://security.microsoft.com](https://security.microsoft.com)
 
@@ -39,7 +39,7 @@
 
 ---
 
-## 🟢 Method 2 - Microsoft Defender for Endpoint Onboarding via Intune (Mulitple Machines / Full Cloud)
+## 🟢 Method 2 - Microsoft Defender for Endpoint Onboarding via Intune (Mulitple Devices / Full Cloud)
 
 This guide explains how to onboard Windows 10/11 devices to Microsoft Defender for Endpoint using Microsoft Intune in a full cloud environment (Azure AD joined devices).
 
