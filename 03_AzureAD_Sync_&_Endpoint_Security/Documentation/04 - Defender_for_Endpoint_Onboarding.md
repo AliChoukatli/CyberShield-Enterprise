@@ -54,8 +54,13 @@ This guide explains how to onboard Windows 10/11 devices to Microsoft Defender f
 6. Choose **Microsoft Defender for Endpoint (Desktop devices running Windows 10 or later)**.
 7. Click **Create**.
 8. Give the profile a name, e.g., `Defender for Endpoint Onboarding`.
-9. In the settings, configure the onboarding by adding the **Microsoft Defender for Endpoint onboarding** settings.  
-   (If using **Settings catalog**, click **Add settings**, search for *Microsoft Defender for Endpoint onboarding* or related settings, then configure the onboarding package ID or configuration.)
+9. Configure the following settings:
+    
+| Setting                          | Value    | Description                                                    |
+|---------------------------------|----------|----------------------------------------------------------------|
+| Sample sharing for all files     | Block    | Blocks automatic sample sharing to Microsoft for privacy.      |
+| Expedite telemetry reporting frequency | Enable   | Enables more frequent telemetry data reporting for faster threat detection. |
+
 10. Click **Next**.
 
 ### Step 2 – Assign the profile to device groups
