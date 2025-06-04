@@ -55,7 +55,7 @@ This guide explains how to onboard Windows 10/11 devices to Microsoft Defender f
 ## Step 2 – Create an onboarding profile for Defender for Endpoint
 
 1. In the Microsoft Endpoint Manager portal ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)), go to **Devices** in the left-hand menu.
-2. Click on **Configuration profiles**.
+2. Click on **Configuration**.
 3. Click **+ Create profile**.
 4. For **Platform**, select **Windows 10 and later**.
 5. For **Profile type**, select **Templates**.
