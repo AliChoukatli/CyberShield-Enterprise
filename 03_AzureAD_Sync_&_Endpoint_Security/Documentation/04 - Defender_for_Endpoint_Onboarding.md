@@ -84,7 +84,10 @@ This guide explains how to onboard Windows 10/11 devices to Microsoft Defender f
 ### Step 3 – Review and create
 
 1. Review the profile settings.
-2. Click **Create** to deploy the profile.
+
+![Defender_EP_intune](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Defender_EP_intune.png)
+
+3. Click **Create** to deploy the profile.
 
 The onboarding profile will be applied to targeted devices on their next Intune sync.
 
@@ -92,7 +95,15 @@ The onboarding profile will be applied to targeted devices on their next Intune 
 
 ### Step 4 – Verify onboarding on target devices
 
-On any onboarded Windows 10/11 device:
+1. Go to **Devices** in the Microsoft Endpoint Manager admin center.
+2. Click on **Configuration**.
+3. Locate your **Defender for Endpoint onboarding** profile.
+4. Check the **deployment status** and **device check-in results** to confirm successful application.
+
+
+![Defender_EP_Overview](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Defender_Endpoint_Overview.png)
+
+or On any onboarded Windows 10/11 device:
 
 1. Open **PowerShell** as Administrator.
 2. Check if the **Sense** service (Microsoft Defender for Endpoint sensor) is running:
