@@ -9,7 +9,7 @@ This guide walks you through the steps required to connect Microsoft Defender fo
 Before proceeding, ensure that your devices are properly onboarded to Microsoft Defender for Endpoint.
 
 📄 Refer to the onboarding guide:  
-[`Defender_Endpoint_Onboarding.md`](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Documentation/04%20-%20Defender_for_Endpoint_Onboarding.md)
+[`Defender_for Endpoint_Onboarding.md`](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Documentation/04%20-%20Defender_for_Endpoint_Onboarding.md)
 
 Devices must:
 - Appear in **Microsoft 365 Defender > Assets > Devices**
