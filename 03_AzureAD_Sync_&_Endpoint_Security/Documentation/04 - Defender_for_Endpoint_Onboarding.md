@@ -63,11 +63,20 @@ This guide explains how to onboard Windows 10/11 devices to Microsoft Defender f
 
 10. Click **Next**.
 
-### Step 2 – Assign the profile to device groups
+### Step 2 – Assignments
 
 1. Under **Assignments**, select the Azure AD groups that include the devices to onboard.
-   - For example, assign to **All Windows 10 devices** or a specific device group.
+   - EG:  assign to **Windows 10/11 Devices**
 2. Click **Next** to continue.
+
+### Step3 - Applicability Rules
+
+| Rule Type            | Property    | Value(s)                                   | Description                                       |
+|----------------------|-------------|--------------------------------------------|---------------------------------------------------|
+| **Assign profile if** | OS version  | From `10.0.19041.0` to `10.0.99999.99999` | Only assign to Windows 10 versions 2004 and above |
+| **Don't assign if**   | OS edition  | (None selected)                           | No exclusions by OS edition                       |
+
+> **Note:** Adjust version numbers or add rules as needed to target specific devices.
 
 ### Step 3 – Review and create
 
