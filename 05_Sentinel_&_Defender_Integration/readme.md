@@ -19,32 +19,58 @@ This document outlines the integration of Microsoft Sentinel with Microsoft Defe
 
 ## 🛠️ Setup & Integration Steps
 
-### 1. 🎛️ Enable Microsoft Defender for Endpoint
-- Ensure your devices are onboarded to Microsoft Defender for Endpoint.
-- Navigate to **Microsoft 365 Defender** > **Settings** > **Device onboarding**.
-- Deploy via **Intune**, **GPO**, or **script** depending on environment.
-- Confirm telemetry is visible in **Microsoft 365 Defender portal**.
+# 🛠️ Setup & Integration: Microsoft Defender for Endpoint with Microsoft Sentinel
 
-### 2. 🧩 Connect Defender for Endpoint to Sentinel
-1. Open the **Azure Portal** and go to **Microsoft Sentinel**.
-2. Select your **Sentinel Workspace** > **Content Hub** > Search for `Microsoft 365 Defender`.
-3. Click **Install Solution** → Follow the wizard to connect Defender for Endpoint.
-4. Confirm connectors:  
-   - Microsoft 365 Defender (Unified XDR)  
-   - Microsoft Defender for Endpoint (Device telemetry and alerts)
+This guide provides a step-by-step process to onboard devices to Microsoft Defender for Endpoint and integrate it with Microsoft Sentinel.
 
-### 3. ✅ Validate Data Ingestion
-In Sentinel:
-- Navigate to **Logs** > Run KQL query:
+---
 
-```kusto
+## 1. 🎛️ Enable Microsoft Defender for Endpoint
+
+Ensure your devices are properly onboarded to Microsoft Defender for Endpoint.
+
+### 🔹 Steps:
+1. Go to the Microsoft 365 Defender portal: [https://security.microsoft.com](https://security.microsoft.com)
+2. Navigate to: **Settings > Endpoints > Device onboarding**
+3. Choose your preferred deployment method:
+   - Microsoft Intune
+   - Group Policy (GPO)
+   - Local script or SCCM
+4. Deploy the onboarding package to your devices.
+5. Confirm successful onboarding:
+   - Devices should appear in **Microsoft 365 Defender > Assets > Devices**
+   - Telemetry should be visible in the device timeline.
+
+---
+
+## 2. 🧩 Connect Defender for Endpoint to Microsoft Sentinel
+
+### 🔹 Steps:
+1. Open the Azure portal: [https://portal.azure.com](https://portal.azure.com)
+2. Navigate to **Microsoft Sentinel**
+3. Select your Sentinel workspace.
+4. Go to **Content Hub**
+5. Search for `Microsoft 365 Defender` and click **Install**
+6. Follow the installation wizard to connect Microsoft Defender for Endpoint
+
+### 🔸 Confirm that the following connectors are enabled:
+- ✅ Microsoft 365 Defender (Unified XDR)
+- ✅ Microsoft Defender for Endpoint (Device telemetry and alerts)
+
+---
+
+## 3. ✅ Validate Data Ingestion
+
+### 🔹 Steps:
+1. In **Microsoft Sentinel**, go to **Logs**
+2. Run the following KQL query:
+
+```kql
 SecurityAlert
 | where ProductName == "Microsoft Defender for Endpoint"
 | sort by TimeGenerated desc
-```
-- Confirm alerts are received from Defender.
 - Test with a real or simulated threat (see attack scenario below).
-
+```
 ---
 
 # 🧪 Simulated Attack Scenario: PowerShell-Based Credential Dumping
