@@ -52,37 +52,32 @@ This guide explains how to onboard Windows 10/11 devices to Microsoft Defender f
 - Appropriate Microsoft licenses (e.g., Microsoft 365 E5 or Defender for Endpoint licenses)
 
 ---
-
-## Step 1 – Access Microsoft Endpoint Manager portal
-
-1. Open your browser and navigate to [https://endpoint.microsoft.com](https://endpoint.microsoft.com).
-2. Sign in with your admin account.
-
----
-
 ## Step 2 – Create an onboarding profile for Defender for Endpoint
 
-1. In the left-hand menu, click on **Devices**.
-2. Select **Onboarding** (you can also use the search bar to find "Onboarding").
-3. Click **Create profile**.
-4. Choose the platform: **Windows 10 and later**.
-5. Name your profile (e.g., `Defender for Endpoint Onboarding`).
-6. Under **Onboarding method**, select **Microsoft Defender for Endpoint**.
-
----
+1. In the Microsoft Endpoint Manager portal ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)), go to **Devices** in the left-hand menu.
+2. Click on **Configuration profiles**.
+3. Click **+ Create profile**.
+4. For **Platform**, select **Windows 10 and later**.
+5. For **Profile type**, select **Templates**.
+6. Choose **Endpoint protection** (or **Settings catalog** if Endpoint protection is not listed).
+7. Click **Create**.
+8. Give the profile a name, e.g., `Defender for Endpoint Onboarding`.
+9. In the settings, configure the onboarding by adding the **Microsoft Defender for Endpoint onboarding** settings.  
+   (If using **Settings catalog**, click **Add settings**, search for *Microsoft Defender for Endpoint onboarding* or related settings, then configure the onboarding package ID or configuration.)
+10. Click **Next**.
 
 ## Step 3 – Assign the profile to device groups
 
-1. Under **Assignments**, select the Azure AD groups containing the target devices.
-   - For example, use **All Windows 10 devices** or a custom device group.
-2. Confirm the assignment.
+1. Under **Assignments**, select the Azure AD groups that include the devices to onboard.
+   - For example, assign to **All Windows 10 devices** or a specific device group.
+2. Click **Next** to continue.
 
----
+## Step 4 – Review and create
 
-## Step 4 – Save and deploy
+1. Review the profile settings.
+2. Click **Create** to deploy the profile.
 
-1. Click **Create** or **Save** to finalize the profile.
-2. The onboarding profile will be pushed to the targeted devices during their next Intune check-in or login.
+The onboarding profile will be applied to targeted devices on their next Intune sync.
 
 ---
 
