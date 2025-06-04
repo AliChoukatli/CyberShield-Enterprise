@@ -71,12 +71,13 @@ This guide explains how to onboard Windows 10/11 devices to Microsoft Defender f
    - EG:  assign to **Windows 10/11 Devices**
 2. Click **Next** to continue.
 
-### Step3 - Applicability Rules
+### Step3 - Applicability Scope
 
-| Rule Type        | Property    | Value(s)                        | Description                       |
-|------------------|-------------|---------------------------------|-----------------------------------|
-| Assign profile if | OS version | From 10.0.19041.0 to 10.0.99999 | Windows 10 version 2004 and above |
-| Assign profile if | OS version | From 10.0.22000.0 to 10.0.99999 | Windows 11 versions               |
+| Rule Type         | Property     | Value(s)                                                                 | Description                                                  |
+|-------------------|--------------|--------------------------------------------------------------------------|--------------------------------------------------------------|
+| Assign profile if | OS version   | From `10.0.19041.0` to `10.0.99999.99999`                                | Apply to Windows 10 (2004+) and all Windows 11 versions      |
+| Assign profile if | OS edition   | Enterprise, Professional, Education, Professional Education              | Only apply to supported business editions                    |
+
 
 > **Note:** Adjust version numbers or add rules as needed to target specific devices.
 
