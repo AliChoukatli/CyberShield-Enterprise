@@ -1,204 +1,62 @@
 # 🧩 Microsoft Sentinel & Defender for Endpoint Integration
 
-## 📋 Overview
-
-This document outlines the integration of Microsoft Sentinel with Microsoft Defender for Endpoint (MDE) to establish a robust security monitoring and incident response capability in a cloud-first environment. This setup enables real-time alert ingestion, automated response, and deep threat investigation using Microsoft’s XDR and SIEM solutions.
-
-> **Note:** This implementation is cloud-only and designed for lab demonstration purposes. The structure, tooling, and response workflow reflect enterprise-grade security practices.
+This guide walks you through the steps required to connect Microsoft Defender for Endpoint (MDE) to Microsoft Sentinel for centralized threat detection and response.
 
 ---
 
-## 🎯 Objectives
+## 🛠️ Prerequisite – Defender for Endpoint Onboarding
 
-- Centralize security events from Defender for Endpoint into Microsoft Sentinel.
-- Triage and investigate endpoint threats in near real-time.
-- Build automated playbooks to contain and respond to threats.
-- Document a sample attack scenario and how it was detected and handled.
+Before proceeding, ensure that your devices are properly onboarded to Microsoft Defender for Endpoint.
 
----
+📄 Refer to the onboarding guide:  
+[`Defender_Endpoint_Onboarding.md`](../04_AzureAD_&_Endpoint_Security/Defender_Endpoint_Onboarding.md)
 
-
-
-##  🛠️ Setup & Integration: Microsoft Defender for Endpoint with Microsoft Sentinel
-
-## 1. 🎛️ Enable Microsoft Defender for Endpoint
-
-Ensure your devices are properly onboarded to Microsoft Defender for Endpoint.
-
-### 🔹 Steps:
-1. Go to the Microsoft 365 Defender portal: [https://security.microsoft.com](https://security.microsoft.com)
-2. Navigate to: **Settings > Endpoints > Device onboarding**
-3. Choose your preferred deployment method:
-   - Microsoft Intune
-   - Group Policy (GPO)
-   - Local script or SCCM
-4. Deploy the onboarding package to your devices.
-5. Confirm successful onboarding:
-   - Devices should appear in **Microsoft 365 Defender > Assets > Devices**
-   - Telemetry should be visible in the device timeline.
+Devices must:
+- Appear in **Microsoft 365 Defender > Assets > Devices**
+- Show telemetry in the timeline
 
 ---
 
-## 2. 🧩 Connect Defender for Endpoint to Microsoft Sentinel
+## 🔗 Step 1 – Connect Defender for Endpoint to Sentinel
 
-### 🔹 Steps:
-1. Open the Azure portal: [https://portal.azure.com](https://portal.azure.com)
-2. Navigate to **Microsoft Sentinel**
-3. Select your Sentinel workspace.
-4. Go to **Content Hub**
-5. Search for `Microsoft 365 Defender` and click **Install**
-6. Follow the installation wizard to connect Microsoft Defender for Endpoint
+1. Go to the [Azure Portal](https://portal.azure.com)
+2. Navigate to:  
+   `Microsoft Sentinel → Your Workspace → Content Hub`
+3. Search for **Microsoft 365 Defender**
+4. Click **Install** and follow the wizard to complete the connection
+5. Confirm these connectors are active:
+   - `Microsoft 365 Defender (Unified XDR)`
+   - `Microsoft Defender for Endpoint (Device telemetry and alerts)`
 
-### 🔸 Confirm that the following connectors are enabled:
-- ✅ Microsoft 365 Defender (Unified XDR)
-- ✅ Microsoft Defender for Endpoint (Device telemetry and alerts)
+✅ Once installed, the solution will automatically connect Defender alerts and telemetry to Sentinel.
 
 ---
 
-## 3. ✅ Validate Data Ingestion
+## 🔍 Step 2 – Validate Data Ingestion
 
-### 🔹 Steps:
-1. In **Microsoft Sentinel**, go to **Logs**
-2. Run the following KQL query:
+To confirm that alerts are coming from Defender into Sentinel:
+
+1. Go to `Microsoft Sentinel → Logs`
+2. Run the following Kusto Query Language (KQL) query:
 
 ```kql
 SecurityAlert
 | where ProductName == "Microsoft Defender for Endpoint"
 | sort by TimeGenerated desc
-- Test with a real or simulated threat (see attack scenario below).
 ```
----
+3. You should see recent alerts generated from Defender for Endpoint.
 
-# 🧪 Simulated Attack Scenario: PowerShell-Based Credential Dumping
-
-## 🎯 Objective
-
-Demonstrate the detection, investigation, and automated response workflow of a simulated credential dumping attack using Microsoft Defender for Endpoint and Microsoft Sentinel.
-
----
-
-## 🧾 Scenario Summary
-
-**Title:** PowerShell-based Credential Dumping Detected  
-**Date:** 2025-06-01  
-**Environment:** Cloud-only (Intune-managed endpoints + Microsoft 365 Defender + Sentinel)
-
----
-
-## 🔍 Description
-
-A user endpoint triggered a Defender alert for suspicious PowerShell activity attempting to dump credentials, mimicking `Mimikatz` behavior. This alert was sent to Microsoft Sentinel and resulted in an automated incident workflow.
-
----
-
-## 🧪 Simulated Steps
-
-1. A simulated attacker executes an obfuscated PowerShell command on `DESKTOP-01`.
-2. Microsoft Defender for Endpoint detects behavior:
-   > **Alert:** `Suspicious behavior by PowerShell (CredentialAccess)`
-3. Alert is sent to **Microsoft 365 Defender** and ingested into **Microsoft Sentinel**.
-4. Sentinel analytic rule detects the alert and generates an **incident**.
-5. Automation rule is triggered:
-   - Assigns incident to analyst
-   - Tags incident as `HighPriority`
-   - Launches playbook to isolate the device
-
----
-
-## 🧠 Investigation in Sentinel
-
-### 📝 Incident Details
-
-| Field         | Value                    |
-|---------------|--------------------------|
-| **Severity**  | High                     |
-| **Entity**    | `DESKTOP-01`             |
-| **User**      | `demo@domain.com`        |
-| **Alert Type**| Behavior-based (PSExec/Mimikatz) |
-| **Timestamp** | 2025-06-01 14:32 UTC     |
-
----
-
-### 🔎 Actions Performed
-
-- ✅ Alert reviewed in **Sentinel Incident blade**
-- ✅ Timeline of user/device activity analyzed
-- ✅ Cross-checked with additional Defender alerts for correlation
-- ✅ Device risk level and recent login behavior retrieved
-
----
-
-## 🔁 Automation & Response
-
-### 1. 🛠️ Automation Rule: *Auto-Assign & Tag*
-
-| Trigger Condition                      | Action                          |
-|----------------------------------------|----------------------------------|
-| Incident contains MDE alert            | Assign to analyst               |
-|                                        | Add tag `HighPriority`          |
-|                                        | Launch isolation playbook       |
-
-**Rule Type:** Scheduled / When incident is created  
-**Scope:** Alerts from Microsoft Defender for Endpoint  
-**Tags Applied:** `HighPriority`, `EndpointThreat`
-
----
-
-### 2. ⚙️ Playbook: *Isolate Compromised Device*
-
-| Action                            | Value                           |
-|-----------------------------------|----------------------------------|
-| API                               | Microsoft Defender for Endpoint |
-| Endpoint                          | `/machines/{id}/isolate`        |
-| Inputs                            | `Device ID`, `Reason`, `Comment`|
-| Additional                        | Send SOC notification via email |
-
-**Result:** Device `DESKTOP-01` was successfully isolated from the network to contain the threat.
-
----
-
-### 🧾 Sample KQL Queries
-
-- Query 1 – Endpoint alert overview
-```kusto
-SecurityAlert
-| where ProductName == "Microsoft Defender for Endpoint"
-| project TimeGenerated, AlertName, Computer, Severity, Description
-| sort by TimeGenerated desc
-```
-- Query 2 – Timeline of a specific host
-```kusto
-DeviceEvents
-| where DeviceName == "DESKTOP-01"
-| where Timestamp > ago(1d)
-| sort by Timestamp asc
-```
-
-
-## 📸 Recommended Screenshots
-
-- Defender for Endpoint alert screen
-- Sentinel Incident dashboard
-- Automation Rule settings
-- Logic App run history (successful execution)
-- Isolation confirmation response
-
----
+💡 Tip: You can simulate a test alert (e.g., by using Defender test scripts or EICAR) to verify live ingestion.
 
 ## ✅ Best Practices
 
-| 🧩 Area                  | 💡 Recommendation                                                   |
-|--------------------------|---------------------------------------------------------------------|
-| Alert Ingestion          | Use unified Microsoft 365 Defender connector                        |
-| Alert Correlation        | Enable advanced fusion rules                                        |
-| Automation               | Use Logic Apps for isolation, tagging, and escalation               |
-| Alert Noise Reduction    | Fine-tune analytic rules and filters                                |
-| Incident Enrichment      | Use entity behavior analytics and workbook dashboards               |
-| Endpoint Visibility      | Onboard all Windows 10/11 devices and servers to Defender for Endpoint |
+| **Area**              | **Recommendation**                                                    |
+|-----------------------|------------------------------------------------------------------------|
+| Alert Ingestion       | Use the unified **Microsoft 365 Defender** connector                   |
+| Alert Correlation     | Enable **advanced fusion rules** for cross-product incident linking    |
+| Automation            | Use **Logic Apps** for auto-isolation, tagging, and escalation         |
+| Noise Reduction       | **Tune analytic rules** and apply appropriate filters                  |
+| Enrichment            | Use **entity behavior analytics** and **workbook dashboards**          |
+| Endpoint Visibility   | Onboard **all Windows endpoints and servers**                          |
 
-
-
-## ✅ Outcome
-
-This lab demonstrates how a cloud-only SOC setup using Microsoft 365 Defender and Sentinel can detect, correlate, and automatically respond to suspicious endpoint behavior with minimal manual intervention.
 
