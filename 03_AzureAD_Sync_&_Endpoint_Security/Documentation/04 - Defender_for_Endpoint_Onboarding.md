@@ -44,14 +44,6 @@
 This guide explains how to onboard Windows 10/11 devices to Microsoft Defender for Endpoint using Microsoft Intune in a full cloud environment (Azure AD joined devices).
 
 ---
-
-## Prerequisites
-
-- Microsoft Endpoint Manager admin access: [https://endpoint.microsoft.com](https://endpoint.microsoft.com)
-- Devices joined to Azure Active Directory
-- Appropriate Microsoft licenses (e.g., Microsoft 365 E5 or Defender for Endpoint licenses)
-
----
 ## Step 2 – Create an onboarding profile for Defender for Endpoint
 
 1. In the Microsoft Endpoint Manager portal ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)), go to **Devices** in the left-hand menu.
