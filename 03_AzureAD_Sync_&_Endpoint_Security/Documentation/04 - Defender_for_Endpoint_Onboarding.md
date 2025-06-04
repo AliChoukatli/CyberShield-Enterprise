@@ -101,7 +101,7 @@ This guide explains how to onboard Windows 10/11 devices to Microsoft Defender f
 4. Check the **deployment status** and **device check-in results** to confirm successful application.
 
 
-![Defender_EP_Overview](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Defender_Endpoint_Overview.png)
+![Intune_Def_EP_Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/intune_Endpoint_Success.png)
 
 or On any onboarded Windows 10/11 device:
 
