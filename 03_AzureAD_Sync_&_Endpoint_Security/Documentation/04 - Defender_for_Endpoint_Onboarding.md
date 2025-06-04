@@ -71,6 +71,8 @@ This guide explains how to onboard Windows 10/11 devices to Microsoft Defender f
    - EG:  assign to **Windows 10/11 Devices**
 2. Click **Next** to continue.
 
+---
+
 ### Step3 - Applicability Scope
 
 | Rule Type          | Property     | Value(s)                                                        | Description                                                  |
