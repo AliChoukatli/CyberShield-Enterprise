@@ -1,4 +1,4 @@
-# 🛡️ Microsoft Defender Antivirus & Defender for Endpoint Integration
+# 03 - 🛡️ Microsoft Defender Antivirus & Defender for Endpoint Integration
 
 ## 🔹 Part 1 - Configure Microsoft Defender Antivirus via Intune
 
