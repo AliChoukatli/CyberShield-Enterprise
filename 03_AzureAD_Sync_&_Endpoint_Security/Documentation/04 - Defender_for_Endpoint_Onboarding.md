@@ -39,6 +39,73 @@
 
 ---
 
+# Microsoft Defender for Endpoint Onboarding via Intune (Full Cloud)
+
+This guide explains how to onboard Windows 10/11 devices to Microsoft Defender for Endpoint using Microsoft Intune in a full cloud environment (Azure AD joined devices).
+
+---
+
+## Prerequisites
+
+- Microsoft Endpoint Manager admin access: [https://endpoint.microsoft.com](https://endpoint.microsoft.com)
+- Devices joined to Azure Active Directory
+- Appropriate Microsoft licenses (e.g., Microsoft 365 E5 or Defender for Endpoint licenses)
+
+---
+
+## Step 1 – Access Microsoft Endpoint Manager portal
+
+1. Open your browser and navigate to [https://endpoint.microsoft.com](https://endpoint.microsoft.com).
+2. Sign in with your admin account.
+
+---
+
+## Step 2 – Create an onboarding profile for Defender for Endpoint
+
+1. In the left-hand menu, click on **Devices**.
+2. Select **Onboarding** (you can also use the search bar to find "Onboarding").
+3. Click **Create profile**.
+4. Choose the platform: **Windows 10 and later**.
+5. Name your profile (e.g., `Defender for Endpoint Onboarding`).
+6. Under **Onboarding method**, select **Microsoft Defender for Endpoint**.
+
+---
+
+## Step 3 – Assign the profile to device groups
+
+1. Under **Assignments**, select the Azure AD groups containing the target devices.
+   - For example, use **All Windows 10 devices** or a custom device group.
+2. Confirm the assignment.
+
+---
+
+## Step 4 – Save and deploy
+
+1. Click **Create** or **Save** to finalize the profile.
+2. The onboarding profile will be pushed to the targeted devices during their next Intune check-in or login.
+
+---
+
+## Step 5 – Verify onboarding on target devices
+
+On any onboarded Windows 10/11 device:
+
+1. Open **PowerShell** as Administrator.
+2. Check if the **Sense** service (Microsoft Defender for Endpoint sensor) is running:
+
+   ```powershell
+   Get-Service -Name Sense
+   ```
+   - Status should be Running.
+
+3. Check onboarding state from the registry:
+```powershell
+(Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows Advanced Threat Protection\Status").OnboardingState
+```
+- A value of 1 means the device is successfully onboarded.
+
+---
+
 ### 🟢  Method 2: Onboarding via Group Policy (GPO) (Hybride / On-premises)
 
 This method is recommended for organizations managing domain-joined Windows devices via Group Policy.
