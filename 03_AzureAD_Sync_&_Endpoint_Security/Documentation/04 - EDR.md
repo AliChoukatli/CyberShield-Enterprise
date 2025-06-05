@@ -124,6 +124,8 @@ Powershell Eventually : On any onboarded Windows 10/11 device:
 ```
 - A value of 1 means the device is successfully onboarded.
 
+![Onboarding_Verif_PS](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Onboarding_Verif_PS.png)
+
 ---
 
 ## 🟢  Method 3 - Onboarding via Group Policy (GPO) (Hybride / On-premises)
