@@ -103,7 +103,12 @@ This guide explains how to onboard Windows 10/11 devices to Microsoft Defender f
 
 ![Intune_Def_EP_Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/intune_Endpoint_Success.png)
 
-or On any onboarded Windows 10/11 device:
+or Go to the Microsoft 365 Defender portal:  [https://security.microsoft.com](https://security.microsoft.com)
+
+![Device_inventory_Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Device_Inventory.png)
+
+
+Powershell Eventually : On any onboarded Windows 10/11 device:
 
 1. Open **PowerShell** as Administrator.
 2. Check if the **Sense** service (Microsoft Defender for Endpoint sensor) is running:
