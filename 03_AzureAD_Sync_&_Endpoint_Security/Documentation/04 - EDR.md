@@ -112,16 +112,15 @@ Powershell Eventually : On any onboarded Windows 10/11 device:
 
 1. Open **PowerShell** as Administrator.
 2. Check if the **Sense** service (Microsoft Defender for Endpoint sensor) is running:
-
    ```powershell
    Get-Service -Name Sense
    ```
    - Status should be Running.
 
 3. Check onboarding state from the registry:
-```powershell
-(Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows Advanced Threat Protection\Status").OnboardingState
-```
+   ```powershell
+   (Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows Advanced Threat Protection\Status").OnboardingState
+   ```
    - A value of 1 means the device is successfully onboarded.
 
 ![Onboarding_Verif_PS](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Onboarding_Verif_PS.png)
