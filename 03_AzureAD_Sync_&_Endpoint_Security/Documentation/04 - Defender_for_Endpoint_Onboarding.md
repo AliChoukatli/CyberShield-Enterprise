@@ -1,4 +1,4 @@
-# 🔹04 - Microsoft Defender for Endpoint (EDR)
+# 🔹04 - Deploying Microsoft Defender for Endpoint (EDR) (Local Script, GPO, Intune)
 
 -> To enable full integration between your Windows devices and Microsoft Defender for Endpoint (MDE), each device must be properly onboarded. Below are two common methods: **Local Script** and **Group Policy (GPO)**.
 
