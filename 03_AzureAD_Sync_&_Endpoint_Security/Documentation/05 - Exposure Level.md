@@ -12,7 +12,7 @@ Two different types of responses were demonstrated:
 ## 📊 Initial Exposure Summary
 
 - **Exposure Level**: 🔴 High
-- **Device**: `WIN11-LAB01`
+- **Device**: `LTP-HLP01`
 - **Detected Issues**:
   1. Outdated Windows 11 build
   2. Network client: Digitally sign communications (always) – Not configured
