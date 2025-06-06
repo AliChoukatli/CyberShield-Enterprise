@@ -12,64 +12,9 @@ The project implements MFA using the following modern methods:
 
 ![Auth-Methods](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Auth-Methods.png)
 
-
-## 1. ✅  **Temporary Access Pass (TAP) – Recommended Settings**
-
-| Setting                   | Recommended Value  | Description                                                                                   |
-|---------------------------|--------------------|-----------------------------------------------------------------------------------------------|
-| **Enable and Target**     | ✅ Enabled         | TAP enabled for targeted users or groups                                                     |
-| **Minimum lifetime**      | 1 hour             | Minimum validity period                                                                      |
-| **Maximum lifetime**      | 8 hours            | Maximum validity                                                                            |
-| **Default lifetime**      | 1 hour             | Default value assigned on generation                                                        |
-| **One-time use**          | ✅ Yes             | Pass valid for only one sign-in (recommended for security)                                   |
-| **Length**                | 8 characters       | Length of the TAP code                                                                       |
-
-> **Note:** TAP is used mainly by admins during MFA registration bootstrap or recovery; not for SSPR.
-
-![TAP Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/TAP-Policy.png)
-
-
-#### 👤  End-User MFA Experience: Temporary Access Pass Flow (Sophia Martinez)
-
-This scenario demonstrates how a new employee, **Sophia Martinez**, securely registers her first authentication method using a **Temporary Access Pass (TAP)**.
-
 ---
 
-### 🔹 Step 1: Admin generates TAP for new user
-
-In Microsoft Entra ID (Azure AD), the admin navigates to:
-
-**Users > Sophia Martinez > Authentication Methods > Add Auth Method > Temporary Access Pass**
-
-Configuration example:
-
-| Setting        | Value         |
-|----------------|---------------|
-| Lifetime       | 1 hour        |
-| One-time use   | Yes           |
-| Length         | 8 characters  |
-
-![TAP-SOphia-Steps](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/TAP-Sophia-Steps.png)
-
-The temporary password will be shown on the screen : 
-
-![Temp-TAP-Details](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Temp-TAP-Details.png)
-
----
-
-### 🔹 Step 2: User signs in with TAP
-
-At her first login, Sophia selects **“Sign in using Temporary Access Pass”**, and enters the code provided by the admin.
-
-![Temp-TAP](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Temp-TAP.png)
-
-She is then prompted to set a new PIN since we configured already windows Hello for business
-
-![New-PIN](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/New-PIN.png)
-
----
-
-##  Windows Hello for Business
+## 1. Windows Hello for Business
 
 ### ✅ Hybrid Deployment (Azure AD + On-premises Active Directory)
 
@@ -227,6 +172,65 @@ Once the policy is applied, users will:
 
 
 By enforcing granular Conditional Access rules, multi-factor authentication, and secure passwordless sign-in options like FIDO2 and Windows Hello for Business, this configuration strengthens both security posture and user experience—while aligning with industry best practices and compliance standards.
+
+---
+
+## 2. ✅  **Temporary Access Pass (TAP) – Recommended Settings**
+
+| Setting                   | Recommended Value  | Description                                                                                   |
+|---------------------------|--------------------|-----------------------------------------------------------------------------------------------|
+| **Enable and Target**     | ✅ Enabled         | TAP enabled for targeted users or groups                                                     |
+| **Minimum lifetime**      | 1 hour             | Minimum validity period                                                                      |
+| **Maximum lifetime**      | 8 hours            | Maximum validity                                                                            |
+| **Default lifetime**      | 1 hour             | Default value assigned on generation                                                        |
+| **One-time use**          | ✅ Yes             | Pass valid for only one sign-in (recommended for security)                                   |
+| **Length**                | 8 characters       | Length of the TAP code                                                                       |
+
+> **Note:** TAP is used mainly by admins during MFA registration bootstrap or recovery; not for SSPR.
+
+![TAP Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/TAP-Policy.png)
+
+
+#### 👤  End-User MFA Experience: Temporary Access Pass Flow (Sophia Martinez)
+
+This scenario demonstrates how a new employee, **Sophia Martinez**, securely registers her first authentication method using a **Temporary Access Pass (TAP)**.
+
+---
+
+### 🔹 Step 1: Admin generates TAP for new user
+
+In Microsoft Entra ID (Azure AD), the admin navigates to:
+
+**Users > Sophia Martinez > Authentication Methods > Add Auth Method > Temporary Access Pass**
+
+Configuration example:
+
+| Setting        | Value         |
+|----------------|---------------|
+| Lifetime       | 1 hour        |
+| One-time use   | Yes           |
+| Length         | 8 characters  |
+
+![TAP-SOphia-Steps](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/TAP-Sophia-Steps.png)
+
+The temporary password will be shown on the screen : 
+
+![Temp-TAP-Details](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Temp-TAP-Details.png)
+
+---
+
+### 🔹 Step 2: User signs in with TAP
+
+At her first login, Sophia selects **“Sign in using Temporary Access Pass”**, and enters the code provided by the admin.
+
+![Temp-TAP](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Temp-TAP.png)
+
+She is then prompted to set a new PIN since we configured already windows Hello for business
+
+![New-PIN](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/New-PIN.png)
+
+---
+
 
 ---
 
