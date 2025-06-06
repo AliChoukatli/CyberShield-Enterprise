@@ -35,15 +35,7 @@ An attempt was made to create a remediation task to update the device to the lat
 | **Priority** | High |
 | **Notes** | Updating Windows 11 to the latest version to reduce device exposure score. Requested via Defender TVM and assigned to Intune. |
 
-### ❌ Outcome
-
-> **Failed to create a remediation activity**  
-> An error occurred while trying to create a remediation activity. Please try again later.
-
-**💡 Explanation**:  
-This is expected in a lab environment due to limited integration or licensing. In a production setting, this remediation would be automatically deployed and tracked through Intune.
-
-![Screenshot Placeholder](./images/remediation_request_failed.png)
+![Req_win11_update](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Req_Win11update.png)
 
 ---
 
