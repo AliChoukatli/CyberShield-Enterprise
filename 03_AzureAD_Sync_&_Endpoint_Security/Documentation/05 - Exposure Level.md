@@ -26,13 +26,13 @@ Two different types of responses were demonstrated:
 
 An attempt was made to create a remediation task to update the device to the latest version of Windows 11 using Microsoft Intune.
 
-| Field | Value |
-|-------|-------|
-| **Remediation Type** | Software update |
-| **Target** | Windows 11 (OS and built-in applications) |
-| **Tool** | Microsoft Intune |
-| **Due Date** | June 7, 2025 |
-| **Priority** | High |
+| Field                | Value                                     |
+|----------------------|-------------------------------------------|
+| **Remediation Type** | Software update                           |
+| **Target**           | Windows 11 (OS and built-in applications) |
+| **Tool**             | Microsoft Intune                          |
+| **Due Date**         | June 6, 2025                              |
+| **Priority**         | High                                      |      
 | **Notes** | Updating Windows 11 to the latest version to reduce device exposure score. Requested via Defender TVM and assigned to Intune. |
 
 ![Req_win11_update](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Req_Win11update.png)
