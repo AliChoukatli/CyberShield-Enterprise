@@ -14,7 +14,7 @@ The project implements MFA using the following modern methods:
    
 2. ✅ [Microsoft Authenticator App](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Documentation/01%20-%20MFA.md#2---microsoft-authenticator-app--recommended-settings)
    
-3. ✅ [Temporary Access Pass (TAP)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Documentation/01%20-%20Authentification_Methods.md#3---temporary-access-pass-tap--recommended-settings)
+3. ✅ [Temporary Access Pass (TAP)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Documentation/01%20-%20MFA.md#3---temporary-access-pass-tap--recommended-settings)
    
 4. ✅ [FIDO2 Security Key (Passkey)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Documentation/01%20-%20MFA.md#4---fido2-security-key-passkey--recommended-settings)
 
