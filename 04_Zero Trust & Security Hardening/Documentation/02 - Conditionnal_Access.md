@@ -11,7 +11,7 @@ Conditional Access (CA) in Microsoft Entra ID enables IT admins to enforce polic
 
 2. ✅ [Require MFA for All Admin Roles](
 
-3. ✅ Block Admin Portal Access from Unmanaged Devices
+3. ✅ [Block Admin Portal Access from Unmanaged Devices]
    
 4. ✅ [Require MFA for All Users](
    
