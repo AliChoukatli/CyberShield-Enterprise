@@ -2,8 +2,6 @@
 
 Modern enterprise environments face constant threats targeting user identities, devices, and cloud resources. Implementing robust security policies—such as Multi-Factor Authentication which is critical to support Zero Trust principles and meet compliance requirements.
 
-The project implements MFA using the following modern methods:
-
 ## 📘 Table of Contents
 
 1. ✅ [Windows Hello for Business](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/01%20-%20MFA.md#-1-windows-hello-for-business)
