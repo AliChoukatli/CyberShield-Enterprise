@@ -1,18 +1,8 @@
-# 🔴 Authentification Methods
-
-Modern enterprise environments face constant threats targeting user identities, devices, and cloud resources. Implementing robust security policies—such as Conditional Access, Multi-Factor Authentication, and compliance enforcement—is critical to support Zero Trust principles and meet compliance requirements.
-
-This section covers security compliance settings and policies essential to secure the environment and enforce best practices.
-
----
-
 # 🔴 Multi-Factor Authentication (MFA)
 
+Modern enterprise environments face constant threats targeting user identities, devices, and cloud resources. Implementing robust security policies—such as Multi-Factor Authentication which is critical to support Zero Trust principles and meet compliance requirements.
+
 The project implements MFA using the following modern methods:
-
-![Auth-Methods](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Auth-Methods.png)
-
----
 
 ## 📘 Table of Contents
 
@@ -22,6 +12,8 @@ The project implements MFA using the following modern methods:
 2. ✅ Temporary Access Pass (TAP)
 3. ✅ Microsoft Authenticator App
 4. ✅ FIDO2 Security Key (Passkey) 
+
+![Auth-Methods](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Auth-Methods.png)
 
 ---
 
