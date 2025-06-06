@@ -6,14 +6,16 @@ The project implements MFA using the following modern methods:
 
 ## 📘 Table of Contents
 
-1. ✅ Windows Hello for Business
+1. ✅ [Windows Hello for Business](https://github.com/AliChoukatli/CyberShield-Enterprise/edit/main/04_Zero%20Trust%20%26%20Security%20Hardening/Documentation/01%20-%20Authentification_Methods.md#-1-windows-hello-for-business)
    
    - [Full Cloud Deployment (Azure AD Join only](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/01%20-%20Authentification_Methods.md#-a-full-cloud-deployment-azure-ad-join-only)
      
    - [Hybrid Deployment (Azure AD + On-premises Active Directory)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/01%20-%20Authentification_Methods.md#-hybrid-deployment-azure-ad--on-premises-active-directory)
    
 2. ✅ [Microsoft Authenticator App](https://github.com/AliChoukatli/CyberShield-Enterprise/edit/main/04_Zero%20Trust%20%26%20Security%20Hardening/Documentation/01%20-%20Authentification_Methods.md#2---microsoft-authenticator-app--recommended-settings)
+   
 3. ✅ [Temporary Access Pass (TAP)](https://github.com/AliChoukatli/CyberShield-Enterprise/edit/main/04_Zero%20Trust%20%26%20Security%20Hardening/Documentation/01%20-%20Authentification_Methods.md#3---temporary-access-pass-tap--recommended-settings)
+   
 4. ✅ [FIDO2 Security Key (Passkey)](https://github.com/AliChoukatli/CyberShield-Enterprise/edit/main/04_Zero%20Trust%20%26%20Security%20Hardening/Documentation/01%20-%20Authentification_Methods.md#4---fido2-security-key-passkey--recommended-settings)
 
 ![Auth-Methods](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Auth-Methods.png)
