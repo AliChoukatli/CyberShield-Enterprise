@@ -5,6 +5,22 @@ Conditional Access (CA) in Microsoft Entra ID enables IT admins to enforce polic
 
 ---
 
+## 📘 Table of Contents
+
+1. ✅ [Block Legacy Authentication]()
+
+2. ✅ [Require MFA for All Admin Roles](
+
+3. ✅ Block Admin Portal Access from Unmanaged Devices
+   
+4. ✅ [Require MFA for All Users](
+   
+5. ✅ [Require Compliant Devices)](
+   
+6. ✅ [Block Access from Unsupported Countries]
+   
+---
+
 ## ✅ 1. Block Legacy Authentication
 
 **Purpose:** Prevent the use of outdated and insecure authentication protocols such as IMAP, POP3, SMTP AUTH, and MAPI that do not support modern security features like Multi-Factor Authentication (MFA).
@@ -154,9 +170,7 @@ Prevent users — especially privileged roles — from accessing administrative 
 ---
 
 
-
-
-## ✅ 3. Require MFA for All Users
+## ✅ 4. Require MFA for All Users
 
 **Purpose**: Enforce Multi-Factor Authentication (MFA) to protect user sign-ins from credential theft and phishing.
 
@@ -178,7 +192,7 @@ Prevent users — especially privileged roles — from accessing administrative 
 
 ---
 
-## ✅ 3. Require Compliant Devices
+## ✅ 5. Require Compliant Devices
 
 **Purpose**: Ensure that only secure, managed, and compliant devices can access organizational resources.
 
@@ -201,7 +215,7 @@ Prevent users — especially privileged roles — from accessing administrative 
 
 ---
 
-## ✅ 4. Block Access from Unsupported Countries
+## ✅ 6. Block Access from Unsupported Countries
 
 **Purpose:**  
 Restrict access to organizational resources from untrusted or high-risk geographic locations by allowing only selected trusted countries.
