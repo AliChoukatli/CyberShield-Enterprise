@@ -7,7 +7,7 @@ Conditional Access (CA) in Microsoft Entra ID enables IT admins to enforce polic
 
 ## 📘 Table of Contents
 
-1. ✅ [Block Legacy Authentication]()
+1. ✅ [Block Legacy Authentication](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/02%20-%20Conditionnal_Access.md#-1-block-legacy-authentication)
 
 2. ✅ [Require MFA for All Admin Roles](
 
