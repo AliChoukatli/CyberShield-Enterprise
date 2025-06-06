@@ -30,7 +30,6 @@ An attempt was made to create a remediation task to update the device to the lat
 |----------------------|-------------------------------------------|
 | **Remediation Type** | Software update                           |
 | **Target**           | Windows 11 (OS and built-in applications) |
-| **Tool**             | Microsoft Intune                          |
 | **Due Date**         | June 6, 2025                              |
 | **Priority**         | High                                      |      
 
