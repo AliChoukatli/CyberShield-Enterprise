@@ -19,7 +19,7 @@ Conditional Access (CA) in Microsoft Entra ID enables IT admins to enforce polic
    
 4. ✅ [Require MFA for All Users](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/02%20-%20Conditionnal_Access.md#-4-require-mfa-for-all-users)
    
-5. ✅ [Require Compliant Devices)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/02%20-%20Conditionnal_Access.md#-5-require-compliant-devices)
+5. ✅ [Require Compliant Devices](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/02%20-%20Conditionnal_Access.md#-5-require-compliant-devices)
    
 6. ✅ [Block Access from Unsupported Countries](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/02%20-%20Conditionnal_Access.md#-6-block-access-from-unsupported-countries)
    
