@@ -14,9 +14,20 @@ The project implements MFA using the following modern methods:
 
 ---
 
+## 📘 Table of Contents
+
+1. ✅ 1. Windows Hello for Business
+   A. Full Cloud Deployment (Azure AD Join only
+   B. Hybrid Deployment (Azure AD + On-premises Active Directory)
+2. ✅ Temporary Access Pass (TAP)
+3. ✅ Microsoft Authenticator App
+4. ✅ FIDO2 Security Key (Passkey) 
+
+---
+
 ## ✅ 1. Windows Hello for Business
 
-### 🔒 Full Cloud Deployment (Azure AD Join only)
+### 🔒 A. Full Cloud Deployment (Azure AD Join only)
 
 ### Overview
 
