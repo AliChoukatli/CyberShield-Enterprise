@@ -8,16 +8,20 @@ Conditional Access (CA) in Microsoft Entra ID enables IT admins to enforce polic
 ## 📘 Table of Contents
 
 1. ✅ [Block Legacy Authentication](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/02%20-%20Conditionnal_Access.md#-1-block-legacy-authentication)
+   
+ - [Option A — Disable Legacy Protocols via Exchange Online (Recommended)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/02%20-%20Conditionnal_Access.md#-option-a--disable-legacy-protocols-via-exchange-online-recommended)
 
-2. ✅ [Require MFA for All Admin Roles](
+ - [Option B - Use Conditional Access to Block Legacy Authentication](
 
-3. ✅ [Block Admin Portal Access from Unmanaged Devices]
+3. ✅ [Require MFA for All Admin Roles](
+
+4. ✅ [Block Admin Portal Access from Unmanaged Devices]
    
-4. ✅ [Require MFA for All Users](
+5. ✅ [Require MFA for All Users](
    
-5. ✅ [Require Compliant Devices)](
+6. ✅ [Require Compliant Devices)](
    
-6. ✅ [Block Access from Unsupported Countries]
+7. ✅ [Block Access from Unsupported Countries]
    
 ---
 
