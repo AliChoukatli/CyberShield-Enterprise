@@ -10,7 +10,7 @@ The project implements MFA using the following modern methods:
    
    - [Full Cloud Deployment (Azure AD Join only](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/01%20-%20Authentification_Methods.md#-a-full-cloud-deployment-azure-ad-join-only)
      
-   - [Hybrid Deployment (Azure AD + On-premises Active Directory)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/01%20-%20Authentification_Methods.md#-hybrid-deployment-azure-ad--on-premises-active-directory)
+   - [Hybrid Deployment (Azure AD + On-premises Active Directory)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Documentation/01%20-%20MFA.md#-hybrid-deployment-azure-ad--on-premises-active-directory)
    
 2. ✅ [Microsoft Authenticator App](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Documentation/01%20-%20Authentification_Methods.md#2---microsoft-authenticator-app--recommended-settings)
    
