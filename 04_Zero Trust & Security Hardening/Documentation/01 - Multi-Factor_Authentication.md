@@ -1,6 +1,6 @@
 # 🔴 Multi-Factor Authentication (MFA)
 
-Modern enterprise environments face constant threats targeting user identities, devices, and cloud resources. Implementing robust security policies—such as Multi-Factor Authentication which is critical to support Zero Trust principles and meet compliance requirements.
+Modern enterprise environments face constant threats targeting user identities, devices, and cloud resources. Implementing robust security policies such as Multi-Factor Authentication which is critical to support Zero Trust principles and meet compliance requirements.
 
 ## 📘 Table of Contents
 
