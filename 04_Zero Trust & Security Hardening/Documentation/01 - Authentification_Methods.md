@@ -63,7 +63,7 @@ At her first login, Sophia selects **“Sign in using Temporary Access Pass”**
 
 ![Temp-TAP](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Temp-TAP.png)
 
-She is then prompted to set a new PIN since we configured alreadywindows Hello for business
+She is then prompted to set a new PIN since we configured already windows Hello for business
 
 ![New-PIN](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/New-PIN.png)
 
