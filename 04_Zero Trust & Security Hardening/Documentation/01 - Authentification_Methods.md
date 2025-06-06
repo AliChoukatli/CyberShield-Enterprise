@@ -6,7 +6,7 @@ The project implements MFA using the following modern methods:
 
 ## 📘 Table of Contents
 
-1. ✅ [Windows Hello for Business](https://github.com/AliChoukatli/CyberShield-Enterprise/edit/main/04_Zero%20Trust%20%26%20Security%20Hardening/Documentation/01%20-%20Authentification_Methods.md#-1-windows-hello-for-business)
+1. ✅ [Windows Hello for Business](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Documentation/01%20-%20Authentification_Methods.md#-1-windows-hello-for-business)
    
    - [Full Cloud Deployment (Azure AD Join only](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/01%20-%20Authentification_Methods.md#-a-full-cloud-deployment-azure-ad-join-only)
      
