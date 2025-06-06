@@ -3,8 +3,6 @@
 
 Conditional Access (CA) in Microsoft Entra ID enables IT admins to enforce policies that restrict or allow access to cloud resources based on conditions such as device state, user risk, and app types. These policies implement Zero Trust principles and are critical to securing identity infrastructure.
 
----
-
 ## 📘 Table of Contents
 
 1. ✅ [Block Legacy Authentication](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/02%20-%20Conditionnal_Access.md#-1-block-legacy-authentication)
