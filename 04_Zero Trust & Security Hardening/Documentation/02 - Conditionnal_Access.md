@@ -13,15 +13,15 @@ Conditional Access (CA) in Microsoft Entra ID enables IT admins to enforce polic
 
  - [Option B - Use Conditional Access to Block Legacy Authentication](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/02%20-%20Conditionnal_Access.md#-option-b--use-conditional-access-to-block-legacy-authentication)
 
-3. ✅ [Require MFA for All Admin Roles](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/02%20-%20Conditionnal_Access.md#-2-require-mfa-for-all-admin-roles)
+2. ✅ [Require MFA for All Admin Roles](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/02%20-%20Conditionnal_Access.md#-2-require-mfa-for-all-admin-roles)
 
-4. ✅ [Block Admin Portal Access from Unmanaged Devices](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/02%20-%20Conditionnal_Access.md#-3-block-admin-portal-access-from-unmanaged-devices)
+3. ✅ [Block Admin Portal Access from Unmanaged Devices](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/02%20-%20Conditionnal_Access.md#-3-block-admin-portal-access-from-unmanaged-devices)
    
-5. ✅ [Require MFA for All Users](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/02%20-%20Conditionnal_Access.md#-4-require-mfa-for-all-users)
+4. ✅ [Require MFA for All Users](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/02%20-%20Conditionnal_Access.md#-4-require-mfa-for-all-users)
    
-6. ✅ [Require Compliant Devices)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/02%20-%20Conditionnal_Access.md#-5-require-compliant-devices)
+5. ✅ [Require Compliant Devices)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/02%20-%20Conditionnal_Access.md#-5-require-compliant-devices)
    
-7. ✅ [Block Access from Unsupported Countries](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/02%20-%20Conditionnal_Access.md#-6-block-access-from-unsupported-countries)
+6. ✅ [Block Access from Unsupported Countries](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/02%20-%20Conditionnal_Access.md#-6-block-access-from-unsupported-countries)
    
 ---
 
