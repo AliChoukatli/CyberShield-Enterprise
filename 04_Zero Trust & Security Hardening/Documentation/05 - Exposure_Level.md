@@ -18,6 +18,9 @@ Two different types of responses were demonstrated:
 
 ##  Priority Remediations – Security Recommendations
 
+![LTP-HLP01_Recommendations](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/LTP-HLP01_Recommendations.png)
+
+
 | Control                                                      | Risk Level | Impact             | Justification                                                                           | Decision   |
 |--------------------------------------------------------------|------------|----------|--------------------------------------------------------------------------------------------------|------------|
 | 🔒 Turn on PUA protection in block mode                     | High        | High    | Blocks potentially unwanted applications that may compromise security.                            | Remediate  |
@@ -69,6 +72,8 @@ Update the Microsoft Edge browser to the latest stable version.
 
 **Justification:**  
 Web browsers are prime targets for exploits; updates fix known vulnerabilities and improve resilience.
+
+![Edge+Version](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/edge_version.png)
 
 ---
 
