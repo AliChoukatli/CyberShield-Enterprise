@@ -146,11 +146,7 @@ Mitigates risks related to USB-borne malware and unauthorized software execution
 ---
 
 
-# Accepted Risks
-
-Cette section liste les recommandations de sécurité dont le risque a été évalué comme **faible** avec un impact minimal, justifiant une acceptation du risque dans un contexte professionnel d'entreprise.
-
----
+## 🟡 Accepted Risks
 
 ## 1. Disable 'Autoplay' for all drives
 
