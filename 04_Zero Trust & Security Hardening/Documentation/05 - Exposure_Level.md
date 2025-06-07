@@ -18,14 +18,16 @@ Two different types of responses were demonstrated:
 
 ##  Priority Remediations – Security Recommendations
 
-1. 🔒 Turn on PUA protection in block mode.
-2. 🔒 Windows 11 Update.
-3. 🔒 Update Microsoft Edge Chromium-based to version 137.0.3296.62
-4. 🔒 Block Executable content from email client and webmail.
-5. 🔒 Block Credential Stealing (lssas.exe).
-6. 🔒 Enable Network Protection.
-7. 🔒 Block untrusted and unsigned processes that run from USB (Protection contre infections via USB).
-8. 🔒 Set controlled folder access to enabled or audit mode.
+| Control                                                      | Risk Level | Impact             | Justification                                                                           | Decision   |
+|--------------------------------------------------------------|------------|----------|--------------------------------------------------------------------------------------------------|------------|
+| 🔒 Turn on PUA protection in block mode                     | High        | High    | Blocks potentially unwanted applications that may compromise security.                            | Remediate  |
+| 🔒 Update Microsoft Windows 11 (OS and apps)                | High        | High    | Critical security patches fix vulnerabilities and protect system integrity.                       | Remediate  |
+| 🔒 Update Microsoft Edge Chromium-based                     | Medium      | High    | Browser updates patch exploitable vulnerabilities frequently targeted by attackers.               | Remediate  |
+| 🔒 Block credential stealing from LSASS                     | High        | High    | Prevents theft of credentials (hashes) used in lateral movement and privilege escalation attacks. | Remediate  |
+| 🔒 Enable Network Protection                                | Medium      | Medium  | Blocks network access to malicious domains and reduces attack surface.                            | Remediate  |
+| 🔒 Set controlled folder access to enabled/audit mode       | High        | High     | Protects against ransomware by restricting unauthorized file changes.                            | Remediate  |
+| 🔒 Block executable content from email client and webmail   | Medium      | Medium   | Prevents execution of malicious content delivered via email.                                     | Remediate  |
+| 🔒 Block untrusted and unsigned processes from USB          | Medium      | Medium   | Protects from malware spreading via USB removable devices.                                       | Remediate  |
 
 ---
 
@@ -147,6 +149,13 @@ Mitigates risks related to USB-borne malware and unauthorized software execution
 
 
 ## 🟡 Accepted Risks
+
+| Control                                         | Risk Level | Impact               | Justification                                                                                              | Decision  |
+|-------------------------------------------------|------------|----------------------|------------------------------------------------------------------------------------------------------------|-----------|
+| Disable 'Autoplay' for all drives               | Low        | Low                  | Modern Windows restrict autoplay by default; full disable may impact user experience with trusted devices. | Accepted  |
+| Interactive logon: Machine inactivity limit     | Low        | Low to Medium        | In physically secured environments, this control can be redundant with other auto-lock measures.           | Accepted  |
+| Disable Defender Firewall notifications         | Low        | Low                  | Notifications off reduces user noise; monitoring remains via logs and centralized tools.                   | Accepted  |
+
 
 ## 1. Disable 'Autoplay' for all drives
 
