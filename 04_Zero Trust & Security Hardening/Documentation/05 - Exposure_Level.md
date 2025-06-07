@@ -32,11 +32,31 @@ Two different types of responses were demonstrated:
 ![LTP-HLP01_Recommendation](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/LTP-HLP01_Recommendations.png)
 
 
-## ✅ 1. A remediation request 
 
-### 🛠️ 1. Windows 11 Update
+# 🔒 Priority Remediations – Security Recommendations
 
-**Ensures the OS and built-in applications are up to date with the latest security patches, reducing exposure to known vulnerabilities.**
+Below is a list of high-priority remediation actions to apply immediately in order to reduce the organization's attack surface and strengthen endpoint security posture.
+
+---
+
+### ✅ Turn on PUA Protection in Block Mode
+
+**Description:**  
+Blocks Potentially Unwanted Applications (PUAs) that may contain adware, mining tools, bundlers, or software that introduces security risks.
+
+**Justification:**  
+Helps prevent low-trust applications from compromising system integrity.
+
+---
+
+### ✅ Update Microsoft Windows 11 (OS and Built-in Applications)
+
+**Description:**  
+Ensure all Windows 11 system components and built-in apps are up-to-date.
+
+**Justification:**  
+Regular OS updates patch critical vulnerabilities and mitigate exploitation risks.
+
 
 | Field                | Value                                     |
 |----------------------|-------------------------------------------|                       
@@ -48,9 +68,41 @@ Two different types of responses were demonstrated:
 
 ---
 
-### 🛠️ 2. Block Executable content from email client and webmail
+---
 
-**Blocks malicious executable files from being downloaded or executed via email clients or webmail, reducing phishing and malware risk.**
+### ✅ Update Microsoft Edge (Chromium-based) to Version 137.0.3296.62
+
+**Description:**  
+Update the Microsoft Edge browser to the latest stable version.
+
+**Justification:**  
+Web browsers are prime targets for exploits; updates fix known vulnerabilities and improve resilience.
+
+---
+
+### ✅ Block Credential Stealing from LSASS (Local Security Authority Subsystem)
+
+**Description:**  
+Enable ASR rule to block credential dumping attempts on `lsass.exe`.
+
+**Justification:**  
+Protects against techniques used in credential theft attacks (e.g., Mimikatz) that enable lateral movement or privilege escalation.
+
+| Field                | Value                                     |
+|----------------------|-------------------------------------------|
+| **Target**           | LTP-HLP01                                 |
+| **Due Date**         | June 6, 2025                              |
+| **Priority**         | High                                      |      
+
+---
+
+### ✅ Enable Network Protection
+
+**Description:**  
+Enforce Microsoft Defender SmartScreen to block access to dangerous domains and phishing infrastructure.
+
+**Justification:**  
+Prevents users from accessing known malicious websites, reducing exposure to drive-by attacks or social engineering.
 
 
 | Field                | Value                                     |
@@ -59,14 +111,26 @@ Two different types of responses were demonstrated:
 | **Due Date**         | June 6, 2025                              |
 | **Priority**         | High                                      |      
 
+---
 
-![Blcok_Exe_Email](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Block_exec_Email.png)
+### ✅ Set Controlled Folder Access to Enabled (or Audit Mode)
+
+**Description:**  
+Enable ransomware protection by locking critical folders against unauthorized access.
+
+**Justification:**  
+Defends against ransomware attempting to encrypt sensitive user files.
 
 ---
 
-### 🛠️ 4. Block Credential Stealing (lssas.exe)
+### ✅ Block Executable Content from Email Client and Webmail
 
-**LSASS protection enabled to prevent credential dumping attacks such as Mimikatz. Helps protect against post-exploitation techniques.**
+**Description:**  
+Prevent direct execution of embedded content or malicious attachments received via email.
+
+**Justification:**  
+Email is a common initial attack vector. This control reduces phishing and malware payload delivery.
+
 
 | Field                | Value                                     |
 |----------------------|-------------------------------------------|
@@ -74,25 +138,23 @@ Two different types of responses were demonstrated:
 | **Due Date**         | June 6, 2025                              |
 | **Priority**         | High                                      |      
 
-![Req_Block_Cred](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Req_Block_Cred.png)
+---
+
+### ✅ Block Untrusted and Unsigned Processes from USB Devices
+
+**Description:**  
+Block unknown or unsigned executables that attempt to run from USB storage.
+
+**Justification:**  
+Mitigates risks related to USB-borne malware and unauthorized software execution.
 
 ---
 
-### 🛠️ 3. Enable Network Protection
-
-**Network Protection helps block access to malicious domains and IPs by inspecting outbound connections. Enhances protection against phishing and C2 traffic.**
-
-
-| Field                | Value                                     |
-|----------------------|-------------------------------------------|
-| **Target**           | LTP-HLP01                                 |
-| **Due Date**         | June 6, 2025                              |
-| **Priority**         | High                                      |      
-
-![Req_NP](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Req_NP.png)
+> 🛡️ Apply these configurations via Intune, GPO, or PowerShell to harden your environment against common threats. Document remediation steps and monitor Defender recommendations regularly.
 
 
 ---
+
 
 ## 🟡 2. Risk Accepted – Digitally Sign Communications Policy
 
