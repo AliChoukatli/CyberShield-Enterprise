@@ -33,7 +33,7 @@ Two different types of responses were demonstrated:
 **Notes**
 
 | Field                | Value                                     |
-|----------------------|-------------------------------------------|                       |
+|----------------------|-------------------------------------------|                       
 | **Target**           |  LTP-HLP01                                |
 | **Due Date**         | June 6, 2025                              |
 | **Priority**         | High                                      |      
