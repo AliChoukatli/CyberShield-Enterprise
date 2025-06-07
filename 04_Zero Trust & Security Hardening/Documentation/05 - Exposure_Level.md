@@ -25,7 +25,7 @@ Two different types of responses were demonstrated:
 5. ✅ Block Credential Stealing (lssas.exe)
 6. ✅ Enable Network Protection
 7. ✅ Block untrusted and unsigned processes that run from USB (Protection contre infections via USB)
-8. ✅  Set controlled folder access to enabled or audit mode (
+8. ✅ Set controlled folder access to enabled or audit mode (
 
 ## 1. ✅ Remediation request 
 
