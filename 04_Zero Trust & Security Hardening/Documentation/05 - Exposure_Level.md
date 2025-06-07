@@ -33,16 +33,6 @@ Two different types of responses were demonstrated:
 
 ---
 
-### ✅ Turn on PUA Protection in Block Mode
-
-**Description:**  
-Blocks Potentially Unwanted Applications (PUAs) that may contain adware, mining tools, bundlers, or software that introduces security risks.
-
-**Justification:**  
-Helps prevent low-trust applications from compromising system integrity.
-
----
-
 ### ✅ Update Microsoft Windows 11 (OS and Built-in Applications)
 
 **Description:**  
@@ -62,18 +52,41 @@ Regular OS updates patch critical vulnerabilities and mitigate exploitation risk
 
 ---
 
----
-
-### ✅ Update Microsoft Edge (Chromium-based) to Version 137.0.3296.62
+### ✅ Turn on PUA Protection in Block Mode
 
 **Description:**  
-Update the Microsoft Edge browser to the latest stable version.
+Blocks Potentially Unwanted Applications (PUAs) that may contain adware, mining tools, bundlers, or software that introduces security risks.
 
 **Justification:**  
-Web browsers are prime targets for exploits; updates fix known vulnerabilities and improve resilience.
+Helps prevent low-trust applications from compromising system integrity.
 
-![Edge+Version](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/edge_version.png)
+---
 
+### ✅ Set Controlled Folder Access to Enabled (or Audit Mode)
+
+**Description:**  
+Enable ransomware protection by locking critical folders against unauthorized access.
+
+**Justification:**  
+Defends against ransomware attempting to encrypt sensitive user files.
+
+---
+
+### ✅ Block Executable Content from Email Client and Webmail
+
+**Description:**  
+Prevent direct execution of embedded content or malicious attachments received via email.
+
+**Justification:**  
+Email is a common initial attack vector. This control reduces phishing and malware payload delivery.
+
+---
+
+| Field                | Value                                     |
+|----------------------|-------------------------------------------|
+| **Target**           | LTP-HLP01                                 |
+| **Due Date**         | June 6, 2025                              |
+| **Priority**         | High                                      |   
 ---
 
 ### ✅ Block Credential Stealing from LSASS (Local Security Authority Subsystem)
@@ -105,34 +118,7 @@ Prevents users from accessing known malicious websites, reducing exposure to dri
 |----------------------|-------------------------------------------|
 | **Target**           | LTP-HLP01                                 |
 | **Due Date**         | June 6, 2025                              |
-| **Priority**         | High                                      |      
-
----
-
-### ✅ Set Controlled Folder Access to Enabled (or Audit Mode)
-
-**Description:**  
-Enable ransomware protection by locking critical folders against unauthorized access.
-
-**Justification:**  
-Defends against ransomware attempting to encrypt sensitive user files.
-
----
-
-### ✅ Block Executable Content from Email Client and Webmail
-
-**Description:**  
-Prevent direct execution of embedded content or malicious attachments received via email.
-
-**Justification:**  
-Email is a common initial attack vector. This control reduces phishing and malware payload delivery.
-
-
-| Field                | Value                                     |
-|----------------------|-------------------------------------------|
-| **Target**           | LTP-HLP01                                 |
-| **Due Date**         | June 6, 2025                              |
-| **Priority**         | High                                      |      
+| **Priority**         | High                                      |  
 
 ---
 
@@ -143,6 +129,18 @@ Block unknown or unsigned executables that attempt to run from USB storage.
 
 **Justification:**  
 Mitigates risks related to USB-borne malware and unauthorized software execution.
+
+---
+
+### ✅ Update Microsoft Edge (Chromium-based) to Version 137.0.3296.62
+
+**Description:**  
+Update the Microsoft Edge browser to the latest stable version.
+
+**Justification:**  
+Web browsers are prime targets for exploits; updates fix known vulnerabilities and improve resilience.
+
+![Edge+Version](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/edge_version.png)
 
 ---
 
