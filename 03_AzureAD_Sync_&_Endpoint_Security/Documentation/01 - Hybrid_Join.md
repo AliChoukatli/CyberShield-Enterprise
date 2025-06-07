@@ -1,4 +1,4 @@
-# ✅ Hybrid Join Guide 
+#  Hybrid Join Guide 
 
 ## 🎯 Objective
 
