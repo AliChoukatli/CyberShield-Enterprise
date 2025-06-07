@@ -21,6 +21,8 @@ Two different types of responses were demonstrated:
   3. BitLocker not enabled
   4. RDP access enabled
   5. Defender AV not fully configured
+ 
+![LTP-HLP01_Recommendation](]https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/LTP-HLP01_Recommendations.png)
 
 ---
 
