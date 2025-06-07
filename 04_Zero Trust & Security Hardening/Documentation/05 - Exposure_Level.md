@@ -15,12 +15,13 @@ Two different types of responses were demonstrated:
 
 - **Exposure Level**: 🔴 High
 - **Device**: `LTP-HLP01`
-- **Detected Issues**:
-  1. Outdated Windows 11 build
-  2. Network client: Digitally sign communications (always) – Not configured
-  3. BitLocker not enabled
-  4. RDP access enabled
-  5. Defender AV not fully configured
+- **Recommendations**:
+  1. Windows 11 Update
+  2. Block Executable content from email client and webmail
+  3. Block Credential Stealing (lssas.exe)
+  4. Enable Network Protection
+  5. Digitally Sign Communications Policy
+  
  
 ![LTP-HLP01_Recommendation](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/LTP-HLP01_Recommendations.png)
 
@@ -57,6 +58,20 @@ Two different types of responses were demonstrated:
 
 ---
 
+### 🛠️ 4. Block Credential Stealing (lssas.exe)
+
+**LSASS protection enabled to prevent credential dumping attacks such as Mimikatz. Helps protect against post-exploitation techniques.**
+
+| Field                | Value                                     |
+|----------------------|-------------------------------------------|
+| **Target**           | LTP-HLP01                                 |
+| **Due Date**         | June 6, 2025                              |
+| **Priority**         | High                                      |      
+
+![Req_Block_Cred](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Req_Block_Cred.png)
+
+---
+
 ### 🛠️ 3. Enable Network Protection
 
 **Network Protection helps block access to malicious domains and IPs by inspecting outbound connections. Enhances protection against phishing and C2 traffic.**
@@ -70,20 +85,6 @@ Two different types of responses were demonstrated:
 
 ![Req_NP](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Req_NP.png)
 
-
----
-
-### 🛠️ 4. Block Credential Stealing (lssas.exe)
-
-**LSASS protection enabled to prevent credential dumping attacks such as Mimikatz. Helps protect against post-exploitation techniques.**
-
-| Field                | Value                                     |
-|----------------------|-------------------------------------------|
-| **Target**           | LTP-HLP01                                 |
-| **Due Date**         | June 6, 2025                              |
-| **Priority**         | High                                      |      
-
-![Req_Block_Cred](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Req_Block_Cred.png)
 
 ---
 
