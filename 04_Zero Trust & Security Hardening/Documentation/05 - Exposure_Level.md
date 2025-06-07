@@ -16,11 +16,17 @@ Two different types of responses were demonstrated:
 - **Exposure Level**: 🔴 High
 - **Device**: `LTP-HLP01`
 - **Recommendations**:
-  1. Windows 11 Update
-  2. Block Executable content from email client and webmail
-  3. Block Credential Stealing (lssas.exe)
-  4. Enable Network Protection
-  5. Digitally Sign Communications Policy
+  1. Turn on PUA protection in block mode
+  2. Windows 11 Update
+  3. Update Microsoft Edge Chromium-based to version 137.0.3296.62
+  4. Block Executable content from email client and webmail
+  5. Block Credential Stealing (lssas.exe)
+  6. Enable Network Protection
+  7. Block untrusted and unsigned processes that run from USB (Protection contre infections via USB)
+  8. Set controlled folder access to enabled or audit mode (
+
+- Accepted:
+  9. Digitally Sign Communications Policy
   
  
 ![LTP-HLP01_Recommendation](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/LTP-HLP01_Recommendations.png)
