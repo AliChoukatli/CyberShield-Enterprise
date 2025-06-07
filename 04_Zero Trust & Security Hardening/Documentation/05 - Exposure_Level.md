@@ -31,6 +31,7 @@ Two different types of responses were demonstrated:
 ## 🛠️ 1. Windows 11 Update
 
 **Notes**
+
 | Field                | Value                                     |
 |----------------------|-------------------------------------------|                       |
 | **Target**           |  LTP-HLP01                                |
@@ -44,6 +45,7 @@ Two different types of responses were demonstrated:
 ## 🛠️ 2. Block Executable content from email client and webmail
 
 **Notes**
+
 | Field                | Value                                     |
 |----------------------|-------------------------------------------|
 | **Target**           | LTP-HLP01                                 |
@@ -58,7 +60,6 @@ Two different types of responses were demonstrated:
 ## 🛠️ 3. Enable Network Protection
 
 **Notes:**
-
 
 | Field                | Value                                     |
 |----------------------|-------------------------------------------|
