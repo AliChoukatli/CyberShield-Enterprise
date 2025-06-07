@@ -24,7 +24,6 @@ Two different types of responses were demonstrated:
  
 ![LTP-HLP01_Recommendation](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/LTP-HLP01_Recommendations.png)
 
----
 
 ## ✅ 1. A remediation request 
 
