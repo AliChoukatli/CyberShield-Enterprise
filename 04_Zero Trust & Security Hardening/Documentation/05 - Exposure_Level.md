@@ -1,4 +1,4 @@
-# 🛡️ Exposure Level Actions – Defender for Endpoint
+# 🛡️ Exposure Level Actions 
 
 This document outlines actions taken to address a **High Exposure Level** reported in the Microsoft Defender for Endpoint (MDE) Threat & Vulnerability Management (TVM) dashboard.
 
