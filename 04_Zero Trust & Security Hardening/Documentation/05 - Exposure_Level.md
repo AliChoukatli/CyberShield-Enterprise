@@ -28,7 +28,7 @@ Two different types of responses were demonstrated:
 
 ## ✅ 1. A remediation request 
 
-## 🛠️ 1. Windows 11 Update
+### 🛠️ 1. Windows 11 Update
 
 **Notes**
 
@@ -42,7 +42,7 @@ Two different types of responses were demonstrated:
 
 ---
 
-## 🛠️ 2. Block Executable content from email client and webmail
+### 🛠️ 2. Block Executable content from email client and webmail
 
 **Notes**
 
@@ -57,7 +57,7 @@ Two different types of responses were demonstrated:
 
 ---
 
-## 🛠️ 3. Enable Network Protection
+### 🛠️ 3. Enable Network Protection
 
 **Notes:**
 
@@ -72,7 +72,7 @@ Two different types of responses were demonstrated:
 
 ---
 
-## 🛠️ 4. Block Credential Stealing (lssas.exe)
+### 🛠️ 4. Block Credential Stealing (lssas.exe)
 
 **Notes:**
 
