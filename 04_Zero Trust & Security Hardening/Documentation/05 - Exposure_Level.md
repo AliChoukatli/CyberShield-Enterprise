@@ -18,9 +18,6 @@ Two different types of responses were demonstrated:
 
 ##  Security Recommendations - Priority Remediations
 
-![LTP-HLP01_Recommendations](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/LTP-HLP01_Recommendations.png)
-
-
 | Control                                                      | Risk Level | Impact             | Justification                                                                           | Decision   |
 |--------------------------------------------------------------|------------|----------|--------------------------------------------------------------------------------------------------|------------|
 | 🔒 Turn on PUA protection in block mode                     | High        | High    | Blocks potentially unwanted applications that may compromise security.                            | Remediate  |
@@ -31,6 +28,8 @@ Two different types of responses were demonstrated:
 | 🔒 Set controlled folder access to enabled/audit mode       | High        | High     | Protects against ransomware by restricting unauthorized file changes.                            | Remediate  |
 | 🔒 Block executable content from email client and webmail   | Medium      | Medium   | Prevents execution of malicious content delivered via email.                                     | Remediate  |
 | 🔒 Block untrusted and unsigned processes from USB          | Medium      | Medium   | Protects from malware spreading via USB removable devices.                                       | Remediate  |
+
+![LTP-HLP01_Recommendations](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/LTP-HLP01_Recommendations.png)
 
 ---
 
