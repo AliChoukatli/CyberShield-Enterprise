@@ -30,7 +30,7 @@ Two different types of responses were demonstrated:
 
 ### 🛠️ 1. Windows 11 Update
 
-**Notes**
+**Notes: Ensures the OS and built-in applications are up to date with the latest security patches, reducing exposure to known vulnerabilities.**
 
 | Field                | Value                                     |
 |----------------------|-------------------------------------------|                       
@@ -44,7 +44,8 @@ Two different types of responses were demonstrated:
 
 ### 🛠️ 2. Block Executable content from email client and webmail
 
-**Notes**
+**Notes: Blocks malicious executable files from being downloaded or executed via email clients or webmail, reducing phishing and malware risk.**
+
 
 | Field                | Value                                     |
 |----------------------|-------------------------------------------|
@@ -59,7 +60,8 @@ Two different types of responses were demonstrated:
 
 ### 🛠️ 3. Enable Network Protection
 
-**Notes:**
+**Notes: Network Protection helps block access to malicious domains and IPs by inspecting outbound connections. Enhances protection against phishing and C2 traffic.**
+
 
 | Field                | Value                                     |
 |----------------------|-------------------------------------------|
@@ -74,7 +76,7 @@ Two different types of responses were demonstrated:
 
 ### 🛠️ 4. Block Credential Stealing (lssas.exe)
 
-**Notes:**
+**Notes: LSASS protection enabled to prevent credential dumping attacks such as Mimikatz. Helps protect against post-exploitation techniques.**
 
 | Field                | Value                                     |
 |----------------------|-------------------------------------------|
