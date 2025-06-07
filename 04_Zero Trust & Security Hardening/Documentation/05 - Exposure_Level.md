@@ -1,4 +1,4 @@
-# 🛡️ Exposure Level Actions 
+# 🛡️ Exposure Level  
 
 This document outlines actions taken to address a **High Exposure Level** reported in the Microsoft Defender for Endpoint (MDE) Threat & Vulnerability Management (TVM) dashboard.
 
@@ -16,29 +16,16 @@ Two different types of responses were demonstrated:
 
 ![LTP-HLP01_Score](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/LTP-HLP01_Exposure_Level.png)
 
-- **Recommendations**:
-  
-1. ✅ Turn on PUA protection in block mode
-2. ✅ Windows 11 Update
-3. ✅ Update Microsoft Edge Chromium-based to version 137.0.3296.62
-4. ✅ Block Executable content from email client and webmail
-5. ✅ Block Credential Stealing (lssas.exe)
-6. ✅ Enable Network Protection
-7. ✅ Block untrusted and unsigned processes that run from USB (Protection contre infections via USB)
-8. ✅ Set controlled folder access to enabled or audit mode (
+##  Priority Remediations – Security Recommendations
 
-## 1. ✅ Remediation request 
-
-## 🟡 2. Risk Accepted:
-  1. ✅  Digitally Sign Communications Policy
-
-  
-
-
-
-# 🔒 Priority Remediations – Security Recommendations
-
-Below is a list of high-priority remediation actions to apply immediately in order to reduce the organization's attack surface and strengthen endpoint security posture.
+1. 🔒 Turn on PUA protection in block mode.
+2. 🔒 Windows 11 Update.
+3. 🔒 Update Microsoft Edge Chromium-based to version 137.0.3296.62
+4. 🔒 Block Executable content from email client and webmail.
+5. 🔒 Block Credential Stealing (lssas.exe).
+6. 🔒 Enable Network Protection.
+7. 🔒 Block untrusted and unsigned processes that run from USB (Protection contre infections via USB).
+8. 🔒 Set controlled folder access to enabled or audit mode.
 
 ---
 
