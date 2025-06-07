@@ -4,8 +4,8 @@ This document outlines actions taken to address a **High Exposure Level** report
 
 Two different types of responses were demonstrated:
 
-- ✅ A remediation request (Update Windows 11)
-- 🟡 A justified risk acceptance (signing communication policy)
+- ✅ 1. A remediation request 
+- 🟡 2. A justified risk acceptance 
 
 ---
 
@@ -26,18 +26,62 @@ Two different types of responses were demonstrated:
 
 ---
 
-## 🛠️ 1. Remediation Attempt – Windows 11 Update
+## ✅ 1. A remediation request 
 
-An attempt was made to create a remediation task to update the device to the latest version of Windows 11 using Microsoft Intune.
+## 🛠️ 1. Windows 11 Update
 
+**Notes**
 | Field                | Value                                     |
-|----------------------|-------------------------------------------|
-| **Remediation Type** | Software update                           |
-| **Target**           | Windows 11 (OS and built-in applications) |
+|----------------------|-------------------------------------------|                       |
+| **Target**           |  LTP-HLP01                                |
 | **Due Date**         | June 6, 2025                              |
 | **Priority**         | High                                      |      
 
 ![Req_win11_update](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Req_Win11update.png)
+
+---
+
+## 🛠️ 2. Block Executable content from email client and webmail
+
+**Notes**
+| Field                | Value                                     |
+|----------------------|-------------------------------------------|
+| **Target**           | LTP-HLP01                                 |
+| **Due Date**         | June 6, 2025                              |
+| **Priority**         | High                                      |      
+
+
+![Blcok_Exe_Email](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Block_exec_Email.png)
+
+---
+
+## 🛠️ 3. Enable Network Protection
+
+**Notes:**
+
+
+| Field                | Value                                     |
+|----------------------|-------------------------------------------|
+| **Target**           | LTP-HLP01                                 |
+| **Due Date**         | June 6, 2025                              |
+| **Priority**         | High                                      |      
+
+![Req_NP](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Req_NP.png)
+
+
+---
+
+## 🛠️ 4. Block Credential Stealing (lssas.exe)
+
+**Notes:**
+
+| Field                | Value                                     |
+|----------------------|-------------------------------------------|
+| **Target**           | LTP-HLP01                                 |
+| **Due Date**         | June 6, 2025                              |
+| **Priority**         | High                                      |      
+
+![Req_Block_Cred](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Req_Block_Cred.png)
 
 ---
 
