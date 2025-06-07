@@ -11,6 +11,8 @@ Two different types of responses were demonstrated:
 
 ## 📊 Initial Exposure Summary
 
+![[LTP-HLP01_Score](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/LTP-HLP01_Exposure_Level.png)
+
 - **Exposure Level**: 🔴 High
 - **Device**: `LTP-HLP01`
 - **Detected Issues**:
@@ -33,7 +35,7 @@ An attempt was made to create a remediation task to update the device to the lat
 | **Due Date**         | June 6, 2025                              |
 | **Priority**         | High                                      |      
 
-![Req_win11_update](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Req_Win11update.png)
+![Req_win11_update](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Req_Win11update.png)
 
 ---
 
