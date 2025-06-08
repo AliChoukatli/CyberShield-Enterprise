@@ -52,16 +52,13 @@ Enables Microsoft Defender Antivirus to detect and block **Potentially Unwanted 
 - Adware
 - Crypto mining tools
 
----
-
-![PUA_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/PUA_Req.png)
-
----
-
 ### 🔹 Justification
 Blocking PUAs strengthens endpoint security by:
 - Reducing attack surface from non-malicious but risky applications
 - Preventing installation of apps that may degrade system performance or be used as vectors in larger attacks
+---
+
+![PUA_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/PUA_Req.png)
 
 ---
 
