@@ -18,7 +18,7 @@ Two different types of responses were demonstrated:
 
 ##  Security Recommendations - Priority Remediations
 
-| Control                                                      | Risk Level | Impact             | Justification                                                                           | Decision   |
+| Control                                                      | Risk Level | Impact   | Justification                                                                                    | Decision   |
 |--------------------------------------------------------------|------------|----------|--------------------------------------------------------------------------------------------------|-------------|
 | 🔒 Update Microsoft Windows 11 (OS and apps)                | High        | High    | Critical security patches fix vulnerabilities and protect system integrity.                       | Remediate  |
 | 🔒 Turn on PUA protection in block mode                     | High        | High    | Blocks potentially unwanted applications that may compromise security.                            | Remediate  |
@@ -54,11 +54,37 @@ Regular OS updates patch critical vulnerabilities and mitigate exploitation risk
 
 ### ✅ Turn on PUA Protection in Block Mode
 
-**Description:**  
-Blocks Potentially Unwanted Applications (PUAs) that may contain adware, mining tools, bundlers, or software that introduces security risks.
+### 🔹 Description
+Enables Microsoft Defender Antivirus to detect and block **Potentially Unwanted Applications (PUAs)**. These may include:
+- Adware
+- Crypto mining tools
+- Software bundlers
+- Applications introducing security or performance risks
 
-**Justification:**  
-Helps prevent low-trust applications from compromising system integrity.
+---
+
+### 🔹 Justification
+Blocking PUAs strengthens endpoint security by:
+- Reducing attack surface from non-malicious but risky applications
+- Preventing installation of apps that may degrade system performance or be used as vectors in larger attacks
+
+---
+
+### 🔹 Remediation Method – PowerShell Script
+PUA protection was enabled in **Block Mode** using the following script, executed on target systems:
+
+```powershell
+Set-MpPreference -PUAProtection 1
+```
+1 = Enable in Block Mode
+(0 = Disable, 2 = Audit Mode)
+
+To confirm the setting:
+
+```powershell
+Get-MpPreference | Select-Object -Property PUAProtection
+```
+
 
 ---
 
