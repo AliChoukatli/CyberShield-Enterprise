@@ -41,25 +41,20 @@ Ensure all Windows 11 system components and built-in apps are up-to-date.
 **Justification:**  
 Regular OS updates patch critical vulnerabilities and mitigate exploitation risks.
 
-
-| Field                | Value                                     |
-|----------------------|-------------------------------------------|                       
-| **Target**           |  LTP-HLP01                                |
-| **Due Date**         | June 6, 2025                              |
-| **Priority**         | High                                      |      
-
 ![Req_win11_update](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Req_Win11update.png)
 
 ---
 
 ## ✅ Turn on PUA Protection in Block Mode
 
-![PUA_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/PUA_Req.png)
-
 ### 🔹 Description
 Enables Microsoft Defender Antivirus to detect and block **Potentially Unwanted Applications (PUAs)**. These may include:
 - Adware
 - Crypto mining tools
+
+---
+
+![PUA_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/PUA_Req.png)
 
 ---
 
@@ -82,9 +77,10 @@ Set-MpPreference -PUAProtection 1
 To confirm the setting:
 
 ```powershell
-Get-MpPreference | Select-Object -Property PUAProtection
+Get-mpPreference | ft PUAProtection
 ```
 
+![PUA_Fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/PUA_Fix.png)
 
 ---
 
