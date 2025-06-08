@@ -75,7 +75,7 @@
     ScanScheduleDay, `
     ScanScheduleOffset
   ```
-![Defender_Validation](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Defender_Validation.png)
+![Defender_Validation](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Defender_Validation_Script.png)
 
 ### 🛡️ Step 6 - Report
 - Go to Devices > Configuration
