@@ -56,7 +56,7 @@ This document outlines actions taken to address a **High Exposure Level** report
 
 ## ✅ Applied Remediation
 
-### 🧰 1. Update Microsoft Windows 11 (OS and Built-in Applications)
+### 🧰 Update Microsoft Windows 11 (OS and Built-in Applications)
 
 ![Req_win11_update](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Req_Win11update.png)
 
@@ -70,7 +70,7 @@ Remediation: Update Win 11
 
 ---
 
-### 🧰 2. Turn on PUA Protection in Block Mode
+### 🧰 Turn on PUA Protection in Block Mode
 
 ![PUA_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/PUA_Req.png)
 
@@ -104,7 +104,7 @@ Get-mpPreference | ft PUAProtection
 
 ---
 
-### 🧰 3. Set Controlled Folder Access to Enabled (or Audit Mode)
+### 🧰 Set Controlled Folder Access to Enabled (or Audit Mode)
 
 
 ![Folder_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Folder_Req.png)
@@ -146,7 +146,7 @@ Windows Defender Exploit Guard
 
 ---
 
-### 4. 🧰 Block Credential Stealing from LSASS (Local Security Authority Subsystem)
+### 🧰 Block Credential Stealing from LSASS (Local Security Authority Subsystem)
 
 ![lsaas_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/lsass_Req.png)
 
@@ -180,7 +180,7 @@ Windows Defender Exploit Guard > ASR > Rules
 ![lsaas_fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/lsaas_Fix.png)
 
 ---
-### 5. 🧰 Enable Network Protection
+### 🧰 Enable Network Protection
 
 ![NP_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/NP_Req.png)
 
@@ -221,7 +221,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender
 ---
 
 
-### 🧰 6. Block Executable Content from Email Client and Webmail - Intune Method
+### 🧰 Block Executable Content from Email Client and Webmail - Intune Method
 
 ![Exe_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Exe_Req.png)
 
@@ -252,7 +252,7 @@ Email is a common initial attack vector. This control reduces phishing and malwa
 
 ---
 
-### 7. 🧰 Block Untrusted and Unsigned Processes from USB Devices - GPO Method](
+### 🧰 Block Untrusted and Unsigned Processes from USB Devices - GPO Method](
 
 This guide explains how to enable the Attack Surface Reduction (ASR) rule that blocks untrusted and unsigned processes from running from USB devices by setting the corresponding registry key via Group Policy Object (GPO).
 
@@ -291,20 +291,13 @@ This guide explains how to enable the Attack Surface Reduction (ASR) rule that b
 - To audit only without blocking, use `"2"` instead (Audit mode).
 - This ASR rule requires Microsoft Defender Antivirus and Exploit Guard enabled.
 
----
 
 This configuration helps to prevent malware execution from USB devices by blocking untrusted or unsigned processes.
 
 
+---
 
-
-
-
-
-
-
-
-## 8. 🧰 Update Microsoft Edge (Chromium-based) to Version 137.0.3296.62
+### 🧰 Update Microsoft Edge (Chromium-based) to Version 137.0.3296.62
 
 🔍 **Description:**  
 Update the Microsoft Edge browser to the latest stable version.
