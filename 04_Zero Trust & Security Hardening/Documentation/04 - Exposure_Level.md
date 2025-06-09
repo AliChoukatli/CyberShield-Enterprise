@@ -169,8 +169,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender
 - 🔍 **Purpose:** Prevent malware from dumping credentials from `lsass.exe` using tools like Mimikatz.
 - 🔍 **Applicable when:** You can't enable **LSA Protection** or **Credential Guard** on all devices due to compatibility issues.
 - 🔍 **Default Behavior:** Enabled in **Block Mode**.
-- 🔍 **Warning:** This rule does **not** support **Warn Mode**.
-- 🔍 If **LSA protection** is already enabled, this rule is **not applicable** and does not provide extra protection.
+- ⚠️ **Warning:** This rule does **not** support **Warn Mode**.
+- ⚠️ If **LSA protection** is already enabled, this rule is **not applicable** and does not provide extra protection.
 
 ---
 
@@ -182,7 +182,7 @@ To enable this rule in **Block Mode**, add the following registry key and value:
 ```reg
 HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
 ```
-⚠️ If the path doesn't exist, manually create each subkey:
+- ⚠️ If the path doesn't exist, manually create each subkey:
 Windows Defender Exploit Guard > ASR > Rules
 
 Add the following **String Value** inside the `Rules` key:
