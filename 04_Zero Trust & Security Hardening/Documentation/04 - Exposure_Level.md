@@ -64,6 +64,7 @@ Blocking PUAs strengthens endpoint security by:
 
 
 ✅ **Remediation Method** – PowerShell Script
+
 PUA protection was enabled in **Block Mode** using the following script, executed on target systems:
 
 ```powershell
