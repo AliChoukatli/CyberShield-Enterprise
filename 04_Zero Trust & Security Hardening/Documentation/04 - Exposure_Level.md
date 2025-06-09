@@ -159,34 +159,69 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender
 ---
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 ---
 
 ## 🧰 Block Credential Stealing from LSASS (Local Security Authority Subsystem)
 
-🔍 **Description:**  
-Enable ASR rule to block credential dumping attempts on `lsass.exe`.
 
-🔍 **Justification:**  
-Protects against techniques used in credential theft attacks (e.g., Mimikatz) that enable lateral movement or privilege escalation.
+🛡️ ASR Rule: Block Credential Stealing from the Windows Local Security Authority Subsystem
 
-| Field                | Value                                     |
-|----------------------|-------------------------------------------|
-| **Target**           | LTP-HLP01                                 |
-| **Due Date**         | June 6, 2025                              |
-| **Priority**         | High                                      |      
+This Attack Surface Reduction (ASR) rule helps prevent credential theft by blocking unauthorized access to the LSASS (Local Security Authority Subsystem Service) memory.
+
+---
+
+## 🔹 Overview
+
+- **Purpose:** Prevent malware from dumping credentials from `lsass.exe` using tools like Mimikatz.
+- **Applicable when:** You can't enable **LSA Protection** or **Credential Guard** on all devices due to compatibility issues.
+- **Default Behavior:** Enabled in **Block Mode**.
+- **Warning:** This rule does **not** support **Warn Mode**.
+- **Audit Mode Notes:** Audit events are noisy and often safe to ignore.
+
+---
+
+## 🔹 Dependencies
+
+- Microsoft Defender Antivirus must be installed and active.
+- If **LSA protection** is already enabled, this rule is **not applicable** and does not provide extra protection.
+
+---
+
+## 🔹 Known Issues
+
+This rule may block legitimate apps accessing LSASS memory (e.g., `svchost.exe`), but these can usually be safely ignored.  
+The following app is **incompatible**:
+
+| Application | Details |
+|-------------|---------|
+| **Quest Dirsync Password Sync** | Not functional when this rule is enabled. Error: `VirtualAllocEx failed: 5` ([4253914](https://support.quest.com)) |
+
+---
+
+## 🔹 Registry Configuration (Block Mode)
+
+To enable this rule in **Block Mode**, add the following registry key:
+
+### 📁 Registry Path
+
+```reg
+HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
+```
+⚠️ If the path doesn't exist, manually create each subkey:
+Windows Defender Exploit Guard > ASR > Rules
+
+### 🧩 Registry Value
+
+Add the following **String Value** inside the `Rules` key:
+
+| Name (String)                                      | Type     | Value  |
+|----------------------------------------------------|----------|--------|
+| `9E6C4E1F-7D60-472F-BA1A-A39EF669E4B2`             | `REG_SZ` | `"1"`  |
+
+- `"1"` = Block Mode ✅  
+- `"2"` = Audit Mode (not recommended due to noise)  
+- `"0"` = Disabled
+
 
 ---
 
