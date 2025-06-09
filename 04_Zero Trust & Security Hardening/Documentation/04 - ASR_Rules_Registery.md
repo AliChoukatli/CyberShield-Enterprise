@@ -238,16 +238,6 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender
 
 ---
 
-## 🧰 Block Untrusted and Unsigned Processes from USB Devices
-
-🔍 **Description:**  
-Block unknown or unsigned executables that attempt to run from USB storage.
-
-🔍 **Justification:**  
-Mitigates risks related to USB-borne malware and unauthorized software execution.
-
----
-
 ## 🧰 Update Microsoft Edge (Chromium-based) to Version 137.0.3296.62
 
 🔍 **Description:**  
