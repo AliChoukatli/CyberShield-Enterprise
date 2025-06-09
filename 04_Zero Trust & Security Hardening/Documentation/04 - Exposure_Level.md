@@ -116,7 +116,7 @@ Windows Defender Exploit Guard
 - Select the `Controlled Folder Access` key.
 - Right-click in the right pane → `New` → `DWORD (32-bit) Value`.
 - Name it:
-EnableControlledFolderAccess
+`EnableControlledFolderAccess`
 - Set its value:
 - `1` = Enabled (Block Mode) ✅ **Recommended**
 ---
