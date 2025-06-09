@@ -136,12 +136,9 @@ Email is a common initial attack vector. This control reduces phishing and malwa
 
 ✅ **Remediation**
 
-**Rule Details**
- 
-- **GUID:** `BE9BA2D9-53EA-4CDC-84E5-9B1EEEE46550` 
 - **Documentation:** [Microsoft Learn](https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference?view=o365-worldwide#block-executable-content-from-email-client-and-webmail)
 
-To enable this rule in **Block Mode**, add the following registry key and value :
+- To enable this rule in **Block Mode**, add the following registry key and value :
 
 ```reg
 HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
