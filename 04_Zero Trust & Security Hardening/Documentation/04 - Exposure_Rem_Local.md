@@ -235,7 +235,7 @@ Email is a common initial attack vector. This control reduces phishing and malwa
 2. Navigate to:  
    `Endpoint Security` → `Attack Surface Reduction`
 3. Click on **+ Create Policy**
-   - Platform: **Windows 10 and later**
+   - Platform: **Windows**
    - Profile: **Attack surface reduction rules**
 4. Configure the following:
    - Rule name: `Block executable content from email client and webmail`
