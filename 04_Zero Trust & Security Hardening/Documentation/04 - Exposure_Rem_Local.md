@@ -161,15 +161,6 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender
 
 ---
 ✅ **Remediation with Intune**
-# 🛡️ Apply ASR Rule via Microsoft Intune
-
-
-
-
-## Rule: Block executable content from email client and webmail
-> GUID: `BE9BA2D9-53EA-4CDC-84E5-9B1EEEE46550`
-
-## 🔧 Step-by-step via Intune
 
 1. Go to the **Microsoft Intune Admin Center**: [https://intune.microsoft.com](https://intune.microsoft.com)
 2. Navigate to:  
