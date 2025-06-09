@@ -135,41 +135,9 @@ Windows Defender Exploit Guard
 
 ![Folder_fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Folder_fix.png)
 
-
 ---
 
-## 🧰 4. Block Executable Content from Email Client and Webmail - Intune Method
-
-![Exe_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Exe_Req.png)
-
-🔍 **Description:**  
-Prevent direct execution of embedded content or malicious attachments received via email.
-
-🔍 **Justification:**  
-Email is a common initial attack vector. This control reduces phishing and malware payload delivery.
-
-✅ **Remediation with Intune**
-
-1. Go to the **Microsoft Intune Admin Center**: [https://intune.microsoft.com](https://intune.microsoft.com)
-2. Navigate to:  
-   `Endpoint Security` → `Attack Surface Reduction`
-3. Click on **+ Create Policy**
-   - Platform: **Windows 10 and later**
-   - Profile: **Attack surface reduction rules**
-4. Configure the following:
-   - Rule name: `Block executable content from email client and webmail`
-   - GUID: `BE9BA2D9-53EA-4CDC-84E5-9B1EEEE46550`
-   - Action: `Block`
-5. Assign the policy to your **targeted devices or groups**
-6. Review + Create
-
-✅ Once deployed, the rule will be enforced on all assigned devices.
-
-![Exe_Fix](
-
----
-
-## 5. 🧰 Block Credential Stealing from LSASS (Local Security Authority Subsystem)
+## 4. 🧰 Block Credential Stealing from LSASS (Local Security Authority Subsystem)
 
 ![lsaas_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/lsass_Req.png)
 
@@ -203,8 +171,7 @@ Windows Defender Exploit Guard > ASR > Rules
 ![lsaas_fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/lsaas_Fix.png)
 
 ---
-
-## 6. 🧰 Enable Network Protection
+## 5. 🧰 Enable Network Protection
 
 ![NP_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/NP_Req.png)
 
@@ -246,7 +213,50 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender
 
 ---
 
-## 7. 🧰 Update Microsoft Edge (Chromium-based) to Version 137.0.3296.62
+
+## 🧰 6. Block Executable Content from Email Client and Webmail - Intune Method
+
+![Exe_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Exe_Req.png)
+
+🔍 **Description:**  
+Prevent direct execution of embedded content or malicious attachments received via email.
+
+🔍 **Justification:**  
+Email is a common initial attack vector. This control reduces phishing and malware payload delivery.
+
+✅ **Remediation with Intune**
+
+1. Go to the **Microsoft Intune Admin Center**: [https://intune.microsoft.com](https://intune.microsoft.com)
+2. Navigate to:  
+   `Endpoint Security` → `Attack Surface Reduction`
+3. Click on **+ Create Policy**
+   - Platform: **Windows 10 and later**
+   - Profile: **Attack surface reduction rules**
+4. Configure the following:
+   - Rule name: `Block executable content from email client and webmail`
+   - GUID: `BE9BA2D9-53EA-4CDC-84E5-9B1EEEE46550`
+   - Action: `Block`
+5. Assign the policy to your **targeted devices or groups**
+6. Review + Create
+
+✅ Once deployed, the rule will be enforced on all assigned devices.
+
+![Exe_Fix](
+
+---
+
+## 7. 🧰 Block Untrusted and Unsigned Processes from USB Devices - GPO Method](
+
+
+
+
+
+
+
+
+
+
+## 8. 🧰 Update Microsoft Edge (Chromium-based) to Version 137.0.3296.62
 
 🔍 **Description:**  
 Update the Microsoft Edge browser to the latest stable version.
