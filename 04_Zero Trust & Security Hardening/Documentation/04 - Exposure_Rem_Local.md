@@ -138,7 +138,7 @@ Windows Defender Exploit Guard
 
 ---
 
-## 🧰 4. Block Executable Content from Email Client and Webmail
+## 🧰 4. Block Executable Content from Email Client and Webmail - Intune Method
 
 ![Exe_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Exe_Req.png)
 
@@ -148,27 +148,6 @@ Prevent direct execution of embedded content or malicious attachments received v
 🔍 **Justification:**  
 Email is a common initial attack vector. This control reduces phishing and malware payload delivery.
 
-✅ **Remediation using Regisry**
-
-- **Documentation:** [Microsoft Learn](https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference?view=o365-worldwide#block-executable-content-from-email-client-and-webmail)
-
-- To enable this rule in **Block Mode**, add the following registry key and value :
-
-```reg
-HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
-```
-⚠️ If the path does not exist, you must **manually create each subkey** in this order: `Windows Defender Exploit Guard > ASR > Rules`
-
-- Add the following **String Value** inside the `Rules` key:
-- 
-| Name (String)                                      | Type           | Value  |
-|----------------------------------------------------|----------------|--------|
-| `BE9BA2D9-53EA-4CDC-84E5-9B1EEEE46550`            | `String Value` | `"1"`  |
-
-
-![Exe_Fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Exe_Fix.png)
-
----
 ✅ **Remediation with Intune**
 
 1. Go to the **Microsoft Intune Admin Center**: [https://intune.microsoft.com](https://intune.microsoft.com)
@@ -186,6 +165,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender
 
 ✅ Once deployed, the rule will be enforced on all assigned devices.
 
+![Exe_Fix](
 
 ---
 
