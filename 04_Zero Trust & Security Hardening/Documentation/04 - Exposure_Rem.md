@@ -1,4 +1,7 @@
-# 🛡️ Exposure Level  
+# 🛡️ Security Exposure Analysis, Remediation & Risk Management
+
+> 🔴 This configuration was applied using **Windows Registry (Local Method)**.
+
 
 This document outlines actions taken to address a **High Exposure Level** reported in the Microsoft Defender for Endpoint (MDE) Threat & Vulnerability Management (TVM) dashboard.
 
