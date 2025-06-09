@@ -174,9 +174,9 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender
 
 ---
 
-✅ **Remediation
+✅ **Remediation**
 
-To enable this rule in **Block Mode**, add the following registry key and value: 
+- To enable this rule in **Block Mode**, add the following registry key and value: 
 
 ```reg
 HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
@@ -184,7 +184,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender
 - ⚠️ If the path doesn't exist, manually create each subkey:
 Windows Defender Exploit Guard > ASR > Rules
 
-Add the following **String Value** inside the `Rules` key:
+- Add the following **String Value** inside the `Rules` key:
 
 | Name (String)                                      | Type           | Value  |
 |----------------------------------------------------|----------------|--------|
