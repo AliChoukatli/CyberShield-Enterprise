@@ -146,9 +146,7 @@ To enable this rule in **Block Mode**, add the following registry key and value 
 ```reg
 HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
 ```
-⚠️ If the path does not exist, you must **manually create each subkey** in this order:
-
-Windows Defender Exploit Guard > ASR > Rules.
+⚠️ If the path does not exist, you must **manually create each subkey** in this order: `Windows Defender Exploit Guard > ASR > Rules`
 
 - Inside the Rules key, add the following String Value:
 
