@@ -33,28 +33,28 @@ Two different types of responses were demonstrated:
 
 ---
 
-## ✅ Update Microsoft Windows 11 (OS and Built-in Applications)
+## 🧰 Update Microsoft Windows 11 (OS and Built-in Applications)
 
-**Description:**  
+🔍 **Description:**  
 Ensure all Windows 11 system components and built-in apps are up-to-date.
 
-**Justification:**  
+🔍 **Justification:**  
 Regular OS updates patch critical vulnerabilities and mitigate exploitation risks.
 
 ![Req_win11_update](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Req_Win11update.png)
 
-**Remediation** : Update Win 11
+✅ **Remediation** : Update Win 11
 
 ---
 
-## ✅ Turn on PUA Protection in Block Mode
+## 🧰 Turn on PUA Protection in Block Mode
 
-**Description:** 
+🔍 **Description:** 
 Enables Microsoft Defender Antivirus to detect and block **Potentially Unwanted Applications (PUAs)**. These may include:
 - Adware
 - Crypto mining tools
 
-**Justification:**
+🔍 **Justification:**
 Blocking PUAs strengthens endpoint security by:
 - Reducing attack surface from non-malicious but risky applications
 - Preventing installation of apps that may degrade system performance or be used as vectors in larger attacks
@@ -63,7 +63,7 @@ Blocking PUAs strengthens endpoint security by:
 ![PUA_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/PUA_Req.png)
 
 
-**Remediation Method** – PowerShell Script
+✅ **Remediation Method** – PowerShell Script
 PUA protection was enabled in **Block Mode** using the following script, executed on target systems:
 
 ```powershell
@@ -82,17 +82,17 @@ Get-mpPreference | ft PUAProtection
 
 ---
 
-## ✅ Set Controlled Folder Access to Enabled (or Audit Mode)
+## 🧰 Set Controlled Folder Access to Enabled (or Audit Mode)
 
-**Description:**  
+🔍 **Description:**  
 Enable ransomware protection by locking critical folders against unauthorized access.
 
-**Justification:**  
+🔍 **Justification:**  
 Defends against ransomware attempting to encrypt sensitive user files.
 
 ![Folder_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Folder_Req.png)
 
-**Remediation**
+✅ **Remediation**
 
 #### 1. Open Registry Editor
 - Press `Win + R`, type `regedit`, and press `Enter`.
@@ -125,12 +125,12 @@ EnableControlledFolderAccess
 
 ---
 
-## ✅ Block Executable Content from Email Client and Webmail
+## 🧰 Block Executable Content from Email Client and Webmail
 
-**Description:**  
+🔍 **Description:**  
 Prevent direct execution of embedded content or malicious attachments received via email.
 
-**Justification:**  
+🔍 **Justification:**  
 Email is a common initial attack vector. This control reduces phishing and malware payload delivery.
 
 **Rule Details**
@@ -180,12 +180,12 @@ Windows Defender Exploit Guard > ASR > Rules.
 
 ---
 
-## ✅ Block Credential Stealing from LSASS (Local Security Authority Subsystem)
+## 🧰 Block Credential Stealing from LSASS (Local Security Authority Subsystem)
 
-**Description:**  
+🔍 **Description:**  
 Enable ASR rule to block credential dumping attempts on `lsass.exe`.
 
-**Justification:**  
+🔍 **Justification:**  
 Protects against techniques used in credential theft attacks (e.g., Mimikatz) that enable lateral movement or privilege escalation.
 
 | Field                | Value                                     |
@@ -196,7 +196,7 @@ Protects against techniques used in credential theft attacks (e.g., Mimikatz) th
 
 ---
 
-## ✅ Enable Network Protection
+## 🧰 Enable Network Protection
 
 **Description:**  
 Enforce Microsoft Defender SmartScreen to block access to dangerous domains and phishing infrastructure.
@@ -213,22 +213,22 @@ Prevents users from accessing known malicious websites, reducing exposure to dri
 
 ---
 
-## ✅ Block Untrusted and Unsigned Processes from USB Devices
+## 🧰 Block Untrusted and Unsigned Processes from USB Devices
 
-**Description:**  
+🔍 **Description:**  
 Block unknown or unsigned executables that attempt to run from USB storage.
 
-**Justification:**  
+🔍 **Justification:**  
 Mitigates risks related to USB-borne malware and unauthorized software execution.
 
 ---
 
-## ✅ Update Microsoft Edge (Chromium-based) to Version 137.0.3296.62
+## 🧰 Update Microsoft Edge (Chromium-based) to Version 137.0.3296.62
 
-**Description:**  
+🔍 **Description:**  
 Update the Microsoft Edge browser to the latest stable version.
 
-**Justification:**  
+🔍 **Justification:**  
 Web browsers are prime targets for exploits; updates fix known vulnerabilities and improve resilience.
 
 ![Edge+Version](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/edge_version.png)
