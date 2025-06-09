@@ -163,20 +163,11 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender
 
 ## 🧰 Block Credential Stealing from LSASS (Local Security Authority Subsystem)
 
-
-🛡️ ASR Rule: Block Credential Stealing from the Windows Local Security Authority Subsystem
-
-This Attack Surface Reduction (ASR) rule helps prevent credential theft by blocking unauthorized access to the LSASS (Local Security Authority Subsystem Service) memory.
-
----
-
-## 🔹 Overview
-
+- **Description** : This Attack Surface Reduction (ASR) rule helps prevent credential theft by blocking unauthorized access to the LSASS (Local Security Authority Subsystem Service) memory.
 - **Purpose:** Prevent malware from dumping credentials from `lsass.exe` using tools like Mimikatz.
 - **Applicable when:** You can't enable **LSA Protection** or **Credential Guard** on all devices due to compatibility issues.
 - **Default Behavior:** Enabled in **Block Mode**.
 - **Warning:** This rule does **not** support **Warn Mode**.
-- **Audit Mode Notes:** Audit events are noisy and often safe to ignore.
 
 ---
 
