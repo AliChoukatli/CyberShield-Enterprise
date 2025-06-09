@@ -41,9 +41,9 @@ Ensure all Windows 11 system components and built-in apps are up-to-date.
 🔍 **Justification:**  
 Regular OS updates patch critical vulnerabilities and mitigate exploitation risks.
 
-![Req_win11_update](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Req_Win11update.png)
-
 ✅ **Remediation** : Update Win 11
+
+![Req_win11_update](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Req_Win11update.png)
 
 ---
 
