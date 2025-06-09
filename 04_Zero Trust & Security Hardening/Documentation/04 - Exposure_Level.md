@@ -62,10 +62,6 @@ Enables Microsoft Defender Antivirus to detect and block **Potentially Unwanted 
 Blocking PUAs strengthens endpoint security by:
 - Reducing attack surface from non-malicious but risky applications
 - Preventing installation of apps that may degrade system performance or be used as vectors in larger attacks
----
-
-
-
 
 ✅ **Remediation Method** – PowerShell Script
 
