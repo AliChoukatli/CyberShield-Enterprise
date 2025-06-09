@@ -96,8 +96,6 @@ Defends against ransomware attempting to encrypt sensitive user files.
 #### 1. Open Registry Editor
 - Press `Win + R`, type `regedit`, and press `Enter`.
 
----
-
 #### 2. Navigate to:
 ```reg
 HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender
@@ -112,8 +110,6 @@ Windows Defender Exploit Guard
 
 - Then right-click on **Windows Defender Exploit Guard** → `New` → `Key` → name it:
 Controlled Folder Access
-
----
 
 #### 4. Add the DWORD Value
 - Select the `Controlled Folder Access` key.
