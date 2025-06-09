@@ -141,37 +141,24 @@ Email is a common initial attack vector. This control reduces phishing and malwa
 
 ---
 
+### 🔹 **Remediation**
 
 To enable this rule in **Block Mode**, add the following registry key:
-
-#### 🔹 Registry Path
 
 ```reg
 HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
 ```
 
-If the path does not exist, create each subkey manually.
-
 #### 🔹 Registry Value
 
-| Name (String)                                      | Type     | Value |
-|----------------------------------------------------|----------|--------|
-| `D4F940AB-401B-4EFC-AADC-AD5F3C50688A`             | `REG_SZ` | `"1"`  |
+| Name (String)                                      | Type           | Value  |
+|----------------------------------------------------|----------------|--------|
+| `BE9BA2D9-53EA-4CDC-84E5-9B1EEEE46550`            | `String Value` | `"1"`  |
 
 ---
+If the path does not exist, you must **manually create each subkey** in this order:
 
-#### 📄 Example `.reg` File
-
-```reg
-Windows Registry Editor Version 5.00
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules]
-"D4F940AB-401B-4EFC-AADC-AD5F3C50688A"="1"
-
-```
-
-
-
+Windows Defender Exploit Guard > ASR > Rules.
 
 
 
