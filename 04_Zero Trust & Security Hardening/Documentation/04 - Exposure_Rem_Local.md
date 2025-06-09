@@ -11,9 +11,11 @@ This document outlines actions taken to address a **High Exposure Level** report
 4. Block Executable Content from Email Client and Webmail
    - Local Method
    - Intune Method
-6. Block Credential Stealing from LSASS (Local Security Authority Subsystem)
-7. Enable Network Protection
-8. Update Microsoft Edge (Chromium-based) to Version 137.0.3296.62
+5. Block Untrusted and Unsigned Processes from USB Devices
+   - GPO Method
+7. Block Credential Stealing from LSASS (Local Security Authority Subsystem)
+8. Enable Network Protection
+9. Update Microsoft Edge (Chromium-based) to Version 137.0.3296.62
 
 Two different types of responses were demonstrated:
 
