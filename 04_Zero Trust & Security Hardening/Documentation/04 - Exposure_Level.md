@@ -198,18 +198,41 @@ Windows Defender Exploit Guard > ASR > Rules
 
 ## 🧰 Enable Network Protection
 
-**Description:**  
-Enforce Microsoft Defender SmartScreen to block access to dangerous domains and phishing infrastructure.
+![NP_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/NP_Req.png)
 
-**Justification:**  
+# Prerequisites
+
+Before enabling Network Protection, ensure the following are active:
+
+- Microsoft Defender Antivirus running  
+- Real-time protection enabled  
+- Cloud-delivered protection enabled
+
+🔍 **Description:**  
+Network Protection helps protect devices by blocking connections to potentially harmful domains and IPs, using Microsoft Defender SmartScreen.
+
+🔍 **Justification:**  
 Prevents users from accessing known malicious websites, reducing exposure to drive-by attacks or social engineering.
 
+✅ **Remediation**
 
-| Field                | Value                                     |
-|----------------------|-------------------------------------------|
-| **Target**           | LTP-HLP01                                 |
-| **Due Date**         | June 6, 2025                              |
-| **Priority**         | High                                      |  
+- To enable this rule in **Block Mode**, add the following registry key and value :
+
+```reg
+HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\Network Protection
+```
+
+> If the path does not exist, you must **manually create the `Network Protection` key and the value**.
+
+
+
+| Name                     | Type      | Value |
+|--------------------------|-----------|-------|
+| `EnableNetworkProtection` | `REG_DWORD` | `1`   |
+
+- `1` = Enable Network Protection in Block Mode  
+
+![NP_Fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/NP_Fix.png)
 
 ---
 
