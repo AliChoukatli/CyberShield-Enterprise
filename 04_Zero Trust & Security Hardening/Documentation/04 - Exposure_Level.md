@@ -132,13 +132,72 @@ Prevent direct execution of embedded content or malicious attachments received v
 **Justification:**  
 Email is a common initial attack vector. This control reduces phishing and malware payload delivery.
 
+
+# 🛡️ ASR Rule - Block Executable Content from Email Client and Webmail
+
+This ASR (Attack Surface Reduction) rule prevents execution of potentially malicious executable content received through email clients or webmail.
+
 ---
 
-| Field                | Value                                     |
-|----------------------|-------------------------------------------|
-| **Target**           | LTP-HLP01                                 |
-| **Due Date**         | June 6, 2025                              |
-| **Priority**         | High                                      |   
+## 📘 Rule Details
+
+- **Rule Name:** Block executable content from email client and webmail  
+- **GUID:** `D4F940AB-401B-4EFC-AADC-AD5F3C50688A`  
+- **Recommended:** ✅ Yes  
+- **Documentation:** [Microsoft Learn](https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference?view=o365-worldwide#block-executable-content-from-email-client-and-webmail)
+
+---
+
+## 🗂️ Registry Configuration
+
+To enable this rule in **Block Mode**, add the following registry key:
+
+### 🔹 Registry Path
+
+```reg
+HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
+```
+
+If the path does not exist, create each subkey manually.
+
+### 🔹 Registry Value
+
+| Name (String)                                      | Type     | Value |
+|----------------------------------------------------|----------|--------|
+| `D4F940AB-401B-4EFC-AADC-AD5F3C50688A`             | `REG_SZ` | `"1"`  |
+
+---
+
+## 📄 Example `.reg` File
+
+```reg
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules]
+"D4F940AB-401B-4EFC-AADC-AD5F3C50688A"="1"
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ---
 
 ## ✅ Block Credential Stealing from LSASS (Local Security Authority Subsystem)
