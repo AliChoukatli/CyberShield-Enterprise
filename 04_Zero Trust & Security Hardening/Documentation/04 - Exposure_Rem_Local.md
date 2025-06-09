@@ -16,7 +16,7 @@ This document outlines actions taken to address a **High Exposure Level** report
 
 ---
 
-## 🔴 Initial Exposure Summary
+## 🔴 Initial Exposure Level Summary
 
 - **Exposure Level**: High
 - **Device**: `LTP-HLP01`
