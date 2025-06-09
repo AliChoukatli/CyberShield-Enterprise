@@ -22,17 +22,9 @@
 | 🔒 Block untrusted and unsigned processes from USB          | Medium      | Medium   | Protects from malware spreading via USB removable devices.                                       |
 | 🔒 Update Microsoft Edge Chromium-based                     | Medium      | High    | Browser updates patch exploitable vulnerabilities frequently targeted by attackers.               |
 
-  
-Two different types of responses were demonstrated:
-
-- ✅ 1. A remediation request 
-- 🟡 2. A justified risk acceptance 
-
----
 
 ## 🔴 Index
 
-## ✅ Applied Remediations
 This document outlines actions taken to address a **High Exposure Level** reported in the Microsoft Defender for Endpoint (MDE) Threat & Vulnerability Management (TVM) dashboard.
 
 1. 🔒 [Update Microsoft Windows 11 (OS and Built-in Applications)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Exposure_Rem_Local.md#-1-update-microsoft-windows-11-os-and-built-in-applications)
@@ -43,27 +35,31 @@ This document outlines actions taken to address a **High Exposure Level** report
 6. 🔒[Block Executable Content from Email Client and Webmail - Intune Method](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Exposure_Rem_Local.md#-4-block-executable-content-from-email-client-and-webmail)
 7. 🔒 [Block Untrusted and Unsigned Processes from USB Devices - GPO Method](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Exposure_Rem_Local.md#7--block-untrusted-and-unsigned-processes-from-usb-devices---gpo-method)
 
-
-
-
 ---
 
+Two different types of responses were demonstrated:
 
-## 🧰 1. Update Microsoft Windows 11 (OS and Built-in Applications)
+- ✅ Applied Remediation
+- 🟡 Risk acceptance 
+---
+
+## ✅ Applied Remediation
+
+### 🧰 1. Update Microsoft Windows 11 (OS and Built-in Applications)
 
 ![Req_win11_update](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Req_Win11update.png)
 
-🔍 **Description:**  
+Description:
 Ensure all Windows 11 system components and built-in apps are up-to-date.
 
-🔍 **Justification:**  
+Justification:
 Regular OS updates patch critical vulnerabilities and mitigate exploitation risks.
 
-✅ **Remediation** : Update Win 11
+Remediation: Update Win 11
 
 ---
 
-## 🧰 2. Turn on PUA Protection in Block Mode
+### 🧰 2. Turn on PUA Protection in Block Mode
 
 ![PUA_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/PUA_Req.png)
 
@@ -97,7 +93,7 @@ Get-mpPreference | ft PUAProtection
 
 ---
 
-## 🧰 3. Set Controlled Folder Access to Enabled (or Audit Mode)
+3## 🧰 3. Set Controlled Folder Access to Enabled (or Audit Mode)
 
 
 ![Folder_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Folder_Req.png)
