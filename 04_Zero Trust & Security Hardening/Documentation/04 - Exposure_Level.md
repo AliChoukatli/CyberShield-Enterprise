@@ -83,15 +83,15 @@ Get-mpPreference | ft PUAProtection
 
 ## ✅ Set Controlled Folder Access to Enabled (or Audit Mode)
 
-**Description:**  
+### 🔹 **Description:**  
 Enable ransomware protection by locking critical folders against unauthorized access.
 
-**Justification:**  
+### 🔹 **Justification:**  
 Defends against ransomware attempting to encrypt sensitive user files.
 
 ![Folder_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Folder_Req.png)
 
-### 🔹 Remediation 
+### 🔹 **Remediation **
 
 Controlled Folder Access helps protect sensitive files from unauthorized changes by ransomware or other malware. If the registry path does not exist, you can create it manually.
 
