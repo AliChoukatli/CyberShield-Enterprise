@@ -93,8 +93,6 @@ Defends against ransomware attempting to encrypt sensitive user files.
 
 ### 🔹 Remediation 
 
-# 🛡️ Enable Controlled Folder Access via Registry (Manual Method)
-
 Controlled Folder Access helps protect sensitive files from unauthorized changes by ransomware or other malware. If the registry path does not exist, you can create it manually.
 
 ---
