@@ -63,7 +63,7 @@ Blocking PUAs strengthens endpoint security by:
 ![PUA_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/PUA_Req.png)
 
 
-**Remediation** – PowerShell Script
+**Remediation Method** – PowerShell Script
 PUA protection was enabled in **Block Mode** using the following script, executed on target systems:
 
 ```powershell
