@@ -5,6 +5,16 @@
 
 This document outlines actions taken to address a **High Exposure Level** reported in the Microsoft Defender for Endpoint (MDE) Threat & Vulnerability Management (TVM) dashboard.
 
+1. Update Microsoft Windows 11 (OS and Built-in Applications)
+2. Turn on PUA Protection in Block Mode
+3. Set Controlled Folder Access to Enabled (or Audit Mode)
+4. Block Executable Content from Email Client and Webmail
+   - Local Method
+   - Intune Method
+6. Block Credential Stealing from LSASS (Local Security Authority Subsystem)
+7. Enable Network Protection
+8. Update Microsoft Edge (Chromium-based) to Version 137.0.3296.62
+
 Two different types of responses were demonstrated:
 
 - ✅ 1. A remediation request 
