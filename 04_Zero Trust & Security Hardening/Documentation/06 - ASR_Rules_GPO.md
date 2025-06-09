@@ -1,4 +1,4 @@
-# Configure "Block Untrusted and Unsigned Processes from USB Devices" via GPO
+# 🧰 Configure "Block Untrusted and Unsigned Processes from USB Devices" via GPO
 
 This guide explains how to enable the Attack Surface Reduction (ASR) rule that blocks untrusted and unsigned processes from running from USB devices by setting the corresponding registry key via Group Policy Object (GPO).
 
