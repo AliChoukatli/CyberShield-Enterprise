@@ -207,6 +207,8 @@ Before enabling Network Protection, ensure the following are active:
 - Microsoft Defender Antivirus running  
 - Real-time protection enabled  
 - Cloud-delivered protection enabled
+  
+![Cloud_Protect_Enable](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Cloud_Protect_enable.png)
 
 🔍 **Description:**  
 Network Protection helps protect devices by blocking connections to potentially harmful domains and IPs, using Microsoft Defender SmartScreen.
