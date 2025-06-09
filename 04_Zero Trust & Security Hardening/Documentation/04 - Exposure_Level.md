@@ -43,16 +43,18 @@ Regular OS updates patch critical vulnerabilities and mitigate exploitation risk
 
 ![Req_win11_update](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Req_Win11update.png)
 
+**Remediation** : Update Win 11
+
 ---
 
 ## ✅ Turn on PUA Protection in Block Mode
 
-### 🔹 Description
+**Description:** 
 Enables Microsoft Defender Antivirus to detect and block **Potentially Unwanted Applications (PUAs)**. These may include:
 - Adware
 - Crypto mining tools
 
-### 🔹 Justification
+**Justification:**
 Blocking PUAs strengthens endpoint security by:
 - Reducing attack surface from non-malicious but risky applications
 - Preventing installation of apps that may degrade system performance or be used as vectors in larger attacks
@@ -60,9 +62,8 @@ Blocking PUAs strengthens endpoint security by:
 
 ![PUA_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/PUA_Req.png)
 
----
 
-### 🔹 Remediation Method – PowerShell Script
+**Remediation** – PowerShell Script
 PUA protection was enabled in **Block Mode** using the following script, executed on target systems:
 
 ```powershell
@@ -83,15 +84,15 @@ Get-mpPreference | ft PUAProtection
 
 ## ✅ Set Controlled Folder Access to Enabled (or Audit Mode)
 
-### 🔹 **Description:**  
+**Description:**  
 Enable ransomware protection by locking critical folders against unauthorized access.
 
-### 🔹 **Justification:**  
+**Justification:**  
 Defends against ransomware attempting to encrypt sensitive user files.
 
 ![Folder_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Folder_Req.png)
 
-### 🔹 **Remediation**
+**Remediation**
 
 #### 1. Open Registry Editor
 - Press `Win + R`, type `regedit`, and press `Enter`.
