@@ -132,14 +132,7 @@ Prevent direct execution of embedded content or malicious attachments received v
 **Justification:**  
 Email is a common initial attack vector. This control reduces phishing and malware payload delivery.
 
-
-# 🛡️ ASR Rule - Block Executable Content from Email Client and Webmail
-
-This ASR (Attack Surface Reduction) rule prevents execution of potentially malicious executable content received through email clients or webmail.
-
----
-
-## 📘 Rule Details
+**Rule Details**
 
 - **Rule Name:** Block executable content from email client and webmail  
 - **GUID:** `D4F940AB-401B-4EFC-AADC-AD5F3C50688A`  
@@ -148,11 +141,11 @@ This ASR (Attack Surface Reduction) rule prevents execution of potentially malic
 
 ---
 
-## 🗂️ Registry Configuration
+### 🗂️ Registry Configuration
 
 To enable this rule in **Block Mode**, add the following registry key:
 
-### 🔹 Registry Path
+#### 🔹 Registry Path
 
 ```reg
 HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
@@ -160,7 +153,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender
 
 If the path does not exist, create each subkey manually.
 
-### 🔹 Registry Value
+#### 🔹 Registry Value
 
 | Name (String)                                      | Type     | Value |
 |----------------------------------------------------|----------|--------|
@@ -168,7 +161,7 @@ If the path does not exist, create each subkey manually.
 
 ---
 
-## 📄 Example `.reg` File
+#### 📄 Example `.reg` File
 
 ```reg
 Windows Registry Editor Version 5.00
