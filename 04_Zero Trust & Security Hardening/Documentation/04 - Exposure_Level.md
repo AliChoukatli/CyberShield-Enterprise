@@ -35,6 +35,8 @@ Two different types of responses were demonstrated:
 
 ## 🧰 Update Microsoft Windows 11 (OS and Built-in Applications)
 
+![Req_win11_update](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Req_Win11update.png)
+
 🔍 **Description:**  
 Ensure all Windows 11 system components and built-in apps are up-to-date.
 
@@ -43,11 +45,13 @@ Regular OS updates patch critical vulnerabilities and mitigate exploitation risk
 
 ✅ **Remediation** : Update Win 11
 
-![Req_win11_update](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Req_Win11update.png)
+
 
 ---
 
 ## 🧰 Turn on PUA Protection in Block Mode
+
+![PUA_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/PUA_Req.png)
 
 🔍 **Description:** 
 Enables Microsoft Defender Antivirus to detect and block **Potentially Unwanted Applications (PUAs)**. These may include:
@@ -60,7 +64,7 @@ Blocking PUAs strengthens endpoint security by:
 - Preventing installation of apps that may degrade system performance or be used as vectors in larger attacks
 ---
 
-![PUA_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/PUA_Req.png)
+
 
 
 ✅ **Remediation Method** – PowerShell Script
@@ -85,13 +89,15 @@ Get-mpPreference | ft PUAProtection
 
 ## 🧰 Set Controlled Folder Access to Enabled (or Audit Mode)
 
+
+![Folder_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Folder_Req.png)
+
 🔍 **Description:**  
 Enable ransomware protection by locking critical folders against unauthorized access.
 
 🔍 **Justification:**  
 Defends against ransomware attempting to encrypt sensitive user files.
 
-![Folder_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Folder_Req.png)
 
 ✅ **Remediation**
 
@@ -102,8 +108,6 @@ Defends against ransomware attempting to encrypt sensitive user files.
 ```reg
 HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender
 ```
-
----
 
 #### 3. Create Required Keys (if not present)
 - Right-click on **Windows Defender** → `New` → `Key` → name it:
