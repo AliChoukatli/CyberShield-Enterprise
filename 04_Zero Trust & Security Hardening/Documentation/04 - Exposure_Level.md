@@ -134,36 +134,31 @@ Prevent direct execution of embedded content or malicious attachments received v
 🔍 **Justification:**  
 Email is a common initial attack vector. This control reduces phishing and malware payload delivery.
 
-**Rule Details**
+✅ **Remediation**
 
-- **Rule Name:** Block executable content from email client and webmail  
-- **GUID:** `D4F940AB-401B-4EFC-AADC-AD5F3C50688A`  
-- **Recommended:** ✅ Yes  
+**Rule Details**
+ 
+- **GUID:** `BE9BA2D9-53EA-4CDC-84E5-9B1EEEE46550` 
 - **Documentation:** [Microsoft Learn](https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference?view=o365-worldwide#block-executable-content-from-email-client-and-webmail)
 
----
-
-### 🔹 **Remediation**
-
-To enable this rule in **Block Mode**, add the following registry key:
+To enable this rule in **Block Mode**, add the following registry key and value :
 
 ```reg
 HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
 ```
+⚠️ If the path does not exist, you must **manually create each subkey** in this order:
 
-#### 🔹 Registry Value
+Windows Defender Exploit Guard > ASR > Rules.
+
+- Inside the Rules key, add the following String Value:
 
 | Name (String)                                      | Type           | Value  |
 |----------------------------------------------------|----------------|--------|
 | `BE9BA2D9-53EA-4CDC-84E5-9B1EEEE46550`            | `String Value` | `"1"`  |
 
+
+
 ---
-If the path does not exist, you must **manually create each subkey** in this order:
-
-Windows Defender Exploit Guard > ASR > Rules.
-
-
-
 
 
 
