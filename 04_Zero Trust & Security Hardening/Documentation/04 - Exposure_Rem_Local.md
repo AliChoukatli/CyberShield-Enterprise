@@ -7,7 +7,7 @@ This document outlines actions taken to address a **High Exposure Level** report
 
 1. [Update Microsoft Windows 11 (OS and Built-in Applications)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Exposure_Rem_Local.md#-1-update-microsoft-windows-11-os-and-built-in-applications)
 2. [Turn on PUA Protection in Block Mode](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Exposure_Rem_Local.md#-2-turn-on-pua-protection-in-block-mode)
-3. Set Controlled Folder Access to Enabled (or Audit Mode)
+3. [Set Controlled Folder Access to Enabled (or Audit Mode)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Exposure_Rem_Local.md#-3-set-controlled-folder-access-to-enabled-or-audit-mode)
 4. Block Executable Content from Email Client and Webmail
    - Local Method
    - Intune Method
