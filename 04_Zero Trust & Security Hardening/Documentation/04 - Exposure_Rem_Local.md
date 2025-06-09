@@ -21,6 +21,8 @@ Two different types of responses were demonstrated:
 
 ##  Security Recommendations - Priority Remediations
 
+![LTP-HLP01_Recommendations](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/LTP-HLP01_Recommendations.png)
+
 | Control                                                      | Risk Level | Impact   | Justification                                                                                    | Decision   |
 |--------------------------------------------------------------|------------|----------|--------------------------------------------------------------------------------------------------|-------------|
 | 🔒 Update Microsoft Windows 11 (OS and apps)                | High        | High    | Critical security patches fix vulnerabilities and protect system integrity.                       | Remediate  |
@@ -31,8 +33,6 @@ Two different types of responses were demonstrated:
 | 🔒 Enable Network Protection                                | Medium      | Medium  | Blocks network access to malicious domains and reduces attack surface.                            | Remediate  |
 | 🔒 Block untrusted and unsigned processes from USB          | Medium      | Medium   | Protects from malware spreading via USB removable devices.                                       | Remediate  |
 | 🔒 Update Microsoft Edge Chromium-based                     | Medium      | High    | Browser updates patch exploitable vulnerabilities frequently targeted by attackers.               | Remediate  |
-
-![LTP-HLP01_Recommendations](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/LTP-HLP01_Recommendations.png)
 
 ---
 
