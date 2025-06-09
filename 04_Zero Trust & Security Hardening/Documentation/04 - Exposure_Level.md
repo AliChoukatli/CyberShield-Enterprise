@@ -128,6 +128,8 @@ Windows Defender Exploit Guard
 
 ## 🧰 Block Executable Content from Email Client and Webmail
 
+![Exe_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Exe_Req.png)
+
 🔍 **Description:**  
 Prevent direct execution of embedded content or malicious attachments received via email.
 
@@ -152,6 +154,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender
 | `BE9BA2D9-53EA-4CDC-84E5-9B1EEEE46550`            | `String Value` | `"1"`  |
 
 
+![Exe_Fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Exe_Fix.png)
 
 ---
 
