@@ -163,7 +163,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender
 
 ## 🧰 Block Credential Stealing from LSASS (Local Security Authority Subsystem)
 
-![lsaas_Req](
+![lsaas_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/lsass_Req.png)
 
 - 🔍 **Description** : This prevent credential theft by blocking unauthorized access to the LSASS.
 - 🔍 **Purpose:** Prevent malware from dumping credentials from `lsass.exe` using tools like Mimikatz.
@@ -193,7 +193,7 @@ Add the following **String Value** inside the `Rules` key:
 
 - `"1"` = Block Mode ✅  
 
-![lsaas_fix](
+![lsaas_fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/lsaas_Fix.png)
 
 ---
 
