@@ -239,10 +239,13 @@ Email is a common initial attack vector. This control reduces phishing and malwa
    - Profile: **Attack surface reduction rules**
 4. Configure the following:
    - Rule name: `Block executable content from email client and webmail`
-   - GUID: `BE9BA2D9-53EA-4CDC-84E5-9B1EEEE46550`
+   - Look for `Block executable content from email client and webmail`
    - Action: `Block`
-5. Assign the policy to your **targeted devices or groups**
-6. Review + Create
+5. Assign the policy to your **targeted devices Eg: Windows 10/11 Devices*
+
+![Exe_email_opolicy_review](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Exe_Email_policy_intune.png)
+   
+7. Review + Create
 
 ✅ Once deployed, the rule will be enforced on all assigned devices.
 
