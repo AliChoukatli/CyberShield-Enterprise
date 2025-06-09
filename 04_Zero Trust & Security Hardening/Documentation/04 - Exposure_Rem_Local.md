@@ -36,7 +36,7 @@ Two different types of responses were demonstrated:
 
 ---
 
-## 🧰 Update Microsoft Windows 11 (OS and Built-in Applications)
+## 🧰 1. Update Microsoft Windows 11 (OS and Built-in Applications)
 
 ![Req_win11_update](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Req_Win11update.png)
 
@@ -52,7 +52,7 @@ Regular OS updates patch critical vulnerabilities and mitigate exploitation risk
 
 ---
 
-## 🧰 Turn on PUA Protection in Block Mode
+## 🧰 2. Turn on PUA Protection in Block Mode
 
 ![PUA_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/PUA_Req.png)
 
@@ -86,7 +86,7 @@ Get-mpPreference | ft PUAProtection
 
 ---
 
-## 🧰 Set Controlled Folder Access to Enabled (or Audit Mode)
+## 🧰 3. Set Controlled Folder Access to Enabled (or Audit Mode)
 
 
 ![Folder_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Folder_Req.png)
@@ -129,7 +129,7 @@ Windows Defender Exploit Guard
 
 ---
 
-## 🧰 Block Executable Content from Email Client and Webmail
+## 🧰 4. Block Executable Content from Email Client and Webmail
 
 ![Exe_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Exe_Req.png)
 
@@ -189,7 +189,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender
 
 ---
 
-## 🧰 Block Credential Stealing from LSASS (Local Security Authority Subsystem)
+## 5. 🧰 Block Credential Stealing from LSASS (Local Security Authority Subsystem)
 
 ![lsaas_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/lsass_Req.png)
 
@@ -224,7 +224,7 @@ Windows Defender Exploit Guard > ASR > Rules
 
 ---
 
-## 🧰 Enable Network Protection
+## 6. 🧰 Enable Network Protection
 
 ![NP_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/NP_Req.png)
 
@@ -266,7 +266,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender
 
 ---
 
-## 🧰 Update Microsoft Edge (Chromium-based) to Version 137.0.3296.62
+## 7. 🧰 Update Microsoft Edge (Chromium-based) to Version 137.0.3296.62
 
 🔍 **Description:**  
 Update the Microsoft Edge browser to the latest stable version.
