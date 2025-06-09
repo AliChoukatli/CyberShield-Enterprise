@@ -200,7 +200,7 @@ Windows Defender Exploit Guard > ASR > Rules
 
 ![NP_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/NP_Req.png)
 
-# Prerequisites
+### Prerequisites
 
 Before enabling Network Protection, ensure the following are active:
 
