@@ -141,7 +141,6 @@ Email is a common initial attack vector. This control reduces phishing and malwa
 
 ---
 
-### 🗂️ Registry Configuration
 
 To enable this rule in **Block Mode**, add the following registry key:
 
