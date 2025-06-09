@@ -40,7 +40,7 @@ This document outlines actions taken to address a **High Exposure Level** report
 | 🔒 Update Microsoft Edge Chromium-based                     | Medium      | High    | Browser updates patch exploitable vulnerabilities frequently targeted by attackers.               |
 
 
-Two different types of responses were demonstrated:
+## 🔴 Two different types of responses were demonstrated:
 
 - ✅ Applied Remediation
 - 🟡 Risk acceptance 
@@ -96,7 +96,7 @@ Get-mpPreference | ft PUAProtection
 
 ---
 
-3## 🧰 3. Set Controlled Folder Access to Enabled (or Audit Mode)
+### 🧰 3. Set Controlled Folder Access to Enabled (or Audit Mode)
 
 
 ![Folder_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Folder_Req.png)
@@ -138,7 +138,7 @@ Windows Defender Exploit Guard
 
 ---
 
-## 4. 🧰 Block Credential Stealing from LSASS (Local Security Authority Subsystem)
+### 4. 🧰 Block Credential Stealing from LSASS (Local Security Authority Subsystem)
 
 ![lsaas_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/lsass_Req.png)
 
@@ -172,11 +172,9 @@ Windows Defender Exploit Guard > ASR > Rules
 ![lsaas_fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/lsaas_Fix.png)
 
 ---
-## 5. 🧰 Enable Network Protection
+### 5. 🧰 Enable Network Protection
 
 ![NP_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/NP_Req.png)
-
-### Prerequisites
 
 Before enabling Network Protection, ensure the following are active:
 
@@ -215,7 +213,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender
 ---
 
 
-## 🧰 6. Block Executable Content from Email Client and Webmail - Intune Method
+### 🧰 6. Block Executable Content from Email Client and Webmail - Intune Method
 
 ![Exe_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Exe_Req.png)
 
@@ -246,7 +244,7 @@ Email is a common initial attack vector. This control reduces phishing and malwa
 
 ---
 
-## 7. 🧰 Block Untrusted and Unsigned Processes from USB Devices - GPO Method](
+### 7. 🧰 Block Untrusted and Unsigned Processes from USB Devices - GPO Method](
 
 This guide explains how to enable the Attack Surface Reduction (ASR) rule that blocks untrusted and unsigned processes from running from USB devices by setting the corresponding registry key via Group Policy Object (GPO).
 
