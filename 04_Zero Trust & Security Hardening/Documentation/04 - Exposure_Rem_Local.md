@@ -1,8 +1,5 @@
 # 🛡️ Security Exposure Analysis, Remediation & Risk Management
-
-> 🔴 This configuration was applied using **Windows Registry (Local Method)**.
   
-
 Two different types of responses were demonstrated:
 
 - ✅ 1. A remediation request 
