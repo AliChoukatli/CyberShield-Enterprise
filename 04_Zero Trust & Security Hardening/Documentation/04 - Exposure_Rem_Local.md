@@ -249,7 +249,7 @@ Email is a common initial attack vector. This control reduces phishing and malwa
 
 ✅ Once deployed, the rule will be enforced on all assigned devices.
 
-![Exe_Fix](
+![Exe_Fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Exe_Email_policy_Overview.png)
 
 ---
 
