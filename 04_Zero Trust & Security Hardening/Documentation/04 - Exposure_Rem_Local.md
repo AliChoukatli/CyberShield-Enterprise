@@ -18,6 +18,7 @@ This document outlines actions taken to address a **High Exposure Level** report
       - [Block Untrusted and Unsigned Processes from USB Devices - GPO Method](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Exposure_Rem_Local.md#7--block-untrusted-and-unsigned-processes-from-usb-devices---gpo-method)
         
    - 🟡 Risk acceptance
+3. Conclusion
      
 ---
 
