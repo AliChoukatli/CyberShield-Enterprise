@@ -174,8 +174,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender
 
 ---
 
-
-## 🔹 Registry Configuration (Block Mode)
+✅ **Remediation
 
 To enable this rule in **Block Mode**, add the following registry key and value: 
 
