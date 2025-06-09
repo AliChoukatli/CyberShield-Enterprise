@@ -8,14 +8,11 @@ This document outlines actions taken to address a **High Exposure Level** report
 1. [Update Microsoft Windows 11 (OS and Built-in Applications)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Exposure_Rem_Local.md#-1-update-microsoft-windows-11-os-and-built-in-applications)
 2. [Turn on PUA Protection in Block Mode](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Exposure_Rem_Local.md#-2-turn-on-pua-protection-in-block-mode)
 3. [Set Controlled Folder Access to Enabled (or Audit Mode)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Exposure_Rem_Local.md#-3-set-controlled-folder-access-to-enabled-or-audit-mode)
-4. Block Executable Content from Email Client and Webmail
-   - Local Method
-   - Intune Method
-5. Block Untrusted and Unsigned Processes from USB Devices
-   - GPO Method
-7. Block Credential Stealing from LSASS (Local Security Authority Subsystem)
-8. Enable Network Protection
-9. Update Microsoft Edge (Chromium-based) to Version 137.0.3296.62
+4. [Block Credential Stealing from LSASS (Local Security Authority Subsystem)]
+5. [Enable Network Protection]
+6. [Block Executable Content from Email Client and Webmail - Intune Method](
+7. [Block Untrusted and Unsigned Processes from USB Devices - GPO Method](
+  
 
 Two different types of responses were demonstrated:
 
