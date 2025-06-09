@@ -9,6 +9,7 @@ Two different types of responses were demonstrated:
 
 # 🔴 Index
 
+## ✅ Applied Remediations
 This document outlines actions taken to address a **High Exposure Level** reported in the Microsoft Defender for Endpoint (MDE) Threat & Vulnerability Management (TVM) dashboard.
 
 1. 🔒 [Update Microsoft Windows 11 (OS and Built-in Applications)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Exposure_Rem_Local.md#-1-update-microsoft-windows-11-os-and-built-in-applications)
