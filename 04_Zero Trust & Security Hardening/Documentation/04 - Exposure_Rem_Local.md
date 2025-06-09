@@ -1,34 +1,13 @@
-# 🛡️ Security Exposure Analysis, Remediation & Risk Management
-  
-Two different types of responses were demonstrated:
+# Security Exposure Analysis, Remediation & Risk Management
 
-- ✅ 1. A remediation request 
-- 🟡 2. A justified risk acceptance 
+## 🔴 Initial Exposure Summary
 
----
-
-# 🔴 Index
-
-## ✅ Applied Remediations
-This document outlines actions taken to address a **High Exposure Level** reported in the Microsoft Defender for Endpoint (MDE) Threat & Vulnerability Management (TVM) dashboard.
-
-1. 🔒 [Update Microsoft Windows 11 (OS and Built-in Applications)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Exposure_Rem_Local.md#-1-update-microsoft-windows-11-os-and-built-in-applications)
-2. 🔒 [Turn on PUA Protection in Block Mode](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Exposure_Rem_Local.md#-2-turn-on-pua-protection-in-block-mode)
-3. 🔒 [Set Controlled Folder Access to Enabled (or Audit Mode)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Exposure_Rem_Local.md#-3-set-controlled-folder-access-to-enabled-or-audit-mode)
-4. 🔒 [Block Credential Stealing from LSASS (Local Security Authority Subsystem)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Exposure_Rem_Local.md#5--block-credential-stealing-from-lsass-local-security-authority-subsystem)
-5. 🔒 [Enable Network Protection](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Exposure_Rem_Local.md#6--enable-network-protection)
-6. 🔒[Block Executable Content from Email Client and Webmail - Intune Method](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Exposure_Rem_Local.md#-4-block-executable-content-from-email-client-and-webmail)
-7. 🔒 [Block Untrusted and Unsigned Processes from USB Devices - GPO Method](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Exposure_Rem_Local.md#7--block-untrusted-and-unsigned-processes-from-usb-devices---gpo-method)
-
-
-## 📊 Initial Exposure Summary
-
-- **Exposure Level**: 🔴 High
+- **Exposure Level**: High
 - **Device**: `LTP-HLP01`
 
 ![LTP-HLP01_Score](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/LTP-HLP01_Exposure_Level.png)
 
-##  🔴 Security Recommendations - Priority Remediations
+##  🔴 Security Recommendations 
 
 ![LTP-HLP01_Recommendations](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/LTP-HLP01_Recommendations.png)
 
@@ -42,6 +21,30 @@ This document outlines actions taken to address a **High Exposure Level** report
 | 🔒 Enable Network Protection                                | Medium      | Medium  | Blocks network access to malicious domains and reduces attack surface.                            |
 | 🔒 Block untrusted and unsigned processes from USB          | Medium      | Medium   | Protects from malware spreading via USB removable devices.                                       |
 | 🔒 Update Microsoft Edge Chromium-based                     | Medium      | High    | Browser updates patch exploitable vulnerabilities frequently targeted by attackers.               |
+
+  
+Two different types of responses were demonstrated:
+
+- ✅ 1. A remediation request 
+- 🟡 2. A justified risk acceptance 
+
+---
+
+## 🔴 Index
+
+## ✅ Applied Remediations
+This document outlines actions taken to address a **High Exposure Level** reported in the Microsoft Defender for Endpoint (MDE) Threat & Vulnerability Management (TVM) dashboard.
+
+1. 🔒 [Update Microsoft Windows 11 (OS and Built-in Applications)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Exposure_Rem_Local.md#-1-update-microsoft-windows-11-os-and-built-in-applications)
+2. 🔒 [Turn on PUA Protection in Block Mode](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Exposure_Rem_Local.md#-2-turn-on-pua-protection-in-block-mode)
+3. 🔒 [Set Controlled Folder Access to Enabled (or Audit Mode)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Exposure_Rem_Local.md#-3-set-controlled-folder-access-to-enabled-or-audit-mode)
+4. 🔒 [Block Credential Stealing from LSASS (Local Security Authority Subsystem)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Exposure_Rem_Local.md#5--block-credential-stealing-from-lsass-local-security-authority-subsystem)
+5. 🔒 [Enable Network Protection](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Exposure_Rem_Local.md#6--enable-network-protection)
+6. 🔒[Block Executable Content from Email Client and Webmail - Intune Method](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Exposure_Rem_Local.md#-4-block-executable-content-from-email-client-and-webmail)
+7. 🔒 [Block Untrusted and Unsigned Processes from USB Devices - GPO Method](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Exposure_Rem_Local.md#7--block-untrusted-and-unsigned-processes-from-usb-devices---gpo-method)
+
+
+
 
 ---
 
@@ -57,8 +60,6 @@ Ensure all Windows 11 system components and built-in apps are up-to-date.
 Regular OS updates patch critical vulnerabilities and mitigate exploitation risks.
 
 ✅ **Remediation** : Update Win 11
-
-
 
 ---
 
