@@ -108,8 +108,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender
 Windows Defender Exploit Guard
 
 
-- Then right-click on **Windows Defender Exploit Guard** → `New` → `Key` → name it:
-Controlled Folder Access
+- Then right-click on **Windows Defender Exploit Guard** → `New` → `Key` → name it: `Controlled Folder Access`
 
 #### 4. Add the DWORD Value
 - Select the `Controlled Folder Access` key.
