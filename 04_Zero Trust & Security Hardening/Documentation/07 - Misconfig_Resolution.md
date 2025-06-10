@@ -116,6 +116,13 @@ Set-CASMailbox -Identity "user@example.com" -ImapEnabled $false -PopEnabled $fal
 ```powershell
 Get-Mailbox -ResultSize Unlimited | Set-CASMailbox -ImapEnabled $false -PopEnabled $false
 ```
+#### 5.3 Verify IMAP & POP3 Status
+
+```powershell
+Get-CASMailbox -ResultSize Unlimited | Select Name, ImapEnabled, PopEnabled
+```
+
+![Imap_POP_Disabled](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/imap_pop_disabled.png)
 
 ### 6️⃣. Disable PowerShell Access for Users
 To prevent the use of legacy PowerShell remoting that could be abused, disable PowerShell access if it is not needed.
