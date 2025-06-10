@@ -273,7 +273,7 @@ This guide explains how to enable the Attack Surface Reduction (ASR) rule that b
    - **Action:** Update  
    - **Hive:** HKEY_LOCAL_MACHINE  
    - **Key Path:** `SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules`  
-   - **Value name:** `3B576869-A4EC-4529-8536-B80A7769E899`  
+   - **Value name:** `b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4`
    - **Value type:** `REG_SZ`  
    - **Value data:** `1`
 
