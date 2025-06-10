@@ -16,7 +16,7 @@ This document outlines actions taken to address a **High Exposure Level** report
       - [Enable Network Protection](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Security_Exposure.md#-enable-network-protection)
       - [Block Executable Content from Email Client and Webmail - Intune Method](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Security_Exposure.md#-block-executable-content-from-email-client-and-webmail---intune-method)
       - [Block Untrusted and Unsigned Processes from USB Devices - GPO Method](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Security_Exposure.md#-block-untrusted-and-unsigned-processes-from-usb-devices---gpo-method)
-      - [How to Verify if ASR Rules Are Applied)(https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Security_Exposure.md#-how-to-verify-if-)asr-rules-are-applied
+      - [How to Verify if ASR Rules Are Applied](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Security_Exposure.md#-how-to-verify-if-)asr-rules-are-applied
         
    - 🟡 Risk acceptance
      - Disable Defender Firewall notifications
