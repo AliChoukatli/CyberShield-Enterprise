@@ -25,7 +25,8 @@ This document outlines actions taken to address a **High Exposure Level** report
 ---
 
 ## 🔴 Initial Exposure Level Summary
-
+1. Go to the Microsoft 365 Defender portal:  [https://security.microsoft.com](https://security.microsoft.com)
+   
 - **Exposure Level**: High
 - **Device**: `LTP-HLP01`
 
