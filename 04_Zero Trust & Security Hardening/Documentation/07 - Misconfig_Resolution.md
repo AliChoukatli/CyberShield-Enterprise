@@ -127,17 +127,57 @@ Get-CASMailbox -ResultSize Unlimited | Select Name, ImapEnabled, PopEnabled
 
 ---
 
-## 2. unused guest account sor inactive users still enabled 
-
-Get-azureaduser etc poiwershell
+### ✅ 3. No Control Over Software Installations
 
 ---
 
-## 3. pasd de control sur les insallations logicielles
+#### 🔍 Observation
+During the audit of the existing endpoint environment, I noticed that end users had local admin rights or sufficient privileges to install arbitrary software. Applications like unpatched Zoom versions, pirated browsers (e.g., Chrome), or other unauthorized tools were present on several endpoints.
 
--> to reduce the attack surface, i restriced software installations to approved applications via intune policeis and applocker.
+---
 
-----
+#### ⚠️ Risk
+Uncontrolled software installations introduce multiple risks:
+- **Malware and ransomware infections** via untrusted applications
+- **Unpatched vulnerabilities** in outdated software versions
+- **Shadow IT**, leading to loss of visibility and compliance issues
+- **Increased attack surface** for lateral movement or privilege escalation
+
+---
+
+#### 🛠️ Technical Solution
+To enforce application control and prevent unauthorized installations, I implemented a dual-layered approach:
+
+1. **Microsoft Intune – Device Restriction Policies**
+   - Blocked the ability to install Win32 apps from unknown sources
+   - Allowed installations **only from the Microsoft Store** (optional for stricter environments)
+
+2. **AppLocker – Application Whitelisting**
+   - Created and deployed AppLocker rules via **Intune Configuration Profiles**
+   - Only approved applications (e.g., Microsoft 365 apps, company tools) were whitelisted
+   - Default-deny policy applied to unknown executables and installers
+
+---
+
+#### 🧰 Tools & Technologies Used
+- **Microsoft Intune**
+- **AppLocker (via Group Policy or Intune)**
+- **Microsoft Endpoint Manager Admin Center**
+- **Azure AD (Entra ID)** for assigning policies to specific user/device groups
+
+---
+
+#### 💎 Impact & Benefits
+> "To reduce the attack surface, I restricted software installations to approved applications via Intune policies and AppLocker. This ensures tighter control over the software environment, minimizes exposure to vulnerabilities, and aligns with Zero Trust principles."
+
+- Reduced malware risk through strict application control
+- Enforced security compliance and governance
+- Increased endpoint hygiene and operational consistency
+- Improved alignment with **Zero Trust** and **ISO/IEC 27001** controls on asset management
+
+---
+
+
 
 ## 4. bitlocker active mais sans backup securisé :
 
