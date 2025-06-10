@@ -60,7 +60,7 @@ Set-AuthenticationPolicy -Identity "Block Basic Auth" `
 Get-AuthenticationPolicy -Identity "Block Basic Auth" | Format-List *
 ```
 
-All AllowBasicAuth* properties should be set to False.
+All *AllowBasicAuth* properties should be set to **False**.
 ---
 
 #### Step 4: Assign the Authentication Policy to users
