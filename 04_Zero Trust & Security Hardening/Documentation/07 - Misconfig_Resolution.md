@@ -30,6 +30,7 @@ Import-Module ExchangeOnlineManagement
 ```powershell
 Connect-ExchangeOnline -UserPrincipalName your.email@domain.com
 ```
+![Exchange_Connected](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Exchange_Connected.png)
 
 ---
 
@@ -59,6 +60,8 @@ Set-AuthenticationPolicy -Identity "Block Basic Auth" `
 ```powershell
 Get-AuthenticationPolicy -Identity "Block Basic Auth" | Format-List *
 ```
+![All_Basic_Auth_false](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/All_Basic_Auth_false.png)
+
 All `AllowBasicAuth` properties should be set to `False`.
 
 ---
@@ -75,6 +78,8 @@ Set-User -Identity <UserPrincipalName> -AuthenticationPolicy "Block Basic Auth"
 ```powershell
 Get-User -Identity <UserPrincipalName> | Format-List AuthenticationPolicy
 ```
+![Sophia_legacy_policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Sophia_legacy_policy.png)
+
 ---
 
 ### 4️⃣. Disable SMTP AUTH Globally
