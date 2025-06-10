@@ -287,15 +287,40 @@ This guide explains how to enable the Attack Surface Reduction (ASR) rule that b
 
 ---
 
-## Additional Notes
 
-- If the registry path does not exist, the system will create it during policy application.
-- `"1"` enables the rule in **Block mode**.
-- To audit only without blocking, use `"2"` instead (Audit mode).
-- This ASR rule requires Microsoft Defender Antivirus and Exploit Guard enabled.
+# ✅ How to Verify if ASR Rules Are Applied
+
+This guide explains how to check whether **Microsoft Defender Attack Surface Reduction (ASR) rules** are active on a system, and to display each rule along with its configured action (`Block`, `Audit`, `Warn`, or `Disabled`).
+
+---
+
+## 🔍 Step-by-Step Verification via PowerShell
+
+You can run the following PowerShell script to get the list of ASR rules applied and their corresponding actions in a readable format.
+
+### ▶️ PowerShell Script
+
+```powershell
+$ids = (Get-MpPreference).AttackSurfaceReductionRules_Ids
+$actions = (Get-MpPreference).AttackSurfaceReductionRules_Actions
+
+for ($i = 0; $i -lt $ids.Count; $i++) {
+    [PSCustomObject]@{
+        Rule_GUID = $ids[$i]
+        Action    = switch ($actions[$i]) {
+            0 { "Disabled" }
+            1 { "Block" }
+            2 { "Audit" }
+            6 { "Warn" }
+            Default { "Unknown" }
+        }
+    }
+}
+
+```
 
 
-This configuration helps to prevent malware execution from USB devices by blocking untrusted or unsigned processes.
+
 
 
 ---
