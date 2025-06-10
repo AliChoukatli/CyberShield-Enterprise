@@ -128,15 +128,11 @@ Get-CASMailbox -ResultSize Unlimited | Select Name, ImapEnabled, PopEnabled
 
 ## 🔴 2. No Control Over Software Installations
 
-
 ### ⚠️ Risk
 
 - **Malware and ransomware infections** via untrusted applications
 - **Unpatched vulnerabilities** in outdated software versions
-- **Shadow IT**, leading to loss of visibility and compliance issues
 - **Increased attack surface** for lateral movement or privilege escalation
-
----
 
 ### ✅ Solution
 
@@ -149,15 +145,11 @@ Get-CASMailbox -ResultSize Unlimited | Select Name, ImapEnabled, PopEnabled
    - Only approved applications (e.g., Microsoft 365 apps, company tools) were whitelisted
    - Default-deny policy applied to unknown executables and installers
 
----
-
 
 ### 💎 Benefits
 > "To reduce the attack surface, I restricted software installations to approved applications via Intune policies and AppLocker". 
 
 - Reduced malware risk through strict application control
-- Enforced security compliance and governance
-- Increased endpoint hygiene and operational consistency
 - Improved alignment with **Zero Trust** and **ISO/IEC 27001** controls on asset management
 
 ---
