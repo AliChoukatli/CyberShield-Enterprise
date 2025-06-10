@@ -14,11 +14,19 @@ Install-Module -Name ExchangeOnlineManagement -Force
 Import-Module ExchangeOnlineManagement
 ```
 
-## Step 2. Disable Basic Authentication for Legacy Protocols
+
+### Step2. Connect to Exchange Online
+
+```powershell
+Connect-ExchangeOnline -UserPrincipalName your.email@domain.com
+```
+---
+
+### Step 3. Disable Basic Authentication for Legacy Protocols
 
 Microsoft has deprecated Basic Authentication for IMAP, POP3, and SMTP to improve security. While many tenants have this disabled by default, verify and enforce it explicitly.
 
-### 2.1 Create or Update an Authentication Policy to Block Basic Auth
+#### 3.1 Create or Update an Authentication Policy to Block Basic Auth
 
 ```powershell
 Set-AuthenticationPolicy -Identity "Block Basic Auth" `
@@ -26,20 +34,21 @@ Set-AuthenticationPolicy -Identity "Block Basic Auth" `
   -AllowBasicAuthPop $false `
   -AllowBasicAuthSmtp $false
 ```
-### 2.2 Assign the Authentication Policy to Users
+#### 3.2 Assign the Authentication Policy to Users
+
 To assign the policy to all mailbox users:
 ```powershell
 Get-User -Filter {RecipientTypeDetails -eq 'UserMailbox'} | Set-User -AuthenticationPolicy "Block Basic Auth"
 ```
 
-## Step 3. Disable SMTP AUTH Globally
+### Step 4. Disable SMTP AUTH Globally
 SMTP AUTH is a legacy protocol that can be exploited if enabled unnecessarily.
 
-### 3.1 Disable SMTP AUTH for the Entire Organization
+#### 4.1 Disable SMTP AUTH for the Entire Organization
 ```powershell
 Set-TransportConfig -SmtpClientAuthenticationDisabled $true
 ```
-### 3.2 Verify SMTP AUTH Status
+#### 4.2 Verify SMTP AUTH Status
 ```powershell
 Get-TransportConfig | Format-List SmtpClientAuthenticationDisabled
 ```
@@ -47,30 +56,30 @@ Ensure the output shows:
 ```yaml
 SmtpClientAuthenticationDisabled : True
 ```
-## Step 4. Disable IMAP and POP3 Protocols Per User
+### Step 5. Disable IMAP and POP3 Protocols Per User
 For additional security, disable IMAP and POP3 access on users' mailboxes who do not require it.
 
-### 4.1 Disable IMAP and POP3 for a Specific User
+#### 5.1 Disable IMAP and POP3 for a Specific User
 
 ```powershell
 Set-CASMailbox -Identity "user@example.com" -ImapEnabled $false -PopEnabled $false
 ```
 
-### 4.2 Disable IMAP and POP3 for All Users
+#### 5.2 Disable IMAP and POP3 for All Users
 
 ```powershell
 Get-Mailbox -ResultSize Unlimited | Set-CASMailbox -ImapEnabled $false -PopEnabled $false
 ```
 
-## Step 5. Disable PowerShell Access for Users
+### Step 6. Disable PowerShell Access for Users
 To prevent the use of legacy PowerShell remoting that could be abused, disable PowerShell access if it is not needed.
 
-### 5.1 Disable Remote PowerShell Access for a User
+#### 6.1 Disable Remote PowerShell Access for a User
 ```powershell
 Set-CASMailbox -Identity "user@example.com" -RemotePowerShellEnabled $false
 ```
 
-### 5.2 Disable Remote PowerShell Access for All Users
+#### 6.2 Disable Remote PowerShell Access for All Users
 ```powershell
 Get-Mailbox -ResultSize Unlimited | Set-CASMailbox -RemotePowerShellEnabled $false
 ```
