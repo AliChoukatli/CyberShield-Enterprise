@@ -39,13 +39,13 @@ Connect-ExchangeOnline -UserPrincipalName your.email@domain.com
 
 - Basic Authentication exposes security risks and should be disabled for legacy protocols in Exchange Online.
 
-#### Step 1: Create a new Authentication Policy to block Basic Authentication
+3.1 Create a new Authentication Policy to block Basic Authentication
 
 ```powershell
 New-AuthenticationPolicy -Name "Block Basic Auth"
 ```
 
-#### Step 2: Modify the policy if needed
+3.2 Modify the policy if needed
 
 This policy disables Basic Authentication for all legacy protocols.
 
@@ -56,7 +56,7 @@ Set-AuthenticationPolicy -Identity "Block Basic Auth" `
     -AllowBasicAuthSmtp:$false
 ```
 
-#### Step 3: Verify the policy settings
+3.3 Verify the policy settings
 
 ```powershell
 Get-AuthenticationPolicy -Identity "Block Basic Auth" | Format-List *
