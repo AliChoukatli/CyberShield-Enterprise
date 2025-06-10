@@ -1,6 +1,6 @@
 # 🔴  Security Misconfiguration Identified & Resolved
 
-## ✅ 1. Disable Legacy Protocols (IMAP, POP3, SMTP)
+## 🔴 1. Disable Legacy Protocols (IMAP, POP3, SMTP)
 ### Impact
 Even with MFA enabled, legacy protocols such as IMAP, POP3, and SMTP allow Basic Authentication which can be exploited to bypass modern authentication mechanisms. Disabling these protocols significantly reduces the risk of credential-based attacks.
 
@@ -126,7 +126,7 @@ Get-CASMailbox -ResultSize Unlimited | Select Name, ImapEnabled, PopEnabled
 
 ---
 
-## ✅ 2. No Control Over Software Installations
+## 🔴 2. No Control Over Software Installations
 
 
 ### ⚠️ Risk
@@ -138,7 +138,7 @@ Get-CASMailbox -ResultSize Unlimited | Select Name, ImapEnabled, PopEnabled
 
 ---
 
-### Solution
+### ✅ Solution
 
 1. **Microsoft Intune – Device Restriction Policies**
    - Blocked the ability to install Win32 apps from unknown sources
