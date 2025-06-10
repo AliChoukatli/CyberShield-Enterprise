@@ -6,7 +6,7 @@ Even with MFA enabled, legacy protocols such as IMAP, POP3, and SMTP allow Basic
 
 ---
 
-### 0️⃣. Set PowerShell Execution Policy to allow scripts
+0️⃣. Set PowerShell Execution Policy to allow scripts
 
 - Open PowerShell as Administrator and run:
 
@@ -16,7 +16,7 @@ Set-ExecutionPolicy RemoteSigned
 - Then close the Administrator PowerShell window and open a new regular PowerShell session.
 ---
 
-### 1️⃣. Install and import the Exchange Online Management module (if not installed)
+1️⃣. Install and import the Exchange Online Management module (if not installed)
 
 ```powershell
 Install-Module -Name ExchangeOnlineManagement -Force
@@ -24,7 +24,7 @@ Import-Module ExchangeOnlineManagement
 ```
 ---
 
-### 2️⃣. Connect to Exchange Online
+2️⃣. Connect to Exchange Online
 
 ```powershell
 Connect-ExchangeOnline -UserPrincipalName your.email@domain.com
@@ -33,7 +33,7 @@ Connect-ExchangeOnline -UserPrincipalName your.email@domain.com
 
 ---
 
-### 3️⃣ Disable Basic Authentication for Legacy Protocols
+3️⃣ Disable Basic Authentication for Legacy Protocols
 
 - Basic Authentication exposes security risks and should be disabled for legacy protocols in Exchange Online.
 
@@ -81,7 +81,7 @@ Get-User -Identity <UserPrincipalName> | Format-List AuthenticationPolicy
 
 ---
 
-### 4️⃣. Disable SMTP AUTH Globally
+4️⃣. Disable SMTP AUTH Globally
 SMTP AUTH is a legacy protocol that can be exploited if enabled unnecessarily.
 
 #### 4.1 Disable SMTP AUTH for the Entire Organization
@@ -101,7 +101,7 @@ SmtpClientAuthenticationDisabled : True
 
 ---
 
-### 5️⃣. Disable IMAP and POP3 Protocols Per User
+5️⃣. Disable IMAP and POP3 Protocols Per User
 For additional security, disable IMAP and POP3 access on users' mailboxes who do not require it.
 
 #### 5.1 Disable IMAP and POP3 for a Specific User
@@ -126,7 +126,7 @@ Get-CASMailbox -ResultSize Unlimited | Select Name, ImapEnabled, PopEnabled
 
 ---
 
-## 🔴 2. No Control Over Software Installations
+🔴 2. No Control Over Software Installations
 
 📍 **Goal:** Prevent users from installing arbitrary Win32 apps.
 
