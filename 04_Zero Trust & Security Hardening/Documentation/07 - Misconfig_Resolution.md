@@ -12,6 +12,7 @@ Even with MFA enabled, legacy protocols such as IMAP, POP3, and SMTP allow Basic
 ```powershell
 Install-Module -Name ExchangeOnlineManagement -Force
 Import-Module ExchangeOnlineManagement
+```
 
 ## Step 2. Disable Basic Authentication for Legacy Protocols
 
