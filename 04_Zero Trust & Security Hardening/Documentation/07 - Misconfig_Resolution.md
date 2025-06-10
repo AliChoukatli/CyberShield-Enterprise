@@ -139,7 +139,7 @@ Get-CASMailbox -ResultSize Unlimited | Select Name, ImapEnabled, PopEnabled
 
 ✅ Solution
 
-1. Go to **Microsoft Intune Admin Center** → **Devices** → **Configuration profiles**
+1. Go to **Microsoft Intune Admin Center** → **Devices** → **Configuration**
 2. Click **+ Create profile**
    - Platform: *Windows 10 and later*
    - Profile type: *Settings catalog*
