@@ -277,6 +277,8 @@ This guide explains how to enable the Attack Surface Reduction (ASR) rule that b
    - **Value type:** `REG_SZ`  
    - **Value data:** `1`
 
+![USB_GPO](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/USB_GPO.png)
+
 6. Click **OK** to save.
 
 7. Close the Group Policy Editor and ensure the GPO is linked correctly.
