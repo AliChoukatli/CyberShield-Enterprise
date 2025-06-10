@@ -275,7 +275,7 @@ This guide explains how to enable the Attack Surface Reduction (ASR) rule that b
    - **Key Path:** `SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules`  
    - **Value name:** `b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4`
    - **Value type:** `REG_SZ`  
-   - **Value data:** `1`
+   - **Value data:** `1` (`"1"` enables the rule in **Block mode**)
 
 ![USB_GPO](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/USB_GPO.png)
 
