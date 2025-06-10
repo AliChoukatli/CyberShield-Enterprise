@@ -362,8 +362,8 @@ The recommendation is to enforce a minimum password length of 14 or more charact
 
 ## ✅ Conclusion 
 
-- 🔍 Identified vulnerabilities through Microsoft Defedner Recommendations.
-- 🛠️ Implemented prioritized remediation actions.  
-- 📚 Aligned with ISO 27001 & NIST standards.
+-  Identified vulnerabilities through Microsoft Defedner Recommendations.
+-  Implemented prioritized remediation actions.  
+-  Aligned with ISO 27001 & NIST standards.
   
 
