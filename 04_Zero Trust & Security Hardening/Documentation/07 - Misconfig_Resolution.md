@@ -129,7 +129,7 @@ Get-CASMailbox -ResultSize Unlimited | Select Name, ImapEnabled, PopEnabled
 
 🔴 2. No Control Over Software Installations
 
-📍 Goal: Block users from installing unauthorized software (e.g., pirated Chrome, outdated Zoom, etc.)
+📍 Goal: Block users from installing unauthorized software (.msi)
 
 ⚠️ Risk
 
