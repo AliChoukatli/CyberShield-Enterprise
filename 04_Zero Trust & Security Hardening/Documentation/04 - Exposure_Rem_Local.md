@@ -325,16 +325,6 @@ for ($i = 0; $i -lt $ids.Count; $i++) {
 
 ---
 
-### 🧰 Update Microsoft Edge (Chromium-based) to Version 137.0.3296.62
-
-🔍 **Description:**  
-Update the Microsoft Edge browser to the latest stable version.
-
-🔍 **Justification:**  
-Web browsers are prime targets for exploits; updates fix known vulnerabilities and improve resilience.
-
-![Edge+Version](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/edge_version.png)
-
 ---
 
 > 🛡️ Apply these configurations via Intune, GPO, or PowerShell to harden your environment against common threats. Document remediation steps and monitor Defender recommendations regularly.
@@ -385,3 +375,15 @@ Web browsers are prime targets for exploits; updates fix known vulnerabilities a
 ---
 
 *Note : Ces décisions d'acceptation de risque doivent être réévaluées régulièrement en fonction de l'évolution du contexte de sécurité et des contrôles en place.*
+
+
+
+### 🧰 Update Microsoft Edge (Chromium-based) to Version 137.0.3296.62
+
+🔍 **Description:**  
+Update the Microsoft Edge browser to the latest stable version.
+
+🔍 **Justification:**  
+Web browsers are prime targets for exploits; updates fix known vulnerabilities and improve resilience.
+
+![Edge+Version](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/edge_version.png)
