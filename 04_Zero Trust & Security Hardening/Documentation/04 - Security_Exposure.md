@@ -19,7 +19,7 @@ This document outlines actions taken to address a **High Exposure Level** report
       - [How to Verify if ASR Rules Are Applied](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Security_Exposure.md#-how-to-verify-if-asr-rules-are-applied)
         
    - 🟡 [Risk acceptance](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Security_Exposure.md#-accepted-risks)
-     - Set 'Minimum Password Length' to less than 14 characters
+     - [Set 'Minimum Password Length' to less than 14 characters](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Security_Exposure.md#1-set-minimum-password-length-to-less-than-14-characters)
 
 3. 🔒 Conclusion
      
