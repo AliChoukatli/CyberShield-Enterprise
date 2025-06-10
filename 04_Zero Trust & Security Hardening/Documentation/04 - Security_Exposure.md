@@ -340,65 +340,15 @@ for ($i = 0; $i -lt $ids.Count; $i++) {
 | Disable Defender Firewall notifications         | Low        | Low                  | Notifications off reduces user noise; monitoring remains via logs and centralized tools.                   | Accepted  |
 
 
-# ✅ Risk Acceptance – Microsoft Defender Firewall Notifications (Domain Profile)
+## 1. Set 'Minimum Password Length' to less than 14 characters
 
-## 🔍 Description
+**Risk Description:**  
+The recommendation is to enforce a minimum password length of 14 or more characters. Shorter passwords increase the risk of brute force attacks and password guessing.
 
-This document outlines a risk acceptance decision regarding the disabling of Microsoft Defender Firewall notifications when programs are blocked on domain-joined machines.
+**Risk Acceptance:**  
+We accept the risk of using a minimum password length less than 14 characters (e.g., 12 characters) due to compatibility with existing user management policies and to balance security with user convenience. Additional controls such as multi-factor authentication (MFA) and account lockout policies are enforced to reduce risk.
 
-In certain managed enterprise environments, such notifications are unnecessary and can confuse non-technical users. Instead, centralized monitoring is used for all firewall events via Microsoft Defender for Endpoint and SIEM integration.
-
----
-
-## 🎛️ Technical Implementation
-
-### Group Policy Configuration (GPO)
-
-- **Policy Name**: Turn off notifications when the firewall blocks a new app  
-- **Path**:
-Computer Configuration →
-Administrative Templates →
-Windows Defender Firewall →
-Domain Profile →
-Turn off notifications when the firewall blocks a new app
-- **Setting**: `Enabled` ✅
-
-> This setting disables all toast notifications when Microsoft Defender Firewall blocks a new application on domain profile networks.
-
----
-
-## 🧾 Risk Acceptance Details
-
-| Field               | Value                                                                 |
-|---------------------|-----------------------------------------------------------------------|
-| **Recommendation**  | Enable firewall notifications for blocked apps (Defender for Endpoint) |
-| **Risk Decision**   | Exception (Risk Accepted)                                             |
-| **Justification**   | Notifications are disabled on domain-joined machines operating in kiosk or locked-down mode. Centralized logging is enabled through Defender for Endpoint and Microsoft Sentinel. There is no user action required locally. |
-| **Risk Owner**      | Ali Choukatli (IT Security Lead)                                      |
-| **Approval Date**   | 2025-06-10                                                            |
-| **Review Date**     | 2025-09-10 (90 days)                                                  |
-| **Mitigation**      | Centralized monitoring via MDE and SIEM; firewall remains enabled and strictly configured. |
-| **Implementation Method** | Group Policy Object (GPO) applied via Active Directory OU targeting specific device groups. |
-
----
-
-## 🛡️ Monitoring & Follow-Up
-
-- This exception has been documented in the organization's **Risk Register**.
-- A review will be conducted before the expiration date.
-- Firewall events are continuously monitored using:
-- Microsoft Defender for Endpoint
-- Microsoft Sentinel
-- Windows Event Forwarding
-
----
-
-## 📸 Defender for Endpoint – Exception Request
-
-> Simulated example (no actual screenshot shown here):
-
-Security Recommendation: "Enable notifications when firewall blocks a new app"
-Requested action: "Exception"
-Justification: "Intentionally disabled in kiosk environments with SIEM-based monitoring"
-Duration: 90 days
-Approver: IT Security Lead
+**Mitigation Measures:**  
+- Implementation of Multi-Factor Authentication (MFA).  
+- Account lockout thresholds configured to prevent brute force attempts.  
+- Regular password change policies and user education on password strength.
