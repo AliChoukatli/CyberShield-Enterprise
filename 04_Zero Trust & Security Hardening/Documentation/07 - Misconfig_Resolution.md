@@ -45,7 +45,7 @@ New-AuthenticationPolicy -Name "Block Basic Auth"
 
 #### Step 2: Modify the policy if needed
 
-This policy disables Basic Authentication for all legacy protocols by default.
+This policy disables Basic Authentication for all legacy protocols.
 
 ```powershell
 Set-AuthenticationPolicy -Identity "Block Basic Auth" `
