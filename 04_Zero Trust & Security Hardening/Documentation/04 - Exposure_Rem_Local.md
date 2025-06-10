@@ -253,7 +253,7 @@ Email is a common initial attack vector. This control reduces phishing and malwa
 
 ---
 
-### 🧰 Block Untrusted and Unsigned Processes from USB Devices - GPO Method](
+### 🧰 Block Untrusted and Unsigned Processes from USB Devices - GPO Method
 
 This guide explains how to enable the Attack Surface Reduction (ASR) rule that blocks untrusted and unsigned processes from running from USB devices by setting the corresponding registry key via Group Policy Object (GPO).
 
@@ -320,6 +320,12 @@ for ($i = 0; $i -lt $ids.Count; $i++) {
 ```
 
 ![ASR_verif](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/ASR_Verif.png)
+
+| GUID                                   | Nom de la règle ASR                                                         |
+|---------------------------------------|------------------------------------------------------------------------------|
+| 9E6C4E1F-7D60-472F-BA1A-A39EF669E4B2  | Block Credential Stealing from LSASS (Local Security Authority Subsystem)    |
+| BE9BA2D9-53EA-4CDC-84E5-9B1EEEE46550  |  Block Executable Content from Email Client and Webmail                      |
+| b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4  | Block Untrusted and Unsigned Processes from USB Devices                      |
 
 
 ---
