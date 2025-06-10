@@ -129,7 +129,7 @@ Get-CASMailbox -ResultSize Unlimited | Select Name, ImapEnabled, PopEnabled
 
 🔴 2. No Control Over Software Installations
 
-📍 **Goal:** Prevent users from installing arbitrary Win32 apps.
+📍 Goal: Block users from installing unauthorized software (e.g., pirated Chrome, outdated Zoom, etc.)
 
 ⚠️ Risk
 
@@ -138,6 +138,23 @@ Get-CASMailbox -ResultSize Unlimited | Select Name, ImapEnabled, PopEnabled
 - **Increased attack surface** for lateral movement or privilege escalation
 
 ✅ Solution
+
+1. Go to **Microsoft Intune Admin Center** → **Devices** → **Configuration profiles**
+2. Click **+ Create profile**
+   - Platform: *Windows 10 and later*
+   - Profile type: *Settings catalog*
+3. Name the profile: `Restrict Software Installations`
+
+4. In the **Settings picker**, add:
+
+   - **Windows Components > Windows Installer > Turn off Windows Installer** → `Always`
+   - **User Configuration > Administrative Templates > Start Menu and Taskbar > Remove Run menu from Start Menu** → `Enabled` *(optional hardening)*
+   - **System > Don't run specified Windows applications** → Add known setup files: `chrome_installer.exe`, `ZoomInstaller.exe`, etc. *(limited protection)*
+
+5. Assign to **pilot group** of devices.
+
+📌 *This limits .msi installations, and restricts common setup tools. However, it does not fully block all .exe files — for that, use AppLocker or WDAC.*
+
 
 1. Go to **Microsoft Intune Admin Center** → **Devices** → **Configuration**
 2. Click **+ Create profile**
