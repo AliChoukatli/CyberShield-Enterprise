@@ -104,7 +104,7 @@ Get-mpPreference | ft PUAProtection
 
 ---
 
-### 🧰 Set Controlled Folder Access to Enabled (or Audit Mode)
+### 🧰 Set Controlled Folder Access to Enabled (Block Mode)
 
 
 ![Folder_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Folder_Req.png)
