@@ -290,13 +290,9 @@ This guide explains how to enable the Attack Surface Reduction (ASR) rule that b
 ---
 
 
-# ✅ How to Verify if ASR Rules Are Applied
+## ✅ How to Verify if ASR Rules Are Applied
 
 This guide explains how to check whether **Microsoft Defender Attack Surface Reduction (ASR) rules** are active on a system, and to display each rule along with its configured action (`Block`, `Audit`, `Warn`, or `Disabled`).
-
----
-
-## 🔍 Step-by-Step Verification via PowerShell
 
 You can run the following PowerShell script to get the list of ASR rules applied and their corresponding actions in a readable format.
 
