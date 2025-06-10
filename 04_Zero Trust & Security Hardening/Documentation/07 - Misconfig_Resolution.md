@@ -7,7 +7,7 @@ Even with MFA enabled, legacy protocols such as IMAP, POP3, and SMTP allow Basic
 
 ---
 
-### 1️⃣ Step 1. Install and import the Exchange Online Management module (if not installed)
+### 1️⃣ Install and import the Exchange Online Management module (if not installed)
 
 ```powershell
 Install-Module -Name ExchangeOnlineManagement -Force
@@ -15,14 +15,14 @@ Import-Module ExchangeOnlineManagement
 ```
 
 
-### 2️⃣ Step2. Connect to Exchange Online
+### 2️⃣ Connect to Exchange Online
 
 ```powershell
 Connect-ExchangeOnline -UserPrincipalName your.email@domain.com
 ```
 ---
 
-### 3️⃣ Step 3. Disable Basic Authentication for Legacy Protocols
+### 3️⃣ Disable Basic Authentication for Legacy Protocols
 
 Microsoft has deprecated Basic Authentication for IMAP, POP3, and SMTP to improve security. While many tenants have this disabled by default, verify and enforce it explicitly.
 
@@ -41,7 +41,7 @@ To assign the policy to all mailbox users:
 Get-User -Filter {RecipientTypeDetails -eq 'UserMailbox'} | Set-User -AuthenticationPolicy "Block Basic Auth"
 ```
 
-### 4️⃣ Step 4. Disable SMTP AUTH Globally
+### 4️⃣ Disable SMTP AUTH Globally
 SMTP AUTH is a legacy protocol that can be exploited if enabled unnecessarily.
 
 #### 4.1 Disable SMTP AUTH for the Entire Organization
@@ -56,7 +56,7 @@ Ensure the output shows:
 ```yaml
 SmtpClientAuthenticationDisabled : True
 ```
-### 5️⃣ Step 5. Disable IMAP and POP3 Protocols Per User
+### 5️⃣ Disable IMAP and POP3 Protocols Per User
 For additional security, disable IMAP and POP3 access on users' mailboxes who do not require it.
 
 #### 5.1 Disable IMAP and POP3 for a Specific User
@@ -71,7 +71,7 @@ Set-CASMailbox -Identity "user@example.com" -ImapEnabled $false -PopEnabled $fal
 Get-Mailbox -ResultSize Unlimited | Set-CASMailbox -ImapEnabled $false -PopEnabled $false
 ```
 
-### 6️⃣ Step 6. Disable PowerShell Access for Users
+### 6️⃣ Disable PowerShell Access for Users
 To prevent the use of legacy PowerShell remoting that could be abused, disable PowerShell access if it is not needed.
 
 #### 6.1 Disable Remote PowerShell Access for a User
