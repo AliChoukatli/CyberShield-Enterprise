@@ -33,13 +33,16 @@ This document outlines actions taken to address a **High Exposure Level** report
 
 ![LTP-HLP01_Score](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/LTP-HLP01_Exposure_Level.png)
 
-## 🔴 Two different types of responses were demonstrated:
 
-- ✅ Applied Remediation
-- 🟡 Risk acceptance 
 
 ##  🔴 Security Recommendations 
 - The following are prioritized security controls and remediations to address high-risk exposures detected by Microsoft Defender for Endpoint.
+
+
+### 🔴 Two different types of responses were demonstrated:
+
+- ✅ Applied Remediation
+- 🟡 Risk acceptance 
 
 ![LTP-HLP01_Recommendations](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/LTP-HLP01_Recommendations.png)
 
