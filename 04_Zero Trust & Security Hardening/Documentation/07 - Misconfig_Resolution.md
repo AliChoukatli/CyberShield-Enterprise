@@ -129,12 +129,6 @@ Get-CASMailbox -ResultSize Unlimited | Select Name, ImapEnabled, PopEnabled
 
 ### ✅ 3. No Control Over Software Installations
 
----
-
-#### 🔍 Observation
-During the audit of the existing endpoint environment, I noticed that end users had local admin rights or sufficient privileges to install arbitrary software. Applications like unpatched Zoom versions, pirated browsers (e.g., Chrome), or other unauthorized tools were present on several endpoints.
-
----
 
 #### ⚠️ Risk
 Uncontrolled software installations introduce multiple risks:
