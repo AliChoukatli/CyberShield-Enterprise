@@ -323,14 +323,9 @@ for ($i = 0; $i -lt $ids.Count; $i++) {
 
 | GUID                                   | Nom de la règle ASR                                                         |
 |---------------------------------------|------------------------------------------------------------------------------|
-| 9E6C4E1F-7D60-472F-BA1A-A39EF669E4B2  | Block Credential Stealing from LSASS (Local Security Authority Subsystem)    |
-| BE9BA2D9-53EA-4CDC-84E5-9B1EEEE46550  |  Block Executable Content from Email Client and Webmail                      |
-| b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4  | Block Untrusted and Unsigned Processes from USB Devices                      |
-
-
----
-
-> 🛡️ Apply these configurations via Intune, GPO, or PowerShell to harden your environment against common threats. Document remediation steps and monitor Defender recommendations regularly.
+| 9E6C4E1F-7D60-472F-BA1A-A39EF669E4B2  | 🔒 Block Credential Stealing from LSASS (Local Security Authority Subsystem)    |
+| BE9BA2D9-53EA-4CDC-84E5-9B1EEEE46550  | 🔒 Block Executable Content from Email Client and Webmail                      |
+| b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4  | 🔒 Block Untrusted and Unsigned Processes from USB Devices                      |
 
 
 ---
