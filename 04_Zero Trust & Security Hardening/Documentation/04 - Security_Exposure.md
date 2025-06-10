@@ -333,22 +333,23 @@ for ($i = 0; $i -lt $ids.Count; $i++) {
 
 ## 🟡 Accepted Risks
 
-| Control                                         | Risk Level | Impact               | Justification                                                                                              | Decision  |
-|-------------------------------------------------|------------|----------------------|------------------------------------------------------------------------------------------------------------|-----------|
-| Disable 'Autoplay' for all drives               | Low        | Low                  | Modern Windows restrict autoplay by default; full disable may impact user experience with trusted devices. | Accepted  |
-| Interactive logon: Machine inactivity limit     | Low        | Low to Medium        | In physically secured environments, this control can be redundant with other auto-lock measures.           | Accepted  |
-| Disable Defender Firewall notifications         | Low        | Low                  | Notifications off reduces user noise; monitoring remains via logs and centralized tools.                   | Accepted  |
+| Control                                                  | Risk Level | Impact               | Justification                                                                                              | Decision  |
+|----------------------------------------------------------|------------|----------------- |------------------------------------------------------------------------------------------------------------|-----------|
+| Set 'Minimum Password Length' to less than 14 characters | Low        | Low              |  
+| Disable 'Autoplay' for all drives                        | Low        | Low              | Modern Windows restrict autoplay by default; full disable may impact user experience with trusted devices. | Accepted  |
+| Interactive logon: Machine inactivity limit              | Low        | Low to Medium    | In physically secured environments, this control can be redundant with other auto-lock measures.           | Accepted  |
+| Disable Defender Firewall notifications                  | Low        | Low              | Notifications off reduces user noise; monitoring remains via logs and centralized tools.                   | Accepted  |
 
 
-## 1. Set 'Minimum Password Length' to less than 14 characters
+### 1. Set 'Minimum Password Length' to less than 14 characters
 
 **Risk Description:**  
 The recommendation is to enforce a minimum password length of 14 or more characters. Shorter passwords increase the risk of brute force attacks and password guessing.
 
 **Risk Acceptance:**  
-We accept the risk of using a minimum password length less than 14 characters (e.g., 12 characters) due to compatibility with existing user management policies and to balance security with user convenience. Additional controls such as multi-factor authentication (MFA) and account lockout policies are enforced to reduce risk.
+"We accept the risk of using a minimum password length less than 14 characters because the current policy enforces a minimum of 12 characters.
 
-**Mitigation Measures:**  
+**Justification:**  
 - Implementation of Multi-Factor Authentication (MFA).  
 - Account lockout thresholds configured to prevent brute force attempts.  
 - Regular password change policies and user education on password strength.
