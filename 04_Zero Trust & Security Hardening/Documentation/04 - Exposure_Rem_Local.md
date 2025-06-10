@@ -43,7 +43,7 @@ This document outlines actions taken to address a **High Exposure Level** report
 |--------------------------------------------------------------|------------|----------|--------------------------------------------------------------------------------------------------|
 | 🔒 Update Microsoft Windows 11 (OS and apps)                | High        | High    | Critical security patches fix vulnerabilities and protect system integrity.                       |
 | 🔒 Turn on PUA protection in block mode                     | High        | High    | Blocks potentially unwanted applications that may compromise security.                            |
-| 🔒 Set controlled folder access to enabled/audit mode       | High        | High     | Protects against ransomware by restricting unauthorized file changes.                            |
+| 🔒 Set controlled folder access to Block Mode               | High        | High     | Protects against ransomware by restricting unauthorized file changes.                            |
 | 🔒 Block credential stealing from LSASS                     | High        | High    | Prevents theft of credentials (hashes) used in lateral movement and privilege escalation attacks. |
 | 🔒 Enable Network Protection                                | Medium      | Medium  | Blocks network access to malicious domains and reduces attack surface.                            |
 | 🔒 Block executable content from email client and webmail   | Medium      | Medium   | Prevents execution of malicious content delivered via email.                                     |
@@ -104,7 +104,7 @@ Get-mpPreference | ft PUAProtection
 
 ---
 
-### 🧰 Set Controlled Folder Access to Enabled (Block Mode)
+### 🧰 Set Controlled Folder Access to Enabled or Block Mode
 
 
 ![Folder_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Folder_Req.png)
