@@ -29,25 +29,52 @@ Import-Module ExchangeOnlineManagement
 ```powershell
 Connect-ExchangeOnline -UserPrincipalName your.email@domain.com
 ```
+
 ---
+#### 3️⃣ Disable Basic Authentication for Legacy Protocols
 
-### 3️⃣. Disable Basic Authentication for Legacy Protocols
+Basic Authentication exposes security risks and should be disabled for legacy protocols in Exchange Online.
 
-Microsoft has deprecated Basic Authentication for IMAP, POP3, and SMTP to improve security. While many tenants have this disabled by default, verify and enforce it explicitly.
+##### Step 1: Create a new Authentication Policy to block Basic Authentication
 
-#### 3.1 Create or Update an Authentication Policy to Block Basic Auth
+```powershell
+New-AuthenticationPolicy -Name "Block Basic Auth"
+```
+This policy disables Basic Authentication for all legacy protocols by default.
+
+##### Step 2: Verify the policy settings
+
+```powershell
+Get-AuthenticationPolicy -Identity "Block Basic Auth" | Format-List *
+```
+
+All AllowBasicAuth* properties should be set to False.
+
+##### Step 3: Modify the policy if needed
+
+To explicitly disable Basic Authentication for specific protocols, use the Set-AuthenticationPolicy cmdlet:
 
 ```powershell
 Set-AuthenticationPolicy -Identity "Block Basic Auth" `
-  -AllowBasicAuthImap $false `
-  -AllowBasicAuthPop $false `
-  -AllowBasicAuthSmtp $false
+    -AllowBasicAuthImap:$false `
+    -AllowBasicAuthPop:$false `
+    -AllowBasicAuthSmtp:$false
 ```
-#### 3.2 Assign the Authentication Policy to Users
+Step 4: Assign the Authentication Policy to users
+Replace <UserPrincipalName> with the user’s UPN.
 
-To assign the policy to all mailbox users:
 ```powershell
-Get-User -Filter {RecipientTypeDetails -eq 'UserMailbox'} | Set-User -AuthenticationPolicy "Block Basic Auth"
+Set-User -Identity <UserPrincipalName> -AuthenticationPolicy "Block Basic Auth"
+```
+
+Step 5: Verify the policy assignment
+
+```powershell
+Get-User -Identity <UserPrincipalName> | Format-List AuthenticationPolicy
+```
+
+
+
 ```
 
 ### 4️⃣. Disable SMTP AUTH Globally
