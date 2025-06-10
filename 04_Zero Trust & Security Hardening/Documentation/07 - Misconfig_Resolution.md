@@ -42,11 +42,10 @@ Connect-ExchangeOnline -UserPrincipalName your.email@domain.com
 ```powershell
 New-AuthenticationPolicy -Name "Block Basic Auth"
 ```
-This policy disables Basic Authentication for all legacy protocols by default.
 
 #### Step 2: Modify the policy if needed
 
-To explicitly disable Basic Authentication for specific protocols, use the Set-AuthenticationPolicy cmdlet:
+This policy disables Basic Authentication for all legacy protocols by default.
 
 ```powershell
 Set-AuthenticationPolicy -Identity "Block Basic Auth" `
