@@ -333,11 +333,10 @@ for ($i = 0; $i -lt $ids.Count; $i++) {
 
 ## 🟡 Accepted Risks
 
-| Control                                                  | Risk Level | Impact               | Justification                                                                                              | Decision  |
-|----------------------------------------------------------|------------|----------------- |------------------------------------------------------------------------------------------------------------|-----------|
-| Set 'Minimum Password Length' to less than 14 characters | Low        | Low              |  
+| Control                                                  | Risk Level | Impact           | Justification                                                                                             | Decision  |
+|----------------------------------------------------------|------------|----------------- |-----------------------------------------------------------------------------------------------------------|-----------|
+| Set 'Minimum Password Length' to less than 14 characters | Low        | Low              | Current policy requires 12 characters for compatibility; MFA and lockout mitigate risk.                   | Accepted 
 | Disable 'Autoplay' for all drives                        | Low        | Low              | Modern Windows restrict autoplay by default; full disable may impact user experience with trusted devices. | Accepted  |
-| Interactive logon: Machine inactivity limit              | Low        | Low to Medium    | In physically secured environments, this control can be redundant with other auto-lock measures.           | Accepted  |
 | Disable Defender Firewall notifications                  | Low        | Low              | Notifications off reduces user noise; monitoring remains via logs and centralized tools.                   | Accepted  |
 
 
@@ -353,3 +352,5 @@ The recommendation is to enforce a minimum password length of 14 or more charact
 - Implementation of Multi-Factor Authentication (MFA).  
 - Account lockout thresholds configured to prevent brute force attempts.  
 - Regular password change policies and user education on password strength.
+
+![Passwd_Risk_Acc](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/passwd_Risk_Accepted.png)
