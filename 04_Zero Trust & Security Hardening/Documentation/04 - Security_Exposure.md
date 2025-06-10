@@ -337,7 +337,7 @@ for ($i = 0; $i -lt $ids.Count; $i++) {
 
 | Control                                                  | Risk Level | Impact           | Justification                                                                                             | Decision  |
 |----------------------------------------------------------|------------|----------------- |-----------------------------------------------------------------------------------------------------------|-----------|
-| Set 'Minimum Password Length' to less than 14 characters | Low        | Low              | Current policy requires 12 characters for compatibility; MFA and lockout mitigate risk.                   | Accepted 
+| Set Minimum Password Length to less than 14 characters | Low        | Low              | Current policy requires 12 characters for compatibility; MFA and lockout mitigate risk.                   | Accepted 
 | Disable 'Autoplay' for all drives                        | Low        | Low              | Modern Windows restrict autoplay by default; full disable may impact user experience with trusted devices. | Accepted  |
 | Disable Defender Firewall notifications                  | Low        | Low              | Notifications off reduces user noise; monitoring remains via logs and centralized tools.                   | Accepted  |
 
