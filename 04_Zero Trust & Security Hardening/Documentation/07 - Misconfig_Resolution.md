@@ -1,6 +1,6 @@
 # 🔴  Security Misconfiguration Identified & Resolved
 
-## 1. Disable Legacy Protocols (IMAP, POP3, SMTP) and PowerShell Access in Exchange Online
+## ✅ 1. Disable Legacy Protocols (IMAP, POP3, SMTP) and PowerShell Access in Exchange Online
 
 ### Impact
 Even with MFA enabled, legacy protocols such as IMAP, POP3, and SMTP allow Basic Authentication which can be exploited to bypass modern authentication mechanisms. Disabling these protocols significantly reduces the risk of credential-based attacks.
@@ -127,11 +127,11 @@ Get-CASMailbox -ResultSize Unlimited | Select Name, ImapEnabled, PopEnabled
 
 ---
 
-### ✅ 3. No Control Over Software Installations
+## ✅ 2. No Control Over Software Installations
 
 
-#### ⚠️ Risk
-Uncontrolled software installations introduce multiple risks:
+### ⚠️ Risk
+
 - **Malware and ransomware infections** via untrusted applications
 - **Unpatched vulnerabilities** in outdated software versions
 - **Shadow IT**, leading to loss of visibility and compliance issues
@@ -139,8 +139,7 @@ Uncontrolled software installations introduce multiple risks:
 
 ---
 
-#### 🛠️ Technical Solution
-To enforce application control and prevent unauthorized installations, I implemented a dual-layered approach:
+### Solution
 
 1. **Microsoft Intune – Device Restriction Policies**
    - Blocked the ability to install Win32 apps from unknown sources
@@ -153,16 +152,9 @@ To enforce application control and prevent unauthorized installations, I impleme
 
 ---
 
-#### 🧰 Tools & Technologies Used
-- **Microsoft Intune**
-- **AppLocker (via Group Policy or Intune)**
-- **Microsoft Endpoint Manager Admin Center**
-- **Azure AD (Entra ID)** for assigning policies to specific user/device groups
 
----
-
-#### 💎 Impact & Benefits
-> "To reduce the attack surface, I restricted software installations to approved applications via Intune policies and AppLocker. This ensures tighter control over the software environment, minimizes exposure to vulnerabilities, and aligns with Zero Trust principles."
+### 💎 Benefits
+> "To reduce the attack surface, I restricted software installations to approved applications via Intune policies and AppLocker". 
 
 - Reduced malware risk through strict application control
 - Enforced security compliance and governance
