@@ -67,14 +67,14 @@ All `AllowBasicAuth` properties should be set to `False`.
 
 ---
 
-#### Step 4: Assign the Authentication Policy to users
+3.4 Assign the Authentication Policy to users
 Replace <UserPrincipalName> with the user’s UPN.
 
 ```powershell
 Set-User -Identity <UserPrincipalName> -AuthenticationPolicy "Block Basic Auth"
 ```
 
-#### Step 5: Verify the policy assignment
+3.5 Verify the policy assignment
 
 ```powershell
 Get-User -Identity <UserPrincipalName> | Format-List AuthenticationPolicy
@@ -86,11 +86,11 @@ Get-User -Identity <UserPrincipalName> | Format-List AuthenticationPolicy
 4️⃣. Disable SMTP AUTH Globally
 SMTP AUTH is a legacy protocol that can be exploited if enabled unnecessarily.
 
-#### 4.1 Disable SMTP AUTH for the Entire Organization
+4.1 Disable SMTP AUTH for the Entire Organization
 ```powershell
 Set-TransportConfig -SmtpClientAuthenticationDisabled $true
 ```
-#### 4.2 Verify SMTP AUTH Status
+4.2 Verify SMTP AUTH Status
 ```powershell
 Get-TransportConfig | Format-List SmtpClientAuthenticationDisabled
 ```
@@ -106,18 +106,17 @@ SmtpClientAuthenticationDisabled : True
 5️⃣. Disable IMAP and POP3 Protocols Per User
 For additional security, disable IMAP and POP3 access on users' mailboxes who do not require it.
 
-#### 5.1 Disable IMAP and POP3 for a Specific User
+5.1 - Disable IMAP and POP3 for a Specific User
 
 ```powershell
 Set-CASMailbox -Identity "user@example.com" -ImapEnabled $false -PopEnabled $false
 ```
-
-#### 5.2 Disable IMAP and POP3 for All Users
+5.2 - Disable IMAP and POP3 for All Users
 
 ```powershell
 Get-Mailbox -ResultSize Unlimited | Set-CASMailbox -ImapEnabled $false -PopEnabled $false
 ```
-#### 5.3 Verify IMAP & POP3 Status
+5.3 - Verify IMAP & POP3 Status
 
 ```powershell
 Get-CASMailbox -ResultSize Unlimited | Select Name, ImapEnabled, PopEnabled
