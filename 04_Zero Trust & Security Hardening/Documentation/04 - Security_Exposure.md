@@ -338,3 +338,67 @@ for ($i = 0; $i -lt $ids.Count; $i++) {
 | Disable 'Autoplay' for all drives               | Low        | Low                  | Modern Windows restrict autoplay by default; full disable may impact user experience with trusted devices. | Accepted  |
 | Interactive logon: Machine inactivity limit     | Low        | Low to Medium        | In physically secured environments, this control can be redundant with other auto-lock measures.           | Accepted  |
 | Disable Defender Firewall notifications         | Low        | Low                  | Notifications off reduces user noise; monitoring remains via logs and centralized tools.                   | Accepted  |
+
+
+# ✅ Risk Acceptance – Microsoft Defender Firewall Notifications (Domain Profile)
+
+## 🔍 Description
+
+This document outlines a risk acceptance decision regarding the disabling of Microsoft Defender Firewall notifications when programs are blocked on domain-joined machines.
+
+In certain managed enterprise environments, such notifications are unnecessary and can confuse non-technical users. Instead, centralized monitoring is used for all firewall events via Microsoft Defender for Endpoint and SIEM integration.
+
+---
+
+## 🎛️ Technical Implementation
+
+### Group Policy Configuration (GPO)
+
+- **Policy Name**: Turn off notifications when the firewall blocks a new app  
+- **Path**:
+Computer Configuration →
+Administrative Templates →
+Windows Defender Firewall →
+Domain Profile →
+Turn off notifications when the firewall blocks a new app
+- **Setting**: `Enabled` ✅
+
+> This setting disables all toast notifications when Microsoft Defender Firewall blocks a new application on domain profile networks.
+
+---
+
+## 🧾 Risk Acceptance Details
+
+| Field               | Value                                                                 |
+|---------------------|-----------------------------------------------------------------------|
+| **Recommendation**  | Enable firewall notifications for blocked apps (Defender for Endpoint) |
+| **Risk Decision**   | Exception (Risk Accepted)                                             |
+| **Justification**   | Notifications are disabled on domain-joined machines operating in kiosk or locked-down mode. Centralized logging is enabled through Defender for Endpoint and Microsoft Sentinel. There is no user action required locally. |
+| **Risk Owner**      | Ali Choukatli (IT Security Lead)                                      |
+| **Approval Date**   | 2025-06-10                                                            |
+| **Review Date**     | 2025-09-10 (90 days)                                                  |
+| **Mitigation**      | Centralized monitoring via MDE and SIEM; firewall remains enabled and strictly configured. |
+| **Implementation Method** | Group Policy Object (GPO) applied via Active Directory OU targeting specific device groups. |
+
+---
+
+## 🛡️ Monitoring & Follow-Up
+
+- This exception has been documented in the organization's **Risk Register**.
+- A review will be conducted before the expiration date.
+- Firewall events are continuously monitored using:
+- Microsoft Defender for Endpoint
+- Microsoft Sentinel
+- Windows Event Forwarding
+
+---
+
+## 📸 Defender for Endpoint – Exception Request
+
+> Simulated example (no actual screenshot shown here):
+
+Security Recommendation: "Enable notifications when firewall blocks a new app"
+Requested action: "Exception"
+Justification: "Intentionally disabled in kiosk environments with SIEM-based monitoring"
+Duration: 90 days
+Approver: IT Security Lead
