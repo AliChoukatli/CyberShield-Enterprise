@@ -128,31 +128,59 @@ Get-CASMailbox -ResultSize Unlimited | Select Name, ImapEnabled, PopEnabled
 
 ## 🔴 2. No Control Over Software Installations
 
-### ⚠️ Risk
+📍 **Goal:** Prevent users from installing arbitrary Win32 apps.
+
+⚠️ Risk
 
 - **Malware and ransomware infections** via untrusted applications
 - **Unpatched vulnerabilities** in outdated software versions
 - **Increased attack surface** for lateral movement or privilege escalation
 
-### ✅ Solution
+✅ Solution
 
-1. **Microsoft Intune – Device Restriction Policies**
-   - Blocked the ability to install Win32 apps from unknown sources
-   - Allowed installations **only from the Microsoft Store** (optional for stricter environments)
+1. Go to **Microsoft Intune Admin Center** → **Devices** → **Configuration profiles**
+2. Click **+ Create profile**
+   - Platform: *Windows 10 and later*
+   - Profile type: *Settings catalog*
+3. Name the profile (e.g., `Restrict Software Installation`)
+4. In **Settings picker**, search for:
+   - `Device Installation` → Enable: `Prevent installation of devices not described by other policy settings`
+   - `Store Apps` → Allow: `Only allow Microsoft Store apps` (optional but strong restriction)
+   - `Cloud Experience` → Disable: `User can install apps from anywhere`
+5. Assign the policy to a **pilot group** (e.g., security test devices or non-admin users)
+6. Review and deploy.
 
-2. **AppLocker – Application Whitelisting**
-   - Created and deployed AppLocker rules via **Intune Configuration Profiles**
-   - Only approved applications (e.g., Microsoft 365 apps, company tools) were whitelisted
-   - Default-deny policy applied to unknown executables and installers
-
-
-### 💎 Benefits
-> "To reduce the attack surface, I restricted software installations to approved applications via Intune policies and AppLocker". 
-
-- Reduced malware risk through strict application control
-- Improved alignment with **Zero Trust** and **ISO/IEC 27001** controls on asset management
+📌 **Note:** Avoid deploying to all users without testing — you may break legitimate business apps.
 
 ---
+
+### 2. AppLocker – Application Whitelisting
+
+📍 **Goal:** Only allow execution of approved applications.
+
+##### 🧭 Prerequisites:
+- Devices must be **Windows 10/11 Enterprise or Education**
+- The **Application Identity service** must be running
+
+##### 🧭 Steps:
+1. In Intune, go to **Endpoint security** → **Attack surface reduction** → **+ Create policy**
+   - Platform: *Windows 10 and later*
+   - Profile: *AppLocker (Windows 10 and later)*
+
+2. Define AppLocker rules:
+   - **Executable Rules**: Allow only approved paths (e.g., `C:\Program Files\Microsoft Office\`)
+   - **Windows Installer Rules**: Block `.msi` files from unknown sources
+   - **Script Rules**: Block PowerShell or VBS unless signed and trusted
+   - Set default behavior to **Deny** all other software
+
+3. Assign the policy to the same pilot group
+
+4. Use **Audit Mode first**, then switch to **Enforce Mode** once verified (this helps avoid business disruptions).
+
+5. Monitor policy effectiveness in **Intune > Reports > AppLocker policy status**
+
+---
+
 
 
 
