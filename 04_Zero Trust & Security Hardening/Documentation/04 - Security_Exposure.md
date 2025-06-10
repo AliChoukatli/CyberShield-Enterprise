@@ -6,7 +6,7 @@ This document outlines actions taken to address a **High Exposure Level** report
 
 1. 🔒 [Initial Exposure Level Summary](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Documentation/04%20-%20Security_Exposure.md#-initial-exposure-level-summary)
 
-2. 🔒 [Security Recommendations ](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Exposure_Rem_Local.md#-security-recommendations)
+2. 🔒 [Security Recommendations ](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Security_Exposure.md#-security-recommendations)
    - ✅ [Applied Remediation](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Exposure_Rem_Local.md#-applied-remediation)
      
       - [Update Microsoft Windows 11 (OS and Built-in Applications)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Documentation/04%20-%20Security_Exposure.md#-update-microsoft-windows-11-os-and-built-in-applications)
