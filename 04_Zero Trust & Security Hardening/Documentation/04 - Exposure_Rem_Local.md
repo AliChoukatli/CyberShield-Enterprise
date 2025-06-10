@@ -48,7 +48,7 @@ This document outlines actions taken to address a **High Exposure Level** report
 | 🔒 Enable Network Protection                                | Medium      | Medium  | Blocks network access to malicious domains and reduces attack surface.                            |
 | 🔒 Block executable content from email client and webmail   | Medium      | Medium   | Prevents execution of malicious content delivered via email.                                     |
 | 🔒 Block untrusted and unsigned processes from USB          | Medium      | Medium   | Protects from malware spreading via USB removable devices.                                       |
-| 🔒 Update Microsoft Edge Chromium-based                     | Medium      | High    | Browser updates patch exploitable vulnerabilities frequently targeted by attackers.               |
+
 
 
 
