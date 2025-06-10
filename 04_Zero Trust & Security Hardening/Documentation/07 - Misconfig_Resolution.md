@@ -1,7 +1,6 @@
 # 🔴  Security Misconfiguration Identified & Resolved
 
-## ✅ 1. Disable Legacy Protocols (IMAP, POP3, SMTP) and PowerShell Access in Exchange Online
-
+## ✅ 1. Disable Legacy Protocols (IMAP, POP3, SMTP)
 ### Impact
 Even with MFA enabled, legacy protocols such as IMAP, POP3, and SMTP allow Basic Authentication which can be exploited to bypass modern authentication mechanisms. Disabling these protocols significantly reduces the risk of credential-based attacks.
 
