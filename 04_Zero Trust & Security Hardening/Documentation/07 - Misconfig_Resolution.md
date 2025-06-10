@@ -93,6 +93,9 @@ Set-TransportConfig -SmtpClientAuthenticationDisabled $true
 ```powershell
 Get-TransportConfig | Format-List SmtpClientAuthenticationDisabled
 ```
+
+![Disable_SMTP](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/disable_SMTP.png)
+
 Ensure the output shows:
 ```yaml
 SmtpClientAuthenticationDisabled : True
