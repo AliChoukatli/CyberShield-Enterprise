@@ -14,6 +14,7 @@ Open PowerShell as Administrator and run:
 ```powershell
 Set-ExecutionPolicy RemoteSigned
 ```
+Then close the Administrator PowerShell window and open a new regular PowerShell session.
 
 ### 1️⃣. Install and import the Exchange Online Management module (if not installed)
 
