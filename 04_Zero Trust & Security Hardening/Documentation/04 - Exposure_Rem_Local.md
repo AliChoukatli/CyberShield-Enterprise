@@ -319,11 +319,8 @@ for ($i = 0; $i -lt $ids.Count; $i++) {
 
 ```
 
+![ASR_verif](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/ASR_Verif.png)
 
-
-
-
----
 
 ---
 
