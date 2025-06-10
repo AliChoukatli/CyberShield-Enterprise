@@ -15,6 +15,7 @@ Even with MFA enabled, legacy protocols such as IMAP, POP3, and SMTP allow Basic
 Set-ExecutionPolicy RemoteSigned
 ```
 - Then close the Administrator PowerShell window and open a new regular PowerShell session.
+---
 
 ## 1️⃣. Install and import the Exchange Online Management module (if not installed)
 
@@ -31,6 +32,7 @@ Connect-ExchangeOnline -UserPrincipalName your.email@domain.com
 ```
 
 ---
+
 ## 3️⃣ Disable Basic Authentication for Legacy Protocols
 
 - Basic Authentication exposes security risks and should be disabled for legacy protocols in Exchange Online.
