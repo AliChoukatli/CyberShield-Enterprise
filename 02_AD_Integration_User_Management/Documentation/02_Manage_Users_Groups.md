@@ -40,3 +40,33 @@ If the user is not already a member of the **Domain Users** group, follow these 
 This will add the user to the **Domain Users** group, ensuring they have the basic domain access permissions.
 
 ![domain-users](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/domain-users.png)
+
+---
+
+
+## 🔴 **Managing Groups and Permissions**
+
+### 🔧 **Create AD Security Groups:**
+
+1. Navigate to the `Groups` OU
+2. [Right-click > **New** > **Group**
+  
+![New_group](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/create_group.png)
+
+3. Create the following groups for each department:
+
+   * `IT-Admins` (Security, Global)
+   * `IT-Users` (Security, Global)
+  
+ ![All-Groups)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/allgroups.png)
+ 
+4. Right-click each group > **Properties** > **Members** > **Add** users from IT OU and for each departement
+
+![Add-member](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/add-member.png)
+
+5. Now you should see all IT members
+
+![IT-member](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/IT-member.png)
+
+---
+
