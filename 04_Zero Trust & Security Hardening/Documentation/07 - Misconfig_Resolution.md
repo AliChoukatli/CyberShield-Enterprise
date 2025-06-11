@@ -196,6 +196,9 @@ You will see four rule collections:
 
 - On each client machine, run `services.msc`.
 - Find **Application Identity** service.
+
+![Application_Identity_Auto](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Application_Identity_Auto.png)
+  
 - Set Startup type to **Automatic** and start the service.
 
 ---
@@ -204,6 +207,9 @@ You will see four rule collections:
 
 - Deploy the GPO to the target computers.
 - Test in **Audit mode** to monitor what would be blocked without enforcing.
+
+![AppLocker_Enforcement](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/AppLocker_Enforcement.png)
+
 - After testing, switch enforcement mode to **Enforce** to block unauthorized apps.
 
 ---
