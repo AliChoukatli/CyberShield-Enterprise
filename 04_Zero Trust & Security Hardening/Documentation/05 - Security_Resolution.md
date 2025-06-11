@@ -268,4 +268,17 @@ Computer Management → Local Users and Groups → Groups → Administrators
 ```
 ![Local_Ali](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Local_Ali.png)
 
+---
+
+# Conclusion 
+
+✅ Legacy protocols and local admin rights misconfigurations were identified and remediated.
+Systems are now hardened against unauthorized access and unapproved software installations.
+
+
+
+
+
+
+
 
