@@ -161,7 +161,7 @@ To fully control software installations, **two layers of protection are required
 
 ---
 
-#### 🔒 2.  Block Specific Installers and Applications with AppLocker (Recommended)
+### 🔒 2.  Block Specific Installers and Applications with AppLocker (Recommended)
 
 1. Open Group Policy Management Console
 
