@@ -235,8 +235,6 @@ Prevent all Azure AD users from automatically becoming local administrators on W
    - Membership Type: Assigned 
 3. Add the appropriate users (e.g., Ali).
 
----
-
 #### 3.2 – Configure Intune Policy
 
 1. Open **Microsoft Intune Admin Center**.
@@ -254,10 +252,11 @@ Endpoint security → Account protection → + Create policy
 
    - **Group**: `Administrators`
    - **Action**: `Replace`  
-     *(⚠️ This removes all existing local admins except those defined below.)*
    - **Members**: Select your Azure AD group `Local Admins`
 
 5. Assign this policy to the targeted group of devices (e.g., all corporate Windows endpoints).
+
+![Local_Admin_intune_policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Local_Admin_intune_policy.png)
 
 ---
 
