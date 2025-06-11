@@ -156,7 +156,7 @@ Get-CASMailbox -ResultSize Unlimited | Select Name, ImapEnabled, PopEnabled
 
 ---
 
-🔴 3. Block Specific Software Installers via AppLocker in Intune
+2.1 - Block Specific Software Installers via AppLocker in Intune
 
 This guide explains how to block specific applications (e.g., `chrome_installer.exe`, `ZoomInstaller.exe`) using **AppLocker** policies deployed through Microsoft Intune.
 
