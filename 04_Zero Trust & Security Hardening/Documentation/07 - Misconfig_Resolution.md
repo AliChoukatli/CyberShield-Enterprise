@@ -139,8 +139,6 @@ Get-CASMailbox -ResultSize Unlimited | Select Name, ImapEnabled, PopEnabled
 
 ✅ Solution
 
-## Specific Settings Configuration in Intune
-
 ### 1. Turn off Windows Installer (Always)
 
 - Search in the category:  
