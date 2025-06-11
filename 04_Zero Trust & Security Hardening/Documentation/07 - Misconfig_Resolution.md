@@ -150,7 +150,7 @@ To fully control software installations, **two layers of protection are required
 
 ---
 
-## 🔒 1. Block Windows Installer (.msi)
+### 🔒 1. Block Windows Installer (.msi)
 
 **Platform:** Windows 10 and later  
 **Profile type:** Settings Catalog
@@ -168,14 +168,12 @@ To fully control software installations, **two layers of protection are required
 
 ---
 
-## 3. Block Specific Installers and Applications with AppLocker (Recommended)
+### 🔒 2.  Block Specific Installers and Applications with AppLocker (Recommended)
 
-### Prerequisites
+#### Prerequisites
 
 - Devices must run **Windows 10/11 Enterprise or Education**
 - The **Application Identity service** must be running on target devices (enabled by default with AppLocker)
-
-### Steps to Deploy AppLocker via Intune
 
 1. Open **Microsoft Intune Admin Center**
 
@@ -219,7 +217,7 @@ To fully control software installations, **two layers of protection are required
 
 ---
 
-## Notes
+#### Notes
 
 - Combining **Turn off Windows Installer** and **AppLocker** provides strong control over software installation and execution.
 
