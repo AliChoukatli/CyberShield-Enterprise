@@ -1,4 +1,4 @@
-#  Security Exposure Analysis and Remediation Guide
+# Security Exposure Analysis, Remediation & Risk Management
 
 ## 🔴 Index
 
