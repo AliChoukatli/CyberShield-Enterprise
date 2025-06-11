@@ -31,17 +31,16 @@ This project simulates the end-to-end deployment of a secure, hybrid-cloud IT in
 
 ## 🏢 Environment Overview
 
-| Component        | Details                                                      |
-| ---------------- | ------------------------------------------------------------ |
-| **Users**        | 25 (across multiple departments)                             |
-| **Devices**      | 1 Domain Controller, 1 File Server, 3 Workstations           |
-| **OS**           | Windows Server 2022, Windows 11 Pro                          |
-| **Licensing**    | Microsoft 365 Business Premium                               |
-| **Hybrid Setup** | Azure AD Connect (Password Hash Sync + SSO)                  |
-| **Device Join**  | Hybrid Azure AD Join + Intune                                |
-| **Security**     | Microsoft Defender for Endpoint, Windows Firewall, BitLocker |
-| **Monitoring**   | Microsoft Sentinel                                           |
-| **MFA**          | Windows Hello, Microsoft Authenticator, FIDO2, TAP           |
+| Component        | Details                                                                         |
+| ---------------- | --------------------------------------------------------------------------------|
+| **Users**        | 25 (across multiple departments)                                                 |
+| **Devices**      | 1 Domain Controller, 1 File Server, 3 Workstations                               |
+| **OS**           | Windows Server 2022, Windows 11 Entreprise                                       |
+| **Licensing**    | Microsoft 365 Business Premium P1                                                |
+| **Hybrid Setup** | Azure AD Connect (Password Hash Sync + SSO)                                      |
+| **Device Join**  | Hybrid Azure AD Join + Intune                                                    |
+| **Security**     | Microsoft Defender for Endpoint, Windows Firewall, BitLocker, Conditional Access |
+| **MFA**          | Windows Hello, Microsoft Authenticator, FIDO2, TAP                               |
 
 ---
 
