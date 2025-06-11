@@ -156,8 +156,6 @@ To configure restrictions on software installation and execution, follow these s
 
 ### 2. Remove Run menu from Start Menu
 
-- This setting is **not available** in the Settings Catalog profile type.
-- To configure it, create a **Device configuration profile** using the **Administrative Templates** profile type.
 - Navigate to:  
   `Administrative Templates > Start Menu and Taskbar > Remove Run menu from Start Menu`  
 - Set this policy to **Enabled**
