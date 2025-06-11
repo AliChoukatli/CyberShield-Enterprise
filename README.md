@@ -88,7 +88,7 @@ All policies and technologies are aligned with Zero Trust security model.
 | Firewall Configuration        | ❌ Default rules      | ✅ Custom rules via GPO & Intune             |
 | Privileged Access Control     | ❌ Admin used daily   | ✅ User accounts + Role-based Admins         |
 | Defender for Endpoint         | ❌ Not deployed       | ✅ Cloud or GPO onboarding + central console |
-| Exposure Level                | ⚠️ High (pre-attack) | ✅ Mitigated via Defender & Sentinel         |
+| Exposure Level                | ⚠️ High (pre-attack) | ✅ Mitigated via Defender|
 
 ---
 
@@ -99,8 +99,8 @@ All policies and technologies are aligned with Zero Trust security model.
 | **ISO/IEC 27001** | A.9.2 – User Access Mgmt | Azure AD + Group Membership + Conditional Access |
 | **ISO/IEC 27001** | A.12.4 – Logging         | Microsoft Defender + Sentinel SIEM               |
 | **NIST CSF**      | PR.AC – Access Control   | MFA, Role-based Privileges                       |
-| **NIST CSF**      | DE.CM – Detect/Monitor   | Endpoint Monitoring + Central Logs               |
-| **NIST CSF**      | RS.RP – Response Plan    | Sentinel Alerts, Triage, and Response Plan       |
+| **NIST CSF**      | DE.CM – Detect/Monitor   | Endpoint Monitoring                              |
+
 
 ---
 
