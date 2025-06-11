@@ -135,7 +135,7 @@ Get-CASMailbox -ResultSize Unlimited | Select Name, ImapEnabled, PopEnabled
 - Unpatched vulnerabilities in outdated software  
 - Increased attack surface for lateral movement or privilege escalation  
 
-##@ ✅ Combined Solution Strategy
+### ✅ Combined Solution Strategy
 
 To fully control software installations, **two layers of protection are required**:
 
