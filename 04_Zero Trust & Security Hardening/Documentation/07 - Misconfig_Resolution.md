@@ -139,37 +139,49 @@ Get-CASMailbox -ResultSize Unlimited | Select Name, ImapEnabled, PopEnabled
 
 ✅ Solution
 
-1. Go to **Microsoft Intune Admin Center** → **Devices** → **Configuration profiles**
-2. Click **+ Create profile**
-   - Platform: *Windows 10 and later*
-   - Profile type: *Settings catalog*
-3. Name the profile: `Restrict Software Installations`
+## Specific Settings Configuration in Intune
 
-4. In the **Settings picker**, add:
+To configure restrictions on software installation and execution, follow these steps using Intune profiles:
 
-   - **Windows Components > Windows Installer > Turn off Windows Installer** → `Always`
-   - **User Configuration > Administrative Templates > Start Menu and Taskbar > Remove Run menu from Start Menu** → `Enabled` *(optional hardening)*
-   - **System > Don't run specified Windows applications** → Add known setup files: `chrome_installer.exe`, `ZoomInstaller.exe`, etc. *(limited protection)*
+---
 
-5. Assign to **pilot group** of devices.
+### 1. Turn off Windows Installer (Always)
 
-📌 *This limits .msi installations, and restricts common setup tools. However, it does not fully block all .exe files — for that, use AppLocker or WDAC.*
+- Search in the category:  
+  `Windows Components > Windows Installer > Turn off Windows Installer`  
+- Set this setting to **Enabled**  
+- Choose the **Always** option
 
+---
 
-1. Go to **Microsoft Intune Admin Center** → **Devices** → **Configuration**
-2. Click **+ Create profile**
-   - Platform: *Windows 10 and later*
-   - Profile type: *Settings catalog*
-3. Name the profile (e.g., `Restrict Software Installation`)
-4. In **Settings picker**, search for:
-   - `Device Installation` → Enable: `Prevent installation of devices not described by other policy settings`
-   - `Store Apps` → Allow: `Only allow Microsoft Store apps` (optional but strong restriction)
-   - `Cloud Experience` → Disable: `User can install apps from anywhere`
-5. Assign the policy to a **pilot group** (e.g., security test devices or non-admin users)
-6. Review and deploy.
+### 2. Remove Run menu from Start Menu
 
-📌 **Note:** Avoid deploying to all users without testing — you may break legitimate business apps.
+- This setting is **not available** in the Settings Catalog profile type.
+- To configure it, create a **Device configuration profile** using the **Administrative Templates** profile type.
+- Navigate to:  
+  `Administrative Templates > Start Menu and Taskbar > Remove Run menu from Start Menu`  
+- Set this policy to **Enabled**
 
+---
+
+### 3. Don't run specified Windows applications
+
+- Search in the category:  
+  `System > Don't run specified Windows applications`  
+- Set this setting to **Enabled**  
+- Click **Show** to add the names of blocked executables, for example:  
+  - `chrome_installer.exe`  
+  - `ZoomInstaller.exe`  
+  - etc.
+
+---
+
+This configuration allows you to:  
+- Block installations via Windows Installer (.msi)  
+- Remove the "Run" menu from the Start Menu to limit quick access to installation tools  
+- Explicitly block common setup executables from running
+
+For more comprehensive control over allowed applications, it is recommended to also use AppLocker or WDAC.
 ---
 
 ### 2. AppLocker – Application Whitelisting
