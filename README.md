@@ -20,12 +20,12 @@ This project simulates the end-to-end deployment of a secure, hybrid-cloud IT in
 
 ## 🎯 Global Objectives
 
-* Deploy a hybrid-cloud IT environment securely
-* Apply Microsoft modern management tools
-* Implement Zero Trust architecture principles
-* Protect identities, endpoints, and data
-* Respond to threats and monitor security posture
-* Simulate real-world IT support, phishing, and recovery scenarios
+1. Establish and secure on-premises Active Directory infrastructure  
+2. Manage users, groups, and access control efficiently  
+3. Deploy Office 365 and automate IT support tasks  
+4. Enable hybrid device management with Azure AD and Intune  
+5. Implement Zero Trust security with MFA and endpoint hardening  
+
 
 ---
 
