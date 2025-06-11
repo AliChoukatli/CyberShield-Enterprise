@@ -1,6 +1,6 @@
 ## ✅ - **Troubleshoot Network Connectivity**
 
-  ## 📌 Test 1 – Ping
+  ## 📌 Ping
 
 #### 🎯 *Objective : Verify basic network connectivity by pinging the default gateway and the domain controller (DC).*
 
@@ -35,7 +35,7 @@ If the ping fails:
   ```bash
   ipconfig
 --- 
-## 📌 Test 2 – IP Configuration
+## 📌 - *IP Configuration**
 
 ```bash
 ipconfig /all
@@ -44,7 +44,7 @@ ipconfig /all
 
 ---
 
-## ✅ - **Inspect Network Adapter Status**  
+## 📌 - **Inspect Network Adapter Status**  
 
 #### 🎯 Objective: *Verify if the network adapter is functioning properly.*
 
