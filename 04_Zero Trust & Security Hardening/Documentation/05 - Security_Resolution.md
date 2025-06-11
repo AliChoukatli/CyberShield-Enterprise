@@ -258,8 +258,6 @@ Endpoint security → Account protection → + Create policy
 
 ![Local_Admin_intune_policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Local_Admin_intune_policy.png)
 
----
-
 #### 3.3 – Verify on a Device
 
 1. Restart the targeted machine.
@@ -268,6 +266,6 @@ Endpoint security → Account protection → + Create policy
 ```yaml
 Computer Management → Local Users and Groups → Groups → Administrators
 ```
-
+![Local_Ali](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Local_Ali.png)
 
 
