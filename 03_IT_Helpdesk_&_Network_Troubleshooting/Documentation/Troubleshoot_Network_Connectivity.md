@@ -1,4 +1,4 @@
-## ✅ 3.4 Troubleshoot Network Connectivity
+## ✅ - **Troubleshoot Network Connectivity**
 
   ## 📌 Test 1 – Ping
 
@@ -44,7 +44,7 @@ ipconfig /all
 
 ---
 
-## ✅ 3.5 **Inspect Network Adapter Status**  
+## ✅ - **Inspect Network Adapter Status**  
 
 #### 🎯 Objective: *Verify if the network adapter is functioning properly.*
 
