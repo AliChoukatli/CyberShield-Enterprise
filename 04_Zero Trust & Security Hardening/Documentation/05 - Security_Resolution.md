@@ -125,7 +125,7 @@ Get-CASMailbox -ResultSize Unlimited | Select Name, ImapEnabled, PopEnabled
 ![Imap_POP_Disabled](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/imap_pop_disabled.png)
 
 
-## 🔴 2. No Control Over Software Installations
+## 🔴 2. Turn off Software Installations
 
 📍 **Goal:** Prevent users from installing unauthorized software (.msi or .exe)
 
@@ -213,3 +213,61 @@ You will see four rule collections:
 - After testing, switch enforcement mode to **Enforce** to block unauthorized apps.
 
 ---
+
+## 🔴 3. Restrict Local Administrator Rights on Azure AD Joined Devices
+
+### 🚨 Problem
+
+By default, when a device is **Azure AD Joined**, the first user who signs in becomes a **local administrator**.
+
+### 🎯 Goal
+
+Prevent all Azure AD users from automatically becoming local administrators on Windows devices. Only allow members of a specific Azure AD group (e.g., "Local Admins") to have local admin rights.
+
+### ✅ Solution
+
+#### 3.1– Create an Azure AD Group for Local Admins
+
+1. Go to **Microsoft Entra Admin Center**.
+2. Create a **Security Group**:
+   - **Name**: `Local Admins`
+   - **Description**: Users allowed to be local administrators on endpoints
+3. Add the appropriate users (e.g., IT staff or specific roles).
+
+---
+
+#### 3.2 – Configure Intune Policy
+
+1. Open **Microsoft Intune Admin Center**.
+2. Navigate to:
+   
+```yaml
+Endpoint security → Account protection → + Create policy
+```
+
+3. Configure the policy:
+   - **Platform**: Windows 10 and later
+   - **Profile**: Local user group membership
+
+4. Set up the configuration:
+
+   - **Group**: `Administrators`
+   - **Action**: `Replace`  
+     *(⚠️ This removes all existing local admins except those defined below.)*
+   - **Members**: Select your Azure AD group `Local Admins`
+
+5. Assign this policy to the targeted group of devices (e.g., all corporate Windows endpoints).
+
+---
+
+#### 3.3 – Verify on a Device
+
+1. Restart the targeted machine.
+2. Open:
+   
+```yaml
+Computer Management → Local Users and Groups → Groups → Administrators
+```
+
+
+
