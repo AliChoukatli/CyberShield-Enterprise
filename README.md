@@ -86,7 +86,7 @@ All policies and technologies are aligned with Zero Trust security model.
 | Firewall Configuration        | ❌ Default rules      | ✅ Custom rules via GPO & Intune             |
 | Privileged Access Control     | ❌ Admin used daily   | ✅ User accounts + Role-based Admins         |
 | Defender for Endpoint         | ❌ Not deployed       | ✅ Cloud or GPO onboarding + central console |
-| Exposure Level                | ⚠️ High (pre-attack) | ✅ Mitigated via Defender                     |
+| Exposure Level                | ⚠️ High (pre-attack)  | ✅ Mitigated via Intune & GPO & PowerShell    |
 
 ---
 
