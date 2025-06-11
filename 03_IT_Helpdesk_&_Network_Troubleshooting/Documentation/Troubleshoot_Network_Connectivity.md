@@ -35,7 +35,7 @@ If the ping fails:
   ```bash
   ipconfig
 --- 
-## 📌 - *IP Configuration**
+## 📌 - **IP Configuration**
 
 ```bash
 ipconfig /all
