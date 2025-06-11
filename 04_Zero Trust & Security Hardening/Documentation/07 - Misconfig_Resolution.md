@@ -182,15 +182,7 @@ To fully control software installations, **two layers of protection are required
 4. Configure Rule Collections
 
 You will see four rule collections:
-
-- Executable Rules
-- Windows Installer Rules
-- Script Rules
-- Packaged app Rules
-
 - Right-click a rule collection (e.g., Executable Rules) → **Create New Rule...**
-
-
 
 5. To block or allow specific apps:
   - Use the wizard to select:
