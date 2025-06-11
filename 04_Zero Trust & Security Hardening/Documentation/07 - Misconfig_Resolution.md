@@ -168,55 +168,64 @@ To fully control software installations, **two layers of protection are required
 
 ---
 
-## 🚫 2. Block `.exe` Installers with AppLocker
+## 3. Block Specific Installers and Applications with AppLocker (Recommended)
 
-Use AppLocker to block `.exe` files like `chrome_installer.exe`, `ZoomInstaller.exe`, etc.
-
-### 📋 Prerequisites:
+### Prerequisites
 
 - Devices must run **Windows 10/11 Enterprise or Education**
-- **Application Identity** service must be running
+- The **Application Identity service** must be running on target devices (enabled by default with AppLocker)
 
-### 🛠️ Steps to Deploy via Intune:
+### Steps to Deploy AppLocker via Intune
 
-- Go to: `Intune Admin Center → Endpoint security → Attack surface reduction → + Create Policy`
-- **Platform:** Windows 10 and later  
-- **Profile:** AppLocker (Windows 10 and later)
+1. Open **Microsoft Intune Admin Center**
 
-### Define Rules:
+2. Go to:  
+   **Devices > Configuration profiles > Create profile**
 
-**Executable Rules**  
-- Deny specific `.exe` files by name:
-  - `chrome_installer.exe`
-  - `ZoomInstaller.exe`
-- Allow rules for safe locations:
-  - `C:\Program Files\Microsoft Office\`
-  - `C:\Program Files (x86)\YourCompanyApp\`
+3. Set:  
+   - Platform: **Windows 10 and later**  
+   - Profile type: **Templates**  
+   - Template name: **Endpoint protection**
 
-**Windows Installer Rules**  
-- Deny `.msi` from unapproved sources
+4. In Configuration settings, locate the **AppLocker** section, and configure the following:
 
-**Script Rules**  
-- Block `.ps1`, `.vbs`, etc., unless signed
+   - **Executable rules**:  
+     - Create deny rules for specific installer executables you want to block, e.g.:  
+       - `chrome_installer.exe`  
+       - `ZoomInstaller.exe`
 
-- Set default action: **Deny all unless explicitly allowed**
+     - Create allow rules to whitelist approved app paths, e.g.:  
+       - `C:\Program Files\Microsoft Office\`  
+       - `C:\Program Files (x86)\YourCompanyApp\`
+
+   - **Windows Installer rules**:  
+     - Deny `.msi` files from unknown or unapproved sources
+
+   - **Script rules**:  
+     - Block PowerShell (`.ps1`), VBScript (`.vbs`), and other scripts unless they are signed and trusted
+
+5. Set the default behavior to **Deny all** (only allow explicitly whitelisted apps)
+
+6. Assign this policy to a pilot device group (e.g., test users or non-admin devices)
+
+### Testing and Enforcement
+
+- Start in **Audit mode** to monitor which apps would be blocked without enforcement
+
+- Monitor policy effectiveness via:  
+  **Intune > Reports > AppLocker policy status**
+
+- Once validated, switch the policy to **Enforce mode** to actively block unauthorized software
 
 ---
 
-### 📦 Deployment & Monitoring
+## Notes
 
-- Assign to **pilot group** (e.g., test devices)
-- Start in **Audit Mode**
-- Monitor:  
-  - `Intune > Reports > AppLocker policy status`  
-  - On devices: Event Viewer → `AppLocker > EXE and DLL`
+- Combining **Turn off Windows Installer** and **AppLocker** provides strong control over software installation and execution.
 
-- Once validated, switch to **Enforce Mode**
+- AppLocker gives you fine-grained control over `.exe`, `.msi`, and script executions beyond basic MSI blocking.
 
----
-
-✅ **Result:**  
-This dual-layer setup ensures users cannot install or run unauthorized software, either via Windows Installer or standalone `.exe` installers.
+- Always test policies on a pilot group to avoid disrupting legitimate business applications.
 
 ---
 
