@@ -1,4 +1,4 @@
-# 03_Assign_Permissions.md
+# Assign Permissions
 
 # 🎯 Objectif  
 Configurer les permissions NTFS et les droits de partage sur le dossier IT pour assurer une sécurité fine et une séparation des accès selon les groupes Active Directory.
