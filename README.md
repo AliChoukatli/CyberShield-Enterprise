@@ -56,11 +56,11 @@ The project integrates Microsoft on-premises and cloud services to manage and pr
 
 | Phase                                                             | Description                                                                                                                                                                                |
 | ------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ✅ **Phase 1 – Domain_Setup_&_Workstation_Join**                 | Prepares servers and workstations, domain controller installation, workstation domain join, and Hyper-V environment setup.                                                                 |
-| ✅ **Phase 2 – AD_Integration_User_Management**                  | OU creation, user & group management, NTFS permission setup, RDP access policy, and user lifecycle simulation.                                                                             |
-| ✅ **Phase 3 – IT_Helpdesk_&_Network_Troubleshooting**           | Office 365 deployment via ODT and PowerShell, troubleshooting scenarios, user profile repairs, and automation scripts for support tasks.                                                    |
-| ✅ **Phase 4 – Azure AD Sync & Endpoint Security**               | Hybrid join of devices, Intune management, application of security & compliance policies, Windows Defender Firewall, BitLocker encryption, and Microsoft Defender for Endpoint onboarding. |
-| ✅ **Phase 5 – Zero_Trust_&_Security_Hardening**                 | MFA (WHfB, Authenticator App, TAP, FIDO2), integration with Conditional Access, Zero Trust configuration, Misconfig & Resolution & EXposure Security Analysis                               |
+| ✅ **1 – Domain_Setup_&_Workstation_Join**                 | Prepares servers and workstations, domain controller installation, workstation domain join, and Hyper-V environment setup.                                                                 |
+| ✅ **2 – AD_Integration_User_Management**                  | OU creation, user & group management, NTFS permission setup, RDP access policy, and user lifecycle simulation.                                                                             |
+| ✅ **3 – IT_Helpdesk_&_Network_Troubleshooting**           | Office 365 deployment via ODT and PowerShell, troubleshooting scenarios, user profile repairs, and automation scripts for support tasks.                                                    |
+| ✅ **4 – Azure AD Sync & Endpoint Security**               | Hybrid join of devices, Intune management, application of security & compliance policies, Windows Defender Firewall, BitLocker encryption, and Microsoft Defender for Endpoint onboarding. |
+| ✅ **5 – Zero_Trust_&_Security_Hardening**                 | MFA (WHfB, Authenticator App, TAP, FIDO2), integration with Conditional Access, Zero Trust configuration, Misconfig & Resolution & EXposure Security Analysis                               |
 
 ---
 
