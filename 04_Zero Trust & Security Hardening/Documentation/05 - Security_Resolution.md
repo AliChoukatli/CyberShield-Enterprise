@@ -232,7 +232,8 @@ Prevent all Azure AD users from automatically becoming local administrators on W
 2. Create a **Security Group**:
    - **Name**: `Local Admins`
    - **Description**: Users allowed to be local administrators on endpoints
-3. Add the appropriate users (e.g., IT staff or specific roles).
+   - Membership Type: Assigned 
+3. Add the appropriate users (e.g., Ali).
 
 ---
 
