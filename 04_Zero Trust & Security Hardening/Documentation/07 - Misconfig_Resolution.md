@@ -159,7 +159,7 @@ To fully control software installations, **two layers of protection are required
   - `Administrative Templates > Start Menu and Taskbar > Remove Run menu from Start Menu`  
     → Set to **Enabled** (optional hardening)
 
-    ![msi_policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Restr_Softw_policy_intune.png)
+  ![msi_policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Restr_Softw_policy_intune.png)
 
 ---
 
