@@ -129,13 +129,13 @@ Get-CASMailbox -ResultSize Unlimited | Select Name, ImapEnabled, PopEnabled
 
 📍 **Goal:** Prevent users from installing unauthorized software (.msi or .exe)
 
-### ⚠️ Risk
+⚠️ Risk
 
 - Malware and ransomware infections via untrusted applications  
 - Unpatched vulnerabilities in outdated software  
 - Increased attack surface for lateral movement or privilege escalation  
 
-### ✅ Combined Solution Strategy
+✅ Combined Solution Strategy
 
 To fully control software installations, **two layers of protection are required**:
 
@@ -146,7 +146,7 @@ To fully control software installations, **two layers of protection are required
 
 ---
 
-#@## 🔒 1. Block Windows Installer with Intune (.msi)
+### 🔒 1. Block Windows Installer with Intune (.msi)
 
 - Go to: `Intune Admin Center → Devices → Configuration profiles → + Create profile`
 - **Platform:** Windows 10 and later  
