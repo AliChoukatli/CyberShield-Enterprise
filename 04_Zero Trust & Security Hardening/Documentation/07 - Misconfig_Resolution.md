@@ -1,6 +1,6 @@
 # 🔴  Security Misconfiguration Identified & Resolved
 
-🔴 1. Disable Legacy Protocols (IMAP, POP3, SMTP)
+## 🔴 1. Disable Legacy Protocols (IMAP, POP3, SMTP)
 
  Impact
  
@@ -129,35 +129,28 @@ Get-CASMailbox -ResultSize Unlimited | Select Name, ImapEnabled, PopEnabled
 
 📍 **Goal:** Prevent users from installing unauthorized software (.msi or .exe)
 
----
-
 ### ⚠️ Risk
 
 - Malware and ransomware infections via untrusted applications  
 - Unpatched vulnerabilities in outdated software  
 - Increased attack surface for lateral movement or privilege escalation  
 
----
-
-## ✅ Combined Solution Strategy
+##@ ✅ Combined Solution Strategy
 
 To fully control software installations, **two layers of protection are required**:
 
 1. 🔒 **Block Windows Installer (.msi)** — via Intune Settings Catalog  
-2. 🔒 **Block unauthorized `.exe` installers** — via AppLocker rules in Intune  
+2. 🔒 **Block unauthorized `.exe` installers** — via AppLocker rules with GPO  
 
 > ❗ **Note:** Using only one method leaves gaps — `.msi` blocking doesn't stop `.exe` files like `chrome_installer.exe`. Likewise, AppLocker alone won't prevent Windows Installer usage. **Both are needed for robust protection.**
 
 ---
 
-### 🔒 1. Block Windows Installer (.msi)
-
-**Platform:** Windows 10 and later  
-**Profile type:** Settings Catalog
-
-### Configuration Steps:
+#@## 🔒 1. Block Windows Installer with Intune (.msi)
 
 - Go to: `Intune Admin Center → Devices → Configuration profiles → + Create profile`
+- **Platform:** Windows 10 and later  
+  **Profile type:** Settings Catalog
 - In the Settings picker, search:
   - `Windows Components > Windows Installer > Turn off Windows Installer`  
     → Set to **Enabled**  
@@ -168,23 +161,23 @@ To fully control software installations, **two layers of protection are required
 
 ---
 
-### 🔒 2.  Block Specific Installers and Applications with AppLocker (Recommended)
+#### 🔒 2.  Block Specific Installers and Applications with AppLocker (Recommended)
 
-  ### 1. Open Group Policy Management Console
+1. Open Group Policy Management Console
 
 - Press `Win + R`, type `gpmc.msc`, and press Enter.
 
-### 2. Create or Edit a GPO
+2. Create or Edit a GPO
 
 - Right-click your target Organizational Unit (OU) or domain.
 - Select **Create a GPO in this domain, and Link it here...** or edit an existing GPO.
 
-### 3. Navigate to AppLocker Settings
+3. Navigate to AppLocker Settings
 
 - Go to:  
   `Computer Configuration > Policies > Windows Settings > Security Settings > Application Control Policies > AppLocker`
 
-### 4. Configure Rule Collections
+4. Configure Rule Collections
 
 You will see four rule collections:
 
@@ -193,12 +186,12 @@ You will see four rule collections:
 - Script Rules
 - Packaged app Rules
 
-### 5. Create Default Rules (Recommended)
+5. Create Default Rules (Recommended)
 
 - Right-click each rule collection and select **Create Default Rules**.  
   These allow all files in `Program Files` and `Windows` folders by default.
 
-### 6. Create Custom Rules
+6. Create Custom Rules
 
 - To block or allow specific apps:
   - Right-click a rule collection (e.g., Executable Rules) → **Create New Rule...**
@@ -207,12 +200,12 @@ You will see four rule collections:
     - **Conditions**: Publisher, Path, or File Hash
   - For example, to block `chrome_installer.exe`, create a Deny rule based on the file path or hash.
 
-### 7. Set Enforcement Mode
+7. Set Enforcement Mode
 
 - Right-click **AppLocker** in the left pane → **Properties**.
 - Choose to enforce rules or audit only for each rule collection.
 
-### 8. Start Application Identity Service on Clients
+8. Start Application Identity Service on Clients
 
 - On each client machine, run `services.msc`.
 - Find **Application Identity** service.
