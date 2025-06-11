@@ -1,4 +1,4 @@
-## 🔴 Step 8 – Windows 11 Client Machines
+## 🔴 Step 1 – Windows 11 Client Machines
 
 **🎯 Objective**: Install and prepare Windows 11 machines for later domain joining.
 
@@ -39,7 +39,7 @@
 
 ---
 
-## 🔴 Step 9 - Domain Join – Windows 11 Workstation
+## 🔴 Step 2 - Domain Join – Windows 11 Workstation
 
 **Objective:** Integrate the Windows 11 workstation into the `corp.aclab.tech` domain to enable centralized management via Active Directory.
 
