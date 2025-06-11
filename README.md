@@ -47,7 +47,7 @@ This project simulates the end-to-end deployment of a secure, hybrid-cloud IT in
 
 ## 📐 Architecture
 
-![Architecture](https://github.com/AliChoukatli/SecureIT-for-SMB/blob/main/Architecture/Architecture.png)
+![Architecture](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Architecture.jpg)
 
 The project integrates Microsoft on-premises and cloud services to manage and protect user identities, devices, and data while ensuring full compliance with recognized standards.
 
