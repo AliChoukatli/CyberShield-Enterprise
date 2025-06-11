@@ -55,12 +55,12 @@ The project integrates Microsoft on-premises and cloud services to manage and pr
 
 ## 🚩 Project Phases Overview
 
-| Phase                                                           | Description                                                                                                                                                                                |
-| --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Phase                                                            | Description                                                                                                                                                                                |
+| ------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | ✅ **Phase 1 – Installation & Domain Join**                      | Prepares servers and workstations, domain controller installation, workstation domain join, and Hyper-V environment setup.                                                                 |
 | ✅ **Phase 2 – Active Directory Integration**                    | OU creation, user & group management, NTFS permission setup, RDP access policy, and user lifecycle simulation.                                                                             |
-| ✅ **Phase 3 – Office 365 Deployment**                           | Automated deployment of Microsoft 365 Apps via Office Deployment Tool (ODT) and PowerShell scripting with removal of existing Office suites.                                               |
-| ✅ **Phase 4 – Azure AD Sync & Endpoint Security**               | Hybrid join of devices, Intune management, application of security & compliance policies, Windows Defender Firewall, BitLocker encryption, and Microsoft Defender for Endpoint onboarding. |
+| ✅ Phase 3 – Helpdesk & Support Operations                         |Office 365 deployment via ODT and PowerShell, troubleshooting scenarios, user profile repairs, and automation scripts for support tasks.                                                    |
+| ✅ **Phase 4 – Azure AD Sync & Endpoint Security**                 | Hybrid join of devices, Intune management, application of security & compliance policies, Windows Defender Firewall, BitLocker encryption, and Microsoft Defender for Endpoint onboarding. |
 | ✅ **Phase 5 – Multi-Factor Authentication & Identity Security** | Full MFA strategy implementation (WHfB, Authenticator App, TAP, FIDO2), integration with Conditional Access, Zero Trust configuration, and risk-based access.                              |
 | ✅ **Phase 6 – Security Exposure Analysis & Risk Management**    | EDR-based detection of high exposure level, remediation actions using Defender, LSASS protection, exploit protection, PUA blocking, and accepted risk documentation.                       |
 
