@@ -159,6 +159,8 @@ To fully control software installations, **two layers of protection are required
   - `Administrative Templates > Start Menu and Taskbar > Remove Run menu from Start Menu`  
     → Set to **Enabled** (optional hardening)
 
+ ![msi_policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Restr_Softw_policy_intune.png)
+
 ---
 
 ### 🔒 2.  Block Specific Installers and Applications with GPO (Recommended)
@@ -186,24 +188,17 @@ You will see four rule collections:
 - Script Rules
 - Packaged app Rules
 
-5. Create Default Rules (Recommended)
+- Right-click a rule collection (e.g., Executable Rules) → **Create New Rule...**
 
-- Right-click each rule collection and select **Create Default Rules**.  
-  These allow all files in `Program Files` and `Windows` folders by default.
 
-6. Create Custom Rules
 
-- To block or allow specific apps:
-  - Right-click a rule collection (e.g., Executable Rules) → **Create New Rule...**
+5. To block or allow specific apps:
   - Use the wizard to select:
-    - **Action**: Allow or Deny
-    - **Conditions**: Publisher, Path, or File Hash
-  - For example, to block `chrome_installer.exe`, create a Deny rule based on the file path or hash.
+    - **Action**: Deny
+    - **Conditions**: Path 
+  - For example, to block `chrome_installer.exe`, create a Deny rule based on the file path (eg: C:\Users\*\Downloads\chrome_installer.exe)
 
-7. Set Enforcement Mode
-
-- Right-click **AppLocker** in the left pane → **Properties**.
-- Choose to enforce rules or audit only for each rule collection.
+![chrome_block_GPO](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/chrome_block_GPO.png)
 
 8. Start Application Identity Service on Clients
 
