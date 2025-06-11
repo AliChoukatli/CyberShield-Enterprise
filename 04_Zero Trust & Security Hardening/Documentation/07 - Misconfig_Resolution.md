@@ -141,10 +141,6 @@ Get-CASMailbox -ResultSize Unlimited | Select Name, ImapEnabled, PopEnabled
 
 ## Specific Settings Configuration in Intune
 
-To configure restrictions on software installation and execution, follow these steps using Intune profiles:
-
----
-
 ### 1. Turn off Windows Installer (Always)
 
 - Search in the category:  
@@ -162,14 +158,68 @@ To configure restrictions on software installation and execution, follow these s
 
 ---
 
-### 3. Don't run specified Windows applications
 
-- Search in the category:  
-  `System > Don't run specified Windows applications`  
-- Set this setting to **Enabled**  
-- Click **Show** to add the names of blocked executables, for example:  
-  - `chrome_installer.exe`  
-  - `ZoomInstaller.exe`  
+🔴 Block Specific Software Installers via AppLocker in Intune
+
+This guide explains how to block specific applications (e.g., `chrome_installer.exe`, `ZoomInstaller.exe`) using **AppLocker** policies deployed through Microsoft Intune.
+
+### 📋 Prerequisites
+- **Application Identity service** must be enabled and running on target devices
+
+### 🛠️ Steps to Deploy AppLocker in Intune
+
+1. **Open Microsoft Intune Admin Center**
+   - Go to:  
+     `Endpoint security` → `Attack surface reduction` → **+ Create Policy**
+
+2. **Configure the Profile**
+   - **Platform:** Windows 10 and later  
+   - **Profile:** AppLocker (Windows 10 and later)
+
+3. **Define AppLocker Rules**
+   - Under **Executable Rules**:
+     - **Deny Rule:** Block specific installers by name  
+       Example:
+       - `chrome_installer.exe`
+       - `ZoomInstaller.exe`
+     - **Allow Rules:** Whitelist only approved paths like:  
+       - `C:\Program Files\Microsoft Office\`
+       - `C:\Program Files (x86)\YourCompanyApp\`
+   - Under **Windows Installer Rules**:
+     - Deny `.msi` execution from unknown sources
+   - Under **Script Rules**:
+     - Block `.ps1`, `.vbs`, etc., unless signed and trusted
+   - Set the **Default behavior** to: **Deny all** (only allow what is explicitly permitted)
+
+4. **Deploy the Policy**
+   - Assign the policy to a **pilot device group** (e.g., test users or non-admin workstations)
+
+5. **Testing Phase**
+   - Start with **Audit Mode** to see which apps would be blocked
+   - Monitor via:  
+     `Intune > Reports > AppLocker policy status`
+
+6. **Enforce the Policy**
+   - Once verified, switch to **Enforce Mode** to actively block execution
+
+---
+
+### 📌 Notes
+
+- AppLocker is powerful but must be tested carefully to avoid breaking legitimate apps.
+- For organizations using **Windows Pro**, AppLocker is not available — consider using **Microsoft Defender Application Control (WDAC)** instead.
+- If you need to block unsigned `.exe` or scripts more broadly, WDAC offers more advanced capabilities.
+
+---
+
+### 🔍 Monitoring & Maintenance
+
+- Check **Event Viewer** on endpoints:  
+  `Applications and Services Logs > Microsoft > Windows > AppLocker`
+- Review policy health in:  
+  `Intune Admin Center > Endpoint security > AppLocker > Reports`
+
+
   - etc.
 
 ---
