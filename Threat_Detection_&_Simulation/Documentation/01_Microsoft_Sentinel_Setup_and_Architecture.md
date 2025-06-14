@@ -4,6 +4,18 @@
 
 Deploy Microsoft Sentinel in your Azure tenant to enable cloud-native SIEM and real-time threat detection.
 
+# 🛰️ Microsoft Sentinel – Setup & Architecture
+
+## 📘 Table des matières
+1. [Présentation de Microsoft Sentinel](#présentation-de-microsoft-sentinel)
+2. [Architecture de Référence](#architecture-de-référence)
+3. [Création du Log Analytics Workspace](#création-du-log-analytics-workspace)
+4. [Activation de Microsoft Sentinel](#activation-de-microsoft-sentinel)
+5. [Gestion des Coûts et Estimations](#gestion-des-coûts-et-estimations)
+6. [Bonnes Pratiques](#bonnes-pratiques)
+7. [Captures d’Écran](#captures-décran)
+
+
 ## 🧰 Prerequisites
 
 - Azure Subscription with appropriate permissions
