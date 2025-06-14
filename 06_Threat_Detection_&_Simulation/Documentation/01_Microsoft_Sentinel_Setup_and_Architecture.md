@@ -10,17 +10,16 @@ Deploy Microsoft Sentinel in your Azure tenant to enable cloud-native SIEM and r
 # 🛰️ Microsoft Sentinel – Implementation Guide
 
 ## 📘 Table of Contents
-1. [Overview of Microsoft Sentinel](#1-overview-of-microsoft-sentinel)
-2. [Reference Architecture](#2-reference-architecture)
-3. [Log Analytics Workspace Setup](#3-log-analytics-workspace-setup)
-4. [Microsoft Sentinel Activation](#4-microsoft-sentinel-activation)
-5. [Data Connectors Configuration](#5-data-connectors-configuration)
+
+1. [Log Analytics Workspace Setup](#3-log-analytics-workspace-setup)
+2. [Microsoft Sentinel Activation](#4-microsoft-sentinel-activation)
+3. [Data Connectors Configuration](#5-data-connectors-configuration)
     - 5.1 [Azure Active Directory](#51-azure-active-directory)
     - 5.2 [Microsoft Defender for Endpoint](#52-microsoft-defender-for-endpoint)
     - 5.3 [Office 365](#53-office-365)
     - 5.4 [Azure Identity Protection (Optional)](#54-azure-identity-protection-optional)
-6. [Cost Management](#6-cost-management)
-7. [Best Practices](#7-best-practices)
+4. [Cost Management](#6-cost-management)
+5. [Best Practices](#7-best-practices)
 
 
 
@@ -31,7 +30,8 @@ Deploy Microsoft Sentinel in your Azure tenant to enable cloud-native SIEM and r
 - Azure AD Global Administrator or Security Admin
 - Microsoft Defender data sources enabled (optional but recommended)
 
-## 🏗️ Step 1 – Create a Log Analytics Workspace
+
+🎯 Log Analytics Workspace Setup
 
 1. Go to the [Azure Portal](https://portal.azure.com).
 2. Search for **"Log Analytics Workspaces"** and click **Create**.
@@ -44,7 +44,7 @@ Deploy Microsoft Sentinel in your Azure tenant to enable cloud-native SIEM and r
 
 ![Log_Analytic](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Log_Analytic_Ov.png)
 
-## 🧠 Step 2 – Enable Microsoft Sentinel
+## 🎯 Microsoft Sentinel Activation
 
 1. In the Azure Portal, search for **"Microsoft Sentinel"**.
 2. Click **+ Add** or **+ Create**.
@@ -52,6 +52,49 @@ Deploy Microsoft Sentinel in your Azure tenant to enable cloud-native SIEM and r
 4. Click **Add Microsoft Sentinel**.
 
 ![Sentinel_OV](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Sentinel_OV.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 6. 💰 Cost Management
+
+- Microsoft Sentinel provides a **30-day free trial**, with up to **10 GB/day** included for both Sentinel and Log Analytics.
+- Additional data is billed by volume. It's important to monitor ingestion rates.
+- Use the **Microsoft Pricing Calculator** to estimate ongoing costs: [Sentinel Pricing](https://azure.microsoft.com/en-us/pricing/details/microsoft-sentinel/)
+- Apply best practices such as:
+  - Enabling only required data connectors
+  - Setting data caps
+  - Choosing appropriate retention periods****
 
 
 
