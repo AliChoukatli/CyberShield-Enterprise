@@ -231,29 +231,5 @@ Onboarding devices to **Microsoft Defender for Endpoint** enables enhanced secur
 
 Verify onboarding by checking the registry and ensuring the **Sense service** is running. Once onboarded, manage and monitor devices via the Microsoft 365 Defender portal.
 
-```mermaid
-flowchart TD
-    A[On-prem Device<br>Windows 11 Pro/Enterprise] --> B[Hybrid Azure AD Join<br>(via Azure AD Connect)]
-    B --> C[Intune Enrollment<br>(Auto-enroll via GPO or MDM)]
-    C --> D[Policy Deployment via Intune]
-    
-    ```
-    D --> D1[BitLocker Enforcement<br>(Device Encryption)]
-    D --> D2[Antivirus Configuration<br>(Microsoft Defender AV)]
-    D --> D3[Firewall Policy<br>(Microsoft Defender Firewall)]
-    D --> D4[Onboarding to MDE<br>(Microsoft Defender for Endpoint)]
-
-    D4 --> E[Device Appears in<br>Microsoft Defender Portal (security.microsoft.com)]
-    E --> F[Exposure Score,<br>Threat Analytics,<br>Vulnerability Management]
-
-    style A fill:#f0f0f0,stroke:#aaa
-    style B fill:#d0e6ff,stroke:#0078d4
-    style C fill:#c1ffd7,stroke:#2e7d32
-    style D fill:#fff4c2,stroke:#fbc02d
-    style D4 fill:#ffe2f0,stroke:#c2185b
-    style E fill:#e1f5fe,stroke:#0288d1
-    style F fill:#f3e5f5,stroke:#8e24aa
-   ```
-
 
 
