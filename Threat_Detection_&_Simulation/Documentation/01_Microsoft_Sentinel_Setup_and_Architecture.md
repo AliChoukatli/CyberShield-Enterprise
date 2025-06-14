@@ -45,25 +45,6 @@ Deploy Microsoft Sentinel in your Azure tenant to enable cloud-native SIEM and r
 
 📸 **Screenshot to take**: The Sentinel "Overview" page after enabling it on your workspace.
 
-## 🔌 Step 3 – Understand the Architecture
-
-Microsoft Sentinel is built on top of Azure Monitor and Log Analytics. Here’s how it fits into the broader security ecosystem:
-
-```mermaid
-flowchart TD
-    A[Azure Resources<br>(AAD, Defender, M365)] --> B[Log Analytics Workspace]
-    B --> C[Microsoft Sentinel]
-    C --> D[Analytics Rules]
-    C --> E[Incidents]
-    C --> F[Automation (Playbooks)]
-```
 
 
-📸 Optional: Take a screenshot of the Data Connectors tab in Sentinel.
 
-📝 Notes
-Sentinel is billed based on ingested data volume in the Log Analytics Workspace.
-
-For lab use, enable 7-day free trial (Azure promotion).
-
-Keep your resource region consistent (e.g., East US) for integration simplicity.
