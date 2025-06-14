@@ -57,19 +57,50 @@ This section explains how to enable and configure key Microsoft Sentinel data co
 #### ✅ Purpose
 Collect logs related to user sign-ins, authentication anomalies, and directory changes.
 
-#### 🛠️ Steps
-1. In Microsoft Sentinel, go to **Data connectors**.
-2. Search for **Azure Active Directory**.
-3. Click **Open connector page**.
-4. Under **Configuration**, enable:
-   - SignInLogs
-   - AuditLogs
-   - NonInteractiveUserSignInLogs (optional)
-   - ServicePrincipalSignInLogs (optional)
-   - ManagedIdentitySignInLogs (optional)
-5. Click **Apply Changes**.
+### 🔹 5.1 Azure Active Directory
 
-> 🧠 **Tip:** Sign-in and audit logs are essential for detecting identity-based threats.
+#### ✅ Purpose
+Collect sign-in and audit logs from Azure AD (now called **Microsoft Entra ID**) to monitor identity-related events such as logins, password resets, role assignments, and suspicious behavior.
+
+---
+
+#### 🛠️ Steps (2025 – Updated via Content Hub)
+
+1. In Microsoft Sentinel, go to **Content Hub**.
+2. Search for **"Microsoft Entra ID"** (new name for Azure Active Directory).
+3. Click on the solution and select **Install**.
+4. Once installed, go to **Data Connectors**.
+5. Locate **Azure Active Directory** and click **Open connector page**.
+6. If not already connected, click **Connect**.
+
+> ℹ️ No additional configuration is needed. By default, this connector collects:
+- `SigninLogs`
+- `AuditLogs`
+
+Additional tables (if available in your tenant):
+- `NonInteractiveUserSignInLogs`
+- `ServicePrincipalSignInLogs`
+- `ManagedIdentitySignInLogs`
+
+---
+
+#### 🧾 Requirements
+- Azure Active Directory is included in all Microsoft 365 tenants.
+- To get advanced sign-in logs, **Microsoft Entra ID P1 or P2** is recommended.
+
+---
+
+#### 🧪 Verification (KQL)
+
+```kql
+SigninLogs | take 10
+AuditLogs | take 10
+```
+
+```kql
+ServicePrincipalSignInLogs | take 10
+ManagedIdentitySignInLogs | take 10
+```
 
 ---
 
@@ -96,39 +127,69 @@ Ingest security alerts and device telemetry from Defender for Endpoint.
 #### ✅ Purpose
 Monitor Exchange Online, SharePoint, and Teams activities (emails, file access, etc.).
 
-#### 🛠️ Prerequisites
-- You must have **Office 365 auditing** enabled.
-- Global Administrator permissions are required during setup.
+### 🛡️ 5.2 Microsoft Defender for Endpoint
 
-#### 🛠️ Steps
-1. In Microsoft Sentinel > **Data connectors**, search for **Office 365**.
-2. Click **Open connector page**.
-3. Under **Configuration**, select the workloads to ingest:
-   - Exchange
-   - SharePoint
-   - Teams
-4. Authorize access via **Connect Office 365 tenant**.
-5. Click **Apply Changes**.
+#### ✅ Purpose
+Ingest security alerts and device telemetry from Defender for Endpoint (MDE) to Microsoft Sentinel.
 
-> 🧠 This connector is valuable for detecting suspicious email activity or data exfiltration via SharePoint.
+---
+
+#### 🛠️ Steps (2025 – Updated via Content Hub)
+
+1. In Microsoft Sentinel, go to **Content Hub**.
+2. Search for **"Microsoft 365 Defender"**.
+3. Select the solution package and click **Install**.
+4. Follow the prompts and make sure **Microsoft Defender for Endpoint** is selected.
+5. Once installed, go to **Data Connectors**.
+6. Find **Microsoft Defender for Endpoint** in the list and click **Open connector page**.
+7. If not already connected, click **Connect**.
+
+---
+
+#### ✅ Data Flow
+Once connected, you will start receiving:
+- **SecurityAlert** tables (alerts raised in MDE)
+- **DeviceEvents**, **DeviceInfo** (if using advanced hunting)
+
+> ℹ️ Ensure that MDE is properly onboarded and licensed in your environment.
 
 ---
 
 ### 🔹 3.4 Azure Identity Protection (Optional)
 
 #### ✅ Purpose
-Detect and ingest risky sign-ins, risky users, and identity compromise data.
-
-#### 🛠️ Prerequisites
-- Requires **Azure AD Premium P2** licensing.
-
-#### 🛠️ Steps
-1. In Sentinel > **Data connectors**, search for **Azure Identity Protection**.
-2. Click **Open connector page**.
-3. Click **Connect** (no extra config needed).
-4. Data will start flowing from the Identity Protection logs.
+Ingest risk detection signals like:
+- Risky users
+- Risky sign-ins
+- Identity compromise attempts
 
 ---
+
+#### 🛠️ Steps (2025 – Updated via Content Hub)
+
+1. In Microsoft Sentinel, go to **Content Hub**.
+2. Search for **"Microsoft Entra ID Protection"** (formerly Azure Identity Protection).
+3. Click the solution and select **Install**.
+4. Once installed, go to **Data Connectors**.
+5. Locate **Azure Identity Protection** and click **Open connector page**.
+6. Click **Connect**.
+
+---
+
+#### 🧾 Requirements
+- Requires **Azure AD Premium P2** license.
+- Connects to tables: `RiskyUsers`, `RiskySignins`, `IdentityInfo`.
+
+---
+
+#### 🧪 Verification (KQL)
+```kql
+RiskyUsers | take 10
+RiskySignIns | take 10
+```
+
+
+
 
 ### ✅ Final Check – Verifying Ingested Data
 
@@ -143,13 +204,6 @@ OfficeActivity | take 10
 ```
 
 ✅ If results appear, your data connector is working.
-
-
-
-
-
-
-
 
 
 
