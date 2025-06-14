@@ -26,7 +26,7 @@ Deploy Microsoft Sentinel in your Azure tenant to enable cloud-native SIEM and r
 - Microsoft Defender data sources enabled (optional but recommended)
 
 
-## 🎯 Log Analytics Workspace Setup
+## 🎯 01 - Log Analytics Workspace Setup
 
 1. Go to the [Azure Portal](https://portal.azure.com).
 2. Search for **"Log Analytics Workspaces"** and click **Create**.
@@ -39,7 +39,7 @@ Deploy Microsoft Sentinel in your Azure tenant to enable cloud-native SIEM and r
 
 ![Log_Analytic](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Log_Analytic_Ov.png)
 
-## 🎯 Microsoft Sentinel Activation
+## 🎯 02 - Microsoft Sentinel Activation
 
 1. In the Azure Portal, search for **"Microsoft Sentinel"**.
 2. Click **+ Add** or **+ Create**.
@@ -48,6 +48,8 @@ Deploy Microsoft Sentinel in your Azure tenant to enable cloud-native SIEM and r
 
 ![Sentinel_OV](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Sentinel_OV.png)
 
+
+## 🎯 03 - Data Connectors Configuration
 
 
 
