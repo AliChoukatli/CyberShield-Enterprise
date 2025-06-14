@@ -1,12 +1,8 @@
+# 📊  Microsoft Sentinel – Setup & Architecture
 
-# 📊 Microsoft Sentinel Setup and Architecture
-
-## 🎯 Objective
-
+## 🎯 Objective:
 Deploy Microsoft Sentinel in your Azure tenant to enable cloud-native SIEM and real-time threat detection.
-
-# 🛰️ Microsoft Sentinel – Setup & Architecture
-
+ 
 
 ## 📘 Table of Contents
 
