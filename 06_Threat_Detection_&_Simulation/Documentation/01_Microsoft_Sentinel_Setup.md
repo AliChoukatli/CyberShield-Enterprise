@@ -52,49 +52,71 @@ Deploy Microsoft Sentinel in your Azure tenant to enable cloud-native SIEM and r
 
 This section explains how to enable and configure key Microsoft Sentinel data connectors to ingest logs from critical Microsoft services such as Azure AD, Defender for Endpoint, and Office 365.
 
-### 🔹 3.1 Azure Active Directory
+# 🔹 3.1 Azure Active Directory (Microsoft Entra ID)
 
-#### ✅ Purpose
-Collect logs related to user sign-ins, authentication anomalies, and directory changes.
+## ✅ Purpose
 
-#### 🛠️ Steps (2025 – Updated via Content Hub)
+Enable Microsoft Sentinel to collect logs related to:
+- User sign-ins
+- Authentication anomalies
+- Directory changes
 
-1. In Microsoft Sentinel, go to **Content Management** -> **Content Hub**.
-2. Search for **"Microsoft Entra ID"** (new name for Azure Active Directory).
-3. Click on the solution and select **Install**.
-4. Once installed, go to **Data Connectors**.
-5. Locate **Azure Active Directory** and click **Open connector page**.
-6. If not already connected, click **Connect**.
-
-> ℹ️ No additional configuration is needed. By default, this connector collects:
-- `SigninLogs`
-- `AuditLogs`
-
-Additional tables (if available in your tenant):
-- `NonInteractiveUserSignInLogs`
-- `ServicePrincipalSignInLogs`
-- `ManagedIdentitySignInLogs`
+This connector is essential to detect identity-based threats and monitor access patterns across your cloud environment.
 
 ---
 
-#### 🧾 Requirements
-- Azure Active Directory is included in all Microsoft 365 tenants.
-- To get advanced sign-in logs, **Microsoft Entra ID P1 or P2** is recommended.
+## 🛠️ Steps – 2025 (Updated via Content Hub)
+
+### 1. Access Content Hub
+- Go to **Microsoft Sentinel** in the Azure Portal.
+- In the left menu, select **Content Management** → **Content Hub**.
+
+📸 `content_hub_azure_ad_search.png`
 
 ---
 
-#### 🧪 Verification (KQL)
+### 2. Install the Microsoft Entra ID Solution
+- Use the search bar and type **"Microsoft Entra ID"** (formerly Azure AD).
+- Click on the result, then select **Install** or **Create**.
+
+📸 `azure_ad_solution_install.png`
+
+---
+
+### 3. Verify the Connector in Data Connectors
+- Go back to **Microsoft Sentinel > Data connectors**.
+- Locate **Azure Active Directory** in the list.
+- Click on it, then click **Open connector page**.
+
+📸 `data_connector_list_azure_ad.png`
+
+---
+
+### 4. Confirm Log Collection
+If not already connected:
+- Click **Connect**
+- Sentinel will automatically collect:
+
+| Table Name                        | Description                                 |
+|----------------------------------|---------------------------------------------|
+| `SigninLogs`                     | All interactive sign-ins                    |
+| `AuditLogs`                      | Directory-level changes and activities      |
+| `NonInteractiveUserSignInLogs`  | Token refresh, silent logins (optional)     |
+| `ServicePrincipalSignInLogs`    | App identity logins (optional)              |
+| `ManagedIdentitySignInLogs`     | Azure resource identity logins (optional)   |
+
+📸 `azure_ad_connector_page.png`
+
+---
+
+## ✅ Optional: Verify Log Ingestion with KQL
+
+Go to **Logs > New Query** and run:
 
 ```kql
 SigninLogs | take 10
 AuditLogs | take 10
 ```
-
-```kql
-ServicePrincipalSignInLogs | take 10
-ManagedIdentitySignInLogs | take 10
-```
-
 ---
 
 ### 🔹 3.2 Microsoft Defender for Endpoint
