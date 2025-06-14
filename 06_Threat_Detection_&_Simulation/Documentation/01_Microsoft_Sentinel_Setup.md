@@ -59,7 +59,7 @@ Collect logs related to user sign-ins, authentication anomalies, and directory c
 
 #### 🛠️ Steps (2025 – Updated via Content Hub)
 
-1. In Microsoft Sentinel, go to **Content Hub**.
+1. In Microsoft Sentinel, go to **Content Management** -> **Content Hub**.
 2. Search for **"Microsoft Entra ID"** (new name for Azure Active Directory).
 3. Click on the solution and select **Install**.
 4. Once installed, go to **Data Connectors**.
