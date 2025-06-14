@@ -7,14 +7,21 @@ Deploy Microsoft Sentinel in your Azure tenant to enable cloud-native SIEM and r
 
 # 🛰️ Microsoft Sentinel – Setup & Architecture
 
-## 📘 Table des matières
-1. [Présentation de Microsoft Sentinel](#présentation-de-microsoft-sentinel)
-2. [Architecture de Référence](#architecture-de-référence)
-3. [Création du Log Analytics Workspace](#création-du-log-analytics-workspace)
-4. [Activation de Microsoft Sentinel](#activation-de-microsoft-sentinel)
-5. [Gestion des Coûts et Estimations](#gestion-des-coûts-et-estimations)
-6. [Bonnes Pratiques](#bonnes-pratiques)
-7. [Captures d’Écran](#captures-décran)
+# 🛰️ Microsoft Sentinel – Implementation Guide
+
+## 📘 Table of Contents
+1. [Overview of Microsoft Sentinel](#1-overview-of-microsoft-sentinel)
+2. [Reference Architecture](#2-reference-architecture)
+3. [Log Analytics Workspace Setup](#3-log-analytics-workspace-setup)
+4. [Microsoft Sentinel Activation](#4-microsoft-sentinel-activation)
+5. [Data Connectors Configuration](#5-data-connectors-configuration)
+    - 5.1 [Azure Active Directory](#51-azure-active-directory)
+    - 5.2 [Microsoft Defender for Endpoint](#52-microsoft-defender-for-endpoint)
+    - 5.3 [Office 365](#53-office-365)
+    - 5.4 [Azure Identity Protection (Optional)](#54-azure-identity-protection-optional)
+6. [Cost Management](#6-cost-management)
+7. [Best Practices](#7-best-practices)
+
 
 
 ## 🧰 Prerequisites
