@@ -57,13 +57,6 @@ This section explains how to enable and configure key Microsoft Sentinel data co
 #### ✅ Purpose
 Collect logs related to user sign-ins, authentication anomalies, and directory changes.
 
-### 🔹 5.1 Azure Active Directory
-
-#### ✅ Purpose
-Collect sign-in and audit logs from Azure AD (now called **Microsoft Entra ID**) to monitor identity-related events such as logins, password resets, role assignments, and suspicious behavior.
-
----
-
 #### 🛠️ Steps (2025 – Updated via Content Hub)
 
 1. In Microsoft Sentinel, go to **Content Hub**.
@@ -107,32 +100,7 @@ ManagedIdentitySignInLogs | take 10
 ### 🔹 3.2 Microsoft Defender for Endpoint
 
 #### ✅ Purpose
-Ingest security alerts and device telemetry from Defender for Endpoint.
-
-#### 🛠️ Prerequisites
-- Defender for Endpoint must already be deployed and devices onboarded.
-
-#### 🛠️ Steps
-1. In Microsoft Sentinel > **Data connectors**, search for **Microsoft Defender for Endpoint**.
-2. Click **Open connector page**.
-3. Click **Connect**.
-4. No further configuration is needed if Defender is active in your tenant.
-
-> 🔍 Sentinel will automatically begin collecting alerts from Defender for Endpoint.
-
----
-
-### 🔹 3.3 Office 365
-
-#### ✅ Purpose
-Monitor Exchange Online, SharePoint, and Teams activities (emails, file access, etc.).
-
-### 🛡️ 5.2 Microsoft Defender for Endpoint
-
-#### ✅ Purpose
 Ingest security alerts and device telemetry from Defender for Endpoint (MDE) to Microsoft Sentinel.
-
----
 
 #### 🛠️ Steps (2025 – Updated via Content Hub)
 
@@ -152,6 +120,44 @@ Once connected, you will start receiving:
 - **DeviceEvents**, **DeviceInfo** (if using advanced hunting)
 
 > ℹ️ Ensure that MDE is properly onboarded and licensed in your environment.
+
+---
+
+### 🔹 3.3 Office 365
+
+### 📧 5.3 Office 365
+
+#### ✅ Purpose
+Monitor user activities across Exchange Online, SharePoint, Teams, and OneDrive.
+
+---
+
+#### 🛠️ Steps (2025 – Updated via Content Hub)
+
+1. In Microsoft Sentinel, go to **Content Hub**.
+2. Search for **"Microsoft 365 Defender"**.
+3. Click on the package and then **Install**.
+4. During setup, ensure the **Office 365** connector is enabled.
+5. After installation, go to **Data Connectors**.
+6. Locate **Office 365** and click **Open connector page**.
+7. Under **Configuration**, select the workloads you want:
+   - **Exchange**
+   - **SharePoint**
+   - **Teams**
+8. Authorize and connect your tenant.
+
+---
+
+#### 📌 Notes
+- Audit logging must be enabled in Microsoft Purview (Compliance Center).
+- Requires Global Admin privileges for the initial connection.
+
+---
+
+#### 🧪 Verification (KQL)
+```kql
+OfficeActivity | take 10
+```
 
 ---
 
@@ -187,8 +193,6 @@ Ingest risk detection signals like:
 RiskyUsers | take 10
 RiskySignIns | take 10
 ```
-
-
 
 
 ### ✅ Final Check – Verifying Ingested Data
