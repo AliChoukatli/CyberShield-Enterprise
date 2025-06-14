@@ -63,9 +63,7 @@ Enable Microsoft Sentinel to collect logs related to:
 
 This connector is essential to detect identity-based threats and monitor access patterns across your cloud environment.
 
----
-
-## 🛠️ Steps – 2025 (Updated via Content Hub)
+## 🛠️ Steps
 
 ### 1. Access Content Hub
 - Go to **Microsoft Sentinel** in the Azure Portal.
