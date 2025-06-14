@@ -35,7 +35,7 @@ Deploy Microsoft Sentinel in your Azure tenant to enable cloud-native SIEM and r
    - **Region**: East US or your preferred
 4. Click **Review + Create** and then **Create**.
 
-📸 **Screenshot to take**: After creation, take a screenshot of the **workspace overview blade** showing the name, region, and Workspace ID.
+![Log_Analytic](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Log_Analytic_Ov.png)
 
 ## 🧠 Step 2 – Enable Microsoft Sentinel
 
