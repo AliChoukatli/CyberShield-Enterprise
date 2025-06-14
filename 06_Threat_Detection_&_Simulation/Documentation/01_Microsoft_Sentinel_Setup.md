@@ -69,15 +69,25 @@ This connector is essential to detect identity-based threats and monitor access 
 - Go to **Microsoft Sentinel** in the Azure Portal.
 - In the left menu, select **Content Management** → **Content Hub**.
 
-📸 `content_hub_azure_ad_search.png`
-
----
-
 ### 2. Install the Microsoft Entra ID Solution
 - Use the search bar and type **"Microsoft Entra ID"** (formerly Azure AD).
 - Click on the result, then select **Install** or **Create**.
 
-📸 `azure_ad_solution_install.png`
+![AD_Connector_HowTO](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/AD_Connector_HowTO.png)
+
+- Once installed, the button changes to **Manage** — click it to access related components (Data Connector, Workbooks, Analytics Rules, etc.).
+
+![AD_Conenctor_Manage](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/AD_Connector_Manage.png)
+
+- Click on Entra ID - > Open Connector Page
+- Select :
+  - SigninLogs
+  - AuditLogs
+  - ProvisioningLogs 
+  - RiskyUsers 
+  - RiskEvents
+  - 
+![Entra_Log_Config](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Entra_Log_config.png)
 
 ---
 
