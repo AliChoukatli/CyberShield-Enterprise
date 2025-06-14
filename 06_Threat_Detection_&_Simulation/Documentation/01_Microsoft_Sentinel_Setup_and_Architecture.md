@@ -30,7 +30,7 @@ Deploy Microsoft Sentinel in your Azure tenant to enable cloud-native SIEM and r
 - Microsoft Defender data sources enabled (optional but recommended)
 
 
-🎯 Log Analytics Workspace Setup
+## 🎯 Log Analytics Workspace Setup
 
 1. Go to the [Azure Portal](https://portal.azure.com).
 2. Search for **"Log Analytics Workspaces"** and click **Create**.
