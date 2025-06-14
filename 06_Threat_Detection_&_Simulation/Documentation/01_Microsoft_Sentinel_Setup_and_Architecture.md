@@ -7,7 +7,6 @@ Deploy Microsoft Sentinel in your Azure tenant to enable cloud-native SIEM and r
 
 # 🛰️ Microsoft Sentinel – Setup & Architecture
 
-# 🛰️ Microsoft Sentinel – Implementation Guide
 
 ## 📘 Table of Contents
 
