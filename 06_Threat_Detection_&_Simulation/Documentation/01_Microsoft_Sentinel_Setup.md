@@ -100,30 +100,14 @@ This connector is essential to detect identity-based threats and monitor access 
 
 ---
 
-### 4. Confirm Log Collection
-If not already connected:
-- Click **Connect**
-- Sentinel will automatically collect:
-
-| Table Name                        | Description                                 |
-|----------------------------------|---------------------------------------------|
-| `SigninLogs`                     | All interactive sign-ins                    |
-| `AuditLogs`                      | Directory-level changes and activities      |
-| `NonInteractiveUserSignInLogs`  | Token refresh, silent logins (optional)     |
-| `ServicePrincipalSignInLogs`    | App identity logins (optional)              |
-| `ManagedIdentitySignInLogs`     | Azure resource identity logins (optional)   |
-
-📸 `azure_ad_connector_page.png`
-
----
 
 ## ✅ Optional: Verify Log Ingestion with KQL
 
-Go to **Logs > New Query** and run:
+- Go to **Log Analytic Workspace > Select your Workspace**  
+- Go **Logs > New Query** and run:
 
 ```kql
 SigninLogs | take 10
-AuditLogs | take 10
 ```
 ---
 
