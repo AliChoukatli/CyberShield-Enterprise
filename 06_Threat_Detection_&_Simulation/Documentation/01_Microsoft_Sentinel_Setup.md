@@ -52,9 +52,9 @@ Deploy Microsoft Sentinel in your Azure tenant to enable cloud-native SIEM and r
 
 This section explains how to enable and configure key Microsoft Sentinel data connectors to ingest logs from critical Microsoft services such as Azure AD, Defender for Endpoint, and Office 365.
 
-# 🔹 3.1 Azure Active Directory (Microsoft Entra ID)
+### 🔹 3.1 Azure Active Directory (Microsoft Entra ID)
 
-## ✅ Purpose
+#### Purpose
 
 Enable Microsoft Sentinel to collect logs related to:
 - User sign-ins
@@ -63,13 +63,8 @@ Enable Microsoft Sentinel to collect logs related to:
 
 This connector is essential to detect identity-based threats and monitor access patterns across your cloud environment.
 
-## 🛠️ Steps
-
-### 1. Access Content Hub
 - Go to **Microsoft Sentinel** in the Azure Portal.
 - In the left menu, select **Content Management** → **Content Hub**.
-
-### 2. Install the Microsoft Entra ID Solution
 - Use the search bar and type **"Microsoft Entra ID"** (formerly Azure AD).
 - Click on the result, then select **Install** or **Create**.
 
@@ -95,8 +90,6 @@ This connector is essential to detect identity-based threats and monitor access 
 - Go back to **Microsoft Sentinel > Data connectors**.
 - Locate **Azure Active Directory** in the list.
 - Click on it, then click **Open connector page**.
-
-📸 `data_connector_list_azure_ad.png`
 
 ---
 
