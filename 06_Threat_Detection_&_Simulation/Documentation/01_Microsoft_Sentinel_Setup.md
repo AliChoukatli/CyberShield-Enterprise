@@ -81,7 +81,7 @@ This connector is essential to detect identity-based threats and monitor access 
   - ProvisioningLogs 
   - RiskyUsers 
   - RiskEvents
-  - 
+
 ![Entra_Log_Config](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Entra_Log_config.png)
 
 ---
