@@ -44,7 +44,8 @@ Deploy Microsoft Sentinel in your Azure tenant to enable cloud-native SIEM and r
 3. Select the Log Analytics Workspace you created earlier.
 4. Click **Add Microsoft Sentinel**.
 
-📸 **Screenshot to take**: The Sentinel "Overview" page after enabling it on your workspace.
+![Sentinel_OV](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Sentinel_OV.png)
+
 
 
 
