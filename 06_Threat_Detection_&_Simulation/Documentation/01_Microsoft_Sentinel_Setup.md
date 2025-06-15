@@ -102,6 +102,9 @@ This connector is essential to detect identity-based threats and monitor access 
 ```kql
 SigninLogs | take 10
 ```
+
+![Sign-in_Logs](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Sign-in_Logs.png)
+
 ---
 
 ### 🔹 3.2 Microsoft Defender for Endpoint
