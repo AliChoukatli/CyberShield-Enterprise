@@ -91,6 +91,8 @@ This connector is essential to detect identity-based threats and monitor access 
 - Locate **Azure Active Directory** in the list.
 - Click on it, then click **Open connector page**.
 
+![](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Data_Connector.png)
+
 ---
 
 
