@@ -9,10 +9,10 @@ Deploy Microsoft Sentinel in your Azure tenant to enable cloud-native SIEM and r
 1. [Log Analytics Workspace Setup](#3-log-analytics-workspace-setup)
 2. [Microsoft Sentinel Activation](#4-microsoft-sentinel-activation)
 3. [Data Connectors Configuration](#5-data-connectors-configuration)
-    - 5.1 [Azure Active Directory](#51-azure-active-directory)
-    - 5.2 [Microsoft Defender for Endpoint](#52-microsoft-defender-for-endpoint)
-    - 5.3 [Office 365](#53-office-365)
-    - 5.4 [Azure Identity Protection (Optional)](#54-azure-identity-protection-optional)
+    - 3.1 [Azure Active Directory](#51-azure-active-directory)
+    - 3.2 [Microsoft Defender for Endpoint](#52-microsoft-defender-for-endpoint)
+    - 3.3 [Office 365](#53-office-365)
+    - 3.4 [Azure Identity Protection (Optional)](#54-azure-identity-protection-optional)
 4. [Cost Management](#6-cost-management)
 5. [Best Practices](#7-best-practices)
 
@@ -70,7 +70,7 @@ This connector is essential to detect identity-based threats and monitor access 
 
 ![AD_Connector_HowTO](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/AD_Connector_HowTO.png)
 
-- Once installed, the button changes to **Manage** — click it to access related components (Data Connector, Workbooks, Analytics Rules, etc.).
+- Once installed, Click on **Manage**
 
 ![AD_Conenctor_Manage](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/AD_Connector_Manage.png)
 
@@ -119,10 +119,16 @@ Ingest security alerts and device telemetry from Defender for Endpoint (MDE) to 
 1. In Microsoft Sentinel, go to **Content Hub**.
 2. Search for **"Microsoft 365 Defender"**.
 3. Select the solution package and click **Install**.
-4. Follow the prompts and make sure **Microsoft Defender for Endpoint** is selected.
-5. Once installed, go to **Data Connectors**.
-6. Find **Microsoft Defender for Endpoint** in the list and click **Open connector page**.
-7. If not already connected, click **Connect**.
+
+![Def_Connect_Install](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Defender_Connector_Install.png)
+
+5. Follow the prompts and make sure **Microsoft Defender for Endpoint** is selected.
+6. Once installed, go to **Data Connectors**.
+7. Find **Microsoft Defender for Endpoint** in the list and click **Open connector page**.
+
+8. Once installed, Click on **Manage** then **Connect**
+
+![Def_Connect_Connect](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Defender_Connector_Connect.png)
 
 ---
 
