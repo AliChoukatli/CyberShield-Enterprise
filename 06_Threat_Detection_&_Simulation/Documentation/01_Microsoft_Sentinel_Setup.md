@@ -181,12 +181,11 @@ Monitor user activities across Exchange Online, SharePoint, Teams, and OneDrive.
    - **Exchange**
    - **SharePoint**
    - **Teams**
-10. Authorize and connect your tenant.
+10. Apply Changes
 
 ---
 
 #### 📌 Notes
-- Audit logging must be enabled in Microsoft Purview (Compliance Center).
 - Requires Global Admin privileges for the initial connection.
 
 ---
