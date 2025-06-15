@@ -89,9 +89,8 @@ This connector is essential to detect identity-based threats and monitor access 
 
 ![](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Data_Connector.png)
 
----
 
-## ✅ Optional: Verify Log Ingestion with KQL
+#### Verify Log Ingestion with KQL
 
 - Go to **Log Analytic Workspace > Select your Workspace**  
 - Go **Logs > New Query** and run:
@@ -106,7 +105,7 @@ SigninLogs | take 10
 
 ### 🔹 3.2 Microsoft Defender for Endpoint
 
-#### ✅ Purpose
+#### Purpose
 Ingest security alerts and device telemetry from Defender for Endpoint (MDE) to Microsoft Sentinel.
 
 #### 🛠️ Steps (2025 – Updated via Content Hub)
@@ -133,36 +132,38 @@ Ingest security alerts and device telemetry from Defender for Endpoint (MDE) to 
 
 ---
 
-#### ✅ Data Flow
+#### Data Flow
 Once connected, you will start receiving:
 - **SecurityAlert** tables (alerts raised in MDE)
 - **DeviceEvents**, **DeviceInfo** (if using advanced hunting)
 
 > ℹ️ Ensure that MDE is properly onboarded and licensed in your environment.
 
+
+### 📊 Verify Microsoft Defender for Endpoint Log Ingestion
+
+### 1. Open Microsoft Sentinel
+
+- Navigate to your **Microsoft Sentinel Workspace**
+- In the left-hand menu, click **Logs**
+-  Run this KQL query
+
+```kql
+DeviceEvents
+| where TimeGenerated > ago(1d)
+| summarize TotalEvents = count() by bin(TimeGenerated, 1h)
+| sort by TimeGenerated desc
+```
 ---
 
-
-
-
-
-
-
-
-
-
-
+---
 
 ### 🔹 3.3 Office 365
-
-### 📧 5.3 Office 365
 
 #### ✅ Purpose
 Monitor user activities across Exchange Online, SharePoint, Teams, and OneDrive.
 
----
-
-#### 🛠️ Steps (2025 – Updated via Content Hub)
+#### 🛠️ Steps 
 
 1. In Microsoft Sentinel, go to **Content Hub**.
 2. Search for **"Microsoft 365 Defender"**.
@@ -262,7 +263,7 @@ OfficeActivity | take 10
 
 
 
-# 6. 💰 Cost Management
+## 6. 💰 Cost Management
 
 - Microsoft Sentinel provides a **30-day free trial**, with up to **10 GB/day** included for both Sentinel and Log Analytics.
 - Additional data is billed by volume. It's important to monitor ingestion rates.
