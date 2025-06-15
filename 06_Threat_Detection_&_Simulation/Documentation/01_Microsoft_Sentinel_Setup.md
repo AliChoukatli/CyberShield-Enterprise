@@ -169,26 +169,23 @@ Monitor user activities across Exchange Online, SharePoint, Teams, and OneDrive.
 2. Search for **Microsoft 365**.
 3. Click on the package and then **Install**.
 
-![Office_Connector_Install](
+![Office_Connector_Install](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Office_Connector_Install.png)
 
 5. During setup, ensure the **Office 365** connector is enabled.
 6. After installation, go to **Data Connectors** or Manage
 
-![Office_Connector_
- 
 8. Locate **Office 365** and click **Open connector page**.
 9. Under **Configuration**, select the workloads you want:
    - **Exchange**
    - **SharePoint**
    - **Teams**
 10. Apply Changes
+11. Verify the Connector in Data Connectors
+   - Go back to **Microsoft Sentinel > Data connectors**.
+   - Locate **Microsoft Defender For Endpoint** in the list.
 
----
+!![Office_Connector](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Office_Connector.png)
 
-#### 📌 Notes
-- Requires Global Admin privileges for the initial connection.
-
----
 
 #### 🧪 Verification (KQL)
 ```kql
