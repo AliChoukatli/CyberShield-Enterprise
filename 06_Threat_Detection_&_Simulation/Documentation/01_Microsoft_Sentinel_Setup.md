@@ -74,7 +74,6 @@ This connector is essential to detect identity-based threats and monitor access 
 
 ![AD_Conenctor_Manage](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/AD_Connector_Manage.png)
 
-- Click on Entra ID - > Open Connector Page
 - Select :
   - SigninLogs
   - AuditLogs
@@ -84,8 +83,6 @@ This connector is essential to detect identity-based threats and monitor access 
 
 ![Entra_Log_Config](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Entra_Log_config.png)
 
----
-
 ### 3. Verify the Connector in Data Connectors
 - Go back to **Microsoft Sentinel > Data connectors**.
 - Locate **Azure Active Directory** in the list.
@@ -94,7 +91,6 @@ This connector is essential to detect identity-based threats and monitor access 
 ![](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Data_Connector.png)
 
 ---
-
 
 ## ✅ Optional: Verify Log Ingestion with KQL
 
@@ -124,9 +120,8 @@ Ingest security alerts and device telemetry from Defender for Endpoint (MDE) to 
 
 5. Follow the prompts and make sure **Microsoft Defender for Endpoint** is selected.
 6. Once installed, go to **Data Connectors**.
-7. Find **Microsoft Defender for Endpoint** in the list and click **Open connector page**.
+7. Locate **Microsoft Defender for Endpoint** in the list and click **Open connector page** **-> Connect**
 
-8. Once installed, Click on **Manage** then **Connect**
 
 ![Def_Connect_Connect](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Defender_Connector_Connect.png)
 
@@ -140,6 +135,17 @@ Once connected, you will start receiving:
 > ℹ️ Ensure that MDE is properly onboarded and licensed in your environment.
 
 ---
+
+
+
+
+
+
+
+
+
+
+
 
 ### 🔹 3.3 Office 365
 
