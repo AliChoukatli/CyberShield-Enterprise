@@ -166,7 +166,7 @@ Monitor user activities across Exchange Online, SharePoint, Teams, and OneDrive.
 #### 🛠️ Steps 
 
 1. In Microsoft Sentinel, go to **Content Hub**.
-2. Search for **"Microsoft 365 Defender"**.
+2. Search for **Microsoft 365**.
 3. Click on the package and then **Install**.
 4. During setup, ensure the **Office 365** connector is enabled.
 5. After installation, go to **Data Connectors**.
