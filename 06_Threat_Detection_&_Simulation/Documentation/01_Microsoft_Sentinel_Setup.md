@@ -108,7 +108,7 @@ SigninLogs | take 10
 #### Purpose
 Ingest security alerts and device telemetry from Defender for Endpoint (MDE) to Microsoft Sentinel.
 
-#### 🛠️ Steps (2025 – Updated via Content Hub)
+#### 🛠️ Steps 
 
 1. In Microsoft Sentinel, go to **Content Hub**.
 2. Search for **"Microsoft 365 Defender"**.
@@ -168,14 +168,17 @@ Monitor user activities across Exchange Online, SharePoint, Teams, and OneDrive.
 1. In Microsoft Sentinel, go to **Content Hub**.
 2. Search for **Microsoft 365**.
 3. Click on the package and then **Install**.
-4. During setup, ensure the **Office 365** connector is enabled.
-5. After installation, go to **Data Connectors**.
-6. Locate **Office 365** and click **Open connector page**.
-7. Under **Configuration**, select the workloads you want:
+
+![Office_Connector_Install](
+
+5. During setup, ensure the **Office 365** connector is enabled.
+6. After installation, go to **Data Connectors**.
+7. Locate **Office 365** and click **Open connector page**.
+8. Under **Configuration**, select the workloads you want:
    - **Exchange**
    - **SharePoint**
    - **Teams**
-8. Authorize and connect your tenant.
+9. Authorize and connect your tenant.
 
 ---
 
