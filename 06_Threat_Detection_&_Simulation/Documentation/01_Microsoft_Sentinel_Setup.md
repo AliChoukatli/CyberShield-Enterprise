@@ -68,7 +68,7 @@ This connector is essential to detect identity-based threats and monitor access 
 - Use the search bar and type **"Microsoft Entra ID"** (formerly Azure AD).
 - Click on the result, then select **Install** or **Create**.
 
-![AD_Connector_HowTO](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/AD_Connector_HowTO.png)
+![AD_Connector_HowTO](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/AD_Connector_Install.png)
 
 - Once installed, Click on **Manage**
 
