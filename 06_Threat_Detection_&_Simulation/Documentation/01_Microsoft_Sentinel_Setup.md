@@ -117,7 +117,7 @@ Ingest security alerts and device telemetry from Defender for Endpoint (MDE) to 
 ![Def_Connect_Install](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Defender_Connector_Install.png)
 
 5. Follow the prompts and make sure **Microsoft Defender for Endpoint** is selected.
-6. Once installed, go to **Data Connectors**.
+6. Once installed, go to **Data Connectors** or Manage
 7. Locate **Microsoft Defender for Endpoint** in the list and click **Open connector page** **-> Connect**
 
 
@@ -172,13 +172,16 @@ Monitor user activities across Exchange Online, SharePoint, Teams, and OneDrive.
 ![Office_Connector_Install](
 
 5. During setup, ensure the **Office 365** connector is enabled.
-6. After installation, go to **Data Connectors**.
-7. Locate **Office 365** and click **Open connector page**.
-8. Under **Configuration**, select the workloads you want:
+6. After installation, go to **Data Connectors** or Manage
+
+![Office_Connector_
+ 
+8. Locate **Office 365** and click **Open connector page**.
+9. Under **Configuration**, select the workloads you want:
    - **Exchange**
    - **SharePoint**
    - **Teams**
-9. Authorize and connect your tenant.
+10. Authorize and connect your tenant.
 
 ---
 
@@ -205,7 +208,7 @@ Ingest risk detection signals like:
 
 ---
 
-#### 🛠️ Steps (2025 – Updated via Content Hub)
+#### 🛠️ Steps
 
 1. In Microsoft Sentinel, go to **Content Hub**.
 2. Search for **"Microsoft Entra ID Protection"** (formerly Azure Identity Protection).
