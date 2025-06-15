@@ -10,7 +10,7 @@ Deploy Microsoft Sentinel in your Azure tenant to enable cloud-native SIEM and r
 2. [Microsoft Sentinel Activation](#4-microsoft-sentinel-activation)
 3. [Data Connectors Configuration](#5-data-connectors-configuration)
     - 3.1 [Azure Active Directory](#51-azure-active-directory)
-    - 3.2 [Microsoft Defender XDR ( Defender for Endpoint + Defender for Office 365]()
+    - 3.2 [Microsoft Defender XDR ( Defender for Endpoint + Office 365]()
 4. [Cost Management](#6-cost-management)
 5. [Best Practices](#7-best-practices)
 
