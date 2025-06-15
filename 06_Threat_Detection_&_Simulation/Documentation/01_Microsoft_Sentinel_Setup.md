@@ -81,7 +81,7 @@ This connector is essential to detect identity-based threats and monitor access 
 
 ![Entra_Log_Config](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Entra_Log_config.png)
 
-### 3. Verify the Connector in Data Connectors
+#### Verify the Connector in Data Connectors
 - Go back to **Microsoft Sentinel > Data connectors**.
 - Locate **Azure Active Directory** in the list.
 
@@ -100,8 +100,6 @@ SigninLogs | take 10
 ![Sign-in_Logs](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Sign-in_Logs.png)
 
 ---
-
-
 
 ### 🔹 3.2 Microsoft Defender XDR
 
@@ -131,7 +129,7 @@ If you can't Find Defender for office 365  look for `Microsoft 365` in Content H
   - SharePoint
   - Teams
   
-### 3. Verify the Connector in Data Connectors
+#### Verify the Connector in Data Connectors
 - Go back to **Microsoft Sentinel > Data connectors**.
 - Locate **Microsoft Defender XDR** in the list.
 
