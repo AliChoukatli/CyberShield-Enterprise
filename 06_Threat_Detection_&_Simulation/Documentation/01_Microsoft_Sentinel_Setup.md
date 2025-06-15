@@ -86,7 +86,6 @@ This connector is essential to detect identity-based threats and monitor access 
 ### 3. Verify the Connector in Data Connectors
 - Go back to **Microsoft Sentinel > Data connectors**.
 - Locate **Azure Active Directory** in the list.
-- Click on it, then click **Open connector page**.
 
 ![](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Data_Connector.png)
 
@@ -124,6 +123,13 @@ Ingest security alerts and device telemetry from Defender for Endpoint (MDE) to 
 
 
 ![Def_Connect_Connect](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Defender_Connector_Connect.png)
+
+
+8. Verify the Connector in Data Connectors
+   - Go back to **Microsoft Sentinel > Data connectors**.
+   - Locate **Microsoft Defender For Endpoint** in the list.
+
+![Connector_Defender_OV](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Connector_Defender.png)
 
 ---
 
