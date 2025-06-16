@@ -97,7 +97,7 @@ When an analytics rule triggers alerts, Microsoft Sentinel can automatically gro
 
 ### 🧪 Results Simulation
 
-- After rule creation, use **“View query results”** to validate against live workspace data.
+- After rule creation, Go back to **Edit the rule** and then under **Rule Query** Select **“View query results”** to validate against live workspace data.
 
 ---
 
