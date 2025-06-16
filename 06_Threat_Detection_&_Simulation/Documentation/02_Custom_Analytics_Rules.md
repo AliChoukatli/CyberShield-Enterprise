@@ -156,15 +156,17 @@ Allows Microsoft Sentinel to recognize and classify entities from the query resu
 | Lookup data from the last | 7 Days              |
 | First run start time      | 6/16/2025, 12:00 PM |
 
-#### 🚨 5. Alert Threshold : Trigger alert when query returns more than 0 results 
-   
+**Alert Threshold** : Trigger alert when query returns more than 0 results 
+**Event Grouping** | Group alerts into incidents if all entities match within 5 minutes 
+**Suppression** : | Off                                                                
 
 ### ⚙️ Incident Settings
 
-| **Incident Creation**      | Enabled                                                            |
-| **Event Grouping**         | Group alerts into incidents if all entities match within 5 minutes |
-| **Reopen Closed Incident** | Disabled                                                           |
-| **Suppression**            | Off                                                                |
+**Incident Creation**      | Enabled                                                            
+**Alert grouping** : 
+**Reopen Closed Incident** | Disabled                                                           
+
+---
 
 
 ## 🎯 Impossible Travel Detection
