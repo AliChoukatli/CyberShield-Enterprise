@@ -150,21 +150,21 @@ Allows Microsoft Sentinel to recognize and classify entities from the query resu
 
 #### 🕒 4. Query Scheduling
 
-| Setting                   | Value          |
-|---------------------------|----------------|
-| Run query every           | 5 minutes      |
-| Lookup data from the last | 7 Days     |
+| Setting                   | Value               |
+|---------------------------|---------------------|
+| Run query every           | 5 minutes           |
+| Lookup data from the last | 7 Days              |
 | First run start time      | 6/16/2025, 12:00 PM |
 
 #### 🚨 5. Alert Threshold : Trigger alert when query returns more than 0 results 
-                         |                                               |
+   
 
 ### ⚙️ Incident Settings
 
-| **Incident Creation**    | Enabled                                                |
-| **Event Grouping**       | Group alerts into incidents if all entities match within 5 minutes |
-| **Reopen Closed Incident** | Disabled                                            |
-| **Suppression**          | Off                                                    |
+| **Incident Creation**      | Enabled                                                            |
+| **Event Grouping**         | Group alerts into incidents if all entities match within 5 minutes |
+| **Reopen Closed Incident** | Disabled                                                           |
+| **Suppression**            | Off                                                                |
 
 
 ## 🎯 Impossible Travel Detection
