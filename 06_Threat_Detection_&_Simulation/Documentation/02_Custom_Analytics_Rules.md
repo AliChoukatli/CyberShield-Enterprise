@@ -119,35 +119,14 @@ Options for how Sentinel groups query results into alerts:
 
 When an analytics rule triggers alerts, Microsoft Sentinel can automatically group these alerts into incidents. This helps security teams manage and investigate related alerts more efficiently.
 
-### Create incidents from alerts
+1. Alert grouping → Enabled
+   -5 min 
+→ Choose **“Group alerts into a single incident if all entities match”**  
+ - Re-open closed matching incidents → Disabled
 
-You can enable the option **"Create incidents from alerts triggered by this analytics rule"** to generate incidents automatically from alerts.
-
-> **Note:** This setting is **not mandatory**, but highly recommended to reduce alert noise and improve incident management.
-
-### Alert grouping
-
-Grouping related alerts into a single incident provides context and reduces the volume of incidents.
-
-- You can configure how alerts triggered by this rule are grouped into incidents.  
-- For example, group alerts occurring within a time window (e.g., 5 minutes) into one incident.  
-- A single incident can contain up to 150 alerts. If more alerts are generated, additional incidents will be created.
-
-### Additional options
-
-- **Re-open closed matching incidents:** When enabled, if a new alert matches a previously closed incident, that incident will be re-opened to continue tracking.
-
-### Summary
-
-| Option                     | Required? | Recommended?         |
-|----------------------------|-----------|---------------------|
-| Create incidents           | No        | Yes                 |
-| Group alerts into incidents | No        | Yes                 |
-| Re-open closed incidents    | No        | Depending on process |
 
 ---
 
-Activating incident creation and alert grouping is best practice for efficient security operations and should be enabled in production environments.
 
 
 ### 🧪 Results Simulation
