@@ -79,15 +79,11 @@ Allows Microsoft Sentinel to recognize and classify entities from the query resu
 
 - **Generate alert when number of query results**: `> 1`
 
-5. 📦 Event Grouping
+5. 📦 Event Grouping :  ✅ **Trigger an alert for each event*
 
-Options for how Sentinel groups query results into alerts:
+6. 📴 Suppression : Stop running query after alert is generated ❌
 
-- ✅ **Trigger an alert for each event**
 
-6. 📴 Suppression
-
-- **Stop running query after alert is generated**: ❌ *(Unchecked)*
 
 ---
 
