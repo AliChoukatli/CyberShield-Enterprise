@@ -14,6 +14,33 @@ This rule detects accounts with **multiple failed sign-in attempts followed by a
 
 ---
 
+### ✅ Deployment Method
+
+1. Go to **Microsoft Sentinel → Analytics**
+2. Click on **+ Create → Scheduled query rule**
+
+### ⚙️ Rule Settings
+
+| Setting                  | Value                                                                            |
+|--------------------------|----------------------------------------------------------------------------------|
+| **Rule Name**            | Multiple Failed Logins then Success                                              |
+| **MITRE ATT&CK**         | Credential Access(Brute Force (T1110)), Initial Access( Valid Accounts (T1078) ) |
+| **Severity**             | Medium                                                                           |
+ 
+4. Paste the KQL in the **Set rule logic** step
+5. Configure rule settings as described above
+6. Enable the rule and monitor from **Incidents** or **Logs**
+
+--- 
+
+
+| **Alert Suppression**    | Off                                  |
+| **Custom Event Grouping**| Enabled                              |
+| **Entity Mapping**       | User → UserPrincipalName             |
+| **Alert Frequency**      | Every 5 minutes                      |
+
+---
+
 ### 📄 KQL Query
 
 ```kusto
@@ -34,30 +61,10 @@ SigninLogs
 | project UserPrincipalName, FailedCount, TimeGenerated, SuccessTime
 ```
 
-## ⚙️ Rule Settings
-
-| Setting                  | Value                                |
-|--------------------------|--------------------------------------|
-| **Rule Name**            | Multiple Failed Logins then Success  |
-| **Tactics**              | Credential Access, Initial Access    |
-| **Severity**             | Medium                               |
-| **Alert Suppression**    | Off                                  |
-| **Custom Event Grouping**| Enabled                              |
-| **Entity Mapping**       | User → UserPrincipalName             |
-| **Alert Frequency**      | Every 5 minutes                      |
 
 ---
 
-## 🧩 MITRE ATT&CK Mapping
-
-| Tactic             | Technique                    |
-|--------------------|------------------------------|
-| Credential Access  | Brute Force (T1110)          |
-| Initial Access     | Valid Accounts (T1078)       |
-
----
-
-## 📌 Notes
+### 📌 Notes
 
 - You can adjust `failedThreshold` or `timeRange` to make the rule more or less sensitive.
 - Consider suppressing alerts for known automation accounts or whitelisted users.
@@ -65,13 +72,7 @@ SigninLogs
 
 ---
 
-## ✅ Deployment Method
 
-1. Go to **Microsoft Sentinel → Analytics**
-2. Click on **+ Create → Scheduled query rule**
-3. Paste the KQL in the **Set rule logic** step
-4. Configure rule settings as described above
-5. Enable the rule and monitor from **Incidents** or **Logs**
 
 ---
 
