@@ -31,20 +31,16 @@ This rule detects accounts with **multiple failed sign-in attempts followed by a
 5. Configure rule settings as described above
 
 ## ⚙️ Additional Rule Configuration (Sentinel UI Settings)
-
-This section outlines advanced settings available when creating a custom analytics rule in Microsoft Sentinel.
-
----
-
 ### 🧩 Entity Mapping
 
-Allows Microsoft Sentinel to identify key entities (users, IPs, hosts, etc.) from the query results.
+Allows Microsoft Sentinel to identify entities from your query results.
 
 | Entity Type | Identifier 1        | Identifier 2 (optional) | Identifier 3 (optional) |
 |-------------|---------------------|--------------------------|--------------------------|
-| User        | UserPrincipalName   |                          |                          |
+| **Account** | UserPrincipalName   |                          |                          |
 
-> You can map up to **10 entities**, each with up to **3 identifying attributes**.
+> Use `Account` as the entity type when mapping user logins. `UserPrincipalName` is the most common identifier.
+
 
 ---
 
