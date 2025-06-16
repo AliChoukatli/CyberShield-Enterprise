@@ -15,7 +15,7 @@ This rule detects accounts with **multiple failed sign-in attempts followed by a
 1. Go to **Microsoft Sentinel → Analytics**
 2. Click on **+ Create → Scheduled query rule**
 
-#### ⚙️ Set Rule Setting
+#### ⚙️ 1. Set Rule Setting
 
 | Setting                  | Value                                                                            |
 |--------------------------|----------------------------------------------------------------------------------|
@@ -25,7 +25,7 @@ This rule detects accounts with **multiple failed sign-in attempts followed by a
  
 4. Paste the KQL in the **Set rule logic** step
 
-#### 📄 KQL Query
+#### 📄 2. KQL Query
 
 ```kusto
 let timeRange = 1h;
@@ -45,9 +45,8 @@ SigninLogs
 | project UserPrincipalName, FailedCount, TimeGenerated, SuccessTime
 ```
 
-#### 🧩 Alert enhancement 
-
-1. Entity Mapping
+#### 🧩 3. Alert enhancement 
+3.1 - Entity Mapping
 
 Allows Microsoft Sentinel to recognize and classify entities from the query results.
 
@@ -55,7 +54,7 @@ Allows Microsoft Sentinel to recognize and classify entities from the query resu
 |-------------|--------------|---------------------|
 | Account     | Name         | UserPrincipalName   |
 
-2. Alert Details
+3.2 - Alert Details
 
 - **Alert Name Format**  
   `Brute Force Detected - {{UserPrincipalName}}`
@@ -65,7 +64,7 @@ Allows Microsoft Sentinel to recognize and classify entities from the query resu
 
 
 
-3. 🕒 Query Scheduling
+4. 🕒 Query Scheduling
 
 | Setting                   | Value          |
 |---------------------------|----------------|
@@ -75,13 +74,11 @@ Allows Microsoft Sentinel to recognize and classify entities from the query resu
 
 > This means the rule executes every 5 minutes, analyzing the past 5 minutes of log data.
 
-4. 🚨 Alert Threshold
+5. 🚨 Alert Threshold : **Generate alert when number of query results**: `> 1`
 
-- **Generate alert when number of query results**: `> 1`
+6. 📦 Event Grouping : ✅ **Trigger an alert for each event*
 
-5. 📦 Event Grouping : ✅ **Trigger an alert for each event*
-
-6. 📴 Suppression : ❌
+7. 📴 Suppression : ❌
 
 ![Failed_Login_Rule_Rev](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Failed_Login_Rule_Rev.png)
 
