@@ -97,11 +97,9 @@ When an analytics rule triggers alerts, Microsoft Sentinel can automatically gro
 
 ### 🧪 Results Simulation
 
-- After rule creation, use **“Test with current data”** to validate against live workspace data.
-- A timeline chart displays the last 50 rule evaluations with clickable data points for inspection.
+- After rule creation, use **“View query results”** to validate against live workspace data.
 
 ---
-
 
 ## 📂 Other Examples
 
