@@ -82,7 +82,6 @@ Allows Microsoft Sentinel to recognize and classify entities from the query resu
 
 ![Failed_Login_Rule_Rev](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Failed_Login_Rule_Rev.png)
 
----
 
 ### ⚙️ Incident Settings
 
@@ -92,8 +91,6 @@ When an analytics rule triggers alerts, Microsoft Sentinel can automatically gro
    -5 min 
 2. Choose **“Group alerts into a single incident if all entities match”**  
 3. Re-open closed matching incidents → Disabled
-
-
 
 ![Failed_Login_Rule_Rev2](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Failed_Login_Rule_Rev2.png)
 
@@ -105,32 +102,6 @@ When an analytics rule triggers alerts, Microsoft Sentinel can automatically gro
 
 ---
 
-🔙 Back to: [Custom Rule – Multiple Failed Logins then Success](#🛠️-custom-rule-detect-multiple-failed-logins-followed-by-success)
-
-7. Enable the rule and monitor from **Incidents** or **Logs**
-
---- 
-
-
-
----
-
-
-
-
----
-
-### 📌 Notes
-
-- You can adjust `failedThreshold` or `timeRange` to make the rule more or less sensitive.
-- Consider suppressing alerts for known automation accounts or whitelisted users.
-- Always test custom rules in a **non-production environment** before enabling alerts.
-
----
-
-
-
----
 
 ## 📂 Other Examples
 
