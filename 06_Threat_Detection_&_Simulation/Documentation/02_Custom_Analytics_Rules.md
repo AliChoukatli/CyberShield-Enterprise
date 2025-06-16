@@ -43,10 +43,7 @@ Allows Microsoft Sentinel to recognize and classify entities from the query resu
 > Select **Account** as the entity type. Use `UserPrincipalName` as the primary identifier, and `DisplayName` as a secondary label for improved alert context.
 
 
-
 ---
-
-### 🧾 Custom Details (Key-Value Pairs)
 
 ### 📝 Alert Details (Dynamic Alert Name and Description)
 
@@ -61,19 +58,6 @@ Customize the alert message using parameters from your query results.
 > If a parameter has no value, Microsoft Sentinel will revert to the default alert title and description configured on the first screen.
 
 
----
-
-### 📝 Alert Details (Dynamic Title and Description)
-
-Use parameters from the query to dynamically build alert titles and descriptions.
-
-- **Alert Name Format**  
-  `Brute Force Suspected: {{UserPrincipalName}}`
-
-- **Alert Description Format**  
-  `User {{UserPrincipalName}} had {{FailedCount}} failed login attempts followed by a successful login at {{SuccessTime}}.`
-
-> If a field returns no value, Sentinel will fall back to default alert settings.
 
 ---
 
