@@ -103,7 +103,7 @@ When an analytics rule triggers alerts, Microsoft Sentinel can automatically gro
 
 **📌 Use Case** : Detects when a user signs in successfully from geographic locations that deviate from their usual login patterns. This may indicate potential account compromise or unauthorized access attempts using stolen credentials.
 
-**📌 Description** : This rule flags users signing in from unusual geographic locations, which may indicate suspicious activity or credential compromise. Even if travel is legitimate, such events should be reviewed for consistency with normal user behavior.
+**📌 Description** : This rule flags users signing in from unusual geographic locations, which may indicate suspicious activity or credential compromise. 
 
 **✅ Deployment Method**
 
