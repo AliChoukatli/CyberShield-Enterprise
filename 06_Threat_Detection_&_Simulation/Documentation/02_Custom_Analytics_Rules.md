@@ -64,7 +64,7 @@ Allows Microsoft Sentinel to recognize and classify entities from the query resu
 
 
 
-4. 🕒 Query Scheduling
+#### 🕒 4. Query Scheduling
 
 | Setting                   | Value          |
 |---------------------------|----------------|
@@ -74,11 +74,11 @@ Allows Microsoft Sentinel to recognize and classify entities from the query resu
 
 > This means the rule executes every 5 minutes, analyzing the past 5 minutes of log data.
 
-5. 🚨 Alert Threshold : **Generate alert when number of query results**: `> 1`
+#### 🚨 5. Alert Threshold : **Generate alert when number of query results**: `> 1`
 
-6. 📦 Event Grouping : ✅ **Trigger an alert for each event*
+#### 📦 6.  Event Grouping : ✅ **Trigger an alert for each event*
 
-7. 📴 Suppression : ❌
+#### 📴 7. Suppression : ❌
 
 ![Failed_Login_Rule_Rev](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Failed_Login_Rule_Rev.png)
 
