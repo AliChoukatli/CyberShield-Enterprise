@@ -103,8 +103,8 @@ When an analytics rule triggers alerts, Microsoft Sentinel can automatically gro
 
 **📌 Use Case** : Detects when a user signs in successfully from geographic locations that deviate from their usual login patterns. This may indicate potential account compromise or unauthorized access attempts using stolen credentials.
 
-**📌 Description** : This rule identifies accounts that have successfully signed in from uncommon or new geographic locations, potentially suggesting suspicious activity or credential theft. While travel may be legitimate, frequent logins from unfamiliar locations should be investigated to ensure the activity aligns with the user’s known behavior.
-  
+**📌 Description** : This rule flags users signing in from unusual geographic locations, which may indicate suspicious activity or credential compromise. Even if travel is legitimate, such events should be reviewed for consistency with normal user behavior.
+
 ```kusto
 let timeRange = 7d;
 let threshold = 3;
@@ -137,7 +137,7 @@ SigninLogs
 
 **📌 Use Case** : Detects login activities from geographically distant locations that are not possible to travel between within the observed timeframe. This is a strong indicator of account compromise through credential theft or session hijacking.
 
-**📌 Description** : This rule looks for sign-in events from different countries or regions occurring too close together in time for the travel to be physically possible. Such scenarios typically indicate an account being accessed by multiple actors from different locations, possibly due to leaked credentials or active attack campaigns.
+**📌 Description** : This rule detects sign-ins from distant locations within a short time, indicating impossible travel. It may suggest account compromise through leaked credentials or active attacks.
 
 ```kusto
 SigninLogs
