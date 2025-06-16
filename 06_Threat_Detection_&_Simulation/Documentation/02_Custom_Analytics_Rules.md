@@ -103,8 +103,76 @@ When an analytics rule triggers alerts, Microsoft Sentinel can automatically gro
 
 ## 📂 Other Examples
 
-- 🔎 Unusual Location Sign-in  
-- 📥 Impossible Travel Detection  
-- 🐚 PowerShell Execution from Office Macro  
+- 🔎 Unusual Location Sign-in
+  
+```kusto
+let timeRange = 7d;
+let threshold = 3;
+SigninLogs
+| where TimeGenerated > ago(timeRange)
+| where ResultType == 0 // Successful login
+| summarize Locations = make_set(Location), Count = count() by UserPrincipalName
+| where array_length(Locations) >= threshold
+```
+## 🔎 Unusual Location Sign-in – Analytics Rule Configuration
 
-*(à documenter dans les futurs fichiers)*
+| Setting                  | Value                                                  |
+|--------------------------|--------------------------------------------------------|
+| **Objective**            | Detect users with successful sign-ins from multiple unusual geographic locations. |
+| **Entity Mapping**       | `Account` → `UserPrincipalName`                        |
+| **Query Frequency**      | Every 5 minutes                                        |
+| **Lookup Period**        | Last 7 days                                            |
+| **Alert Threshold**      | Trigger alert when query returns more than 0 results  |
+| **Alert Name Format**    | `Unusual Location Sign-in - {{UserPrincipalName}}`     |
+| **Alert Description**    | `User {{UserPrincipalName}} signed in from multiple geographic locations.` |
+| **MITRE ATT&CK**         | `T1078 - Valid Accounts`                               |
+| **Severity**             | Medium                                                 |
+| **Incident Creation**    | Enabled                                                |
+| **Event Grouping**       | Group alerts into incidents if all entities match within 5 minutes |
+| **Reopen Closed Incident** | Disabled                                            |
+| **Suppression**          | Off                                                    |
+
+
+- 📥 Impossible Travel Detection
+
+```kusto
+SigninLogs
+| where ResultType == 0 // Successful login
+| where LocationDetails != "" and LocationDetails contains ","
+| extend City = tostring(parse_json(LocationDetails)["city"]),
+         Country = tostring(parse_json(LocationDetails)["countryOrRegion"]),
+         Lat = todouble(parse_json(LocationDetails)["geoCoordinates"]["latitude"]),
+         Lon = todouble(parse_json(LocationDetails)["geoCoordinates"]["longitude"])
+| where isnotempty(Lat) and isnotempty(Lon)
+| sort by UserPrincipalName asc, TimeGenerated asc
+| extend NextEvent = next(TimeGenerated, 1),
+         NextLat = next(Lat, 1),
+         NextLon = next(Lon, 1),
+         NextUser = next(UserPrincipalName, 1)
+| where UserPrincipalName == NextUser
+| extend DistanceKm = geo_distance_2points(Lat, Lon, NextLat, NextLon),
+         TimeDiff = datetime_diff("Second", NextEvent, TimeGenerated),
+         SpeedKmh = (DistanceKm / (TimeDiff / 3600))
+| where SpeedKmh > 500
+| project UserPrincipalName, City, Country, Lat, Lon, TimeGenerated, NextEvent, DistanceKm, SpeedKmh
+```
+## 🚫 Impossible Travel Detection – Analytics Rule Configuration
+
+| Setting                  | Value                                                                 |
+|--------------------------|-----------------------------------------------------------------------|
+| **Objective**            | Detect impossible travel scenarios (e.g., logins from distant locations in a short time). |
+| **Entity Mapping**       | `Account` → `UserPrincipalName`                                      |
+| **Query Frequency**      | Every 5 minutes                                                      |
+| **Lookup Period**        | Last 24 hours                                                        |
+| **Alert Threshold**      | Trigger alert when query returns more than 0 results                |
+| **Alert Name Format**    | `Impossible Travel Detected - {{UserPrincipalName}}`                |
+| **Alert Description**    | `User {{UserPrincipalName}} appears to have signed in from distant locations within an unrealistic timeframe.` |
+| **MITRE ATT&CK**         | `T1078 - Valid Accounts`                                             |
+| **Severity**             | Medium                                                               |
+| **Incident Creation**    | Enabled                                                              |
+| **Event Grouping**       | Group alerts into incidents if all entities match within 5 minutes   |
+| **Reopen Closed Incident** | Disabled                                                          |
+| **Suppression**          | Off                                                                  |
+
+
+---
