@@ -15,7 +15,7 @@ This rule detects accounts with **multiple failed sign-in attempts followed by a
 1. Go to **Microsoft Sentinel → Analytics**
 2. Click on **+ Create → Scheduled query rule**
 
-### ⚙️ Set Rule Setting
+#### ⚙️ Set Rule Setting
 
 | Setting                  | Value                                                                            |
 |--------------------------|----------------------------------------------------------------------------------|
@@ -44,29 +44,18 @@ SigninLogs
 | where SuccessTime > TimeGenerated
 | project UserPrincipalName, FailedCount, TimeGenerated, SuccessTime
 ```
-6. Configure rule settings as described above
 
-
-
-### 🧩 Alert enhancement 
+#### 🧩 Alert enhancement 
 
 1. Entity Mapping
 
 Allows Microsoft Sentinel to recognize and classify entities from the query results.
 
-| Entity Type | Identifier 1 | Identifier 2        | Identifier 3 (optional) |
-|-------------|--------------|---------------------|------------------------|
-| Account     | Name         | UserPrincipalName   | Sid                    |
-
-
-> Select **Account** as the entity type. Use `UserPrincipalName` as the primary identifier, and `DisplayName` as a secondary label for improved alert context.
-
-
----
+| Entity Type | Identifier 1 | Identifier 2        |
+|-------------|--------------|---------------------|
+| Account     | Name         | UserPrincipalName   |
 
 2. Alert Details
-
-Customize the alert message using parameters from your query results.
 
 - **Alert Name Format**  
   `Brute Force Detected - {{UserPrincipalName}}`
@@ -74,40 +63,27 @@ Customize the alert message using parameters from your query results.
 - **Alert Description Format**  
   `The account {{UserPrincipalName}} had {{FailedCount}} failed login attempts followed by a successful login at {{SuccessTime}}.`
 
-> If a parameter has no value, Microsoft Sentinel will revert to the default alert title and description configured on the first screen.
 
-
-
----
 
 3. 🕒 Query Scheduling
 
 | Setting                   | Value          |
 |---------------------------|----------------|
 | Run query every           | 5 minutes      |
-| Lookup data from the last | 5 minutes      |
+| Lookup data from the last | 60 minutes      |
 | First run start time      | 6/16/2025, 12:00 PM |
 
 > This means the rule executes every 5 minutes, analyzing the past 5 minutes of log data.
 
----
-
 4. 🚨 Alert Threshold
 
-- **Generate alert when number of query results**: `> 0`
-
----
+- **Generate alert when number of query results**: `> 1`
 
 5. 📦 Event Grouping
 
 Options for how Sentinel groups query results into alerts:
 
 - ✅ **Trigger an alert for each event**
-- ❌ **Trigger a single alert when the query returns results**
-
-> Recommended: "Trigger an alert for each event" unless the query returns a high number of events (above 150), which may cause Sentinel to summarize the last alert.
-
----
 
 6. 📴 Suppression
 
@@ -115,19 +91,16 @@ Options for how Sentinel groups query results into alerts:
 
 ---
 
-
 ### ⚙️ Incident Settings
 
 When an analytics rule triggers alerts, Microsoft Sentinel can automatically group these alerts into incidents. This helps security teams manage and investigate related alerts more efficiently.
 
 1. Alert grouping → Enabled
    -5 min 
-→ Choose **“Group alerts into a single incident if all entities match”**  
- - Re-open closed matching incidents → Disabled
-
+2. Choose **“Group alerts into a single incident if all entities match”**  
+3. Re-open closed matching incidents → Disabled
 
 ---
-
 
 
 ### 🧪 Results Simulation
