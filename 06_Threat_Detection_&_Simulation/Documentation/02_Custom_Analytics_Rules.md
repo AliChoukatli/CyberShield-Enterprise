@@ -34,10 +34,6 @@ This rule detects accounts with **multiple failed sign-in attempts followed by a
 --- 
 
 
-| **Alert Suppression**    | Off                                  |
-| **Custom Event Grouping**| Enabled                              |
-| **Entity Mapping**       | User → UserPrincipalName             |
-| **Alert Frequency**      | Every 5 minutes                      |
 
 ---
 
