@@ -143,11 +143,10 @@ Allows Microsoft Sentinel to recognize and classify entities from the query resu
 3.2 - Alert Details
 
 - **Alert Name Format**  
-  `Brute Force Detected - {{UserPrincipalName}}`
+`Unusual Location Sign-in - {{UserPrincipalName}}`
 
 - **Alert Description Format**  
-  `The account {{UserPrincipalName}} had {{FailedCount}} failed login attempts followed by a successful login at {{SuccessTime}}.`
-
+`User {{UserPrincipalName}} signed in from multiple geographic locations.`
 
 #### 🕒 4. Query Scheduling
 
@@ -157,17 +156,11 @@ Allows Microsoft Sentinel to recognize and classify entities from the query resu
 | Lookup data from the last | 7 Days     |
 | First run start time      | 6/16/2025, 12:00 PM |
 
+#### 🚨 5. Alert Threshold : Trigger alert when query returns more than 0 results 
+                         |                                               |
 
-## ⚙️ Unusual Location Sign-in – Analytics Rule Configuration
+### ⚙️ Incident Settings
 
-| Setting                  | Value                                                  |
-|--------------------------|--------------------------------------------------------|
-| **Entity Mapping**       | `Account` → `UserPrincipalName`                        |
-| **Alert Threshold**      | Trigger alert when query returns more than 0 results  |
-| **Alert Name Format**    | `Unusual Location Sign-in - {{UserPrincipalName}}`     |
-| **Alert Description**    | `User {{UserPrincipalName}} signed in from multiple geographic locations.` |
-| **MITRE ATT&CK**         | `T1078 - Valid Accounts`                               |
-| **Severity**             | Medium                                                 |
 | **Incident Creation**    | Enabled                                                |
 | **Event Grouping**       | Group alerts into incidents if all entities match within 5 minutes |
 | **Reopen Closed Incident** | Disabled                                            |
