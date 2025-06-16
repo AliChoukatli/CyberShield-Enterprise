@@ -2,9 +2,7 @@
 
 Microsoft Sentinel allows the creation of **custom analytics rules** to detect threats, anomalous behavior, or compliance violations using **Kusto Query Language (KQL)**. This section presents examples of custom rules you can use and adapt for your environment.
 
----
-
-## 🛠️ Custom Rule: Detect Multiple Failed Logins Followed by Success
+## 🛠️ Detect Multiple Failed Logins Followed by Success
 
 **📌 Use Case**: Detect brute force or password spraying attacks where a user fails multiple sign-ins and then succeeds.
 
@@ -12,14 +10,12 @@ Microsoft Sentinel allows the creation of **custom analytics rules** to detect t
 
 This rule detects accounts with **multiple failed sign-in attempts followed by a successful login** in a short time window.
 
----
-
 ### ✅ Deployment Method
 
 1. Go to **Microsoft Sentinel → Analytics**
 2. Click on **+ Create → Scheduled query rule**
 
-### ⚙️ Rule Settings
+### ⚙️ Set Rule Setting
 
 | Setting                  | Value                                                                            |
 |--------------------------|----------------------------------------------------------------------------------|
@@ -28,92 +24,8 @@ This rule detects accounts with **multiple failed sign-in attempts followed by a
 | **Severity**             | Medium                                                                           |
  
 4. Paste the KQL in the **Set rule logic** step
-5. Configure rule settings as described above
 
-## ⚙️ Additional Rule Configuration (Sentinel UI Settings)
-
-### 🧩 Entity Mapping
-
-Allows Microsoft Sentinel to recognize and classify entities from the query results.
-
-| Entity Type | Identifier 1        | Identifier 2     | Identifier 3 (optional) |
-|-------------|---------------------|------------------|--------------------------|
-| **Account** | UserPrincipalName   | DisplayName      |                          |
-
-> Select **Account** as the entity type. Use `UserPrincipalName` as the primary identifier, and `DisplayName` as a secondary label for improved alert context.
-
-
----
-
-### 📝 Alert Details (Dynamic Alert Name and Description)
-
-Customize the alert message using parameters from your query results.
-
-- **Alert Name Format**  
-  `Brute Force Detected - {{UserPrincipalName}}`
-
-- **Alert Description Format**  
-  `The account {{UserPrincipalName}} had {{FailedCount}} failed login attempts followed by a successful login at {{SuccessTime}}.`
-
-> If a parameter has no value, Microsoft Sentinel will revert to the default alert title and description configured on the first screen.
-
-
-
----
-
-### 🕒 Query Scheduling
-
-| Setting                   | Value          |
-|---------------------------|----------------|
-| Run query every           | 5 minutes      |
-| Lookup data from the last | 5 minutes      |
-| First run start time      | 6/16/2025, 12:00 PM |
-
-> This means the rule executes every 5 minutes, analyzing the past 5 minutes of log data.
-
----
-
-### 🚨 Alert Threshold
-
-- **Generate alert when number of query results**: `> 0`
-
----
-
-### 📦 Event Grouping
-
-Options for how Sentinel groups query results into alerts:
-
-- ✅ **Trigger an alert for each event**
-- ❌ **Trigger a single alert when the query returns results**
-
-> Recommended: "Trigger an alert for each event" unless the query returns a high number of events (above 150), which may cause Sentinel to summarize the last alert.
-
----
-
-### 📴 Suppression
-
-- **Stop running query after alert is generated**: ❌ *(Unchecked)*
-
----
-
-### 🧪 Results Simulation
-
-- After rule creation, use **“Test with current data”** to validate against live workspace data.
-- A timeline chart displays the last 50 rule evaluations with clickable data points for inspection.
-
----
-
-🔙 Back to: [Custom Rule – Multiple Failed Logins then Success](#🛠️-custom-rule-detect-multiple-failed-logins-followed-by-success)
-
-7. Enable the rule and monitor from **Incidents** or **Logs**
-
---- 
-
-
-
----
-
-### 📄 KQL Query
+#### 📄 KQL Query
 
 ```kusto
 let timeRange = 1h;
@@ -132,6 +44,130 @@ SigninLogs
 | where SuccessTime > TimeGenerated
 | project UserPrincipalName, FailedCount, TimeGenerated, SuccessTime
 ```
+6. Configure rule settings as described above
+
+
+
+### 🧩 Alert enhancement 
+
+1. Entity Mapping
+
+Allows Microsoft Sentinel to recognize and classify entities from the query results.
+
+| Entity Type | Identifier 1        | Identifier 2     | Identifier 3 (optional) |
+|-------------|---------------------|------------------|--------------------------|
+| **Account** | UserPrincipalName   | DisplayName      |                          |
+
+> Select **Account** as the entity type. Use `UserPrincipalName` as the primary identifier, and `DisplayName` as a secondary label for improved alert context.
+
+
+---
+
+2. Alert Details
+
+Customize the alert message using parameters from your query results.
+
+- **Alert Name Format**  
+  `Brute Force Detected - {{UserPrincipalName}}`
+
+- **Alert Description Format**  
+  `The account {{UserPrincipalName}} had {{FailedCount}} failed login attempts followed by a successful login at {{SuccessTime}}.`
+
+> If a parameter has no value, Microsoft Sentinel will revert to the default alert title and description configured on the first screen.
+
+
+
+---
+
+3. 🕒 Query Scheduling
+
+| Setting                   | Value          |
+|---------------------------|----------------|
+| Run query every           | 5 minutes      |
+| Lookup data from the last | 5 minutes      |
+| First run start time      | 6/16/2025, 12:00 PM |
+
+> This means the rule executes every 5 minutes, analyzing the past 5 minutes of log data.
+
+---
+
+4. 🚨 Alert Threshold
+
+- **Generate alert when number of query results**: `> 0`
+
+---
+
+5. 📦 Event Grouping
+
+Options for how Sentinel groups query results into alerts:
+
+- ✅ **Trigger an alert for each event**
+- ❌ **Trigger a single alert when the query returns results**
+
+> Recommended: "Trigger an alert for each event" unless the query returns a high number of events (above 150), which may cause Sentinel to summarize the last alert.
+
+---
+
+6. 📴 Suppression
+
+- **Stop running query after alert is generated**: ❌ *(Unchecked)*
+
+---
+
+
+### ⚙️ Incident Settings
+
+When an analytics rule triggers alerts, Microsoft Sentinel can automatically group these alerts into incidents. This helps security teams manage and investigate related alerts more efficiently.
+
+### Create incidents from alerts
+
+You can enable the option **"Create incidents from alerts triggered by this analytics rule"** to generate incidents automatically from alerts.
+
+> **Note:** This setting is **not mandatory**, but highly recommended to reduce alert noise and improve incident management.
+
+### Alert grouping
+
+Grouping related alerts into a single incident provides context and reduces the volume of incidents.
+
+- You can configure how alerts triggered by this rule are grouped into incidents.  
+- For example, group alerts occurring within a time window (e.g., 5 minutes) into one incident.  
+- A single incident can contain up to 150 alerts. If more alerts are generated, additional incidents will be created.
+
+### Additional options
+
+- **Re-open closed matching incidents:** When enabled, if a new alert matches a previously closed incident, that incident will be re-opened to continue tracking.
+
+### Summary
+
+| Option                     | Required? | Recommended?         |
+|----------------------------|-----------|---------------------|
+| Create incidents           | No        | Yes                 |
+| Group alerts into incidents | No        | Yes                 |
+| Re-open closed incidents    | No        | Depending on process |
+
+---
+
+Activating incident creation and alert grouping is best practice for efficient security operations and should be enabled in production environments.
+
+
+### 🧪 Results Simulation
+
+- After rule creation, use **“Test with current data”** to validate against live workspace data.
+- A timeline chart displays the last 50 rule evaluations with clickable data points for inspection.
+
+---
+
+🔙 Back to: [Custom Rule – Multiple Failed Logins then Success](#🛠️-custom-rule-detect-multiple-failed-logins-followed-by-success)
+
+7. Enable the rule and monitor from **Incidents** or **Logs**
+
+--- 
+
+
+
+---
+
+
 
 
 ---
