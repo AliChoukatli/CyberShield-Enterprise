@@ -54,9 +54,10 @@ SigninLogs
 
 Allows Microsoft Sentinel to recognize and classify entities from the query results.
 
-| Entity Type | Identifier 1        | Identifier 2     | Identifier 3 (optional) |
-|-------------|---------------------|------------------|--------------------------|
-| **Account** | UserPrincipalName   | DisplayName      |                          |
+| Entity Type | Identifier 1 | Identifier 2        | Identifier 3 (optional) |
+|-------------|--------------|---------------------|------------------------|
+| Account     | Name         | UserPrincipalName   | Sid                    |
+
 
 > Select **Account** as the entity type. Use `UserPrincipalName` as the primary identifier, and `DisplayName` as a secondary label for improved alert context.
 
