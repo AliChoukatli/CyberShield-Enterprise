@@ -83,7 +83,7 @@ Allows Microsoft Sentinel to recognize and classify entities from the query resu
 
 6. 📴 Suppression : Stop running query after alert is generated ❌
 
-
+![Failed_Login_Rule_Rev](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Failed_Login_Rule_Rev.png)
 
 ---
 
@@ -96,7 +96,9 @@ When an analytics rule triggers alerts, Microsoft Sentinel can automatically gro
 2. Choose **“Group alerts into a single incident if all entities match”**  
 3. Re-open closed matching incidents → Disabled
 
----
+
+
+![Failed_Login_Rule_Rev2](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Failed_Login_Rule_Rev2.png)
 
 
 ### 🧪 Results Simulation
