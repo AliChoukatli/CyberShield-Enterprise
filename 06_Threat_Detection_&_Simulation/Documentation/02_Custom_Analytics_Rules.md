@@ -37,7 +37,7 @@ Allows Microsoft Sentinel to identify entities from your query results.
 
 | Entity Type | Identifier 1        | Identifier 2 (optional) | Identifier 3 (optional) |
 |-------------|---------------------|--------------------------|--------------------------|
-| **Account** | UserPrincipalName   |                          |                          |
+| **Account** | DisplayName   |                          |                          |
 
 > Use `Account` as the entity type when mapping user logins. `UserPrincipalName` is the most common identifier.
 
