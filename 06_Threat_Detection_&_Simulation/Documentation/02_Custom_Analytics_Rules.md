@@ -48,15 +48,18 @@ Allows Microsoft Sentinel to recognize and classify entities from the query resu
 
 ### 🧾 Custom Details (Key-Value Pairs)
 
-You can surface specific event parameters in alert details using key-value mappings.
+### 📝 Alert Details (Dynamic Alert Name and Description)
 
-| Key           | Value (Query Field)     |
-|---------------|--------------------------|
-| FailedCount   | `FailedCount`            |
-| SuccessTime   | `SuccessTime`            |
-| FirstFailure  | `TimeGenerated`          |
+Customize the alert message using parameters from your query results.
 
-These will appear in the alert under "Custom Details" for better context.
+- **Alert Name Format**  
+  `Brute Force Detected - {{UserPrincipalName}}`
+
+- **Alert Description Format**  
+  `The account {{UserPrincipalName}} had {{FailedCount}} failed login attempts followed by a successful login at {{SuccessTime}}.`
+
+> If a parameter has no value, Microsoft Sentinel will revert to the default alert title and description configured on the first screen.
+
 
 ---
 
