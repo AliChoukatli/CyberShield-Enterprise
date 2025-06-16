@@ -79,9 +79,9 @@ Allows Microsoft Sentinel to recognize and classify entities from the query resu
 
 - **Generate alert when number of query results**: `> 1`
 
-5. 📦 Event Grouping :  ✅ **Trigger an alert for each event*
+5. 📦 Event Grouping : ✅ **Trigger an alert for each event*
 
-6. 📴 Suppression : Stop running query after alert is generated ❌
+6. 📴 Suppression : ❌
 
 ![Failed_Login_Rule_Rev](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Failed_Login_Rule_Rev.png)
 
