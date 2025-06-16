@@ -31,15 +31,17 @@ This rule detects accounts with **multiple failed sign-in attempts followed by a
 5. Configure rule settings as described above
 
 ## ⚙️ Additional Rule Configuration (Sentinel UI Settings)
+
 ### 🧩 Entity Mapping
 
-Allows Microsoft Sentinel to identify entities from your query results.
+Allows Microsoft Sentinel to recognize and classify entities from the query results.
 
-| Entity Type | Identifier 1        | Identifier 2 (optional) | Identifier 3 (optional) |
-|-------------|---------------------|--------------------------|--------------------------|
-| **Account** | DisplayName   |                          |                          |
+| Entity Type | Identifier 1        | Identifier 2     | Identifier 3 (optional) |
+|-------------|---------------------|------------------|--------------------------|
+| **Account** | UserPrincipalName   | DisplayName      |                          |
 
-> Use `Account` as the entity type when mapping user logins. `UserPrincipalName` is the most common identifier.
+> Select **Account** as the entity type. Use `UserPrincipalName` as the primary identifier, and `DisplayName` as a secondary label for improved alert context.
+
 
 
 ---
