@@ -2,7 +2,7 @@
 
 Microsoft Sentinel allows the creation of **custom analytics rules** to detect threats, anomalous behavior, or compliance violations using **Kusto Query Language (KQL)**. This section presents examples of custom rules you can use and adapt for your environment.
 
-## 🛠️ Detect Multiple Failed Logins Followed by Success
+## 🎯 Detect Multiple Failed Logins Followed by Success
 
 **📌 Use Case**: Detect brute force or password spraying attacks where a user fails multiple sign-ins and then succeeds.
 
@@ -101,9 +101,7 @@ When an analytics rule triggers alerts, Microsoft Sentinel can automatically gro
 
 ---
 
-## 📂 Other Examples
-
-- 🔎 Unusual Location Sign-in
+## 🎯 Unusual Location Sign-in
   
 ```kusto
 let timeRange = 7d;
@@ -114,7 +112,7 @@ SigninLogs
 | summarize Locations = make_set(Location), Count = count() by UserPrincipalName
 | where array_length(Locations) >= threshold
 ```
-## 🔎 Unusual Location Sign-in – Analytics Rule Configuration
+## ⚙️ Unusual Location Sign-in – Analytics Rule Configuration
 
 | Setting                  | Value                                                  |
 |--------------------------|--------------------------------------------------------|
@@ -133,7 +131,7 @@ SigninLogs
 | **Suppression**          | Off                                                    |
 
 
-- 📥 Impossible Travel Detection
+## 🎯 Impossible Travel Detection
 
 ```kusto
 SigninLogs
@@ -156,7 +154,7 @@ SigninLogs
 | where SpeedKmh > 500
 | project UserPrincipalName, City, Country, Lat, Lon, TimeGenerated, NextEvent, DistanceKm, SpeedKmh
 ```
-## 🚫 Impossible Travel Detection – Analytics Rule Configuration
+##  ⚙️ Impossible Travel Detection – Analytics Rule Configuration
 
 | Setting                  | Value                                                                 |
 |--------------------------|-----------------------------------------------------------------------|
