@@ -32,4 +32,53 @@ SigninLogs
 ) on UserPrincipalName
 | where SuccessTime > TimeGenerated
 | project UserPrincipalName, FailedCount, TimeGenerated, SuccessTime
+```
 
+## ⚙️ Rule Settings
+
+| Setting                  | Value                                |
+|--------------------------|--------------------------------------|
+| **Rule Name**            | Multiple Failed Logins then Success  |
+| **Tactics**              | Credential Access, Initial Access    |
+| **Severity**             | Medium                               |
+| **Alert Suppression**    | Off                                  |
+| **Custom Event Grouping**| Enabled                              |
+| **Entity Mapping**       | User → UserPrincipalName             |
+| **Alert Frequency**      | Every 5 minutes                      |
+
+---
+
+## 🧩 MITRE ATT&CK Mapping
+
+| Tactic             | Technique                    |
+|--------------------|------------------------------|
+| Credential Access  | Brute Force (T1110)          |
+| Initial Access     | Valid Accounts (T1078)       |
+
+---
+
+## 📌 Notes
+
+- You can adjust `failedThreshold` or `timeRange` to make the rule more or less sensitive.
+- Consider suppressing alerts for known automation accounts or whitelisted users.
+- Always test custom rules in a **non-production environment** before enabling alerts.
+
+---
+
+## ✅ Deployment Method
+
+1. Go to **Microsoft Sentinel → Analytics**
+2. Click on **+ Create → Scheduled query rule**
+3. Paste the KQL in the **Set rule logic** step
+4. Configure rule settings as described above
+5. Enable the rule and monitor from **Incidents** or **Logs**
+
+---
+
+## 📂 Other Examples
+
+- 🔎 Unusual Location Sign-in  
+- 📥 Impossible Travel Detection  
+- 🐚 PowerShell Execution from Office Macro  
+
+*(à documenter dans les futurs fichiers)*
