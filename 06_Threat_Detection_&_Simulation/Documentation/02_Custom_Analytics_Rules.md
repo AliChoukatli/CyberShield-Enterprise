@@ -18,7 +18,7 @@ Microsoft Sentinel allows the creation of **custom analytics rules** to detect t
 | Setting                  | Value                                                                            |
 |--------------------------|----------------------------------------------------------------------------------|
 | **Rule Name**            | Multiple Failed Logins then Success                                              |
-| **MITRE ATT&CK**         | Credential Access(Brute Force (T1110)), Initial Access( Valid Accounts (T1078) ) |
+| **MITRE ATT&CK**         | Credential Access `Brute Force T1110`, Initial Access `T1078 - Valid Accounts`   |
 | **Severity**             | Medium                                                                           |
  
 4. Paste the KQL in the **Set rule logic** step
@@ -105,6 +105,17 @@ When an analytics rule triggers alerts, Microsoft Sentinel can automatically gro
 
 **📌 Description** : This rule flags users signing in from unusual geographic locations, which may indicate suspicious activity or credential compromise. Even if travel is legitimate, such events should be reviewed for consistency with normal user behavior.
 
+**✅ Deployment Method**
+
+1. Go to **Microsoft Sentinel → Analytics**
+2. Click on **+ Create → Scheduled query rule**
+
+| Setting                  | Value                                                                            |
+|--------------------------|----------------------------------------------------------------------------------|
+| **Rule Name**            | Unusual Location Sign-in                                             |
+| **MITRE ATT&CK**         | Initial Access `T1078 - Valid Accounts`                               |
+| **Severity**             | Medium                                                                           |
+
 ```kusto
 let timeRange = 7d;
 let threshold = 3;
@@ -138,6 +149,11 @@ SigninLogs
 **📌 Use Case** : Detects login activities from geographically distant locations that are not possible to travel between within the observed timeframe. This is a strong indicator of account compromise through credential theft or session hijacking.
 
 **📌 Description** : This rule detects sign-ins from distant locations within a short time, indicating impossible travel. It may suggest account compromise through leaked credentials or active attacks.
+
+**✅ Deployment Method**
+
+1. Go to **Microsoft Sentinel → Analytics**
+2. Click on **+ Create → Scheduled query rule**
 
 ```kusto
 SigninLogs
