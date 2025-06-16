@@ -21,7 +21,7 @@ Microsoft Sentinel allows the creation of **custom analytics rules** to detect t
 | **MITRE ATT&CK**         | Credential Access `Brute Force T1110`, Initial Access `T1078 - Valid Accounts`   |
 | **Severity**             | Medium                                                                           |
  
-4. Paste the KQL in the **Set rule logic** step
+3. Paste the KQL in the **Set rule logic** step
 
 #### 📄 2. KQL Query
 
@@ -116,6 +116,10 @@ When an analytics rule triggers alerts, Microsoft Sentinel can automatically gro
 | **MITRE ATT&CK**         | Initial Access `T1078 - Valid Accounts`                               |
 | **Severity**             | Medium                                                                           |
 
+3. Paste the KQL in the **Set rule logic** step
+
+#### 📄 2. KQL Query
+
 ```kusto
 let timeRange = 7d;
 let threshold = 3;
@@ -125,14 +129,40 @@ SigninLogs
 | summarize Locations = make_set(Location), Count = count() by UserPrincipalName
 | where array_length(Locations) >= threshold
 ```
+
+#### 🧩 3. Alert enhancement 
+3.1 - Entity Mapping
+
+Allows Microsoft Sentinel to recognize and classify entities from the query results.
+
+| Entity Type | Identifier 1 | Identifier 2        |
+|-------------|--------------|---------------------|
+| Account     | Name         | UserPrincipalName   |
+
+
+3.2 - Alert Details
+
+- **Alert Name Format**  
+  `Brute Force Detected - {{UserPrincipalName}}`
+
+- **Alert Description Format**  
+  `The account {{UserPrincipalName}} had {{FailedCount}} failed login attempts followed by a successful login at {{SuccessTime}}.`
+
+
+#### 🕒 4. Query Scheduling
+
+| Setting                   | Value          |
+|---------------------------|----------------|
+| Run query every           | 5 minutes      |
+| Lookup data from the last | 7 Days     |
+| First run start time      | 6/16/2025, 12:00 PM |
+
+
 ## ⚙️ Unusual Location Sign-in – Analytics Rule Configuration
 
 | Setting                  | Value                                                  |
 |--------------------------|--------------------------------------------------------|
-| **Objective**            | Detect users with successful sign-ins from multiple unusual geographic locations. |
 | **Entity Mapping**       | `Account` → `UserPrincipalName`                        |
-| **Query Frequency**      | Every 5 minutes                                        |
-| **Lookup Period**        | Last 7 days                                            |
 | **Alert Threshold**      | Trigger alert when query returns more than 0 results  |
 | **Alert Name Format**    | `Unusual Location Sign-in - {{UserPrincipalName}}`     |
 | **Alert Description**    | `User {{UserPrincipalName}} signed in from multiple geographic locations.` |
