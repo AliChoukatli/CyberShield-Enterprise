@@ -8,8 +8,8 @@ This document presents simulated incident response playbooks built for a persona
 
 1. [💥 Malware Infection](#-malware-infection)
 2. [🚫 Phishing Simulation](#-phishing-simulation)
-3. [🔐 Unauthorized Access](#-unauthorized-access)
-4. [🧼 Post-Incident Steps](#-post-incident-steps)
+3. [🧼 Post-Incident Steps](#-post-incident-steps)
+4. [🔐 Unauthorized Access](#-unauthorized-access) (Soon)
 5. [📤 Data Exfiltration](#-data-exfiltration) (Soon)
 
 
