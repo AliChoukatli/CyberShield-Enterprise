@@ -125,8 +125,8 @@ let timeRange = 7d;
 let threshold = 3;
 SigninLogs
 | where TimeGenerated > ago(timeRange)
-| where ResultType == 0 // Successful login
-| summarize Locations = make_set(Location), Count = count() by UserPrincipalName
+| where ResultType == 0  // Successful login
+| summarize Locations = make_set(Location), Count = count() by UserDisplayName
 | where array_length(Locations) >= threshold
 ```
 
