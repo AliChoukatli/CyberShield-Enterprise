@@ -34,14 +34,20 @@ This improves security by reducing the risk of lateral movement through shared o
    - **Platform**: Windows 10 and later
    - **Profile**: Local admin password solution (Windows LAPS)
 
-5. In the policy settings:
-   - Name: `LAPS - Local Admin Password Solution`
-   - Enable `Local admin password management`
-   - Set the **Password rotation interval** (e.g., 30 days).
+| Setting                                  | Description                                                                                              | Default / Notes                                |
+|------------------------------------------|----------------------------------------------------------------------------------------------------------|------------------------------------------------|
+| **Backup Directory**                     | Where to back up the local admin password. Options: Microsoft Entra ID, 2 = Active Directory             |
+| **Administrator Account Name**           | Specify the local admin account name to manage. If not specified, the built-in admin account is managed. | Account must already exist if custom name set. |
+| **Password Complexity**                  | Complexity rules for the password. Values: 4 = LowerCase + Uppercase + Number + Special characters                                                        |
+| **Password Length**                      | Length of the generated password (8–64 characters).                                                      | Default: 14 characters                         |
+| **Post Authentication Actions**          | Action to take after password expires. Default is to reset password and log off the managed account.     | Default: 3 (Reset + logoff)                    |
+| **Post Authentication Reset Delay**      | Hours to wait after authentication before applying post-auth action. 0 disables post-auth actions.       | Default: 24 hours                              |
+| **Automatic Account Management Enabled** | Enable automatic management of the target account password.                                              | Default: False (must enable to activate LAPS)  |
 
-7. Assign the policy to the device groups you want to manage.
+5. Assign the policy to the device groups you want to manage.
 
-8. Save and deploy the policy.
+6. Save and deploy.
+
 
 ---
 
