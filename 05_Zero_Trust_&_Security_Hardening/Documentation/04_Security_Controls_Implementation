@@ -1,7 +1,7 @@
 
-# 🔴  Security Misconfiguration Identified & Resolved
+# 🔴  Security Controls Implementation
 
-## 🔴 1. Disable Legacy Protocols (IMAP, POP3, SMTP)
+## 1. Disable Legacy Protocols (IMAP, POP3, SMTP)
 
  Impact
  
