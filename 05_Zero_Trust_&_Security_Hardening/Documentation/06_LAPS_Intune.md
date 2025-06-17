@@ -18,7 +18,6 @@ This improves security by reducing the risk of lateral movement through shared o
 
 - Devices enrolled and managed by Intune (Windows 10/11)
 - Appropriate Intune licenses and permissions
-- Azure Active Directory Premium P1 or above (for password storage & retrieval)
 - Devices must be Azure AD joined or Hybrid Azure AD joined
 
 ---
