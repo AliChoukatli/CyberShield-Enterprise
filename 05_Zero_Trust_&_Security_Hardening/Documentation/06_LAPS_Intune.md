@@ -35,12 +35,13 @@ This improves security by reducing the risk of lateral movement through shared o
    - **Profile**: Local admin password solution (Windows LAPS)
 
 5. In the policy settings:
-   - Enable **Local admin password management**.
+   - Name: `LAPS - Local Admin Password Solution`
+   - Enable `Local admin password management`
    - Set the **Password rotation interval** (e.g., 30 days).
 
-6. Assign the policy to the device groups you want to manage.
+7. Assign the policy to the device groups you want to manage.
 
-7. Save and deploy the policy.
+8. Save and deploy the policy.
 
 ---
 
