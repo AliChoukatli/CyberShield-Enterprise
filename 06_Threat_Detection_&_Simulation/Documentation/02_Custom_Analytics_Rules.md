@@ -118,7 +118,7 @@ When an analytics rule triggers alerts, Microsoft Sentinel can automatically gro
 
 3. Paste the KQL in the **Set rule logic** step
 
-#### 📄 2. KQL Query
+📄 2. KQL Query
 
 ```kusto
 let timeRange = 7d;
@@ -149,11 +149,11 @@ Allows Microsoft Sentinel to recognize and classify entities from the query resu
 The user has successfully signed in from multiple distinct geographic locations within the last 7 days (threshold: 3 locations).  
 This may indicate suspicious activity such as compromised credentials or account sharing.`
 
-`Details: 
+`Details: `
 `- User: <UserDisplayName>`
 `- Number of unique locations: <Count>`
-`- Locations: <Locations>  
-Please investigate this activity to ensure account security.
+`- Locations: <Locations>  `
+`Please investigate this activity to ensure account security.`
 
 #### 🕒 4. Query Scheduling
 
@@ -176,6 +176,7 @@ Please investigate this activity to ensure account security.
 **Reopen Closed Incident** : Disabled                                                           
 
 ![Unusual_Rule_Rev2](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Unusual_Rule_Rev2.png)
+
 ---
 
 
@@ -189,7 +190,16 @@ Please investigate this activity to ensure account security.
 
 1. Go to **Microsoft Sentinel → Analytics**
 2. Click on **+ Create → Scheduled query rule**
+ 
+5. | Setting                  | Value                                                                            |
+|--------------------------|----------------------------------------------------------------------------------|
+| **Rule Name**            | Impossible Travel Detection                                             |
+| **MITRE ATT&CK**         | Initial Access `T1078 - Valid Accounts`                               |
+| **Severity**             | Medium                                                                           |
 
+3. Paste the KQL in the **Set rule logic** step
+
+📄 KQL Query
 ```kusto
 SigninLogs
 | where ResultType == 0 // Successful login
@@ -211,23 +221,53 @@ SigninLogs
 | where SpeedKmh > 500
 | project UserPrincipalName, City, Country, Lat, Lon, TimeGenerated, NextEvent, DistanceKm, SpeedKmh
 ```
-##  ⚙️ Impossible Travel Detection – Analytics Rule Configuration
 
-| Setting                  | Value                                                                 |
-|--------------------------|-----------------------------------------------------------------------|
-| **Objective**            | Detect impossible travel scenarios (e.g., logins from distant locations in a short time). |
-| **Entity Mapping**       | `Account` → `UserPrincipalName`                                      |
-| **Query Frequency**      | Every 5 minutes                                                      |
-| **Lookup Period**        | Last 24 hours                                                        |
-| **Alert Threshold**      | Trigger alert when query returns more than 0 results                |
-| **Alert Name Format**    | `Impossible Travel Detected - {{UserPrincipalName}}`                |
-| **Alert Description**    | `User {{UserPrincipalName}} appears to have signed in from distant locations within an unrealistic timeframe.` |
-| **MITRE ATT&CK**         | `T1078 - Valid Accounts`                                             |
-| **Severity**             | Medium                                                               |
-| **Incident Creation**    | Enabled                                                              |
-| **Event Grouping**       | Group alerts into incidents if all entities match within 5 minutes   |
-| **Reopen Closed Incident** | Disabled                                                          |
-| **Suppression**          | Off                                                                  |
+#### 🧩 3. Alert enhancement 
+3.1 - Entity Mapping
+
+Allows Microsoft Sentinel to recognize and classify entities from the query results.
+
+| Entity Type | Identifier 1 | Identifier 2        |
+|-------------|--------------|---------------------|
+| Account     | Name         | UserPrincipalName   |
+
+
+3.2 - Alert Details
+
+- **Alert Name Format**  
+`Impossible Travel Detected - {{UserPrincipalName}}`
+
+- **Alert Description Format**  
+`User {{UserPrincipalName}} appears to have signed in from distant locations within an unrealistic timeframe.`
+
+
+#### 🕒 4. Query Scheduling
+
+| Setting                   | Value               |
+|---------------------------|---------------------|
+| Run query every           | 5 Min           |
+| Lookup data from the last | Last 24 Hours        |
+| First run start time      | 6/17/2025, 12:00 PM |
+
+**Alert Threshold** : Trigger alert when query returns more than 0 results 
+**Event Grouping** : Enabled
+**Suppression** : Off                    
+
+![Unusual_Rule_Rev](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Imp_Travael_Rule_Rev.png)
+
+### ⚙️ Incident Settings
+
+**Incident Creation** :  Enabled                                                            
+**Alert grouping** : 7 Days
+**Reopen Closed Incident** : Disabled   
+
+![Unusual_Rule_Rev2](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/ImpTravel_Rule_Rev2.png)
+
+---
+
+
+
+
 
 
 ---
