@@ -200,6 +200,7 @@ This may indicate suspicious activity such as compromised credentials or account
 3. Paste the KQL in the **Set rule logic** step
 
 📄 KQL Query
+
 ```kusto
 SigninLogs
 | where ResultType == 0 // Successful login
@@ -216,8 +217,8 @@ SigninLogs
          NextUser = next(UserPrincipalName, 1)
 | where UserPrincipalName == NextUser
 | extend DistanceKm = geo_distance_2points(Lat, Lon, NextLat, NextLon),
-         TimeDiff = datetime_diff("Second", NextEvent, TimeGenerated),
-         SpeedKmh = (DistanceKm / (TimeDiff / 3600))
+         TimeDiff = datetime_diff("Second", NextEvent, TimeGenerated)
+| extend SpeedKmh = DistanceKm / (TimeDiff / 3600.0)
 | where SpeedKmh > 500
 | project UserPrincipalName, City, Country, Lat, Lon, TimeGenerated, NextEvent, DistanceKm, SpeedKmh
 ```
