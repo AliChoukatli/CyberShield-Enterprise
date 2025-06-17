@@ -22,25 +22,34 @@ This improves security by reducing the risk of lateral movement through shared o
 
 ---
 
-## How to Enable LAPS via Intune
+## How to Enable LAPS via Intune (2025)
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com).
 
-2. Navigate to **Devices** > **Configuration profiles**.
+2. Navigate to **Endpoint security** > **Account protection**.
 
-3. Click **+ Create profile**:
-   - Platform: **Windows 10 and later**
-   - Profile type: **Templates** > **Endpoint protection**
+3. Click **+ Create Policy**.
 
-4. In the profile settings, expand **Local device security options**.
+4. Configure the policy:
+   - **Platform**: Windows 10 and later
+   - **Profile**: Local admin password management
 
-5. Find the setting **Local admin password management** and enable it.
+5. In the policy settings:
+   - Enable **Local admin password management**.
+   - Set the **Password rotation interval** (e.g., 30 days).
 
-6. Configure the password rotation interval (e.g., 30 days).
+6. Assign the policy to the device groups you want to manage.
 
-7. Assign the profile to the device groups you want to manage.
+7. Save and deploy the policy.
 
-8. Save and deploy.
+---
+
+### Notes
+
+- This policy automatically manages the local administrator password on Azure AD joined or Hybrid Azure AD joined devices.
+- The password is rotated automatically based on the configured interval.
+- Monitor password retrieval permissions via Azure AD roles to maintain security.
+
 
 ---
 
