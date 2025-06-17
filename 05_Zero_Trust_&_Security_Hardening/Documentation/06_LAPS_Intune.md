@@ -6,17 +6,13 @@ Local Administrator Password Management (LAPS) in Intune allows you to automatic
 
 This improves security by reducing the risk of lateral movement through shared or static local admin passwords.
 
----
-
-## Features
+## 📘 Table of Contents
 
 - Unique local administrator password per device
 - Automatic password rotation (configurable interval)
 - Secure storage of passwords in Azure Active Directory
 - Retrieval of passwords via Intune or PowerShell
 - Integration possibilities with Microsoft Sentinel for alerting (not native in Intune)
-
----
 
 ## Prerequisites
 
