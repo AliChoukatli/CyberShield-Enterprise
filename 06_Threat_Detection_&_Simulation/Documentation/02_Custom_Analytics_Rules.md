@@ -190,8 +190,8 @@ This may indicate suspicious activity such as compromised credentials or account
 
 1. Go to **Microsoft Sentinel → Analytics**
 2. Click on **+ Create → Scheduled query rule**
- 
-5. | Setting                  | Value                                                                            |
+
+| Setting                  | Value                                                                            |
 |--------------------------|----------------------------------------------------------------------------------|
 | **Rule Name**            | Impossible Travel Detection                                             |
 | **MITRE ATT&CK**         | Initial Access `T1078 - Valid Accounts`                               |
