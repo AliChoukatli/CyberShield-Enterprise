@@ -15,18 +15,107 @@ This document presents simulated incident response playbooks built for a persona
 
 ---
 
-## 💥 Malware Infection
+## 💥 Malware Infection Response – EICAR Simulation
 
 ### 🎯 Objective:
 Simulate malware detection and respond using Microsoft Defender and local tools.
 
-### 🛠️ Steps in Lab:
-- Trigger a Defender alert using the **EICAR test file**
-- Check alert in Microsoft Defender portal (if configured)
-- Manually isolate the test machine (or describe the command/script)
-- Analyze logs (Event Viewer, Defender logs)
-- Remove the file and perform a full antivirus scan
-- Document the investigation (screenshots, hash, detection path)
+## 🎯 Objective
+
+- Trigger and analyze a malware detection scenario.
+- Practice isolation, investigation, and remediation steps.
+- Use built-in Windows Defender and PowerShell tools.
+
+## 🧪 Test Setup
+
+- **Test file used**: EICAR Standard Antivirus Test File (harmless)
+- **Test device**: Windows 11 Pro (lab VM)
+- **Security tool**: Microsoft Defender Antivirus (real-time protection ON)
+
+## 🚨 Simulation Steps
+
+### 1. Generate the EICAR Test File
+
+Open Notepad and paste the following string:
+
+```yaml
+X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*
+```
+
+Save the file as `eicar.com` (you may need to allow file extension changes).
+
+➡️ **Expected Result**: Microsoft Defender will immediately detect and quarantine the file.
+
+---
+
+### 2. Review Alert in Microsoft Defender
+
+- Open **Windows Security > Virus & threat protection > Protection history**
+- Locate the alert:
+
+
+Threat detected: Virus: EICAR-Test-File
+Status: Quarantined
+Action: No action needed
+
+
+➡️ Capture screenshot for documentation.
+
+---
+
+### 3. Isolate the Machine (Optional in Lab)
+
+In production, you would isolate the endpoint via MDE or network-level.
+
+In a lab, simulate isolation by:
+- Disconnecting the VM from the network
+- Or using this PowerShell command:
+
+```powershell
+Disable-NetAdapter -Name "Ethernet" -Confirm:$false
+```
+4. Investigate the Detection
+Review Windows Defender logs:
+
+```powershell
+Get-MpThreatDetection
+```
+
+Also check Event Viewer:
+
+Applications and Services Logs > Microsoft > Windows > Windows Defender > Operational
+
+Look for event ID 1116 (threat detected)
+
+➡️ Document:
+
+File path
+
+Detection name
+
+Threat severity
+
+Timestamp
+
+Hash (use PowerShell to get hash if file still exists)
+
+
+5. Perform Antivirus Scan
+Run a full scan:
+
+```powershell
+Start-MpScan -ScanType FullScan
+```
+➡️ Wait for scan completion. Save logs if available.
+
+6. Clean-Up & Restore Connectivity
+Confirm that the test file is quarantined or deleted
+
+Re-enable the network adapter:
+
+```powershell
+Enable-NetAdapter -Name "Ethernet"
+```
 
 ---
 
