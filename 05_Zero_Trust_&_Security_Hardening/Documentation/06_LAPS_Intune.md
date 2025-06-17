@@ -32,7 +32,7 @@ This improves security by reducing the risk of lateral movement through shared o
 
 4. Configure the policy:
    - **Platform**: Windows 10 and later
-   - **Profile**: Local admin password management
+   - **Profile**: Local admin password solution (Windows LAPS)
 
 5. In the policy settings:
    - Enable **Local admin password management**.
