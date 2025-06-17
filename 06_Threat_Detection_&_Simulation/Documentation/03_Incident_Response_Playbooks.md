@@ -1,6 +1,6 @@
-# 📘 Incident Response Playbooks
+# 📘 Incident Response Playbooks (LAB)
 
-This document outlines key incident response playbooks used within CyberShield Enterprise to quickly detect, contain, eradicate, and recover from security incidents while maintaining operational continuity.
+This document presents simulated incident response playbooks built for a personal cybersecurity lab project. Each playbook shows how to detect, investigate, contain, and remediate different security incidents using realistic and executable steps in a non-production environment.
 
 ---
 
@@ -9,143 +9,100 @@ This document outlines key incident response playbooks used within CyberShield E
 1. [💥 Malware Infection](#-malware-infection)
 2. [🔐 Unauthorized Access](#-unauthorized-access)
 3. [📤 Data Exfiltration](#-data-exfiltration)
-4. [🚫 Phishing Attempt](#-phishing-attempt)
-5. [🧑‍💻 Insider Threat](#-insider-threat)
-6. [📱 Lost or Stolen Device](#-lost-or-stolen-device)
-7. [🛠️ Ransomware Attack](#-ransomware-attack)
-8. [📝 Lessons Learned](#-lessons-learned)
+4. [🚫 Phishing Simulation](#-phishing-simulation)
+5. [🧪 Ransomware Simulation](#-ransomware-simulation)
+6. [🧼 Post-Incident Steps](#-post-incident-steps)
 
 ---
 
 ## 💥 Malware Infection
 
-**Objective:** Detect and contain malware to prevent lateral movement.
+### 🎯 Objective:
+Simulate malware detection and respond using Microsoft Defender and local tools.
 
-### 🔹 Detection Sources:
-- Microsoft Defender for Endpoint alerts
-- Sentinel alerts on suspicious process execution or file hashes
-
-### 🔹 Actions:
-- Isolate affected device
-- Retrieve suspicious file hash and scan across environment
-- Run full antivirus scan
-- Collect forensic data (memory dump, event logs)
-- Block associated hash/IP in Microsoft Defender / Firewall
+### 🛠️ Steps in Lab:
+- Trigger a Defender alert using the **EICAR test file**
+- Check alert in Microsoft Defender portal (if configured)
+- Manually isolate the test machine (or describe the command/script)
+- Analyze logs (Event Viewer, Defender logs)
+- Remove the file and perform a full antivirus scan
+- Document the investigation (screenshots, hash, detection path)
 
 ---
 
 ## 🔐 Unauthorized Access
 
-**Objective:** Identify and stop compromised accounts or privilege misuse.
+### 🎯 Objective:
+Detect and handle unauthorized login behavior (e.g., impossible travel) using Sentinel.
 
-### 🔹 Detection Sources:
-- Impossible travel / unusual location rule in Sentinel
-- Audit logs showing privilege escalation
-
-### 🔹 Actions:
-- Disable user account
-- Reset password + enforce MFA
-- Review login history and access logs
-- Conduct impact analysis on accessed data/resources
-- Review user role and access rights
+### 🛠️ Steps in Lab:
+- Simulate multiple sign-ins from different IPs or locations
+- Use **SigninLogs** in Sentinel to trigger “Impossible Travel” rule
+- Investigate sign-in details (device, location, timestamp)
+- Reset the password of the test user account
+- Enforce MFA (or document the setting in Azure/Entra)
+- Include screenshots from Sentinel and your remediation steps
 
 ---
 
 ## 📤 Data Exfiltration
 
-**Objective:** Prevent unauthorized sensitive data transfer.
+### 🎯 Objective:
+Simulate an attempt to exfiltrate sensitive files.
 
-### 🔹 Detection Sources:
-- Sentinel alerts: large outbound traffic or use of unsanctioned apps
-- Microsoft Purview DLP alerts
-
-### 🔹 Actions:
-- Isolate endpoint or block outbound traffic
-- Investigate data transferred (size/type/target)
-- Retrieve browser and application history
-- Escalate to legal and compliance if PII is involved
-
----
-
-## 🚫 Phishing Attempt
-
-**Objective:** Stop email-based social engineering attacks.
-
-### 🔹 Detection Sources:
-- Microsoft Defender for Office alert
-- User-reported suspicious emails via Report Message add-in
-
-### 🔹 Actions:
-- Retrieve and analyze the email header and link
-- Quarantine the email using Microsoft 365 Defender
-- Search and purge similar messages from mailboxes
-- Check clicked links or credential reuse
-- Educate user & test awareness via simulation
+### 🛠️ Steps in Lab:
+- Create a fake confidential file
+- Simulate exfiltration via OneDrive upload or PowerShell script
+- Monitor file access events, PowerShell logs, or browser history
+- Document upload behavior and script used
+- Remove the file and block external uploads (simulate)
+- Add logs and screenshots to your repo
 
 ---
 
-## 🧑‍💻 Insider Threat
+## 🚫 Phishing Simulation
 
-**Objective:** Detect and respond to malicious internal behavior.
+### 🎯 Objective:
+Respond to a simulated phishing email in a safe lab setup.
 
-### 🔹 Detection Sources:
-- Sentinel behavioral rules (e.g. data copied to USB)
-- Access anomalies (after-hours access, large downloads)
-
-### 🔹 Actions:
-- Review user activities over 30 days
-- Monitor real-time behavior with live response tools
-- Alert HR and legal teams
-- If confirmed, disable account and recover data
-
----
-
-## 📱 Lost or Stolen Device
-
-**Objective:** Minimize risk from lost corporate devices.
-
-### 🔹 Detection Sources:
-- User report
-- Missing device heartbeat in Defender or Intune
-
-### 🔹 Actions:
-- Attempt remote wipe via Intune
-- Block device from accessing corporate resources
-- Revoke session tokens and certificates
-- File police report (if needed)
-- Document serial/device ID
+### 🛠️ Steps in Lab:
+- Craft a fake phishing email in HTML (locally or via Outlook test account)
+- Analyze email headers and link behavior
+- Simulate reporting (e.g., using Outlook “Report Message” or manual review)
+- Investigate the URL and possible user interaction
+- Document remediation: deletion, training message, awareness follow-up
+- Include screenshots of email, header, analysis tools
 
 ---
 
-## 🛠️ Ransomware Attack
+## 🧪 Ransomware Simulation
 
-**Objective:** Stop encryption, identify ransomware family, recover data.
+### 🎯 Objective:
+Demonstrate a basic ransomware scenario and how to respond.
 
-### 🔹 Detection Sources:
-- Defender alerts for mass file renaming/encryption
-- User reports of ransom note or file changes
-
-### 🔹 Actions:
-- Immediately isolate device
-- Identify ransomware type and IOCs
-- Check backups and initiate recovery
-- Notify security and legal teams
-- Preserve disk image for law enforcement
+### 🛠️ Steps in Lab:
+- Use a **safe ransomware simulator** (e.g., rename files with .locked extension)
+- Trigger a Defender alert (if possible)
+- Manually isolate the system (network disconnection or VM pause)
+- Simulate recovery from backup or file restoration
+- Document the extension used, affected files, alert details
+- Share screenshots and cleanup steps
 
 ---
 
-## 📝 Lessons Learned
+## 🧼 Post-Incident Steps
 
-After each incident:
+After each simulation:
 
-- Conduct a **post-incident review**
-- Update affected **playbooks** if necessary
-- Improve **detection logic** in Microsoft Sentinel / Defender
-- Share anonymized **case study** with IT/security teams
-- Reassess business impact and compliance gaps
+- Write a short summary of actions taken
+- Include key findings and challenges
+- Capture screenshots of alerts, logs, commands used
+- List improvements (e.g., update Defender policy or Sentinel rule)
+- Mark the playbook as “complete” or “needs review”
 
 ---
 
-**Maintained by:** CyberShield Enterprise Security Team  
-**Last Updated:** June 2025
 
+
+**👤 Author:** Ali Choukatli – CyberShield  
+**📅 Last Updated:** June 2025
