@@ -149,7 +149,7 @@ Allows Microsoft Sentinel to recognize and classify entities from the query resu
 The user has successfully signed in from multiple distinct geographic locations within the last 7 days (threshold: 3 locations).  
 This may indicate suspicious activity such as compromised credentials or account sharing.`
 
-`Details:  `
+`Details: 
 `- User: <UserDisplayName>`
 `- Number of unique locations: <Count>`
 `- Locations: <Locations>  
@@ -164,14 +164,14 @@ Please investigate this activity to ensure account security.
 | First run start time      | 6/16/2025, 12:00 PM |
 
 **Alert Threshold** : Trigger alert when query returns more than 0 results 
-**Event Grouping** | Group alerts into incidents if all entities match within 5 minutes 
-**Suppression** : | Off                                                                
+**Event Grouping** : Enabled
+**Suppression** : Off                                                                
 
 ### ⚙️ Incident Settings
 
-**Incident Creation**      | Enabled                                                            
-**Alert grouping** : 
-**Reopen Closed Incident** | Disabled                                                           
+**Incident Creation** :  Enabled                                                            
+**Alert grouping** : 7 Days
+**Reopen Closed Incident** : Disabled                                                           
 
 ---
 
