@@ -7,11 +7,12 @@ This document presents simulated incident response playbooks built for a persona
 ## 🧩 Table of Contents
 
 1. [💥 Malware Infection](#-malware-infection)
-2. [🔐 Unauthorized Access](#-unauthorized-access)
-3. [📤 Data Exfiltration](#-data-exfiltration)
-4. [🚫 Phishing Simulation](#-phishing-simulation)
-5. [🧪 Ransomware Simulation](#-ransomware-simulation)
-6. [🧼 Post-Incident Steps](#-post-incident-steps)
+2. [🚫 Phishing Simulation](#-phishing-simulation)
+3. [🔐 Unauthorized Access](#-unauthorized-access)
+4. [🧼 Post-Incident Steps](#-post-incident-steps)
+5. [📤 Data Exfiltration](#-data-exfiltration) (Soon)
+6. [🧪 Ransomware Simulation](#-ransomware-simulation) (Soon)
+
 
 ---
 
