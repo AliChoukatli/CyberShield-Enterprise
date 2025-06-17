@@ -254,7 +254,7 @@ Allows Microsoft Sentinel to recognize and classify entities from the query resu
 **Event Grouping** : Enabled
 **Suppression** : Off                    
 
-![Unusual_Rule_Rev](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Imp_Travael_Rule_Rev.png)
+![Imp_Travel_Rule_Rev](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Imp_Travel_Rule_Rev.png)
 
 ### ⚙️ Incident Settings
 
@@ -262,13 +262,7 @@ Allows Microsoft Sentinel to recognize and classify entities from the query resu
 **Alert grouping** : 7 Days
 **Reopen Closed Incident** : Disabled   
 
-![Unusual_Rule_Rev2](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/ImpTravel_Rule_Rev2.png)
+![Imp_Travel_Rule_Rev](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Imp_Travel_Rule_Rev2.png)
 
 ---
 
-
-
-
-
-
----
