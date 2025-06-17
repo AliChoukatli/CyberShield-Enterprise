@@ -165,7 +165,9 @@ Please investigate this activity to ensure account security.
 
 **Alert Threshold** : Trigger alert when query returns more than 0 results 
 **Event Grouping** : Enabled
-**Suppression** : Off                                                                
+**Suppression** : Off                    
+
+![Unusual_Rule_Rev](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Unusual_Rule_Rev.png)
 
 ### ⚙️ Incident Settings
 
@@ -173,6 +175,7 @@ Please investigate this activity to ensure account security.
 **Alert grouping** : 7 Days
 **Reopen Closed Incident** : Disabled                                                           
 
+![Unusual_Rule_Rev2](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Unusual_Rule_Rev2.png)
 ---
 
 
