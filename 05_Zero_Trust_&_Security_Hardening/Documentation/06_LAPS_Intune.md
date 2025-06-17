@@ -47,7 +47,7 @@ This improves security by reducing the risk of lateral movement through shared o
 | **Automatic Account Management Randomize Name**  | the name of the target account will not use a random numeric suffix                   | 
 | **Target Account**                               | 0 – Built-in local Administrator                                                      | 
 | **Name or Prefix of Managed Account**            | `WLapsAdmin` (or leave default)      
-| **Automatic Account Management Target**          | Manage a new account created by Windows LAPS
+| **Automatic Account Management Target**          | Manage a new account custom administarator account | 
 
 5. Assign the policy to the device groups you want to manage.
 
