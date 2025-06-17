@@ -86,15 +86,6 @@ Detect when a local admin password is retrieved or rotated and trigger an alert 
 
 ---
 
-## Security Best Practices
-
-- Ensure the **password rotation interval** complies with your organization’s security policy.  
-- Restrict **who can retrieve** the local admin password in Azure AD / Intune to a minimum set of trusted users.  
-- Combine LAPS with additional security controls, such as:
-  - Multi-Factor Authentication (MFA)  
-  - Endpoint Detection and Response (EDR) solutions  
-- Perform regular audits of access to sensitive passwords.
-
 
 
 
