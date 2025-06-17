@@ -159,7 +159,7 @@ Please investigate this activity to ensure account security.
 
 | Setting                   | Value               |
 |---------------------------|---------------------|
-| Run query every           | 5 minutes           |
+| Run query every           | 5 Hours           |
 | Lookup data from the last | 7 Days              |
 | First run start time      | 6/16/2025, 12:00 PM |
 
