@@ -37,17 +37,19 @@ This improves security by reducing the risk of lateral movement through shared o
 | Setting                                          | Description                                                                                             
 |--------------------------------------------------|----------------------------------------------------------------------------------------------------------
 | **Backup Directory**                             | Entra ID                                                                                                 |
+| **Password Age Days**                            | 30                                                                                                        |
 | **Administrator Account Name**                   | Leave Empty                                                                                              | 
 | **Password Complexity**                          | LowerCase + Uppercase + Numbers + Special characters                                                     | 
 | **Password Length**                              | 16                                                                                                       | 
 | **Post Authentication Actions**                  | Reset password and log off the managed account.                                                          | 
 | **Post Authentication Reset Delay**              | 24                                                                                                       |
 | **Automatic Account Management Enabled**         | The target account will be automatically managed                                                         | 
-| **Enable Account**                               | Enabled                                                                               | 
-| **Automatic Account Management Randomize Name**  | the name of the target account will not use a random numeric suffix                   | 
-| **Target Account**                               | 0 – Built-in local Administrator                                                      | 
-| **Name or Prefix of Managed Account**            | `WLapsAdmin` (or leave default)      
-| **Automatic Account Management Target**          | Manage a new account custom administarator account | 
+| **Automatic Account Management Enable Account**  | The target account will be enabled                                                                       | 
+| **Automatic Account Management Randomize Name**  | the name of the target account will not use a random numeric suffix                                      | 
+| Automatic Account Management Target              | Built-in local Administrator                                                                             | 
+| **Name or Prefix of Managed Account**            | `WLapsAdmin` (or leave default)                                                                          | 
+| **Automatic Account Management Target**          | Manage a new account custom administarator account                                                       | 
+| **Automatic Account Management Name Or Prefix**  |  Laps_Admin                                                                                              | 
 
 5. Assign the policy to the device groups you want to manage.
 
