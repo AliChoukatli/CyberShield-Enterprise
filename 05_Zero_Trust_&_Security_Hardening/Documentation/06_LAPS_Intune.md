@@ -34,20 +34,26 @@ This improves security by reducing the risk of lateral movement through shared o
    - **Platform**: Windows 10 and later
    - **Profile**: Local admin password solution (Windows LAPS)
 
-| Setting                                  | Description                                                                                              | Default / Notes                                |
-|------------------------------------------|----------------------------------------------------------------------------------------------------------|------------------------------------------------|
-| **Backup Directory**                     | Where to back up the local admin password. Options: Microsoft Entra ID, 2 = Active Directory             |
-| **Administrator Account Name**           | Specify the local admin account name to manage. If not specified, the built-in admin account is managed. | Account must already exist if custom name set. |
-| **Password Complexity**                  | Complexity rules for the password. Values: 4 = LowerCase + Uppercase + Number + Special characters                                                        |
-| **Password Length**                      | Length of the generated password (8–64 characters).                                                      | Default: 14 characters                         |
-| **Post Authentication Actions**          | Action to take after password expires. Default is to reset password and log off the managed account.     | Default: 3 (Reset + logoff)                    |
-| **Post Authentication Reset Delay**      | Hours to wait after authentication before applying post-auth action. 0 disables post-auth actions.       | Default: 24 hours                              |
-| **Automatic Account Management Enabled** | Enable automatic management of the target account password.                                              | Default: False (must enable to activate LAPS)  |
+| Setting                                          | Description                                                                                             
+|--------------------------------------------------|----------------------------------------------------------------------------------------------------------
+| **Backup Directory**                             | Entra ID                                                                                                 |
+| **Administrator Account Name**                   | Leave Empty                                                                                              | 
+| **Password Complexity**                          | LowerCase + Uppercase + Numbers + Special characters                                                     | 
+| **Password Length**                              | 16                                                                                                       | 
+| **Post Authentication Actions**                  | Reset password and log off the managed account.                                                          | 
+| **Post Authentication Reset Delay**              | 24                                                                                                       |
+| **Automatic Account Management Enabled**         | The target account will be automatically managed                                                         | 
+| **Enable Account**                               | Enabled                                                                               | 
+| **Automatic Account Management Randomize Name**  | the name of the target account will not use a random numeric suffix                   | 
+| **Target Account**                               | 0 – Built-in local Administrator                                                      | 
+| **Name or Prefix of Managed Account**            | `WLapsAdmin` (or leave default)      
+| **Automatic Account Management Target**          | Manage a new account created by Windows LAPS
 
 5. Assign the policy to the device groups you want to manage.
 
 6. Save and deploy.
 
+![LAPS_Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Policy.png)
 
 ---
 
