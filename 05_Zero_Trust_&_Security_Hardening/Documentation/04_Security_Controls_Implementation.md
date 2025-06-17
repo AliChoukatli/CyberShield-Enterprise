@@ -61,7 +61,7 @@ Computer Management → Local Users and Groups → Groups → Administrators
 
 
 
-## 🔴 2. Turn off Software Installations
+## 2. Turn off Software Installations
 
 📍 **Goal:** Prevent users from installing unauthorized software (.msi or .exe)
 
