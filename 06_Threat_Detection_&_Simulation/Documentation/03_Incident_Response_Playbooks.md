@@ -11,7 +11,6 @@ This document presents simulated incident response playbooks built for a persona
 3. [🔐 Unauthorized Access](#-unauthorized-access)
 4. [🧼 Post-Incident Steps](#-post-incident-steps)
 5. [📤 Data Exfiltration](#-data-exfiltration) (Soon)
-6. [🧪 Ransomware Simulation](#-ransomware-simulation) (Soon)
 
 
 ---
@@ -165,18 +164,6 @@ Respond to a simulated phishing email in a safe lab setup.
 
 ---
 
-## 🧪 Ransomware Simulation
-
-### 🎯 Objective:
-Demonstrate a basic ransomware scenario and how to respond.
-
-### 🛠️ Steps in Lab:
-- Use a **safe ransomware simulator** (e.g., rename files with .locked extension)
-- Trigger a Defender alert (if possible)
-- Manually isolate the system (network disconnection or VM pause)
-- Simulate recovery from backup or file restoration
-- Document the extension used, affected files, alert details
-- Share screenshots and cleanup steps
 
 ---
 
