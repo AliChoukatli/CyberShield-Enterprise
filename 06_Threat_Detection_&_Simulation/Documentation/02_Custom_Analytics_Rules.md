@@ -137,17 +137,31 @@ Allows Microsoft Sentinel to recognize and classify entities from the query resu
 
 | Entity Type | Identifier 1 | Identifier 2        |
 |-------------|--------------|---------------------|
-| Account     | Name         | UserPrincipalName   |
+| Account     | Name         | UserDisplayName     |
 
 
 3.2 - Alert Details
 
 - **Alert Name Format**  
-`Unusual Location Sign-in - {{UserPrincipalName}}`
-
+`Unusual Location Sign-in - <UserDisplayName>`
 - **Alert Description Format**  
-`User {{UserPrincipalName}} signed in from multiple geographic locations.`
+`An unusual sign-in was detected for user '<UserDisplayName> 
+The user has successfully signed in from multiple distinct geographic locations within the last 7 days (threshold: 3 locations).  
+This may indicate suspicious activity such as compromised credentials or account sharing.`
 
+Details:  
+- User: <UserDisplayName>  
+- Number of unique locations: <Count>  
+- Locations: <Locations>  
+
+Please investigate this activity to ensure account security.
+
+Details:  
+- User: <UserDisplayName>  
+- Number of unique locations: <Count>  
+- Locations: <Locations>  
+
+Please investigate this activity to ensure account security.
 #### 🕒 4. Query Scheduling
 
 | Setting                   | Value               |
