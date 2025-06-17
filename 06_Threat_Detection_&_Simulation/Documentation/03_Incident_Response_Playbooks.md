@@ -134,35 +134,6 @@ Respond to a simulated phishing email in a safe lab setup.
 
 ---
 
-## 🔐 Unauthorized Access
-
-### 🎯 Objective:
-Detect and handle unauthorized login behavior (e.g., impossible travel) using Sentinel.
-
-### 🛠️ Steps in Lab:
-- Simulate multiple sign-ins from different IPs or locations
-- Use **SigninLogs** in Sentinel to trigger “Impossible Travel” rule
-- Investigate sign-in details (device, location, timestamp)
-- Reset the password of the test user account
-- Enforce MFA (or document the setting in Azure/Entra)
-- Include screenshots from Sentinel and your remediation steps
-
-
----
-
-## 📤 Data Exfiltration
-
-### 🎯 Objective:
-Simulate an attempt to exfiltrate sensitive files.
-
-### 🛠️ Steps in Lab:
-- Create a fake confidential file
-- Simulate exfiltration via OneDrive upload or PowerShell script
-- Monitor file access events, PowerShell logs, or browser history
-- Document upload behavior and script used
-- Remove the file and block external uploads (simulate)
-- Add logs and screenshots to your repo
----
 
 ## 🧼 Post-Incident Steps
 
