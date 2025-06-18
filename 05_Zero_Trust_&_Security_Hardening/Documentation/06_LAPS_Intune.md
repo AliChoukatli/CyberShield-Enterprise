@@ -76,10 +76,6 @@ This improves security by reducing the risk of lateral movement through shared o
 - Device must be enrolled in Intune with LAPS configured.
 - You are running the commands from an **admin workstation**, not the client device.
 
----
-
-### Step-by-Step Guide
-
 #### 1. 📦 Install Microsoft Graph PowerShell
 
 - Current User :
