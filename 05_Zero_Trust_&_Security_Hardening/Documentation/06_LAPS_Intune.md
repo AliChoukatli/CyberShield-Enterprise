@@ -102,9 +102,7 @@ Connect-MgGraph -Scopes "DeviceManagementManagedDevices.Read.All"
 Go to:
 
 - [Microsoft Intune Admin Center](https://endpoint.microsoft.com).
-
 - Navigate to Devices > select the device > Hardwware > Microsoft Entra Device ID
-
 - Copy the Device ID field
   
 ```powershell
