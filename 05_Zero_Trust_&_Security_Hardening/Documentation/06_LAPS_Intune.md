@@ -37,7 +37,7 @@ This improves security by reducing the risk of lateral movement through shared o
 
 ---
 
-## 1. Create PowerShell Script to Add Local Administrator Account
+## 1. 🚀 Step 1 - Create Local Admin Script
 
 The following PowerShell script checks if the local user `LAPS_Admin` exists. If not, it creates the account, sets it to enabled, and adds it to the local Administrators group.
 
@@ -69,7 +69,7 @@ New-LocalUser -Name $AccountName -Password $Password -FullName "LAPS Managed Adm
 
 ---
 
-## 2. Create LAPS Policy via Intune 
+## 🚀 Step 2 - Create and Assign LAPS Policy
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com).
 
@@ -114,7 +114,7 @@ New-LocalUser -Name $AccountName -Password $Password -FullName "LAPS Managed Adm
 
 ---
 
-## 3.  Create and Deploy the LAPS Admin Script via Intune
+## 🚀 Step 3 - Deploy the Script via Intune
 
 1. Go to **Microsoft Intune Admin Center**  
    Navigate to **Devices** > **Scripts** > Click **+ Add**.
@@ -146,7 +146,9 @@ New-LocalUser -Name $AccountName -Password $Password -FullName "LAPS Managed Adm
 ---
 
 
-## 4. Deployment and Operation on Client Devices
+## 💻 Step 4 - Client Device Behavior
+
+Copy the password and view its expiration date
 
 - Upon receiving the PowerShell script, client devices will create the `LAPS_Admin` local administrator account (if not already present).
 - GO to a client machine : eg: `John Doe`
@@ -154,14 +156,58 @@ New-LocalUser -Name $AccountName -Password $Password -FullName "LAPS Managed Adm
 ![LAPS_Admin_JD](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Admin_JD.png)
 
 - The LAPS policy will manage and rotate the password of this account automatically according to your configured schedule.
-
 - The password is securely backed up to Azure AD or your specified backup directory.
 
 
-## 5. Monitoring and Security
+---
 
-- Use Azure AD role-based access control (RBAC) to restrict and monitor who can retrieve the managed passwords.
+## 🔐 Step 5 - Retrieve and Rotate Passwords
+Retrieve via Intune:
+Go to Devices > [Device Name] > Local admin password
 
-- Regularly audit access logs for any unauthorized attempts.
+Copy the password and view its expiration date
 
-- Monitor device compliance and script execution status via Intune reporting.
+Force Immediate Rotation:
+On the client, run:
+```powershell
+Invoke-LapsPolicyProcessing -Force
+```
+
+---
+
+##  Step 6 - Monitoring and Auditing
+Role-Based Access Control (RBAC):
+To retrieve passwords, users must be in one of the following roles:
+
+Global Administrator
+
+Intune Administrator
+
+Local Administrator Password Reader (Recommended Least Privilege)
+
+Audit Access:
+In Azure AD > Audit Logs, monitor access using:
+
+```kql
+AuditLogs
+| where ActivityDisplayName contains "Read local administrator password"
+```
+Check LAPS Client Status:
+Run the following command on the client:
+
+```powershell
+Get-LapsDiagnostics
+```
+
+## 📡 Step 7 - Optional: Integrate with Microsoft Sentinel
+To monitor who accessed local admin passwords:
+
+```kql
+AuditLogs
+| where ActivityDisplayName contains "Read local administrator password"
+| project TimeGenerated, InitiatedBy, ActivityDisplayName, TargetResources
+```
+-> Trigger alerts if password access occurs outside business hours or from suspicious users.
+
+
+
