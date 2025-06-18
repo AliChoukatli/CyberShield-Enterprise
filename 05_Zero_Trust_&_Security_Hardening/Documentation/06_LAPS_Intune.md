@@ -23,15 +23,7 @@ This improves security by reducing the risk of lateral movement through shared o
 
 ---
 
-## 1. Automating Local Administrator Account Creation for LAPS via Intune
-
-## Overview
-
-To properly manage local administrator passwords using LAPS (Local Administrator Password Solution) via Intune, the target local administrator account (e.g., `LAPS_Admin`) must exist on the client devices. 
-
-## Steps to Automate LAPS_Admin Account Creation and Deployment
-
-### 1. Create PowerShell Script to Add Local Administrator Account
+## 1. Create PowerShell Script to Add Local Administrator Account
 
 The following PowerShell script checks if the local user `LAPS_Admin` exists. If not, it creates the account, sets it to enabled, and adds it to the local Administrators group.
 
@@ -60,7 +52,7 @@ New-LocalUser -Name $AccountName -Password $Password -FullName "LAPS Managed Adm
 
 ---
 
-## Create LAPS Policy via Intune 
+## 2. Create LAPS Policy via Intune 
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com).
 
@@ -105,7 +97,7 @@ New-LocalUser -Name $AccountName -Password $Password -FullName "LAPS Managed Adm
 
 ---
 
-## 2.  Create and Deploy the LAPS Admin Script via Intune
+## 3.  Create and Deploy the LAPS Admin Script via Intune
 
 1. Go to **Microsoft Intune Admin Center**  
    Navigate to **Devices** > **Scripts** > Click **+ Add**.
@@ -136,7 +128,7 @@ New-LocalUser -Name $AccountName -Password $Password -FullName "LAPS Managed Adm
 ---
 
 
-## 5. Deployment and Operation on Client Devices
+## 4. Deployment and Operation on Client Devices
 
 - Upon receiving the PowerShell script, client devices will create the `LAPS_Admin` local administrator account (if not already present).
 
@@ -145,7 +137,7 @@ New-LocalUser -Name $AccountName -Password $Password -FullName "LAPS Managed Adm
 - The password is securely backed up to Azure AD or your specified backup directory.
 
 
-## 6. Monitoring and Security
+## 5. Monitoring and Security
 
 - Use Azure AD role-based access control (RBAC) to restrict and monitor who can retrieve the managed passwords.
 
