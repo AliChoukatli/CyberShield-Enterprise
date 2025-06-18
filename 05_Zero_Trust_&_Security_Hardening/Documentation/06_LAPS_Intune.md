@@ -57,7 +57,6 @@ This improves security by reducing the risk of lateral movement through shared o
 
 ![LAPS_Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Policy.png)
 
----
 
 ### Notes
 
