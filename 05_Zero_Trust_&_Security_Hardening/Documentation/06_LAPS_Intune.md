@@ -14,28 +14,6 @@ This improves security by reducing the risk of lateral movement through shared o
 - Retrieval of passwords via Intune or PowerShell
 - Integration possibilities with Microsoft Sentinel for alerting (not native in Intune)
 
-1- Créer la politique LAPS dans Intune
-(celle que tu as bien décrite : Local admin password solution, configurer tous les paramètres, assigner aux groupes de devices)
-
-2- Automatiser la création du compte local LAPS_Admin
-
-Écrire un script PowerShell qui crée le compte LAPS_Admin (si absent) et l’ajoute au groupe Administrateurs.
-
-Déployer ce script via Intune (Devices > Scripts > Add > PowerShell).
-
-3- Déploiement sur les machines cibles
-
-Les machines reçoivent la politique LAPS et le script PowerShell.
-
-Le compte LAPS_Admin est créé automatiquement.
-
-Le mot de passe de ce compte est géré et tourné automatiquement par LAPS.
-
-4- Surveillance & gestion
-
-Surveiller les accès à la récupération du mot de passe (via Azure AD roles).
-
-Vérifier le bon déploiement dans Intune (monitoring).
 
 ## Prerequisites
 
@@ -140,12 +118,12 @@ New-LocalUser -Name $AccountName -Password $Password -FullName "LAPS Managed Adm
    - **Description** *(optional)*: Script to create the `LAPS_Admin` local account for Windows LAPS management.
 
 4. **Script Settings**
-   | Setting                                | Value         | Notes                                      |
-   |----------------------------------------|---------------|--------------------------------------------|
-   | Upload .ps1 file                       | ✔️            | Upload the `Create_LAPS_Admin.ps1` script  |
-   | **Run this script using the logged on credentials** | **No**        | Ensures script runs as SYSTEM              |
-   | **Enforce script signature check**     | **No**        | Set to Yes only if the script is signed    |
-   | **Run script in 64-bit PowerShell host** | **Yes**     | Recommended for compatibility              |
+   | Setting                                              | Value         | Notes                                      |
+   |------------------------------------------------------|---------------|--------------------------------------------|
+   | Upload .ps1 file                                     | ✔️            | Upload the `Create_LAPS_Admin.ps1` script  |
+   | **Run this script using the logged on credentials**  | **No**        | Ensures script runs as SYSTEM              |
+   | **Enforce script signature check**     | **No**      | Set to Yes only if the script is signed                    |
+   | **Run script in 64-bit PowerShell host** | **Yes**   | Recommended for compatibility                               |
 
 5. **Assignments**
    - Assign to the **same device group** used for your LAPS policy (e.g., `Windows 10/11 Devices`).
