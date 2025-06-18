@@ -110,6 +110,9 @@ $deviceId = "<paste the Device ID here>"
 $password = Get-MgDeviceManagementManagedDeviceLapsWindowsDevicePassword -ManagedDeviceId $deviceId
 Write-Output $password
 ```
+> ⚠️ Important:
+This command must be run from your admin workstation, not on the client device—even if you have local admin rights on that device.
+
 
 
 
