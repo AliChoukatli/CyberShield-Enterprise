@@ -79,11 +79,11 @@ This improves security by reducing the risk of lateral movement through shared o
 
 - Current User :
 ```powershell
-Install-Module Microsoft.Graph -Scope CurrentUser -Repository PSGallery -Force
+Install-Module Microsoft.Graph.DeviceManagement.Administration -Scope CurrentUser -Repository PSGallery -Force
 ```
 - All users :
 ```powershell
-Install-Module Microsoft.Graph -Scope AllUsers -Repository PSGallery -Force
+Install-Module Microsoft.Graph.DeviceManagement.Administration -Scope AllUsers -Repository PSGallery -Force
 ```
 
 #### 2. 📦 Verify installation
