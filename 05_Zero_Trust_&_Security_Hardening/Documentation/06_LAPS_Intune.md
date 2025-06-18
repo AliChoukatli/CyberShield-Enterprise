@@ -19,6 +19,16 @@ This improves security by reducing the risk of lateral movement through shared o
 - [Step 7 - Optional: Integrate with Microsoft Sentinel](#step-7---optional-integrate-with-microsoft-sentinel)
 - [Deployment Checklist](#deployment-checklist)
 
+
+## 🔑 Key Features
+
+- Unique, randomized local admin password per device
+- Automatic password rotation (e.g., every 30 days)
+- Secure password storage in Azure AD (Entra ID)
+- Admin password retrieval via Intune or Graph API
+- Optional integration with Microsoft Sentinel
+
+  
 ## Prerequisites
 
 - Devices enrolled and managed by Intune (Windows 10/11)
