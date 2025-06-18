@@ -91,7 +91,7 @@ Install-Module Microsoft.Graph -Scope AllUsers -Repository PSGallery -Force
 ```powershell
 Get-InstalledModule Microsoft.Graph
 ```
-
+![Graph_Ins_Verif](
 
 #### 3. 🔐 Sign in with Required Scopes
 
