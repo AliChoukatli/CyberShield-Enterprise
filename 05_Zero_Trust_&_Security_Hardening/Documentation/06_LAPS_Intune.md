@@ -70,11 +70,7 @@ This improves security by reducing the risk of lateral movement through shared o
 
 # 🔐 Retrieve Windows LAPS Password via Microsoft Graph PowerShell (2025)
 
-This guide explains how to securely retrieve the local administrator password managed by Windows LAPS using Microsoft Graph PowerShell.
-
----
-
-## ✅ Prerequisites
+## Prerequisites
 
 - Global Administrator or appropriate RBAC role.
 - Device must be enrolled in Intune with LAPS configured.
@@ -82,7 +78,7 @@ This guide explains how to securely retrieve the local administrator password ma
 
 ---
 
-## 🧰 Step-by-Step Guide
+## Step-by-Step Guide
 
 ### 1. 📦 Install Microsoft Graph PowerShell
 
