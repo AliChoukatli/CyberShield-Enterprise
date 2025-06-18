@@ -48,7 +48,7 @@ New-LocalUser -Name $AccountName -Password $Password -FullName "LAPS Managed Adm
 }
 ```
 > Note: The password set here is temporary. LAPS will rotate and manage the password automatically after deployment.
-![LAPS_Admin](
+![LAPS_Admin](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Admin_user.png)
 
 ---
 
@@ -122,6 +122,8 @@ New-LocalUser -Name $AccountName -Password $Password -FullName "LAPS Managed Adm
 
 6. **Review + Add**
    - Confirm your settings and click **Add** to deploy the script.
+
+![LAPS_Script_Intune](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Scirpt_Intune.png)
 
 📌 *Once deployed, the script will run on the targeted devices and create the `LAPS_Admin` local administrator account automatically. The LAPS policy will then manage this account’s password.*
 
