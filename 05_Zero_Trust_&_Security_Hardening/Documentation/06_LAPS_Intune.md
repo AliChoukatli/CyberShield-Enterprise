@@ -123,6 +123,7 @@ New-LocalUser -Name $AccountName -Password $Password -FullName "LAPS Managed Adm
 }
 ```
 > Note: The password set here is temporary. LAPS will rotate and manage the password automatically after deployment.
+![LAPS_Admin](
 
 ## 2. Deploy the PowerShell Script via Intune
 
