@@ -68,9 +68,9 @@ This improves security by reducing the risk of lateral movement through shared o
 
 ---
 
-# 🔐 Retrieve Windows LAPS Password via Microsoft Graph PowerShell (2025)
+## 🔐 Retrieve Windows LAPS Password via Microsoft Graph PowerShell 
 
-## Prerequisites
+### Prerequisites
 
 - Global Administrator or appropriate RBAC role.
 - Device must be enrolled in Intune with LAPS configured.
@@ -78,20 +78,20 @@ This improves security by reducing the risk of lateral movement through shared o
 
 ---
 
-## Step-by-Step Guide
+### Step-by-Step Guide
 
-### 1. 📦 Install Microsoft Graph PowerShell
+#### 1. 📦 Install Microsoft Graph PowerShell
 
 ```powershell
 Install-Module Microsoft.Graph -Scope CurrentUser -Force
 ```
 
-2. 🔐 Sign in with Required Scopes
+#### 2. 🔐 Sign in with Required Scopes
 
 ```powershell
 Connect-MgGraph -Scopes "DeviceManagementManagedDevices.Read.All"
 ```
-3. 🔎 Get the Device Object ID
+#### 3. 🔎 Get the Device Object ID
 Go to:
 
 - Microsoft Intune Admin Center
