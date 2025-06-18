@@ -82,11 +82,23 @@ This improves security by reducing the risk of lateral movement through shared o
 
 #### 1. 📦 Install Microsoft Graph PowerShell
 
+- Current User :
 ```powershell
-Install-Module Microsoft.Graph -Scope CurrentUser -Force
+Install-Module Microsoft.Graph -Scope CurrentUser -Repository PSGallery -Force
+```
+- All users :
+```powershell
+Install-Module Microsoft.Graph -Scope AllUsers -Repository PSGallery -Force
 ```
 
-#### 2. 🔐 Sign in with Required Scopes
+#### 2. 📦 Verify installation
+
+```powershell
+Get-InstalledModule Microsoft.Graph
+```
+
+
+#### 3. 🔐 Sign in with Required Scopes
 
 ```powershell
 Connect-MgGraph -Scopes "DeviceManagementManagedDevices.Read.All"
