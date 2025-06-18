@@ -101,7 +101,7 @@ Connect-MgGraph -Scopes "DeviceManagementManagedDevices.Read.All"
 #### 3. 🔎 Get the Device Object ID
 Go to:
 
-- Microsoft Intune Admin Center
+- [Microsoft Intune Admin Center](https://endpoint.microsoft.com).
 
 - Navigate to Devices > select the device
 
