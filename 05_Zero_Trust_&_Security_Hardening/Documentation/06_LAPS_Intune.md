@@ -110,7 +110,6 @@ New-LocalUser -Name $AccountName -Password $Password -FullName "LAPS Managed Adm
 
 3. **Basics**  
    - **Name**: `Create_LAPS_Admin`  
-   - **Description** *(optional)*: Script to create the `LAPS_Admin` local account for Windows LAPS management.
 
 4. **Script Settings**
    | Setting                                              | Value         | Notes                                      |
@@ -136,6 +135,9 @@ New-LocalUser -Name $AccountName -Password $Password -FullName "LAPS Managed Adm
 ## 4. Deployment and Operation on Client Devices
 
 - Upon receiving the PowerShell script, client devices will create the `LAPS_Admin` local administrator account (if not already present).
+- GO to a client machine : eg: `John Doe`
+
+![LAPS_Admin_JD](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Admin_JD.png)
 
 - The LAPS policy will manage and rotate the password of this account automatically according to your configured schedule.
 
