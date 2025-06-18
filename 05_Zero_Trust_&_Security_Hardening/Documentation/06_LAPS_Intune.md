@@ -68,21 +68,50 @@ This improves security by reducing the risk of lateral movement through shared o
 
 ---
 
-## Retrieving the Local Admin Password
+# 🔐 Retrieve Windows LAPS Password via Microsoft Graph PowerShell (2025)
 
-You can retrieve the stored local admin password for a device using PowerShell or through the Intune portal.
+This guide explains how to securely retrieve the local administrator password managed by Windows LAPS using Microsoft Graph PowerShell.
 
-### Using PowerShell
+---
 
-Install the [Microsoft Graph PowerShell module](https://learn.microsoft.com/en-us/powershell/microsoftgraph/installation?view=graph-powershell-1.0) and run the following:
+## ✅ Prerequisites
+
+- Global Administrator or appropriate RBAC role.
+- Device must be enrolled in Intune with LAPS configured.
+- You are running the commands from an **admin workstation**, not the client device.
+
+---
+
+## 🧰 Step-by-Step Guide
+
+### 1. 📦 Install Microsoft Graph PowerShell
+
+```powershell
+Install-Module Microsoft.Graph -Scope CurrentUser -Force
+```
+
+2. 🔐 Sign in with Required Scopes
 
 ```powershell
 Connect-MgGraph -Scopes "DeviceManagementManagedDevices.Read.All"
-$deviceId = "<Device Object ID>"
-$password = Get-MgDeviceManagementManagedDeviceLapsActivedirectoryDevicePassword -ManagedDeviceId $deviceId
+```
+3. 🔎 Get the Device Object ID
+Go to:
+
+- Microsoft Intune Admin Center
+
+- Navigate to Devices > select the device
+
+- Copy the Device ID field
+- 
+```powershell
+
+$deviceId = "<paste the Device ID here>"
+$password = Get-MgDeviceManagementManagedDeviceLapsWindowsDevicePassword -ManagedDeviceId $deviceId
 Write-Output $password
 ```
-(Replace <Device Object ID> with the actual device ID.)
+
+
 
 
 # Alerts and Monitoring for LAPS with Intune
