@@ -103,24 +103,29 @@ To properly manage local administrator passwords using LAPS (Local Administrator
 The following PowerShell script checks if the local user `LAPS_Admin` exists. If not, it creates the account, sets it to enabled, and adds it to the local Administrators group.
 
 ```powershell
-# Variables
 $AccountName = "LAPS_Admin"
-$Password = [System.Web.Security.Membership]::GeneratePassword(20,3) | ConvertTo-SecureString -AsPlainText -Force
 
-# Check if user exists
+# Générer un mot de passe complexe
+Add-Type -AssemblyName System.Web
+$plainPassword = [System.Web.Security.Membership]::GeneratePassword(16, 3)
+
+# Convertir en SecureString
+$SecurePassword = ConvertTo-SecureString $plainPassword -AsPlainText -Force
+
+# Vérifier si l’utilisateur existe
 $user = Get-LocalUser -Name $AccountName -ErrorAction SilentlyContinue
 
 if (-not $user) {
-    # Create local user account with random password
-    New-LocalUser -Name $AccountName -Password $Password -FullName "LAPS Managed Admin Account" -Description "Account managed by LAPS via Intune" -PasswordNeverExpires $true -AccountNeverExpires $true
+    # Créer le compte local avec le mot de passe
+    New-LocalUser -Name $AccountName -Password $SecurePassword -FullName "LAPS Managed Admin Account" -Description "Account managed by LAPS via Intune" -PasswordNeverExpires $true -AccountNeverExpires $true
 
-    # Add user to Administrators group
+    # Ajouter au groupe Administrateurs
     Add-LocalGroupMember -Group "Administrators" -Member $AccountName
 
-    Write-Output "User $AccountName created and added to Administrators group."
-}
-else {
-    Write-Output "User $AccountName already exists."
+    Write-Output "User '$AccountName' created and added to Administrators group."
+    Write-Output "Generated password: $plainPassword"
+} else {
+    Write-Output "User '$AccountName' already exists."
 }
 ```
 > Note: The password set here is temporary. LAPS will rotate and manage the password automatically after deployment.
