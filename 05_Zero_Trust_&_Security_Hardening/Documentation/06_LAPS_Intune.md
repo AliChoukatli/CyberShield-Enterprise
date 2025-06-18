@@ -74,7 +74,7 @@ You can retrieve the stored local admin password for a device using PowerShell o
 
 ### Using PowerShell
 
-Install the [Microsoft Graph PowerShell module](https://learn.microsoft.com/en-us/powershell/microsoftgraph/overview) and run the following:
+Install the [Microsoft Graph PowerShell module](https://learn.microsoft.com/en-us/powershell/microsoftgraph/installation?view=graph-powershell-1.0) and run the following:
 
 ```powershell
 Connect-MgGraph -Scopes "DeviceManagementManagedDevices.Read.All"
