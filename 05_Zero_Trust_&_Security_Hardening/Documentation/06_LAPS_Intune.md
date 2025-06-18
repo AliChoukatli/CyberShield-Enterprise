@@ -45,7 +45,7 @@ Vérifier le bon déploiement dans Intune (monitoring).
 
 ---
 
-## 🔐 Automating Local Administrator Account Creation for LAPS via Intune
+## 1. Automating Local Administrator Account Creation for LAPS via Intune
 
 ## Overview
 
@@ -82,7 +82,7 @@ New-LocalUser -Name $AccountName -Password $Password -FullName "LAPS Managed Adm
 
 ---
 
-## How to Enable LAPS via Intune (2025)
+## Create LAPS Policy via Intune 
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com).
 
@@ -127,31 +127,35 @@ New-LocalUser -Name $AccountName -Password $Password -FullName "LAPS Managed Adm
 
 ---
 
+## 2.  Create and Deploy the LAPS Admin Script via Intune
 
-## 3. Deploy the PowerShell Script via Intune
+1. Go to **Microsoft Intune Admin Center**  
+   Navigate to **Devices** > **Scripts** > Click **+ Add**.
 
-1. Sign in to the Microsoft Endpoint Manager admin center.
+2. Select the platform:
+   - **Platform**: Windows 10 and later
 
-2. Navigate to **Devices** > **Scripts**.
+3. **Basics**  
+   - **Name**: `Create_LAPS_Admin`  
+   - **Description** *(optional)*: Script to create the `LAPS_Admin` local account for Windows LAPS management.
 
-3. Click **+ Add** > **Windows 10 and later**.
+4. **Script Settings**
+   | Setting                                | Value         | Notes                                      |
+   |----------------------------------------|---------------|--------------------------------------------|
+   | Upload .ps1 file                       | ✔️            | Upload the `Create_LAPS_Admin.ps1` script  |
+   | **Run this script using the logged on credentials** | **No**        | Ensures script runs as SYSTEM              |
+   | **Enforce script signature check**     | **No**        | Set to Yes only if the script is signed    |
+   | **Run script in 64-bit PowerShell host** | **Yes**     | Recommended for compatibility              |
 
-4. Upload the PowerShell script created in step 1.
+5. **Assignments**
+   - Assign to the **same device group** used for your LAPS policy (e.g., `Windows 10/11 Devices`).
 
-5. Configure script settings as needed:  
-   - Run this script using the logged on credentials: **No**  
-   - Enforce script signature check: **No**
+6. **Review + Add**
+   - Confirm your settings and click **Add** to deploy the script.
 
-6. Assign the script to the same device groups targeted by your LAPS policy.
+📌 *Once deployed, the script will run on the targeted devices and create the `LAPS_Admin` local administrator account automatically. The LAPS policy will then manage this account’s password.*
 
-7. Save and deploy.
-
-
-## 4. Apply the LAPS Policy in Intune
-
-- Create and assign the **Local admin password solution (Windows LAPS)** policy as per your organizational standards.
-
-- Ensure the policy is assigned to the same groups where the script is deployed.
+---
 
 
 ## 5. Deployment and Operation on Client Devices
