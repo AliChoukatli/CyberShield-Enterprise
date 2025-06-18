@@ -47,7 +47,7 @@ This improves security by reducing the risk of lateral movement through shared o
 | **Automatic Account Management Enable Account**  | The target account will be enabled                                                                       | 
 | **Automatic Account Management Randomize Name**  | the name of the target account will not use a random numeric suffix                                      | 
 | Automatic Account Management Target              | Built-in local Administrator                                                                             | 
-| **Name or Prefix of Managed Account**            | `Laps_admin`                                                                           | 
+| **Name or Prefix of Managed Account**            | `Laps_Admin`                                                                           | 
 | **Automatic Account Management Target**          | Manage a new account custom administarator account                                                       | 
 | **Automatic Account Management Name Or Prefix**  |  Laps_Admin                                                                                              | 
 
