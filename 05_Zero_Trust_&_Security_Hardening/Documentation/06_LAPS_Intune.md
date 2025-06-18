@@ -14,6 +14,29 @@ This improves security by reducing the risk of lateral movement through shared o
 - Retrieval of passwords via Intune or PowerShell
 - Integration possibilities with Microsoft Sentinel for alerting (not native in Intune)
 
+Créer la politique LAPS dans Intune
+(celle que tu as bien décrite : Local admin password solution, configurer tous les paramètres, assigner aux groupes de devices)
+
+Automatiser la création du compte local LAPS_Admin
+
+Écrire un script PowerShell qui crée le compte LAPS_Admin (si absent) et l’ajoute au groupe Administrateurs.
+
+Déployer ce script via Intune (Devices > Scripts > Add > PowerShell).
+
+Déploiement sur les machines cibles
+
+Les machines reçoivent la politique LAPS et le script PowerShell.
+
+Le compte LAPS_Admin est créé automatiquement.
+
+Le mot de passe de ce compte est géré et tourné automatiquement par LAPS.
+
+Surveillance & gestion
+
+Surveiller les accès à la récupération du mot de passe (via Azure AD roles).
+
+Vérifier le bon déploiement dans Intune (monitoring).
+
 ## Prerequisites
 
 - Devices enrolled and managed by Intune (Windows 10/11)
