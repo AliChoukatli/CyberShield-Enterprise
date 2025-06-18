@@ -106,9 +106,8 @@ Go to:
 - Navigate to Devices > select the device
 
 - Copy the Device ID field
-- 
+  
 ```powershell
-
 $deviceId = "<paste the Device ID here>"
 $password = Get-MgDeviceManagementManagedDeviceLapsWindowsDevicePassword -ManagedDeviceId $deviceId
 Write-Output $password
