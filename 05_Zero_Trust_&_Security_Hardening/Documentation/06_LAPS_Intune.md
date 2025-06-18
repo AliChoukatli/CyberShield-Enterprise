@@ -105,21 +105,15 @@ The following PowerShell script checks if the local user `LAPS_Admin` exists. If
 ```powershell
 $AccountName = "LAPS_Admin"
 
-# Generate a complexe Password
+# Générer un mot de passe aléatoire simple (exemple ici en PS 5.1)
 Add-Type -AssemblyName System.Web
-$plainPassword = [System.Web.Security.Membership]::GeneratePassword(16, 3)
+$plainPassword = [System.Web.Security.Membership]::GeneratePassword(16,3)
+$Password = ConvertTo-SecureString $plainPassword -AsPlainText -Force
 
-# Convert to SecureString
-$SecurePassword = ConvertTo-SecureString $plainPassword -AsPlainText -Force
-
-# Verifiy if the user exist
 $user = Get-LocalUser -Name $AccountName -ErrorAction SilentlyContinue
 
 if (-not $user) {
-    # Create the local account with password 
-    New-LocalUser -Name $AccountName -Password $SecurePassword -FullName "LAPS Managed Admin Account" -Description "Account managed by LAPS via Intune" -PasswordNeverExpires $true -AccountNeverExpires $true
-
-    #add to Administrator Groups
+New-LocalUser -Name $AccountName -Password $Password -FullName "LAPS Managed Admin Account" -Description "Account managed by LAPS via Intune" -PasswordNeverExpires:$true -AccountNeverExpires:$true
     Add-LocalGroupMember -Group "Administrators" -Member $AccountName
 
     Write-Output "User '$AccountName' created and added to Administrators group."
