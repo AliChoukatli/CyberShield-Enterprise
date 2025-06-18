@@ -90,77 +90,80 @@ Vérifier le bon déploiement dans Intune (monitoring).
 
 ---
 
-## 🔐 Retrieve Windows LAPS Password via Microsoft Graph PowerShell 
+## 🔐 Automating Local Administrator Account Creation for LAPS via Intune
 
-### Prerequisites
+## Overview
 
-- Global Administrator or appropriate RBAC role.
-- Device must be enrolled in Intune with LAPS configured.
-- You are running the commands from an **admin workstation**, not the client device.
+To properly manage local administrator passwords using LAPS (Local Administrator Password Solution) via Intune, the target local administrator account (e.g., `LAPS_Admin`) must exist on the client devices. 
 
-#### 1. 📦 Install Microsoft Graph PowerShell
+## Steps to Automate LAPS_Admin Account Creation and Deployment
 
-- Current User :
-```powershell
-Install-Module Microsoft.Graph.DeviceManagement.Administration -Scope CurrentUser -Force
-```
+### 1. Create PowerShell Script to Add Local Administrator Account
 
-- All users :
-```powershell
-Install-Module Microsoft.Graph.DeviceManagement.Administration -Scope AllUsers -Repository PSGallery -Force
-```
-
-#### 2. 📦 Verify installation
+The following PowerShell script checks if the local user `LAPS_Admin` exists. If not, it creates the account, sets it to enabled, and adds it to the local Administrators group.
 
 ```powershell
-Get-InstalledModule Microsoft.Graph
+# Variables
+$AccountName = "LAPS_Admin"
+$Password = [System.Web.Security.Membership]::GeneratePassword(20,3) | ConvertTo-SecureString -AsPlainText -Force
+
+# Check if user exists
+$user = Get-LocalUser -Name $AccountName -ErrorAction SilentlyContinue
+
+if (-not $user) {
+    # Create local user account with random password
+    New-LocalUser -Name $AccountName -Password $Password -FullName "LAPS Managed Admin Account" -Description "Account managed by LAPS via Intune" -PasswordNeverExpires $true -AccountNeverExpires $true
+
+    # Add user to Administrators group
+    Add-LocalGroupMember -Group "Administrators" -Member $AccountName
+
+    Write-Output "User $AccountName created and added to Administrators group."
+}
+else {
+    Write-Output "User $AccountName already exists."
+}
 ```
-![Graph_Ins_Verif](
+> Note: The password set here is temporary. LAPS will rotate and manage the password automatically after deployment.
 
-#### 3. 🔐 Sign in with Required Scopes
+## 2. Deploy the PowerShell Script via Intune
 
-```powershell
-Connect-MgGraph -Scopes "DeviceManagementManagedDevices.Read.All"
-```
-#### 3. 🔎 Get the Device Object ID
-Go to:
+1. Sign in to the Microsoft Endpoint Manager admin center.
 
-- [Microsoft Intune Admin Center](https://endpoint.microsoft.com).
-- Navigate to Devices > select the device > Hardwware > Microsoft Entra Device ID
-- Copy the Device ID field
-  
-```powershell
-$deviceId = "<paste the Device ID here>"
-$password = Get-MgDeviceManagementManagedDeviceLapsWindowsDevicePassword -ManagedDeviceId $deviceId
-Write-Output $password
-```
-> ⚠️ Important:
-This command must be run from your admin workstation, not on the client device—even if you have local admin rights on that device.
+2. Navigate to **Devices** > **Scripts**.
+
+3. Click **+ Add** > **Windows 10 and later**.
+
+4. Upload the PowerShell script created in step 1.
+
+5. Configure script settings as needed:  
+   - Run this script using the logged on credentials: **No**  
+   - Enforce script signature check: **No**
+
+6. Assign the script to the same device groups targeted by your LAPS policy.
+
+7. Save and deploy.
 
 
+## 3. Apply the LAPS Policy in Intune
+
+- Create and assign the **Local admin password solution (Windows LAPS)** policy as per your organizational standards.
+
+- Ensure the policy is assigned to the same groups where the script is deployed.
 
 
+## 4. Deployment and Operation on Client Devices
 
-# Alerts and Monitoring for LAPS with Intune
+- Upon receiving the PowerShell script, client devices will create the `LAPS_Admin` local administrator account (if not already present).
 
-Intune does **not provide built-in alerts** for local admin password changes or access events.
+- The LAPS policy will manage and rotate the password of this account automatically according to your configured schedule.
 
-To implement alerting, integrate Intune with **Microsoft Sentinel**:
-
-- **Create custom analytic rules** in Sentinel to detect actions related to local administrator accounts, such as:
-  - Password retrieval
-  - Password rotation
-
-- Use **Logic Apps** or **Automation runbooks** to send notifications by:
-  - Email
-  - Microsoft Teams
-
-### Example
-
-Detect when a local admin password is retrieved or rotated and trigger an alert to security operations.
-
----
+- The password is securely backed up to Azure AD or your specified backup directory.
 
 
+## 5. Monitoring and Security
 
+- Use Azure AD role-based access control (RBAC) to restrict and monitor who can retrieve the managed passwords.
 
+- Regularly audit access logs for any unauthorized attempts.
+
+- Monitor device compliance and script execution status via Intune reporting.
