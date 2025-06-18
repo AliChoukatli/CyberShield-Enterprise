@@ -30,7 +30,7 @@ The following PowerShell script checks if the local user `LAPS_Admin` exists. If
 ```powershell
 $AccountName = "LAPS_Admin"
 
-# Générer un mot de passe aléatoire simple (exemple ici en PS 5.1)
+# Generate random Password
 Add-Type -AssemblyName System.Web
 $plainPassword = [System.Web.Security.Membership]::GeneratePassword(16,3)
 $Password = ConvertTo-SecureString $plainPassword -AsPlainText -Force
