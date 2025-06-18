@@ -48,6 +48,7 @@ New-LocalUser -Name $AccountName -Password $Password -FullName "LAPS Managed Adm
 }
 ```
 > Note: The password set here is temporary. LAPS will rotate and manage the password automatically after deployment.
+
 ![LAPS_Admin](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Admin_user.png)
 
 ---
