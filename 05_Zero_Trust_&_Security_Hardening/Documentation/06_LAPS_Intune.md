@@ -10,15 +10,14 @@ This improves security by reducing the risk of lateral movement through shared o
 
 - [Key Features](#key-features)
 - [Prerequisites](#prerequisites)
-- [Step 1 - Create Local Admin Script](#step-1---create-local-admin-script)
+- [Step 1 - Create and Test the Local Admin Script](#step-1---create-and-test-local-admin-script)
 - [Step 2 - Create and Assign LAPS Policy](#step-2---create-and-assign-laps-policy)
-- [Step 3 - Install LAPS Client (software/service)](#step3---install-laps-client(software/service))
-- [Step 4 - Deploy the Script via Intune](#step-3---deploy-the-script-via-intune)
-- [Step 5 - Client Device Behavior](#step-4---client-device-behavior)
-- [Step 6 - Retrieve and Rotate Passwords](#step-5---retrieve-and-rotate-passwords)
-- [Step 7 - Monitoring and Auditing](#step-6---monitoring-and-auditing)
-- [Step 8 - Optional: Integrate with Microsoft Sentinel](#step-7---optional-integrate-with-microsoft-sentinel)
-- [Deployment Checklist](#deployment-checklist)
+- [Step 3 - Deploy the Script via Intune](#step-3---deploy-the-script-via-intune)
+- [Step 4 - LAPS_Admin Deployment Verification (via Intune)]
+- [Step 5 - Retrieve Passwords](#step-5---retrieve-passwords)
+- [Step 6 -  Log-in with (LAPS_Admin) account]
+- [Step 7 - Rotation Password]
+- [Step 8 —  Limit LAPS Password Access Rights]
 
 
 ## 🔑 Key Features
@@ -70,7 +69,7 @@ New-LocalUser -Name $AccountName -Password $Password -FullName "LAPS Managed Adm
 
 ![LAPS_Admin](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Admin_user.png)
 
-> ℹ️ The script was executed locally on LTP-HLP01 to validate its behavior before deploying it to other devices via Intune (see Step 4).
+> ℹ️ The script was executed locally on LTP-HLP01 to validate its behavior before deploying it to other devices via Intune (see Step 3).
 
 ---
 
@@ -152,7 +151,7 @@ New-LocalUser -Name $AccountName -Password $Password -FullName "LAPS Managed Adm
 ---
 
 
-## 🚀 Step 4 - LAPS_Admin Account Verification
+## 🚀 Step 4 - LAPS_Admin Deployment Verification (via Intune)
 
 - Upon receiving the PowerShell script, client devices will create the `LAPS_Admin` local administrator account (if not already present).
 - Go to a client machine : eg: `LTP-EMP02`
