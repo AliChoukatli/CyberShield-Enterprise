@@ -181,7 +181,6 @@ Copy the password and view its expiration date
 - Use the following credentials:  
   - **Username:** .\LAPS_Admin  
   - **Password:** The one retrieved from Intune in the previous step.
-- Verify you can log in as an administrator.
 
 ![LAPS_Admin_FirstStart](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Admin_FirstStart.png)
 
