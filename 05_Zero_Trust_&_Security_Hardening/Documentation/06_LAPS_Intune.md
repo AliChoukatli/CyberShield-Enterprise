@@ -172,7 +172,7 @@ Copy the password and view its expiration date
 
 ---
 
-## 🚀 Step 6 -  Log-in with (LAPS_Admin) account using the following credentials :
+## 🚀 Step 6 -  Log-in with (LAPS_Admin) account
 
   - **Username:** .\LAPS_Admin  
   - **Password:** The one retrieved from Intune in the previous step.
@@ -190,7 +190,7 @@ Copy the password and view its expiration date
 ![LAPS_Passwd_Rotation](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Passwd_Rotation.png)
 
 
-## 🔒 Step 7 —  Limit LAPS Password Access Rights
+## 🔒 Step 8 —  Limit LAPS Password Access Rights
 
 **Objective:** Ensure only authorized roles can view LAPS passwords.
 
