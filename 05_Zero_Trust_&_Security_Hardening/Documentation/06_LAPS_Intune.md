@@ -12,11 +12,13 @@ This improves security by reducing the risk of lateral movement through shared o
 - [Prerequisites](#prerequisites)
 - [Step 1 - Create Local Admin Script](#step-1---create-local-admin-script)
 - [Step 2 - Create and Assign LAPS Policy](#step-2---create-and-assign-laps-policy)
-- [Step 3 - Deploy the Script via Intune](#step-3---deploy-the-script-via-intune)
-- [Step 4 - Client Device Behavior](#step-4---client-device-behavior)
-- [Step 5 - Retrieve and Rotate Passwords](#step-5---retrieve-and-rotate-passwords)
-- [Step 6 - Monitoring and Auditing](#step-6---monitoring-and-auditing)
-- [Step 7 - Optional: Integrate with Microsoft Sentinel](#step-7---optional-integrate-with-microsoft-sentinel)
+- [Step 3 - Install LAPS Client (software/service)](#step3---install-laps-client(software/service))
+
+- [Step 4 - Deploy the Script via Intune](#step-3---deploy-the-script-via-intune)
+- [Step 5 - Client Device Behavior](#step-4---client-device-behavior)
+- [Step 6 - Retrieve and Rotate Passwords](#step-5---retrieve-and-rotate-passwords)
+- [Step 7 - Monitoring and Auditing](#step-6---monitoring-and-auditing)
+- [Step 8 - Optional: Integrate with Microsoft Sentinel](#step-7---optional-integrate-with-microsoft-sentinel)
 - [Deployment Checklist](#deployment-checklist)
 
 
