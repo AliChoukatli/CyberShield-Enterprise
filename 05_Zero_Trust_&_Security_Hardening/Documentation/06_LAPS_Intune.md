@@ -169,7 +169,7 @@ Go to Devices > [Device Name] > Local admin password
 
 Copy the password and view its expiration date
 
-![LAPS_Passwd](
+![LAPS_Passwd](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Passwd.png)
 
 ---
 
