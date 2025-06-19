@@ -116,9 +116,6 @@ New-LocalUser -Name $AccountName -Password $Password -FullName "LAPS Managed Adm
 ---
 
 
-
----
-
 ## 🚀 Step 3 - Deploy the Script via Intune
 
 1. Go to **Microsoft Intune Admin Center**  
