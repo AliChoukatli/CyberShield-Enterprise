@@ -38,8 +38,9 @@ This improves security by reducing the risk of lateral movement through shared o
 
 ---
 
-## 1. 🚀 Step 1 - Create Local Admin Script
+## 1. 🚀 Step 1 -  Create and Test the Local Admin Script
 
+Before deploying the script via Intune, we validated its functionality by running it locally on one device.
 The following PowerShell script checks if the local user `LAPS_Admin` exists. If not, it creates the account, sets it to enabled, and adds it to the local Administrators group.
 
 ```powershell
@@ -62,9 +63,10 @@ New-LocalUser -Name $AccountName -Password $Password -FullName "LAPS Managed Adm
     Write-Output "User '$AccountName' already exists."
 }
 ```
-> Note: The password set here is temporary. LAPS will rotate and manage the password automatically after deployment.
+> ℹ️ The script was executed locally on LTP-HLP01 to validate its behavior before deploying it to other devices via Intune (see Step 4).
 
-### Verification 
+
+### ✅ Verification (Local Execution on HLP01)
 
 ![LAPS_Admin](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Admin_user.png)
 
