@@ -63,12 +63,12 @@ New-LocalUser -Name $AccountName -Password $Password -FullName "LAPS Managed Adm
     Write-Output "User '$AccountName' already exists."
 }
 ```
-> ℹ️ The script was executed locally on LTP-HLP01 to validate its behavior before deploying it to other devices via Intune (see Step 4).
-
 
 ### ✅ Verification (Local Execution on HLP01)
 
 ![LAPS_Admin](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Admin_user.png)
+
+> ℹ️ The script was executed locally on LTP-HLP01 to validate its behavior before deploying it to other devices via Intune (see Step 4).
 
 ---
 
