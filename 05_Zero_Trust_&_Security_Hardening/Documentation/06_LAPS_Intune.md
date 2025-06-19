@@ -153,7 +153,7 @@ New-LocalUser -Name $AccountName -Password $Password -FullName "LAPS Managed Adm
 Copy the password and view its expiration date
 
 - Upon receiving the PowerShell script, client devices will create the `LAPS_Admin` local administrator account (if not already present).
-- GO to a client machine : eg: `John Doe`
+- Go to a client machine : eg: `LTP-EMP02`
 
 ![LAPS_Admin_JD](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Admin_JD.png)
 
