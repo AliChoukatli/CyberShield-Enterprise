@@ -180,7 +180,7 @@ Copy the password and view its expiration date
   - **Username:** .\LAPS_Admin  
   - **Password:** The one retrieved from Intune in the previous step.
 
-![LAPS_Admin_FirstStart](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Admin_FirstStart.png)
+![LAPS_Admin_FirstStart](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Admin_whoami.png)
 
 ---
 
