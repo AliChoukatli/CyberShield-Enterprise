@@ -13,7 +13,6 @@ This improves security by reducing the risk of lateral movement through shared o
 - [Step 1 - Create Local Admin Script](#step-1---create-local-admin-script)
 - [Step 2 - Create and Assign LAPS Policy](#step-2---create-and-assign-laps-policy)
 - [Step 3 - Install LAPS Client (software/service)](#step3---install-laps-client(software/service))
-
 - [Step 4 - Deploy the Script via Intune](#step-3---deploy-the-script-via-intune)
 - [Step 5 - Client Device Behavior](#step-4---client-device-behavior)
 - [Step 6 - Retrieve and Rotate Passwords](#step-5---retrieve-and-rotate-passwords)
