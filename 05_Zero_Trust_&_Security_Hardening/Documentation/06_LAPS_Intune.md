@@ -150,8 +150,6 @@ New-LocalUser -Name $AccountName -Password $Password -FullName "LAPS Managed Adm
 
 ## 🚀 Step 4 - LAPS_Admin Account Verification
 
-Copy the password and view its expiration date
-
 - Upon receiving the PowerShell script, client devices will create the `LAPS_Admin` local administrator account (if not already present).
 - Go to a client machine : eg: `LTP-EMP02`
 
