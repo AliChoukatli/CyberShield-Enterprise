@@ -185,4 +185,18 @@ Copy the password and view its expiration date
 ---
 
 
+## 🚀 Step 6 — 🔒 Limit LAPS Password Access Rights
 
+**Objective:** Ensure only authorized roles can view LAPS passwords.
+
+- Go to [Microsoft Entra admin center](https://entra.microsoft.com)
+- Navigate to **Roles and administrators**
+- Verify who has the following roles:
+  - Intune Administrator
+  - Cloud Device Administrator
+  - Privileged Authentication Administrator
+- Remove the role from any account that should NOT have LAPS password access.
+> *Tip:* Use a dedicated group (e.g., *LAPS Password Readers*) and assign roles accordingly for better control.
+
+![Passwd_Reader_Group](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Passwd_Group.png)
+---
