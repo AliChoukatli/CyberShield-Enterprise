@@ -194,21 +194,9 @@ The LAPS client must be installed on every device you want to manage with LAPS.
 
 Without this client, Intune’s LAPS policy cannot rotate or retrieve local admin passwords.
 
+---
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-## 🚀 Step 3 - Deploy the Script via Intune
+## 🚀 Step 4 - Deploy the Script via Intune
 
 1. Go to **Microsoft Intune Admin Center**  
    Navigate to **Devices** > **Scripts** > Click **+ Add**.
@@ -240,7 +228,7 @@ Without this client, Intune’s LAPS policy cannot rotate or retrieve local admi
 ---
 
 
-## 💻 Step 4 - Client Device Behavior
+## 🚀 Step 5 - Client Device Behavior
 
 Copy the password and view its expiration date
 
@@ -255,7 +243,7 @@ Copy the password and view its expiration date
 
 ---
 
-## 🔐 Step 5 - Retrieve and Rotate Passwords
+## 🚀 Step 6 - Retrieve and Rotate Passwords
 Retrieve via Intune:
 Go to Devices > [Device Name] > Local admin password
 
@@ -269,7 +257,7 @@ Invoke-LapsPolicyProcessing -Force
 
 ---
 
-##  Step 6 - Monitoring and Auditing
+##  🚀 Step 7 - Monitoring and Auditing
 Role-Based Access Control (RBAC):
 To retrieve passwords, users must be in one of the following roles:
 
@@ -293,7 +281,7 @@ Run the following command on the client:
 Get-LapsDiagnostics
 ```
 
-## 📡 Step 7 - Optional: Integrate with Microsoft Sentinel
+## 🚀 Step 8 - Optional: Integrate with Microsoft Sentinel
 To monitor who accessed local admin passwords:
 
 ```kql
