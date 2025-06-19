@@ -169,11 +169,7 @@ Go to Devices > [Device Name] > Local admin password
 
 Copy the password and view its expiration date
 
-Force Immediate Rotation:
-On the client, run:
-```powershell
-Invoke-LapsPolicyProcessing -Force
-```
+![LAPS_Passwd](
 
 ---
 
