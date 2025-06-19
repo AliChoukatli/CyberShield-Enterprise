@@ -173,7 +173,7 @@ Copy the password and view its expiration date
 
 ---
 
-🧪 Step 6 -  Validate that the account (LAPS_Admin) is usable
+## 🚀 Step 6 -  Validate that the account (LAPS_Admin) is usable
 
 - Connect via RDP or locally on the VM (e.g., LTP-EMP02).
 - Use the following credentials:  
