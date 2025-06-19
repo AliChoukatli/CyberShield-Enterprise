@@ -152,6 +152,7 @@ New-LocalUser -Name $AccountName -Password $Password -FullName "LAPS Managed Adm
 
 - Upon receiving the PowerShell script, client devices will create the `LAPS_Admin` local administrator account (if not already present).
 - Go to a client machine : eg: `LTP-EMP02`
+- Type the following command ``` Get-LocalUser ``` Look for the `LAPS_Admin Account`
 
 ![LAPS_Admin_JD](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Admin_JD.png)
 
