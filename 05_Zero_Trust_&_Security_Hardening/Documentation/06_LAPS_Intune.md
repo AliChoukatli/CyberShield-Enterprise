@@ -148,7 +148,7 @@ New-LocalUser -Name $AccountName -Password $Password -FullName "LAPS Managed Adm
 ---
 
 
-## 🚀 Step 4 - Client Device Behavior
+## 🚀 Step 4 - LAPS_Admin Account Verification
 
 Copy the password and view its expiration date
 
