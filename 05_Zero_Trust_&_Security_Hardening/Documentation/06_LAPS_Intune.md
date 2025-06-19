@@ -26,7 +26,7 @@ This improves security by reducing the risk of lateral movement through shared o
 - Unique, randomized local admin password per device
 - Automatic password rotation (e.g., every 30 days)
 - Secure password storage in Azure AD (Entra ID)
-- Admin password retrieval via Intune or Graph API
+- Admin password retrieval via Intune
 - Optional integration with Microsoft Sentinel
 
   
@@ -35,6 +35,8 @@ This improves security by reducing the risk of lateral movement through shared o
 - Devices enrolled and managed by Intune (Windows 10/11)
 - Appropriate Intune licenses and permissions
 - Devices must be Azure AD joined or Hybrid Azure AD joined
+- Enable Microsoft Entra Local Administrator Password Solution (LAPS)
+
 
 ---
 
@@ -64,7 +66,7 @@ New-LocalUser -Name $AccountName -Password $Password -FullName "LAPS Managed Adm
 }
 ```
 
-### ✅ Verification (Local Execution on HLP01)
+### ✅ Verification (Local Execution on LTP-HLP01)
 
 ![LAPS_Admin](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Admin_user.png)
 
