@@ -10,14 +10,15 @@ This improves security by reducing the risk of lateral movement through shared o
 
 - [Key Features](#key-features)
 - [Prerequisites](#prerequisites)
-- [Step 1 - Create and Test the Local Admin Script](#1-🚀-step-1---create-and-test-the-local-admin-script)
-- [Step 2 - Create and Assign LAPS Policy](#2-🚀-step-2---create-and-assign-laps-policy)
-- [Step 3 - Deploy the Script via Intune](#3-🚀-step-3---deploy-the-script-via-intune)
-- [Step 4 - LAPS_Admin Deployment Verification (via Intune)](#4-🚀-step-4---laps_admin-deployment-verification-via-intune)
-- [Step 5 - Retrieve Passwords](#5-🚀-step-5---retrieve-passwords)
-- [Step 6 - Log-in with (LAPS_Admin) account](#6-🚀-step-6---log-in-with-laps_admin-account)
-- [Step 7 - Rotation Password](#7-🚀-step-7---rotation-password)
-- [Step 8 — Limit LAPS Password Access Rights](#🔒-step-8-—-limit-laps-password-access-rights)
+- [Step 1 - Create and Test the Local Admin Script](#step-1---create-and-test-the-local-admin-script)
+- [Step 2 - Create and Assign LAPS Policy](#step-2---create-and-assign-laps-policy)
+- [Step 3 - Deploy the Script via Intune](#step-3---deploy-the-script-via-intune)
+- [Step 4 - LAPS_Admin Deployment Verification (via Intune)](#step-4---laps_admin-deployment-verification-via-intune)
+- [Step 5 - Retrieve Passwords](#step-5---retrieve-passwords)
+- [Step 6 - Log-in with (LAPS_Admin) account](#step-6---log-in-with-laps_admin-account)
+- [Step 7 - Rotation Password](#step-7---rotation-password)
+- [Step 8 - Limit LAPS Password Access Rights](#step-8---limit-laps-password-access-rights)
+
 
 
 
