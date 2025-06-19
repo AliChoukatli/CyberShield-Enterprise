@@ -119,7 +119,7 @@ New-LocalUser -Name $AccountName -Password $Password -FullName "LAPS Managed Adm
 
 ---
 
-## 🚀 Step 4 - Deploy the Script via Intune
+## 🚀 Step 3 - Deploy the Script via Intune
 
 1. Go to **Microsoft Intune Admin Center**  
    Navigate to **Devices** > **Scripts** > Click **+ Add**.
@@ -204,7 +204,7 @@ Run the following command on the client:
 Get-LapsDiagnostics
 ```
 
-## 🚀 Step 7 - Optional: Integrate with Microsoft Sentinel
+## 🚀 Step 6 - Optional: Integrate with Microsoft Sentinel
 To monitor who accessed local admin passwords:
 
 ```kql
