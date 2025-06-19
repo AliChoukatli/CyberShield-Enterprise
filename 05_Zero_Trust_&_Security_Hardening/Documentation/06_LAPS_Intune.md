@@ -161,26 +161,32 @@ New-LocalUser -Name $AccountName -Password $Password -FullName "LAPS Managed Adm
 
 ---
 
-## 🚀 Step 5 - Retrieve and Rotate Passwords
+## 🚀 Step 5 - Retrieve Passwords
+
 Retrieve via Intune:
 Go to Devices > [Device Name] > Local admin password
-
 Copy the password and view its expiration date
 
 ![LAPS_Passwd](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Passwd.png)
 
 ---
 
-## 🚀 Step 6 -  Validate the (LAPS_Admin) account is usable
+## 🚀 Step 6 -  Log-in with (LAPS_Admin) account using the following credentials :
 
-- Connect via RDP or locally on the VM (e.g., LTP-EMP02).
-- Use the following credentials:  
   - **Username:** .\LAPS_Admin  
   - **Password:** The one retrieved from Intune in the previous step.
 
 ![LAPS_Admin_FirstStart](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Admin_whoami.png)
 
 ---
+
+## 🚀 Step 7 - Rotation Password 
+
+- Go to Devices > [Device Name] > Rotate Local Admin Password
+- GO to Local admin password > Show local administrator password
+- Check if rotation worked
+
+![LAPS_Passwd_Rotation](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Passwd_Rotation.png)
 
 
 ## 🔒 Step 7 —  Limit LAPS Password Access Rights
@@ -197,4 +203,5 @@ Copy the password and view its expiration date
 > *Tip:* Use a dedicated group (e.g., *LAPS Password Readers*) and assign roles accordingly for better control.
 
 ![Passwd_Reader_Group](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Passwd_Group.png)
+
 ---
