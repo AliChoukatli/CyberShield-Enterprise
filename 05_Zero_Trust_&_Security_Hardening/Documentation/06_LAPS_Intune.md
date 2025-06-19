@@ -116,84 +116,6 @@ New-LocalUser -Name $AccountName -Password $Password -FullName "LAPS Managed Adm
 ---
 
 
-## 🚀 Step 3 - Install LAPS Client (software/service)
-
-### Overview
-
-The LAPS Client is a Windows service responsible for generating, storing, and automatically rotating the local administrator password on managed devices.  
-Installing this client on all target machines is essential to enable the password management features configured in Step 2.
-
----
-
-### Prerequisites
-
-- Access to Microsoft Endpoint Manager (Intune) portal  
-- LAPS MSI installer (`LAPS.x64.msi`) downloaded from Microsoft  
-- Target device group(s) identified for deployment
-
----
-
-### Step 3.1 - Download the LAPS MSI Installer
-
-Download the official LAPS installer from Microsoft:  
-https://www.microsoft.com/en-us/download/details.aspx?id=46899  
-Choose the 64-bit MSI (`LAPS.x64.msi`).
-
----
-
-### Step 3.2 - Prepare the Win32 App Package
-
-Intune requires Win32 app format to deploy MSI files. To prepare the package:
-
-1. Download the [Microsoft Win32 Content Prep Tool](https://learn.microsoft.com/en-us/mem/intune/apps/apps-win32-app-management#prepare-the-win32-app-content)  
-2. Place the `LAPS.x64.msi` file in a folder, e.g., `C:\LAPS`  
-3. Open PowerShell in that folder and run:
-   
-   ```powershell
-   .\IntuneWinAppUtil.exe -c . -s LAPS.x64.msi -o .\
-   ```
-
-4. This will generate LAPS.x64.intunewin, the package ready for upload.
-
-
-### Step 3.3 -  Deploy the LAPS Client via Intune
-
-1. Go to Microsoft Endpoint Manager Admin Center
-2. Navigate to Apps > Windows > + Add > Windows app (Win32)
-3. Upload the LAPS.x64.intunewin file
-4. Configure the app information (name, description, publisher)
-5. Under Program, enter:
-
-- Install command:
-
-```bash
-msiexec /i LAPS.x64.msi /quiet /norestart
-```
-
-6. Configure detection rules to verify installation (e.g., registry key for LAPS presence)
-7. Assign the app to the same device groups targeted by your LAPS policy
-
-
-### Step 3.4 - Verify Installation
-
-After deployment, verify on a target device that:
-
-- The AdmPwd Windows service is running:
-
-```powershell
-Get-Service AdmPwd
-```
-
-- The LAPS registry keys exist:
-
-```powershell
-Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\LAPS"
-```
-
-Notes
-The LAPS client must be installed on every device you want to manage with LAPS.
-
-Without this client, Intune’s LAPS policy cannot rotate or retrieve local admin passwords.
 
 ---
 
@@ -229,7 +151,7 @@ Without this client, Intune’s LAPS policy cannot rotate or retrieve local admi
 ---
 
 
-## 🚀 Step 5 - Client Device Behavior
+## 🚀 Step 4 - Client Device Behavior
 
 Copy the password and view its expiration date
 
@@ -244,7 +166,7 @@ Copy the password and view its expiration date
 
 ---
 
-## 🚀 Step 6 - Retrieve and Rotate Passwords
+## 🚀 Step 5 - Retrieve and Rotate Passwords
 Retrieve via Intune:
 Go to Devices > [Device Name] > Local admin password
 
@@ -258,7 +180,7 @@ Invoke-LapsPolicyProcessing -Force
 
 ---
 
-##  🚀 Step 7 - Monitoring and Auditing
+##  🚀 Step 6 - Monitoring and Auditing
 Role-Based Access Control (RBAC):
 To retrieve passwords, users must be in one of the following roles:
 
@@ -282,7 +204,7 @@ Run the following command on the client:
 Get-LapsDiagnostics
 ```
 
-## 🚀 Step 8 - Optional: Integrate with Microsoft Sentinel
+## 🚀 Step 7 - Optional: Integrate with Microsoft Sentinel
 To monitor who accessed local admin passwords:
 
 ```kql
