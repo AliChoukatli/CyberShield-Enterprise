@@ -155,7 +155,7 @@ Intune requires Win32 app format to deploy MSI files. To prepare the package:
 4. This will generate LAPS.x64.intunewin, the package ready for upload.
 
 
-Step 3.3 -  Deploy the LAPS Client via Intune
+### Step 3.3 -  Deploy the LAPS Client via Intune
 
 1. Go to Microsoft Endpoint Manager Admin Center
 2. Navigate to Apps > Windows > + Add > Windows app (Win32)
@@ -173,7 +173,7 @@ msiexec /i LAPS.x64.msi /quiet /norestart
 7. Assign the app to the same device groups targeted by your LAPS policy
 
 
-Step 3.4 - Verify Installation
+### Step 3.4 - Verify Installation
 
 After deployment, verify on a target device that:
 
