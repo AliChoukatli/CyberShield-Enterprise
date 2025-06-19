@@ -173,9 +173,7 @@ Copy the password and view its expiration date
 
 ---
 
-🧪 Step 6 - Test Connection with LAPS_Admin
-
-**Objective:** Validate that the account is usable.
+🧪 Step 6 -  Validate that the account (LAPS_Admin) is usable
 
 - Connect via RDP or locally on the VM (e.g., LTP-EMP02).
 - Use the following credentials:  
@@ -183,5 +181,8 @@ Copy the password and view its expiration date
   - **Password:** The one retrieved from Intune in the previous step.
 
 ![LAPS_Admin_FirstStart](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Admin_FirstStart.png)
+
+---
+
 
 
