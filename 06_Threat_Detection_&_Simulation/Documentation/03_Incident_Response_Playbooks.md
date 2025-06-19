@@ -1,4 +1,4 @@
-# 📘 Incident Response Playbooks (soon)
+# 📘 Incident Response Playbooks (Soon)
 
 This document presents simulated incident response playbooks built for a personal cybersecurity lab project. Each playbook shows how to detect, investigate, contain, and remediate different security incidents using realistic and executable steps in a non-production environment.
 
