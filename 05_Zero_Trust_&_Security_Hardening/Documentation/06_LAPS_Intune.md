@@ -173,39 +173,16 @@ Copy the password and view its expiration date
 
 ---
 
-##  🚀 Step 6 - Monitoring and Auditing
-Role-Based Access Control (RBAC):
-To retrieve passwords, users must be in one of the following roles:
+🧪 Step 6 - Test Connection with LAPS_Admin
 
-Global Administrator
+**Objective:** Validate that the account is usable.
 
-Intune Administrator
+- Connect via RDP or locally on the VM (e.g., LTP-EMP02).
+- Use the following credentials:  
+  - **Username:** .\LAPS_Admin  
+  - **Password:** The one retrieved from Intune in the previous step.
+- Verify you can log in as an administrator.
 
-Local Administrator Password Reader (Recommended Least Privilege)
-
-Audit Access:
-In Azure AD > Audit Logs, monitor access using:
-
-```kql
-AuditLogs
-| where ActivityDisplayName contains "Read local administrator password"
-```
-Check LAPS Client Status:
-Run the following command on the client:
-
-```powershell
-Get-LapsDiagnostics
-```
-
-## 🚀 Step 6 - Optional: Integrate with Microsoft Sentinel
-To monitor who accessed local admin passwords:
-
-```kql
-AuditLogs
-| where ActivityDisplayName contains "Read local administrator password"
-| project TimeGenerated, InitiatedBy, ActivityDisplayName, TargetResources
-```
--> Trigger alerts if password access occurs outside business hours or from suspicious users.
-
+![LAPS_Admin_FirstStart](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Admin_FirstStart.png)
 
 
