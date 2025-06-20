@@ -211,3 +211,5 @@ Copy the password and view its expiration date
 ![Passwd_Reader_Group](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Passwd_Group.png)
 
 ---
+
+SENTINEL
