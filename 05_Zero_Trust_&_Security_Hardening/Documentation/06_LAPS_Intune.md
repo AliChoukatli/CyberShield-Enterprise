@@ -213,3 +213,5 @@ Copy the password and view its expiration date
 ---
 
 SENTINEL
+
+LAPS Hybrid
