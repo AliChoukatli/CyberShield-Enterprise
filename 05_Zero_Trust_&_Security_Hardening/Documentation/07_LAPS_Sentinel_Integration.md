@@ -1,6 +1,6 @@
 # 🚨 LAPS Integration with Microsoft Sentinel
 
-## 🎯 Objective
+# 🎯 Objective
 
 This guide explains how to monitor and detect sensitive operations related to the `LAPS_Admin` account using Microsoft Sentinel. Key activities include:
 
@@ -9,7 +9,8 @@ This guide explains how to monitor and detect sensitive operations related to th
 - Local sign-in using the `LAPS_Admin` account
 
 ---
-## 📘 Table of contents
+
+# 📘 Table of contents
 
 - Method 1: Intune Custom Profile (OMA-URI Settings) — *Currently Limited*
 - Method 2: PowerShell Script Deployment — *Recommended*
@@ -17,7 +18,7 @@ This guide explains how to monitor and detect sensitive operations related to th
 Due to the limitations above, the PowerShell script deployment method is recommended for reliable audit policy configuration.
 
 
-## 1️⃣ 1st Method - Enable Audit Logging via Intune Custom Profile (OMA-URI Settings) — *Currently Limited*
+## 1️⃣ Enable Audit Logging via Intune Custom Profile (OMA-URI Settings) — *Currently Limited*
 > ⚠️ This method is officially supported but currently has limitations on Azure AD joined Windows 10/11 devices, often causing deployment errors.
 
 ### 🎯 Objective
