@@ -10,9 +10,8 @@ This guide explains how to monitor and detect sensitive operations related to th
 
 ---
 
-## 1️⃣ Enable Audit Logging on Endpoints
+## 1️⃣ 1st Method - Enable Audit Logging via Intune Custom Profile (OMA-URI Settings)
 
-## 1st Method: 
 ## 🎯 Objective
 
 Enable key audit policies required for tracking LAPS_Admin activity—such as password retrieval and local login—using Microsoft Sentinel.
@@ -103,7 +102,7 @@ On a test device:
 
 ---
 
-## 2nd Method — Enable Audit Logging via PowerShell Script Deployment
+## 2️⃣ 2nd Method — Enable Audit Logging via PowerShell Script Deployment
 
 ### 🎯 Objective  
 Since some advanced audit settings cannot be applied through Intune OMA-URI profiles due to MDM limitations, this method uses a PowerShell script deployed via Intune to configure audit policies directly on endpoints.
@@ -166,9 +165,8 @@ foreach ($setting in $auditSettings) {
 
 - This script method bypasses Intune's current OMA-URI limitations for audit policy configuration.
 - It is fully compatible with Windows 10 and Windows 11 Azure AD joined devices.
-- Ensure your devices have network connectivity to receive and execute the script.
 
-
+---
 
 ## 📌 Related Sentinel Detection Scenarios
 
