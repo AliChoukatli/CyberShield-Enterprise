@@ -12,15 +12,13 @@ This guide explains how to monitor and detect sensitive operations related to th
 
 # 📘 Table of contents
 
-- Method 1: Enable Audit Logging via PowerShell Script Deployment — *Recommended*
-- Method 2 - Enable Audit Logging via Intune Custom Profile (OMA-URI) — *Currently Limited*  
-> ⚠️ Since some advanced audit settings cannot be applied through Intune OMA-URI profiles due to MDM limitations, the PowerShell script deployment method is recommended for reliable audit policy configuration.
+- 1 - Enable Audit Logging via PowerShell Script Deployment — *Recommended*
+- 2 - Connect Required Logs to Microsoft Sentinel
+- 3️ -  Use Cases & Detection Rules
 
 ---
 
-# 1 - Enable Audit Logging for LAPS (PowerShell Script & Intune OMA-URI Methods)
-
-## Method 1 - Enable Audit Logging via PowerShell Script Deployment — *Recommended*
+# 1 - Enable Audit Logging for LAPS (PowerShell Script)
 
 ### 🎯 Objective:
 Enable key audit policies required for tracking LAPS_Admin activity—such as password retrieval and local login—using Microsoft Sentinel.
@@ -119,101 +117,6 @@ auditpol /get /subcategory:"Sensitive Privilege Use"
 
 ---
 
-
-## Method 2 - Enable Audit Logging via Intune Custom Profile (OMA-URI) — *Currently Limited*
-> ⚠️ This method is officially supported but currently has limitations on Azure AD joined Windows 10/11 devices, often causing deployment errors.
-
----
-
-### 🎯 Objective
-
-Enable key audit policies required for tracking LAPS_Admin activity—such as password retrieval and local login—using Microsoft Sentinel.
-
-This guide is intended for **Azure AD joined devices managed by Intune only** (no on-prem GPO).
-
----
-
-### 🧩 Step 1 — Create a Custom Profile in Intune
-
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com)
-2. Navigate to **Devices** > **Configuration profiles**
-3. Click **+ Create profile**
-4. Configure the profile:
-   - **Platform**: *Windows 10 and later*
-   - **Profile type**: *Templates* > **Custom**
-5. Click **Create**
-
----
-
-### 🧩 Step 2 — Define Profile Basics
-
-- **Name**: `Enable Advanced Auditing - LAPS`
-- **Description**: Enables auditing for Account Logon, Logon/Logoff, Object Access, and Privilege Use categories.
-- Click **Next**
-
----
-
-### 🧩 Step 3 — Add OMA-URI Settings
-
-Click **+ Add** for each of the following OMA-URIs:
-
-| Name                        | OMA-URI                                                                                 | Data Type   | Value |
-|-----------------------------|------------------------------------------------------------------------------------------|-------------|-------|
-| Audit - Credential Validation | `./Device/Vendor/MSFT/Policy/Config/Audit/AccountLogon_CredentialValidation`         | Integer     | `3`   |
-| Audit - Logon               | `./Device/Vendor/MSFT/Policy/Config/Audit/LogonLogoff_Logon`                           | Integer     | `3`   |
-| Audit - Special Logon       | `./Device/Vendor/MSFT/Policy/Config/Audit/LogonLogoff_SpecialLogon`                   | Integer     | `1`   |
-| Audit - Object Access       | `./Device/Vendor/MSFT/Policy/Config/Audit/ObjectAccess_OtherObjectAccessEvents`       | Integer     | `3`   |
-| Audit - Sensitive Privilege | `./Device/Vendor/MSFT/Policy/Config/Audit/PrivilegeUse_SensitivePrivilegeUse`         | Integer     | `3`   |
-
-#### ℹ️ Values Explained:
-- `1` = Success  
-- `2` = Failure  
-- `3` = Success + Failure
-
-#### ℹ️ Audit Categories Overview for LAPS Monitoring
-
-- **Credential Validation** and **Logon**:  
-  These audit categories track authentication events, including logins to local accounts such as `LAPS_Admin`.
-
-- **Special Logon**:  
-  Tracks logons with elevated privileges. This is crucial for detecting administrative or privileged account access.
-
-- **Object Access**:  
-  Monitors access to sensitive files or registry keys. Useful for auditing any modifications or accesses related to LAPS configurations.
-
-- **Sensitive Privilege Use**:  
-  Monitors the use of sensitive privileges that could allow privilege escalation or security bypass.
-
----
-
-### 🧩 Step 4 — Assign the Profile
-
-1. Click **Next**
-2. Under **Assignments**, select the **device group** that contains your cloud-only endpoints
-3. Click **Next**, then **Review**
-
-![LAPS_Audit](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Audit.png)
-
-4. Click **Create**
-
----
-
-### 🧩 Step 5 — Confirm Policy Application
-
-On a test device:
-
-- Open **Event Viewer**
-- Go to: `Windows Logs > Security`
-- You should start seeing events like:
-  - `4624` — Successful logon (LAPS_Admin)
-  - `4672` — Privileged logon
-  - `4688` — Process creation 
-
-![LAPS_Audit_EV](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Audit_EV.png)
-
-> You can now ingest these logs into **Microsoft Sentinel** via the **AMA agent** or **Microsoft Defender for Endpoint**.
-
----
 
 # 2 - Connect Required Logs to Microsoft Sentinel
 
