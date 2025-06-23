@@ -108,8 +108,6 @@ On a test device:
 ### 🎯 Objective  
 Since some advanced audit settings cannot be applied through Intune OMA-URI profiles due to MDM limitations, this method uses a PowerShell script deployed via Intune to configure audit policies directly on endpoints.
 
----
-
 ### 🧩 Step 1 — Create the PowerShell Script
 
 Create a PowerShell script (`Enable-AdvancedAudit.ps1`) with the following content:
