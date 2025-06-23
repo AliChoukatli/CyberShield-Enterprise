@@ -185,7 +185,7 @@ AuditLogs
 ```
 ---
 
-## Connect Required Logs to Microsoft Sentinel
+## 2 - Connect Required Logs to Microsoft Sentinel
 
 Go to **Microsoft Sentinel > Content Management > Data connectors**, and connect the following:
 
@@ -198,7 +198,7 @@ Go to **Microsoft Sentinel > Content Management > Data connectors**, and connect
 
 ---
 
-## 3️⃣ Use Cases & Detection Rules
+## 3️ -  Use Cases & Detection Rules
 
 ### ✅ Case 1 — Viewing LAPS Password via Intune
 
