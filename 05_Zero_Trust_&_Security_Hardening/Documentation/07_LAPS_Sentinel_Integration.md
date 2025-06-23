@@ -96,7 +96,9 @@ On a test device:
   - `4672` — Privileged logon
   - `4688` — Process creation (if audited)
 
-You can now ingest these logs into **Microsoft Sentinel** via the **AMA agent** or **Microsoft Defender for Endpoint**.
+![LAPS_Audit_EV](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Audit_EV.png)
+
+> You can now ingest these logs into **Microsoft Sentinel** via the **AMA agent** or **Microsoft Defender for Endpoint**.
 
 ---
 
