@@ -149,6 +149,9 @@ auditpol /get /subcategory:"Registry"
 auditpol /get /subcategory:"Other Object Access Events"
 auditpol /get /subcategory:"Sensitive Privilege Use"
 ```
+
+![LAPS_Audit_PS](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Audit_PS.png)
+
 5. Check the Security logs in Event Viewer to confirm relevant audit events are generated (e.g., Event IDs 4624, 4672, 4688).
 
 ---
