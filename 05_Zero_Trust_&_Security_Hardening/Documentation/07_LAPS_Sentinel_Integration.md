@@ -57,6 +57,22 @@ Click **+ Add** for each of the following OMA-URIs:
 - `2` = Failure  
 - `3` = Success + Failure
 
+### Audit Categories Overview for LAPS Monitoring
+
+- **Credential Validation** and **Logon**:  
+  These audit categories track authentication events, including logins to local accounts such as `LAPS_Admin`.
+
+- **Special Logon**:  
+  Tracks logons with elevated privileges. This is crucial for detecting administrative or privileged account access.
+
+- **Object Access**:  
+  Monitors access to sensitive files or registry keys. Useful for auditing any modifications or accesses related to LAPS configurations.
+
+- **Sensitive Privilege Use**:  
+  Monitors the use of sensitive privileges that could allow privilege escalation or security bypass.
+
+---
+
 ## 🧩 Step 4 — Assign the Profile
 
 1. Click **Next**
