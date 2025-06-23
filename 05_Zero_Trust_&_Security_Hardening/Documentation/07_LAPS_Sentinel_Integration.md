@@ -121,7 +121,12 @@ $auditSettings = @(
 )
 
 foreach ($setting in $auditSettings) {
-    AuditPol /set /subcategory:"$($setting.Subcategory)" /success:$($setting.Success) /failure:$($setting.Failure)
+    $subcategory = $setting.Subcategory
+    $success = $setting.Success
+    $failure = $setting.Failure
+
+    Write-Output "Setting audit policy for subcategory: $subcategory (Success=$success, Failure=$failure)"
+    & AuditPol.exe /set /subcategory:"$subcategory" /success:$success /failure:$failure
 }
 ```
 
