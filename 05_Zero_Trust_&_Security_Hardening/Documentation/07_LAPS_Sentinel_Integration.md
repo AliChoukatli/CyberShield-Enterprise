@@ -218,12 +218,57 @@ On a test device:
 
 Go to **Microsoft Sentinel > Content Management > Data connectors**, and connect the following:
 
-| Data Source | Purpose |
-|----------------------|---------|
-| **Microsoft Intune** | Tracks password access operations via Endpoint Manager |
-| **Entra ID** | Logs role changes, credential reads, and other sensitive operations |
-| **Windows Security Events** (via AMA or Log Analytics Agent) | Captures local sign-ins using `LAPS_Admin` |
-| **Microsoft Defender for Endpoint** *(optional)* | Provides contextual enrichment and threat indicators |
+# Step 2 – Connect Required Logs to Microsoft Sentinel (LAPS)
+
+To effectively monitor and investigate Local Administrator Password Solution (LAPS) activities, it is essential to connect the relevant Windows event logs from managed devices to Microsoft Sentinel.
+
+This includes logs related to password retrieval, password rotation, policy application, and local administrator account activities.
+
+---
+
+## Required Logs for LAPS Monitoring
+
+| Log Source             | Log Name                        | Description                                                  |
+|-----------------------|--------------------------------|--------------------------------------------------------------|
+| **Windows Event Logs** | Microsoft-Windows-LAPS/Operational | Primary LAPS events: password retrieval, set operations, policy evaluation, and errors. |
+| **Security Logs**      | Security                       | User account activity and privilege use (e.g., event IDs 4624, 4672). |
+| **System Logs**        | System                        | Service startup and Group Policy processing related to LAPS. |
+
+---
+
+## Prerequisites
+
+- Devices must be **onboarded to Microsoft Defender for Endpoint (MDE)** or configured with the **Azure Monitor Agent (AMA)** / Log Analytics Agent.
+- Devices must be **domain-joined, Azure AD joined, or Hybrid joined** according to your environment.
+- Appropriate permissions to access Microsoft Sentinel and the Log Analytics workspace.
+
+---
+
+## How to Connect Logs to Microsoft Sentinel
+
+### Option 1: Using Azure Monitor Agent (AMA)
+
+1. Deploy the **Azure Monitor Agent** on target devices via Intune, Group Policy, or manual installation.
+2. Create and assign a **Data Collection Rule (DCR)** to collect the following logs:
+   - `Microsoft-Windows-LAPS/Operational`
+   - (Optional) `Security` and `System` logs
+3. In the Microsoft Sentinel portal:
+   - Navigate to **Settings > Workspace Settings > Tables**
+   - Confirm the **Event** table is enabled and receiving logs.
+
+### Option 2: Using Microsoft Defender for Endpoint (MDE)
+
+1. Ensure devices are onboarded to Microsoft Defender for Endpoint.
+2. In Microsoft Sentinel, open **Data Connectors**.
+3. Find and open the **Microsoft Defender for Endpoint** connector.
+4. Follow the setup steps to integrate MDE logs with Sentinel.
+5. Utilize advanced hunting and create custom analytics rules to monitor LAPS activity.
+
+---
+
+Once connected, you can create Sentinel analytics rules to detect unusual LAPS events, password access anomalies, or policy failures.
+
+---
 
 ---
 
