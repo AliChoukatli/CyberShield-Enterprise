@@ -147,7 +147,7 @@ foreach ($setting in $auditSettings) {
 
 ![LAPS_Aduit_Script](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Audit_Script.png)
 
-9. Click **Next**, review settings, then **Add**.
+8. Click **Next**, review settings, then **Add**.
 
 ---
 
