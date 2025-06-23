@@ -12,16 +12,93 @@ This guide explains how to monitor and detect sensitive operations related to th
 
 ## 1️⃣ Enable Audit Logging on Endpoints
 
-Make sure **Advanced Audit Policy Configuration** is enabled via GPO or Intune on all endpoints.
+## 🎯 Objective
 
-Recommended audit categories:
-- **Account Logon**
-- **Logon/Logoff**
-- **Object Access**
-- **Privilege Use**
+Enable key audit policies required for tracking LAPS_Admin activity—such as password retrieval and local login—using Microsoft Sentinel.
 
-These logs will be required to track local sign-ins and privileged activity.
+This guide is intended for **Azure AD joined devices managed by Intune only** (no on-prem GPO).
 
+---
+
+## 🧩 Step 1 — Create a Custom Profile in Intune
+
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com)
+2. Navigate to **Devices** > **Configuration profiles**
+3. Click **+ Create profile**
+4. Configure the profile:
+   - **Platform**: *Windows 10 and later*
+   - **Profile type**: *Templates* > **Custom**
+5. Click **Create**
+
+---
+
+## 🧩 Step 2 — Define Profile Basics
+
+- **Name**: `Enable Advanced Auditing - LAPS`
+- **Description**: Enables auditing for Account Logon, Logon/Logoff, Object Access, and Privilege Use categories.
+- Click **Next**
+
+---
+
+## 🧩 Step 3 — Add OMA-URI Settings
+
+Click **+ Add** for each of the following OMA-URIs:
+
+| Name                        | OMA-URI                                                                                 | Data Type   | Value |
+|-----------------------------|------------------------------------------------------------------------------------------|-------------|-------|
+| Audit - Credential Validation | `./Device/Vendor/MSFT/Policy/Config/Audit/AccountLogon_CredentialValidation`         | Integer     | `3`   |
+| Audit - Logon               | `./Device/Vendor/MSFT/Policy/Config/Audit/LogonLogoff_Logon`                           | Integer     | `3`   |
+| Audit - Special Logon       | `./Device/Vendor/MSFT/Policy/Config/Audit/LogonLogoff_SpecialLogon`                   | Integer     | `1`   |
+| Audit - Object Access       | `./Device/Vendor/MSFT/Policy/Config/Audit/ObjectAccess_OtherObjectAccessEvents`       | Integer     | `3`   |
+| Audit - Sensitive Privilege | `./Device/Vendor/MSFT/Policy/Config/Audit/PrivilegeUse_SensitivePrivilegeUse`         | Integer     | `3`   |
+
+### ℹ️ Values Explained:
+- `1` = Success  
+- `2` = Failure  
+- `3` = Success + Failure
+
+> You may customize this per policy if needed.
+
+---
+
+## 🧩 Step 4 — Assign the Profile
+
+1. Click **Next**
+2. Under **Assignments**, select the **device group** that contains your cloud-only endpoints
+3. Click **Next**, then **Create**
+
+---
+
+## 🧩 Step 5 — Confirm Policy Application
+
+On a test device:
+
+- Open **Event Viewer**
+- Go to: `Windows Logs > Security`
+- You should start seeing events like:
+  - `4624` — Successful logon (LAPS_Admin)
+  - `4672` — Privileged logon
+  - `4688` — Process creation (if audited)
+
+You can now ingest these logs into **Microsoft Sentinel** via the **AMA agent** or **Microsoft Defender for Endpoint**.
+
+---
+
+## 📌 Related Sentinel Detection Scenarios
+
+Once audit logs are active, use the following KQL queries:
+
+**LAPS_Admin Logon Detection**
+```kusto
+SecurityEvent
+| where EventID == 4624 and Account == "LAPS_Admin"
+```
+LAPS Password Retrieval Detection
+
+```kusto
+AuditLogs
+| where ActivityDisplayName == "Read deviceLocalCredentials"
+```
 ---
 
 ## 2️⃣ Connect Required Logs to Microsoft Sentinel
