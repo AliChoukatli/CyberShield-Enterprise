@@ -12,6 +12,7 @@ This guide explains how to monitor and detect sensitive operations related to th
 
 ## 1️⃣ Enable Audit Logging on Endpoints
 
+## 1st Method: 
 ## 🎯 Objective
 
 Enable key audit policies required for tracking LAPS_Admin activity—such as password retrieval and local login—using Microsoft Sentinel.
@@ -101,6 +102,73 @@ On a test device:
 > You can now ingest these logs into **Microsoft Sentinel** via the **AMA agent** or **Microsoft Defender for Endpoint**.
 
 ---
+
+## 2nd Method — Enable Audit Logging via PowerShell Script Deployment
+
+### 🎯 Objective  
+Since some advanced audit settings cannot be applied through Intune OMA-URI profiles due to MDM limitations, this method uses a PowerShell script deployed via Intune to configure audit policies directly on endpoints.
+
+---
+
+### 🧩 Step 1 — Create the PowerShell Script
+
+Create a PowerShell script (`Enable-AdvancedAudit.ps1`) with the following content:
+
+```powershell
+$auditSettings = @(
+    @{ Subcategory = "Credential Validation"; Success = "enable"; Failure = "enable" },
+    @{ Subcategory = "Logon"; Success = "enable"; Failure = "enable" },
+    @{ Subcategory = "Special Logon"; Success = "enable"; Failure = "enable" },
+    @{ Subcategory = "Object Access"; Success = "enable"; Failure = "enable" },
+    @{ Subcategory = "Sensitive Privilege Use"; Success = "enable"; Failure = "enable" }
+)
+
+foreach ($setting in $auditSettings) {
+    AuditPol /set /subcategory:"$($setting.Subcategory)" /success:$($setting.Success) /failure:$($setting.Failure)
+}
+```
+
+### 🧩 Step 2 — Deploy the Script via Intune
+
+1. Sign in to the Microsoft Endpoint Manager admin center.
+
+2. Navigate to **Devices** > **Scripts**.
+
+3. Click **+ Add** > **Windows 10 and later**.
+
+4. Name the script deployment: **Enable Advanced Audit Logging**.
+
+5. Upload your `Enable-AdvancedAudit.ps1` script.
+
+6. Configure:
+   - **Run this script using the logged on credentials:** No
+   - **Enforce script signature check:** No
+   - **Run script in 64-bit PowerShell:** Yes
+
+7. Assign the script to your target device group (e.g., Azure AD joined Windows 10/11 devices).
+
+8. Click **Next**, review settings, then **Add**.
+
+---
+
+### 🧩 Step 3 — Verify the Audit Policies
+
+- After deployment, on a target device, open **Event Viewer** → **Windows Logs** → **Security**.
+
+- Verify the presence of audit events such as:
+  - Event ID **4624** (Successful logon)
+  - Event ID **4672** (Special privileged logon)
+  - Event ID **4688** (Process creation)
+
+---
+
+### 🧩 Notes
+
+- This script method bypasses Intune's current OMA-URI limitations for audit policy configuration.
+- It is fully compatible with Windows 10 and Windows 11 Azure AD joined devices.
+- Ensure your devices have network connectivity to receive and execute the script.
+
+
 
 ## 📌 Related Sentinel Detection Scenarios
 
