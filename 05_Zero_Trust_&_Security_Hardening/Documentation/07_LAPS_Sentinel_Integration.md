@@ -12,17 +12,18 @@ This guide explains how to monitor and detect sensitive operations related to th
 
 # 📘 Table of contents
 
-- Method 1: Intune Custom Profile (OMA-URI Settings) — *Currently Limited*
-- Method 2: PowerShell Script Deployment — *Recommended*
+- Method 1: PowerShell Script Deployment — *Recommended*
+- Method 2: Intune Custom Profile (OMA-URI Settings) — *Currently Limited*
+- 
 
 Due to the limitations above, the PowerShell script deployment method is recommended for reliable audit policy configuration.
 
 ---
 
-## Enable Audit Logging via PowerShell Script Deployment
+## Method 1 - PowerShell Script Deployment — *Recommended*
 
 ### 🎯 Objective  
-Since some advanced audit settings cannot be applied through Intune OMA-URI profiles due to MDM limitations, this method uses a PowerShell script deployed via Intune to configure audit policies directly on endpoints.
+⚠️ Since some advanced audit settings cannot be applied through Intune OMA-URI profiles due to MDM limitations, this method uses a PowerShell script deployed via Intune to configure audit policies directly on endpoints.
 
 ### 🧩 Step 1 — Create the PowerShell Script
 
