@@ -109,7 +109,7 @@ Since some advanced audit settings cannot be applied through Intune OMA-URI prof
 
 ### 🧩 Step 1 — Create the PowerShell Script
 
-Create a PowerShell script (`Enable Audit Policies for LAPS monitoring.ps1`) with the following content:
+Create a PowerShell script (`Enable_LAPS_Audit.ps1`) with the following content:
 
 ```powershell
 $auditSettings = @(
@@ -140,14 +140,14 @@ foreach ($setting in $auditSettings) {
 
 4. Name the script deployment: **Enable Advanced Audit Logging**.
 
-5. Upload your `Enable Audit Policies for LAPS monitoring.ps1` script.
+5. Upload your `Enable_LAPS_Audit.ps1` script.
 
-6. Configure:
+7. Configure:
    - **Run this script using the logged on credentials:** No
    - **Enforce script signature check:** No
    - **Run script in 64-bit PowerShell:** Yes
 
-7. Assign the script to your target device group (e.g., Azure AD joined Windows 10/11 devices).
+8. Assign the script to your target device group (e.g., Azure AD joined Windows 10/11 devices).
 
 ![LAPS_Aduit_Script](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Audit_Script.png)
 
