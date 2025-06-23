@@ -77,10 +77,11 @@ Click **+ Add** for each of the following OMA-URIs:
 
 1. Click **Next**
 2. Under **Assignments**, select the **device group** that contains your cloud-only endpoints
-3. Click **Next**, then **Create**
-
+3. Click **Next**, then **Review**
 
 ![LAPS_Audit](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Audit.png)
+
+4. Create
 
 ---
 
