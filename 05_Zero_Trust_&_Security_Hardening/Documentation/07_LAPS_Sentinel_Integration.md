@@ -12,15 +12,14 @@ This guide explains how to monitor and detect sensitive operations related to th
 
 # 📘 Table of contents
 
-- Method 1: PowerShell Script Deployment — *Recommended*
-- Method 2: Intune Custom Profile (OMA-URI Settings) — *Currently Limited*
-  
+- Method 1: Enable Audit Logging via PowerShell Script Deployment — *Recommended*
+- Method 2 - Enable Audit Logging via Intune Custom Profile (OMA-URI) — *Currently Limited*  
 > ⚠️ Since some advanced audit settings cannot be applied through Intune OMA-URI profiles due to MDM limitations, the PowerShell script deployment method is recommended for reliable audit policy configuration.
 
 ---
 
 
-## Method 1 - PowerShell Script Deployment — *Recommended*
+## Method 1 - Enable Audit Logging via PowerShell Script Deployment — *Recommended*
 
 ### 🎯 Objective:
 Enable key audit policies required for tracking LAPS_Admin activity—such as password retrieval and local login—using Microsoft Sentinel.
