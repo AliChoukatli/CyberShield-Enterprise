@@ -19,9 +19,11 @@ This guide explains how to monitor and detect sensitive operations related to th
 
 ---
 
+
 ## Method 1 - PowerShell Script Deployment — *Recommended*
 
-### 🎯 Objective  
+### 🎯 Objective:
+Enable key audit policies required for tracking LAPS_Admin activity—such as password retrieval and local login—using Microsoft Sentinel.
 
 ### 🧩 Step 1 — Create the PowerShell Script
 
