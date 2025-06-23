@@ -81,7 +81,7 @@ Click **+ Add** for each of the following OMA-URIs:
 
 ![LAPS_Audit](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Audit.png)
 
-4. Create
+4. Click **Create**
 
 ---
 
