@@ -237,21 +237,21 @@ On a test device:
 
 ### Option 1 — Using Azure Monitor Agent (AMA)
 
-## Objective
+#### Objective
 
 Deploy the Azure Monitor Agent (AMA) centrally and automatically on Windows 10/11 devices managed by Intune to enable log collection for Microsoft Sentinel.
 
-### 1. Sign in to Microsoft Endpoint Manager portal
+##### 1. Sign in to Microsoft Endpoint Manager portal
 
 - Open a browser and go to [https://endpoint.microsoft.com](https://endpoint.microsoft.com)
 - Sign in with an account with Intune admin rights
 
-### 2. Create a Device Configuration Profile to deploy AMA
+#### 2. Create a Device Configuration Profile to deploy AMA
 
 - From the left-hand menu, select **Devices** > **Configuration profiles**
 - Click **+ Create profile**
 
-### 3. Configure profile settings
+#### 3. Configure profile settings
 
 - Platform: **Windows 10 and later**
 - Profile type: **Templates**
@@ -259,16 +259,16 @@ Deploy the Azure Monitor Agent (AMA) centrally and automatically on Windows 10/1
 
 > If no dedicated AMA template exists, use **Custom** profile with OMA-URI for advanced configurations or deploy via installer script.
 
-### 4. Configure the profile details
+#### 4. Configure the profile details
 
 - Name: `Deploy Azure Monitor Agent`
 - Description: `Installs the Azure Monitor Agent for log collection`
 
-### 5. Assign the profile
+#### 5. Assign the profile
 
 - Choose the device groups to deploy the agent to (e.g., "All Windows 10 Devices")
 
-### 6. Review and create
+#### 6. Review and create
 
 - Review the settings and click **Create** to deploy
 
