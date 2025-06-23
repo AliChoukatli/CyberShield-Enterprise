@@ -120,7 +120,7 @@ auditpol /get /subcategory:"Sensitive Privilege Use"
 ---
 
 
-## Method 2 - Enable Audit Logging via Intune Custom Profile (OMA-URI Settings) — *Currently Limited*
+## Method 2 - Enable Audit Logging via Intune Custom Profile (OMA-URI) — *Currently Limited*
 > ⚠️ This method is officially supported but currently has limitations on Azure AD joined Windows 10/11 devices, often causing deployment errors.
 
 ---
