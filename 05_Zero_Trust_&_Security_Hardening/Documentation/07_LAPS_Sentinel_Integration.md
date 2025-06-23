@@ -123,6 +123,8 @@ auditpol /get /subcategory:"Sensitive Privilege Use"
 ## Method 2 - Enable Audit Logging via Intune Custom Profile (OMA-URI Settings) — *Currently Limited*
 > ⚠️ This method is officially supported but currently has limitations on Azure AD joined Windows 10/11 devices, often causing deployment errors.
 
+---
+
 ### 🎯 Objective
 
 Enable key audit policies required for tracking LAPS_Admin activity—such as password retrieval and local login—using Microsoft Sentinel.
