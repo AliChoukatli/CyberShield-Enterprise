@@ -190,6 +190,8 @@ auditpol /get /subcategory:"Sensitive Privilege Use"
   - Event ID **4672** (Special privileged logon)
   - Event ID **4688** (Process creation)
 
+![LAPS_Audit_EV2](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Audit_EV2.png)
+
 ---
 
 ### 🧩 Notes
