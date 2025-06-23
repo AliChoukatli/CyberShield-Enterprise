@@ -219,9 +219,9 @@ On a test device:
 Go to **Microsoft Sentinel > Content Management > Data connectors**, and connect the following:
 
 | Data Source | Purpose |
-|-------------|---------|
+|----------------------|---------|
 | **Microsoft Intune** | Tracks password access operations via Endpoint Manager |
-| **Azure AD** | Logs role changes, credential reads, and other sensitive operations |
+| **Entra ID** | Logs role changes, credential reads, and other sensitive operations |
 | **Windows Security Events** (via AMA or Log Analytics Agent) | Captures local sign-ins using `LAPS_Admin` |
 | **Microsoft Defender for Endpoint** *(optional)* | Provides contextual enrichment and threat indicators |
 
