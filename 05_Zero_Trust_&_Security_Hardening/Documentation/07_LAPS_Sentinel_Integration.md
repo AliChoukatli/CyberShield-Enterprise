@@ -57,7 +57,7 @@ Click **+ Add** for each of the following OMA-URIs:
 - `2` = Failure  
 - `3` = Success + Failure
 
-### Audit Categories Overview for LAPS Monitoring
+### ℹ️ Audit Categories Overview for LAPS Monitoring
 
 - **Credential Validation** and **Logon**:  
   These audit categories track authentication events, including logins to local accounts such as `LAPS_Admin`.
