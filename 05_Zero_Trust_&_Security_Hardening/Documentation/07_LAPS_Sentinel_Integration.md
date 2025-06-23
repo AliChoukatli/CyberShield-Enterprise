@@ -127,6 +127,31 @@ foreach ($setting in $auditSettings) {
     AuditPol /set /subcategory:"$($setting.Subcategory)" /success:$($setting.Success) /failure:$($setting.Failure)
 }
 ```
+#### 🧪 Important: Before deploying this script via Intune, it is highly recommended to test it locally on a target device to ensure it works as expected.
+
+To test locally:
+
+1. Open PowerShell as Administrator on the test machine.
+2. Navigate to the folder where the script is saved.
+3. Run the script with:
+
+```powershell
+.\Enable_LAPS_Audit.ps1
+```
+4. Verify the audit policy changes using:
+
+```powershell
+auditpol /get /subcategory:"Credential Validation"
+auditpol /get /subcategory:"Logon"
+auditpol /get /subcategory:"Special Logon"
+auditpol /get /subcategory:"File System"
+auditpol /get /subcategory:"Registry"
+auditpol /get /subcategory:"Other Object Access Events"
+auditpol /get /subcategory:"Sensitive Privilege Use"
+```
+5. Check the Security logs in Event Viewer to confirm relevant audit events are generated (e.g., Event IDs 4624, 4672, 4688).
+
+---
 
 ### 🧩 Step 2 — Deploy the Script via Intune
 
