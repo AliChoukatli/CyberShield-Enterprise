@@ -18,6 +18,7 @@ This guide explains how to monitor and detect sensitive operations related to th
 
 ---
 
+# 1 - Enable Audit Logging for LAPS (PowerShell Script & Intune OMA-URI Methods)
 
 ## Method 1 - Enable Audit Logging via PowerShell Script Deployment — *Recommended*
 
