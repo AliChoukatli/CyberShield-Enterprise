@@ -141,8 +141,59 @@ Collect and ingest the relevant Windows Security event logs related to LAPS (`LA
 
 ## 🧩 Step 1 - Ensure Audit Policies Are Enabled on Target Devices
 
-Before logs can be collected, ensure the audit policies discussed previously are enabled. Prefer **Method 1** (PowerShell script deployment via Intune) for reliable policy enforcement on Azure AD joined Windows 10/11 devices.
+Before starting, make sure you have:
 
+- An active **Log Analytics Workspace** connected to Microsoft Sentinel.
+- Azure AD joined or hybrid-joined **Windows 10/11 endpoints**.
+- **Intune** or another management solution to deploy AMA at scale.
+- Appropriate roles (e.g., **Log Analytics Contributor**, **Intune Admin**, **Global Admin**).
+
+---
+
+### 🧩 Step 2 — Create a Data Collection Rule (DCR)
+
+1. Go to the Azure Portal: [https://portal.azure.com](https://portal.azure.com)
+
+2. Search for **"Data Collection Rules"**
+
+3. Click **+ Create**
+
+4. Fill in the basic info:  
+   - **Name**: `LAPS_SecurityEvents_DCR`  
+   - **Region**: Same as your Log Analytics workspace  
+   - **Resource Group**: Use an existing one or create a new one  
+
+5. Click **Next**
+
+---
+
+#### ➕ Add Data Source
+
+1. Click **+ Add data source**
+
+2. Choose **Windows Event Logs**
+
+3. Set:  
+   - **Name**: `WindowsSecurity`  
+   - **Event log name**: `Security`  
+   - **Event IDs**:  
+     ```
+     4624, 4625, 4672, 4688, 4703, 4769, 1102
+     ```
+
+4. Click **Add**
+
+---
+
+#### ➕ Add Destination
+
+1. Click **+ Add destination**
+
+2. Choose your **Log Analytics Workspace** connected to Microsoft Sentinel
+
+3. Click **Next**, then **Create**
+
+---
 ---
 
 ## 🧩 Step 2 - Configure Data Collection in Microsoft Sentinel
