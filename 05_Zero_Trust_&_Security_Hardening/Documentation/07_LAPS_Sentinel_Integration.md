@@ -268,7 +268,7 @@ Event
 | where EventLog == "Microsoft-Windows-LAPS/Operational"
 | sort by TimeGenerated desc
 | take 10
-
+```
 ---
 
 ## 3️ -  Use Cases & Detection Rules
