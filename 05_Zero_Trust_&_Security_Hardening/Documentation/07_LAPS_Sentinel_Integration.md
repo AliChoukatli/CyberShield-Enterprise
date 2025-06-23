@@ -240,14 +240,82 @@ On a test device:
 
 ### Option 1 — Using Azure Monitor Agent (AMA)
 
-1. Deploy the **Azure Monitor Agent** on all target devices via Intune or other management tools.
-2. Create a **Data Collection Rule (DCR)** that includes:
-   - Collection of `Microsoft-Windows-LAPS/Operational` event logs.
-   - (Optionally) Collection of `Security` and `System` logs for comprehensive auditing.
-3. Assign the DCR to the target devices.
-4. Confirm logs are flowing into your Log Analytics workspace by checking the **Event** table in Sentinel.
+# Step 1 – Install Azure Monitor Agent (AMA) via Microsoft Intune (Enterprise)
 
 ---
+
+## Objective
+
+Deploy the Azure Monitor Agent (AMA) centrally and automatically on all Windows 10/11 workstations and servers managed by Intune to collect logs for Microsoft Sentinel.
+
+---
+
+## Prerequisites
+
+- Access to Microsoft Endpoint Manager portal: [https://endpoint.microsoft.com](https://endpoint.microsoft.com)  
+- Well-defined device groups in Azure AD / Intune (e.g., dynamic groups by OS, department, etc.)  
+- Administrative permissions in Intune to create and assign apps
+
+---
+
+## Detailed Procedure
+
+### 1. Sign in to Microsoft Endpoint Manager portal
+
+- Open a browser and navigate to [https://endpoint.microsoft.com](https://endpoint.microsoft.com)  
+- Sign in with an account that has Intune administrator privileges.
+
+### 2. Prepare for AMA deployment
+
+- From the left-hand menu, click **Apps** > **Windows**.
+- Click **+ Add** to add a new application.
+
+### 3. Add Azure Monitor Agent (AMA) as a Line-of-business app
+
+- In the app type list, select **Line-of-business app**.
+- Click **Select**.
+
+### 4. Upload the installation package
+
+- Download the official Azure Monitor Agent MSI from:  
+  [https://aka.ms/azuremonitoragentwindows](https://aka.ms/azuremonitoragentwindows)  
+- In the Intune portal, click **App package file** > **Select file**, and upload the MSI you just downloaded.
+
+### 5. Configure app information
+
+- Enter the app name, e.g.:  
+  `Azure Monitor Agent (AMA)`  
+- Optionally add a description and publisher information.
+
+### 6. Configure deployment settings
+
+- Under **Assignments**, select the target device groups for deployment.  
+  *Example: Azure AD dynamic group "All Windows 10 Devices"*
+
+### 7. Complete and deploy
+
+- Click **Next** through the remaining steps, then click **Create** to start the deployment.
+
+---
+
+## Deployment Verification
+
+- On a target device, open **Task Manager** or **Services** and verify the **Azure Monitor Agent** service (`AzureMonitorAgent`) is running.
+- Check for the presence of the folder `C:\Program Files\Azure Monitor Agent` and the executable `AzureMonitorAgent.exe`.
+- In Intune, monitor deployment status under **Apps > Monitor > Installation status** to confirm successful installs.
+
+---
+
+## Notes
+
+- This method ensures a clean, standardized, and managed installation via Intune, ideal for enterprise environments.
+- After AMA installation, proceed to create and assign the Data Collection Rule (DCR) to collect LAPS and other relevant event logs.
+- Ensure target devices have internet connectivity and access to required Azure endpoints.
+
+---
+
+Would you like me to prepare the full procedure for creating and assigning the Data Collection Rule (DCR) via Intune as well?
+
 
 ### Option 2 — Using Microsoft Defender for Endpoint (MDE)
 
