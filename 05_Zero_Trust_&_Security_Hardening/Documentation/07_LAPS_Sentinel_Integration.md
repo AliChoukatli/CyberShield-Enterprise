@@ -176,30 +176,21 @@ Before logs can be collected, ensure the audit policies discussed previously are
 
 ## 🧩 Step 3 - Verify Logs Are Ingested in Microsoft Sentinel
 
-- After configuration, confirm events are arriving in Sentinel by running a simple query in **Logs** (Log Analytics):
+After a few minutes, logs should start arriving.
+
+1. Go to Microsoft Sentinel > your workspace
+2. Click Logs (Log Analytics)
+3. Run the following query:
 
 ```kusto
 SecurityEvent
 | where EventID in (4624, 4672, 4688)
-| where Account == "LAPS_Admin" or Account contains "LAPS_Admin"
 | sort by TimeGenerated desc
 | take 20
-```
 > This query helps you see recent logon and privileged activity involving the LAPS_Admin account.
-
+```
 ---
 
-### 🧩 Step 4 - Create Analytics Rules & Alerts (Optional but Recommended)
-
-Create custom Analytics rules in Microsoft Sentinel to detect and alert on suspicious or sensitive LAPS-related activities, including but not limited to:
-
-- **Unexpected logon outside business hours**  
-- **Logon from unusual IP addresses or geographic locations** (impossible travel detection)  
-- **Password retrieval events correlated with LAPS account usage**
-
-You can leverage built-in Sentinel rule templates or customize detection rules based on your organization's environment and risk profile.
-
----
 
 ### ⚠️ Important Notes
 
