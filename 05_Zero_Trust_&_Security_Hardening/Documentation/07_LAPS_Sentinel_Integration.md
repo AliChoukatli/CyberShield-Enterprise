@@ -12,7 +12,7 @@ This guide explains how to monitor and detect sensitive operations related to th
 
 ## 1️⃣ 1st Method - Enable Audit Logging via Intune Custom Profile (OMA-URI Settings)
 
-## 🎯 Objective
+### 🎯 Objective
 
 Enable key audit policies required for tracking LAPS_Admin activity—such as password retrieval and local login—using Microsoft Sentinel.
 
@@ -20,7 +20,7 @@ This guide is intended for **Azure AD joined devices managed by Intune only** (n
 
 ---
 
-## 🧩 Step 1 — Create a Custom Profile in Intune
+### 🧩 Step 1 — Create a Custom Profile in Intune
 
 1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com)
 2. Navigate to **Devices** > **Configuration profiles**
@@ -32,7 +32,7 @@ This guide is intended for **Azure AD joined devices managed by Intune only** (n
 
 ---
 
-## 🧩 Step 2 — Define Profile Basics
+### 🧩 Step 2 — Define Profile Basics
 
 - **Name**: `Enable Advanced Auditing - LAPS`
 - **Description**: Enables auditing for Account Logon, Logon/Logoff, Object Access, and Privilege Use categories.
@@ -40,7 +40,7 @@ This guide is intended for **Azure AD joined devices managed by Intune only** (n
 
 ---
 
-## 🧩 Step 3 — Add OMA-URI Settings
+### 🧩 Step 3 — Add OMA-URI Settings
 
 Click **+ Add** for each of the following OMA-URIs:
 
@@ -52,12 +52,12 @@ Click **+ Add** for each of the following OMA-URIs:
 | Audit - Object Access       | `./Device/Vendor/MSFT/Policy/Config/Audit/ObjectAccess_OtherObjectAccessEvents`       | Integer     | `3`   |
 | Audit - Sensitive Privilege | `./Device/Vendor/MSFT/Policy/Config/Audit/PrivilegeUse_SensitivePrivilegeUse`         | Integer     | `3`   |
 
-### ℹ️ Values Explained:
+#### ℹ️ Values Explained:
 - `1` = Success  
 - `2` = Failure  
 - `3` = Success + Failure
 
-### ℹ️ Audit Categories Overview for LAPS Monitoring
+#### ℹ️ Audit Categories Overview for LAPS Monitoring
 
 - **Credential Validation** and **Logon**:  
   These audit categories track authentication events, including logins to local accounts such as `LAPS_Admin`.
@@ -73,7 +73,7 @@ Click **+ Add** for each of the following OMA-URIs:
 
 ---
 
-## 🧩 Step 4 — Assign the Profile
+### 🧩 Step 4 — Assign the Profile
 
 1. Click **Next**
 2. Under **Assignments**, select the **device group** that contains your cloud-only endpoints
@@ -85,7 +85,7 @@ Click **+ Add** for each of the following OMA-URIs:
 
 ---
 
-## 🧩 Step 5 — Confirm Policy Application
+### 🧩 Step 5 — Confirm Policy Application
 
 On a test device:
 
