@@ -185,7 +185,7 @@ AuditLogs
 ```
 ---
 
-## 2️⃣ Connect Required Logs to Microsoft Sentinel
+## Connect Required Logs to Microsoft Sentinel
 
 Go to **Microsoft Sentinel > Content Management > Data connectors**, and connect the following:
 
