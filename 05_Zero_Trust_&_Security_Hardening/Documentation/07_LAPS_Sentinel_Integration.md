@@ -94,7 +94,7 @@ On a test device:
 - You should start seeing events like:
   - `4624` — Successful logon (LAPS_Admin)
   - `4672` — Privileged logon
-  - `4688` — Process creation (if audited)
+  - `4688` — Process creation 
 
 ![LAPS_Audit_EV](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Audit_EV.png)
 
