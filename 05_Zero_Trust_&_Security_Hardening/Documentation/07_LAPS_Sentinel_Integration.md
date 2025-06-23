@@ -10,6 +10,17 @@ This guide explains how to monitor and detect sensitive operations related to th
 
 ---
 
+## Method 1: Intune Custom Profile (OMA-URI Settings) — *Currently Limited*
+
+⚠️ This method is officially supported but currently has limitations on Azure AD joined Windows 10/11 devices, often causing deployment errors.  
+
+It is included here for completeness and future reference.
+
+## Method 2: PowerShell Script Deployment — *Recommended*
+
+Due to the limitations above, the PowerShell script deployment method is recommended for reliable audit policy configuration.
+
+
 ## 1️⃣ 1st Method - Enable Audit Logging via Intune Custom Profile (OMA-URI Settings)
 
 ### 🎯 Objective
