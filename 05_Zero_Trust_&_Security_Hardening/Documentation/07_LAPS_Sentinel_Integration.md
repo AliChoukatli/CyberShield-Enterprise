@@ -240,25 +240,9 @@ On a test device:
 
 ### Option 1 — Using Azure Monitor Agent (AMA)
 
-# Step 1 – Install Azure Monitor Agent (AMA) via Microsoft Intune (Enterprise)
-
----
-
-## Objective
+## Objctive
 
 Deploy the Azure Monitor Agent (AMA) centrally and automatically on all Windows 10/11 workstations and servers managed by Intune to collect logs for Microsoft Sentinel.
-
----
-
-## Prerequisites
-
-- Access to Microsoft Endpoint Manager portal: [https://endpoint.microsoft.com](https://endpoint.microsoft.com)  
-- Well-defined device groups in Azure AD / Intune (e.g., dynamic groups by OS, department, etc.)  
-- Administrative permissions in Intune to create and assign apps
-
----
-
-## Detailed Procedure
 
 ### 1. Sign in to Microsoft Endpoint Manager portal
 
