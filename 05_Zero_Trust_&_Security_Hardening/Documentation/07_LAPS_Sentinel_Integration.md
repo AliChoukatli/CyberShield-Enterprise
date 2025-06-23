@@ -147,7 +147,7 @@ foreach ($setting in $auditSettings) {
 
 8. Assign the script to your target device group (e.g., Azure AD joined Windows 10/11 devices).
 
-![LAPS_Aduit_Script](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Audit_Script.png)
+![LAPS_Aduit_Script](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Audit_Script_Review.png)
 
 8. Click **Next**, review settings, then **Add**.
 
