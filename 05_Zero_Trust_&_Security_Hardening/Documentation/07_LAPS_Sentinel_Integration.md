@@ -75,12 +75,11 @@ SecurityEvent
 
 🛡️ Alert tip: Raise an alert if logon happens:
 
-From an unexpected endpoint
+- From an unexpected endpoint
+- During non-working hours
+- Too frequently (suspicious pattern)
 
-During non-working hours
-
-Too frequently (suspicious pattern)
-
+---
 
 ## 📊 LAPS Monitoring Workbook (Recommended)
 
