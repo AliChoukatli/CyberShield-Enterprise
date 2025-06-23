@@ -147,22 +147,31 @@ Before logs can be collected, ensure the audit policies discussed previously are
 
 ## 🧩 Step 2 - Configure Data Collection in Microsoft Sentinel
 
-### 1. Connect Microsoft Sentinel to your Windows endpoints
+1. Go to [https://endpoint.microsoft.com](https://endpoint.microsoft.com)
 
-- Deploy the **Azure Monitor Agent (AMA)** or **Microsoft Defender for Endpoint** on your Windows 10/11 devices.
-- These agents will forward Windows Security logs to your Sentinel workspace.
+2. Navigate to **Devices** > **Windows** > **Configuration profiles**
 
-### 2. Enable the **Security Events** data connector in Microsoft Sentinel
+3. Click **+ Create profile**:
 
-- Go to **Microsoft Sentinel** > **Configuration** > **Data connectors**
-- Search for and select **Security Events**
-- Click **Open connector page**
-- Follow instructions to configure log forwarding from your endpoints:
-  - Configure **AMA** or **Defender for Endpoint** to collect **Security** event logs (including Event IDs listed above).
-  - If using AMA, ensure **Windows Security Events** log is enabled.
+   - **Platform**: Windows 10 and later  
+   - **Profile type**: Templates > Azure Monitor Agent
 
-![Sentinel Security Events Connector](https://docs.microsoft.com/en-us/azure/sentinel/media/connectors/windows-defender-security-events/connector-page.png)
+4. Click **Create**
 
+---
+
+#### Profile Configuration
+
+- **Name**: `AMA Deployment - LAPS Logging`
+
+- Under **Monitoring configuration**, select:  
+  - **Data Collection Rule**: choose `LAPS_SecurityEvents_DCR`
+
+- Assign the profile to the correct **device group** (e.g., `All AAD Joined Devices`)
+
+5. Click **Next**, then **Create**
+
+---
 ---
 
 ## 🧩 Step 3 - Verify Logs Are Ingested in Microsoft Sentinel
