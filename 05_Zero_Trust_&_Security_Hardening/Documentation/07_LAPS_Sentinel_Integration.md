@@ -116,9 +116,9 @@ $auditSettings = @(
     @{ Subcategory = "Credential Validation"; Success = "enable"; Failure = "enable" },
     @{ Subcategory = "Logon"; Success = "enable"; Failure = "enable" },
     @{ Subcategory = "Special Logon"; Success = "enable"; Failure = "enable" },
-    @{ Subcategory = "File System"; Success = "enable"; Failure = "enable" },             # sous-catégorie précise pour Object Access
-    @{ Subcategory = "Registry"; Success = "enable"; Failure = "enable" },                # idem
-    @{ Subcategory = "Other Object Access Events"; Success = "enable"; Failure = "enable" }, # idem
+    @{ Subcategory = "File System"; Success = "enable"; Failure = "enable" },            
+    @{ Subcategory = "Registry"; Success = "enable"; Failure = "enable" },                
+    @{ Subcategory = "Other Object Access Events"; Success = "enable"; Failure = "enable" }, 
     @{ Subcategory = "Sensitive Privilege Use"; Success = "enable"; Failure = "enable" }
 )
 
