@@ -214,24 +214,6 @@ On a test device:
 
 ---
 
-
-## 📌 Related Sentinel Detection Scenarios
-
-Once audit logs are active, use the following KQL queries:
-
-**LAPS_Admin Logon Detection**
-```kusto
-SecurityEvent
-| where EventID == 4624 and Account == "LAPS_Admin"
-```
-LAPS Password Retrieval Detection
-
-```kusto
-AuditLogs
-| where ActivityDisplayName == "Read deviceLocalCredentials"
-```
----
-
 ## 2 - Connect Required Logs to Microsoft Sentinel
 
 Go to **Microsoft Sentinel > Content Management > Data connectors**, and connect the following:
