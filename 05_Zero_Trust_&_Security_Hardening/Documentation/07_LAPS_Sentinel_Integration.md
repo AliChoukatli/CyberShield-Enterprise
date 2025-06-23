@@ -218,8 +218,6 @@ On a test device:
 
 Go to **Microsoft Sentinel > Content Management > Data connectors**, and connect the following:
 
-# Step 2 – Connect Required Logs to Microsoft Sentinel (LAPS)
-
 To effectively monitor and investigate Local Administrator Password Solution (LAPS) activities, it is essential to connect the relevant Windows event logs from managed devices to Microsoft Sentinel.
 
 This includes logs related to password retrieval, password rotation, policy application, and local administrator account activities.
