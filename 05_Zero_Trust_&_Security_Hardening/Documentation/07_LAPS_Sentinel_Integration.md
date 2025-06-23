@@ -110,10 +110,7 @@ auditpol /get /subcategory:"Sensitive Privilege Use"
 
 ---
 
-### 🧩 Notes
-
-- This script method bypasses Intune's current OMA-URI limitations for audit policy configuration.
-- It is fully compatible with Windows 10 and Windows 11 Azure AD joined devices.
+![LAPS_Audit_User_Status](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Audit_User_Status.png)
 
 ---
 
