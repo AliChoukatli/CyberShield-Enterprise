@@ -173,15 +173,12 @@ Before starting, make sure you have:
 
 2. Choose **Windows Event Logs**
 
-3. Set:  
-   - **Name**: `WindowsSecurity`  
-   - **Event log name**: `Security`  
-   - **Event IDs**:  
-     ```
-     4624, 4625, 4672, 4688, 4703, 4769, 1102
-     ```
+3. Select:  
+   Security
+   - Audit success
+   - Audit failure
 
-4. Click **Add**
+5. Click **Next : Destination**
 
 ---
 
