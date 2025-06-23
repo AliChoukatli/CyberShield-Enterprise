@@ -214,99 +214,67 @@ On a test device:
 
 ---
 
-## 2 - Connect Required Logs to Microsoft Sentinel
+# 2 - Connect Required Logs to Microsoft Sentinel
 
-## 🔗 Log Sources to Connect
+## 🎯 Objective
 
-| Log Source             | Log Name                        | Description                                                  |
-|------------------------|--------------------------------|--------------------------------------------------------------|
-| **Windows Event Logs**  | Microsoft-Windows-LAPS/Operational | Core LAPS operational events: password access, set operations, and errors. |
-| **Security Logs**       | Security                       | Tracks user authentication, privilege use, logon sessions (e.g., Event IDs 4624, 4672). |
-| **System Logs**         | System                        | Service start/stop and Group Policy processing relevant to LAPS. |
+Collect and ingest the relevant Windows Security event logs related to LAPS (`LAPS_Admin`) activities into Microsoft Sentinel for real-time monitoring, alerting, and investigation.
 
 ---
 
-### 🛠️ How to Connect These Logs to Microsoft Sentinel
+## 🔍 Key Event IDs to Collect
 
-- Access to Microsoft Endpoint Manager portal: [https://endpoint.microsoft.com](https://endpoint.microsoft.com)
-- Defined Azure AD device groups targeting Windows 10/11 devices
-- Administrative permissions in Intune to create and assign device configuration profiles
-- You must have **access to Microsoft Sentinel** and the relevant Log Analytics workspace.
-
----
-
-### Option 1 — Using Azure Monitor Agent (AMA)
-
-#### Objective
-
-Deploy the Azure Monitor Agent (AMA) centrally and automatically on Windows 10/11 devices managed by Intune to enable log collection for Microsoft Sentinel.
-
-##### 1. Sign in to Microsoft Endpoint Manager portal
-
-- Open a browser and go to [https://endpoint.microsoft.com](https://endpoint.microsoft.com)
-- Sign in with an account with Intune admin rights
-
-#### 2. Create a Device Configuration Profile to deploy AMA
-
-- From the left-hand menu, select **Devices** > **Configuration profiles**
-- Click **+ Create profile**
-
-#### 3. Configure profile settings
-
-- Platform: **Windows 10 and later**
-- Profile type: **Templates**
-- Select **Endpoint Protection** (or if available, select **Azure Monitor Agent** template)
-
-> If no dedicated AMA template exists, use **Custom** profile with OMA-URI for advanced configurations or deploy via installer script.
-
-#### 4. Configure the profile details
-
-- Name: `Deploy Azure Monitor Agent`
-- Description: `Installs the Azure Monitor Agent for log collection`
-
-#### 5. Assign the profile
-
-- Choose the device groups to deploy the agent to (e.g., "All Windows 10 Devices")
-
-#### 6. Review and create
-
-- Review the settings and click **Create** to deploy
+| Event ID | Description                             | Relevance to LAPS Monitoring                            |
+|----------|-------------------------------------|--------------------------------------------------------|
+| 4624     | Successful Logon                     | Detect local sign-ins using `LAPS_Admin` account       |
+| 4625     | Failed Logon                        | Detect failed attempts on local admin accounts         |
+| 4672     | Special Privileged Logon            | Detect elevated logons (e.g., admin or system accounts)|
+| 4688     | Process Creation                    | Detect suspicious process executions related to LAPS   |
+| 4703     | A user right was adjusted          | Detect privilege changes affecting LAPS account        |
+| 4769     | A Kerberos service ticket was requested | Relevant if LAPS accounts use Kerberos authentication |
+| 1102     | Audit log cleared                  | Detect possible log tampering                            |
 
 ---
 
-## Alternative Method: Deploy AMA using PowerShell script
+## 🧩 Step 1 - Ensure Audit Policies Are Enabled on Target Devices
 
-If no direct profile is available, deploy AMA using a PowerShell script via Intune:
-
-- Create a PowerShell script that installs AMA MSI silently:
-
-```powershell
-Start-Process msiexec.exe -ArgumentList '/i https://aka.ms/azuremonitoragentwindows /qn' -Wait
-```
+Before logs can be collected, ensure the audit policies discussed previously are enabled. Prefer **Method 1** (PowerShell script deployment via Intune) for reliable policy enforcement on Azure AD joined Windows 10/11 devices.
 
 ---
 
+## 🧩 Step 2 - Configure Data Collection in Microsoft Sentinel
 
-### Option 2 — Using Microsoft Defender for Endpoint (MDE)
+### 1. Connect Microsoft Sentinel to your Windows endpoints
 
-1. Onboard your devices to **Microsoft Defender for Endpoint**.
-2. In Microsoft Sentinel, navigate to **Data Connectors**.
-3. Locate and open the **Microsoft Defender for Endpoint** connector.
-4. Follow the integration steps to connect MDE alerts and event logs to Sentinel.
-5. Leverage **Advanced Hunting** queries to analyze LAPS-related events ingested from the Security and Endpoint data.
+- Deploy the **Azure Monitor Agent (AMA)** or **Microsoft Defender for Endpoint** on your Windows 10/11 devices.
+- These agents will forward Windows Security logs to your Sentinel workspace.
+
+### 2. Enable the **Security Events** data connector in Microsoft Sentinel
+
+- Go to **Microsoft Sentinel** > **Configuration** > **Data connectors**
+- Search for and select **Security Events**
+- Click **Open connector page**
+- Follow instructions to configure log forwarding from your endpoints:
+  - Configure **AMA** or **Defender for Endpoint** to collect **Security** event logs (including Event IDs listed above).
+  - If using AMA, ensure **Windows Security Events** log is enabled.
+
+![Sentinel Security Events Connector](https://docs.microsoft.com/en-us/azure/sentinel/media/connectors/windows-defender-security-events/connector-page.png)
 
 ---
 
-## Verification & Next Steps
+## 🧩 Step 3 - Verify Logs Are Ingested in Microsoft Sentinel
 
-- After connecting logs, verify ingestion by running queries in Sentinel such as:
+- After configuration, confirm events are arriving in Sentinel by running a simple query in **Logs** (Log Analytics):
 
 ```kusto
-Event
-| where EventLog == "Microsoft-Windows-LAPS/Operational"
+SecurityEvent
+| where EventID in (4624, 4672, 4688)
+| where Account == "LAPS_Admin" or Account contains "LAPS_Admin"
 | sort by TimeGenerated desc
-| take 10
+| take 20
 ```
+
+
 ---
 
 ## 3️ -  Use Cases & Detection Rules
