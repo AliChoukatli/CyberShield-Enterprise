@@ -116,17 +116,15 @@ $auditSettings = @(
     @{ Subcategory = "Credential Validation"; Success = "enable"; Failure = "enable" },
     @{ Subcategory = "Logon"; Success = "enable"; Failure = "enable" },
     @{ Subcategory = "Special Logon"; Success = "enable"; Failure = "enable" },
-    @{ Subcategory = "Object Access"; Success = "enable"; Failure = "enable" },
+    @{ Subcategory = "File System"; Success = "enable"; Failure = "enable" },             # sous-catégorie précise pour Object Access
+    @{ Subcategory = "Registry"; Success = "enable"; Failure = "enable" },                # idem
+    @{ Subcategory = "Other Object Access Events"; Success = "enable"; Failure = "enable" }, # idem
     @{ Subcategory = "Sensitive Privilege Use"; Success = "enable"; Failure = "enable" }
 )
 
 foreach ($setting in $auditSettings) {
-    $subcategory = $setting.Subcategory
-    $success = $setting.Success
-    $failure = $setting.Failure
-
-    Write-Output "Setting audit policy for subcategory: $subcategory (Success=$success, Failure=$failure)"
-    & AuditPol.exe /set /subcategory:"$subcategory" /success:$success /failure:$failure
+    Write-Output "Setting audit policy for subcategory: $($setting.Subcategory) (Success=$($setting.Success), Failure=$($setting.Failure))"
+    AuditPol /set /subcategory:"$($setting.Subcategory)" /success:$($setting.Success) /failure:$($setting.Failure)
 }
 ```
 
