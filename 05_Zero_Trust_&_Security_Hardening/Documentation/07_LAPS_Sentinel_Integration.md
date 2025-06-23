@@ -57,15 +57,14 @@ Click **+ Add** for each of the following OMA-URIs:
 - `2` = Failure  
 - `3` = Success + Failure
 
-> You may customize this per policy if needed.
-
----
-
 ## 🧩 Step 4 — Assign the Profile
 
 1. Click **Next**
 2. Under **Assignments**, select the **device group** that contains your cloud-only endpoints
 3. Click **Next**, then **Create**
+
+
+![LAPS_Audit](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LAPS_Audit.png)
 
 ---
 
