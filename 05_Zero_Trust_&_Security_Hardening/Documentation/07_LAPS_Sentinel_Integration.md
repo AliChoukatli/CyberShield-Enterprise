@@ -223,7 +223,8 @@ Get-Service -Name AzureMonitorAgent
 
 
 
-### 🧩 Step 4
+### 🧩 Step 4 - Register the Agent with Your Log Analytics Workspace (If Needed)
+> **Note:** This step is only required if the Azure Monitor Agent (AMA) is installed manually and is not yet registered with your Log Analytics Workspace.
 
 1. Register the Agent with Your Log Analytics Workspace (If Needed)
 
