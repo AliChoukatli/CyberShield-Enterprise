@@ -176,7 +176,7 @@ Before starting, make sure you have:
    - Audit success
    - Audit failure
   
-![DCR_Add_Data](
+![DCR_Add_Data](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/DCR_Add_Data.png)
 
 ---
 
