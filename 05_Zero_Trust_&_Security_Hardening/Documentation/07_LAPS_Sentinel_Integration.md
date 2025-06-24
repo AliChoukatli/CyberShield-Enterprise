@@ -208,8 +208,7 @@ msiexec /i "C:\Path\To\AzureMonitorAgentSetup.msi" /quiet /norestart
 ```
 > This will install AMA silently without rebooting immediately.
 
-## 3. Verify the Installation
-- After installation, check the service status by running:
+5. After installation, check the service status by running:
 
 ```powershell
 Get-Service -Name AzureMonitorAgent
