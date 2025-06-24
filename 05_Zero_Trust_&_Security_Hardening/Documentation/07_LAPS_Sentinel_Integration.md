@@ -112,11 +112,6 @@ auditpol /get /subcategory:"Sensitive Privilege Use"
 
 ---
 
-
-
----
-
-
 # 2 - Connect Required Logs to Microsoft Sentinel
 
 ## 🎯 Objective
@@ -241,38 +236,20 @@ Start-Process -FilePath $agentPath -ArgumentList "register", "-w", $WorkspaceId,
  
 ---
 
-# Azure Arc Onboarding for a Local Hyper-V VM
+### 🧩 Step 5 - Azure Arc Onboarding for a Local Hyper-V VM
 
-This document describes the steps to onboard a local Hyper-V virtual machine to Azure Arc using the generated PowerShell onboarding script.
+This guide covers onboarding a local Hyper-V VM to Azure Arc using the generated PowerShell script for centralized management and monitoring in the Azure portal.
 
----
 
-## Objective
-
-Connect a local VM running on Hyper-V to Azure Arc for centralized management and monitoring via the Azure portal.
-
----
-
-## Prerequisites
-
-- Azure subscription with permission to create resources.
-- Azure Resource Group ready for onboarding.
-- PowerShell access with Administrator privileges on the target VM.
-- Internet connectivity on the VM (outbound to Azure endpoints).
-
----
-
-## Step-by-Step Guide
-
-### 1. Generate the Azure Arc Onboarding Script
+1. Generate the Azure Arc Onboarding Script
 
 - In the Azure portal, navigate to **Azure Arc > Servers > Add**.
 - Choose **Add a single server**.
 - Select the target **Subscription**, **Resource Group**, and **Region**.
-- Click **Generate script**.
-- Copy the generated PowerShell script.
+- Click **Next** then **Generate script**.
+- Copy or download the generated PowerShell script.
 
-### 2. Run the Onboarding Script on the Hyper-V VM
+2. Run the Onboarding Script on the Hyper-V VM
 
 - Log in to your local VM running on Hyper-V.
 - Open **PowerShell as Administrator**.
@@ -283,7 +260,9 @@ Connect a local VM running on Hyper-V to Azure Arc for centralized management an
   - Create the Azure Arc resource representing the VM in the specified Resource Group.
 - Wait for the process to complete (this can take several minutes).
 
-### 3. Verify the Connection
+![Arc_Script_VM](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Arc_Script_connected_VM.png)
+
+3. Verify the Connection
 
 - In the Azure portal, go to **Azure Arc > Servers**.
 - Confirm that your Hyper-V VM appears in the list of connected machines.
