@@ -281,19 +281,19 @@ This guide covers onboarding a local Hyper-V VM to Azure Arc using the generated
 
 
 ---
-
-
-2. Associate a Data Collection Rule (DCR) with Your Devices
+### 🧩 Step 5 - Associate a Data Collection Rule (DCR) with Your Devices
 
 - In the Azure Portal, go to **Data Collection Rules**.  
 - Select or create a DCR that specifies which logs and events to collect (e.g., `LAPS_SecurityEvents_DCR`).  
 - Associate the DCR with your target devices or Azure resources to enable log collection.
 
+![Associate_DCR_HLP01](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Associate_DCR_HLP01.png)
+
 > **Note:** Association methods vary depending on your environment (Azure Arc, VM extensions, or others).
 
 ---
 
-3. Verify Log Ingestion in Microsoft Sentinel
+### 🧩 Step 5 - Verify Log Ingestion in Microsoft Sentinel
 
 - Navigate to your Microsoft Sentinel workspace in the Azure Portal.  
 - Open **Logs** and run queries to confirm data is arriving.  
@@ -301,25 +301,6 @@ This guide covers onboarding a local Hyper-V VM to Azure Arc using the generated
 
 ---
 
-
-### 🧩 Step 5 - Verify Logs Are Ingested in Microsoft Sentinel
-
-After a few minutes, logs should start arriving.
-
-1. Go to Microsoft Sentinel > your workspace
-2. Click Logs (Log Analytics)
-3. Run the following query:
-
-```kusto
-SecurityEvent
-| where EventID in (4624, 4672, 4688)
-| sort by TimeGenerated desc
-| take 20
-> This query helps you see recent logon and privileged activity involving the LAPS_Admin account.
-```
-
-
----
 
 
 ### ⚠️ Important Notes
