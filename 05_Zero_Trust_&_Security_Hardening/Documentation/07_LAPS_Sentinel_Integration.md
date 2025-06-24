@@ -295,14 +295,14 @@ This guide covers onboarding a local Hyper-V VM to Azure Arc using the generated
 
 ### 🧩 Step 6 - Verify Log Ingestion in Microsoft Sentinel
 
-## 1. Connect to the Azure Portal
+1. Connect to the Azure Portal
 - Open [https://portal.azure.com](https://portal.azure.com).
 - Navigate to your **Microsoft Sentinel** workspace (the Log Analytics workspace connected to Sentinel).
 
-## 2. Open the Logs Explorer
+2. Open the Logs Explorer
 - In your Sentinel workspace menu, click on **Logs**.
 
-## 3. Run a Basic Query to Check Security Events
+3. Run a Basic Query to Check Security Events
 Run the following Kusto Query Language (KQL) query to view security events related to logins in the last 24 hours:
 
 ```kql
@@ -312,6 +312,15 @@ SecurityEvent
 | sort by TimeGenerated desc
 | take 50
 ```
+- This query filters key security events important for LAPS monitoring.
+- Adjust the time range as needed (e.g., ago(1h), ago(7d)).
+
+4. Analyze the Results
+   
+- Review the events for timestamps, computer names, user accounts, and event types.
+- If you see data flowing in, log collection is working properly.
+
+---
 
 ### ⚠️ Important Notes
 
