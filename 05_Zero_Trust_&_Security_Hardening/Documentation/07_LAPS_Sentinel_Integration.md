@@ -195,23 +195,18 @@ Before starting, make sure you have:
 
 ---
 
-### 🧩 Step 2 - Download the MSI Installer
+### 🧩 Step 3 - Download the MSI Installer
 
-- Go to the official Microsoft link:  
-  [https://aka.ms/azuremonitoragentwindows64](https://aka.ms/azuremonitoragentwindows64)  
-- Save the file, typically named `AzureMonitorAgentSetup.msi`
-
----
-
-## 2. Install the MSI Manually
-
-- Open PowerShell or Command Prompt as Administrator  
-- Run the following command (adjust the path if needed):
+1. Go to the official Microsoft link:  
+  [https://aka.ms/azuremonitoragentwindows64](https://aka.ms/azuremonitoragentwindows64)
+2. Save the file, typically named `AzureMonitorAgentSetup.msi`
+3. Open PowerShell or Command Prompt as Administrator
+4. Run the following command (adjust the path if needed):
 
 ```powershell
 msiexec /i "C:\Path\To\AzureMonitorAgentSetup.msi" /quiet /norestart
 ```
-This will install AMA silently without rebooting immediately.
+> This will install AMA silently without rebooting immediately.
 
 ## 3. Verify the Installation
 - After installation, check the service status by running:
@@ -219,12 +214,11 @@ This will install AMA silently without rebooting immediately.
 ```powershell
 Get-Service -Name AzureMonitorAgent
 ```
-The service status should be Running.
+> The service status should be Running.
 
 ![AMA_Running](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/AMA_running.png)
 
-
-
+---
 
 
 
