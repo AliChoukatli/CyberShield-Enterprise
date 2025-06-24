@@ -219,14 +219,8 @@ Get-Service -Name AzureMonitorAgent
 
 ---
 
-
-
-
-
 ### 🧩 Step 4 - Register the Agent with Your Log Analytics Workspace (If Needed)
 > **Note:** This step is only required if the Azure Monitor Agent (AMA) is installed manually and is not yet registered with your Log Analytics Workspace.
-
-1. Register the Agent with Your Log Analytics Workspace (If Needed)
 
 Use the following PowerShell script, replacing `<Your Workspace ID>` and `<Your Primary Key>` with your actual workspace details:
 
@@ -237,6 +231,14 @@ $agentPath = "C:\Program Files\Azure Monitor Agent\Agent\AzureMonitorAgent.exe"
 
 Start-Process -FilePath $agentPath -ArgumentList "register", "-w", $WorkspaceId, "-k", $WorkspaceKey -Wait
 ```
+#### Finding Workspace ID and Primary Key
+
+1. In the Azure Portal, navigate to your **CyberShield-Workspace**.
+
+2. Go to the **Agents** section (sometimes called **Agents management** or **Agent settings**).
+
+> There you will find the **Workspace ID** and **Primary Key** needed to register the Azure Monitor Agent.
+> 
 ---
 
 2. Associate a Data Collection Rule (DCR) with Your Devices
@@ -273,6 +275,8 @@ SecurityEvent
 | take 20
 > This query helps you see recent logon and privileged activity involving the LAPS_Admin account.
 ```
+
+
 ---
 
 
