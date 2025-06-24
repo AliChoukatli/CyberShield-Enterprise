@@ -231,7 +231,7 @@ $agentPath = "C:\Program Files\Azure Monitor Agent\Agent\AzureMonitorAgent.exe"
 
 Start-Process -FilePath $agentPath -ArgumentList "register", "-w", $WorkspaceId, "-k", $WorkspaceKey -Wait
 ```
-#### Finding Workspace ID and Primary Key
+#### ⚠️ Finding Workspace ID and Primary Key
 
 1. In the Azure Portal, navigate to your **CyberShield-Workspace**.
 
