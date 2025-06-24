@@ -165,34 +165,33 @@ Before starting, make sure you have:
 
 5. Reveoew Click **Next**
 
-![DCR_Review](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/DCR_Review.png)
-
 ---
 
 #### ➕ Add Data Source
 
-1. Click **+ Add data source**
-
+1. Go to **Collect and Deliver** > **Add data source**
 2. Choose **Windows Event Logs**
-
 3. Select:  
    Security
    - Audit success
    - Audit failure
-
-5. Click **Next : Destination**
+  
+![DCR_Add_Data](
 
 ---
 
 #### ➕ Add Destination
 
-1. Click **+ Add destination**
+1. go to **Destination** > **+ Add destination**
 
 2. Choose your **Log Analytics Workspace** connected to Microsoft Sentinel
 
-3. Click **Next**, then **Create**
-
 ![DCR_Destination](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/DCR_Destination.png)
+
+3. Click **Next**, then **Create**
+4. Review and create
+
+![DCR_Review](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/DCR_Review.png)
 
 ---
 
