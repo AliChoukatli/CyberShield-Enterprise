@@ -195,6 +195,44 @@ Before starting, make sure you have:
 
 ---
 
+## 1. Download the MSI Installer
+
+- Go to the official Microsoft link:  
+  [https://aka.ms/azuremonitoragentwindows64](https://aka.ms/azuremonitoragentwindows64)  
+- Save the file, typically named `AzureMonitorAgentSetup.msi`
+
+---
+
+## 2. Install the MSI Manually
+
+- Open PowerShell or Command Prompt as Administrator  
+- Run the following command (adjust the path if needed):
+
+```powershell
+msiexec /i "C:\Path\To\AzureMonitorAgentSetup.msi" /quiet /norestart
+```
+This will install AMA silently without rebooting immediately.
+
+## 3. Verify the Installation
+- After installation, check the service status by running:
+
+```powershell
+Get-Service -Name AzureMonitorAgent
+```
+The service status should be Running.
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### 🧩 Step 3 - Configure Data Collection in Microsoft Sentinel
 
 1. Go to [https://endpoint.microsoft.com](https://endpoint.microsoft.com)
