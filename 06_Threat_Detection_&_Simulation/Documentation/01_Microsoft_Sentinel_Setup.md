@@ -147,7 +147,7 @@ If you can't Find Defender for office 365  look for `Microsoft 365` in Content H
 - Apply best practices such as:
   - Enabling only required data connectors
   - Setting data caps
-  - Choosing appropriate retention periods****
+  - Choosing appropriate retention periods
 
 
 
