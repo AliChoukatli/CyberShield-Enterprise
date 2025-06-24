@@ -238,8 +238,78 @@ Start-Process -FilePath $agentPath -ArgumentList "register", "-w", $WorkspaceId,
 2. Go to the **Agents** section (sometimes called **Agents management** or **Agent settings**).
 
 > There you will find the **Workspace ID** and **Primary Key** needed to register the Azure Monitor Agent.
-> 
+ 
 ---
+
+# Azure Arc Onboarding for a Local Hyper-V VM
+
+This document describes the steps to onboard a local Hyper-V virtual machine to Azure Arc using the generated PowerShell onboarding script.
+
+---
+
+## Objective
+
+Connect a local VM running on Hyper-V to Azure Arc for centralized management and monitoring via the Azure portal.
+
+---
+
+## Prerequisites
+
+- Azure subscription with permission to create resources.
+- Azure Resource Group ready for onboarding.
+- PowerShell access with Administrator privileges on the target VM.
+- Internet connectivity on the VM (outbound to Azure endpoints).
+
+---
+
+## Step-by-Step Guide
+
+### 1. Generate the Azure Arc Onboarding Script
+
+- In the Azure portal, navigate to **Azure Arc > Servers > Add**.
+- Choose **Add a single server**.
+- Select the target **Subscription**, **Resource Group**, and **Region**.
+- Click **Generate script**.
+- Copy the generated PowerShell script.
+
+### 2. Run the Onboarding Script on the Hyper-V VM
+
+- Log in to your local VM running on Hyper-V.
+- Open **PowerShell as Administrator**.
+- Paste and execute the copied onboarding script.
+- The script will:
+  - Download and install the Azure Connected Machine Agent.
+  - Prompt for Azure login in a pop-up browser window. Authenticate using your Azure credentials.
+  - Create the Azure Arc resource representing the VM in the specified Resource Group.
+- Wait for the process to complete (this can take several minutes).
+
+### 3. Verify the Connection
+
+- In the Azure portal, go to **Azure Arc > Servers**.
+- Confirm that your Hyper-V VM appears in the list of connected machines.
+- You can now manage and monitor the VM through Azure Arc.
+
+---
+
+## Troubleshooting
+
+- Ensure the VM has outbound Internet access (TCP port 443) to Azure endpoints.
+- If the script times out, verify network/firewall or proxy settings.
+- Use PowerShell cmdlets like `Test-NetConnection` to validate connectivity.
+
+---
+
+## Notes
+
+- This method works for machines outside Azure, including on-premises and other cloud environments.
+- The onboarding script automates agent installation and resource registration.
+- For bulk onboarding, consider using Azure Arc provisioning with Azure CLI or automation tools.
+
+
+
+
+---
+
 
 2. Associate a Data Collection Rule (DCR) with Your Devices
 
