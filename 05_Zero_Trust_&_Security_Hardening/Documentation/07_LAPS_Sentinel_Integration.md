@@ -233,7 +233,7 @@ Start-Process -FilePath $agentPath -ArgumentList "register", "-w", $WorkspaceId,
 ```
 #### ⚠️ Finding Workspace ID and Primary Key
 
-1. In the Azure Portal, navigate to your **CyberShield-Workspace**.
+1. In the Azure Portal, navigate to your eg: **CyberShield-Workspace**.
 
 2. Go to the **Agents** section (sometimes called **Agents management** or **Agent settings**).
 
