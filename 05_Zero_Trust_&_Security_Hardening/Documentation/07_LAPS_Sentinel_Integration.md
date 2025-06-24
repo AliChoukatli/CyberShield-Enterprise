@@ -195,7 +195,7 @@ Before starting, make sure you have:
 
 ---
 
-## 1. Download the MSI Installer
+### 🧩 Step 2 - Download the MSI Installer
 
 - Go to the official Microsoft link:  
   [https://aka.ms/azuremonitoragentwindows64](https://aka.ms/azuremonitoragentwindows64)  
