@@ -221,6 +221,8 @@ Get-Service -Name AzureMonitorAgent
 ```
 The service status should be Running.
 
+![AMA_Running](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/AMA_running.png)
+
 
 
 
