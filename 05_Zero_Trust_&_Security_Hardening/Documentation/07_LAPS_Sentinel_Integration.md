@@ -273,21 +273,11 @@ This guide covers onboarding a local Hyper-V VM to Azure Arc using the generated
 
 ---
 
-## Troubleshooting
-
-- Ensure the VM has outbound Internet access (TCP port 443) to Azure endpoints.
-- If the script times out, verify network/firewall or proxy settings.
-- Use PowerShell cmdlets like `Test-NetConnection` to validate connectivity.
-
----
-
-## Notes
+### Notes
 
 - This method works for machines outside Azure, including on-premises and other cloud environments.
 - The onboarding script automates agent installation and resource registration.
 - For bulk onboarding, consider using Azure Arc provisioning with Azure CLI or automation tools.
-
-
 
 
 ---
