@@ -229,7 +229,7 @@ Get-Service -Name AzureMonitorAgent
 
 
 
-### 🧩 Step 3 - Configure Data Collection in Microsoft Sentinel
+### 🧩 Step 4 - Configure Data Collection in Microsoft Sentinel
 
 1. Go to [https://endpoint.microsoft.com](https://endpoint.microsoft.com)
 
