@@ -266,7 +266,10 @@ This guide covers onboarding a local Hyper-V VM to Azure Arc using the generated
 
 - In the Azure portal, go to **Azure Arc > Servers**.
 - Confirm that your Hyper-V VM appears in the list of connected machines.
-- You can now manage and monitor the VM through Azure Arc.
+
+![Azure_Arc_Machines](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Azure_Arc_Machines.png)
+
+> You can now manage and monitor the VM through Azure Arc.
 
 ---
 
