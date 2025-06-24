@@ -223,13 +223,9 @@ Get-Service -Name AzureMonitorAgent
 
 
 
+### 🧩 Step 4
 
-
-
-
-## 1. Register the Agent with Your Log Analytics Workspace (If Needed)
-
-If you installed the Azure Monitor Agent manually via MSI, you may need to register it with your Log Analytics Workspace to start sending data.
+1. Register the Agent with Your Log Analytics Workspace (If Needed)
 
 Use the following PowerShell script, replacing `<Your Workspace ID>` and `<Your Primary Key>` with your actual workspace details:
 
@@ -240,6 +236,23 @@ $agentPath = "C:\Program Files\Azure Monitor Agent\Agent\AzureMonitorAgent.exe"
 
 Start-Process -FilePath $agentPath -ArgumentList "register", "-w", $WorkspaceId, "-k", $WorkspaceKey -Wait
 ```
+---
+
+2. Associate a Data Collection Rule (DCR) with Your Devices
+
+- In the Azure Portal, go to **Data Collection Rules**.  
+- Select or create a DCR that specifies which logs and events to collect (e.g., `LAPS_SecurityEvents_DCR`).  
+- Associate the DCR with your target devices or Azure resources to enable log collection.
+
+> **Note:** Association methods vary depending on your environment (Azure Arc, VM extensions, or others).
+
+---
+
+3. Verify Log Ingestion in Microsoft Sentinel
+
+- Navigate to your Microsoft Sentinel workspace in the Azure Portal.  
+- Open **Logs** and run queries to confirm data is arriving.  
+- For example, run a query on the `SecurityEvent` table or check for specific event IDs related to LAPS.
 
 ---
 
