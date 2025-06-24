@@ -139,7 +139,7 @@ Collect and ingest the relevant Windows Security event logs related to LAPS (`LA
 
 ---
 
-## 🧩 Step 1 - Ensure Audit Policies Are Enabled on Target Devices
+### 🧩 Step 1 - Ensure Audit Policies Are Enabled on Target Devices
 
 Before starting, make sure you have:
 
@@ -195,7 +195,7 @@ Before starting, make sure you have:
 
 ---
 
-## 🧩 Step 2 - Configure Data Collection in Microsoft Sentinel
+### 🧩 Step 3 - Configure Data Collection in Microsoft Sentinel
 
 1. Go to [https://endpoint.microsoft.com](https://endpoint.microsoft.com)
 
@@ -224,7 +224,7 @@ Before starting, make sure you have:
 ---
 ---
 
-## 🧩 Step 3 - Verify Logs Are Ingested in Microsoft Sentinel
+### 🧩 Step 4 - Verify Logs Are Ingested in Microsoft Sentinel
 
 After a few minutes, logs should start arriving.
 
