@@ -163,7 +163,7 @@ Before starting, make sure you have:
    - **Region**: Same as your Log Analytics workspace  
    - **Resource Group**: Use an existing one or create a new one  
 
-5. Click **Next**
+5. Reveoew Click **Next**
 
 ---
 
@@ -180,6 +180,8 @@ Before starting, make sure you have:
 
 5. Click **Next : Destination**
 
+![DCR_Review](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/DCR_Review.png)
+
 ---
 
 #### ➕ Add Destination
@@ -190,7 +192,8 @@ Before starting, make sure you have:
 
 3. Click **Next**, then **Create**
 
----
+![DCR_Destination](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/DCR_Destination.png)
+
 ---
 
 ## 🧩 Step 2 - Configure Data Collection in Microsoft Sentinel
