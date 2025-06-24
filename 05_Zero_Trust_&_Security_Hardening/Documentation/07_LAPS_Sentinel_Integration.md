@@ -74,7 +74,7 @@ auditpol /get /subcategory:"Sensitive Privilege Use"
 
 ### 🧩 Step 2 — Deploy the Script via Intune
 
-1. Sign in to the Microsoft Endpoint Manager admin center.
+1. Go to [https://endpoint.microsoft.com](https://endpoint.microsoft.com)
 
 2. Navigate to **Devices** > **Scripts**.
 
