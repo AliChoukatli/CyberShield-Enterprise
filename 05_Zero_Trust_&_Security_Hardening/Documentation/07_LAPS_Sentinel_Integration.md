@@ -165,6 +165,8 @@ Before starting, make sure you have:
 
 5. Reveoew Click **Next**
 
+![DCR_Review](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/DCR_Review.png)
+
 ---
 
 #### ➕ Add Data Source
@@ -179,8 +181,6 @@ Before starting, make sure you have:
    - Audit failure
 
 5. Click **Next : Destination**
-
-![DCR_Review](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/DCR_Review.png)
 
 ---
 
