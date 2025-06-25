@@ -1,6 +1,4 @@
-# 🔐 Securing Remote Desktop Access with RDP Permissions
-
-## 🔴 **Configuring RDP Permissions**
+# 🔴 Configuring RDP Access Control via Group Policy
 
 ### 📝 Introduction
 
