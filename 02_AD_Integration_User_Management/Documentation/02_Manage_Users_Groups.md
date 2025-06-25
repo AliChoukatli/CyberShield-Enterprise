@@ -1,4 +1,4 @@
-## 👥 Managing Users and Security Groups in Active Directory
+# 👥 Managing Users and Security Groups in Active Directory
 
 ## 📝 Introduction
 
