@@ -235,4 +235,3 @@ After completing this section, you will have:
 - Verified device status using `dsregcmd /status` and through the **Microsoft Entra Admin Center**.
 
 This setup forms the **foundation for cloud-based device management** using Microsoft Intune, allowing you to enforce compliance, apply security baselines, and enable conditional access policies across your hybrid environment.
-Souhaite-tu que je fasse aussi une estimation du temps nécessaire pour cette section, comme pour les
