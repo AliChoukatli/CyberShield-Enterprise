@@ -1,4 +1,4 @@
-## 🗑️ Deleting a User Account in Active Directory
+# 🗑️ Deleting a User Account in Active Directory
 
 ### 📝 Introduction
 
