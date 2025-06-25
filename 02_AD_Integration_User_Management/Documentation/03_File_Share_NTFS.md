@@ -1,4 +1,4 @@
-# 🌐📁 File Share & NTFS Permissions Configuration
+# 📁🌐 File Share & NTFS Permissions Configuration
 
 ## 📝 Introduction
 
