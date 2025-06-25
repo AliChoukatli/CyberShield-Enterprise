@@ -1,3 +1,11 @@
+## 📝 Introduction
+
+This section focuses on assigning proper **NTFS and Share permissions** to a departmental shared folder (`C:\SharedFolders\IT`) to ensure secure and role-based access. By leveraging **Active Directory security groups**, we enforce a permission model that aligns with organizational roles and responsibilities.
+
+Correctly configuring both **Share** and **NTFS permissions** is essential to avoid unauthorized access and to maintain data integrity in a multi-user environment.
+
+---
+
 # Assign Permissions
 
 # 🎯 Objectif  
@@ -75,6 +83,20 @@ Le dossier partagé `C:\SharedFolders\IT` héberge des fichiers sensibles et col
 - Documenter toutes les permissions appliquées dans un référentiel central  
 - Faire des audits réguliers des permissions sur les dossiers partagés  
 
+---
+
+## ✅ Conclusion
+
+After completing this configuration:
+
+- The `IT` shared folder is accessible over the network via `\\DC01\IT`.
+- Members of the `IT-Admins` group have **full control** over the folder, including the ability to modify, delete, and manage files.
+- Members of the `IT-Users` group have **read-only access**, ensuring they can consume information without making changes.
+- The **Everyone** group has been removed from both share and NTFS permissions to tighten access control.
+- A clear separation of access rights has been implemented using **Active Directory security groups**, enabling easier management and scalability.
+
+This structured permission model enhances both **security** and **administrative efficiency**, while adhering to best practices for shared folder access management in a corporate Active Directory environment.
+Souhaites-tu que je rédige la suite logique pour la création des lecteurs réseaux via GPO, ou une autre
 ---
 
 # Fin de la configuration des permissions NTFS et partage pour le dossier IT.
