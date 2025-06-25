@@ -20,10 +20,6 @@ To leverage its full capabilities, each device must be properly onboarded to the
 
 ---
 
--> To enable full integration between your Windows devices and Microsoft Defender for Endpoint (MDE), each device must be properly onboarded. Below are two common methods: **Local Script** and **Group Policy (GPO)**.
-
----
-
 ## 🟢 Method 1 - Onboarding via Local Script (Single Device, Full Cloud)
 
 1. Go to the Microsoft 365 Defender portal:  [https://security.microsoft.com](https://security.microsoft.com)
