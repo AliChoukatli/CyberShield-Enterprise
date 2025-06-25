@@ -1,10 +1,14 @@
+# 🔐 06 - BitLocker Deployment via Microsoft Intune
 
-# 🔐 06_BitLocker_Deployment_Intune.md
+## 🎯 Objective
 
+Establish a professional and secure deployment of BitLocker encryption across Windows devices using Microsoft Intune. This ensures enterprise-grade data protection, compliance with security standards, and operational reliability for both Azure AD joined and Hybrid-joined devices.
 
-## 🌟 Objective
+---
 
-Establish a professional-grade deployment of BitLocker via Microsoft Intune to ensure enterprise-grade security, compliance, and operational reliability across Windows devices.
+## Introduction
+
+BitLocker is a critical technology for protecting data at rest on Windows devices through full disk encryption. Deploying BitLocker via Intune allows centralized management and enforcement of encryption policies. This guide details the step-by-step process to create, test, and assign BitLocker policies, ensuring a smooth and controlled rollout in your organization.
 
 ---
 
@@ -15,13 +19,13 @@ Establish a professional-grade deployment of BitLocker via Microsoft Intune to e
 ---
 
 ## 📋 Table of Contents
-- [✅ Step 1 – Test Group](#-step-1--test-group)
-- [✅ Step 2 – Create a Dynamic Group](#-step-2--create-a-dynamic-group-for-windows-1011-devices)
-- [✅ Step 3 – Configure BitLocker Policy in Intune](#-step-3---configure-bitlocker-policy-in-intune)
-- [✅ Step 4 – Assign the Policy in Intune](#-step-4---assign-the-policy-in-intune)
+- [📦 Step 1 – Test Group](#-step-1--test-group)
+- [📦 Step 2 – Create a Dynamic Group](#-step-2--create-a-dynamic-group-for-windows-1011-devices)
+- [📦 Step 3 – Configure BitLocker Policy in Intune](#-step-3---configure-bitlocker-policy-in-intune)
+- [📦 Step 4 – Assign the Policy in Intune](#-step-4---assign-the-policy-in-intune)
 ---
 
-### ✅ Step 1 – Test Group
+### 📦 Step 1 – Test Group
 
 1. Go to **Microsoft Entra Admin Center** → **Groups**  
 2. Click **+ New group**, then configure:
@@ -35,7 +39,7 @@ Establish a professional-grade deployment of BitLocker via Microsoft Intune to e
 #### 💡 *Use this group to safely validate and troubleshoot your BitLocker policy before full deployment.*
 ---
 
-### ✅ Step 2 – Create a Dynamic Group for Windows 10/11 Devices
+### 📦 Step 2 – Create a Dynamic Group for Windows 10/11 Devices
 
 1. Return to **Groups** > **New group**
 2. Select:
@@ -60,9 +64,9 @@ Establish a professional-grade deployment of BitLocker via Microsoft Intune to e
 
 ---
 
-### ✅ Step 3 - Configure BitLocker Policy in Intune
+### 📦 Step 3 - Configure BitLocker Policy in Intune
 
-### 1. Navigate to BitLocker Policy Creation
+1. Navigate to BitLocker Policy Creation
 
 * Go to: **Intune Admin Center** > **Endpoint security** > **Disk encryption**
 * Click **+ Create Policy**
@@ -72,9 +76,9 @@ Establish a professional-grade deployment of BitLocker via Microsoft Intune to e
 
 ---
 
-### 2. Configure Required Settings
+2. Configure Required Settings
 
-#### A. Device Encryption BitLcoker
+A. Device Encryption BitLcoker
 
 | Setting                                 | Recommended Value                                  |
 | --------------------------------------- | -------------------------------------------------- |
@@ -82,7 +86,7 @@ Establish a professional-grade deployment of BitLocker via Microsoft Intune to e
 | Allow warning for other disk encryption | Enabled                                            |
 | Configure recovery password rotation    | Refresh on Both Azure AD joined & Hybrid-Joined Devices |
 
-#### B. Drive Encryption Settings
+B. Drive Encryption Settings
 
 | Setting                                          | Recommended Value |
 | ------------------------------------------------ | ----------------- |
@@ -91,7 +95,7 @@ Establish a professional-grade deployment of BitLocker via Microsoft Intune to e
 | Encryption OS drives method                      | XTS-AES 256-bit   |
 | Encryption Removable drives method               | XTS-AES 256-bit   |
 
-#### C. OS Drive Setting
+C. OS Drive Setting
 
 | Setting                                                | Recommended Value                           |
 | ------------------------------------------------------ | ------------------------------------------- |
@@ -110,7 +114,7 @@ Establish a professional-grade deployment of BitLocker via Microsoft Intune to e
 | Block BitLocker until recovery info is stored in AD DS | True                                        |
 | Save OS BitLocker info to AD DS                        | True                                        |
 
-#### D. Fixed Drives
+D. Fixed Drives
 
 | Setting                                                                | Recommended Value                           |
 | -----------------------------------------------------------------------| ------------------------------------------- |
@@ -122,7 +126,7 @@ Establish a professional-grade deployment of BitLocker via Microsoft Intune to e
 | Save BitLocker recovery information to AD DS                           | Enabled                                     |
 | Deny write access to fixed drives not protected by BitLocker           | Enabled                                     |
 
-#### E. Removable Drives
+E. Removable Drives
 
 | Setting                                              | Recommended Value |
 | ---------------------------------------------------- | ----------------- |
@@ -134,7 +138,7 @@ Establish a professional-grade deployment of BitLocker via Microsoft Intune to e
 
 ---
 
-## ✅ Step 4 - Assign the Policy in Intune
+## 📦 Step 4 - Assign the Policy in Intune
 
 * Go to **Intune** > **Endpoint security** > **Disk encryption** > Select your policy
 * Click **Assignments**
@@ -148,3 +152,10 @@ Establish a professional-grade deployment of BitLocker via Microsoft Intune to e
 ---
 
 > 📡 This structure ensures controlled, tested, and secure deployment of BitLocker encryption across the enterprise, meeting both compliance and operational excellence standards.
+
+---
+
+## Conclusion
+
+By following this structured approach—starting with a test group, creating dynamic device groups, configuring detailed BitLocker policies, and assigning policies through Intune—you can confidently deploy BitLocker at scale. This method safeguards sensitive data, enforces compliance, and integrates seamlessly into your existing cloud or hybrid device management strategy.
+
