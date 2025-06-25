@@ -1,6 +1,10 @@
-## ✅ – TeamViewer Remote Assistance
+# 🧩 Remote Support with TeamViewer
 
-#### 🎯 Objective : *Set up TeamViewer on both machines (support and end-user), ensure secure configuration, and simulate a remote support session from the helpdesk workstation.*
+## 📝 Introduction
+
+This section demonstrates how to deliver remote assistance using **TeamViewer** between a helpdesk workstation (`LTP-HLP01`) and an end-user machine (`LTP-EMP01`). TeamViewer is a reliable remote support tool that allows IT staff to troubleshoot systems securely over the internet, without requiring domain connectivity or VPN access.
+
+You’ll learn how to install the appropriate versions on both devices, establish a secure session, and follow security best practices for closing a session safely.
 
 #### 🧰 **Prerequisites**
 
@@ -71,3 +75,16 @@ You should now have remote access to the user's desktop.
 
 #### 🔐 Security Tips
 🔹 Ensure proper security measures are followed to protect the session and user credentials.
+
+---
+
+## ✅ Conclusion
+
+After completing this section:
+
+- TeamViewer is properly installed and configured on both support and end-user machines.
+- A successful remote session was initiated from `LTP-HLP01` to `LTP-EMP01`, simulating real-world helpdesk support.
+- Security recommendations were followed, including safe session termination and optional password reset.
+
+This setup is ideal for hybrid support scenarios, external users, or environments where RDP is not viable.
+
