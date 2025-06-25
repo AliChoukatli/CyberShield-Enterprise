@@ -1,3 +1,5 @@
+# 🔒 File Share & NTFS Permissions Configuration
+
 ## 📝 Introduction
 
 This section focuses on assigning proper **NTFS and Share permissions** to a departmental shared folder (`C:\SharedFolders\IT`) to ensure secure and role-based access. By leveraging **Active Directory security groups**, we enforce a permission model that aligns with organizational roles and responsibilities.
