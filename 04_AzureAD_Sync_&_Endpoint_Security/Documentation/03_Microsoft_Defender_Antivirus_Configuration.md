@@ -6,7 +6,7 @@ Deploy and validate a Microsoft Defender Antivirus security policy via Intune to
 
 ---
 
-# 📝 Introduction
+### 📝 Introduction
 
 In this section, you’ll configure **Microsoft Defender Antivirus** using Microsoft Intune to ensure real-time protection, cloud-based threat detection, and full device coverage. This provides a consistent and secure baseline across all Windows 10/11 endpoints.
 
