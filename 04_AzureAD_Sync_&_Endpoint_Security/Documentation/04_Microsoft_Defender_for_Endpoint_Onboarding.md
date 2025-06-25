@@ -20,7 +20,7 @@ To leverage its full capabilities, each device must be properly onboarded to the
 
 ---
 
-### 🟢 Method 1 - Onboarding via Local Script (Single Device, Full Cloud)
+## 🟢 Method 1 - Onboarding via Local Script (Single Device, Full Cloud)
 
 1. Go to the Microsoft 365 Defender portal:  [https://security.microsoft.com](https://security.microsoft.com)
 
@@ -55,13 +55,13 @@ To leverage its full capabilities, each device must be properly onboarded to the
 
 ---
 
-### 🟢 Method 2 - Onboarding via Intune (Mulitple Devices / Full Cloud)
+## 🟢 Method 2 - Onboarding via Intune (Mulitple Devices / Full Cloud)
 
 This guide explains how to onboard Windows 10/11 devices to Microsoft Defender for Endpoint using Microsoft Intune in a full cloud environment (Azure AD joined devices).
 
 ---
 
-#### 📦 Step 1 - Create an onboarding profile for Defender for Endpoint
+### 📦 Step 1 - Create an onboarding profile for Defender for Endpoint
 
 1. In the Microsoft Endpoint Manager portal ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)), go to **Devices** in the left-hand menu.
 2. Click on **Configuration**.
@@ -82,7 +82,7 @@ This guide explains how to onboard Windows 10/11 devices to Microsoft Defender f
 
 ---
 
-#### 📦 Step 2 – Assignments
+### 📦 Step 2 – Assignments
 
 1. Under **Assignments**, select the Azure AD groups that include the devices to onboard.
    - EG:  assign to **Windows 10/11 Devices**
@@ -90,7 +90,7 @@ This guide explains how to onboard Windows 10/11 devices to Microsoft Defender f
 
 ---
 
-#### 📦 Step3 - Applicability Rules
+### 📦 Step3 - Applicability Rules
 
 | Rule Type          | Property     | Value(s)                                                        | Description                                                  |
 |--------------------|--------------|-----------------------------------------------------------------|--------------------------------------------------------------|
@@ -110,7 +110,7 @@ This guide explains how to onboard Windows 10/11 devices to Microsoft Defender f
 
 ---
 
-#### 📦 Step 4 – Verify onboarding on target devices
+### 📦 Step 4 – Verify onboarding on target devices
 
 1. Go to **Devices** in the Microsoft Endpoint Manager admin center.
 2. Click on **Configuration**.
@@ -144,12 +144,12 @@ Powershell Eventually : On any onboarded Windows 10/11 device:
 
 ---
 
-### 🟢  Method 3 - Onboarding via Group Policy (GPO) (Hybride / On-premises)
+## 🟢  Method 3 - Onboarding via Group Policy (GPO) (Hybride / On-premises)
 
 This method is recommended for organizations managing domain-joined Windows devices via Group Policy.
 
 
-#### 📦 Step 1 – Download the Onboarding Package
+### 📦 Step 1 – Download the Onboarding Package
 
 1. Go to the Microsoft 365 Defender portal: [https://security.microsoft.com](https://security.microsoft.com)
 2. Navigate to: **Settings → Endpoints → Onboarding**
@@ -167,7 +167,7 @@ This will download a `.zip` file containing:
 
 ---
 
-#### 📦 Step 2 – Prepare the Files
+### 📦 Step 2 – Prepare the Files
 
 1. Extract the `.zip` package
 2. Locate the following files inside the extracted folder:  
@@ -177,7 +177,7 @@ This will download a `.zip` file containing:
    
 --- 
 
-#### 📦 Step 3 – Create a network shared folder for onboarding files
+### 📦 Step 3 – Create a network shared folder for onboarding files
 
 1. On your Domain Controller (DC) or a file server, create a folder, e.g., `C:\Onboarding`.  
 2. Copy the following files into this folder:  
@@ -190,7 +190,7 @@ This will download a `.zip` file containing:
 
 ---
 
-#### 📦 Step 4 – Add the onboarding ADMX template to Group Policy
+### 📦 Step 4 – Add the onboarding ADMX template to Group Policy
 
 1. Open **Group Policy Management Console (GPMC)** by running `gpmc.msc` on the DC.  
 2. If you want to add the template to the Central Store:  
@@ -201,7 +201,7 @@ This will download a `.zip` file containing:
 
 ---
 
-#### 📦 Step 5 – Configure the onboarding policy in GPO
+### 📦 Step 5 – Configure the onboarding policy in GPO
 
 1. Edit or create a GPO that targets the devices you want to onboard.  
 2. Navigate to: `Computer Configuration → Policies → Windows Settings → Scripts (Startup/Shutdown)`  
@@ -215,7 +215,7 @@ This will download a `.zip` file containing:
    gpupdate /force
    ```
 
-#### 📦 Step 6 - Verify onboarding success:
+### 📦 Step 6 - Verify onboarding success:
 
 On client devices, use PowerShell to confirm onboarding status:
 
