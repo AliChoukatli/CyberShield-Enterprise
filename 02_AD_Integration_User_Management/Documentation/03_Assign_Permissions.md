@@ -6,83 +6,84 @@ Correctly configuring both **Share** and **NTFS permissions** is essential to av
 
 ---
 
-# Assign Permissions
+# 🔴 Assign Permissions
 
-# 🎯 Objectif  
-Configurer les permissions NTFS et les droits de partage sur le dossier IT pour assurer une sécurité fine et une séparation des accès selon les groupes Active Directory.
+## 🎯 Objective  
+Configure **NTFS** and **share permissions** on the `IT` folder to ensure fine-grained security and access separation based on **Active Directory security groups**.
 
----
+## 📁 Context  
+The shared folder `C:\SharedFolders\IT` hosts sensitive and collaborative data for the **IT department**. Access must be role-based with the following permissions:
 
-## 📁 Contexte  
-Le dossier partagé `C:\SharedFolders\IT` héberge des fichiers sensibles et collaboratifs pour le département IT. Il doit être accessible selon les rôles avec des permissions adaptées :
-
-- **IT-Admins** : Contrôle total (lecture, écriture, modification, suppression)  
-- **IT-Users** : Accès en lecture seule (lecture & exécution)
+- **IT-Admins**: Full control (read, write, modify, delete)  
+- **IT-Users**: Read-only access (read & execute)
 
 ---
 
-## 🛠️ Étapes de configuration
+## 🛠️ Configuration Steps
 
-### 1. Configuration des permissions en partage (Share Permissions)
+### 1. Configure Share Permissions
 
-- Clic droit sur le dossier `IT` → **Propriétés** → onglet **Partage**  
-- Cliquer sur **Partage avancé**  
-- Cocher **Partager ce dossier**  
-- Nom du partage : `IT`  
-- Cliquer sur **Permissions**  
-- Configurer comme suit :
+- Right-click on the `IT` folder → **Properties** → **Sharing** tab  
+- Click **Advanced Sharing**  
+- Check **Share this folder**  
+- Share name: `IT`  
+- Click **Permissions**  
+- Configure the following:
 
-| Groupe      | Permissions   |
-|-------------|---------------|
-| IT-Admins   | Contrôle total |
-| IT-Users    | Lecture       |
+| Group       | Share Permissions |
+|-------------|-------------------|
+| IT-Admins   | Full Control       |
+| IT-Users    | Read              |
 
-- Retirer le groupe **Everyone** pour renforcer la sécurité  
-- Valider les paramètres
-
----
-
-### 2. Configuration des permissions NTFS
-
-- Toujours dans les propriétés du dossier, onglet **Sécurité** → cliquer sur **Modifier**  
-- Ajouter les groupes AD `IT-Admins` et `IT-Users` si non présents  
-- Assigner les permissions suivantes :
-
-| Groupe      | Permissions NTFS             |
-|-------------|-----------------------------|
-| IT-Admins   | Contrôle total              |
-| IT-Users    | Lecture et exécution        |
-
-- Retirer le groupe **Everyone** si présent  
-- Appliquer et valider
+- Remove the **Everyone** group to tighten security  
+- Apply the settings
 
 ---
 
-## 🔐 Explications
+### 2. Configure NTFS Permissions
 
-- **Permissions en partage** contrôlent l’accès au dossier via le réseau.  
-- **Permissions NTFS** contrôlent les accès locaux et réseau avec un contrôle plus fin.  
-- **La règle la plus restrictive s’applique** : si un utilisateur a des permissions différentes en partage et NTFS, c’est la permission la plus limitée qui prévaut.  
-- Il est donc essentiel de configurer correctement les deux couches.
+- In the same folder properties, go to the **Security** tab → Click **Edit**  
+- Add the AD groups `IT-Admins` and `IT-Users` if not already present  
+- Set the following NTFS permissions:
 
----
+| Group       | NTFS Permissions         |
+|-------------|--------------------------|
+| IT-Admins   | Full Control             |
+| IT-Users    | Read & Execute           |
 
-## ✅ Vérification
-
-- Depuis un poste client, accéder au chemin réseau : `\\DC01\IT`  
-- Tester la connexion avec un utilisateur IT-Users (accès lecture uniquement)  
-- Tester la connexion avec un utilisateur IT-Admins (accès total)  
-- Vérifier qu’un utilisateur non membre des groupes n’a aucun accès
+- Remove the **Everyone** group if present  
+- Apply and confirm changes
 
 ---
 
-## 🧠 Bonnes pratiques
+## 🔐 Explanation
 
-- Supprimer les groupes **Everyone** des permissions pour limiter l’accès non contrôlé  
-- Utiliser des groupes de sécurité AD pour gérer les permissions, ne jamais assigner directement à des utilisateurs  
-- Documenter toutes les permissions appliquées dans un référentiel central  
-- Faire des audits réguliers des permissions sur les dossiers partagés  
+- **Share permissions** control access over the network  
+- **NTFS permissions** control both local and network access with more granularity  
+- **The most restrictive rule applies**: if a user has conflicting Share and NTFS permissions, the most restrictive one takes effect  
+- That’s why it’s essential to configure **both layers correctly**
 
+---
+
+## ✅ Verification
+
+- From a client machine, access the network path: `\\DC01\IT`  
+- Test access with an **IT-Users** account (should have read-only access)  
+- Test access with an **IT-Admins** account (should have full access)  
+- Verify that a user **not in either group** has no access
+
+---
+
+## 🧠 Best Practices
+
+- Remove **Everyone** from all permissions to limit uncontrolled access  
+- Always assign permissions to **AD security groups**, not individual users  
+- Document all applied permissions in a central permissions inventory  
+- Perform **regular audits** of permissions on all shared folders
+
+---
+
+# ✅ End of NTFS and Share Permission Configuration for the IT Folder
 ---
 
 ## ✅ Conclusion
