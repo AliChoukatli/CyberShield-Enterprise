@@ -1,3 +1,10 @@
+## 📝 Introduction
+
+This guide provides a step-by-step walkthrough for installing an **Active Directory Domain Controller** on **Windows Server 2022**, including the configuration of a static IP address and the addition of the **DHCP Server** role. This is the foundational step in setting up a centralized enterprise infrastructure for managing identities, resources, and network connectivity.
+
+The goal is to establish a solid, secure, and scalable environment by preparing the server to host critical services such as **Active Directory Domain Services (AD DS)** and the **Dynamic Host Configuration Protocol (DHCP)**.
+
+---
 
 ## 🔴 Step 1 – Windows Server 2022 Installation
 
@@ -128,3 +135,15 @@ Instructions
 10. On the DHCP window, click on DHCP Pool you can see your scope
     
 ![DHCP_Pool](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Day1_Installation_AD/dhcp_pool.png)
+
+---
+
+## ✅ Conclusion
+
+At the end of this initial configuration:
+
+- The server is ready to operate as a **domain controller (DC01)**.
+- The **Active Directory service** is functional with an established domain (`corp.aclab.tech`).
+- A **dynamic DHCP scope** is configured to automatically assign IP addresses to network clients.
+
+This setup lays the groundwork for advanced deployments, including centralized identity management, group policy enforcement, endpoint protection, and integration with tools like **Microsoft Defender** and **Microsoft Sentinel**.
