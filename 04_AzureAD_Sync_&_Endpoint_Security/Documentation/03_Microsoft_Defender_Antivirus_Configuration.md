@@ -1,6 +1,17 @@
-# 03 - 🛡️ Microsoft Defender Antivirus
+# 🛡️ 03 – Microsoft Defender Antivirus Deployment via Intune
 
-## 🔹 Part 1 - Configure Microsoft Defender Antivirus via Intune
+# 📝 Introduction
+
+In this section, you’ll configure **Microsoft Defender Antivirus** using Microsoft Intune to ensure real-time protection, cloud-based threat detection, and full device coverage. This provides a consistent and secure baseline across all Windows 10/11 endpoints.
+
+The configuration is done using Intune security policies, allowing centralized deployment, validation, and reporting—all without manual endpoint intervention.
+
+---
+## 🎯 Objective
+
+Deploy and validate a Microsoft Defender Antivirus security policy via Intune to enforce best-practice protection settings across all corporate Windows endpoints.
+
+---
 
 ### 🛡️ Step 1 – Access Endpoint Security Policies 
 
@@ -77,7 +88,7 @@
   ```
 ![Defender_Validation](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Defender_Validation_Script.png)
 
-### 🛡️ Step 6 - Report
+### 🛡️ Step 6 - Review Policy Report
 - Go to Devices > Configuration
 - Select policy: Defender Antivirus Baseline 24H2
 - Select View Report
@@ -86,4 +97,11 @@
 
 ---
 
+## ✅ Conclusion
+
+With Microsoft Defender Antivirus now configured via Intune:
+
+- ✅ All managed devices receive consistent security settings automatically.  
+- 🔍 Policy compliance and enforcement are validated via PowerShell or Intune reports.  
+- 🛡️ The organization benefits from real-time, cloud-connected threat protection without manual configuration per device.
 
