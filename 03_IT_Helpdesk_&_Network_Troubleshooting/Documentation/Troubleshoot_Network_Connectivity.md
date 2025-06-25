@@ -1,4 +1,12 @@
-## ✅ - **Troubleshoot Network Connectivity**
+# 🌐 Network Troubleshooting & Connectivity Checks
+
+## 📝 Introduction
+
+This section guides you through essential network troubleshooting steps from a client workstation (`LTP-EMP01`) to ensure proper connectivity with the domain controller and internal network.
+
+You'll perform diagnostic actions like pinging the default gateway and DC, checking the IP configuration, and verifying network adapter health. These steps are critical to resolving connectivity issues that may impact domain access, file sharing, or remote management.
+
+## ✅ **Troubleshoot Network Connectivity**
 
   ## 📌 Ping
 
@@ -59,4 +67,17 @@ ipconfig /all
   4. If needed, right-click the network adapter and select **Update Driver** to check for driver updates.
 
  ![update-driver](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/update-driver.png)
+
+ ---
+ 
+ ## ✅ Conclusion
+
+After completing this section:
+
+- Network connectivity was successfully validated between `LTP-EMP01` and core infrastructure components (gateway and DC).
+- You confirmed that the workstation has a valid IP configuration using `ipconfig /all`.
+- The health and driver status of the network adapter were verified via Device Manager.
+
+These troubleshooting techniques are foundational for any IT support role, helping you quickly identify and resolve common connectivity problems in a domain environment.
+
 
