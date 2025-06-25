@@ -1,3 +1,5 @@
+# 🛠️ Creating and Managing Organizational Units (OUs)
+
 ## 📝 Introduction
 
 This section focuses on organizing your Active Directory structure by creating **Organizational Units (OUs)** for each department within the domain `corp.aclab.tech`. Proper OU design is essential for applying Group Policies, managing user permissions, and maintaining a clean and scalable AD environment.
