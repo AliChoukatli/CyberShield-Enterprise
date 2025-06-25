@@ -1,3 +1,11 @@
+## 📝 Introduction
+
+This section covers the deployment of **Windows 11 client machines** and their integration into the **Active Directory domain**. These clients will serve as endpoints within the enterprise environment and will later be managed through Group Policies, security baselines, and endpoint protection tools.
+
+The objective is to prepare clean, properly configured Windows 11 workstations and join them to the domain `corp.aclab.tech` to enable centralized identity and device management.
+
+---
+
 ## 🔴 Step 1 – Windows 11 Client Machines
 
 **🎯 Objective**: Install and prepare Windows 11 machines for later domain joining.
@@ -75,4 +83,17 @@
 Capture  ADUC view showing the joined computer 
 
 > 💡 *This step is required before deploying GPOs, endpoint protection, or centralized user policies.*
+
+---
+
+## ✅ Conclusion
+
+After completing this section:
+
+- Windows 11 client machines are installed, configured, and renamed using a consistent naming convention (e.g., `LTP-HLP01`).
+- Each client is successfully joined to the **Active Directory domain** (`corp.aclab.tech`).
+- The joined machines now appear in **Active Directory Users and Computers (ADUC)** under the **"Computers"** container.
+- Domain-based logins (e.g., `corp\it.ali.choukatli`) are now possible.
+
+These domain-joined workstations are now ready to receive Group Policy Objects (GPOs), endpoint protection policies, and other centralized configurations as part of the enterprise IT infrastructure.
 
