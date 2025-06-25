@@ -1,4 +1,4 @@
-# 📦 Microsoft 365 Apps Deployment Using Office Deployment Tool (ODT) and PowerShell
+# 📦 Deploying Microsoft 365 with ODT and PowerShell
 
 ## 📝 Introduction
 
