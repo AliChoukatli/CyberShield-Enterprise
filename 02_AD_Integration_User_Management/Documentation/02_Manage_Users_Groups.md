@@ -1,3 +1,5 @@
+## 👥 Managing Users and Security Groups in Active Directory
+
 ## 📝 Introduction
 
 In this section, you'll learn how to create and manage **user accounts** and **security groups** in Active Directory. These accounts represent employees within different departments (e.g., IT, HR, Sales) and will later be used for authentication, authorization, and Group Policy targeting.
