@@ -1,3 +1,12 @@
+# 🖥️ Secure RDP Access for IT Support
+
+## 📝 Introduction
+
+This section covers how to securely enable and manage Remote Desktop Protocol (RDP) access for support staff within a domain environment. By creating a dedicated AD security group (`IT-Support-RDP`) and applying permissions centrally, we ensure consistent, controlled, and auditable access to client machines such as `LTP-EMP01`.
+
+You'll learn how to activate RDP, assign group permissions locally or via PowerShell, and test connectivity using domain credentials — all following enterprise best practices.
+
+
 ## ✅ **3.2 – Remote Support via RDP**
 
 ### 📌 **Prepare Active Directory Group for RDP Access**
@@ -132,3 +141,15 @@ netsh advfirewall firewall add rule name="Allow ICMPv4-In" protocol=icmpv4:8,any
 🛡️ Security Best Practice: Avoid exposing RDP to the internet. Use VPN or restrict RDP access via firewall rules (IP allowlist).
 
 ---
+
+## ✅ Conclusion
+
+After completing this section:
+
+- RDP is successfully enabled and restricted to the `IT-Support-RDP` group.
+- Domain users like `ali.choukatli` can remotely connect to workstations (e.g., `LTP-EMP01`) using secure credentials.
+- You’ve learned both GUI and PowerShell methods for adding RDP permissions, including remote automation.
+- Troubleshooting and firewall rules were covered to help resolve common RDP issues.
+
+This ensures a secure and manageable remote support setup in your AD environment.
+
