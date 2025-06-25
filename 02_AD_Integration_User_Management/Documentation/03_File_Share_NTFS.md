@@ -99,7 +99,7 @@ After completing this configuration:
 - A clear separation of access rights has been implemented using **Active Directory security groups**, enabling easier management and scalability.
 
 This structured permission model enhances both **security** and **administrative efficiency**, while adhering to best practices for shared folder access management in a corporate Active Directory environment.
-Souhaites-tu que je rédige la suite logique pour la création des lecteurs réseaux via GPO, ou une autre
+
 ---
 
 
