@@ -1,8 +1,15 @@
+# 📲 Microsoft Intune – Device Enrollment & Auto-Registration
 
-# ✅ Device Enrollment in Microsoft Intune (MDM)
+### 📝 Introduction
 
-### 🎯 Objective
-Ensure all devices are enrolled in Intune for centralized management, security, and compliance monitoring.
+This section guides you through enrolling Windows devices into **Microsoft Intune** for centralized management and security enforcement. After hybrid joining your devices to Azure AD, the next step is enabling **automatic MDM enrollment** via Group Policy and ensuring DNS resolution and connectivity to Microsoft services.
+
+Whether deploying new machines or onboarding existing endpoints, this process allows IT admins to manage device compliance, apply security baselines, and monitor assets directly from the **Microsoft Endpoint Manager Admin Center**.
+
+---
+
+## 🎯 Objective
+Ensure all Windows devices are automatically enrolled into Intune using Azure AD credentials via Group Policy, allowing centralized compliance and configuration enforcement.
 
 ---
 
@@ -128,6 +135,19 @@ Simply follow the on-screen instructions and scan the provided QR code to comple
 ```powershell
 dsregcmd /status
 ```
+
+---
+
+### ✅ Conclusion
+
+By completing this section, you have:
+
+- Configured **automatic MDM enrollment** using Azure AD credentials via GPO.
+- Verified DNS forwarders to ensure cloud connectivity.
+- Understood the different methods to enroll new and existing devices.
+- Validated successful Intune registration and device compliance.
+
+Your environment is now ready to leverage **Microsoft Intune** for full device lifecycle management, including compliance monitoring, app deployment, and conditional access policy enforcement.
 ![dsregcmd-MDM](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/dsregcmd_mdm.png)
 
 --- 
