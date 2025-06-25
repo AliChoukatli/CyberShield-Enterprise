@@ -1,3 +1,11 @@
+## 📝 Introduction
+
+This section focuses on organizing your Active Directory structure by creating **Organizational Units (OUs)** for each department within the domain `corp.aclab.tech`. Proper OU design is essential for applying Group Policies, managing user permissions, and maintaining a clean and scalable AD environment.
+
+Additionally, you will learn how to safely delete an OU by disabling accidental deletion protection — a common safeguard in enterprise environments.
+
+---
+
 ## 🔴 **Create OUs for Each Department**
 
 Create the following Organizational Units directly under the domain `corp.aclab.tech`
@@ -30,3 +38,14 @@ Once done, verify the structure:
    
 4. Right-click OU > **Delete**
 
+---
+
+## ✅ Conclusion
+
+After completing this section:
+
+- The domain now contains a well-structured set of top-level OUs representing key departments: **IT**, **HR**, **Sales**, **Management**, **Groups**, and **Service Accounts**.
+- This OU structure provides a foundation for applying **targeted Group Policies**, organizing users and devices logically, and enforcing administrative boundaries.
+- You’ve also learned how to delete an OU properly by first disabling accidental deletion protection.
+
+This is a critical step in building a professional, manageable, and secure Active Directory environment.
