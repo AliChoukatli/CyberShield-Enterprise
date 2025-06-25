@@ -1,4 +1,14 @@
+
+
 ## 🔴 **Configuring RDP Permissions**
+
+### 📝 Introduction
+
+This section guides you through configuring **Remote Desktop Protocol (RDP)** permissions to securely restrict RDP access on a VM (`LTP-EMP01`) to authorized users only. By creating a dedicated security group (`RDP-Users`) and linking it via Group Policy, you enforce granular control over who can remotely connect to critical machines.
+
+This practice enhances security by limiting RDP access, which is often a common attack vector, to a carefully controlled set of users.
+
+---
 
 ### 🎯 Objective
 Ensure that selected users (e.g., `Sophia Martinez`) can securely connect via RDP to a VM (LTP-EMP01) by granting permissions only to an authorized group.
@@ -49,4 +59,16 @@ Ensure that selected users (e.g., `Sophia Martinez`) can securely connect via RD
    - Group membership of the user.
    - GPO application (use gpresult /r).
    - The local Remote Desktop Users group if needed.
+  
+   ---
+
+   ### ✅ Conclusion
+
+By completing these steps:
+
+- The `RDP-Users` security group has been created and populated with authorized users.
+- A Group Policy Object (GPO) restricts RDP logon rights exclusively to members of the `RDP-Users` group.
+- The targeted VM (`LTP-EMP01`) applies this policy, allowing only authorized users to connect remotely.
+- This approach significantly reduces the attack surface and enforces secure remote access management within the Active Directory environment.
+Veux-tu que je t’aide à préparer une section sur la configuration d’une bastion host ou d’un jump server
  
