@@ -1,4 +1,10 @@
-#  Hybrid Join Guide 
+# 🌐 Hybrid Azure AD Join – Enable Device Sync & Registration
+
+### 📝 Introduction
+
+In this section, you’ll learn how to **hybrid join your on-premises Windows devices to Microsoft Entra ID** (formerly Azure AD). This integration allows you to bridge your local Active Directory with the cloud, enabling centralized management via **Microsoft Intune**, enforcing **security policies**, and preparing for **modern endpoint management**.
+
+You will walk through the **entire process**, including Azure AD Connect setup, synchronization, GPO configuration, and validation through Microsoft Entra. This ensures your devices are properly hybrid joined and ready for compliance and endpoint protection in a hybrid environment.
 
 ## 🎯 Objective
 
@@ -216,4 +222,14 @@ This confirms your devices are successfully registered and managed via Microsoft
 
 ---
 
+### ✅ Conclusion
 
+After completing this section, you will have:
+
+- Successfully configured **Azure AD Connect** with proper sync and security options.
+- Enabled **Hybrid Azure AD Join** to register domain-joined devices into Entra ID.
+- Applied the correct **GPO and scheduled task** to trigger auto device registration.
+- Verified device status using `dsregcmd /status` and through the **Microsoft Entra Admin Center**.
+
+This setup forms the **foundation for cloud-based device management** using Microsoft Intune, allowing you to enforce compliance, apply security baselines, and enable conditional access policies across your hybrid environment.
+Souhaite-tu que je fasse aussi une estimation du temps nécessaire pour cette section, comme pour les
