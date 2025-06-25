@@ -1,15 +1,15 @@
 # 📲 Microsoft Intune – Device Enrollment & Auto-Registration
 
+## 🎯 Objective
+Ensure all Windows devices are automatically enrolled into Intune using Azure AD credentials via Group Policy, allowing centralized compliance and configuration enforcement.
+
+---
+
 ### 📝 Introduction
 
 This section guides you through enrolling Windows devices into **Microsoft Intune** for centralized management and security enforcement. After hybrid joining your devices to Azure AD, the next step is enabling **automatic MDM enrollment** via Group Policy and ensuring DNS resolution and connectivity to Microsoft services.
 
 Whether deploying new machines or onboarding existing endpoints, this process allows IT admins to manage device compliance, apply security baselines, and monitor assets directly from the **Microsoft Endpoint Manager Admin Center**.
-
----
-
-## 🎯 Objective
-Ensure all Windows devices are automatically enrolled into Intune using Azure AD credentials via Group Policy, allowing centralized compliance and configuration enforcement.
 
 ---
 
