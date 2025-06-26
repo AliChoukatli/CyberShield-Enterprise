@@ -239,6 +239,4 @@ Implementing Local Administrator Password Management with Intune significantly e
 
 Following the steps outlined in this guide will help ensure that your organization’s Windows devices are protected against lateral movement attacks and unauthorized access, aligning with best practices for privileged account security and Zero Trust principles.
 
-SENTINEL
 
-LAPS Hybrid
