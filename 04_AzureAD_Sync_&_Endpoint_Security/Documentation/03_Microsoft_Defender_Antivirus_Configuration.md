@@ -27,7 +27,7 @@ The configuration is done using Intune security policies, allowing centralized d
 4. Name e.g., `Defender Antivirus Baseline 24H2`
 5. Click **Create**
 
-![AV](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Antivirus.png)
+![AV](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Antivirus.png)
 
 ---
 
@@ -53,7 +53,8 @@ The configuration is done using Intune security policies, allowing centralized d
 | Schedule Scan Day                             | Every day                            |
 | Schedule Scan Time                            | 120                                  |
 
-![Defender_Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Defender_Policy.png)
+![Defender_Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Defender_Policy.png)
+
 ---
 
 ### 🛡️ Step 4 – Assign Policy  
@@ -61,7 +62,7 @@ The configuration is done using Intune security policies, allowing centralized d
 - Assign to group: `Windows 10/11 devices`
 - Click **Next** then **Create**
 
-![AV-ASSI](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/AV-ass.png)
+![AV-ASSI](hhttps://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/AV-ass.png)
 
 ---
 
@@ -88,14 +89,14 @@ The configuration is done using Intune security policies, allowing centralized d
     ScanScheduleDay, `
     ScanScheduleOffset
   ```
-![Defender_Validation](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Defender_Validation_Script.png)
+![Defender_Validation](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Defender_Validation_Script.png)
 
 ### 🛡️ Step 6 - Review Policy Report
 - Go to Devices > Configuration
 - Select policy: Defender Antivirus Baseline 24H2
 - Select View Report
 
-![Defender_Report](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Defender_Report.png)
+![Defender_Report](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Defender_Report.png)
 
 ---
 
