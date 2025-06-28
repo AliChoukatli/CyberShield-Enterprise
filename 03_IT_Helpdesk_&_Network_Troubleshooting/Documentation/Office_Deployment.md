@@ -1,6 +1,6 @@
 # 📦 Deploying Microsoft 365 with ODT and PowerShell
 
-### 🎯 Objective
+## 🎯 Objective
 
 Install Microsoft 365 Apps (Office 365) and Visio Pro using Office Deployment Tool (ODT) with a custom PowerShell script.
 
@@ -10,8 +10,9 @@ This section guides you through the deployment of Microsoft 365 Apps (Office 365
 
 You will start by uninstalling any existing Office installations to avoid conflicts, then prepare and customize the ODT configuration file, and finally deploy the applications efficiently across your Windows machines.
 
+## Steps:
 
-#### Step 1 – Uninstall Existing Office Installation (if applicable)
+### Step 1 – Uninstall Existing Office Installation (if applicable)
 
 ### Recommended Method: Microsoft Support and Recovery Assistant (SaRA)
 1. Run this script :
@@ -22,7 +23,7 @@ iwr https://raw.githubusercontent.com/Admonstrator/msoffice-removal-tool/main/ms
 
 ---
 
-#### **Step 2 – Download and Prepare the Office Deployment Tool (ODT)**
+### **Step 2 – Download and Prepare the Office Deployment Tool (ODT)**
 
 1. Download ODT from Microsoft:
    [https://www.microsoft.com/en-us/download/details.aspx?id=49117](https://www.microsoft.com/en-us/download/details.aspx?id=49117)
@@ -37,7 +38,7 @@ iwr https://raw.githubusercontent.com/Admonstrator/msoffice-removal-tool/main/ms
         │ config.xml
 ---
 
-#### **Step 3 – Customize `config.xml`**
+### **Step 3 – Customize `config.xml`**
 
 Create or edit `C:\ODT\config.xml` with the following content:
 ```xml
@@ -57,7 +58,7 @@ Create or edit `C:\ODT\config.xml` with the following content:
 </Configuration>
 ```
 
-#### **Step 4 – Create the PowerShell Script**
+### **Step 4 – Create the PowerShell Script**
 - Create a new script file: C:\Scripts\DeployOffice365.ps1
 ```powershell
 # DeployOffice365.ps1
@@ -72,7 +73,7 @@ Set-ExecutionPolicy RemoteSigned -Scope Process -Force
 Start-Process -FilePath $SetupFilePath -ArgumentList "/configure $ConfigFilePath" -Wait
 ```
 
-#### **Step 5 – Run the Script**
+### **Step 5 – Run the Script**
 - Open PowerShell as Administrator
 
 - Run the script:
