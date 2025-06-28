@@ -86,8 +86,6 @@ Used for on-premise Active Directory environments with GPO-based management.
 
 5. Apply this options on Public and Private Profile and Select `Ok`
 
-> ✅ This dual-method approach ensures your project is adaptable for both modern and legacy enterprise environments.
-
 ---
 
 ## ✅ Conclusion
