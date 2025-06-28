@@ -1,8 +1,19 @@
+# 🛠️ Windows Server 2022 Setup: Active Directory & DHCP
+
+## 🎯 Objective
+
+Establish a Windows Server 2022 machine as a **primary domain controller** and **DHCP server**, forming the foundation of a centralized and secure enterprise network infrastructure.
+
 ## 📝 Introduction
 
-This guide provides a step-by-step walkthrough for installing an **Active Directory Domain Controller** on **Windows Server 2022**, including the configuration of a static IP address and the addition of the **DHCP Server** role. This is the foundational step in setting up a centralized enterprise infrastructure for managing identities, resources, and network connectivity.
+This guide walks through the complete installation and configuration of a Windows Server 2022 as a domain controller for your organization. You'll:
 
-The goal is to establish a solid, secure, and scalable environment by preparing the server to host critical services such as **Active Directory Domain Services (AD DS)** and the **Dynamic Host Configuration Protocol (DHCP)**.
+- Install the OS and assign a clear server identity
+- Configure a **static IP address** to ensure DNS and AD reliability
+- Deploy **Active Directory Domain Services (AD DS)** to centralize identity and access management
+- Add and configure the **DHCP Server role** to automate IP address distribution
+
+By the end of this section, you’ll have a robust Active Directory and DHCP environment to support future domain-joined client machines and enterprise policy enforcement.
 
 ---
 
