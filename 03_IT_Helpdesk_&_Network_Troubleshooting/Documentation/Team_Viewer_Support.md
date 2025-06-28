@@ -1,10 +1,16 @@
 # 🧩 Remote Support with TeamViewer
 
+## 🎯 Objective
+
+Install, configure, and use TeamViewer to provide secure remote support from the helpdesk workstation to end-user machines, enabling troubleshooting without direct domain or VPN access.
+
 ## 📝 Introduction
 
 This section demonstrates how to deliver remote assistance using **TeamViewer** between a helpdesk workstation (`LTP-HLP01`) and an end-user machine (`LTP-EMP01`). TeamViewer is a reliable remote support tool that allows IT staff to troubleshoot systems securely over the internet, without requiring domain connectivity or VPN access.
 
 You’ll learn how to install the appropriate versions on both devices, establish a secure session, and follow security best practices for closing a session safely.
+
+---
 
 #### 🧰 **Prerequisites**
 
