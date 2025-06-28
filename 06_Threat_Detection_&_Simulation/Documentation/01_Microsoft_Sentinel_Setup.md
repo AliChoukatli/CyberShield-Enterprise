@@ -1,8 +1,18 @@
-# 📊  Microsoft Sentinel – Setup & Architecture
+# 📊 Microsoft Sentinel – Setup & Architecture
 
-## 🎯 Objective:
-Deploy Microsoft Sentinel in your Azure tenant to enable cloud-native SIEM and real-time threat detection.
- 
+## 🎯 Objective
+
+Deploy Microsoft Sentinel in your Azure environment to enable centralized log analytics, real-time security monitoring, and threat detection across cloud and on-premises resources.
+
+---
+
+## 📝 Introduction
+
+This section guides you through deploying Microsoft Sentinel within your Azure tenant to enable a cloud-native Security Information and Event Management (SIEM) solution with real-time threat detection capabilities.
+
+You will learn how to set up the necessary infrastructure, activate Sentinel, configure essential data connectors, and manage costs for an effective security monitoring environment.
+
+---
 
 ## 📘 Table of Contents
 
