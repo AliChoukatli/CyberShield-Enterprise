@@ -42,8 +42,8 @@ Enable domain-joined Windows devices to be automatically registered in Azure AD 
 whoami /fqdn
 systeminfo | findstr /i "domain"
 ```
-![whoami-help01](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/whoami-hlp01.png)
-![whoami-emp01](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/whoami-emp01.png)
+![whoami-help01](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/whoami-hlp01.png)
+![whoami-emp01](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/whoami-emp01.png)
 
 ---
 
@@ -105,7 +105,7 @@ This dedicated account improves security and allows better auditing of sync oper
 corp.aclab.tech/
 └── AzureAD-Groups/
 ```
-![Groupe-writeback](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Groups-Writeback.png)
+![Groupe-writeback](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Groups-Writeback.png)
 
 ---
 
@@ -125,7 +125,7 @@ corp.aclab.tech/
    ```powershell
    Start-ADSyncSyncCycle -PolicyType Delta
    ```
-![Sync_Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Sync-Success.png)
+![Sync_Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Sync-Success.png)
 
 ---
 
@@ -133,7 +133,7 @@ corp.aclab.tech/
 1. Launch AzureAD Connect (Entra Connect Sync) and select Configure Device Options.
 2. Choose Configure Hybrid Microsoft Entra ID Join.
 
-![Hybrid_Join](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Hybrid_Join.png)
+![Hybrid_Join](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Hybrid_Join.png)
 
 3. Add your domain (e.g., corp.aclab.tech) and sign in with a Global Administrator account.
 
@@ -156,7 +156,7 @@ corp.aclab.tech/
 
 - Double-click **Register domain-joined computers as devices** and set it to **Enabled**.
   
-![Auto-Device-REG](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Auto-Device_Registration-GPO.png)
+![Auto-Device-REG](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Auto-Device_Registration-GPO.png)
   
 ---
 
@@ -181,7 +181,7 @@ corp.aclab.tech/
 
 - Click **OK** to save.
 
-![Join-Task](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Join-Task.png)
+![Join-Task](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Join-Task.png)
 
 ---
 
@@ -219,7 +219,7 @@ Identity → Devices → All devices
 3. Locate your devices and verify the following:
 - **Join Type**: `Microsoft Entra Hybrid Joined`
 
-![Entra Devices List](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Entra-Devices.png)
+![Entra Devices List](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Entra-Devices.png)
 
 This confirms your devices are successfully registered and managed via Microsoft Entra ID.
 
