@@ -28,6 +28,7 @@ The configuration is done using Intune security policies, allowing centralized d
 5. Click **Create**
 
 ![AV](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Antivirus.png)
+
 ---
 
 ### 🛡️ Step 3 – Configure Antivirus Settings  
