@@ -37,7 +37,7 @@ To leverage its full capabilities, each device must be properly onboarded to the
 
 6. Click **Download package** to get a `.zip` file containing the onboarding script.
 
-![OnBoarding_Page](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/OnBoarding_Page.png)
+![OnBoarding_Page](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/OnBoarding_Page.png)
 
 7. On the target machine:
    - Extract the `.zip` file.
@@ -47,11 +47,11 @@ To leverage its full capabilities, each device must be properly onboarded to the
    ```cmd
    WindowsDefenderATPOnboardingScript.cmd
    ```
-![Script_Successful](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Successful_Onboard_cmd.png)
+![Script_Successful](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Successful_Onboard_cmd.png)
 
 8. Wait a few minutes. The device should appear in the Defender portal under Device inventory.
 
-![LTP-HLP_DEF_Status](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/LTP-HLP_DEF_Status.png)
+![LTP-HLP_DEF_Status](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/LTP-HLP_DEF_Status.png)
 
 ---
 
@@ -104,7 +104,7 @@ This guide explains how to onboard Windows 10/11 devices to Microsoft Defender f
 
 1. Review the profile settings.
 
-![Defender_EP_intune](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Defender_EP_intune.png)
+![Defender_EP_intune](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Defender_EP_intune.png)
 
 3. Click **Create** to deploy the profile.
 
@@ -118,11 +118,11 @@ This guide explains how to onboard Windows 10/11 devices to Microsoft Defender f
 4. Check the **deployment status** and **device check-in results** to confirm successful application.
 
 
-![Intune_Def_EP_Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/intune_Endpoint_Success.png)
+![Intune_Def_EP_Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/intune_Endpoint_Success.png)
 
 or Go to the Microsoft 365 Defender portal:  [https://security.microsoft.com](https://security.microsoft.com)
 
-![Device_inventory_Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Device_Inventory.png)
+![Device_inventory_Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Device_Inventory.png)
 
 
 Powershell Eventually : On any onboarded Windows 10/11 device:
@@ -140,7 +140,7 @@ Powershell Eventually : On any onboarded Windows 10/11 device:
    ```
    - A value of 1 means the device is successfully onboarded.
 
-![Onboarding_Verif_PS](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Onboarding_Verif_PS.png)
+![Onboarding_Verif_PS](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Onboarding_Verif_PS.png)
 
 ---
 
@@ -163,7 +163,7 @@ This will download a `.zip` file containing:
 - `WindowsDefenderATPOnboarding.admx`
 - `WindowsDefenderATPOnboarding.adml`
 
-![Onboarding_H](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/OnBoarding_Page_H.png)
+![Onboarding_H](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/OnBoarding_Page_H.png)
 
 ---
 
@@ -186,7 +186,7 @@ This will download a `.zip` file containing:
    - Example share path: `\\DC01\Onboarding`  
 4. Make sure the shared folder is accessible by target devices.
 
-![Onboarding_Sharing](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Onboarding_Sharing.png)
+![Onboarding_Sharing](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Onboarding_Sharing.png)
 
 ---
 
@@ -197,7 +197,7 @@ This will download a `.zip` file containing:
    - Copy the `.admx` file to `\\<domain>\SYSVOL\<domain>\Policies\PolicyDefinitions\`  
    - Copy the `.adml` file to the corresponding language folder, e.g., `en-US`
   
-![ADMX](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/admx.png)
+![ADMX](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/admx.png)
 
 ---
 
@@ -237,7 +237,7 @@ if ($senseService.Status -eq 'Running') {
     Write-Output "❌ Sense service is NOT running."
 }
 ```
-![Verif_Onboard_PS](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/verif_onboard_PS.png)
+![Verif_Onboard_PS](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/verif_onboard_PS.png)
 
 ---
 
