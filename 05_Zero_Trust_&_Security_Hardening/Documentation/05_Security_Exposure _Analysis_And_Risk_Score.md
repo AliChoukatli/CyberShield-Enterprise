@@ -1,4 +1,4 @@
-# 🔎 04.2 – Security Exposure Analysis, Remediation & Risk Management
+# 🔎 Security Exposure Analysis, Remediation & Risk Management
 
 ## 🎯 Objective
 
