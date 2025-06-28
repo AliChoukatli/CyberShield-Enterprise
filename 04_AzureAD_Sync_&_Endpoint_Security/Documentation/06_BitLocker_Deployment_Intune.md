@@ -1,4 +1,4 @@
-# 🔐 06 - BitLocker Deployment via Microsoft Intune
+# 🔐 BitLocker Deployment via Microsoft Intune
 
 ## 🎯 Objective
 
