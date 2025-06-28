@@ -1,4 +1,18 @@
-# Security Exposure Analysis, Remediation & Risk Management
+# 🔎 04.2 – Security Exposure Analysis, Remediation & Risk Management
+
+## 🎯 Objective
+
+Identify and remediate security exposures reported by **Microsoft Defender for Endpoint (MDE)** using actionable hardening measures. This includes applying **Attack Surface Reduction (ASR)** rules, Windows Defender configurations, and system updates, while also documenting accepted residual risks.
+
+## 📝 Introduction
+
+In enterprise environments, continuous exposure management is critical to reduce attack surfaces and maintain compliance. This section details a **real-world remediation workflow** based on a high exposure alert raised in the **Threat & Vulnerability Management (TVM)** dashboard within MDE.
+
+You’ll follow step-by-step remediations mapped to Microsoft security recommendations, covering both **automated defenses** (e.g., ASR rules, PUA blocking, Controlled Folder Access) and **manual risk acceptance**, aligned with business and operational needs.
+
+This structured approach reinforces Zero Trust principles and supports frameworks such as **NIST** and **ISO/IEC 27001**.
+
+---
 
 ## 🔴 Index
 
