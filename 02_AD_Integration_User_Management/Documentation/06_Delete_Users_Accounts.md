@@ -1,4 +1,4 @@
-# 🗑️ 02.6 – Deleting a User Account in Active Directory
+# 🗑️ Deleting a User Account in Active Directory
 
 ## 🎯 Objective
 
