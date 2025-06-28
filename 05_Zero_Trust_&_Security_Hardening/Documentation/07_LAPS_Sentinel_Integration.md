@@ -14,7 +14,7 @@ Following this process will strengthen your organization’s security posture by
 
 ---
 
-## Introduction
+## 📝 Introduction
 
 Local Administrator Password Solution (LAPS) improves endpoint security by automatically managing local administrator passwords on Windows devices. However, monitoring the activities related to the LAPS-managed accounts—such as password retrieval, manual password rotation, and local sign-ins—is essential to detect potential misuse or unauthorized access.
 
