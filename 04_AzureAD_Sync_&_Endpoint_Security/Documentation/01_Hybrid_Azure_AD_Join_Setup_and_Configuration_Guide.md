@@ -18,7 +18,7 @@ You will walk through the **entire process**, including Azure AD Connect setup, 
 
 ---
 
-## ✅ Prerequisites
+## 🧰 Prerequisites
 
 Before getting started, ensure the following:
 
