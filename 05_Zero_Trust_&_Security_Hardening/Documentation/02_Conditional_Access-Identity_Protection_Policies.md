@@ -1,6 +1,5 @@
 # 🔴 Conditional Access & Identity Protection Policies
 
----
 
 ## 🎯 Objective
 
