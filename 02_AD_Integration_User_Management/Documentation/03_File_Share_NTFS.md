@@ -1,13 +1,18 @@
 # 📁🌐 File Share & NTFS Permissions Configuration
 
+## 🎯 Objective
+
+Securely configure a shared folder (`C:\SharedFolders\IT`) for the IT department by implementing proper **NTFS** and **share-level permissions** using **Active Directory Security Groups**. This ensures role-based access, improves auditability, and reduces the risk of unauthorized access.
+
 ## 📝 Introduction
 
-This section focuses on assigning proper **NTFS and Share permissions** to a departmental shared folder (`C:\SharedFolders\IT`) to ensure secure and role-based access. By leveraging **Active Directory security groups**, we enforce a permission model that aligns with organizational roles and responsibilities.
+In this step, you’ll create a shared folder on the **domain controller** and apply security principles by assigning permissions to **Active Directory groups** (`IT-Admins` and `IT-Users`). The configuration leverages a **least privilege** model and separates responsibilities between administrative and standard users.
 
-### 🎯 Objective  
-Create and securely share a central folder on the domain controller for the IT department, configuring both **NTFS** and **share permissions** based on Active Directory security groups.
+This type of configuration is foundational for collaboration and secure file access in any enterprise environment.
 
-### 🛠️ Steps
+---
+
+## 🛠️ Implementation Steps
 
 1. On the **Windows Server 2022 (Domain Controller)**, create the folder:
 C:\SharedFolders\IT
