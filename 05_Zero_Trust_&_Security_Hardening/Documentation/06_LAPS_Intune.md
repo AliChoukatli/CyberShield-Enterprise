@@ -13,7 +13,7 @@ By following this guide, you will strengthen your organization’s endpoint secu
 
 ---
 
-## Introduction
+## 📝 Introduction
 
 Managing local administrator passwords across multiple devices can be a significant security challenge in any organization. Static or shared local admin passwords increase the risk of lateral movement and unauthorized access in the event of a compromise. Microsoft Intune’s integration with Local Administrator Password Solution (LAPS) provides an automated, secure, and scalable way to manage unique local admin passwords on Windows devices.
 
