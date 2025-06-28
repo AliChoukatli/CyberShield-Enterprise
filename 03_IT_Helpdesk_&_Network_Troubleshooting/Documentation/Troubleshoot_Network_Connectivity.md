@@ -1,10 +1,16 @@
 # 🌐 Network Troubleshooting & Connectivity Checks
 
+## 🎯 Objective
+
+Perform fundamental network diagnostics from the employee workstation to verify connectivity to the network gateway and domain controller, validate IP settings, and confirm the network adapter’s operational status.
+
 ## 📝 Introduction
 
 This section guides you through essential network troubleshooting steps from a client workstation (`LTP-EMP01`) to ensure proper connectivity with the domain controller and internal network.
 
 You'll perform diagnostic actions like pinging the default gateway and DC, checking the IP configuration, and verifying network adapter health. These steps are critical to resolving connectivity issues that may impact domain access, file sharing, or remote management.
+
+---
 
 ## ✅ **Troubleshoot Network Connectivity**
 
