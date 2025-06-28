@@ -1,4 +1,4 @@
-# 📊 02 - Custom Analytics Rules (Microsoft Sentinel)
+# 📊 Custom Analytics Rules (Microsoft Sentinel)
 
 Microsoft Sentinel allows the creation of **custom analytics rules** to detect threats, anomalous behavior, or compliance violations using **Kusto Query Language (KQL)**. This section presents examples of custom rules you can use and adapt for your environment.
 
