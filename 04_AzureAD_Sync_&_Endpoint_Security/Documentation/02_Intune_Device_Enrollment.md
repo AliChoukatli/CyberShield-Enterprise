@@ -27,7 +27,7 @@ Whether deploying new machines or onboarding existing endpoints, this process al
 - Log in to the [Microsoft Endpoint Manager Admin Center](https://endpoint.microsoft.com/)  
 - Confirm your admin account has the **Intune Administrator** role or equivalent  
 
-![Intune-Admin](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/intune-admin.png)
+![Intune-Admin](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/intune-admin.png)
 
 ---
 
@@ -36,7 +36,7 @@ Whether deploying new machines or onboarding existing endpoints, this process al
 - Enable **MDM user scope** for targeted groups (e.g., All or specific Azure AD groups)  
 - Save the configuration  
 
-![Auto-Enrollement](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/auto-enrollement.png)
+![Auto-Enrollement](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/auto-enrollement.png)
 
 ---
 
@@ -114,13 +114,13 @@ This setup enables your DNS server to forward unresolved queries to public DNS s
   3. Selecting **Access work or school**  
   4. Clicking **Connect** and signing in with their Azure AD account.
 
-![Enroll Device Screenshot](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Enroll-Connect.png)
+![Enroll Device Screenshot](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Enroll-Connect.jpg)
 
 
 - When you sign in, you will be prompted to secure your account using the Microsoft Authenticator app.
 Simply follow the on-screen instructions and scan the provided QR code to complete the setup
 
-![Enroll-Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Enroll-Success.png)
+![Enroll-Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Enroll-Success.png)
 
 
 #### Bulk Enrollment (Optional)
@@ -134,7 +134,7 @@ Simply follow the on-screen instructions and scan the provided QR code to comple
 - In the Endpoint Manager portal, go to **Devices > All devices**  
 - Confirm devices appear with status **Compliant** or **Enrolled**
 
-![Devices-List](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Devices-List.png)
+![Devices-List](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Devices-List.png)
   
 - On client devices, run and you will see the MDM URL
 
@@ -154,6 +154,6 @@ By completing this section, you have:
 - Validated successful Intune registration and device compliance.
 
 Your environment is now ready to leverage **Microsoft Intune** for full device lifecycle management, including compliance monitoring, app deployment, and conditional access policy enforcement.
-![dsregcmd-MDM](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/dsregcmd_mdm.png)
+![dsregcmd-MDM](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/dsregcmd_mdm.png)
 
---- 
+ 
