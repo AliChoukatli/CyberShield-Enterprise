@@ -1,16 +1,17 @@
 # 🖥️ Secure RDP Access for IT Support
 
+## 🎯 Objective
+
+Create and configure a domain security group to centrally manage Remote Desktop access for IT support personnel, enabling secure and restricted remote connections to domain-joined workstations.
+
 ## 📝 Introduction
 
 This section covers how to securely enable and manage Remote Desktop Protocol (RDP) access for support staff within a domain environment. By creating a dedicated Active Directory security group (`IT-Support-RDP`) and applying permissions centrally, we ensure consistent, controlled, and auditable access to client machines such as `LTP-EMP01`.
 
 You'll learn how to activate RDP, assign group permissions locally or via PowerShell, and test connectivity using domain credentials — all following enterprise best practices.
 
-## 🎯 Objective
-
-Create and configure a domain security group to centrally manage Remote Desktop access for IT support personnel, enabling secure and restricted remote connections to domain-joined workstations.
-
 ---
+
 ## **Remote Support via RDP**
 
 ### 📌 **Prepare Active Directory Group for RDP Access**
