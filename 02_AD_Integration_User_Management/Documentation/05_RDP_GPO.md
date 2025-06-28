@@ -1,4 +1,4 @@
-# 🖥️ 02.4 – RDP Access Control via Group Policy
+# 🖥️ RDP Access Control via Group Policy
 
 ## 🎯 Objective
 
