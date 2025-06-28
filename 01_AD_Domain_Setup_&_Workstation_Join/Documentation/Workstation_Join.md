@@ -1,8 +1,14 @@
+# 🖥️ Deploy Windows 11 Workstations & Join to Active Directory
+
+## 🎯 Objective
+
+Provision and configure Windows 11 client machines as trusted domain-joined endpoints within the Active Directory infrastructure (`corp.aclab.tech`), enabling centralized management, user authentication, and policy enforcement.
+
 ## 📝 Introduction
 
-This section covers the deployment of **Windows 11 client machines** and their integration into the **Active Directory domain**. These clients will serve as endpoints within the enterprise environment and will later be managed through Group Policies, security baselines, and endpoint protection tools.
+This section covers the deployment of **Windows 11 client machines** and their integration into the **Active Directory domain**. These clients will serve as enterprise-managed endpoints and will later be governed through tools such as **Group Policy**, **Microsoft Defender**, and **Intune**.
 
-The objective is to prepare clean, properly configured Windows 11 workstations and join them to the domain `corp.aclab.tech` to enable centralized identity and device management.
+You'll prepare clean installations of Windows 11, apply a consistent naming convention (e.g., `LTP-HLP01`), and perform the domain join operation. Once complete, these machines will appear in **Active Directory Users and Computers (ADUC)**, ready to receive policies and configurations defined by your IT environment.
 
 ---
 
