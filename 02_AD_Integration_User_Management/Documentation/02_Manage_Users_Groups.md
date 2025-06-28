@@ -1,10 +1,14 @@
 # 👥 Managing Users and Security Groups in Active Directory
 
+## 🎯 Objective
+
+Establish a structured and secure user identity system within Active Directory by creating user accounts, assigning them to appropriate Organizational Units (OUs), and organizing them into **Security Groups**. This enables **Role-Based Access Control (RBAC)**, policy targeting, and simplified administrative management across the environment.
+
 ## 📝 Introduction
 
-In this section, you'll learn how to create and manage **user accounts** and **security groups** in Active Directory. These accounts represent employees within different departments (e.g., IT, HR, Sales) and will later be used for authentication, authorization, and Group Policy targeting.
+In this section, you’ll learn how to create and organize **Active Directory user accounts** representing employees across different departments, and manage their membership in **security groups**. 
 
-You'll also explore PowerShell automation for bulk user creation, verify group memberships, and organize users into logical **Active Directory Security Groups** for streamlined permissions management.
+This logical grouping will serve as the basis for applying permissions, Group Policy Objects (GPOs), and security baselines across IT infrastructure. You’ll also explore **PowerShell scripting** for automation to ensure efficiency and scalability in enterprise environments.
 
 ---
 
