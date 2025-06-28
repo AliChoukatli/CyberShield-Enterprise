@@ -1,10 +1,17 @@
-# 🗑️ Deleting a User Account in Active Directory
+# 🗑️ 02.6 – Deleting a User Account in Active Directory
 
-### 📝 Introduction
+## 🎯 Objective
 
-User account lifecycle management is a key part of IT operations and security. This section explains how to safely remove a user from Active Directory, ensuring proper procedures are followed to avoid accidental data loss or service disruption.
+Safely and securely delete a user account in Active Directory while minimizing the risk of data loss or operational disruption. This process includes disabling the account first as a safety measure.
 
-Before deleting, it is recommended to **disable the account first**, which allows for recovery or investigation if needed.
+## 📝 Introduction
+
+Proper user lifecycle management is essential for operational hygiene and security compliance. Whether an employee leaves the organization or an account is no longer needed, **removing it correctly** from Active Directory helps maintain a clean, secure directory environment.
+
+Before deleting an account:
+- Disable it temporarily to allow time for audits or rollback.
+- Confirm the user no longer has assigned resources or roles.
+- Ensure the account isn't linked to critical services (e.g., mailboxes, shared folders).
 
 ---
 
