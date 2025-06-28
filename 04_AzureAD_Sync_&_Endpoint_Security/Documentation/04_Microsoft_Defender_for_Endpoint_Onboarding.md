@@ -1,4 +1,4 @@
-# Microsoft Defender for Endpoint (MDE) Onboarding Guide
+# 🛡️ - Microsoft Defender for Endpoint (MDE) Onboarding Guide
 
 ## 🎯 Objective
 
