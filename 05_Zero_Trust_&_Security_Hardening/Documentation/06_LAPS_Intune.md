@@ -1,4 +1,4 @@
-# Local Administrator Password Management (LAPS) with Intune
+# 🚨 Local Administrator Password Management (LAPS) with Intune
 
 ## Objective
 
