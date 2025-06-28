@@ -6,7 +6,7 @@ Establish a professional and secure deployment of BitLocker encryption across Wi
 
 ---
 
-## Introduction
+## 📝 Introduction
 
 BitLocker is a critical technology for protecting data at rest on Windows devices through full disk encryption. Deploying BitLocker via Intune allows centralized management and enforcement of encryption policies. This guide details the step-by-step process to create, test, and assign BitLocker policies, ensuring a smooth and controlled rollout in your organization.
 
