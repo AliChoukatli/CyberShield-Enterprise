@@ -1,6 +1,14 @@
 # 📊 Custom Analytics Rules (Microsoft Sentinel)
 
-Microsoft Sentinel allows the creation of **custom analytics rules** to detect threats, anomalous behavior, or compliance violations using **Kusto Query Language (KQL)**. This section presents examples of custom rules you can use and adapt for your environment.
+## 🎯 Objective
+
+Implement and configure custom analytics rules in Microsoft Sentinel to detect and alert on security incidents including multiple failed logins followed by success, unusual geographic sign-ins, and impossible travel logins.
+
+## 📝 Introduction
+
+Microsoft Sentinel enables the creation of custom analytics rules using Kusto Query Language (KQL) to detect suspicious activity such as brute force attacks, unusual sign-ins, or impossible travel scenarios. These rules help security teams identify threats and anomalies tailored to their environment.
+
+---
 
 ## 🎯 Detect Multiple Failed Logins Followed by Success
 
