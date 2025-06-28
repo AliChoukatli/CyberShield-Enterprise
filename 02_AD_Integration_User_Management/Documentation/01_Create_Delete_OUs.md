@@ -1,12 +1,18 @@
-# 🛠️ Creating and Managing Organizational Units (OUs)
+# 🗂️ Creating and Managing Organizational Units (OUs)
+
+## 🎯 Objective
+
+Design and implement a clean, scalable, and department-based **OU (Organizational Unit)** structure within the `corp.aclab.tech` domain to support future Group Policy application, role delegation, and resource organization.
 
 ## 📝 Introduction
 
-This section focuses on organizing your Active Directory structure by creating **Organizational Units (OUs)** for each department within the domain `corp.aclab.tech`. Proper OU design is essential for applying Group Policies, managing user permissions, and maintaining a clean and scalable AD environment.
+In this section, you will create dedicated **Organizational Units (OUs)** for different departments in the organization—such as IT, HR, Sales, and Management—as well as containers for **security groups** and **service accounts**.
 
-Additionally, you will learn how to safely delete an OU by disabling accidental deletion protection — a common safeguard in enterprise environments.
+Establishing a proper OU hierarchy is a foundational step for applying **targeted Group Policies**, simplifying user and device management, and enabling granular administrative control. You’ll also learn how to safely delete an OU by disabling the **accidental deletion protection** feature, commonly enabled by default in enterprise AD environments.
 
 ---
+
+## 🛠️ Creating and Managing Organizational Units (OUs)
 
 ## 🔴 **Create OUs for Each Department**
 
