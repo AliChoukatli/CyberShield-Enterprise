@@ -44,7 +44,7 @@ Used for Azure AD-joined devices managed through Intune.
 
 3. Recommanded Setting
 
-![Firewall_Setting](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Firewall_Setting.png)
+![Firewall_Setting](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Firewall_Setting.png)
 
 4. Do the same setting to Public and Private network
 5. Assign the policy to a target Azure AD group  
@@ -82,7 +82,7 @@ Used for on-premise Active Directory environments with GPO-based management.
 > 📝 **Note:** In Full Cloud deployments, logging successful connections may be optional to reduce noise and storage usage.
 
 
-![GPO-Firewall](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/GPO-Firewall.png)
+![GPO-Firewall](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/GPO-Firewall.png)
 
 5. Apply this options on Public and Private Profile and Select `Ok`
 
