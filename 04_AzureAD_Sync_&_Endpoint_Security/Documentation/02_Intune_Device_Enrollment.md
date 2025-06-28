@@ -5,7 +5,7 @@ Ensure all Windows devices are automatically enrolled into Intune using Azure AD
 
 ---
 
-### 📝 Introduction
+## 📝 Introduction
 
 This section guides you through enrolling Windows devices into **Microsoft Intune** for centralized management and security enforcement. After hybrid joining your devices to Azure AD, the next step is enabling **automatic MDM enrollment** via Group Policy and ensuring DNS resolution and connectivity to Microsoft services.
 
@@ -13,7 +13,7 @@ Whether deploying new machines or onboarding existing endpoints, this process al
 
 ---
 
-### Prerequisites
+## 🧰 Prerequisites
 - Microsoft 365 tenant with Intune licenses assigned (e.g., Business Premium)  
 - Devices must be Hybrid Azure AD Joined or Azure AD Joined  
 - Network connectivity allowing devices to reach Intune endpoints  
@@ -21,7 +21,9 @@ Whether deploying new machines or onboarding existing endpoints, this process al
 
 ---
 
-### Part 1 – Access the Intune Portal
+## 🛠️ Steps:
+
+### 🔹 Part 1 – Access the Intune Portal
 - Log in to the [Microsoft Endpoint Manager Admin Center](https://endpoint.microsoft.com/)  
 - Confirm your admin account has the **Intune Administrator** role or equivalent  
 
@@ -29,7 +31,7 @@ Whether deploying new machines or onboarding existing endpoints, this process al
 
 ---
 
-### 🔹Part 2 – Configure Automatic Enrollment
+### 🔹 Part 2 – Configure Automatic Enrollment
 - Navigate to **Devices > Enroll devices > Automatic Enrollment**  
 - Enable **MDM user scope** for targeted groups (e.g., All or specific Azure AD groups)  
 - Save the configuration  
@@ -52,8 +54,10 @@ Computer Configuration
 → Windows Components
 → MDM
 
+---
 
 #### 🛠️ Enable the following policy:
+
 - **Policy Name**: *Enable automatic MDM enrollment using default Azure AD credentials*
 - **State**: Enabled  
 - **Option**: User Credential  
@@ -61,23 +65,26 @@ Computer Configuration
 
 📎 This policy ensures automatic enrollment into **Microsoft Intune** after Hybrid Azure AD Join.
 
+---
+
 #### 🔄 Apply the GPO:
 Run the following command on the device or via deployment:
 
 ```bash
 gpupdate /force
 ```
+
+---
+
 #### ✅ Additional Device Preparation Checklist:
 
 - Ensure devices are **Hybrid Azure AD Joined** or **Azure AD Joined**
 - Confirm all devices are **fully updated** with Windows Updates
 - Verify each device user has a **valid Intune license** assigned
 
-
 ---
 
-
-### 🔹Part 4 – DNS Forwarders
+### 🔹 Part 4 – DNS Forwarders
 
 Before enrolling devices, ensure your Domain Controller’s DNS can resolve internet domain names by configuring DNS forwarders. This step is essential for devices to communicate properly with Azure AD and Microsoft services during enrollment.
 
@@ -122,7 +129,6 @@ Simply follow the on-screen instructions and scan the provided QR code to comple
   - Provisioning packages for streamlined deployment.
 
 ---
-
 
 ### 🔹 Part 6 – Verify Enrollment Status
 - In the Endpoint Manager portal, go to **Devices > All devices**  
