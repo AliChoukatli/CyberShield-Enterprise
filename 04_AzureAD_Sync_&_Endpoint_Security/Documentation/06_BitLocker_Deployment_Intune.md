@@ -152,8 +152,6 @@ E. Removable Drives
 
 ![BitLocker-Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/BitLocker-Policy.png)
 
----
-
 > 📡 This structure ensures controlled, tested, and secure deployment of BitLocker encryption across the enterprise, meeting both compliance and operational excellence standards.
 
 ---
