@@ -1,4 +1,4 @@
-# 🔥 05 - Microsoft Defender Firewall Configuration
+# 🔥 Microsoft Defender Firewall Configuration
 
 ## 🎯 Objective
 
