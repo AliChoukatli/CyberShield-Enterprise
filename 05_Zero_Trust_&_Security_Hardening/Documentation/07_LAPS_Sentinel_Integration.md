@@ -1,12 +1,5 @@
 # 🚨 LAPS Integration with Microsoft Sentinel: Monitoring and Detection Guide
 
-## Introduction
-
-Local Administrator Password Solution (LAPS) improves endpoint security by automatically managing local administrator passwords on Windows devices. However, monitoring the activities related to the LAPS-managed accounts—such as password retrieval, manual password rotation, and local sign-ins—is essential to detect potential misuse or unauthorized access.
-
-This guide explains how to enable audit logging, collect relevant security events, and create detection rules in Microsoft Sentinel to monitor the `LAPS_Admin` account activities effectively. By integrating LAPS with Microsoft Sentinel, security teams gain real-time visibility and enhanced threat detection capabilities for local admin account operations.
-
----
 
 ## Objective
 
@@ -18,6 +11,14 @@ This guide aims to empower security and IT administrators to:
 - Set up alerting and visualization tools to improve incident response and governance around local admin account usage.
 
 Following this process will strengthen your organization’s security posture by detecting and responding to risky activities involving local administrator accounts managed through LAPS.
+
+---
+
+## Introduction
+
+Local Administrator Password Solution (LAPS) improves endpoint security by automatically managing local administrator passwords on Windows devices. However, monitoring the activities related to the LAPS-managed accounts—such as password retrieval, manual password rotation, and local sign-ins—is essential to detect potential misuse or unauthorized access.
+
+This guide explains how to enable audit logging, collect relevant security events, and create detection rules in Microsoft Sentinel to monitor the `LAPS_Admin` account activities effectively. By integrating LAPS with Microsoft Sentinel, security teams gain real-time visibility and enhanced threat detection capabilities for local admin account operations.
 
 ---
 
