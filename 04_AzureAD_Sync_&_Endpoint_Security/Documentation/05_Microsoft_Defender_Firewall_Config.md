@@ -4,7 +4,7 @@
 
 Ensure a secure and consistent firewall configuration across all network profiles (Domain, Private, Public) using Microsoft Defender Firewall. The goal is to block unsolicited inbound traffic and allow trusted outbound communication, following Zero Trust security principles.
 
-## Introduction
+## 📝 Introduction
 
 This guide covers two approaches to configuring Microsoft Defender Firewall for enterprise environments:
 
