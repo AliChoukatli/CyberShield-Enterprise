@@ -1,14 +1,15 @@
 # 📦 Deploying Microsoft 365 with ODT and PowerShell
 
+### 🎯 Objective
+
+Install Microsoft 365 Apps (Office 365) and Visio Pro using Office Deployment Tool (ODT) with a custom PowerShell script.
+
 ## 📝 Introduction
 
 This section guides you through the deployment of Microsoft 365 Apps (Office 365) and Visio Professional using the Office Deployment Tool (ODT) combined with a custom PowerShell script. The approach ensures a silent, customizable, and automated installation process tailored to your environment.
 
 You will start by uninstalling any existing Office installations to avoid conflicts, then prepare and customize the ODT configuration file, and finally deploy the applications efficiently across your Windows machines.
 
-### 🎯 Objective
-
-Install Microsoft 365 Apps (Office 365) and Visio Pro using Office Deployment Tool (ODT) with a custom PowerShell script.
 
 #### Step 1 – Uninstall Existing Office Installation (if applicable)
 
