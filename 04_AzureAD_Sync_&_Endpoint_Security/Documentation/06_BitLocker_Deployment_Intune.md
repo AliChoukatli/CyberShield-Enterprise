@@ -13,6 +13,7 @@ BitLocker is a critical technology for protecting data at rest on Windows device
 ---
 
 ## 📋 Table of Contents
+
 - [📦 Step 1 – Test Group](#-step-1--test-group)
 - [📦 Step 2 – Create a Dynamic Group](#-step-2--create-a-dynamic-group-for-windows-1011-devices)
 - [📦 Step 3 – Configure BitLocker Policy in Intune](#-step-3---configure-bitlocker-policy-in-intune)
@@ -24,6 +25,7 @@ BitLocker is a critical technology for protecting data at rest on Windows device
 - Microsoft Intune configured and licensed
 - Devices Azure AD joined or Hybrid-joined
 - Admin access to Intune and Entra Admin Center
+
 ---
 
 ### 📦 Step 1 – Test Group
@@ -63,7 +65,6 @@ BitLocker is a critical technology for protecting data at rest on Windows device
 (device.deviceOSType -eq "Windows") and
 (device.deviceOSVersion -startsWith "10" or device.deviceOSVersion -startsWith "11")
 ```
-
 ---
 
 ### 📦 Step 3 - Configure BitLocker Policy in Intune
@@ -157,7 +158,7 @@ E. Removable Drives
 
 ---
 
-## Conclusion
+## ✅ Conclusion
 
 By following this structured approach—starting with a test group, creating dynamic device groups, configuring detailed BitLocker policies, and assigning policies through Intune—you can confidently deploy BitLocker at scale. This method safeguards sensitive data, enforces compliance, and integrates seamlessly into your existing cloud or hybrid device management strategy.
 
