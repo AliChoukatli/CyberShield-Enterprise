@@ -1,7 +1,5 @@
 # 🔴 Multi-Factor Authentication (MFA) Configuration Guide
 
----
-
 ## 🎯 Objective
 
 Provide a comprehensive guide to deploy and configure Multi-Factor Authentication (MFA) solutions in a modern enterprise environment. This includes passwordless options like Windows Hello for Business, hardware security keys (FIDO2), Microsoft Authenticator, and Temporary Access Pass (TAP), to enhance security posture and support Zero Trust principles.
