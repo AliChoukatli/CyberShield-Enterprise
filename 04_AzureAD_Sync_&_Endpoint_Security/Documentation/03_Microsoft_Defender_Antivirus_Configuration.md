@@ -1,4 +1,4 @@
-# 🛡️ 03 – Microsoft Defender Antivirus Deployment via Intune
+# 🛡️ Microsoft Defender Antivirus Deployment via Intune
 
 ## 🎯 Objective
 
