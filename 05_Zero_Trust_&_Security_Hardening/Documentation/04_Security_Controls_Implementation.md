@@ -1,6 +1,22 @@
 
-# 🔴  Security Controls Implementation
+# 🔴 Security Controls Implementation
 
+## 🎯 Objective
+
+Implement critical security controls to harden Windows endpoints against common attack vectors, including **unauthorized local admin rights**, **uncontrolled software installation**, and **legacy protocol abuse**. These configurations reinforce Zero Trust principles and minimize the risk of privilege escalation, malware infection, and credential theft.
+
+## 📝 Introduction
+
+Misconfigurations such as default local admin privileges, open installer access, and legacy protocol exposure are major entry points for attackers. This section guides you through the remediation of these risks using a layered defense strategy combining **Microsoft Intune**, **Group Policy Objects (GPO)**, and **Exchange Online PowerShell**.
+
+You'll implement:
+- Local administrator rights restriction via **Intune policies**
+- Software installation control using both **Intune** and **AppLocker GPO**
+- Deactivation of **legacy protocols** (IMAP, POP3, SMTP) that bypass MFA
+
+Each step includes a validated configuration, screenshots, and PowerShell commands to ensure enterprise-grade endpoint protection.
+
+---
 
 ## 1. Restrict Local Administrator Rights on Azure AD Joined Devices
 
@@ -280,11 +296,3 @@ Get-CASMailbox -ResultSize Unlimited | Select Name, ImapEnabled, PopEnabled
 
 ✅ Legacy protocols and local admin rights misconfigurations were identified and remediated.
 Systems are now hardened against unauthorized access and unapproved software installations.
-
-
-
-
-
-
-
-
