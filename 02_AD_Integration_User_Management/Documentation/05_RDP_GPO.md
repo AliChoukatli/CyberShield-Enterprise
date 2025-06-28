@@ -1,15 +1,22 @@
-# 🔴 Configuring RDP Access Control via Group Policy
+# 🖥️ 02.4 – RDP Access Control via Group Policy
 
-### 📝 Introduction
+## 🎯 Objective
 
-This section guides you through configuring **Remote Desktop Protocol (RDP)** permissions to securely restrict RDP access on a VM (`LTP-EMP01`) to authorized users only. By creating a dedicated security group (`RDP-Users`) and linking it via Group Policy, you enforce granular control over who can remotely connect to critical machines.
+Restrict RDP access on domain-joined machines (e.g., `LTP-EMP01`) to a designated security group (`RDP-Users`) using Group Policy. This ensures only authorized personnel can remotely access workstations, reducing the attack surface and enforcing security boundaries.
 
-This practice enhances security by limiting RDP access, which is often a common attack vector, to a carefully controlled set of users.
+## 📝 Introduction
+
+Remote Desktop Protocol (RDP) is a powerful but high-risk feature if left open to all users. Improper configuration can expose endpoints to credential brute-force attacks and lateral movement within a network.
+
+This section walks through the process of:
+- Creating a dedicated `RDP-Users` Active Directory security group.
+- Assigning remote logon rights through Group Policy.
+- Applying the policy to restrict access on a specific machine (`LTP-EMP01`).
+- Validating enforcement through testing and local policy inspection.
+
+This is a best practice in hardening domain-joined endpoints in enterprise environments.
 
 ---
-
-### 🎯 Objective
-Ensure that selected users (e.g., `Sophia Martinez`) can securely connect via RDP to a VM (LTP-EMP01) by granting permissions only to an authorized group.
 
 ### 🛠️ Steps
 
