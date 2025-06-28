@@ -1,7 +1,7 @@
 # 🚨 LAPS Integration with Microsoft Sentinel: Monitoring and Detection Guide
 
 
-## Objective
+## 🎯 Objective
 
 This guide aims to empower security and IT administrators to:
 
