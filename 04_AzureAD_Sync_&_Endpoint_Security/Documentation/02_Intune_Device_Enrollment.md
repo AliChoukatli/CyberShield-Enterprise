@@ -141,6 +141,8 @@ Simply follow the on-screen instructions and scan the provided QR code to comple
 ```powershell
 dsregcmd /status
 ```
+Your environment is now ready to leverage **Microsoft Intune** for full device lifecycle management, including compliance monitoring, app deployment, and conditional access policy enforcement.
+![dsregcmd-MDM](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/dsregcmd_mdm.png)
 
 ---
 
@@ -152,8 +154,3 @@ By completing this section, you have:
 - Verified DNS forwarders to ensure cloud connectivity.
 - Understood the different methods to enroll new and existing devices.
 - Validated successful Intune registration and device compliance.
-
-Your environment is now ready to leverage **Microsoft Intune** for full device lifecycle management, including compliance monitoring, app deployment, and conditional access policy enforcement.
-![dsregcmd-MDM](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/dsregcmd_mdm.png)
-
- 
