@@ -1,6 +1,6 @@
 # 🚨 Local Administrator Password Management (LAPS) with Intune
 
-## Objective
+## 🎯 Objective
 
 This guide aims to provide a comprehensive, step-by-step approach to deploying and managing Local Administrator Password Solution (LAPS) using Microsoft Intune. You will learn how to:
 
