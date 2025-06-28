@@ -1,7 +1,16 @@
-# 👤 User Rights Assignment – Hardening Settings (Hybrid or Local AD Environnment)
+# 👤 User Rights Assignment – Hardening Settings (Hybrid or Local AD
 
-## 📋 Overview
-User Rights Assignment controls which users or groups have specific privileges on a system. Hardening these settings is essential to reduce attack surfaces and limit lateral movement.
+## 🎯 Objective
+
+Harden critical **User Rights Assignment** policies to limit lateral movement, prevent unauthorized access, and reinforce endpoint protection in a **Hybrid Azure AD Join** or **on-premises Active Directory** environment.
+
+## 📝 Introduction
+
+User Rights Assignment defines which users or groups are allowed to perform specific system-level tasks such as logging on locally, accessing over the network, or shutting down the system. These privileges, if misconfigured, can be exploited by attackers to move laterally or escalate privileges.
+
+This section walks through how to configure these rights securely via **Group Policy**, using Microsoft's best practices as a baseline. Combined with tools like **LAPS**, **BitLocker**, and **Microsoft Defender**, these settings contribute to a strong and resilient Windows security posture.
+
+---
 
 ## 🧭 Step-by-Step Guide (GPO)
 
