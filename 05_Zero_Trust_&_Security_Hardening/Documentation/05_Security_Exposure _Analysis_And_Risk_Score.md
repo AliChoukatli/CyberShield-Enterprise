@@ -44,7 +44,7 @@ This document outlines actions taken to address a **High Exposure Level** report
 - **Exposure Level**: High
 - **Device**: `LTP-HLP01`
 
-![LTP-HLP01_Score](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/LTP-HLP01_Exposure_Level.png)
+![LTP-HLP01_Score](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LTP-HLP01_Exposure_Level.png)
 
 
 
@@ -57,7 +57,7 @@ This document outlines actions taken to address a **High Exposure Level** report
 - ✅ Applied Remediation
 - 🟡 Risk acceptance 
 
-![LTP-HLP01_Recommendations](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/LTP-HLP01_Recommendations.png)
+![LTP-HLP01_Recommendations](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/LTP-HLP01_Recommendations.png)
 
 | Control                                                      | Risk Level | Impact   | Justification                                                                                    |
 |--------------------------------------------------------------|------------|----------|--------------------------------------------------------------------------------------------------|
@@ -78,7 +78,7 @@ This document outlines actions taken to address a **High Exposure Level** report
 
 ### 🧰 Update Microsoft Windows 11 (OS and Built-in Applications)
 
-![Req_win11_update](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Req_Win11update.png)
+![Req_win11_update](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Req_Win11update.png)
 
 Description:
 Ensure all Windows 11 system components and built-in apps are up-to-date.
@@ -92,7 +92,7 @@ Remediation: Update Win 11
 
 ### 🧰 Turn on PUA Protection in Block Mode
 
-![PUA_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/PUA_Req.png)
+![PUA_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/PUA_Req.png)
 
 🔍 **Description:** 
 Enables Microsoft Defender Antivirus to detect and block **Potentially Unwanted Applications (PUAs)**. These may include:
@@ -120,14 +120,14 @@ To confirm the setting:
 Get-mpPreference | ft PUAProtection
 ```
 
-![PUA_Fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/PUA_Fix.png)
+![PUA_Fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/PUA_Fix.png)
 
 ---
 
 ### 🧰 Set Controlled Folder Access to Enabled or Block Mode
 
 
-![Folder_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Folder_Req.png)
+![Folder_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Folder_Req.png)
 
 🔍 **Description:**  
 Enable ransomware protection by locking critical folders against unauthorized access.
@@ -162,13 +162,13 @@ Windows Defender Exploit Guard
 - `1` = Enabled (Block Mode) ✅ **Recommended**
 ---
 
-![Folder_fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Folder_fix.png)
+![Folder_fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Folder_fix.png)
 
 ---
 
 ### 🧰 Block Credential Stealing from LSASS (Local Security Authority Subsystem)
 
-![lsaas_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/lsass_Req.png)
+![lsaas_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/lsass_Req.png)
 
 - 🔍 **Description** : This prevent credential theft by blocking unauthorized access to the LSASS.
 - 🔍 **Purpose:** Prevent malware from dumping credentials from `lsass.exe` using tools like Mimikatz.
@@ -197,12 +197,12 @@ Windows Defender Exploit Guard > ASR > Rules
 
 - `"1"` = Block Mode ✅  
 
-![lsaas_fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/lsaas_Fix.png)
+![lsaas_fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/lsaas_Fix.png)
 
 ---
 ### 🧰 Enable Network Protection
 
-![NP_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/NP_Req.png)
+![NP_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/NP_Req.png)
 
 Before enabling Network Protection, ensure the following are active:
 
@@ -234,14 +234,14 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender
 
 - `1` = Enable Network Protection in Block Mode  
 
-![NP_Fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/NP_Fix.png)
+![NP_Fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/NP_Fix.png)
 
 ---
 
 
 ### 🧰 Block Executable Content from Email Client and Webmail - Intune Method
 
-![Exe_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Exe_Req.png)
+![Exe_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Exe_Req.png)
 
 🔍 **Description:**  
 Prevent direct execution of embedded content or malicious attachments received via email.
@@ -263,13 +263,13 @@ Email is a common initial attack vector. This control reduces phishing and malwa
    - Action: `Block`
 5. Assign the policy to your **targeted devices Eg: Windows 10/11 Devices*
 
-![Exe_email_opolicy_review](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Exe_Email_policy_intune.png)
+![Exe_email_opolicy_review](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Exe_Email_policy_intune.png)
    
 7. Review + Create
 
 ✅ Once deployed, the rule will be enforced on all assigned devices.
 
-![Exe_Fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Exe_Email_policy_Overview.png)
+![Exe_Fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Exe_Email_policy_Overview.png)
 
 ---
 
@@ -297,7 +297,7 @@ This guide explains how to enable the Attack Surface Reduction (ASR) rule that b
    - **Value type:** `REG_SZ`  
    - **Value data:** `1` (`"1"` enables the rule in **Block mode**)
 
-![USB_GPO](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/USB_GPO.png)
+![USB_GPO](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/USB_GPO.png)
 
 6. Click **OK** to save.
 
@@ -335,7 +335,7 @@ for ($i = 0; $i -lt $ids.Count; $i++) {
 
 ```
 
-![ASR_verif](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/ASR_Verif.png)
+![ASR_verif](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/ASR_Verif.png)
 
 | GUID                                   | Nom de la règle ASR                                                         |
 |---------------------------------------|------------------------------------------------------------------------------|
@@ -369,7 +369,7 @@ The recommendation is to enforce a minimum password length of 14 or more charact
 - Account lockout thresholds configured to prevent brute force attempts.  
 - Regular password change policies and user education on password strength.
 
-![Passwd_Risk_Acc](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/passwd_Risk_Accepted.png)
+![Passwd_Risk_Acc](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/passwd_Risk_Accepted.png)
 
 ---
 
