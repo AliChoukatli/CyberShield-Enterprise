@@ -267,7 +267,7 @@ Email is a common initial attack vector. This control reduces phishing and malwa
 
 ### 🚫 6.5 - Block Executable Content from Email Client and Webmail - Registery Method
 
-https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Exe_Fix.png
+![Exe_Fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Exe_Fix.png)
 
 ---
 
@@ -303,14 +303,7 @@ This guide explains how to enable the Attack Surface Reduction (ASR) rule that b
 
 8. On target machines, run `gpupdate /force` or wait for policy refresh
 
-
-
 ---
-
-
-###  🚫 7.5 - Block Untrusted and Unsigned Processes from USB Devices - Registery Method
-
-![USB_Reg](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/USB_Fix.png)
 
 
 ## 🔎 - How to Verify if ASR Rules Are Applied
