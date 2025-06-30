@@ -6,7 +6,7 @@ Reduce exposures reported by **Microsoft Defender for Endpoint (MDE)** through a
 
 ## 📝 Introduction
 
-In enterprise environments, continuous exposure management is key to reducing the attack surface. This section outlines a **real-world remediation workflow** based on a high-severity alert from MDE's **Threat & Vulnerability Management (TVM)** dashboard.
+Effective exposure management helps reduce attack surfaces. This section shows a **real-world fix** for a high alert from MDE’s **TVM** dashboard.
 
 You’ll follow step-by-step remediations mapped to Microsoft security recommendations, covering both **automated defenses** (e.g., ASR rules, PUA blocking, Controlled Folder Access) and **manual risk acceptance**, aligned with business and operational needs.
 
