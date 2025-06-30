@@ -26,13 +26,13 @@ This structured approach reinforces Zero Trust principles and supports framework
      - [🛡️ Block Credential Stealing from LSASS](#%EF%B8%8F-4-block-credential-stealing-from-lsass-local-security-authority-subsystem)
      - [🌐 Enable Network Protection](#-5-enable-network-protection)
      - [📧 Block Executables in Email - Intune](#-6-block-executable-content-from-email-client-and-webmail---intune-method)
-     - [🔌 Block USB Executables - GPO](#block-untrusted-and-unsigned-processes-from-usb-devices---gpo-method)
-     - [🔎 Verify ASR Rules](#how-to-verify-if-asr-rules-are-applied)
+     - [🔌 Block USB Executables - GPO](#-7-block-untrusted-and-unsigned-processes-from-usb-devices---gpo-method)
+     - [🔎 Verify ASR Rules](#---how-to-verify-if-asr-rules-are-applied)
 
-   - [🟡 Risk Acceptance](#risk-acceptance)
-     - [🔑 Min Password < 14](#set-minimum-password-length-to-less-than-14-characters)
+   - [🟡 Accepted Risk](#-accepted-risks)
+     - [🔑 Min Password < 14](#-1-set-minimum-password-length-to-less-than-14-characters)
 
-4. [🧾 Conclusion](#conclusion)
+4. [🧾 Conclusion](#-conclusion)
 
 
 ---
