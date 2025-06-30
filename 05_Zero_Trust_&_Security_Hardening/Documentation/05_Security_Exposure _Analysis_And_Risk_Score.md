@@ -14,23 +14,22 @@ This structured approach reinforces Zero Trust principles and supports framework
 
 ## 🔴 Index
 
-1. 🔒 [Initial Exposure Level Summary](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Documentation/04%20-%20Security_Exposure.md#-initial-exposure-level-summary)
+1. 🔒 [Initial Exposure Level Summary](#initial-exposure-level-summary)
 
-2. 🔒 [Security Recommendations ](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Security_Exposure.md#-security-recommendations)
-   - ✅ [Applied Remediation](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Security_Exposure.md#-applied-remediation)
-      - [Update Microsoft Windows 11 (OS and Built-in Applications)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Documentation/04%20-%20Security_Exposure.md#-update-microsoft-windows-11-os-and-built-in-applications)
-      - [Turn on PUA Protection in Block Mode](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Documentation/04%20-%20Security_Exposure.md#-turn-on-pua-protection-in-block-mode)
-      - [Set Controlled Folder Access to Enabled or Block Mode](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Security_Exposure.md#-set-controlled-folder-access-to-enabled-or-block-mode)
-      - [Block Credential Stealing from LSASS (Local Security Authority Subsystem)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Security_Exposure.md#-block-credential-stealing-from-lsass-local-security-authority-subsystem)
-      - [Enable Network Protection](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Security_Exposure.md#-enable-network-protection)
-      - [Block Executable Content from Email Client and Webmail - Intune Method](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Security_Exposure.md#-block-executable-content-from-email-client-and-webmail---intune-method)
-      - [Block Untrusted and Unsigned Processes from USB Devices - GPO Method](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Security_Exposure.md#-block-untrusted-and-unsigned-processes-from-usb-devices---gpo-method)
-      - [How to Verify if ASR Rules Are Applied](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Security_Exposure.md#-how-to-verify-if-asr-rules-are-applied)
-        
-   - 🟡 [Risk acceptance](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Security_Exposure.md#-accepted-risks)
-     - [Set 'Minimum Password Length' to less than 14 characters](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Security_Exposure.md#1-set-minimum-password-length-to-less-than-14-characters)
+2. 🔒 [Security Recommendations](#security-recommendations)
+   - ✅ [Applied Remediation](#applied-remediation)
+      - [Update Microsoft Windows 11 (OS and Built-in Applications)](#update-microsoft-windows-11-os-and-built-in-applications)
+      - [Turn on PUA Protection in Block Mode](#turn-on-pua-protection-in-block-mode)
+      - [Set Controlled Folder Access to Enabled or Block Mode](#set-controlled-folder-access-to-enabled-or-block-mode)
+      - [Block Credential Stealing from LSASS (Local Security Authority Subsystem)](#block-credential-stealing-from-lsass-local-security-authority-subsystem)
+      - [Enable Network Protection](#enable-network-protection)
+      - [Block Executable Content from Email Client and Webmail - Intune Method](#block-executable-content-from-email-client-and-webmail---intune-method)
+      - [Block Untrusted and Unsigned Processes from USB Devices - GPO Method](#block-untrusted-and-unsigned-processes-from-usb-devices---gpo-method)
+      - [How to Verify if ASR Rules Are Applied](#how-to-verify-if-asr-rules-are-applied)
+   - 🟡 [Risk acceptance](#risk-acceptance)
+     - [Set 'Minimum Password Length' to less than 14 characters](#set-minimum-password-length-to-less-than-14-characters)
 
-3. 🔒 [Conclusion](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/04%20-%20Security_Exposure.md#-conclusion)
+3. 🔒 [Conclusion](#conclusion)
      
 ---
 
