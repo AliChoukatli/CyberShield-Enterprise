@@ -23,10 +23,10 @@ This structured approach reinforces Zero Trust principles and supports framework
      - [🧩 Update Microsoft Windows 11](#-1-update-microsoft-windows-11-os-and-built-in-applications)
      - [🚫 Turn on PUA Protection in Block Mode](#-2-turn-on-pua-protection-in-block-mode)
      - [📁 Set Controlled Folder Access](#-3-set-controlled-folder-access-to-enabled-or-block-mode)
-     - [🛡️ Block Credential Stealing from LSASS](#%EF%B8%8F-4-block-credential-stealing-from-lsass-local-security-authority-subsystem)
+     - [🚫 Block Credential Stealing from LSASS](#%EF%B8%8F-4-block-credential-stealing-from-lsass-local-security-authority-subsystem)
      - [🌐 Enable Network Protection](#-5-enable-network-protection)
-     - [📧 Block Executables in Email - Intune](#-6-block-executable-content-from-email-client-and-webmail---intune-method)
-     - [🔌 Block USB Executables - GPO](#-7-block-untrusted-and-unsigned-processes-from-usb-devices---gpo-method)
+     - [🚫 Block Executables in Email - Intune](#-6-block-executable-content-from-email-client-and-webmail---intune-method)
+     - [🚫 Block USB Executables - GPO](#-7-block-untrusted-and-unsigned-processes-from-usb-devices---gpo-method)
      - [🔎 Verify ASR Rules](#---how-to-verify-if-asr-rules-are-applied)
 
    - [🟡 Accepted Risk](#-accepted-risks)
@@ -161,7 +161,7 @@ Windows Defender Exploit Guard
 
 ---
 
-### 🛡️ 4. Block Credential Stealing from LSASS (Local Security Authority Subsystem)
+### 🚫 4. Block Credential Stealing from LSASS (Local Security Authority Subsystem)
 
 -  **Description** : This prevent credential theft by blocking unauthorized access to the LSASS.
 -  **Purpose:** Prevent malware from dumping credentials from `lsass.exe` using tools like Mimikatz.
@@ -234,7 +234,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender
 ---
 
 
-### 📧 6. Block Executable Content from Email Client and Webmail - Intune Method
+### 🚫 6. Block Executable Content from Email Client and Webmail - Intune Method
 
 ![Exe_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Exe_Req.png)
 
@@ -266,13 +266,13 @@ Email is a common initial attack vector. This control reduces phishing and malwa
 
 ![Exe_Fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Exe_Email_policy_Overview.png)
 
-### 📧 6.5 - Block Executable Content from Email Client and Webmail - Registery Method
+### 🚫 6.5 - Block Executable Content from Email Client and Webmail - Registery Method
 
 https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Exe_Fix.png
 
 ---
 
-### 🔌 7. Block Untrusted and Unsigned Processes from USB Devices - GPO Method
+### 🚫 7. Block Untrusted and Unsigned Processes from USB Devices - GPO Method
 
 This guide explains how to enable the Attack Surface Reduction (ASR) rule that blocks untrusted and unsigned processes from running from USB devices by setting the corresponding registry key via Group Policy Object (GPO).
 
@@ -309,9 +309,9 @@ This guide explains how to enable the Attack Surface Reduction (ASR) rule that b
 ---
 
 
-### 🧰 8. Block Untrusted and Unsigned Processes from USB Devices - Registery Method
+###  🚫 7.5 - Block Untrusted and Unsigned Processes from USB Devices - Registery Method
 
-[USB_Reg](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/USB_Fix.png)
+![USB_Reg](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/USB_Fix.png)
 
 
 ## 🔎 - How to Verify if ASR Rules Are Applied
