@@ -12,11 +12,7 @@ You’ll follow step-by-step remediations mapped to Microsoft security recommend
 
 This structured approach reinforces Zero Trust principles and supports frameworks such as **NIST** and **ISO/IEC 27001**.
 
----
-
 ## 🔴 Index
-
-This document outlines actions taken to address a **High Exposure Level** reported in the Microsoft Defender for Endpoint (MDE) Threat & Vulnerability Management (TVM) dashboard.
 
 1. 🔒 [Initial Exposure Level Summary](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Documentation/04%20-%20Security_Exposure.md#-initial-exposure-level-summary)
 
