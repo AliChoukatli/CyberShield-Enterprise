@@ -86,13 +86,13 @@ Implementing these solutions strengthens identity security, improves user experi
 | **Require Security Device (TPM)**                | ✅ True                  
 | **Use Certificate For On-Prem Auth**             | ✅ Enabled    
 
-![Hello-Policy-Config](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Hello-Policy-Config.png)
+![Hello-Policy-Config](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Hello-Policy-Config.png)
 
 6. Click **Next**, assign to appropriate user or device groups.
 
 7. Complete and click **Create**.
 
-![Hello-Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Hello-Policy.png)
+![Hello-Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Hello-Policy.png)
 
 ---
 
@@ -103,13 +103,13 @@ Once the policy is applied, users will:
 1. Go to **Settings → Accounts → Sign-in options**
 2. Click **Set up** under **PIN (Windows Hello)**
 
-![Hello-Verif](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Hello-Verif.png)
+![Hello-Verif](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Hello-Verif.png)
 
 5. Optionally enable **Fingerprint** or **Face Recognition**, if available
 
 > ✅ The device is now fully cloud-joined and uses passwordless sign-in with TPM-backed credentials.
 
-![Hello-Set](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/hello-set.png)
+![Hello-Set](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/hello-set.png)
 
 ---
 
@@ -138,11 +138,11 @@ dsregcmd /status
 
   - Device State should indicate Hybrid Azure AD joined
  
-![dsregcmd_status](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/dsregcmd_status_emp01.png)
+![dsregcmd_status](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/dsregcmd_status_emp01.png)
 
 - Also verify TPM status by running **tpm.msc**
 
-![TPM](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/TPM.png)
+![TPM](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/TPM.png)
 
 > **Result:** TPM is present and ready (Hyper-V secure boot & TPM enabled)
 
@@ -164,7 +164,7 @@ dsregcmd /status
 ```rust
 Computer Configuration → Policies → Administrative Templates → Windows Components → Windows Hello for Business
  ```
-![Hello-GPO](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Hello-GPO.png)
+![Hello-GPO](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Hello-GPO.png)
 
 6. On each Windows client device, open PowerShell as admin and run:
 ```Powershell
@@ -232,7 +232,7 @@ After entering her corporate email address, Sophia is prompted to configure the 
 
 > _“Start by getting the app.”_
 
-![Sophia MFA 1](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Sophia-Auth.png)
+![Sophia Auth](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Sophia-Auth.png)
 
 She clicks **Next**, and is then asked to enter her **Microsoft account password** to continue.
 
@@ -241,7 +241,7 @@ She clicks **Next**, and is then asked to enter her **Microsoft account password
 ### 🔹 Step 2: Number Matching Prompt Displayed  
 Once the password is verified, a **number matching prompt** appears on the screen.  
 
-![MFA-Number-Matching](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/MFA-number-matching.png)
+![MFA-Number-Matching](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/MFA-number-matching.png)
 
 Sophia opens the **Microsoft Authenticator App** on her mobile device and selects her corporate account.
 
@@ -250,7 +250,7 @@ Sophia opens the **Microsoft Authenticator App** on her mobile device and select
 ### 🔹 Step 3: Number Matching and Biometric Verification  
 In the app, Sophia is prompted to enter the number shown on the login screen:
 
-![Phone_N-Matching](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Phone_N-Matching.png)
+![Phone_N-Matching](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Phone_N-Matching.png)
 
 After entering the correct number, she approves the request using her **fingerprint** or **device passcode**.
 
@@ -259,7 +259,7 @@ After entering the correct number, she approves the request using her **fingerpr
 ### 🔹 Step 4: Successful Authentication  
 Upon successful verification, access is granted:
 
-![Sophia MFA Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Sophia-MFA-successful.png)
+![Sophia MFA Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Sophia-MFA-successful.png)
 
 > 🔒 This MFA flow protects against phishing, token theft, and MFA fatigue attacks by combining number matching and biometric confirmation.
 ---
@@ -284,7 +284,7 @@ Upon successful verification, access is granted:
 
 > **Note:** TAP is used mainly by admins during MFA registration bootstrap or recovery; not for SSPR.
 
-![TAP Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/TAP-Policy.png)
+![TAP Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/TAP-Policy.png)
 
 
 #### 👤  End-User MFA Experience: Temporary Access Pass Flow (Sophia Martinez)
@@ -307,11 +307,11 @@ Configuration example:
 | One-time use   | Yes           |
 | Length         | 8 characters  |
 
-![TAP-SOphia-Steps](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/TAP-Sophia-Steps.png)
+![TAP-SOphia-Steps](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/TAP-Sophia-Steps.png)
 
 The temporary password will be shown on the screen : 
 
-![Temp-TAP-Details](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Temp-TAP-Details.png)
+![Temp-TAP-Details](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Temp-TAP-Details.png)
 
 ---
 
@@ -319,11 +319,11 @@ The temporary password will be shown on the screen :
 
 At her first login, Sophia selects **“Sign in using Temporary Access Pass”**, and enters the code provided by the admin.
 
-![Temp-TAP](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Temp-TAP.png)
+![Temp-TAP](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Temp-TAP.png)
 
 She is then prompted to set a new PIN since we configured already windows Hello for business
 
-![New-PIN](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/New-PIN.png)
+![New-PIN](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/New-PIN.png)
 
 ---
 
@@ -341,7 +341,7 @@ She is then prompted to set a new PIN since we configured already windows Hello 
 
 > ⚠️ Disclaimer: Due to the absence of a physical FIDO2 key, the Microsoft Authenticator method was enabled solely for demonstration purposes. The registration and sign-in steps illustrated below reflect the FIDO2 process as documented by Microsoft, but use the Authenticator interface to simulate user interaction.
 
-![FIDO2 Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Fido2-Policy.png)
+![FIDO2 Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Fido2-Policy.png)
 
 ---
 
@@ -355,7 +355,7 @@ Sophia visits [https://myprofile.microsoft.com](https://myprofile.microsoft.com)
 
 > **Security Info** → **Add sign-in method** → Selects `Security Key`
 
-![Security-Key](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Security-Key.png)
+![Security-Key](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Security-Key.png)
 
 She is prompted to choose the type of key:
 
@@ -370,7 +370,7 @@ After choosing USB, Sophia is asked to:
 
 1. Insert the key into a USB port.
 
-![Insert-Key](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Insert-Key.png)
+![Insert-Key](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Insert-Key.png)
 
 2. Windows will check the device
 3. Create or enter the PIN for the key
@@ -378,11 +378,11 @@ After choosing USB, Sophia is asked to:
 
 > 🧪 *This step requires physical interaction with the key (touching the sensor). Since no physical key was used, this demonstration reflects the expected process.*
 
-![PassKey-Saved](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Passkey-Saved.png)
+![PassKey-Saved](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Passkey-Saved.png)
 
 5. Once complete, she gives the key a **custom name** (e.g., "Sophia Key")
 
-![Sophia-Key](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Sofia-Key.png)
+![Sophia-Key](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Sofia-Key.png)
 
 ---
 
@@ -392,23 +392,23 @@ The next time Sophia signs in, she selects:
 
 > **"Sign-in options"** → **Use security key**
 
-![Signin-Options](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Signin-Options.png)
+![Signin-Options](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Signin-Options.png)
 
 1. Inserts her key  
 2. Enters the key PIN
 
-![Sophia-KeyPIN](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Sophia-KeyPIN.png)
+![Sophia-KeyPIN](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Sophia-KeyPIN.png)
 
 3. Touches the key when prompted
 
-![Signin-Key](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Signin-key.png)
+![Signin-Key](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Signin-key.png)
 
 
 > ✅ Result: Secure Passwordless Login
 
 Access is granted using **strong phishing-resistant authentication**
 
-![Sign-In_ACtivity](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Sign-in_Activity.png)
+![Sign-In_ACtivity](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Sign-in_Activity.png)
 
 > 🔐 FIDO2 offers hardware-backed protection against password theft, phishing, and MFA fatigue.
 
@@ -426,7 +426,7 @@ Access is granted using **strong phishing-resistant authentication**
 | Microsoft Authenticator MFA | ✔️ Enrolled    | Second factor                   |
 | FIDO2 Security Key          | ⬜️ Optional    | Hardware passwordless option    |
 
-![Sophia-Auth_Methods](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Sophia-Auth_Methods.png)
+![Sophia-Auth_Methods](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Sophia-Auth_Methods.png)
 
 ---
 
