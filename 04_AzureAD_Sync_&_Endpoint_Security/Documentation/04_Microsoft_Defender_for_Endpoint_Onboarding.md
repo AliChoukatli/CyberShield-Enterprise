@@ -20,131 +20,7 @@ To leverage its full capabilities, each device must be properly onboarded to the
 
 ---
 
-## 🟢 Method 1 - Onboarding via Local Script (Single Device, Full Cloud)
-
-1. Go to the Microsoft 365 Defender portal:  [https://security.microsoft.com](https://security.microsoft.com)
-
-2. Navigate to:  
-   `Settings` → `Endpoints` → `Onboarding`
-
-3. Connectivity type : Standard 
-
-4. Select the device type:  
-   ➤ *Windows 10 and 11*
-
-5. Under **Deployment method**, choose:  
-   ➤ *Local Script*
-
-6. Click **Download package** to get a `.zip` file containing the onboarding script.
-
-![OnBoarding_Page](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/OnBoarding_Page.png)
-
-7. On the target machine:
-   - Extract the `.zip` file.
-   - Open **PowerShell as Administrator**.
-   - Run the onboarding script:
-
-   ```cmd
-   WindowsDefenderATPOnboardingScript.cmd
-   ```
-![Script_Successful](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Successful_Onboard_cmd.png)
-
-8. Wait a few minutes. The device should appear in the Defender portal under Device inventory.
-
-![LTP-HLP_DEF_Status](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/LTP-HLP_DEF_Status.png)
-
----
-
-## 🟢 Method 2 - Onboarding via Intune (Mulitple Devices / Full Cloud)
-
-This guide explains how to onboard Windows 10/11 devices to Microsoft Defender for Endpoint using Microsoft Intune in a full cloud environment (Azure AD joined devices).
-
----
-
-### 📦 Step 1 - Create an onboarding profile for Defender for Endpoint
-
-1. In the Microsoft Endpoint Manager portal ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)), go to **Devices** in the left-hand menu.
-2. Click on **Configuration**.
-3. Click **+ Create profile**.
-4. For **Platform**, select **Windows 10 and later**.
-5. For **Profile type**, select **Templates**.
-6. Choose **Microsoft Defender for Endpoint (Desktop devices running Windows 10 or later)**.
-7. Click **Create**.
-8. Give the profile a name, e.g., `Defender for Endpoint Onboarding`.
-9. Configure the following settings:
-    
-| Setting                                | Value      | Description                                                                |
-|----------------------------------------|------------|----------------------------------------------------------------------------|
-| Sample sharing for all files           | ❌ Block   | Blocks automatic sample sharing to Microsoft for privacy.                  |
-| Expedite telemetry reporting frequency | ✅ Enable     | Enables more frequent telemetry data reporting for faster threat detection. |
-
-10. Click **Next**.
-
----
-
-### 📦 Step 2 – Assignments
-
-1. Under **Assignments**, select the Azure AD groups that include the devices to onboard.
-   - EG:  assign to **Windows 10/11 Devices**
-2. Click **Next** to continue.
-
----
-
-### 📦 Step3 - Applicability Rules
-
-| Rule Type          | Property     | Value(s)                                                        | Description                                                  |
-|--------------------|--------------|-----------------------------------------------------------------|--------------------------------------------------------------|
-|✅ Assign profile if  | OS version   | From `10.0.19041.0` to `10.0.99999.99999`                       | Apply to Windows 10 (2004+) and all Windows 11 versions      |
-|✅ Assign profile if  | OS edition   | Enterprise, Professional, Education, Professional Education     | Only apply to supported business editions                    |
-
-
-> **Note:** Adjust version numbers or add rules as needed to target specific devices.
-
-### Step 3 – Review and create
-
-1. Review the profile settings.
-
-![Defender_EP_intune](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Defender_EP_intune.png)
-
-3. Click **Create** to deploy the profile.
-
----
-
-### 📦 Step 4 – Verify onboarding on target devices
-
-1. Go to **Devices** in the Microsoft Endpoint Manager admin center.
-2. Click on **Configuration**.
-3. Locate your **Defender for Endpoint onboarding** profile.
-4. Check the **deployment status** and **device check-in results** to confirm successful application.
-
-
-![Intune_Def_EP_Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/intune_Endpoint_Success.png)
-
-or Go to the Microsoft 365 Defender portal:  [https://security.microsoft.com](https://security.microsoft.com)
-
-![Device_inventory_Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Device_Inventory.png)
-
-
-Powershell Eventually : On any onboarded Windows 10/11 device:
-
-1. Open **PowerShell** as Administrator.
-2. Check if the **Sense** service (Microsoft Defender for Endpoint sensor) is running:
-   ```powershell
-   Get-Service -Name Sense
-   ```
-   - Status should be Running.
-
-3. Check onboarding state from the registry:
-   ```powershell
-   (Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows Advanced Threat Protection\Status").OnboardingState
-   ```
-   - A value of 1 means the device is successfully onboarded.
-
-![Onboarding_Verif_PS](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Onboarding_Verif_PS.png)
-
----
-
-## 🟢  Method 3 - Onboarding via Group Policy (GPO) (Hybride / On-premises)
+## 🟢  Method 1 - Onboarding via Group Policy (GPO) (Hybride / On-premises)
 
 This method is recommended for organizations managing domain-joined Windows devices via Group Policy.
 
@@ -240,6 +116,132 @@ if ($senseService.Status -eq 'Running') {
 ![Verif_Onboard_PS](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/verif_onboard_PS.png)
 
 ---
+
+## 🟢 Method 2 - Onboarding via Intune (Mulitple Devices / Full Cloud)
+
+This guide explains how to onboard Windows 10/11 devices to Microsoft Defender for Endpoint using Microsoft Intune in a full cloud environment (Azure AD joined devices).
+
+---
+
+### 📦 Step 1 - Create an onboarding profile for Defender for Endpoint
+
+1. In the Microsoft Endpoint Manager portal ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)), go to **Devices** in the left-hand menu.
+2. Click on **Configuration**.
+3. Click **+ Create profile**.
+4. For **Platform**, select **Windows 10 and later**.
+5. For **Profile type**, select **Templates**.
+6. Choose **Microsoft Defender for Endpoint (Desktop devices running Windows 10 or later)**.
+7. Click **Create**.
+8. Give the profile a name, e.g., `Defender for Endpoint Onboarding`.
+9. Configure the following settings:
+    
+| Setting                                | Value      | Description                                                                |
+|----------------------------------------|------------|----------------------------------------------------------------------------|
+| Sample sharing for all files           | ❌ Block   | Blocks automatic sample sharing to Microsoft for privacy.                  |
+| Expedite telemetry reporting frequency | ✅ Enable     | Enables more frequent telemetry data reporting for faster threat detection. |
+
+10. Click **Next**.
+
+---
+
+### 📦 Step 2 – Assignments
+
+1. Under **Assignments**, select the Azure AD groups that include the devices to onboard.
+   - EG:  assign to **Windows 10/11 Devices**
+2. Click **Next** to continue.
+
+---
+
+### 📦 Step3 - Applicability Rules
+
+| Rule Type          | Property     | Value(s)                                                        | Description                                                  |
+|--------------------|--------------|-----------------------------------------------------------------|--------------------------------------------------------------|
+|✅ Assign profile if  | OS version   | From `10.0.19041.0` to `10.0.99999.99999`                       | Apply to Windows 10 (2004+) and all Windows 11 versions      |
+|✅ Assign profile if  | OS edition   | Enterprise, Professional, Education, Professional Education     | Only apply to supported business editions                    |
+
+
+> **Note:** Adjust version numbers or add rules as needed to target specific devices.
+
+### Step 3 – Review and create
+
+1. Review the profile settings.
+
+![Defender_EP_intune](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Defender_EP_intune.png)
+
+3. Click **Create** to deploy the profile.
+
+---
+
+### 📦 Step 4 – Verify onboarding on target devices
+
+1. Go to **Devices** in the Microsoft Endpoint Manager admin center.
+2. Click on **Configuration**.
+3. Locate your **Defender for Endpoint onboarding** profile.
+4. Check the **deployment status** and **device check-in results** to confirm successful application.
+
+
+![Intune_Def_EP_Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/intune_Endpoint_Success.png)
+
+or Go to the Microsoft 365 Defender portal:  [https://security.microsoft.com](https://security.microsoft.com)
+
+![Device_inventory_Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Device_Inventory.png)
+
+
+Powershell Eventually : On any onboarded Windows 10/11 device:
+
+1. Open **PowerShell** as Administrator.
+2. Check if the **Sense** service (Microsoft Defender for Endpoint sensor) is running:
+   ```powershell
+   Get-Service -Name Sense
+   ```
+   - Status should be Running.
+
+3. Check onboarding state from the registry:
+   ```powershell
+   (Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows Advanced Threat Protection\Status").OnboardingState
+   ```
+   - A value of 1 means the device is successfully onboarded.
+
+![Onboarding_Verif_PS](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Onboarding_Verif_PS.png)
+
+---
+
+## 🟢 Method 3 - Onboarding via Local Script (Single Device, Full Cloud)
+
+1. Go to the Microsoft 365 Defender portal:  [https://security.microsoft.com](https://security.microsoft.com)
+
+2. Navigate to:  
+   `Settings` → `Endpoints` → `Onboarding`
+
+3. Connectivity type : Standard 
+
+4. Select the device type:  
+   ➤ *Windows 10 and 11*
+
+5. Under **Deployment method**, choose:  
+   ➤ *Local Script*
+
+6. Click **Download package** to get a `.zip` file containing the onboarding script.
+
+![OnBoarding_Page](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/OnBoarding_Page.png)
+
+7. On the target machine:
+   - Extract the `.zip` file.
+   - Open **PowerShell as Administrator**.
+   - Run the onboarding script:
+
+   ```cmd
+   WindowsDefenderATPOnboardingScript.cmd
+   ```
+![Script_Successful](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Successful_Onboard_cmd.png)
+
+8. Wait a few minutes. The device should appear in the Defender portal under Device inventory.
+
+![LTP-HLP_DEF_Status](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/LTP-HLP_DEF_Status.png)
+
+---
+
+
 
 
 ## ✅ Conclusion
