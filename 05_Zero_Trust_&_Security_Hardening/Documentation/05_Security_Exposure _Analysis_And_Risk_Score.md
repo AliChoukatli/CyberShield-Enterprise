@@ -16,15 +16,16 @@ This structured approach reinforces Zero Trust principles and supports framework
 
 1. [🔍 Initial Exposure Level Summary](#-initial-exposure-level-summary)
 
-2. [🔐 Security Recommendations](#security-recommendations)
-   - [✅ Applied Remediation](#applied-remediation)
+2. [🔐 Security Recommendations](#-security-recommendations)
+   
+   - [✅ Applied Remediation](#-applied-remediation)
 
-     - [🧩 Update Microsoft Windows 11](#update-microsoft-windows-11-os-and-built-in-applications)
-     - [🚫 Turn on PUA Protection in Block Mode](#turn-on-pua-protection-in-block-mode)
-     - [📁 Set Controlled Folder Access](#set-controlled-folder-access-to-enabled-or-block-mode)
-     - [🛡️ Block Credential Stealing from LSASS](#block-credential-stealing-from-lsass-local-security-authority-subsystem)
-     - [🌐 Enable Network Protection](#enable-network-protection)
-     - [📧 Block Executables in Email - Intune](#block-executable-content-from-email-client-and-webmail---intune-method)
+     - [🧩 Update Microsoft Windows 11](#-1-update-microsoft-windows-11-os-and-built-in-applications)
+     - [🚫 Turn on PUA Protection in Block Mode](#-2-turn-on-pua-protection-in-block-mode)
+     - [📁 Set Controlled Folder Access](#-3-set-controlled-folder-access-to-enabled-or-block-mode)
+     - [🛡️ Block Credential Stealing from LSASS](#%EF%B8%8F-4-block-credential-stealing-from-lsass-local-security-authority-subsystem)
+     - [🌐 Enable Network Protection](#-5-enable-network-protection)
+     - [📧 Block Executables in Email - Intune](#-6-block-executable-content-from-email-client-and-webmail---intune-method)
      - [🔌 Block USB Executables - GPO](#block-untrusted-and-unsigned-processes-from-usb-devices---gpo-method)
      - [🔎 Verify ASR Rules](#how-to-verify-if-asr-rules-are-applied)
 
@@ -267,8 +268,9 @@ Email is a common initial attack vector. This control reduces phishing and malwa
 
 ### 📧 6.5 - Block Executable Content from Email Client and Webmail - Registery Method
 
-[Exe_Fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Exe_Fix.png)
+https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Exe_Fix.png
 
+---
 
 ### 🔌 7. Block Untrusted and Unsigned Processes from USB Devices - GPO Method
 
