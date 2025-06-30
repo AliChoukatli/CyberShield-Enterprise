@@ -28,7 +28,7 @@ This structured approach reinforces Zero Trust principles and supports framework
      - [🔌 Block USB Executables - GPO](#block-untrusted-and-unsigned-processes-from-usb-devices---gpo-method)
      - [🔎 Verify ASR Rules](#how-to-verify-if-asr-rules-are-applied)
 
-   - [⚠️ Risk Acceptance](#risk-acceptance)
+   - [🟡 Risk Acceptance](#risk-acceptance)
      - [🔑 Min Password < 14](#set-minimum-password-length-to-less-than-14-characters)
 
 4. [🧾 Conclusion](#conclusion)
