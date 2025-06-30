@@ -74,7 +74,7 @@ This document outlines actions taken to address a **High Exposure Level** report
 
 ## ✅ Applied Remediation
 
-### 🧰 - Update Microsoft Windows 11 (OS and Built-in Applications)
+### 🧰 Update Microsoft Windows 11 (OS and Built-in Applications)
 
 ![Req_win11_update](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Req_Win11update.png)
 
@@ -88,7 +88,7 @@ Regular OS updates patch critical vulnerabilities and mitigate exploitation risk
 
 ---
 
-### 🧰 - Turn on PUA Protection in Block Mode
+### 🧰 Turn on PUA Protection in Block Mode
 
 ![PUA_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/PUA_Req.png)
 
@@ -122,7 +122,7 @@ Get-mpPreference | ft PUAProtection
 
 ---
 
-### 🧰 - Set Controlled Folder Access to Enabled or Block Mode
+### 🧰 Set Controlled Folder Access to Enabled or Block Mode
 
 
 ![Folder_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Folder_Req.png)
@@ -164,7 +164,7 @@ Windows Defender Exploit Guard
 
 ---
 
-### 🧰 - Block Credential Stealing from LSASS (Local Security Authority Subsystem)
+### 🧰 Block Credential Stealing from LSASS (Local Security Authority Subsystem)
 
 ![lsaas_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/lsass_Req.png)
 
