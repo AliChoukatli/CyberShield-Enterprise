@@ -14,7 +14,7 @@ This structured approach reinforces Zero Trust principles and supports framework
 
 ## 🔴 Index
 
-1.  [Initial Exposure Level Summary](#initial-exposure-level-summary)
+1.  [Initial Exposure Level Summary](🔴#initial-exposure-level-summary)
 
 2. 🔒 [Security Recommendations](#security-recommendations)
    - ✅ [Applied Remediation](#applied-remediation)
