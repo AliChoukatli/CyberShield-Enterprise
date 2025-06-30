@@ -70,13 +70,11 @@ This document outlines actions taken to address a **High Exposure Level** report
 | 🔒 Block untrusted and unsigned processes from USB          | Medium      | Medium   | Protects from malware spreading via USB removable devices.                                       |
 
 
-
-
 ---
 
 ## ✅ Applied Remediation
 
-### 🧰 Update Microsoft Windows 11 (OS and Built-in Applications)
+### 🧰 - Update Microsoft Windows 11 (OS and Built-in Applications)
 
 ![Req_win11_update](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Req_Win11update.png)
 
@@ -90,7 +88,7 @@ Remediation: Update Win 11
 
 ---
 
-### 🧰 Turn on PUA Protection in Block Mode
+### 🧰 - Turn on PUA Protection in Block Mode
 
 ![PUA_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/PUA_Req.png)
 
@@ -124,7 +122,7 @@ Get-mpPreference | ft PUAProtection
 
 ---
 
-### 🧰 Set Controlled Folder Access to Enabled or Block Mode
+### 🧰 - Set Controlled Folder Access to Enabled or Block Mode
 
 
 ![Folder_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Folder_Req.png)
@@ -166,7 +164,7 @@ Windows Defender Exploit Guard
 
 ---
 
-### 🧰 Block Credential Stealing from LSASS (Local Security Authority Subsystem)
+### 🧰 - Block Credential Stealing from LSASS (Local Security Authority Subsystem)
 
 ![lsaas_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/lsass_Req.png)
 
@@ -200,6 +198,7 @@ Windows Defender Exploit Guard > ASR > Rules
 ![lsaas_fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/lsaas_Fix.png)
 
 ---
+
 ### 🧰 Enable Network Protection
 
 ![NP_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/NP_Req.png)
@@ -271,6 +270,11 @@ Email is a common initial attack vector. This control reduces phishing and malwa
 
 ![Exe_Fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Exe_Email_policy_Overview.png)
 
+
+### 🧰 Block Executable Content from Email Client and Webmail - Registery Method
+
+[Exe_Fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Exe_Fix.png)
+
 ---
 
 ### 🧰 Block Untrusted and Unsigned Processes from USB Devices - GPO Method
@@ -304,6 +308,11 @@ This guide explains how to enable the Attack Surface Reduction (ASR) rule that b
 7. Close the Group Policy Editor and ensure the GPO is linked correctly.
 
 8. On target machines, run `gpupdate /force` or wait for policy refresh.
+
+
+### 🧰 Block Untrusted and Unsigned Processes from USB Devices - Registery Method
+
+[USB_Reg](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/USB_Fix.png)
 
 ---
 
