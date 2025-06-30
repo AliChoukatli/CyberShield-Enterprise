@@ -74,35 +74,35 @@ This document outlines actions taken to address a **High Exposure Level** report
 
 ## ✅ Applied Remediation
 
-### 🧰 Update Microsoft Windows 11 (OS and Built-in Applications)
+### 🧰 1. Update Microsoft Windows 11 (OS and Built-in Applications)
+
+#### **Description**:
+Ensure all Windows 11 system components and built-in apps are up-to-date.
+
+#### **Justification**:
+Regular OS updates patch critical vulnerabilities and mitigate exploitation risks.
 
 ![Req_win11_update](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Req_Win11update.png)
 
-**Description**:
-Ensure all Windows 11 system components and built-in apps are up-to-date.
-
-**Justification**:
-Regular OS updates patch critical vulnerabilities and mitigate exploitation risks.
-
-**Remediation**: Update Win 11
+#### ✅ **Remediation**: Update Windows 11
 
 ---
 
-### 🧰 Turn on PUA Protection in Block Mode
+### 🧰 2. Turn on PUA Protection in Block Mode
 
-![PUA_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/PUA_Req.png)
-
-🔍 **Description:** 
+#### **Description:** 
 Enables Microsoft Defender Antivirus to detect and block **Potentially Unwanted Applications (PUAs)**. These may include:
 - Adware
 - Crypto mining tools
 
-🔍 **Justification:**
+#### **Justification:**
 Blocking PUAs strengthens endpoint security by:
 - Reducing attack surface from non-malicious but risky applications
 - Preventing installation of apps that may degrade system performance or be used as vectors in larger attacks
 
-✅ **Remediation Method** – PowerShell Script
+![PUA_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/PUA_Req.png)
+
+#### ✅ **Remediation Method** – PowerShell Script
 
 PUA protection was enabled in **Block Mode** using the following script, executed on target systems:
 
@@ -122,19 +122,17 @@ Get-mpPreference | ft PUAProtection
 
 ---
 
-### 🧰 Set Controlled Folder Access to Enabled or Block Mode
-
+### 🧰 3. Set Controlled Folder Access to Enabled or Block Mode
 
 ![Folder_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Folder_Req.png)
 
-🔍 **Description:**  
+#### **Description:**  
 Enable ransomware protection by locking critical folders against unauthorized access.
 
-🔍 **Justification:**  
+#### **Justification:**  
 Defends against ransomware attempting to encrypt sensitive user files.
 
-
-✅ **Remediation**
+#### ✅ **Remediation**
 
 #### 1. Open Registry Editor
 - Press `Win + R`, type `regedit`, and press `Enter`.
@@ -164,20 +162,19 @@ Windows Defender Exploit Guard
 
 ---
 
-### 🧰 Block Credential Stealing from LSASS (Local Security Authority Subsystem)
+### 🧰 4. Block Credential Stealing from LSASS (Local Security Authority Subsystem)
 
-![lsaas_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/lsass_Req.png)
-
-- 🔍 **Description** : This prevent credential theft by blocking unauthorized access to the LSASS.
-- 🔍 **Purpose:** Prevent malware from dumping credentials from `lsass.exe` using tools like Mimikatz.
-- 🔍 **Applicable when:** You can't enable **LSA Protection** or **Credential Guard** on all devices due to compatibility issues.
-- 🔍 **Default Behavior:** Enabled in **Block Mode**.
+-  **Description** : This prevent credential theft by blocking unauthorized access to the LSASS.
+-  **Purpose:** Prevent malware from dumping credentials from `lsass.exe` using tools like Mimikatz.
+-  **Default Behavior:** Enabled in **Block Mode**.
 - ⚠️ This rule does **not** support **Warn Mode**.
 - ⚠️ If **LSA protection** is already enabled, this rule is **not applicable** and does not provide extra protection.
 
----
 
-✅ **Remediation**
+![lsaas_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/lsass_Req.png)
+
+
+#### ✅ **Remediation**
 
 - To enable this rule in **Block Mode**, add the following registry key and value: 
 
@@ -199,7 +196,7 @@ Windows Defender Exploit Guard > ASR > Rules
 
 ---
 
-### 🧰 Enable Network Protection
+### 🧰 5. Enable Network Protection
 
 ![NP_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/NP_Req.png)
 
@@ -209,13 +206,13 @@ Before enabling Network Protection, ensure the following are active:
 - Real-time protection enabled  
 - Cloud-delivered protection enabled
 
-🔍 **Description:**  
+#### **Description:**  
 Network Protection helps protect devices by blocking connections to potentially harmful domains and IPs, using Microsoft Defender SmartScreen.
 
-🔍 **Justification:**  
+#### **Justification:**  
 Prevents users from accessing known malicious websites, reducing exposure to drive-by attacks or social engineering.
 
-✅ **Remediation**
+#### ✅ **Remediation**
 
 - To enable this rule in **Block Mode**, add the following registry key and value :
 
@@ -238,17 +235,17 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender
 ---
 
 
-### 🧰 Block Executable Content from Email Client and Webmail - Intune Method
+### 🧰 6. Block Executable Content from Email Client and Webmail - Intune Method
 
 ![Exe_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Exe_Req.png)
 
-🔍 **Description:**  
+#### **Description:**  
 Prevent direct execution of embedded content or malicious attachments received via email.
 
-🔍 **Justification:**  
+#### **Justification:**  
 Email is a common initial attack vector. This control reduces phishing and malware payload delivery.
 
-✅ **Remediation with Intune**
+#### ✅ **Remediation with Intune**
 
 1. Go to the **Microsoft Intune Admin Center**: [https://intune.microsoft.com](https://intune.microsoft.com)
 2. Navigate to:  
@@ -266,18 +263,13 @@ Email is a common initial attack vector. This control reduces phishing and malwa
    
 7. Review + Create
 
-✅ Once deployed, the rule will be enforced on all assigned devices.
+> ✅ Once deployed, the rule will be enforced on all assigned devices.
 
 ![Exe_Fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Exe_Email_policy_Overview.png)
 
 
-### 🧰 Block Executable Content from Email Client and Webmail - Registery Method
 
-[Exe_Fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Exe_Fix.png)
-
----
-
-### 🧰 Block Untrusted and Unsigned Processes from USB Devices - GPO Method
+### 🧰 7. Block Untrusted and Unsigned Processes from USB Devices - GPO Method
 
 This guide explains how to enable the Attack Surface Reduction (ASR) rule that blocks untrusted and unsigned processes from running from USB devices by setting the corresponding registry key via Group Policy Object (GPO).
 
@@ -307,17 +299,22 @@ This guide explains how to enable the Attack Surface Reduction (ASR) rule that b
 
 7. Close the Group Policy Editor and ensure the GPO is linked correctly.
 
-8. On target machines, run `gpupdate /force` or wait for policy refresh.
+8. On target machines, run `gpupdate /force` or wait for policy refresh
 
 
-### 🧰 Block Untrusted and Unsigned Processes from USB Devices - Registery Method
+### 🧰 7.5 - Block Executable Content from Email Client and Webmail - Registery Method
 
-[USB_Reg](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/USB_Fix.png)
+[Exe_Fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Exe_Fix.png)
 
 ---
 
 
-## ✅ How to Verify if ASR Rules Are Applied
+### 🧰 8. Block Untrusted and Unsigned Processes from USB Devices - Registery Method
+
+[USB_Reg](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/USB_Fix.png)
+
+
+## 🎯 - How to Verify if ASR Rules Are Applied
 
 This guide explains how to check whether **Microsoft Defender Attack Surface Reduction (ASR) rules** are active on a system, and to display each rule along with its configured action (`Block`, `Audit`, `Warn`, or `Disabled`).
 
@@ -352,20 +349,18 @@ for ($i = 0; $i -lt $ids.Count; $i++) {
 | BE9BA2D9-53EA-4CDC-84E5-9B1EEEE46550  | 🔒 Block Executable Content from Email Client and Webmail                      |
 | b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4  | 🔒 Block Untrusted and Unsigned Processes from USB Devices                      |
 
-
 ---
-
 
 ## 🟡 Accepted Risks
 
-| Control                                                  | Risk Level | Impact           | Justification                                                                                             | Decision  |
-|----------------------------------------------------------|------------|----------------- |-----------------------------------------------------------------------------------------------------------|-----------|
-| Set Minimum Password Length to less than 14 characters | Low        | Low              | Current policy requires 12 characters for compatibility; MFA and lockout mitigate risk.                   | Accepted 
+| Control                                                  | Risk Level | Impact           | Justification                                                                                              | Decision  |
+|----------------------------------------------------------|------------|----------------- |------------------------------------------------------------------------------------------------------------|-----------|
+| Set Minimum Password Length to less than 14 characters   | Low        | Low              | Current policy requires 12 characters for compatibility; MFA and lockout mitigate risk.                    | Accepted 
 | Disable 'Autoplay' for all drives                        | Low        | Low              | Modern Windows restrict autoplay by default; full disable may impact user experience with trusted devices. | Accepted  |
 | Disable Defender Firewall notifications                  | Low        | Low              | Notifications off reduces user noise; monitoring remains via logs and centralized tools.                   | Accepted  |
 
 
-### 1. Set 'Minimum Password Length' to less than 14 characters
+### 🧰 1. Set 'Minimum Password Length' to less than 14 characters
 
 **Risk Description:**  
 The recommendation is to enforce a minimum password length of 14 or more characters. Shorter passwords increase the risk of brute force attacks and password guessing.
@@ -388,5 +383,3 @@ The recommendation is to enforce a minimum password length of 14 or more charact
 -  Identified vulnerabilities through Microsoft Defedner Recommendations.
 -  Implemented prioritized remediation actions.  
 -  Aligned with ISO 27001 & NIST standards.
-  
-
