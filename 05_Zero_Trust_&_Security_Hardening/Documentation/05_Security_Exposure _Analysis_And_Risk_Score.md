@@ -23,7 +23,7 @@ This structured approach reinforces Zero Trust principles and supports framework
      - [🧩 Update Microsoft Windows 11](#-1-update-microsoft-windows-11-os-and-built-in-applications)
      - [🚫 Turn on PUA Protection in Block Mode](#-2-turn-on-pua-protection-in-block-mode)
      - [📁 Set Controlled Folder Access](#-3-set-controlled-folder-access-to-enabled-or-block-mode)
-     - [🚫 Block Credential Stealing from LSASS](#%EF%B8%8F-4-block-credential-stealing-from-lsass-local-security-authority-subsystem)
+     - [🚫 Block Credential Stealing from LSASS](#-4-block-credential-stealing-from-lsass-local-security-authority-subsystem)
      - [🌐 Enable Network Protection](#-5-enable-network-protection)
      - [🚫 Block Executables in Email - Intune](#-6-block-executable-content-from-email-client-and-webmail---intune-method)
      - [🚫 Block USB Executables - GPO](#-7-block-untrusted-and-unsigned-processes-from-usb-devices---gpo-method)
