@@ -18,6 +18,7 @@ This structured approach reinforces Zero Trust principles and supports framework
 
 2. [🔐 Security Recommendations](#security-recommendations)
    - [✅ Applied Remediation](#applied-remediation)
+
      - [🧩 Update Microsoft Windows 11](#update-microsoft-windows-11-os-and-built-in-applications)
      - [🚫 Turn on PUA Protection in Block Mode](#turn-on-pua-protection-in-block-mode)
      - [📁 Set Controlled Folder Access](#set-controlled-folder-access-to-enabled-or-block-mode)
@@ -26,15 +27,16 @@ This structured approach reinforces Zero Trust principles and supports framework
      - [📧 Block Executables in Email - Intune](#block-executable-content-from-email-client-and-webmail---intune-method)
      - [🔌 Block USB Executables - GPO](#block-untrusted-and-unsigned-processes-from-usb-devices---gpo-method)
      - [🔎 Verify ASR Rules](#how-to-verify-if-asr-rules-are-applied)
+
    - [⚠️ Risk Acceptance](#risk-acceptance)
      - [🔑 Min Password < 14](#set-minimum-password-length-to-less-than-14-characters)
 
-3. [🧾 Conclusion](#conclusion)
+4. [🧾 Conclusion](#conclusion)
 
 
 ---
 
-##  🔴  Initial Exposure Level Summary
+## 🔍 Initial Exposure Level Summary
 1. Go to the Microsoft 365 Defender portal:  [https://security.microsoft.com](https://security.microsoft.com)
    
 - **Exposure Level**: High
@@ -44,7 +46,7 @@ This structured approach reinforces Zero Trust principles and supports framework
 
 
 
-##  🔴 Security Recommendations 
+## 🔐 Security Recommendations 
 - The following are prioritized security controls and remediations to address high-risk exposures detected by Microsoft Defender for Endpoint.
 
 
@@ -70,7 +72,7 @@ This structured approach reinforces Zero Trust principles and supports framework
 
 ## ✅ Applied Remediation
 
-### 🧰 1. Update Microsoft Windows 11 (OS and Built-in Applications)
+### 🧩 1. Update Microsoft Windows 11 (OS and Built-in Applications)
 
 #### **Description**:
 Ensure all Windows 11 system components and built-in apps are up-to-date.
@@ -84,7 +86,7 @@ Regular OS updates patch critical vulnerabilities and mitigate exploitation risk
 
 ---
 
-### 🧰 2. Turn on PUA Protection in Block Mode
+### 🚫 2. Turn on PUA Protection in Block Mode
 
 #### **Description:** 
 Enables Microsoft Defender Antivirus to detect and block **Potentially Unwanted Applications (PUAs)**. These may include:
@@ -118,7 +120,7 @@ Get-mpPreference | ft PUAProtection
 
 ---
 
-### 🧰 3. Set Controlled Folder Access to Enabled or Block Mode
+### 📁 3. Set Controlled Folder Access to Enabled or Block Mode
 
 ![Folder_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Folder_Req.png)
 
@@ -158,7 +160,7 @@ Windows Defender Exploit Guard
 
 ---
 
-### 🧰 4. Block Credential Stealing from LSASS (Local Security Authority Subsystem)
+### 🛡️ 4. Block Credential Stealing from LSASS (Local Security Authority Subsystem)
 
 -  **Description** : This prevent credential theft by blocking unauthorized access to the LSASS.
 -  **Purpose:** Prevent malware from dumping credentials from `lsass.exe` using tools like Mimikatz.
@@ -192,7 +194,7 @@ Windows Defender Exploit Guard > ASR > Rules
 
 ---
 
-### 🧰 5. Enable Network Protection
+### 🌐 5. Enable Network Protection
 
 ![NP_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/NP_Req.png)
 
@@ -231,7 +233,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender
 ---
 
 
-### 🧰 6. Block Executable Content from Email Client and Webmail - Intune Method
+### 📧 6. Block Executable Content from Email Client and Webmail - Intune Method
 
 ![Exe_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Exe_Req.png)
 
@@ -263,9 +265,12 @@ Email is a common initial attack vector. This control reduces phishing and malwa
 
 ![Exe_Fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Exe_Email_policy_Overview.png)
 
+### 📧 6.5 - Block Executable Content from Email Client and Webmail - Registery Method
+
+[Exe_Fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Exe_Fix.png)
 
 
-### 🧰 7. Block Untrusted and Unsigned Processes from USB Devices - GPO Method
+### 🔌 7. Block Untrusted and Unsigned Processes from USB Devices - GPO Method
 
 This guide explains how to enable the Attack Surface Reduction (ASR) rule that blocks untrusted and unsigned processes from running from USB devices by setting the corresponding registry key via Group Policy Object (GPO).
 
@@ -298,9 +303,6 @@ This guide explains how to enable the Attack Surface Reduction (ASR) rule that b
 8. On target machines, run `gpupdate /force` or wait for policy refresh
 
 
-### 🧰 7.5 - Block Executable Content from Email Client and Webmail - Registery Method
-
-[Exe_Fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Exe_Fix.png)
 
 ---
 
@@ -310,7 +312,7 @@ This guide explains how to enable the Attack Surface Reduction (ASR) rule that b
 [USB_Reg](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/USB_Fix.png)
 
 
-## 🎯 - How to Verify if ASR Rules Are Applied
+## 🔎 - How to Verify if ASR Rules Are Applied
 
 This guide explains how to check whether **Microsoft Defender Attack Surface Reduction (ASR) rules** are active on a system, and to display each rule along with its configured action (`Block`, `Audit`, `Warn`, or `Disabled`).
 
@@ -356,7 +358,7 @@ for ($i = 0; $i -lt $ids.Count; $i++) {
 | Disable Defender Firewall notifications                  | Low        | Low              | Notifications off reduces user noise; monitoring remains via logs and centralized tools.                   | Accepted  |
 
 
-### 🧰 1. Set 'Minimum Password Length' to less than 14 characters
+### 🔑 1. Set 'Minimum Password Length' to less than 14 characters
 
 **Risk Description:**  
 The recommendation is to enforce a minimum password length of 14 or more characters. Shorter passwords increase the risk of brute force attacks and password guessing.
