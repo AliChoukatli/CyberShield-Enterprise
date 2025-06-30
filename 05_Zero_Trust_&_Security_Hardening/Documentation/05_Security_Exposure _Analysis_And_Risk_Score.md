@@ -14,23 +14,23 @@ This structured approach reinforces Zero Trust principles and supports framework
 
 ## 🔴 Index
 
-1.  [🔴 Initial Exposure Level Summary](#initial-exposure-level-summary)
+1. [🔍 Initial Exposure Level Summary](#initial-exposure-level-summary)
 
-2. 🔒 [Security Recommendations](#security-recommendations)
-   - ✅ [Applied Remediation](#applied-remediation)
-      - [Update Microsoft Windows 11 (OS and Built-in Applications)](#update-microsoft-windows-11-os-and-built-in-applications)
-      - [Turn on PUA Protection in Block Mode](#turn-on-pua-protection-in-block-mode)
-      - [Set Controlled Folder Access to Enabled or Block Mode](#set-controlled-folder-access-to-enabled-or-block-mode)
-      - [Block Credential Stealing from LSASS (Local Security Authority Subsystem)](#block-credential-stealing-from-lsass-local-security-authority-subsystem)
-      - [Enable Network Protection](#enable-network-protection)
-      - [Block Executable Content from Email Client and Webmail - Intune Method](#block-executable-content-from-email-client-and-webmail---intune-method)
-      - [Block Untrusted and Unsigned Processes from USB Devices - GPO Method](#block-untrusted-and-unsigned-processes-from-usb-devices---gpo-method)
-      - [How to Verify if ASR Rules Are Applied](#how-to-verify-if-asr-rules-are-applied)
-        
-   - 🟡 [Risk Acceptance](#risk-acceptance)
-     - [Set 'Minimum Password Length' to less than 14 characters](#set-minimum-password-length-to-less-than-14-characters)
+2. [🔐 Security Recommendations](#security-recommendations)
+   - [✅ Applied Remediation](#applied-remediation)
+     - [🧩 Update Microsoft Windows 11](#update-microsoft-windows-11-os-and-built-in-applications)
+     - [🚫 Turn on PUA Protection in Block Mode](#turn-on-pua-protection-in-block-mode)
+     - [📁 Set Controlled Folder Access](#set-controlled-folder-access-to-enabled-or-block-mode)
+     - [🛡️ Block Credential Stealing from LSASS](#block-credential-stealing-from-lsass-local-security-authority-subsystem)
+     - [🌐 Enable Network Protection](#enable-network-protection)
+     - [📧 Block Executables in Email - Intune](#block-executable-content-from-email-client-and-webmail---intune-method)
+     - [🔌 Block USB Executables - GPO](#block-untrusted-and-unsigned-processes-from-usb-devices---gpo-method)
+     - [🔎 Verify ASR Rules](#how-to-verify-if-asr-rules-are-applied)
+   - [⚠️ Risk Acceptance](#risk-acceptance)
+     - [🔑 Min Password < 14](#set-minimum-password-length-to-less-than-14-characters)
 
-3. 🔒 [Conclusion](#conclusion)
+3. [🧾 Conclusion](#conclusion)
+
 
 ---
 
