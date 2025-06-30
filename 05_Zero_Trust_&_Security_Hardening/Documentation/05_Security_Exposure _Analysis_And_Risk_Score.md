@@ -2,11 +2,11 @@
 
 ## 🎯 Objective
 
-Identify and remediate security exposures reported by **Microsoft Defender for Endpoint (MDE)** using actionable hardening measures. This includes applying **Attack Surface Reduction (ASR)** rules, Windows Defender configurations, and system updates, while also documenting accepted residual risks.
+Reduce exposures reported by **Microsoft Defender for Endpoint (MDE)** through actions like **ASR rules**, Defender configuration, system updates, and document any accepted residual risks.
 
 ## 📝 Introduction
 
-In enterprise environments, continuous exposure management is critical to reduce attack surfaces and maintain compliance. This section details a **real-world remediation workflow** based on a high exposure alert raised in the **Threat & Vulnerability Management (TVM)** dashboard within MDE.
+In enterprise environments, continuous exposure management is key to reducing the attack surface. This section outlines a **real-world remediation workflow** based on a high-severity alert from MDE's **Threat & Vulnerability Management (TVM)** dashboard.
 
 You’ll follow step-by-step remediations mapped to Microsoft security recommendations, covering both **automated defenses** (e.g., ASR rules, PUA blocking, Controlled Folder Access) and **manual risk acceptance**, aligned with business and operational needs.
 
