@@ -39,7 +39,7 @@ Computer Configuration → Windows Settings → Security Settings → Local Poli
 | **Access this computer from the network** | ✅ `Administrators, Authenticated Users` | Ensures only authorized users can connect over the network |
 
 
-![UR-GPO](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/User_Rights_GPO.png)
+![UR-GPO](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/User_Rights_GPO.png)
 
 ---
 
@@ -47,7 +47,5 @@ Computer Configuration → Windows Settings → Security Settings → Local Poli
 
 - 🛡️ Avoid giving `Domain Users` access to “Allow log on locally” unless necessary.
 - 🧪 Test GPO on limited OU before full deployment.
-- 🔐 Combine with LAPS, BitLocker, and Defender policies for a full hardening baseline.
 
----
 
