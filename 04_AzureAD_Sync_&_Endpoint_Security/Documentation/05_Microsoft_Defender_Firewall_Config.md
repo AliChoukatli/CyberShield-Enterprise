@@ -30,29 +30,7 @@ To ensure a secure and consistent firewall configuration across all network prof
 
 ---
 
-## ✅ Method 1: Full Cloud with Microsoft Intune
-
-Used for Azure AD-joined devices managed through Intune.
-
-### 📦 Steps
-
-1. Go to **Microsoft Intune**:  
-   `Endpoint security` → `Firewall` → `+ Create Policy`
-2. Choose:
-   - **Platform**: Windows 10 and later  
-   - **Profile**: Windows Firewall
-
-3. Recommanded Setting
-
-![Firewall_Setting](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Firewall_Setting.png)
-
-4. Do the same setting to Public and Private network
-5. Assign the policy to a target Azure AD group  
-6. Save and deploy
-
----
-
-## ✅ Method 2: Hybrid with Group Policy (GPO)
+## ✅ Method 1 - Hybrid with Group Policy (GPO)
 
 Used for on-premise Active Directory environments with GPO-based management.
 
@@ -87,6 +65,30 @@ Used for on-premise Active Directory environments with GPO-based management.
 5. Apply this options on Public and Private Profile and Select `Ok`
 
 ---
+
+
+## ✅ Method 2 - Full Cloud with Microsoft Intune
+
+Used for Azure AD-joined devices managed through Intune.
+
+### 📦 Steps
+
+1. Go to **Microsoft Intune**:  
+   `Endpoint security` → `Firewall` → `+ Create Policy`
+2. Choose:
+   - **Platform**: Windows 10 and later  
+   - **Profile**: Windows Firewall
+
+3. Recommanded Setting
+
+![Firewall_Setting](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Firewall_Setting.png)
+
+4. Do the same setting to Public and Private network
+5. Assign the policy to a target Azure AD group  
+6. Save and deploy
+
+---
+
 
 ## ✅ Conclusion
 
