@@ -104,7 +104,7 @@ Run the following to confirm that the protocols are disabled:
 ```powershell
 Get-CASMailbox -ResultSize Unlimited | Select Name, UserPrincipalName, PopEnabled, ImapEnabled, MAPIEnabled, ActiveSyncEnabled, SmtpClientAuthenticationDisabled
 ```
-![Disable Legacy Protocols-PS](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Disable%20Legacy%20Protocols-PS.png)
+![Disable Legacy Protocols-PS](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Disable%20Legacy%20Protocols-PS.png)
 
 ### Option B — Use Conditional Access to Block Legacy Authentication
 
@@ -139,7 +139,7 @@ Microsoft has reintroduced a simplified option to block legacy authentication cl
 9. Enable the policy: **On**
 10. Click **Create**
 
-![Block_Legacy-Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Block_Legacy-Policy.png)
+![Block_Legacy-Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Block_Legacy-Policy.png)
 
 > ⚠️ This Conditional Access policy helps block basic authentication (IMAP, POP, SMTP AUTH, etc.), but you should also disable these protocols in Exchange Online for full protection.
 
@@ -172,7 +172,7 @@ Protect all privileged accounts by enforcing MFA.
 11. Enable the policy  
 12. Click **Create**
 
-![MFA-All_Admin](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/MFA-All_Admin.png)
+![MFA-All_Admin](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/MFA-All_Admin.png)
 
 > ⚠️ This policy ensures that all privileged accounts are protected by MFA, reducing the risk of compromise.
 
@@ -216,7 +216,7 @@ Restrict administrative portal access (Microsoft Entra, Intune, M365 Admin Cente
    - Click **Create**
 
 
-![Admin_Portal_Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Admin_Portal_Policy.png)
+![Admin_Portal_Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Admin_Portal_Policy.png)
 
 ---
 
@@ -246,7 +246,7 @@ Enhance security by requiring MFA for all sign-ins.
 8. Enable the policy
 9. Click **Create**
 
-![MFA-Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/MFA-Policy.png)
+![MFA-Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/MFA-Policy.png)
 
 ---
 
@@ -273,7 +273,7 @@ Ensure access is only granted from devices that meet compliance requirements (e.
 8. Enable the policy
 9. Click **Create**
 
-![Compliance_Devices_Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Compliance_Devices_Policy.png)
+![Compliance_Devices_Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Compliance_Devices_Policy.png)
 
 ---
 
@@ -307,7 +307,7 @@ Before creating the Conditional Access policy, define your trusted countries in 
 5. Select countries you trust (e.g., ✅ France, ✅ Canada, ✅ Netherlands, ✅ USA)
 6. Click **Create**
 
-![Trusted_Locations](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Trusted_Locations.png)
+![Trusted_Locations](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Trusted_Locations.png)
 
 > 💡 You can later reuse this location group in other Conditional Access policies.
 
@@ -337,7 +337,7 @@ Before creating the Conditional Access policy, define your trusted countries in 
 5. Enable the policy: ✅ **On**
 6. Click **Create**
 
-![Block_Countries](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Block_Countries.png)
+![Block_Countries](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Block_Countries.png)
 
 > ⚠️ **Tip:** Be careful not to lock yourself out. Exclude break-glass accounts or test on a pilot group before applying it to all users.
 
@@ -345,7 +345,7 @@ Before creating the Conditional Access policy, define your trusted countries in 
 
 ## 🔴 Conditionnal Access Summary
 
-![All_Condi_Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/All_Condi_policy.png)
+![All_Condi_Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/All_Condi_policy.png)
 
 
 ---
