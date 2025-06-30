@@ -34,7 +34,6 @@ This structured approach reinforces Zero Trust principles and supports framework
 
 4. [🧾 Conclusion](#-conclusion)
 
-
 ---
 
 ## 🔍 Initial Exposure Level Summary
@@ -189,7 +188,7 @@ Windows Defender Exploit Guard > ASR > Rules
 |----------------------------------------------------|----------------|--------|
 | `9E6C4E1F-7D60-472F-BA1A-A39EF669E4B2`             | `String Value` | `"1"`  |
 
-- `"1"` = Block Mode ✅  
+- `"1"` = Block Mode 🚫 
 
 ![lsaas_fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/lsaas_Fix.png)
 
