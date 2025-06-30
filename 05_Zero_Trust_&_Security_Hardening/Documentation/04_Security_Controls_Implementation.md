@@ -60,7 +60,7 @@ Endpoint security → Account protection → + Create policy
 
 5. Assign this policy to the targeted group of devices (e.g., all corporate Windows endpoints).
 
-![Local_Admin_intune_policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Local_Admin_intune_policy.png)
+![Local_Admin_intune_policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Local_Admin_intune_policy.png)
 
 #### 3.3 – Verify on a Device
 
@@ -70,12 +70,9 @@ Endpoint security → Account protection → + Create policy
 ```yaml
 Computer Management → Local Users and Groups → Groups → Administrators
 ```
-![Local_Ali](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Local_Ali.png)
-
+![Local_Ali](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Local_Ali.png)
 
 ---
-
-
 
 ## 2. Turn off Software Installations
 
@@ -111,7 +108,7 @@ To fully control software installations, **two layers of protection are required
   - `Administrative Templates > Start Menu and Taskbar > Remove Run menu from Start Menu`  
     → Set to **Enabled** (optional hardening)
 
-  ![msi_policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Restr_Softw_policy_intune.png)
+  ![msi_policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Restr_Softw_policy_intune.png)
 
 ---
 
@@ -142,14 +139,14 @@ You will see four rule collections:
     - **Conditions**: Path 
   - For example, to block `chrome_installer.exe`, create a Deny rule based on the file path (eg: C:\Users\*\Downloads\chrome_installer.exe)
 
-![chrome_block_GPO](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/chrome_block_GPO.png)
+![chrome_block_GPO](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/chrome_block_GPO.png)
 
 8. Start Application Identity Service on Clients
 
 - On each client machine, run `services.msc`.
 - Find **Application Identity** service.
 
-![Application_Identity_Auto](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Application_Identity_Auto.png)
+![Application_Identity_Auto](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Application_Identity_Auto.png)
   
 - Set Startup type to **Automatic** and start the service.
 
@@ -160,7 +157,7 @@ You will see four rule collections:
 - Deploy the GPO to the target computers.
 - Test in **Audit mode** to monitor what would be blocked without enforcing.
 
-![AppLocker_Enforcement](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/AppLocker_Enforcement.png)
+![AppLocker_Enforcement](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/AppLocker_Enforcement.png)
 
 - After testing, switch enforcement mode to **Enforce** to block unauthorized apps.
 
@@ -197,7 +194,7 @@ Import-Module ExchangeOnlineManagement
 ```powershell
 Connect-ExchangeOnline -UserPrincipalName your.email@domain.com
 ```
-![Exchange_Connected](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Exchange_Connected.png)
+![Exchange_Connected](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Exchange_Connected.png)
 
 ---
 
@@ -227,7 +224,7 @@ Set-AuthenticationPolicy -Identity "Block Basic Auth" `
 ```powershell
 Get-AuthenticationPolicy -Identity "Block Basic Auth" | Format-List *
 ```
-![All_Basic_Auth_false](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/All_Basic_Auth_false.png)
+![All_Basic_Auth_false](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/All_Basic_Auth_false.png)
 
 All `AllowBasicAuth` properties should be set to `False`.
 
@@ -245,7 +242,7 @@ Set-User -Identity <UserPrincipalName> -AuthenticationPolicy "Block Basic Auth"
 ```powershell
 Get-User -Identity <UserPrincipalName> | Format-List AuthenticationPolicy
 ```
-![Sophia_legacy_policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/Sophia_legacy_policy.png)
+![Sophia_legacy_policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Sophia_legacy_policy.png)
 
 ---
 
@@ -265,7 +262,7 @@ Ensure the output shows:
 SmtpClientAuthenticationDisabled : True
 ```
 
-![Disable_SMTP](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/disable_SMTP.png)
+![Disable_SMTP](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/disable_SMTP.png)
 
 ---
 
@@ -288,7 +285,7 @@ Get-Mailbox -ResultSize Unlimited | Set-CASMailbox -ImapEnabled $false -PopEnabl
 Get-CASMailbox -ResultSize Unlimited | Select Name, ImapEnabled, PopEnabled
 ```
 
-![Imap_POP_Disabled](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Screenshots/imap_pop_disabled.png)
+![Imap_POP_Disabled](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/imap_pop_disabled.png)
 
 ---
 
