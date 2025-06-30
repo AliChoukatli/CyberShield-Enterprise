@@ -78,13 +78,13 @@ This document outlines actions taken to address a **High Exposure Level** report
 
 ![Req_win11_update](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Req_Win11update.png)
 
-Description:
+**Description**:
 Ensure all Windows 11 system components and built-in apps are up-to-date.
 
-Justification:
+**Justification**:
 Regular OS updates patch critical vulnerabilities and mitigate exploitation risks.
 
-Remediation: Update Win 11
+**Remediation**: Update Win 11
 
 ---
 
