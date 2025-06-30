@@ -132,20 +132,6 @@ Collect and ingest the relevant Windows Security event logs related to LAPS (`LA
 
 ---
 
-## 🔍 Key Event IDs to Collect
-
-| Event ID | Description                             | Relevance to LAPS Monitoring                            |
-|----------|-------------------------------------|--------------------------------------------------------|
-| 4624     | Successful Logon                     | Detect local sign-ins using `LAPS_Admin` account       |
-| 4625     | Failed Logon                        | Detect failed attempts on local admin accounts         |
-| 4672     | Special Privileged Logon            | Detect elevated logons (e.g., admin or system accounts)|
-| 4688     | Process Creation                    | Detect suspicious process executions related to LAPS   |
-| 4703     | A user right was adjusted          | Detect privilege changes affecting LAPS account        |
-| 4769     | A Kerberos service ticket was requested | Relevant if LAPS accounts use Kerberos authentication |
-| 1102     | Audit log cleared                  | Detect possible log tampering                            |
-
----
-
 ### 🧩 Step 1 - Ensure Audit Policies Are Enabled on Target Devices
 
 Before starting, make sure you have:
@@ -326,6 +312,20 @@ SecurityEvent
 ```
 - This query filters key security events important for LAPS monitoring.
 - Adjust the time range as needed (e.g., ago(1h), ago(7d)).
+
+## 🔍 Key Event IDs to Collect
+
+| Event ID | Description                             | Relevance to LAPS Monitoring                            |
+|----------|-------------------------------------|--------------------------------------------------------|
+| 4624     | Successful Logon                     | Detect local sign-ins using `LAPS_Admin` account       |
+| 4625     | Failed Logon                        | Detect failed attempts on local admin accounts         |
+| 4672     | Special Privileged Logon            | Detect elevated logons (e.g., admin or system accounts)|
+| 4688     | Process Creation                    | Detect suspicious process executions related to LAPS   |
+| 4703     | A user right was adjusted          | Detect privilege changes affecting LAPS account        |
+| 4769     | A Kerberos service ticket was requested | Relevant if LAPS accounts use Kerberos authentication |
+| 1102     | Audit log cleared                  | Detect possible log tampering                            |
+
+---
 
 4. Analyze the Results
    
