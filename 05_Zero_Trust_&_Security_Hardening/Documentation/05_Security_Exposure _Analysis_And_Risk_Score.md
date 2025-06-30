@@ -26,11 +26,12 @@ This structured approach reinforces Zero Trust principles and supports framework
       - [Block Executable Content from Email Client and Webmail - Intune Method](#block-executable-content-from-email-client-and-webmail---intune-method)
       - [Block Untrusted and Unsigned Processes from USB Devices - GPO Method](#block-untrusted-and-unsigned-processes-from-usb-devices---gpo-method)
       - [How to Verify if ASR Rules Are Applied](#how-to-verify-if-asr-rules-are-applied)
-   - 🟡 [Risk acceptance](#risk-acceptance)
+        
+   - 🟡 [Risk Acceptance](#risk-acceptance)
      - [Set 'Minimum Password Length' to less than 14 characters](#set-minimum-password-length-to-less-than-14-characters)
 
 3. 🔒 [Conclusion](#conclusion)
-     
+
 ---
 
 ## 🔴 Initial Exposure Level Summary
