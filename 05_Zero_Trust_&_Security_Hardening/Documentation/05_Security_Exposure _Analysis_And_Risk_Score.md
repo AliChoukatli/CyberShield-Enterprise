@@ -34,7 +34,7 @@ This structured approach reinforces Zero Trust principles and supports framework
 
 ---
 
-##  Initial Exposure Level Summary
+##  🔴  Initial Exposure Level Summary
 1. Go to the Microsoft 365 Defender portal:  [https://security.microsoft.com](https://security.microsoft.com)
    
 - **Exposure Level**: High
