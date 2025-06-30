@@ -313,7 +313,7 @@ SecurityEvent
 - This query filters key security events important for LAPS monitoring.
 - Adjust the time range as needed (e.g., ago(1h), ago(7d)).
 
-## 🔍 Key Event IDs to Collect
+## Key Event IDs to Collect
 
 | Event ID | Description                             | Relevance to LAPS Monitoring                            |
 |----------|-------------------------------------|--------------------------------------------------------|
