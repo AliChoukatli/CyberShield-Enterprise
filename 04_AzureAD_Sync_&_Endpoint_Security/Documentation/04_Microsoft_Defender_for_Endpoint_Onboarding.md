@@ -182,7 +182,7 @@ This guide explains how to onboard Windows 10/11 devices to Microsoft Defender f
 
 ![Intune_Def_EP_Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/intune_Endpoint_Success.png)
 
-or Go to the Microsoft 365 Defender portal:  [https://security.microsoft.com](https://security.microsoft.com)
+5. Go to the Microsoft 365 Defender portal:  [https://security.microsoft.com](https://security.microsoft.com)
 
 ![Device_inventory_Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Device_Inventory.png)
 
