@@ -289,7 +289,7 @@ Get-CASMailbox -ResultSize Unlimited | Select Name, ImapEnabled, PopEnabled
 
 ---
 
-# Conclusion 
+# ✅ Conclusion 
 
-✅ Legacy protocols and local admin rights misconfigurations were identified and remediated.
+Legacy protocols and local admin rights misconfigurations were identified and remediated.
 Systems are now hardened against unauthorized access and unapproved software installations.
