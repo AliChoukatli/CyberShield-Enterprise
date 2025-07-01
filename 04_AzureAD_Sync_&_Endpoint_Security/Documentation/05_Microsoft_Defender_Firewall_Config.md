@@ -75,16 +75,16 @@ Used for Azure AD-joined devices managed through Intune.
    - **Platform**: Windows 10 and later  
    - **Profile**: Windows Firewall
 
-3. Recommanded Setting
+3. Give your policy a Name (e.g., Defender Firewall Baseline) and Description.
+4. Configure the settings based on the recommendations below. These settings will apply to all network profiles (Domain, Private, Public) on the target devices.
 
 ![Firewall_Setting](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Firewall_Setting.png)
 
-4. Do the same setting to Public and Private network
-5. Assign the policy to a target Azure AD group  
-6. Save and deploy
+5. Assign the policy to a target Azure AD group (e.g., All Windows 10/11 Devices).
+
+6. Review and Create the policy to save and deploy.
 
 ---
-
 
 ## 🔚 Conclusion
 
