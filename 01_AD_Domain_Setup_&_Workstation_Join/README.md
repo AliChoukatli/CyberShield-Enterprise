@@ -1,36 +1,39 @@
-## ⚙️ Prerequisites
+# 01_AD_Domain_Setup_&_Workstation_Join
 
-Before starting **Phase 1**, ensure you meet the following requirements:
+## 🎯 Objective
 
-- ✅ A host machine with at least 8 GB RAM and virtualization enabled (BIOS/UEFI).
-- ✅ Windows 11 ISO (64-bit).
-- ✅ Windows Server 2022 ISO.
-- ✅ Internet access (ports 80/443 open).
-- ✅ PowerShell 5.1 or later installed (`$PSVersionTable.PSVersion`).
-- ✅ Microsoft 365 Business Premium subscription (includes Azure AD P1 and Intune).
-- ✅ Virtualization platform: Hyper-V, VMware, or VirtualBox.
-- ✅ Local administrative privileges.
+This chapter guides you through the foundational setup of your on-premises Active Directory domain and the deployment of Windows 11 workstations, integrating them into your new domain environment.
 
----
+## 📝 Introduction
 
-## 🛠️ Overview
+Establishing a robust Active Directory domain is the cornerstone of any enterprise IT infrastructure. This chapter covers the essential steps for configuring a Windows Server 2022 as a Domain Controller, setting up DHCP for network address management, and seamlessly joining Windows 11 workstations to your domain. This foundational setup is critical for centralized user and device management, which will be expanded upon in subsequent chapters.
 
-In this phase, you will:
+## 📘 Table of Contents
 
-- Install and configure 2–3 Windows 11 client VMs.
-- Install Windows Server 2022 for Active Directory setup.
-- Configure static IP addresses.
-- Promote the server to a Domain Controller.
-- Verify Active Directory installation.
+* [1.1: Windows Server 2022 Setup: Active Directory & DHCP](#11-windows-server-2022-setup-active-directory--dhcp)
+* [1.2: Deploy Windows 11 Workstations & Join to Active Directory](#12-deploy-windows-11-workstations--join-to-active-directory)
 
 ---
 
-## 🧠 Summary **Phase 1 - Installation & Domain Join**
+## 1.1: Windows Server 2022 Setup: Active Directory & DHCP
 
-This phase covers the initial setup of the server and workstation environment in a secure domain-based structure:
+*(Detailed content for this section would go here, including steps, screenshots, and explanations for setting up Windows Server 2022, promoting it to a Domain Controller, and configuring DHCP.)*
 
-- **Windows Server 2022 Configuration:** A Domain Controller (`DC01`) was installed and configured with Active Directory Domain Services (AD DS) for the domain `corp.aclab.tech`.
-- **Workstation Installation:** A Windows 11 Pro machine (`Win11-01`) was installed to simulate an end-user or IT technician system.
-- **Domain Join:** The Windows 11 workstation was joined to the `corp.aclab.tech` domain, enabling centralized identity and device management from the Domain Controller.
+---
 
-These steps simulate real-world onboarding of new devices into an enterprise Active Directory environment.
+## 1.2: Deploy Windows 11 Workstations & Join to Active Directory
+
+*(Detailed content for this section would go here, including steps, screenshots, and explanations for deploying Windows 11, and joining it to the newly created Active Directory domain.)*
+
+---
+
+## 🔚 Conclusion
+
+Upon completing this chapter, you will have successfully:
+
+* Configured a **Windows Server 2022** as an **Active Directory Domain Controller** and **DHCP server**.
+* Deployed **Windows 11 workstations** and seamlessly joined them to your on-premises domain.
+
+This foundational setup establishes a solid on-premises infrastructure, essential for advanced identity, endpoint, and security configurations in the upcoming chapters.
+
+---
