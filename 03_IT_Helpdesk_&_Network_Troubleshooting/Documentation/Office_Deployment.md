@@ -10,7 +10,7 @@ This section guides you through the deployment of Microsoft 365 Apps (Office 365
 
 You will start by uninstalling any existing Office installations to avoid conflicts, then prepare and customize the ODT configuration file, and finally deploy the applications efficiently across your Windows machines.
 
-## 🛠️ Steps:
+## 🧭 Steps:
 
 ### Recommended Method: Microsoft Support and Recovery Assistant (SaRA)
 
