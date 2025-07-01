@@ -54,7 +54,7 @@ corp.aclab.tech\ali.choukatli
 
 ---
 
-## 🔴 **If you are unable to connect to a target machine via Remote Desktop Protocol (RDP)**
+## ⚠️ **If you are unable to connect to a target machine via Remote Desktop Protocol (RDP)**
 
 ### 1. **Check Network Connectivity**
 
