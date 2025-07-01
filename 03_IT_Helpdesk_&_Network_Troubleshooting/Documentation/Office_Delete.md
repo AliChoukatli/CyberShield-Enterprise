@@ -50,6 +50,6 @@ This [script](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/0
 ---
 
 ## 📎 Credits
-Author Website: **[Aaron Viehl](https://github.com/Admonstrator)**  
+Author Website: [Aaron Viehl](https://github.com/Admonstrator)
 [Script](https://github.com/Admonstrator/msoffice-removal-tool/blob/main/msoffice-removal-tool.ps1)
 
