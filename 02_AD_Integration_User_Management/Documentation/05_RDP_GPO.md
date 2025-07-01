@@ -18,9 +18,9 @@ This is a best practice in hardening domain-joined endpoints in enterprise envir
 
 ---
 
-## 🛠️ Steps
 
-### 1. Create Active Directory Security Groups for RDP Access:
+
+## 🚀 Step 1 - Create Active Directory Security Groups for RDP Access:
    
 A. **Create the `RDP-Users` Group:**
 
@@ -55,7 +55,7 @@ D. **Add Support Team Users to the IT-Support-RDP Group:**
 
 >(This image shows the IT-Support-RDP group with a member added.)
 
-2. **Create and Configure a GPO for RDP Access**:
+## 🚀 Step 2 - **Create and Configure a GPO for RDP Access**:
 
    - Open the **Group Policy Management Console**.
    - Right-click on your **Domain** > **Create a GPO in this domain, and Link it here...**.
@@ -70,7 +70,7 @@ D. **Add Support Team Users to the IT-Support-RDP Group:**
     
   ![RDP-policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/02_AD_Integration_User_Management/Screenshots/RDP_Policy.png)
 
-3. **Force a Group Policy Update**:
+## 🚀 Step 3 - **Force a Group Policy Update**:
 
    On the target VM (**LTP-EMP01**), run:
 
@@ -78,7 +78,7 @@ D. **Add Support Team Users to the IT-Support-RDP Group:**
    gpupdate /force
    ```
 
-4. Test the Access:
+## 🚀 Step 4 - Test the Access:
 
  - Log in as Sophia Martinez from another device using RDP to LTP-EMP01.
    
