@@ -31,6 +31,6 @@ Disable the account before deleting to avoid accidental data loss.
 ![* Disable account dialog](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/Disable_acc.png)
 
 
-### ✅ Conclusion
+### 🔚 Conclusion
 
 By following this process, you ensure that user accounts are properly removed from Active Directory while minimizing the risk of unintentional consequences. Disabling the account first adds an extra layer of safety, making account management both secure and reversible if needed.
