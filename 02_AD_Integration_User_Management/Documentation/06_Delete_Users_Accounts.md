@@ -15,7 +15,7 @@ Before deleting an account:
 
 ---
 
-## 🔴 **Delete a User in Active Directory**
+## 🚀 **Delete a User in Active Directory**
 
 1. Open **ADUC**
 2. Navigate to the appropriate OU
