@@ -274,7 +274,7 @@ Allows Microsoft Sentinel to recognize and classify entities from the query resu
 
 ---
 
-## ✅ Conclusion
+## 🔚 Conclusion
 
 Custom analytics rules in Microsoft Sentinel enhance detection of identity-based threats by targeting specific scenarios like multiple failed logins followed by success, unusual sign-ins, and impossible travel. These rules improve visibility, reduce response time, and support proactive threat hunting.
 
