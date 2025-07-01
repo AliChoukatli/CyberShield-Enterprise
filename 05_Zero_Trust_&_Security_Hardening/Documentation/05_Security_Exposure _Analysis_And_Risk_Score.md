@@ -79,7 +79,8 @@ This structured approach reinforces Zero Trust principles and supports framework
 
 ![Req_win11_update](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Req_Win11update.png)
 
-#### ✅ **Remediation**: Update Windows 11
+#### ✔️ Remediation: Apply the latest Windows 11 security updates using enterprise patch management solutions (e.g., Microsoft Intune, WSUS, or SCCM).
+
 
 ---
 
