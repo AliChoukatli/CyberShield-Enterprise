@@ -53,25 +53,25 @@ Implementing these solutions strengthens identity security, improves user experi
 
 ---
 
-#### 🔧 Configure Windows Hello for Business via Intune
+### 🚀 **Steps - Configure Windows Hello for Business via Intune**
 
-1. Go to **Microsoft Intune Admin Center**:  
+#### 🚀 **Step 1. Go to **Microsoft Intune Admin Center:**
    `https://intune.microsoft.com`
 
-2. Navigate to:  
+#### 🚀 **Step 2. Navigate to:**
    **Endpoint security > Account protection** → Click **+ Create Policy**
 
-3. Choose:
+#### 🚀 **Step 3. Choose:**
 
    - **Platform**: *Windows 10 and later*
    - **Profile**: *Account protection*
 
-4. Click **Create**, then fill in:
+#### 🚀 **4. Click **Create**, then fill in:**
 
    - **Name**: *Windows Hello for Business
    - **Description** (optional)
 
-5. ## Recommended Settings
+#### 🚀 **Step 5. ## Recommended Settings**
  
 | Setting                                          | Recommended Value                                                                                                 
 |--------------------------------------------------|-----------------------------|
@@ -88,9 +88,9 @@ Implementing these solutions strengthens identity security, improves user experi
 
 ![Hello-Policy-Config](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Hello-Policy-Config.png)
 
-6. Click **Next**, assign to appropriate user or device groups.
+#### 🚀 **Step 6. Click **Next**, assign to appropriate user or device groups.**
 
-7. Complete and click **Create**.
+#### 🚀 **Step 7. Complete and click **Create.**
 
 ![Hello-Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Hello-Policy.png)
 
@@ -105,7 +105,7 @@ Once the policy is applied, users will:
 
 ![Hello-Verif](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Hello-Verif.png)
 
-5. Optionally enable **Fingerprint** or **Face Recognition**, if available
+3. Optionally enable **Fingerprint** or **Face Recognition**, if available
 
 > ✅ The device is now fully cloud-joined and uses passwordless sign-in with TPM-backed credentials.
 
