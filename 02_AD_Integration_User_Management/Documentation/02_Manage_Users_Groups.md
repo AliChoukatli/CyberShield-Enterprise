@@ -84,7 +84,7 @@ This will add the user to the **Domain Users** group, ensuring they have the bas
 
 ---
 
-## ✅ Conclusion
+## 🔚 Conclusion
 
 By the end of this section:
 
