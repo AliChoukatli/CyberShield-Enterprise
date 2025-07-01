@@ -21,7 +21,7 @@ By applying these configurations, organizations can maintain a robust firewall p
 * [✅ Method 1 - Hybrid with Group Policy (GPO)](#-method-1---hybrid-with-group-policy-gpo)
 * [✅ Method 2 - Full Cloud with Microsoft Intune](#-method-2---full-cloud-with-microsoft-intune)
 * [🔚 Conclusion](#-conclusion)
-* 
+  
 ---
 
 ## 🎯 Objective
