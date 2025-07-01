@@ -18,15 +18,12 @@ Each step includes a validated configuration, screenshots, and PowerShell comman
 
 ---
 
-## 1. Restrict Local Administrator Rights on Azure AD Joined Devices
+## 🚫 **1. Restrict Local Administrator Rights on Azure AD Joined Devices**
 
-### 🚨 Problem
-
+### 🚨 **Problem**
 By default, when a device is **Azure AD Joined**, the first user who signs in becomes a **local administrator**.
 
-### 🎯 Goal
-
-Prevent all Azure AD users from automatically becoming local administrators on Windows devices. Only allow members of a specific Azure AD group (e.g., "Local Admins") to have local admin rights.
+### 🎯 **Goal :** Prevent all Azure AD users from automatically becoming local administrators on Windows devices. Only allow members of a specific Azure AD group (e.g., "Local Admins") to have local admin rights.
 
 ### ✅ Solution
 
@@ -74,15 +71,15 @@ Computer Management → Local Users and Groups → Groups → Administrators
 
 ---
 
-## 2. Turn off Software Installations
+## 🚫 **2. Turn off Software Installations**
 
-📍 **Goal:** Prevent users from installing unauthorized software (.msi or .exe)
-
-⚠️ Risk
-
+### 🚨Problem
 - Malware and ransomware infections via untrusted applications  
 - Unpatched vulnerabilities in outdated software  
 - Increased attack surface for lateral movement or privilege escalation  
+
+### 🎯 **Goal :**
+Prevent users from installing unauthorized software (.msi or .exe)
 
 ✅ Combined Solution Strategy
 
