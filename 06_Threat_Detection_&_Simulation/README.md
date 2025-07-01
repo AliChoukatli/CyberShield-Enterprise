@@ -1,4 +1,4 @@
-# 06_Threat_Detection_&_Simulation
+# Threat Detection & Simulation
 
 ## 🎯 Objective
 
