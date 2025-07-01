@@ -149,7 +149,7 @@ Instructions
 
 ---
 
-## ✅ Conclusion
+## 🔚 Conclusion
 
 At the end of this initial configuration:
 
