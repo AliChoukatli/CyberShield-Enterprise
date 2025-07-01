@@ -11,7 +11,7 @@ Establishing a robust Active Directory domain is the cornerstone of any enterpri
 ## 📘 Table of Contents
 
 * [1.1: Windows Server 2022 Setup: Active Directory & DHCP](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/01_AD_Domain_Setup_%26_Workstation_Join/Documentation/AD_Domain_Setup.md)
-* [1.2: Deploy Windows 11 Workstations & Join to Active Directory](#12-deploy-windows-11-workstations--join-to-active-directory)
+* [1.2: Deploy Windows 11 Workstations & Join to Active Directory](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/01_AD_Domain_Setup_%26_Workstation_Join/Documentation/Workstation_Join.md)
 
 ---
 
@@ -23,7 +23,7 @@ Establishing a robust Active Directory domain is the cornerstone of any enterpri
 
 ## 1.2: Deploy Windows 11 Workstations & Join to Active Directory
 
-*(Detailed content for this section would go here, including steps, screenshots, and explanations for deploying Windows 11, and joining it to the newly created Active Directory domain.)*
+*(Detailed content for this section would go here, including steps and explanations for deploying Windows 11, and joining it to the newly created Active Directory domain.)*
 
 ---
 
