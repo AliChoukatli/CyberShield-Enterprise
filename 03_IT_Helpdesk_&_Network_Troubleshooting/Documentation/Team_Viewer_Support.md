@@ -1,4 +1,4 @@
-# 🧩 Remote Support with TeamViewer
+# 🖥️ Remote Support with TeamViewer
 
 ## 🎯 Objective
 
@@ -12,7 +12,7 @@ You’ll learn how to install the appropriate versions on both devices, establis
 
 ---
 
-#### 🧰 **Prerequisites**
+## 🧰 **Prerequisites**
 
 - TeamViewer installed on both **LTP-HLP01** (Helpdesk) and **LTP-EMP01** (Employee)
 - Internet connectivity
@@ -21,7 +21,7 @@ You’ll learn how to install the appropriate versions on both devices, establis
 
 ---
 
-#### Download & Install TeamViewer
+### 🚀 Step 1 - Download & Install TeamViewer
 
 🔹 **On both LTP-HLP01 and LTP-EMP01:**
 
@@ -47,7 +47,7 @@ You’ll learn how to install the appropriate versions on both devices, establis
 
 ---
 
-#### Simulate Remote Support from LTP-HLP01
+### 🚀 Step 2 - Simulate Remote Support from LTP-HLP01
 
 1. On **LTP-EMP01**, ensure TeamViewer is open and note:
    - Your ID
@@ -70,7 +70,7 @@ You should now have remote access to the user's desktop.
 ![Session-TV](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/session-TV.png)
 
 
-#### 🔴**End Support Session Securely**
+### 🚀 Step 3 - **End Support Session Securely**
 
 1. When support is complete, click the **X** in the TeamViewer window to end the session.
 
