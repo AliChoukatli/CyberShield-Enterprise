@@ -14,12 +14,12 @@ The configuration is done using Intune security policies, allowing centralized d
 
 ---
 
-### 🛡️ Step 1 – Access Endpoint Security Policies 
+### 🚀 **Step 1 – Access Endpoint Security Policies**
 
 1. Go to [https://intune.microsoft.com](https://intune.microsoft.com)  
 - Navigate to **Endpoint security > Antivirus**
   
-### 🛡️ Step 2 – Create Antivirus Policy  
+### 🚀 **Step 2 – Create Antivirus Policy** 
 
 1. Click **+ Create Policy**
 2. Platform: **Windows 10 and later**
@@ -31,7 +31,7 @@ The configuration is done using Intune security policies, allowing centralized d
 
 ---
 
-### 🛡️ Step 3 – Configure Antivirus Settings  
+### 🚀 **Step 3 – Configure Antivirus Settings**
 
 | Parameter                                      | Value / Status                          |
 |-----------------------------------------------|---------------------------------------|
@@ -57,7 +57,7 @@ The configuration is done using Intune security policies, allowing centralized d
 
 ---
 
-### 🛡️ Step 4 – Assign Policy  
+### 🚀 **Step 4 – Assign Policy**
 
 - Assign to group: `Windows 10/11 devices`
 - Click **Next** then **Create**
@@ -66,7 +66,7 @@ The configuration is done using Intune security policies, allowing centralized d
 
 ---
 
-### 🛡️ Step 5 – Validation (PowerShell)
+### 🚀 **Step 5 – Validation (PowerShell)**
 
 - On a client machine, open PowerShell and run:  
   ```powershell
@@ -91,7 +91,7 @@ The configuration is done using Intune security policies, allowing centralized d
   ```
 ![Defender_Validation](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Defender_Validation_Script.png)
 
-### 🛡️ Step 6 - Review Policy Report
+### 🚀 **Step 6 - Review Policy Report**
 - Go to Devices > Configuration
 - Select policy: Defender Antivirus Baseline 24H2
 - Select View Report
