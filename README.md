@@ -1,11 +1,5 @@
 # Azure & M365 Security Lab: Build Your Enterprise Cyber Defense 🛡️
 
-![GitHub last commit](https://img.shields.io/github/last-commit/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME?style=for-the-badge)
-![GitHub stars](https://img.shields.io/github/stars/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME?style=for-the-badge)
-
----
-
 ## 🎯 Project Overview
 
 **Azure & M365 Security Lab: Build Your Enterprise Cyber Defense** is a comprehensive hands-on project demonstrating the deployment and hardening of a modern cybersecurity posture within a cloud-native and hybrid environment, primarily leveraging Microsoft security services. This project covers the full lifecycle of securing an enterprise, from foundational setup and identity management to endpoint protection, system hardening, and real-time threat detection.
