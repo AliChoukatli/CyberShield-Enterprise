@@ -156,7 +156,7 @@ E. Removable Drives
 
 ---
 
-## ✅ Conclusion
+## 🔚 Conclusion
 
 By following this structured approach—starting with a test group, creating dynamic device groups, configuring detailed BitLocker policies, and assigning policies through Intune—you can confidently deploy BitLocker at scale. This method safeguards sensitive data, enforces compliance, and integrates seamlessly into your existing cloud or hybrid device management strategy.
 
