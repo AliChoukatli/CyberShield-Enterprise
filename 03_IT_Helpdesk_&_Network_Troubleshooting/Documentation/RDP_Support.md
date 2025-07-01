@@ -147,7 +147,7 @@ netsh advfirewall firewall add rule name="Allow ICMPv4-In" protocol=icmpv4:8,any
 
 ---
 
-## ✅ Conclusion
+## 🔚 Conclusion
 
 After completing this section:
 
