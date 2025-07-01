@@ -112,10 +112,6 @@ Get-CASMailbox -ResultSize Unlimited | Select Name, UserPrincipalName, PopEnable
 - Block access.
 - Enable and test carefully to avoid lockouts.
 
-(Full instructions with PowerShell commands and screenshots above.)
-
----
-
 Microsoft has reintroduced a simplified option to block legacy authentication clients in Conditional Access.
 
 ### 🧭 How to Configure:
