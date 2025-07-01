@@ -84,7 +84,7 @@ You should now have remote access to the user's desktop.
 
 ---
 
-## ✅ Conclusion
+## 🔚 Conclusion
 
 After completing this section:
 
