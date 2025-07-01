@@ -146,7 +146,7 @@ Your environment is now ready to leverage **Microsoft Intune** for full device l
 
 ---
 
-### ✅ Conclusion
+### 🔚 Conclusion
 
 By completing this section, you have:
 
