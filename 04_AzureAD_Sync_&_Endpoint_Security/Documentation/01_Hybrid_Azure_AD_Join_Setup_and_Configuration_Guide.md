@@ -225,7 +225,7 @@ This confirms your devices are successfully registered and managed via Microsoft
 
 ---
 
-## ✅ Conclusion
+## 🔚 Conclusion
 
 After completing this section, you will have:
 
