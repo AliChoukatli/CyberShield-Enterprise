@@ -103,9 +103,7 @@ Each security control in this project was designed not only to enhance protectio
 To explore or replicate this project, you will need:
 
 * An Azure Subscription with appropriate permissions.
-* A Microsoft 365 Tenant (or Azure AD tenant).
-* Basic understanding of Windows operating systems and networking concepts.
-* (Optional) Access to a lab environment for hands-on practice.
+* A Microsoft 365 Tenant.
 
 Detailed setup instructions for the lab environment are provided in **Chapter 1**.
 
