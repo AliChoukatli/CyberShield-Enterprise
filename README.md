@@ -12,7 +12,7 @@
 - [🎯 Project Overview](#-project-overview)
 - [📝 Introduction](#-introduction)
 - [📘 Table of Contents (Full Lab)](#-table-of-contents)
-- [✨ Key Security Domains & Tools Implemented](#-key-security-domains--tools-implemented)
+- [✨ Security Domains, Tools & Skills Demonstrated]()
 - [📈 Security Transformation: Before vs. After](#-security-transformation-before-vs-after)
 - [✅ Compliance Mapping](#-compliance-mapping)
 - [🛠️ Prerequisites & Lab Setup](#️-prerequisites--lab-setup)
@@ -74,27 +74,15 @@ Navigate through the chapters to explore detailed implementations and configurat
 
 ---
 
-## ✨ Key Security Domains & Tools Implemented
+## ✨ Security Domains, Tools & Skills Demonstrated
 
 This project demonstrates practical skills in:
 
-* **Identity & Access Management (IAM):** Active Directory, DHCP, MFA, Conditional Access, LAPS, Role-Based Access Control (RBAC).
-* **Endpoint Security:** Windows Server 2022, Windows 11, Device Hardening, BitLocker Encryption, Microsoft Defender for Endpoint.
-* **Security Operations (SecOps):** Microsoft Sentinel deployment, Data Connectors, Kusto Query Language (KQL) for custom detection rules.
-* **Governance, Risk, & Compliance (GRC):** Risk mitigation strategies, compliance mapping with ISO 27001 and NIST CSF.
-* **Cloud Security:** Leveraging Azure and Microsoft 365 security services.
-* **Tools Used:** Azure Active Directory (Microsoft Entra ID), Microsoft Intune, Microsoft Defender XDR (for Endpoint & Office 365), Microsoft Sentinel, Group Policy Objects (GPO), PowerShell.
-
----
-
-## 🚀 Skills Demonstrated
-
-- Deploy and manage **Active Directory** and **Azure AD hybrid environments**
-- Configure **Microsoft Intune** for device compliance and security baselines
-- Enforce **BitLocker encryption**, **firewall rules**, and **Defender policies**
-- Implement **Zero Trust principles** using MFA, Conditional Access, and LAPS
-- Monitor and analyze threats with **Microsoft Sentinel and KQL**
-- Align security implementations with **ISO 27001** and **NIST CSF**
+- **IAM & Identity Protection:** Active Directory, Azure AD (Entra ID), Conditional Access, MFA, LAPS, RBAC
+- **Endpoint Security:** Windows 11 / Server 2022, Intune, BitLocker, Microsoft Defender for Endpoint, GPO
+- **SecOps & Monitoring:** Microsoft Sentinel, KQL detection rules, Data Connectors
+- **Cloud & Compliance:** Intune policies, Zero Trust model, ISO 27001 / NIST CSF alignment
+- **Key Tools:** PowerShell, Microsoft 365, Intune, Sentinel, Microsoft Defender XDR
 
 ---
 
