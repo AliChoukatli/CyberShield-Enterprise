@@ -44,8 +44,6 @@ Whether deploying new machines or onboarding existing endpoints, this process al
 
 💡 If you already created a GPO named `Auto Device Registration` for Hybrid Azure AD Join, you can now **extend** it to include Intune MDM auto-enrollment.
 
----
-
 #### 📍 GPO Path:
 
 Computer Configuration
