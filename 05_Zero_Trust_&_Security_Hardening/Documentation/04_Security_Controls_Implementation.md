@@ -23,7 +23,8 @@ Each step includes a validated configuration, screenshots, and PowerShell comman
 ### 🚨 **Problem**
 By default, when a device is **Azure AD Joined**, the first user who signs in becomes a **local administrator**.
 
-### 🎯 **Goal :** Prevent all Azure AD users from automatically becoming local administrators on Windows devices. Only allow members of a specific Azure AD group (e.g., "Local Admins") to have local admin rights.
+### 🎯 **Goal :** 
+Prevent all Azure AD users from automatically becoming local administrators on Windows devices. Only allow members of a specific Azure AD group (e.g., "Local Admins") to have local admin rights.
 
 ### ✅ Solution
 
