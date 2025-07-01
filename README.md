@@ -27,7 +27,6 @@ Navigate through the chapters to explore detailed implementations and configurat
     * 2.3: File Share & NTFS Permissions Configuration
     * 2.4: RDP Access Control via Group Policy
     * 2.5: Deleting a User Account in Active Directory
-    * *(Note: Based on your provided file list for Chapter 2, there are also `04_GPO_Baseline_Policies.md` that could be included if desired.)*
 * **[Chapter 3: 03_IT_Helpdesk_&_Network_Troubleshooting](03_IT_Helpdesk_&_Network_Troubleshooting/README.md)**
     * 3.1: Deploying Microsoft 365 with ODT and PowerShell
     * 3.2: Secure RDP Access for IT Support
