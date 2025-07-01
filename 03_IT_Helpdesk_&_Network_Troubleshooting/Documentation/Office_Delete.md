@@ -50,7 +50,7 @@ This [script](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/0
 ---
 
 ## 📎 Credits
-Script author: **Aaron Viehl (Singleton Factory GmbH)**  
+Script author: **[Aaron Viehl](https://github.com/Admonstrator) (Singleton Factory GmbH)**  
 Website: [(https://github.com/Admonstrator/msoffice-removal-tool/blob/main/msoffice-removal-tool.ps1)]
 
 ---
