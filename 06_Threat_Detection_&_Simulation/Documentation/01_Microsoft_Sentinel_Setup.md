@@ -33,7 +33,7 @@ You will learn how to set up the necessary infrastructure, activate Sentinel, co
 - Microsoft Defender data sources enabled (optional but recommended)
 
 
-## 🎯 1 - Log Analytics Workspace Setup
+## 🚀 **1 - Log Analytics Workspace Setup**
 
 1. Go to the [Azure Portal](https://portal.azure.com).
 2. Search for **"Log Analytics Workspaces"** and click **Create**.
@@ -46,7 +46,7 @@ You will learn how to set up the necessary infrastructure, activate Sentinel, co
 
 ![Log_Analytic](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Log_Analytic_Ov.png)
 
-## 🎯 2 - Microsoft Sentinel Activation
+## 🚀 **2 - Microsoft Sentinel Activation**
 
 1. In the Azure Portal, search for **"Microsoft Sentinel"**.
 2. Click **+ Add** or **+ Create**.
@@ -56,11 +56,11 @@ You will learn how to set up the necessary infrastructure, activate Sentinel, co
 ![Sentinel_OV](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/Sentinel_OV.png)
 
 
-## 🎯 3 - Data Connectors Configuration
+## 🚀 **3 - Data Connectors Configuration**
 
 This section explains how to enable and configure key Microsoft Sentinel data connectors to ingest logs from critical Microsoft services such as Azure AD, Defender for Endpoint, and Office 365.
 
-### 🔹 3.1 Azure Active Directory (Microsoft Entra ID)
+### 🔹 **3.1 Azure Active Directory (Microsoft Entra ID)**
 
 #### Purpose
 
@@ -111,7 +111,7 @@ SigninLogs | take 10
 
 ---
 
-### 🔹 3.2 Microsoft Defender XDR
+### 🔹 **3.2 Microsoft Defender XDR**
 
 #### Purpose
 
