@@ -76,7 +76,7 @@ ipconfig /all
 
  ---
  
- ## ✅ Conclusion
+ ## 🔚 Conclusion
 
 After completing this section:
 
