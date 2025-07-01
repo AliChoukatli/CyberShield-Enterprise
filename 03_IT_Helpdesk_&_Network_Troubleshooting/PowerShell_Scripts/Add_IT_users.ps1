@@ -1,4 +1,4 @@
-# Liste of 10 users to ad to AD
+# List of 10 users to add to AD
 
 $users = @(
     @{ FirstName = "Ali"; LastName = "Chou" },
