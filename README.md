@@ -92,8 +92,6 @@ All policies and technologies are aligned with Zero Trust security model.
 
 ## ✅ Compliance Mapping
 
-Our technical implementations directly contribute to meeting security and compliance requirements, aligning our operations with recognized frameworks such as ISO 27001 and the NIST Cybersecurity Framework (CSF).
-
 | Technical Implementation  | GRC Domain / Compliance Objective (ISO 27001 / NIST CSF)                         | Specific GRC Benefit                                          |
 |---------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------|
 | **MFA (Multi-Factor Authentication)** | **ISO 27001 A.9.2.1** (User registration and deregistration)<br>**NIST PR.AC-7** (Privileged access) | Strengthens identity authentication, reducing risk of unauthorized access. |
