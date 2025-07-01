@@ -1,4 +1,4 @@
-# 🧩 02_AD_Integration_User_Management
+# 🧩 AD_Integration_User_Management
 
 ## 🎯 Objective  
 This chapter focuses on essential user and group management within Active Directory.  
