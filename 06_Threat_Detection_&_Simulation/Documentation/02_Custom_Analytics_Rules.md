@@ -10,7 +10,7 @@ Microsoft Sentinel enables the creation of custom analytics rules using Kusto Qu
 
 ---
 
-## 🎯 Detect Multiple Failed Logins Followed by Success
+## 🎯 **1. Detect Multiple Failed Logins Followed by Success**
 
 **📌 Use Case**: Detect brute force or password spraying attacks where a user fails multiple sign-ins and then succeeds.
 
@@ -107,7 +107,7 @@ When an analytics rule triggers alerts, Microsoft Sentinel can automatically gro
 
 ---
 
-## 🎯 Unusual Location Sign-in
+## 🎯 **2. Unusual Location Sign-in**
 
 **📌 Use Case** : Detects when a user signs in successfully from geographic locations that deviate from their usual login patterns. This may indicate potential account compromise or unauthorized access attempts using stolen credentials.
 
@@ -188,7 +188,7 @@ This may indicate suspicious activity such as compromised credentials or account
 ---
 
 
-## 🎯 Impossible Travel Detection
+## 🎯 **3. Impossible Travel Detection**
 
 **📌 Use Case** : Detects login activities from geographically distant locations that are not possible to travel between within the observed timeframe. This is a strong indicator of account compromise through credential theft or session hijacking.
 
