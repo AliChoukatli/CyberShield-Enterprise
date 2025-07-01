@@ -21,26 +21,26 @@ Navigate through the chapters to explore detailed implementations and configurat
 * **[Chapter 1: AD_Domain_Setup_&_Workstation_Join](01_AD_Domain_Setup_&_Workstation_Join/README.md)**
     * 1.1: Windows Server 2022 Setup: Active Directory & DHCP
     * 1.2: Deploy Windows 11 Workstations & Join to Active Directory
-* **[Chapter 2: 02_AD_Integration_User_Management](02_AD_Integration_User_Management/README.md)**
+* **[Chapter 2: AD_Integration_User_Management](02_AD_Integration_User_Management/README.md)**
     * 2.1: Creating and Managing Organizational Units (OUs)
     * 2.2: Managing Users and Security Groups in Active Directory
     * 2.3: File Share & NTFS Permissions Configuration
     * 2.4: RDP Access Control via Group Policy
     * 2.5: Deleting a User Account in Active Directory
-* **[Chapter 3: 03_IT_Helpdesk_&_Network_Troubleshooting](03_IT_Helpdesk_&_Network_Troubleshooting/README.md)**
+* **[Chapter 3: IT_Helpdesk_&_Network_Troubleshooting](03_IT_Helpdesk_&_Network_Troubleshooting/README.md)**
     * 3.1: Deploying Microsoft 365 with ODT and PowerShell
     * 3.2: Secure RDP Access for IT Support
     * 3.3: Reset User Passwords & Unlock Accounts
     * 3.4: Remote Support with TeamViewer
     * 3.5: Network Troubleshooting & Connectivity Checks
-* **[Chapter 4: 04_AzureAD_Sync_&_Endpoint_Security](04_AzureAD_Sync_&_Endpoint_Security/README.md)**
+* **[Chapter 4: AzureAD_Sync_&_Endpoint_Security](04_AzureAD_Sync_&_Endpoint_Security/README.md)**
     * 4.1: Hybrid Azure AD Join – Enable Device Sync & Registration
     * 4.2: Microsoft Intune – Device Enrollment & Auto-Registration
     * 4.3: Microsoft Defender Antivirus Deployment via Intune
     * 4.4: Microsoft Defender for Endpoint (MDE) Onboarding Guide
     * 4.5: Microsoft Defender Firewall Configuration
     * 4.6: BitLocker Deployment via Microsoft Intune
-* **[Chapter 5: 05_Zero_Trust_&_Security_Hardening](05_Zero_Trust_&_Security_Hardening/README.md)**
+* **[Chapter 5: Zero_Trust_&_Security_Hardening](05_Zero_Trust_&_Security_Hardening/README.md)**
     * 5.1: Multi-Factor Authentication (MFA) Configuration Guide
     * 5.2: Conditional Access & Identity Protection Policies
     * 5.3: User Rights Assignment – Hardening Settings (Hybrid or Local AD)
@@ -48,7 +48,7 @@ Navigate through the chapters to explore detailed implementations and configurat
     * 5.5: Security Exposure Analysis, Remediation & Risk Management
     * 5.6: Local Administrator Password Management (LAPS) with Intune
     * 5.7: LAPS Integration with Microsoft Sentinel: Monitoring and Detection Guide
-* **[Chapter 6: 06_Threat_Detection_&_Simulation](06_Threat_Detection_&_Simulation/README.md)**
+* **[Chapter 6:Threat_Detection_&_Simulation](06_Threat_Detection_&_Simulation/README.md)**
     * 6.1: Microsoft Sentinel – Setup 
     * 6.2: Custom Analytics Rules (Microsoft Sentinel)
     * 6.3 : Playbooks (Soon)
