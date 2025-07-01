@@ -86,7 +86,7 @@ This project highlights applied skills across critical security domains using Mi
 
 - **Cloud Security & Compliance:** Deployment of Zero Trust architecture principles, policy enforcement via Intune, and alignment with compliance standards such as **ISO 27001** and **NIST Cybersecurity Framework**.
 
-- **Tooling & Automation:** Use of Microsoft 365 Security Suite, Microsoft Defender XDR, PowerShell scripting, Microsoft Sentinel, and Intune for configuration, automation, and policy management.
+- **Tooling & Automation:** Microsoft 365 Security Suite, Microsoft Defender XDR, PowerShell scripting, Microsoft Sentinel, and Intune for configuration, automation, and policy management.
 
 
 ---
