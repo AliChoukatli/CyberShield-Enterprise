@@ -100,7 +100,7 @@ The configuration is done using Intune security policies, allowing centralized d
 
 ---
 
-## ✅ Conclusion
+## 🔚 Conclusion
 
 With Microsoft Defender Antivirus now configured via Intune:
 
