@@ -12,7 +12,6 @@ You'll learn how to activate RDP, assign group permissions locally or via PowerS
 
 ---
 
-
 ## 🚀 Step 1 - **Enable Remote Desktop on LTP-EMP01**
 
 
@@ -30,7 +29,7 @@ Remote Desktop
  
 ---
 
-### 🚀 Step 2 - **Initiate RDP Session from LTP-HLP01**
+## 🚀 Step 2 - **Initiate RDP Session from LTP-HLP01**
 
 #### 🎯 Objective: *Verify remote access works using domain credentials from the support workstation.*
 
