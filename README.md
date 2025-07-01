@@ -12,7 +12,7 @@
 - [🎯 Project Overview](#-project-overview)
 - [📝 Introduction](#-introduction)
 - [📘 Table of Contents (Full Lab)](#-table-of-contents)
-- [✨ Key Security Domains & Tools Implemented](#Key-Security-Domains-&-Tools-Implemented)
+- [✨ Key Security Domains & Tools Implemented](#-key-security-domains--tools-implemented)
 - [📈 Security Transformation: Before vs. After](#-security-transformation-before-vs-after)
 - [✅ Compliance Mapping](#-compliance-mapping)
 - [🛠️ Prerequisites & Lab Setup](#️-prerequisites--lab-setup)
