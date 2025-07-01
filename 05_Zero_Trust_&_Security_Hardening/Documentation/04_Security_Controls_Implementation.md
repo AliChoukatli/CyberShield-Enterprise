@@ -82,7 +82,8 @@ Computer Management → Local Users and Groups → Groups → Administrators
 ### 🎯 **Goal :**
 Prevent users from installing unauthorized software (.msi or .exe)
 
-✅ Combined Solution Strategy
+
+### ✅ Combined Solution Strategy
 
 To fully control software installations, **two layers of protection are required**:
 
