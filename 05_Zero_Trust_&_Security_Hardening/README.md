@@ -1,4 +1,4 @@
-# 05_Zero_Trust_&_Security_Hardening
+# Zero Trust & Security Hardening
 
 ## 🎯 Objective
 
