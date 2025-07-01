@@ -92,7 +92,7 @@ Capture  ADUC view showing the joined computer
 
 ---
 
-## ✅ Conclusion
+## 🔚 Conclusion
 
 After completing this section:
 
