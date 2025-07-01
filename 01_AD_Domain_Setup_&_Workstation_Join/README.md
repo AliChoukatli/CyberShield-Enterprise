@@ -1,4 +1,5 @@
-# AD_Domain_Setup_&_Workstation_Join
+
+# 01_AD_Domain_Setup_&_Workstation_Join
 
 ## 🎯 Objective
 
@@ -8,22 +9,12 @@ This chapter guides you through the foundational setup of your on-premises Activ
 
 Establishing a robust Active Directory domain is the cornerstone of any enterprise IT infrastructure. This chapter covers the essential steps for configuring a Windows Server 2022 as a Domain Controller, setting up DHCP for network address management, and seamlessly joining Windows 11 workstations to your domain. This foundational setup is critical for centralized user and device management, which will be expanded upon in subsequent chapters.
 
+---
+
 ## 📘 Table of Contents
 
-* [1.1: Windows Server 2022 Setup: Active Directory & DHCP](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/01_AD_Domain_Setup_%26_Workstation_Join/Documentation/AD_Domain_Setup.md)
-* [1.2: Deploy Windows 11 Workstations & Join to Active Directory](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/01_AD_Domain_Setup_%26_Workstation_Join/Documentation/Workstation_Join.md)
-
----
-
-## 1.1: Windows Server 2022 Setup: Active Directory & DHCP
-
-*(Detailed content for this section would go here, including steps, screenshots, and explanations for setting up Windows Server 2022, promoting it to a Domain Controller, and configuring DHCP.)*
-
----
-
-## 1.2: Deploy Windows 11 Workstations & Join to Active Directory
-
-*(Detailed content for this section would go here, including steps and explanations for deploying Windows 11, and joining it to the newly created Active Directory domain.)*
+* **[1.1: Windows Server 2022 Setup: Active Directory & DHCP](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/01_AD_Domain_Setup_%26_Workstation_Join/Documentation/AD_Domain_Setup.md)**
+* **[1.2: Deploy Windows 11 Workstations & Join to Active Directory](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/01_AD_Domain_Setup_%26_Workstation_Join/Documentation/Workstation_Join.md)**
 
 ---
 
@@ -35,5 +26,3 @@ Upon completing this chapter, you will have successfully:
 * Deployed **Windows 11 workstations** and seamlessly joined them to your on-premises domain.
 
 This foundational setup establishes a solid on-premises infrastructure, essential for advanced identity, endpoint, and security configurations in the upcoming chapters.
-
----
