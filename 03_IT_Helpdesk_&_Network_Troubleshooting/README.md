@@ -12,11 +12,11 @@ In a modern enterprise, efficient IT support is paramount. This chapter provides
 
 ## 📘 Table of Contents
 
-* **[3.1: Deploying Microsoft 365 with ODT and PowerShell](3.1_Deploy_M365_with_ODT.md)**
-* **[3.2: Secure RDP Access for IT Support](3.2_Secure_RDP_Access_for_IT.md)**
-* **[3.3: Reset User Passwords & Unlock Accounts](3.3_Reset_User_Passwords_Unlock_Accounts.md)**
-* **[3.4: Remote Support with TeamViewer](3.4_Remote_Support_with_TeamViewer.md)**
-* **[3.5: Network Troubleshooting & Connectivity Checks](3.5_Network_Troubleshooting_Checks.md)**
+* **[3.1: Deploying Microsoft 365 with ODT and PowerShell](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_IT_Helpdesk_%26_Network_Troubleshooting/Documentation/Office_Deployment.md)**
+* **[3.2: Secure RDP Access for IT Support](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_IT_Helpdesk_%26_Network_Troubleshooting/Documentation/RDP_Support.md)**
+* **[3.3: Reset User Passwords & Unlock Accounts](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_IT_Helpdesk_%26_Network_Troubleshooting/Documentation/Reset_User_Passwords_%26_Unlock_Accounts.md)**
+* **[3.4: Remote Support with TeamViewer](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_IT_Helpdesk_%26_Network_Troubleshooting/Documentation/Team_Viewer_Support.md)**
+* **[3.5: Network Troubleshooting & Connectivity Checks](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_IT_Helpdesk_%26_Network_Troubleshooting/Documentation/Troubleshoot_Network_Connectivity.md)**
 
 ---
 
