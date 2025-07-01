@@ -29,9 +29,9 @@ Before getting started, ensure the following:
 
 ---
 
-## 🚀 **Steps**
+## 🧭 **Steps**
 
-### 📦 A. Verify On-Prem Domain Join
+### 🚀 **A. Verify On-Prem Domain Join**
 
 1. Run the following command on client machines to verify the on-premises domain join status:
 
@@ -44,14 +44,14 @@ systeminfo | findstr /i "domain"
 
 ---
 
-### 📦 B. Download and Install Azure AD Connect
+### 🚀 **B. Download and Install Azure AD Connect**
 
 1. **Download Azure AD Connect** from the [official Microsoft website](https://www.microsoft.com/en-us/download/details.aspx?id=47594)
 2. Launch the installer and proceed through the wizard.
 
 ---
 
-### 📦 C. Azure AD Connect Configuration (Custom)
+### 🚀 **C. Azure AD Connect Configuration (Custom)**
 
 1. Open **Azure AD Connect** > Click **"Configure"**.
 2. Choose **"Customize"**.
@@ -60,14 +60,14 @@ systeminfo | findstr /i "domain"
 
 ---
 
-### 📦 D. Sign In
+### 🚀 **D. Sign In**
 
 1. Sign in with your **Azure AD Global Admin** credentials:  
    *(e.g., admin@corp.aclab.tech)*.
 
 ---
 
-### 📦 E. Create a Sync Account
+### 🚀 **E. Create a Sync Account**
 
 Create a dedicated sync account used by Azure AD Connect to synchronize data between on-premises AD and Azure AD:
 
@@ -82,7 +82,7 @@ This dedicated account improves security and allows better auditing of sync oper
 
 ---
 
-### 📦 F. Link Directories
+### 🚀 **F. Link Directories**
 
 1. Link your directories:
    - Select **"Use Existing Account"** to connect to your on-premises AD forest.
@@ -92,7 +92,7 @@ This dedicated account improves security and allows better auditing of sync oper
 
 ---
 
-### 📦 G. Enable Password Writeback and Group Writeback
+### 🚀 **G. Enable Password Writeback and Group Writeback**
 
 1. Enable **Password Writeback** and **Group Writeback**:
    - *Recommended to enable these features for hybrid identity management*.
@@ -106,7 +106,7 @@ corp.aclab.tech/
 
 ---
 
-### 📦 H. Enable Single Sign-On (SSO) for Seamless Login Experience
+### 🚀 **H. Enable Single Sign-On (SSO) for Seamless Login Experience**
 
 1. Enable **Single Sign-On (SSO)** for a seamless login experience.
 
@@ -114,7 +114,7 @@ corp.aclab.tech/
 
 ---
 
-### 📦 I. Start the Installation and Synchronization Process
+### 🚀 **I. Start the Installation and Synchronization Process**
 
 1. After reviewing the settings, click **Install** to begin synchronization.
 2. Once complete, run the following PowerShell command to force a delta sync:
@@ -126,7 +126,7 @@ corp.aclab.tech/
 
 ---
 
-### 📦 J. Configure Hybrid Azure AD Join (Windows + Azure AD Connect)
+### 🚀 **J. Configure Hybrid Azure AD Join (Windows + Azure AD Connect)**
 1. Launch AzureAD Connect (Entra Connect Sync) and select Configure Device Options.
 2. Choose Configure Hybrid Microsoft Entra ID Join.
 
@@ -138,7 +138,7 @@ corp.aclab.tech/
 
 ---
 
-### 📦 K. Configure Hybrid Azure AD Join with Auto Device Registration GPO
+### 🚀 **K. Configure Hybrid Azure AD Join with Auto Device Registration GPO**
 
 1. Open the **Group Policy Management Console** (`gpmc.msc`).
 
@@ -146,7 +146,7 @@ corp.aclab.tech/
 
 ---
 
-#### K.1 - Enable Automatic Device Registration
+#### **K.1 - Enable Automatic Device Registration**
 
 - Navigate to:  
   `Computer Configuration` → `Administrative Templates` → `Windows Components` → `Device Registration`
@@ -157,7 +157,7 @@ corp.aclab.tech/
   
 ---
 
-#### K.2 - Add Scheduled Task to Force Hybrid Azure AD Join
+#### **K.2 - Add Scheduled Task to Force Hybrid Azure AD Join**
 
 - Navigate to:  
   `Computer Configuration` → `Preferences` → `Control Panel Settings` → **Scheduled Tasks**
@@ -182,7 +182,7 @@ corp.aclab.tech/
 
 ---
 
-#### K.3 - Apply and Validate
+#### **K.3 - Apply and Validate**
 
 Apply the GPO and force an update on client devices:
 ```bash
@@ -197,7 +197,7 @@ dsregcmd /status
 
 ---
 
-## 📦 L. Entra ID – Device Verification
+## 🚀 **L. Entra ID – Device Verification**
 
 Once the Hybrid Azure AD Join configuration and device registration GPO are applied, you should verify that your domain-joined devices are correctly registered in Microsoft Entra ID.
 
