@@ -11,8 +11,6 @@ This guide explains how to deploy and manage Local Administrator Password Soluti
 
 Following this guide helps improve endpoint security and reduce risks from shared or static local admin passwords.
 
----
-
 ### 📝 Introduction
 
 Managing local admin passwords across many devices is a major security challenge. Static or shared passwords increase risks of unauthorized access and lateral movement.
@@ -34,7 +32,6 @@ Using LAPS with Intune improves security by minimizing risks related to local ad
 - [Step 7 - Rotation Password](#step-7---rotation-password)
 - [Step 8 - Limit LAPS Password Access Rights](#step-8---limit-laps-password-access-rights)
 
----
 
 ## 🔑 Key Features
 
@@ -42,7 +39,7 @@ Using LAPS with Intune improves security by minimizing risks related to local ad
 - Automatic password rotation (e.g., every 30 days)
 - Secure password storage in Azure AD (Entra ID)
 - Admin password retrieval via Intune
-- Optional integration with Microsoft Sentinel
+- **Optional** [integration with Microsoft Sentinel](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Documentation/07_LAPS_Sentinel_Integration.md)
 
  ---
  
