@@ -7,6 +7,17 @@
 ![Microsoft365](https://img.shields.io/badge/Microsoft_365-Security-orange?logo=microsoft&style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
+## 🧭 Quick Navigation
+
+- [🎯 Project Overview](#-project-overview)
+- [📝 Introduction](#-introduction)
+- [📘 Table of Contents (Full Lab)](#-table-of-contents)
+- [✨ Key Project Highlights & Technologies](#-key-project-highlights--technologies)
+- [📈 Security Transformation: Before vs. After](#-security-transformation-before-vs-after)
+- [✅ Compliance Mapping](#-compliance-mapping)
+- [🛠️ Prerequisites & Lab Setup](#️-prerequisites--lab-setup)
+- [🤝 How to Navigate](#-how-to-navigate)
+
 
 ## 🎯 Project Overview
 
