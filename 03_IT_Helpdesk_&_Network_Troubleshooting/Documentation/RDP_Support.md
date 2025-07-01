@@ -31,7 +31,7 @@ System > Remote Desktop
 4. Toggle ON the switch next to:
 Remote Desktop
 
-![RDP-Enable](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/00_IT_Support_%26_Helpdesk/Screenshots/RDP_enable.png)
+![RDP-Enable](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_IT_Helpdesk_%26_Network_Troubleshooting/Screenshots/RDP_enable.png)
  
 ---
 
