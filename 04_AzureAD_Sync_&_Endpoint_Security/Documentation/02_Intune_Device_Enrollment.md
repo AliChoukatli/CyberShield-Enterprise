@@ -21,9 +21,9 @@ Whether deploying new machines or onboarding existing endpoints, this process al
 
 ---
 
-## 🛠️ Steps:
+## 🚀 **Steps:**
 
-### 🔹 Part 1 – Access the Intune Portal
+### 🚀 **Step 1 – Access the Intune Portal**
 - Log in to the [Microsoft Endpoint Manager Admin Center](https://endpoint.microsoft.com/)  
 - Confirm your admin account has the **Intune Administrator** role or equivalent  
 
@@ -31,7 +31,7 @@ Whether deploying new machines or onboarding existing endpoints, this process al
 
 ---
 
-### 🔹 Part 2 – Configure Automatic Enrollment
+### 🚀 **Step 2 – Configure Automatic Enrollment**
 - Navigate to **Devices > Enroll devices > Automatic Enrollment**  
 - Enable **MDM user scope** for targeted groups (e.g., All or specific Azure AD groups)  
 - Save the configuration  
@@ -40,7 +40,7 @@ Whether deploying new machines or onboarding existing endpoints, this process al
 
 ---
 
-### 🔹 Part 3 – Prepare Devices for Intune Enrollment via GPO
+### 🚀 **Step 3 – Prepare Devices for Intune Enrollment via GPO**
 
 💡 If you already created a GPO named `Auto Device Registration` for Hybrid Azure AD Join, you can now **extend** it to include Intune MDM auto-enrollment.
 
@@ -82,7 +82,7 @@ gpupdate /force
 
 ---
 
-### 🔹 Part 4 – DNS Forwarders
+### 🚀 **Step 4 – DNS Forwarders**
 
 Before enrolling devices, ensure your Domain Controller’s DNS can resolve internet domain names by configuring DNS forwarders. This step is essential for devices to communicate properly with Azure AD and Microsoft services during enrollment.
 
@@ -99,7 +99,7 @@ This setup enables your DNS server to forward unresolved queries to public DNS s
 
 ---
 
-### 🔹 Part 5 - Device Enrollment
+### 🚀 **Step 5 - Device Enrollment**
 
 #### Enrolling New Devices (During OOBE)
 - When setting up a new device for the first time (Out-of-Box Experience), **sign in with your Azure AD credentials**.
@@ -128,7 +128,7 @@ Simply follow the on-screen instructions and scan the provided QR code to comple
 
 ---
 
-### 🔹 Part 6 – Verify Enrollment Status
+### 🚀 **Step 6 – Verify Enrollment Status**
 - In the Endpoint Manager portal, go to **Devices > All devices**  
 - Confirm devices appear with status **Compliant** or **Enrolled**
 
