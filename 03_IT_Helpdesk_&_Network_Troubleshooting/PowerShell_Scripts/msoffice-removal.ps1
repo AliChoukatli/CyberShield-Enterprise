@@ -17,8 +17,12 @@ $Office365Setup_URL = "https://github.com/Admonstrator/msoffice-removal-tool/raw
 Function Invoke-OfficeUninstall {
     if (-Not (Test-Path "$SaRA_DIR")) {
         New-Item "$SaRA_DIR" -ItemType Directory | Out-Null
-      }
-    
+    }
+    Remove-SaRA
+    Write-Host "Downloading most recent SaRA build ..."
+    Invoke-SaRADownload
+    Write-Host "Removing Office installations ..."
+    Invoke-SaRA
 }
 
 Function Invoke-SaRADownload {    
