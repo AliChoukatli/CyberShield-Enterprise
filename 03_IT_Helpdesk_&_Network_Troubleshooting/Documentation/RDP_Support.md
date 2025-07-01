@@ -14,21 +14,6 @@ You'll learn how to activate RDP, assign group permissions locally or via PowerS
 
 ## **Remote Support via RDP**
 
-### 📌 **Prepare Active Directory Group for RDP Access**
-
-#### 🎯 Objective : *Create a domain security group for IT support staff to manage RDP permissions centrally.*
-
-1. Open **Active Directory Users and Computers**
-2. Create a new **security group**:
-
-   * Name: `IT-Support-RDP`
-   * Scope: Global
-   * Type: Security
-3. Add support team users to the group (e.g., `ali.choukatli`)
-
-![RDP-Member](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_groupe.png)
-
----
 
 ### 📌 **Enable Remote Desktop on LTP-EMP01**
 
@@ -48,54 +33,6 @@ Remote Desktop
 
 ![RDP-Enable](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/00_IT_Support_%26_Helpdesk/Screenshots/RDP_enable.png)
  
----
-
-### 📌 **Configure RDP Permissions on Target Machine (LTP-EMP01)**
-
-#### 🎯 *Objective : Grant the `IT-Support-RDP` group Remote Desktop rights on the domain-joined client `LTP-EMP01`.*
-
-### 🛠️ Method A – Graphical (Computer Management)
-
-1. Log in to `LTP-EMP01` as a **local administrator** or **domain admin**  
-2. Press `Windows + R`, type `compmgmt.msc`, and hit **Enter**  
-3. Navigate to:  System Tools > Local Users and Groups > Groups
-4. Double-click on **Remote Desktop Users**  
-5. Click **Add...**, then enter:  
-corp.aclab.tech\IT-Support-RDP
-
-6. Click **Check Names** to validate, then click **OK**
-
-![RDP-Member](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_member.png)
-
----
-
-### 🛠️ **Method B – PowerShell**
-
-Run the following as Administrator:
-
-```powershell
-Add-LocalGroupMember -Group "Remote Desktop Users" -Member "corp.aclab.tech\IT-Support-RDP"
-```
----
-
-#### 📌 **PowerShell Script to Add "IT-Support-RDP" to "Remote Desktop Users" on Multiple Machines**
-
-```powershell
-# List of computers
-$computers = @("Machine1", "Machine2", "Machine3")
-
-foreach ($computer in $computers) {
-    # Add the group to the "Remote Desktop Users" group
-    Invoke-Command -ComputerName $computer -ScriptBlock {
-        Add-ADGroupMember -Identity "Remote Desktop Users" -Members "corp.aclab.tech\IT-Support-RDP"
-    } -Credential (Get-Credential)
-}
-
-# computers: Declares a list of remote machines where the script will be applied.
-# Invoke-Command: Runs the command remotely on each machine in the list.
-# Add-ADGroupMember: Adds the "IT-Support-RDP" group to the local "Remote Desktop Users" group on each machine.
-# Credential (Get-Credential): Prompts for credentials required to connect to each remote machine.
-```
 ---
 
 ###  📌 **Initiate RDP Session from LTP-HLP01**
@@ -132,7 +69,8 @@ Confirm that the target machine is reachable from the source (e.g., Helpdesk PC 
 ping <ComputerName or IP>
 Test-NetConnection -ComputerName <Target> -Port 3389
 ```
-### 2. **Check if Remote Desktop Enabled (on target machine)**
+### 2. ** Verify RDP Settings and Firewall Rules (on target machine)**
+
 Ensure RDP is properly enabled:
 ```powershell
 Set-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Terminal Server" -Name "fDenyTSConnections" -Value 0
@@ -150,11 +88,9 @@ netsh advfirewall firewall add rule name="Allow ICMPv4-In" protocol=icmpv4:8,any
 ## 🔚 Conclusion
 
 After completing this section:
+- Remote Desktop is successfully enabled on the client workstation.
+- Domain users from the IT-Support-RDP group (whose RDP access is managed by Group Policy from Chapter 2.4) can now remotely connect to workstations (e.g., LTP-EMP01) using secure credentials.
+- Key troubleshooting steps for RDP connectivity were reviewed.
 
-- RDP is successfully enabled and restricted to the `IT-Support-RDP` group.
-- Domain users like `ali.choukatli` can remotely connect to workstations (e.g., `LTP-EMP01`) using secure credentials.
-- You’ve learned both GUI and PowerShell methods for adding RDP permissions, including remote automation.
-- Troubleshooting and firewall rules were covered to help resolve common RDP issues.
-
-This ensures a secure and manageable remote support setup in your AD environment.
+This confirms a secure and manageable remote support setup in your AD environment
 
