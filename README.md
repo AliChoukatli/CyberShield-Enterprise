@@ -78,15 +78,13 @@ Navigate through the chapters to explore detailed implementations and configurat
 
 This project highlights applied skills across critical security domains using Microsoft technologies:
 
-- **Identity & Access Management (IAM):** Implementation of Active Directory, Azure AD (Microsoft Entra ID), Conditional Access policies, Multi-Factor Authentication (MFA), Local Administrator Password Solution (LAPS), and Role-Based Access Control (RBAC).
-
-- **Endpoint Security:** Hardening and securing Windows 11 workstations and Windows Server 2022 using Microsoft Intune, BitLocker encryption, Microsoft Defender for Endpoint, and Group Policy Objects (GPO).
-
-- **Security Operations (SecOps):** Centralized monitoring through Microsoft Sentinel, with custom detection logic using Kusto Query Language (KQL) and integration of key data connectors.
-
-- **Cloud Security & Compliance:** Deployment of Zero Trust architecture principles, policy enforcement via Intune, and alignment with compliance standards such as **ISO 27001** and **NIST Cybersecurity Framework**.
-
-- **Tooling & Automation:** Microsoft 365 Security Suite, Microsoft Defender XDR, PowerShell scripting, Microsoft Sentinel, and Intune for configuration, automation, and policy management.
+| Domain                          | Description & Tools Used                                                                                                                                   |
+|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **IAM & Identity Protection**   | Active Directory, Azure AD (Microsoft Entra ID), Conditional Access, Multi-Factor Authentication (MFA), LAPS, Role-Based Access Control (RBAC).           |
+| **Endpoint Security**           | Windows 11 & Windows Server 2022 hardening with Intune, BitLocker encryption, Microsoft Defender for Endpoint, Group Policy Objects (GPO).                |
+| **Security Operations (SecOps)**| Microsoft Sentinel setup, custom detection with KQL, integration of data connectors for centralized security monitoring and alerting.                    |
+| **Cloud Security & Compliance**| Zero Trust architecture, Intune policy enforcement, alignment with ISO 27001 and NIST Cybersecurity Framework (CSF).                                      |
+| **Tooling & Automation**        | Microsoft 365 Security Suite, Microsoft Defender XDR, PowerShell scripting, Intune, Microsoft Sentinel.                                                   |
 
 
 ---
