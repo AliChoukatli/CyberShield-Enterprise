@@ -14,7 +14,7 @@ You will start by uninstalling any existing Office installations to avoid confli
 
 ### Recommended Method: Microsoft Support and Recovery Assistant (SaRA)
 
-### Step 1 - Uninstall Existing Office Installation (if applicable)
+### 🚀 **Step 1 - Uninstall Existing Office Installation (if applicable)**
 
 1. Download the script
 
@@ -30,7 +30,7 @@ powershell -ExecutionPolicy Bypass C:\Scripts\msoffice-removal-tool.ps1
 
 ---
 
-### **Step 2 – Download and Prepare the Office Deployment Tool (ODT)**
+### 🚀 **Step 2 – Download and Prepare the Office Deployment Tool (ODT)**
 
 1. Download ODT from Microsoft:
    [https://www.microsoft.com/en-us/download/details.aspx?id=49117](https://www.microsoft.com/en-us/download/details.aspx?id=49117)
@@ -45,7 +45,7 @@ powershell -ExecutionPolicy Bypass C:\Scripts\msoffice-removal-tool.ps1
         │ config.xml
 ---
 
-### **Step 3 – Customize `config.xml`**
+### 🚀 **Step 3 – Customize `config.xml`**
 
 Create or edit `C:\ODT\config.xml` with the following content:
 ```xml
@@ -65,7 +65,7 @@ Create or edit `C:\ODT\config.xml` with the following content:
 </Configuration>
 ```
 
-### **Step 4 – Create the PowerShell Script**
+### 🚀 **Step 4 – Create the PowerShell Script**
 - Create a new script file: C:\Scripts\DeployOffice365.ps1
 ```powershell
 # DeployOffice365.ps1
@@ -80,7 +80,7 @@ Set-ExecutionPolicy RemoteSigned -Scope Process -Force
 Start-Process -FilePath $SetupFilePath -ArgumentList "/configure $ConfigFilePath" -Wait
 ```
 
-### **Step 5 – Run the Script**
+### 🚀 **Step 5 – Run the Script**
 - Open PowerShell as Administrator
 
 - Run the script:
