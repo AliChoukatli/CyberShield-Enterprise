@@ -125,6 +125,8 @@ Once the policy is applied, users will:
 
 ---
 
+## 🧭 **Steps:**
+
 ### 🚀 **Step 1: Verify Prerequisites on Client Device**
 
 - Open PowerShell as an administrator and run:
