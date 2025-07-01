@@ -17,6 +17,7 @@ You will start by uninstalling any existing Office installations to avoid confli
 ### Step 1 - Uninstall Existing Office Installation (if applicable)
 
 1. Download the script
+
 ```powershell
 iwr https://raw.githubusercontent.com/Admonstrator/msoffice-removal-tool/main/msoffice-removal-tool.ps1 -OutFile C:\Scripts\msoffice-removal-tool.ps1
 ```
