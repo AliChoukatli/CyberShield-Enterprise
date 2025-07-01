@@ -98,5 +98,3 @@ You should see Office 365 begin installing in the background.
 ## 🔚 Conclusion
 
 By following this deployment process, you ensure a clean and standardized installation of Microsoft 365 Apps and Visio Pro across your environment. Using the Office Deployment Tool with PowerShell automation allows for repeatable, silent deployments that reduce manual intervention and potential errors.
-
-This method streamlines software management in enterprise environments and lays the foundation for consistent application updates and licensing activation.
