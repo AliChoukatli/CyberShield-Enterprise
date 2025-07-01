@@ -14,7 +14,7 @@ Establishing a proper OU hierarchy is a foundational step for applying **targete
 
 ## 🛠️ Creating and Managing Organizational Units (OUs)
 
-## 🔴 **Create OUs for Each Department**
+## 🚀 **Create OUs for Each Department**
 
 Create the following Organizational Units directly under the domain `corp.aclab.tech`
 
