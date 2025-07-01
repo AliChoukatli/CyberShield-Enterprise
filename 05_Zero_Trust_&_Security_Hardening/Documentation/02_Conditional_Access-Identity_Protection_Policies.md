@@ -25,7 +25,7 @@ By following these guidelines, organizations can strengthen their identity secur
 
 ## 📘 Table of Contents
 
-1. ✅ [Block Legacy Authentication](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/02%20-%20Conditionnal_Access.md#-1-block-legacy-authentication)
+1. 🚫 [Block Legacy Authentication](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/02%20-%20Conditionnal_Access.md#-1-block-legacy-authentication)
    
  - [Option A — Disable Legacy Protocols via Exchange Online (Recommended)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/02%20-%20Conditionnal_Access.md#-option-a--disable-legacy-protocols-via-exchange-online-recommended)
 
@@ -33,13 +33,13 @@ By following these guidelines, organizations can strengthen their identity secur
 
 2. ✅ [Require MFA for All Admin Roles](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/02%20-%20Conditionnal_Access.md#-2-require-mfa-for-all-admin-roles)
 
-3. ✅ [Block Admin Portal Access from Unmanaged Devices](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/02%20-%20Conditionnal_Access.md#-3-block-admin-portal-access-from-unmanaged-devices)
+3. 🚫 [Block Admin Portal Access from Unmanaged Devices](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/02%20-%20Conditionnal_Access.md#-3-block-admin-portal-access-from-unmanaged-devices)
    
 4. ✅ [Require MFA for All Users](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/02%20-%20Conditionnal_Access.md#-4-require-mfa-for-all-users)
    
 5. ✅ [Require Compliant Devices](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/02%20-%20Conditionnal_Access.md#-5-require-compliant-devices)
    
-6. ✅ [Block Access from Unsupported Countries](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/02%20-%20Conditionnal_Access.md#-6-block-access-from-unsupported-countries)
+6. 🚫 [Block Access from Unsupported Countries](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20&%20Security%20Hardening/Documentation/02%20-%20Conditionnal_Access.md#-6-block-access-from-unsupported-countries)
    
 ---
 
