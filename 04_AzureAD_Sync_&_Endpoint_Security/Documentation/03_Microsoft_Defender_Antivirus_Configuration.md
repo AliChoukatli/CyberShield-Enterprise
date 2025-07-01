@@ -14,7 +14,7 @@ The configuration is done using Intune security policies, allowing centralized d
 
 ---
 
-## 🚀 **Steps:**
+## 🧭 **Steps:**
 
 ### 🚀 **Step 1 – Access Endpoint Security Policies**
 
