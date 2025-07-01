@@ -13,19 +13,13 @@ Following this guide helps improve endpoint security and reduce risks from share
 
 ---
 
-## 📝 Introduction
+### 📝 Introduction
 
-Managing local administrator passwords across multiple devices can be a significant security challenge in any organization. Static or shared local admin passwords increase the risk of lateral movement and unauthorized access in the event of a compromise. Microsoft Intune’s integration with Local Administrator Password Solution (LAPS) provides an automated, secure, and scalable way to manage unique local admin passwords on Windows devices.
+Managing local admin passwords across many devices is a major security challenge. Static or shared passwords increase risks of unauthorized access and lateral movement.
 
-----
+Microsoft Intune integrates with Local Administrator Password Solution (LAPS) to automate secure, unique password management for Windows devices. Passwords are randomly generated, rotated regularly, and stored safely in Azure AD.
 
-This solution ensures that each device has a strong, randomized local administrator password that is regularly rotated and securely stored in Azure Active Directory. By implementing LAPS with Intune, organizations can greatly improve their security posture and reduce the attack surface related to local administrative access.
-
-## Overview
-
-Local Administrator Password Management (LAPS) in Intune allows you to automatically manage and rotate local administrator passwords on Windows devices enrolled in Microsoft Endpoint Manager (Intune). Each device gets a unique, complex local admin password that is rotated periodically and securely stored in Azure AD.
-
-This improves security by reducing the risk of lateral movement through shared or static local admin passwords.
+Using LAPS with Intune improves security by minimizing risks related to local admin access.
 
 ## 📘 Table of Contents
 
@@ -40,8 +34,7 @@ This improves security by reducing the risk of lateral movement through shared o
 - [Step 7 - Rotation Password](#step-7---rotation-password)
 - [Step 8 - Limit LAPS Password Access Rights](#step-8---limit-laps-password-access-rights)
 
-
-
+---
 
 ## 🔑 Key Features
 
@@ -51,15 +44,15 @@ This improves security by reducing the risk of lateral movement through shared o
 - Admin password retrieval via Intune
 - Optional integration with Microsoft Sentinel
 
-  
+ ---
+ 
 ## Prerequisites
 
 - Devices enrolled and managed by Intune (Windows 10/11)
 - Appropriate Intune licenses and permissions
 - Devices must be Azure AD joined or Hybrid Azure AD joined
 - Enable Microsoft Entra Local Administrator Password Solution (LAPS)
-
-
+  
 ---
 
 ## 1. 🚀 Step 1 -  Create and Test the Local Admin Script
@@ -138,9 +131,7 @@ New-LocalUser -Name $AccountName -Password $Password -FullName "LAPS Managed Adm
 - The password is rotated automatically based on the configured interval.
 - Monitor password retrieval permissions via Azure AD roles to maintain security.
 
-
 ---
-
 
 ## 🚀 Step 3 - Deploy the Script via Intune
 
