@@ -21,7 +21,7 @@ You will learn how to set up the necessary infrastructure, activate Sentinel, co
 3. [Data Connectors Configuration](#5-data-connectors-configuration)
     - 3.1 [Azure Active Directory](#51-azure-active-directory)
     - 3.2 [Microsoft Defender XDR ( Defender for Endpoint + Office 365]()
-4. [Cost Management](#6-cost-management)
+4. [Cost Management](#cost-management)
 5. [Conclusion](#-Conclusion)
 
 
