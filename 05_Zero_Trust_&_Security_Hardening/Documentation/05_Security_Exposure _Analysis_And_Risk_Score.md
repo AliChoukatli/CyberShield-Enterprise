@@ -73,11 +73,9 @@ This structured approach reinforces Zero Trust principles and supports framework
 
 ### 🧩 1. Update Microsoft Windows 11 (OS and Built-in Applications)
 
-#### **Description**:
-Ensure all Windows 11 system components and built-in apps are up-to-date.
+#### **Description:** Ensure all Windows 11 system components and built-in apps are up-to-date.
 
-#### **Justification**:
-Regular OS updates patch critical vulnerabilities and mitigate exploitation risks.
+#### **Purpose:** Regular OS updates patch critical vulnerabilities and mitigate exploitation risks.
 
 ![Req_win11_update](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Req_Win11update.png)
 
@@ -87,19 +85,17 @@ Regular OS updates patch critical vulnerabilities and mitigate exploitation risk
 
 ### 🚫 2. Turn on PUA Protection in Block Mode
 
-#### **Description:** 
-Enables Microsoft Defender Antivirus to detect and block **Potentially Unwanted Applications (PUAs)**. These may include:
+#### **Description:** Enables Microsoft Defender Antivirus to detect and block **Potentially Unwanted Applications (PUAs)**. These may include:
 - Adware
 - Crypto mining tools
 
-#### **Justification:**
-Blocking PUAs strengthens endpoint security by:
+#### **Purpose:** Blocking PUAs strengthens endpoint security by:
 - Reducing attack surface from non-malicious but risky applications
 - Preventing installation of apps that may degrade system performance or be used as vectors in larger attacks
 
 ![PUA_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/PUA_Req.png)
 
-#### ✅ **Remediation Method** – PowerShell Script
+#### ✅ **Remediation** – PowerShell Script
 
 PUA protection was enabled in **Block Mode** using the following script, executed on target systems:
 
@@ -121,14 +117,11 @@ Get-mpPreference | ft PUAProtection
 
 ### 📁 3. Set Controlled Folder Access to Enabled or Block Mode
 
-#### **Description:**  
-Enable ransomware protection by locking critical folders against unauthorized access.
+#### **Description:** Enable ransomware protection by locking critical folders against unauthorized access.
 
-#### **Justification:**  
-Defends against ransomware attempting to encrypt sensitive user files.
+#### **Purpose:** Defends against ransomware attempting to encrypt sensitive user files.
 
 ![Folder_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Folder_Req.png)
-
 
 #### ✅ **Remediation**
 
@@ -193,11 +186,9 @@ Windows Defender Exploit Guard > ASR > Rules
 
 ### 🌐 5. Enable Network Protection
 
-#### **Description:**  
-Network Protection helps protect devices by blocking connections to potentially harmful domains and IPs, using Microsoft Defender SmartScreen.
+#### **Description:** Network Protection helps protect devices by blocking connections to potentially harmful domains and IPs, using Microsoft Defender SmartScreen.
 
-#### **Justification:**  
-Prevents users from accessing known malicious websites, reducing exposure to drive-by attacks or social engineering.
+#### **Purpose:** Prevents users from accessing known malicious websites, reducing exposure to drive-by attacks or social engineering.
 
 ![NP_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/NP_Req.png)
 
@@ -226,11 +217,9 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender
 
 ### 🚫 6. Block Executable Content from Email Client and Webmail - Intune Method
 
-#### **Description:**  
-Prevent direct execution of embedded content or malicious attachments received via email.
+#### **Description:** Prevent direct execution of embedded content or malicious attachments received via email.
 
-#### **Justification:**  
-Email is a common initial attack vector. This control reduces phishing and malware payload delivery.
+#### **Purpose:** Email is a common initial attack vector. This control reduces phishing and malware payload delivery.
 
 ![Exe_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Exe_Req.png)
 
@@ -264,7 +253,11 @@ Email is a common initial attack vector. This control reduces phishing and malwa
 
 ### 🚫 7. Block Untrusted and Unsigned Processes from USB Devices - GPO Method
 
-## Steps to configure via GPO
+**Description**: Blocks execution of untrusted or unsigned executable files originating from USB drives.
+
+**Purpose**: Prevents malware infections and lateral movement through USB-based attacks, commonly used for delivering ransomware or trojans.
+
+#### ✅ **Remediation:**
 
 1. Open the **Group Policy Management Console (GPMC)** on a domain controller or management workstation.
 
