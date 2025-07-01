@@ -162,7 +162,7 @@ You will see four rule collections:
 
 ---
 
-## 3. Disable Legacy Protocols (IMAP, POP3, SMTP)
+## 🚫 3. Disable Legacy Protocols (IMAP, POP3, SMTP)
 
  Impact
  
