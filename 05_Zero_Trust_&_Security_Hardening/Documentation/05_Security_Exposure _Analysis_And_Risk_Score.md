@@ -49,7 +49,6 @@ This structured approach reinforces Zero Trust principles and supports framework
 ## 🔐 Security Recommendations 
 - The following are prioritized security controls and remediations to address high-risk exposures detected by Microsoft Defender for Endpoint.
 
-
 ### 🔴 Two different types of responses were demonstrated:
 
 - ✅ Applied Remediation
@@ -122,38 +121,40 @@ Get-mpPreference | ft PUAProtection
 
 ### 📁 3. Set Controlled Folder Access to Enabled or Block Mode
 
-![Folder_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Folder_Req.png)
-
 #### **Description:**  
 Enable ransomware protection by locking critical folders against unauthorized access.
 
 #### **Justification:**  
 Defends against ransomware attempting to encrypt sensitive user files.
 
+![Folder_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Folder_Req.png)
+
+
 #### ✅ **Remediation**
 
-#### 1. Open Registry Editor
+##### 1. Open Registry Editor
 - Press `Win + R`, type `regedit`, and press `Enter`.
 
-#### 2. Navigate to:
+##### 2. Navigate to:
 ```reg
 HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender
 ```
 
-#### 3. Create Required Keys (if not present)
+##### 3. Create Required Keys (if not present)
 - Right-click on **Windows Defender** → `New` → `Key` → name it:
 Windows Defender Exploit Guard
 
 
 - Then right-click on **Windows Defender Exploit Guard** → `New` → `Key` → name it: `Controlled Folder Access`
 
-#### 4. Add the DWORD Value
+##### 4. Add the DWORD Value
 - Select the `Controlled Folder Access` key.
 - Right-click in the right pane → `New` → `DWORD (32-bit) Value`.
 - Name it:
 `EnableControlledFolderAccess`
 - Set its value:
 - `1` = Enabled (Block Mode) ✅ **Recommended**
+
 ---
 
 ![Folder_fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Folder_fix.png)
