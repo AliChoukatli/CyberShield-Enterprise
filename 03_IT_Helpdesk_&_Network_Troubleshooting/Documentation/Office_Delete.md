@@ -8,7 +8,7 @@ Removing Microsoft Office isn't always as simple as using “Add or Remove Progr
 - Multiple conflicting Office versions (e.g., Office 2016 + M365)
 - Incomplete uninstalls via GUI
 
-This script resolves those problems using official Microsoft tools and advanced automation.
+This [script](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_IT_Helpdesk_%26_Network_Troubleshooting/PowerShell_Scripts/msoffice-removal.ps1) resolves those problems using official Microsoft tools and advanced automation.
 
 ---
 
