@@ -9,8 +9,6 @@ You'll learn to:
 - Control RDP access via Group Policy
 - Safely delete user accounts
 
-> These operations streamline administrative tasks, reinforce your security posture, and support compliance through proper user lifecycle management.
-
 ---
 
 ## 📘 Table of Contents  
