@@ -13,8 +13,8 @@ Effective cybersecurity extends beyond prevention to include proactive detection
 ## 📘 Table of Contents
 
 * **[6.1: Microsoft Sentinel – Setup & Architecture](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Documentation/01_Microsoft_Sentinel_Setup.md)**
-* **[6.2: Custom Analytics Rules (Microsoft Sentinel)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Documentation/02_Custom_Analytics_Rules.md)*
-* **[6.3: Incident Response Playbook](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Documentation/03_Incident_Response_Playbooks.md)** (SOON)
+* **[6.2: Custom Analytics Rules (Microsoft Sentinel)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Documentation/02_Custom_Analytics_Rules.md)**
+* **[6.3: Incident Response Playbook (SOON)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Documentation/03_Incident_Response_Playbooks.md)** 
 
 ---
 
