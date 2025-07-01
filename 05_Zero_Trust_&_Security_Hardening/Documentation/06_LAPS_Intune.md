@@ -2,14 +2,14 @@
 
 ## 🎯 Objective
 
-This guide aims to provide a comprehensive, step-by-step approach to deploying and managing Local Administrator Password Solution (LAPS) using Microsoft Intune. You will learn how to:
+This guide explains how to deploy and manage Local Administrator Password Solution (LAPS) with Microsoft Intune. You will learn to:
 
-- Create and deploy a local administrator account (`LAPS_Admin`) on managed Windows devices.
-- Configure Intune policies to automatically rotate and securely store local admin passwords in Azure AD.
-- Verify deployment and retrieve passwords securely.
-- Limit access to password retrieval to authorized roles only.
+- Create and deploy a local admin account on Windows devices.  
+- Set up Intune policies to rotate and securely store passwords in Azure AD.  
+- Verify deployment and safely retrieve passwords.  
+- Restrict password access to authorized users only.
 
-By following this guide, you will strengthen your organization’s endpoint security and reduce risks associated with shared or static local administrator passwords.
+Following this guide helps improve endpoint security and reduce risks from shared or static local admin passwords.
 
 ---
 
