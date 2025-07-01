@@ -16,13 +16,13 @@ You will learn how to set up the necessary infrastructure, activate Sentinel, co
 
 ## 📘 Table of Contents
 
-1. [Log Analytics Workspace Setup](#3-log-analytics-workspace-setup)
-2. [Microsoft Sentinel Activation](#4-microsoft-sentinel-activation)
-3. [Data Connectors Configuration](#5-data-connectors-configuration)
-    - 3.1 [Azure Active Directory](#51-azure-active-directory)
-    - 3.2 [Microsoft Defender XDR ( Defender for Endpoint + Office 365]()
-4. [Cost Management](#4--cost-management)
-5. [Conclusion](#-Conclusion)
+1. [🚀 Log Analytics Workspace Setup](#3-log-analytics-workspace-setup)
+2. [🚀 Microsoft Sentinel Activation](#4-microsoft-sentinel-activation)
+3. [🚀 Data Connectors Configuration](#5-data-connectors-configuration)
+    - [🔹3.1 - Azure Active Directory](#51-azure-active-directory)
+    - [🔹3.2 - Microsoft Defender XDR ( Defender for Endpoint + Office 365]()
+4. [💰 Cost Management](#4--cost-management)
+5. [🔚 Conclusion](#-Conclusion)
 
 
 ## 🧰 Prerequisites
