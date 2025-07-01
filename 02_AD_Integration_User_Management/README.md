@@ -12,11 +12,11 @@ You'll learn to:
 ---
 
 ## 📘 Table of Contents  
-- **2.1**: [Creating and Managing Organizational Units (OUs)](#21-creating-and-managing-organizational-units-ous)  
-- **2.2**: [Managing Users and Security Groups in Active Directory](#22-managing-users-and-security-groups-in-active-directory)  
-- **2.3**: [File Share & NTFS Permissions Configuration](#23-file-share--ntfs-permissions-configuration)  
-- **2.4**: [RDP Access Control via Group Policy](#24-rdp-access-control-via-group-policy)  
-- **2.5**: [Deleting a User Account in Active Directory](#25-deleting-a-user-account-in-active-directory)  
+- **2.1**: [Creating and Managing Organizational Units (OUs)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/02_AD_Integration_User_Management/Documentation/01_Create_Delete_OUs.md)  
+- **2.2**: [Managing Users and Security Groups in Active Directory](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/02_AD_Integration_User_Management/Documentation/02_Manage_Users_Groups.md)
+- **2.3**: [File Share & NTFS Permissions Configuration](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/02_AD_Integration_User_Management/Documentation/03_File_Share_NTFS.md)
+- **2.4**: [RDP Access Control via Group Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/02_AD_Integration_User_Management/Documentation/05_RDP_GPO.md)
+- **2.5**: [Deleting a User Account in Active Directory](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/02_AD_Integration_User_Management/Documentation/06_Delete_Users_Accounts.md) 
 
 ---
 
