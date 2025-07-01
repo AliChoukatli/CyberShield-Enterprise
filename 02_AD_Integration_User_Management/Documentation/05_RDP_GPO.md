@@ -32,6 +32,21 @@ This is a best practice in hardening domain-joined endpoints in enterprise envir
 
    - Right-click on the `RDP-Users` group > **Properties** > **Members** > **Add**.
    - Add users such as `Sophia Martinez`.
+  
+
+3. **Create the `IT-Support-RDP`
+> 🎯 Objective : *Create a domain security group for IT support staff to manage RDP permissions centrally.*
+
+1. Open **Active Directory Users and Computers**
+2. Create a new **security group**:
+
+   * Name: `IT-Support-RDP`
+   * Scope: Global
+   * Type: Security
+
+4. Add support team users to the group (e.g., `ali.choukatli`)
+
+![RDP-Member](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_groupe.png)
 
 3. **Create and Configure a GPO for RDP Access**:
 
@@ -44,7 +59,7 @@ This is a best practice in hardening domain-joined endpoints in enterprise envir
        **Security Settings** > **Local Policies** > **User Rights Assignment**.
      - Open **Allow log on through Remote Desktop Services**.
      - **Remove** any unnecessary default entries (like `Domain Users`) if present.
-     - **Add only** the `RDP-Users` group.
+     - **Add** the `RDP-Users` and  `IT-Support-RDP` group.
     
   ![RDP-policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/RDP-policy.png)
 
