@@ -296,7 +296,7 @@ This policy helps mitigate the risk of unauthorized access from regions where yo
 
 ---
 
-### 🛡️ Step 1 — Define Trusted Locations
+### 🚀 **Step 1 — Define Trusted Locations**
 
 Before creating the Conditional Access policy, define your trusted countries in Microsoft Entra:
 
@@ -313,7 +313,7 @@ Before creating the Conditional Access policy, define your trusted countries in 
 
 ---
 
-### 🛡️ Step 2 — Create the Conditional Access Policy
+### 🚀 **Step 2 — Create the Conditional Access Policy**
 
 1. Go to: [https://entra.microsoft.com](https://entra.microsoft.com)
 2. Navigate to: **Protection > Conditional Access**
