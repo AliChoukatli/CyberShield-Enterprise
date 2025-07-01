@@ -355,7 +355,7 @@ The recommendation is to enforce a minimum password length of 14 or more charact
 ---
 
 
-## ✅ Conclusion 
+## 🔚 Conclusion 
 
 -  Identified vulnerabilities through Microsoft Defedner Recommendations.
 -  Implemented prioritized remediation actions.  
