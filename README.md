@@ -82,7 +82,7 @@ Navigate through the chapters to explore detailed implementations and configurat
 | **Endpoint Security**           | Windows 11 & Windows Server 2022 hardening with Intune, BitLocker encryption, Microsoft Defender for Endpoint, Group Policy Objects (GPO).                |
 | **Security Operations (SecOps)**| Microsoft Sentinel setup, custom detection with KQL, integration of data connectors for centralized security monitoring and alerting.                     |
 | **Cloud Security & Compliance**| Zero Trust architecture, Intune policy enforcement, alignment with ISO 27001 and NIST Cybersecurity Framework (CSF).                                       |
-| **Tooling & Automation**        | Microsoft 365 Security Suite, Microsoft Defender XDR, PowerShell scripting, Intune, Microsoft Sentinel.                                                   |
+| **Automation & Scripts**        | PowerShell, KQL                                                                                                                                           |
 
 ---
 
