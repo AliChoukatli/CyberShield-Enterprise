@@ -62,7 +62,7 @@ This section explains how to enable and configure key Microsoft Sentinel data co
 
 ### 🔹 **3.1 Azure Active Directory (Microsoft Entra ID)**
 
-#### Purpose
+#### 🎯 **Purpose:**
 
 Enable Microsoft Sentinel to collect logs related to:
 - User sign-ins
@@ -113,7 +113,7 @@ SigninLogs | take 10
 
 ### 🔹 **3.2 Microsoft Defender XDR**
 
-#### Purpose
+#### 🎯 **Purpose:**
 
 Enable Microsoft Sentinel to collect logs related to:
 
