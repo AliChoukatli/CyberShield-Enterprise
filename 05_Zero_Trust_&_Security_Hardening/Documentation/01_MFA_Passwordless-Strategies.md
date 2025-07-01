@@ -66,7 +66,7 @@ Implementing these solutions strengthens identity security, improves user experi
    - **Platform**: *Windows 10 and later*
    - **Profile**: *Account protection*
 
-#### 🚀 **4. Click **Create**, then fill in:**
+#### 🚀 **Step 4. Click **Create**, then fill in:**
 
    - **Name**: *Windows Hello for Business
    - **Description** (optional)
