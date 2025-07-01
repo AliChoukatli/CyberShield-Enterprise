@@ -125,7 +125,7 @@ Once the policy is applied, users will:
 
 ---
 
-### Step 1: Verify Prerequisites on Client Device
+### 🚀 **Step 1: Verify Prerequisites on Client Device**
 
 - Open PowerShell as an administrator and run:
 
@@ -148,7 +148,7 @@ dsregcmd /status
 
 ---
 
-### Step 2: Create and Configure the GPO for Windows Hello for Business
+### 🚀 **Step 2: Create and Configure the GPO for Windows Hello for Business**
 
  1. Open Group Policy Management Console (GPMC) on your domain controller (gpmc.msc)
 
@@ -175,7 +175,7 @@ gpupdate /force
 
 ---
 
-### Step 3: Register Windows Hello for Business on Client
+### 🚀 **Step 3: Register Windows Hello for Business on Client**
 
 Go to **Settings → Accounts → Sign-in options**
 
@@ -184,7 +184,7 @@ Go to **Settings → Accounts → Sign-in options**
 3. Follow the on-screen instructions to complete setup.
 4. Ensure the device allows passwordless sign-in using Hello credentials.
 
-### Step 4 Verify Passwordless Sign-in is Enabled
+### 🚀 **Step 4 Verify Passwordless Sign-in is Enabled**
 
 1. Open **Settings** → **Accounts** → **Sign-in options**.
 2. Confirm that **Windows Hello PIN** or **Biometric sign-in** (fingerprint or facial recognition) is set up.
@@ -195,17 +195,11 @@ Go to **Settings → Accounts → Sign-in options**
 > ⚠️ Note: For Hybrid Azure AD Join scenarios, Windows Hello for Business configuration should be done via Group Policy (GPO).  
 > The previous method using Intune’s "Identity Protection" profile is deprecated and no longer supported.
 
----
-
 
 By enforcing granular Conditional Access rules, multi-factor authentication, and secure passwordless sign-in options like FIDO2 and Windows Hello for Business, this configuration strengthens both security posture and user experience—while aligning with industry best practices and compliance standards.
 
 ---
 
-
-
-
----
 
 ## 2. ✅  **Microsoft Authenticator App – Recommended Settings**
 
@@ -227,7 +221,7 @@ The scenario features **Sophia Martinez**, an employee at CyberShield, logging i
 
 ---
 
-### 🔹 Step 1: Microsoft Authenticator App Setup Prompt  
+### 🚀 **Step 1: Microsoft Authenticator App Setup Prompt**
 After entering her corporate email address, Sophia is prompted to configure the **Microsoft Authenticator App** as part of her initial sign-in experience.
 
 > _“Start by getting the app.”_
@@ -238,7 +232,7 @@ She clicks **Next**, and is then asked to enter her **Microsoft account password
 
 ---
 
-### 🔹 Step 2: Number Matching Prompt Displayed  
+### 🚀 **Step 2: Number Matching Prompt Displayed**
 Once the password is verified, a **number matching prompt** appears on the screen.  
 
 ![MFA-Number-Matching](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/MFA-number-matching.png)
@@ -247,7 +241,7 @@ Sophia opens the **Microsoft Authenticator App** on her mobile device and select
 
 ---
 
-### 🔹 Step 3: Number Matching and Biometric Verification  
+### 🚀 **Step 3: Number Matching and Biometric Verification**
 In the app, Sophia is prompted to enter the number shown on the login screen:
 
 ![Phone_N-Matching](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Phone_N-Matching.png)
@@ -256,7 +250,7 @@ After entering the correct number, she approves the request using her **fingerpr
 
 ---
 
-### 🔹 Step 4: Successful Authentication  
+### 🚀 **Step 4: Successful Authentication**
 Upon successful verification, access is granted:
 
 ![Sophia MFA Success](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Sophia-MFA-successful.png)
@@ -293,7 +287,7 @@ This scenario demonstrates how a new employee, **Sophia Martinez**, securely reg
 
 ---
 
-### 🔹 Step 1: Admin generates TAP for new user
+### 🚀 **Step 1: Admin generates TAP for new user**
 
 In Microsoft Entra ID (Azure AD), the admin navigates to:
 
@@ -315,7 +309,7 @@ The temporary password will be shown on the screen :
 
 ---
 
-### 🔹 Step 2: User signs in with TAP
+### 🚀 **Step 2: User signs in with TAP**
 
 At her first login, Sophia selects **“Sign in using Temporary Access Pass”**, and enters the code provided by the admin.
 
@@ -349,7 +343,7 @@ She is then prompted to set a new PIN since we configured already windows Hello 
 
 Sophia is required to register and use a **FIDO2 security key** as part of her passwordless authentication methods. This key allows strong, phishing-resistant authentication.
 
-### 🔹 Step 1: Add FIDO2 Security Key via Security Info Portal
+### 🚀 **Step 1: Add FIDO2 Security Key via Security Info Portal**
 
 Sophia visits [https://myprofile.microsoft.com](https://myprofile.microsoft.com) and navigates to:
 
@@ -364,7 +358,7 @@ She is prompted to choose the type of key:
 
 ---
 
-### 🔹 Step 2: Register the Key
+### 🚀 **Step 2: Register the Key**
 
 After choosing USB, Sophia is asked to: 
 
@@ -386,7 +380,7 @@ After choosing USB, Sophia is asked to:
 
 ---
 
-### 🔹 Step 3: Sign-in using Security Key
+### 🚀 **Step 3: Sign-in using Security Key**
 
 The next time Sophia signs in, she selects:
 
