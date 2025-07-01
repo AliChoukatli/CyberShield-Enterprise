@@ -1,4 +1,4 @@
-# 04_AzureAD_Sync_&_Endpoint_Security
+# AzureAD Sync & Endpoint Security
 
 ## 🎯 Objective
 
