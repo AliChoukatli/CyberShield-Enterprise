@@ -51,7 +51,7 @@ Navigate through the chapters to explore detailed implementations and configurat
 * **[Chapter 6: 06_Threat_Detection_&_Simulation](06_Threat_Detection_&_Simulation/README.md)**
     * 6.1: Microsoft Sentinel – Setup & Architecture
     * 6.2: Custom Analytics Rules (Microsoft Sentinel)
-    * *(More chapters on Playbooks, Threat Hunting, Incident Management would go here if available)*
+    * 6.3 : Playbooks (Soon)
 
 ---
 
