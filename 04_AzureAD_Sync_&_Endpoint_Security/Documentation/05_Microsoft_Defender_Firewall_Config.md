@@ -90,7 +90,7 @@ Used for Azure AD-joined devices managed through Intune.
 ---
 
 
-## ✅ Conclusion
+## 🔚 Conclusion
 
 Implementing Microsoft Defender Firewall with these recommended settings ensures baseline security for all managed endpoints. The dual approach using Intune and Group Policy accommodates diverse infrastructure needs while maintaining consistent enforcement of firewall policies. Proper firewall configuration is a crucial layer in a comprehensive Zero Trust security model, protecting devices from unauthorized network access while enabling legitimate communications.
 
