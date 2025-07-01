@@ -34,12 +34,11 @@ This is a best practice in hardening domain-joined endpoints in enterprise envir
    - Add users such as `Sophia Martinez`.
   
 
-3. **Create the `IT-Support-RDP`
-> 🎯 Objective : *Create a domain security group for IT support staff to manage RDP permissions centrally.*
+3. **Create the `IT-Support-RDP` : *Create a domain security group for IT support staff to manage RDP permissions centrally.*
 
-1. Open **Active Directory Users and Computers**
-2. Create a new **security group**:
-
+- Open **Active Directory Users and Computers**
+- Create a new **security group**:
+  
    * Name: `IT-Support-RDP`
    * Scope: Global
    * Type: Security
