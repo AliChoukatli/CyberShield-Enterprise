@@ -69,7 +69,7 @@ Confirm that the target machine is reachable from the source (e.g., Helpdesk PC 
 ping <ComputerName or IP>
 Test-NetConnection -ComputerName <Target> -Port 3389
 ```
-### 2. ** Verify RDP Settings and Firewall Rules (on target machine)**
+### 2. **Verify RDP Settings and Firewall Rules (on target machine)**
 
 Ensure RDP is properly enabled:
 ```powershell
