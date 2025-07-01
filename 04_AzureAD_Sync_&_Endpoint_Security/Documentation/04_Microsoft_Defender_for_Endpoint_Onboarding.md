@@ -241,10 +241,7 @@ This guide explains how to onboard Windows 10/11 devices to Microsoft Defender f
 
 ---
 
-
-
-
-## ✅ Conclusion
+## 🔚 Conclusion
 
 Onboarding devices to Microsoft Defender for Endpoint ensures enhanced security and efficient centralized management.
 
