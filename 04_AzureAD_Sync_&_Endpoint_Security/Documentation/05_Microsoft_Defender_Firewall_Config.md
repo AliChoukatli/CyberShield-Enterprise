@@ -28,7 +28,7 @@ By applying these configurations, organizations can maintain a robust firewall p
 
 Used for on-premise Active Directory environments with GPO-based management.
 
-### 🚀 **Steps**
+### 🧭 **Steps**
 
 1. Open the **Group Policy Management Console**: `gpmc.msc`
 2. Edit an existing GPO that targets your devices, or create a new one and link it to the Organizational Unit (OU) containing the relevant computers
@@ -67,7 +67,7 @@ Used for on-premise Active Directory environments with GPO-based management.
 
 Used for Azure AD-joined devices managed through Intune.
 
-### 🚀 **Steps**
+### 🧭 **Steps**
 
 1. Go to **Microsoft Intune**:  
    `Endpoint security` → `Firewall` → `+ Create Policy`
