@@ -12,7 +12,7 @@ You'll prepare clean installations of Windows 11, apply a consistent naming conv
 
 ---
 
-## 🔴 Step 1 – Windows 11 Client Machines
+## 🚀 Step 1 – Windows 11 Client Machines
 
 **🎯 Objective**: Install and prepare Windows 11 machines for later domain joining.
 
@@ -53,7 +53,7 @@ You'll prepare clean installations of Windows 11, apply a consistent naming conv
 
 ---
 
-## 🔴 Step 2 - Domain Join – Windows 11 Workstation
+##  🚀 Step 2 - Domain Join – Windows 11 Workstation
 
 **Objective:** Integrate the Windows 11 workstation into the `corp.aclab.tech` domain to enable centralized management via Active Directory.
 
