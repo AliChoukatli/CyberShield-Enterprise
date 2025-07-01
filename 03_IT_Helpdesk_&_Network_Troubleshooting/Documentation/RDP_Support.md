@@ -11,9 +11,9 @@ This section covers how to securely enable and manage Remote Desktop Protocol (R
 You'll learn how to activate RDP, assign group permissions locally or via PowerShell, and test connectivity using domain credentials — all following enterprise best practices.
 
 ---
+## 🧭 **Steps:**
 
-## 🚀 Step 1 - **Enable Remote Desktop on LTP-EMP01**
-
+### 🚀 Step 1 - **Enable Remote Desktop on LTP-EMP01**
 
 1. Log in to LTP-EMP01 as an Administrator.
 
@@ -29,11 +29,11 @@ Remote Desktop
  
 ---
 
-## 🚀 Step 2 - **Initiate RDP Session from LTP-HLP01**
+### 🚀 Step 2 - **Initiate RDP Session from LTP-HLP01**
 
 #### 🎯 Objective: *Verify remote access works using domain credentials from the support workstation.*
 
-### 🛠️ Instructions
+#### 🛠️ Instructions
 
 1. On `LTP-HLP01`, press `Windows + R`, type `mstsc`, and hit **Enter**  
 2. In the **Computer** field, enter:
@@ -53,9 +53,9 @@ corp.aclab.tech\ali.choukatli
 
 ---
 
-## ⚠️ **If you are unable to connect to a target machine via Remote Desktop Protocol (RDP)**
+### ⚠️ **If you are unable to connect to a target machine via Remote Desktop Protocol (RDP)**
 
-### 1. **Check Network Connectivity**
+#### 1. **Check Network Connectivity**
 
 Confirm that the target machine is reachable from the source (e.g., Helpdesk PC or Server):
 
@@ -63,7 +63,7 @@ Confirm that the target machine is reachable from the source (e.g., Helpdesk PC 
 ping <ComputerName or IP>
 Test-NetConnection -ComputerName <Target> -Port 3389
 ```
-### 2. **Verify RDP Settings and Firewall Rules (on target machine)**
+#### 2. **Verify RDP Settings and Firewall Rules (on target machine)**
 
 Ensure RDP is properly enabled:
 ```powershell
