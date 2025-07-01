@@ -31,10 +31,11 @@ Used for on-premise Active Directory environments with GPO-based management.
 ### 🚀  Steps
 
 1. Open the **Group Policy Management Console**: `gpmc.msc`
-2. Navigate to:  
+2. Edit an existing GPO that targets your devices, or create a new one and link it to the Organizational Unit (OU) containing the relevant computers
+3. Navigate to:  
    `Computer Configuration` → `Policies` → `Windows Settings` → `Security Settings` → `Windows Defender Firewall with Advanced Security`
-3. Click **Windows Defender Firewall Properties**
-4. Configure each profile (**Domain**, **Private**, **Public**) as follows:
+4. Click **Right-click Windows Defender Firewall with Advanced Security** and select **Properties**
+5. Configure each profile (**Domain**, **Private**, **Public**) as follows:
 
 ## 🔥 Windows Defender Firewall – Recommended Global Settings
 
@@ -53,10 +54,11 @@ Used for on-premise Active Directory environments with GPO-based management.
 
 > 📝 **Note:** In Full Cloud deployments, logging successful connections may be optional to reduce noise and storage usage.
 
+6. Ensure these settings are configured for the Domain Profile, Private Profile, and Public Profile tabs, then click OK.
+
+7. Force a Group Policy update on client machines:
 
 ![GPO-Firewall](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/GPO-Firewall.png)
-
-5. Apply this options on Public and Private Profile and Select `Ok`
 
 ---
 
