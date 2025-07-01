@@ -12,7 +12,7 @@ This type of configuration is foundational for collaboration and secure file acc
 
 ---
 
-## 🛠️ Implementation Steps
+## 🚀 Implementation Steps
 
 1. On the **Windows Server 2022 (Domain Controller)**, create the folder:
 C:\SharedFolders\IT
