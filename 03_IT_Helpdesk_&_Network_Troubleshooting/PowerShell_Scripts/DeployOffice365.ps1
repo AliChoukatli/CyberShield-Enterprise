@@ -1,6 +1,4 @@
 # DeployOffice365.ps1
-# Author: Ali Choukatli
-# Date: 2025-05-22
 # Description: Download and install Microsoft 365 Apps using Office Deployment Tool
 
 $installFolder = "C:\OfficeInstall"
