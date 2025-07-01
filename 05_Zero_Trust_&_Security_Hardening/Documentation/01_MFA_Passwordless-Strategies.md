@@ -41,79 +41,8 @@ Implementing these solutions strengthens identity security, improves user experi
 
 ## ✅ 1. Windows Hello for Business
 
-### 🔒 A. Full Cloud Deployment (Azure AD Join only)
 
-### Overview
-
-- Devices are joined directly to Azure AD (no on-prem AD)
-- Managed via Microsoft Intune (Microsoft Endpoint Manager)
-- Passwordless sign-in using biometrics and PIN secured by TPM
-- Requires Azure AD Premium P1 or P2 licenses
-- Conditional Access used to enforce MFA and device compliance
-
----
-
-### 🧭 **Steps - Configure Windows Hello for Business via Intune**
-
-#### 🚀 **Step 1. Go to Microsoft Intune Admin Center:** 
-`https://intune.microsoft.com`
-
-#### 🚀 **Step 2. Navigate to:**
-   **Endpoint security > Account protection** → Click **+ Create Policy**
-
-#### 🚀 **Step 3. Choose:**
-
-   - **Platform**: *Windows 10 and later*
-   - **Profile**: *Account protection*
-
-#### 🚀 **Step 4. Click **Create**, then fill in:**
-
-   - **Name**: *Windows Hello for Business
-   - **Description** (optional)
-
-#### 🚀 **Step 5. ## Recommended Settings**
- 
-| Setting                                          | Recommended Value                                                                                                 
-|--------------------------------------------------|-----------------------------|
-| **Facial Features Use Enhanced Anti Spoofing**   | ✅ True     
-| **Enable PIN Recovery**                          | ✅ True                 
-| **Expiration**                                   | ✅ 90                     
-| **PIN History**                                  | ✅ 5                       
-| **Lowercase & Uppercase Letters**                | ✅ Required        
-| **Minimum PIN Length**                           | ✅ 8                        
-| **Maximum PIN Length**                           | ✅ 127                     
-| **Special Characters**                           | ✅ Required                          
-| **Require Security Device (TPM)**                | ✅ True                  
-| **Use Certificate For On-Prem Auth**             | ✅ Enabled    
-
-![Hello-Policy-Config](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Hello-Policy-Config.png)
-
-#### 🚀 **Step 6. Click **Next**, assign to appropriate user or device groups.**
-
-#### 🚀 **Step 7. Complete and click Create.**
-
-![Hello-Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Hello-Policy.png)
-
----
-
-#### 👤 End-User MFA Experience: Windows Hello for Business (Sophia Martinez)
-
-Once the policy is applied, users will:
-
-1. Go to **Settings → Accounts → Sign-in options**
-2. Click **Set up** under **PIN (Windows Hello)**
-
-![Hello-Verif](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Hello-Verif.png)
-
-3. Optionally enable **Fingerprint** or **Face Recognition**, if available
-
-> ✅ The device is now fully cloud-joined and uses passwordless sign-in with TPM-backed credentials.
-
-![Hello-Set](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/hello-set.png)
-
----
-
-### 🔒 Hybrid Deployment (Azure AD + On-premises Active Directory)
+### 🔒 A. Hybrid Deployment (Azure AD + On-premises Active Directory)
 
 ### Prerequisites
 
@@ -201,6 +130,79 @@ Go to **Settings → Accounts → Sign-in options**
 By enforcing granular Conditional Access rules, multi-factor authentication, and secure passwordless sign-in options like FIDO2 and Windows Hello for Business, this configuration strengthens both security posture and user experience—while aligning with industry best practices and compliance standards.
 
 ---
+
+### 🔒 B. Full Cloud Deployment (Azure AD Join only)
+
+### Overview
+
+- Devices are joined directly to Azure AD (no on-prem AD)
+- Managed via Microsoft Intune (Microsoft Endpoint Manager)
+- Passwordless sign-in using biometrics and PIN secured by TPM
+- Requires Azure AD Premium P1 or P2 licenses
+- Conditional Access used to enforce MFA and device compliance
+
+---
+
+### 🧭 **Steps - Configure Windows Hello for Business via Intune**
+
+#### 🚀 **Step 1. Go to Microsoft Intune Admin Center:** 
+`https://intune.microsoft.com`
+
+#### 🚀 **Step 2. Navigate to:**
+   **Endpoint security > Account protection** → Click **+ Create Policy**
+
+#### 🚀 **Step 3. Choose:**
+
+   - **Platform**: *Windows 10 and later*
+   - **Profile**: *Account protection*
+
+#### 🚀 **Step 4. Click **Create**, then fill in:**
+
+   - **Name**: *Windows Hello for Business
+   - **Description** (optional)
+
+#### 🚀 **Step 5. ## Recommended Settings**
+ 
+| Setting                                          | Recommended Value                                                                                                 
+|--------------------------------------------------|-----------------------------|
+| **Facial Features Use Enhanced Anti Spoofing**   | ✅ True     
+| **Enable PIN Recovery**                          | ✅ True                 
+| **Expiration**                                   | ✅ 90                     
+| **PIN History**                                  | ✅ 5                       
+| **Lowercase & Uppercase Letters**                | ✅ Required        
+| **Minimum PIN Length**                           | ✅ 8                        
+| **Maximum PIN Length**                           | ✅ 127                     
+| **Special Characters**                           | ✅ Required                          
+| **Require Security Device (TPM)**                | ✅ True                  
+| **Use Certificate For On-Prem Auth**             | ✅ Enabled    
+
+![Hello-Policy-Config](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Hello-Policy-Config.png)
+
+#### 🚀 **Step 6. Click **Next**, assign to appropriate user or device groups.**
+
+#### 🚀 **Step 7. Complete and click Create.**
+
+![Hello-Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Hello-Policy.png)
+
+---
+
+#### 👤 End-User MFA Experience: Windows Hello for Business (Sophia Martinez)
+
+Once the policy is applied, users will:
+
+1. Go to **Settings → Accounts → Sign-in options**
+2. Click **Set up** under **PIN (Windows Hello)**
+
+![Hello-Verif](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Hello-Verif.png)
+
+3. Optionally enable **Fingerprint** or **Face Recognition**, if available
+
+> ✅ The device is now fully cloud-joined and uses passwordless sign-in with TPM-backed credentials.
+
+![Hello-Set](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/hello-set.png)
+
+---
+
 
 
 ## 2. ✅  **Microsoft Authenticator App – Recommended Settings**
