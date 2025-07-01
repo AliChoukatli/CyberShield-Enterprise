@@ -46,9 +46,9 @@ This project details how to establish a strong defense-in-depth strategy by inte
 
 ### Chapter 6: Threat Detection & Simulation
 - **6.1**: Microsoft Sentinel – Setup & Architecture  
-- **6.2**: Custom Analytics Rules (Microsoft Sentinel)  
+- **6.2**: Custom Analytics Rules (Microsoft Sentinel)
 
-> _(Additional chapters like Playbooks, Threat Hunting, Incident Management may follow)_
+> _(Additional Section like Playbooks may follow)_
 
 ---
 
