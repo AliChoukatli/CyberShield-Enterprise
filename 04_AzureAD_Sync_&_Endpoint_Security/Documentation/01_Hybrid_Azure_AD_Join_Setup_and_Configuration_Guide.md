@@ -145,7 +145,7 @@ corp.aclab.tech/
 
 1. Open the **Group Policy Management Console** (`gpmc.msc`).
 
-2. Locate and **edit your existing “Auto Device Registration” GPO** linked to the OU containing your target machines (e.g., `Devices`).
+2. Locate and **edit your existing “Auto Device Registration” GPO** or create a new one if it doesn't exist yet, linked to the OU containing your target machines (e.g., `Devices`).
 
 ---
 
