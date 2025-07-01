@@ -196,19 +196,13 @@ Windows Defender Exploit Guard > ASR > Rules
 
 ### 🌐 5. Enable Network Protection
 
-![NP_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/NP_Req.png)
-
-Before enabling Network Protection, ensure the following are active:
-
-- Microsoft Defender Antivirus running  
-- Real-time protection enabled  
-- Cloud-delivered protection enabled
-
 #### **Description:**  
 Network Protection helps protect devices by blocking connections to potentially harmful domains and IPs, using Microsoft Defender SmartScreen.
 
 #### **Justification:**  
 Prevents users from accessing known malicious websites, reducing exposure to drive-by attacks or social engineering.
+
+![NP_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/NP_Req.png)
 
 #### ✅ **Remediation**
 
@@ -235,13 +229,13 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender
 
 ### 🚫 6. Block Executable Content from Email Client and Webmail - Intune Method
 
-![Exe_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Exe_Req.png)
-
 #### **Description:**  
 Prevent direct execution of embedded content or malicious attachments received via email.
 
 #### **Justification:**  
 Email is a common initial attack vector. This control reduces phishing and malware payload delivery.
+
+![Exe_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Exe_Req.png)
 
 #### ✅ **Remediation with Intune**
 
@@ -272,8 +266,6 @@ Email is a common initial attack vector. This control reduces phishing and malwa
 ---
 
 ### 🚫 7. Block Untrusted and Unsigned Processes from USB Devices - GPO Method
-
-This guide explains how to enable the Attack Surface Reduction (ASR) rule that blocks untrusted and unsigned processes from running from USB devices by setting the corresponding registry key via Group Policy Object (GPO).
 
 ## Steps to configure via GPO
 
