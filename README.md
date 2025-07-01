@@ -49,7 +49,7 @@ Navigate through the chapters to explore detailed implementations and configurat
     * 5.6: Local Administrator Password Management (LAPS) with Intune
     * 5.7: LAPS Integration with Microsoft Sentinel: Monitoring and Detection Guide
 * **[Chapter 6: 06_Threat_Detection_&_Simulation](06_Threat_Detection_&_Simulation/README.md)**
-    * 6.1: Microsoft Sentinel – Setup & Architecture
+    * 6.1: Microsoft Sentinel – Setup 
     * 6.2: Custom Analytics Rules (Microsoft Sentinel)
     * 6.3 : Playbooks (Soon)
 
