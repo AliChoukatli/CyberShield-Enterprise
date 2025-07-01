@@ -37,7 +37,7 @@ In today's evolving threat landscape, building a resilient and adaptive security
 
 Navigate through the chapters to explore detailed implementations and configurations:
 
-* **[Chapter 1: AD_Domain_Setup_&_Workstation_Join](01_AD_Domain_Setup_&_Workstation_Join/README.md)**
+* **[Chapter 1: AD Domain Setup & Workstation Join](01_AD_Domain_Setup_&_Workstation_Join/README.md)**
     * 1.1: Windows Server 2022 Setup: Active Directory & DHCP
     * 1.2: Deploy Windows 11 Workstations & Join to Active Directory
 * **[Chapter 2: AD_Integration_User_Management](02_AD_Integration_User_Management/README.md)**
