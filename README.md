@@ -61,7 +61,7 @@ The project integrates Microsoft on-premises and cloud services to manage and pr
 | ✅ **3 – IT_Helpdesk_&_Network_Troubleshooting**                     | Office 365 deployment via ODT and PowerShell, troubleshooting scenarios, user profile repairs, and automation scripts for support tasks.                                                    |
 | ✅ **4 – Azure AD Sync & Endpoint Security**                         | Hybrid join of devices, Intune management, application of security & compliance policies, Windows Defender Firewall, BitLocker encryption, and Microsoft Defender for Endpoint onboarding.  |
 | ✅ **5 – Zero_Trust_&_Security_Hardening**                           | MFA (WHfB, Authenticator App, TAP, FIDO2), integration with Conditional Access, Zero Trust configuration, Misconfig & Resolution & EXposure Security Analysis                               |
-
+| ✅ **6 – Threat_Detection_&_Simulation**                             |
 ---
 
 ## 🔐 Zero Trust Implementation
@@ -101,6 +101,18 @@ All policies and technologies are aligned with Zero Trust security model.
 
 
 ---
+
+### ⚙️ Cartographie des Contrôles de Sécurité avec les Cadres GRC
+
+Nos implémentations techniques contribuent directement au respect des exigences de sécurité et de conformité, alignant nos opérations avec des cadres reconnus tels que l'ISO 27001 et le NIST Cybersecurity Framework (CSF).
+
+| Implémentation Technique | Domaine GRC / Objectif de Conformité (ISO 27001 / NIST CSF) | Bénéfice GRC Spécifique |
+|--------------------------|---------------------------------------------------------------|-------------------------|
+| **MFA (Multi-Factor Authentication)** | **ISO 27001 A.9.2.1** (Enregistrement et désenregistrement des utilisateurs)<br>**NIST PR.AC-7** (Accès à privilèges) | Renforce l'authentification des identités, réduisant le risque d'accès non autorisé. |
+| **Accès Conditionnel** | **ISO 27001 A.9.4.2** (Authentification des connexions)<br>**NIST PR.AC-5** (Gestion des accès) | Assure que seuls les utilisateurs et appareils conformes peuvent accéder aux ressources, en fonction du risque contextuel. |
+| **LAPS (Local Admin Password Solution)** | **ISO 27001 A.9.2.3** (Gestion des droits d'accès à privilèges)<br>**NIST ID.AM-1** (Identités gérées) | Sécurise et gère les comptes administrateurs locaux, prévenant le mouvement latéral. |
+| **Durcissement des Endpoints** | **ISO 27001 A.13.1.2** (Sécurité des services réseau)<br>**NIST PR.PT-3** (Sécurité des réseaux) | Réduit la surface d'attaque des appareils finaux, limitant les vulnérabilités exploitables. |
+| **Sentinel (Logs & Règles)** | **ISO 27001 A.12.4.1** (Enregistrement des événements)<br>**NIST DE.CM-4** (Analyse des données) | Centralise la collecte des preuves et automatise la détection des anomalies pour l'audit et la réponse. |
 
 ## 📎 Supporting Assets
 
