@@ -12,7 +12,7 @@
 - [🎯 Project Overview](#-project-overview)
 - [📝 Introduction](#-introduction)
 - [📘 Table of Contents (Full Lab)](#-table-of-contents)
-- [✨ Key Project Highlights & Technologies](#-key-project-highlights--technologies)
+- [✨ Key Security Domains & Tools Implemented](#Key-Security-Domains-&-Tools-Implemented)
 - [📈 Security Transformation: Before vs. After](#-security-transformation-before-vs-after)
 - [✅ Compliance Mapping](#-compliance-mapping)
 - [🛠️ Prerequisites & Lab Setup](#️-prerequisites--lab-setup)
@@ -74,7 +74,7 @@ Navigate through the chapters to explore detailed implementations and configurat
 
 ---
 
-## ✨ Key Project Highlights & Technologies
+## ✨ Key Security Domains & Tools Implemented
 
 This project demonstrates practical skills in:
 
