@@ -17,11 +17,12 @@ By applying these configurations, organizations can maintain a robust firewall p
 
 ## 📘 Table of Contents
 
-1. [Objective](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Documentation/05_Microsoft_Defender_Firewall_Config.md#-objective)  
-2. [Method 1: Hybrid with Group Policy (GPO)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_&_Endpoint_Security/Documentation/05_Microsoft_Defender_Firewall_Config.md#-method-2-hybrid-with-group-policy-gpo)
-3. 2. [Method 2: Full Cloud with Microsoft Intune](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_&_Endpoint_Security/Documentation/05_Microsoft_Defender_Firewall_Config.md#%EF%B8%8F-method-1-full-cloud-with-microsoft-intune)  
-4. [Best Practices](#best-practices)  
-
+* [🎯 Objective](#-objective)
+* [✅ Method 1 - Hybrid with Group Policy (GPO)](#-method-1---hybrid-with-group-policy-gpo)
+* [✅ Method 2 - Full Cloud with Microsoft Intune](#-method-2---full-cloud-with-microsoft-intune)
+* [Best Practices](#best-practices)
+* [🔚 Conclusion](#-conclusion)
+* 
 ---
 
 ## 🎯 Objective
