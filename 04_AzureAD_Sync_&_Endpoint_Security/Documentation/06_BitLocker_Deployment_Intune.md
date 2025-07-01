@@ -28,6 +28,8 @@ BitLocker is a critical technology for protecting data at rest on Windows device
 
 ---
 
+## 🧭 **Steps :**
+
 ### 🚀 **Step 1 – Test Group**
 
 1. Go to **Microsoft Entra Admin Center** → **Groups**  
