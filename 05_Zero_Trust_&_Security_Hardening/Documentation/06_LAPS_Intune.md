@@ -19,6 +19,8 @@ Microsoft Intune integrates with Local Administrator Password Solution (LAPS) to
 
 Using LAPS with Intune improves security by minimizing risks related to local admin access.
 
+---
+
 ## 📘 Table of Contents
 
 - [Key Features](#key-features)
