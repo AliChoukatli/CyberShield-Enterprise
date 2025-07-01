@@ -197,7 +197,7 @@ dsregcmd /status
 
 ---
 
-## 🚀 **12. Entra ID – Device Verification**
+### 🚀 **12. Entra ID – Device Verification**
 
 Once the Hybrid Azure AD Join configuration and device registration GPO are applied, you should verify that your domain-joined devices are correctly registered in Microsoft Entra ID.
 
