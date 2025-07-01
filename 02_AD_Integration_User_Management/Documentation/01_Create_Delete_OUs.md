@@ -48,7 +48,7 @@ Once done, verify the structure:
 
 ---
 
-## ✅ Conclusion
+## 🔚 Conclusion
 
 After completing this section:
 
