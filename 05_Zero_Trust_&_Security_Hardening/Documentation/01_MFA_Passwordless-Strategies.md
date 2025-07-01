@@ -53,7 +53,7 @@ Implementing these solutions strengthens identity security, improves user experi
 
 ---
 
-### 🚀 **Steps - Configure Windows Hello for Business via Intune**
+### 🧭 **Steps - Configure Windows Hello for Business via Intune**
 
 #### 🚀 **Step 1. Go to Microsoft Intune Admin Center:** 
 `https://intune.microsoft.com`
