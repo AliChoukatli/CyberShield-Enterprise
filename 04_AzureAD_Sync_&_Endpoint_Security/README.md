@@ -12,12 +12,12 @@ As organizations transition to hybrid and cloud-native environments, unifying de
 
 ## 📘 Table of Contents
 
-* **[4.1: Hybrid Azure AD Join – Enable Device Sync & Registration](4.1_Hybrid_Azure_AD_Join.md)**
-* **[4.2: Microsoft Intune – Device Enrollment & Auto-Registration](4.2_Intune_Device_Enrollment.md)**
-* **[4.3: Microsoft Defender Antivirus Deployment via Intune](4.3_Defender_Antivirus_Deployment.md)**
-* **[4.4: Microsoft Defender for Endpoint (MDE) Onboarding Guide](4.4_MDE_Onboarding_Guide.md)**
-* **[4.5: Microsoft Defender Firewall Configuration](4.5_Defender_Firewall_Configuration.md)**
-* **[4.6: BitLocker Deployment via Microsoft Intune](4.6_BitLocker_Deployment_Intune.md)**
+* **[4.1: Hybrid Azure AD Join – Enable Device Sync & Registration](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Documentation/01_Hybrid_Azure_AD_Join_Setup_and_Configuration_Guide.md)**
+* **[4.2: Microsoft Intune – Device Enrollment & Auto-Registration](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Documentation/02_Intune_Device_Enrollment.md)**
+* **[4.3: Microsoft Defender Antivirus Deployment via Intune](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Documentation/03_Microsoft_Defender_Antivirus_Configuration.md)**
+* **[4.4: Microsoft Defender for Endpoint (MDE) Onboarding Guide](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Documentation/04_Microsoft_Defender_for_Endpoint_Onboarding.md)**
+* **[4.5: Microsoft Defender Firewall Configuration](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Documentation/05_Microsoft_Defender_Firewall_Config.md))**
+* **[4.6: BitLocker Deployment via Microsoft Intune](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Documentation/06_BitLocker_Deployment_Intune.md)**
 
 ---
 
