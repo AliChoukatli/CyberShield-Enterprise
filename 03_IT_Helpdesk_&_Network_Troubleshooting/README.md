@@ -1,4 +1,4 @@
-# 03_IT_Helpdesk_&_Network_Troubleshooting
+# IT Helpdesk & Network Troubleshooting
 
 ## 🎯 Objective
 
