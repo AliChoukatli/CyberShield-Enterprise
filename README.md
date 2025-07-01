@@ -1,4 +1,4 @@
-# Azure & M365 Security Lab: Build Your Enterprise Cyber Defense 🛡️
+# 🛡️ Azure & M365 Security Lab: Build Your Enterprise Cyber Defense 
 
 ## 🎯 Project Overview
 
