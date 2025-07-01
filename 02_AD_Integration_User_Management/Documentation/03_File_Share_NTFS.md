@@ -69,7 +69,7 @@ From a **Windows 11 client machine** joined to the domain:
 
 ---
 
-## ✅ Conclusion
+## 🔚 Conclusion
 
 After completing this configuration:
 
