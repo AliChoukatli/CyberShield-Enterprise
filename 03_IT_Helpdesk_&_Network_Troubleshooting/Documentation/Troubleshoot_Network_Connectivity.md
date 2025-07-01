@@ -14,7 +14,7 @@ You'll perform diagnostic actions like pinging the default gateway and DC, check
 
 ## 🔴 **Troubleshoot Network Connectivity**
 
-## 🚀 **1 - Ping**
+### 🚀 **1 - Ping**
 
 #### 🎯 *Objective : Verify basic network connectivity by pinging the default gateway and the domain controller (DC).*
 
@@ -49,7 +49,7 @@ If the ping fails:
 
 --- 
 
-## 🚀 **2 - IP Configuration**
+### 🚀 **2 - IP Configuration**
 
 ```bash
 ipconfig /all
