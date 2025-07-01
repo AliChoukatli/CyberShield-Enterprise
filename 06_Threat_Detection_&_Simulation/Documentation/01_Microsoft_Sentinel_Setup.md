@@ -145,9 +145,7 @@ If you can't Find Defender for office 365  look for `Microsoft 365` in Content H
 
 ![XDR_Connector_OV](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Screenshots/XDR_Connector_OV.png)
 
-
-
-
+---
 
 ## 4. 💰 Cost Management
 
@@ -159,7 +157,11 @@ If you can't Find Defender for office 365  look for `Microsoft 365` in Content H
   - Setting data caps
   - Choosing appropriate retention periods
 
+---
 
+## ✅ Conclusion
 
+Deploying Microsoft Sentinel enables centralized, real-time security monitoring and threat detection across your cloud and on-premises environments. By setting up a Log Analytics workspace, activating Sentinel, and configuring key data connectors like Azure Active Directory and Microsoft Defender XDR, you gain valuable visibility into user activity, alerts, and potential threats.
 
+Effective cost management and following best practices ensure that your Sentinel deployment remains scalable and sustainable. Implementing this cloud-native SIEM solution strengthens your security posture and improves your organization's ability to detect, investigate, and respond to security incidents promptly.
 
