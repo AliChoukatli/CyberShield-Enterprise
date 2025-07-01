@@ -12,7 +12,7 @@ This logical grouping will serve as the basis for applying permissions, Group Po
 
 ---
 
-## 🔴 **Creating Users in Active Directory**
+## 🚀 **Creating Users in Active Directory**
 
 - Open Server Manager > Tools > Active Directory Users and Computers (ADUC)
 
@@ -32,7 +32,7 @@ This logical grouping will serve as the basis for applying permissions, Group Po
 * [Add IT Users Script](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_IT_users.ps1)
 * [Add Single User Script](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/IT_Support/PowerShell_Script/Add_user.ps1)
 
- ## 🔴 **Adding Users to Domain Users Group - Verification**
+ ## 🚀 **Adding Users to Domain Users Group - Verification**
  *Ensure that the user is part of the `Domain Users` group for basic domain access permissions.*
 
 If the user is not already a member of the **Domain Users** group, follow these steps:
@@ -58,7 +58,7 @@ This will add the user to the **Domain Users** group, ensuring they have the bas
 ---
 
 
-## 🔴 **Managing Groups and Permissions**
+## 🚀 **Managing Groups and Permissions**
 
 ### 🔧 **Create AD Security Groups:**
 
