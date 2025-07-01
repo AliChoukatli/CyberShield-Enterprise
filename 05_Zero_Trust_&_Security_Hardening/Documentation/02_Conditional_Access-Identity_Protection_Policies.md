@@ -53,7 +53,7 @@ Prevent the use of outdated and insecure authentication protocols such as IMAP, 
 
 ---
 
-### Option A — Disable Legacy Protocols via Exchange Online (Recommended)
+### 🔴 **Option A — Disable Legacy Protocols via Exchange Online (Recommended)**
 
 - Install and connect with Exchange Online PowerShell Module (EXO V2).
 - Disable legacy protocols on mailboxes individually or globally.
@@ -106,7 +106,7 @@ Get-CASMailbox -ResultSize Unlimited | Select Name, UserPrincipalName, PopEnable
 ```
 ![Disable Legacy Protocols-PS](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Disable%20Legacy%20Protocols-PS.png)
 
-### Option B — Use Conditional Access to Block Legacy Authentication
+### 🔴 **Option B — Use Conditional Access to Block Legacy Authentication**
 
 - Create a new CA policy targeting legacy authentication clients only.
 - Block access.
