@@ -68,7 +68,7 @@ D. **Add Support Team Users to the IT-Support-RDP Group:**
      - **Remove** any unnecessary default entries (like `Domain Users`) if present.
      - **Add** the `RDP-Users` and  `IT-Support-RDP` group.
     
-  ![RDP-policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/RDP-policy.png)
+  ![RDP-policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/02_AD_Integration_User_Management/Screenshots/RDP_Policy.png)
 
 3. **Force a Group Policy Update**:
 
