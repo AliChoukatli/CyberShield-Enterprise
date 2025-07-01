@@ -14,10 +14,10 @@ BitLocker is a critical technology for protecting data at rest on Windows device
 
 ## 📋 Table of Contents
 
-- [📦 Step 1 – Test Group](#-step-1--test-group)
-- [📦 Step 2 – Create a Dynamic Group](#-step-2--create-a-dynamic-group-for-windows-1011-devices)
-- [📦 Step 3 – Configure BitLocker Policy in Intune](#-step-3---configure-bitlocker-policy-in-intune)
-- [📦 Step 4 – Assign the Policy in Intune](#-step-4---assign-the-policy-in-intune)
+- [🚀 Step 1 – Test Group](#-step-1--test-group)
+- [🚀 Step 2 – Create a Dynamic Group](#-step-2--create-a-dynamic-group-for-windows-1011-devices)
+- [🚀 Step 3 – Configure BitLocker Policy in Intune](#-step-3---configure-bitlocker-policy-in-intune)
+- [🚀 Step 4 – Assign the Policy in Intune](#-step-4---assign-the-policy-in-intune)
 
 ---
 
@@ -28,7 +28,7 @@ BitLocker is a critical technology for protecting data at rest on Windows device
 
 ---
 
-### 📦 Step 1 – Test Group
+### 🚀 **Step 1 – Test Group**
 
 1. Go to **Microsoft Entra Admin Center** → **Groups**  
 2. Click **+ New group**, then configure:
@@ -43,7 +43,7 @@ BitLocker is a critical technology for protecting data at rest on Windows device
 
 ---
 
-### 📦 Step 2 – Create a Dynamic Group for Windows 10/11 Devices
+### 🚀 **Step 2 – Create a Dynamic Group for Windows 10/11 Devices**
 
 1. Return to **Groups** > **New group**
 2. Select:
@@ -58,8 +58,6 @@ BitLocker is a critical technology for protecting data at rest on Windows device
 
 5. Click **Save** > **Create**
 
-
-
 #### 📌 Optional: Use KQL for more precision
 ```kql
 (device.deviceOSType -eq "Windows") and
@@ -67,7 +65,7 @@ BitLocker is a critical technology for protecting data at rest on Windows device
 ```
 ---
 
-### 📦 Step 3 - Configure BitLocker Policy in Intune
+### 🚀 **Step 3 - Configure BitLocker Policy in Intune**
 
 1. Navigate to BitLocker Policy Creation
 
@@ -141,7 +139,7 @@ E. Removable Drives
 
 ---
 
-## 📦 Step 4 - Assign the Policy in Intune
+### 🚀 **Step 4 - Assign the Policy in Intune**
 
 * Go to **Intune** > **Endpoint security** > **Disk encryption** > Select your policy
 * Click **Assignments**
