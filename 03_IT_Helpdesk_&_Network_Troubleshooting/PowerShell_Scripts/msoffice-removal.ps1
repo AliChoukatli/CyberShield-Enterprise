@@ -3,7 +3,6 @@
 Param (
     [switch]$InstallOffice365 = $False,
     [switch]$SuppressReboot = $False,
-    [switch]$UseSetupRemoval = $False,
     [Switch]$Force = $False,
     [switch]$RunAgain = $False,
     [int]$SecondsToReboot = 60
@@ -18,20 +17,10 @@ $Office365Setup_URL = "https://github.com/Admonstrator/msoffice-removal-tool/raw
 Function Invoke-OfficeUninstall {
     if (-Not (Test-Path "$SaRA_DIR")) {
         New-Item "$SaRA_DIR" -ItemType Directory | Out-Null
-    }
-    if ($UseSetupRemoval) {
-        Write-Host "Invoking default setup method ..."
-        Invoke-SetupOffice365 "$Office365Setup_URL/purge.xml"
-    }
-    else {
-        Write-Host "Invoking SaRA method ..."
-        Remove-SaRA
-        Write-Host "Downloading most recent SaRA build ..."
-        Invoke-SaRADownload
-        Write-Host "Removing Office installations ..."
-        Invoke-SaRA 
-    }
+      }
+    
 }
+
 Function Invoke-SaRADownload {    
     Start-BitsTransfer -Source "$SaRA_URL" -Destination "$SaRA_ZIP" 
     if (Test-Path "$SaRA_ZIP") {
@@ -104,36 +93,7 @@ Function Invoke-SaRA {
     }
 }
 
-Function Invoke-SetupOffice365($Office365ConfigFile) {
-    if ($Office365ConfigFile -eq "$Office365Setup_URL/purge.xml") {
-        Write-Host "Downloading Office365 Installer ..."
-        Start-BitsTransfer -Source "$Office365Setup_URL/setup.exe" -Destination "$SaRA_DIR\setup.exe"
-        Start-BitsTransfer -Source "$Office365ConfigFile" -Destination "$SaRA_DIR\purge.xml"
-        Write-Host "Executing Office365 Setup ..."
-        $OfficeSetup = Start-Process -FilePath "$SaRA_DIR\setup.exe" -ArgumentList "/configure $SaRA_DIR\purge.xml" -Wait -PassThru -NoNewWindow 
-    }
-    
-    if ($InstallOffice365) {
-        Write-Host "Downloading Office365 Installer ..."
-        Start-BitsTransfer -Source "$Office365Setup_URL/setup.exe" -Destination "$SaRA_DIR\setup.exe"
-        Start-BitsTransfer -Source "$Office365ConfigFile" -Destination "$SaRA_DIR\config.xml"
-        Write-Host "Executing Office365 Setup ..."
-        $OfficeSetup = Start-Process -FilePath "$SaRA_DIR\setup.exe" -ArgumentList "/configure $SaRA_DIR\config.xml" -Wait -PassThru -NoNewWindow 
-        switch ($OfficeSetup.ExitCode) {
-            0 {
-                Write-Host "Install successful!"
-                Set-CurrentStage 4
-                Break
-            }
 
-            1 {
-                Write-Error "Install failed!"
-                Set-CurrentStage 3
-                Break
-            }
-        }
-    }
-}
 
 Function Invoke-RebootInSeconds($Seconds) {
     if (-not $SuppressReboot) {
@@ -182,14 +142,12 @@ if (-not ($RunAgain)) {
             1 {
                 Write-Host "Resuming Stage 1: Uninstalling Office ..."
                 Invoke-OfficeUninstall 
-                Invoke-SetupOffice365 "$Office365Setup_URL/upgrade.xml"
                 Remove-SaRA
                 Invoke-RebootInSeconds $SecondsToReboot
             }
 
             2 {
                 Write-Host "Resuming Stage 2: Installing Office 365 ..."
-                Invoke-SetupOffice365 "$Office365Setup_URL/upgrade.xml"
                 Remove-SaRA
                 Invoke-RebootInSeconds $SecondsToReboot
             }
@@ -207,7 +165,6 @@ if (-not ($RunAgain)) {
             default {
                 Write-Host "Resuming Stage 1: Uninstalling Office ..."
                 Invoke-OfficeUninstall 
-                Invoke-SetupOffice365 "$Office365Setup_URL/upgrade.xml"
                 Remove-SaRA
                 Invoke-RebootInSeconds $SecondsToReboot
             }
@@ -217,7 +174,6 @@ if (-not ($RunAgain)) {
         Invoke-Intro
         Stop-OfficeProcess
         Invoke-OfficeUninstall 
-        Invoke-SetupOffice365 "$Office365Setup_URL/upgrade.xml"
         Invoke-RebootInSeconds $SecondsToReboot
     }
 }
@@ -225,7 +181,6 @@ else {
     Invoke-Intro
     Stop-OfficeProcess
     Invoke-OfficeUninstall 
-    Invoke-SetupOffice365 "$Office365Setup_URL/upgrade.xml"
     Invoke-RebootInSeconds $SecondsToReboot
 }
 exit
