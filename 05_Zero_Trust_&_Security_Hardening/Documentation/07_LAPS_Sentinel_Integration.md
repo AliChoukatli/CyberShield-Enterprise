@@ -22,7 +22,7 @@ This guide explains how to enable audit logging, collect relevant security event
 
 ---
 
-# 📘 Table of contents
+## 📘 Table of contents
 
 - 1 - Enable Audit Logging via PowerShell Script Deployment — *Recommended*
 - 2 - Connect Required Logs to Microsoft Sentinel
@@ -30,12 +30,12 @@ This guide explains how to enable audit logging, collect relevant security event
 
 ---
 
-# 1 - Enable Audit Logging for LAPS (PowerShell Script)
+## 🚨 **1 - Enable Audit Logging for LAPS (PowerShell Script)**
 
 ### 🎯 Objective:
 Enable key audit policies required for tracking LAPS_Admin activity—such as password retrieval and local login—using Microsoft Sentinel.
 
-### 🧩 Step 1 — Create the PowerShell Script
+### 🚀 **Step 1 — Create the PowerShell Script**
 
 Create a PowerShell script (`Enable_LAPS_Audit.ps1`) with the following content:
 
@@ -84,7 +84,7 @@ auditpol /get /subcategory:"Sensitive Privilege Use"
 
 ---
 
-### 🧩 Step 2 — Deploy the Script via Intune
+### 🚀 **Step 2 — Deploy the Script via Intune**
 
 1. Go to [https://endpoint.microsoft.com](https://endpoint.microsoft.com)
 
@@ -111,7 +111,7 @@ auditpol /get /subcategory:"Sensitive Privilege Use"
 
 ---
 
-### 🧩 Step 3 — Verify the Audit Policies
+### 🚀 **Step 3 — Verify the Audit Policies**
 
 - After deployment, on a target device, open **Event Viewer** → **Windows Logs** → **Security**.
 
@@ -124,7 +124,7 @@ auditpol /get /subcategory:"Sensitive Privilege Use"
 
 ---
 
-# 2 - Connect Required Logs to Microsoft Sentinel
+## 🚨 **2 - Connect Required Logs to Microsoft Sentinel**
 
 ## 🎯 Objective
 
@@ -132,7 +132,7 @@ Collect and ingest the relevant Windows Security event logs related to LAPS (`LA
 
 ---
 
-### 🧩 Step 1 - Ensure Audit Policies Are Enabled on Target Devices
+### 🚀 **Step 1 - Ensure Audit Policies Are Enabled on Target Devices**
 
 Before starting, make sure you have:
 
@@ -143,7 +143,7 @@ Before starting, make sure you have:
 
 ---
 
-### 🧩 Step 2 — Create a Data Collection Rule (DCR)
+### 🚀 **Step 2 — Create a Data Collection Rule (DCR)**
 
 1. Go to the Azure Portal: [https://portal.azure.com](https://portal.azure.com)
 
@@ -188,7 +188,7 @@ Before starting, make sure you have:
 
 ---
 
-### 🧩 Step 3 - Download the MSI Installer
+### 🚀 **Step 3 - Download the MSI Installer**
 
 1. Go to the official Microsoft link:  
   [https://aka.ms/azuremonitoragentwindows64](https://aka.ms/azuremonitoragentwindows64)
@@ -212,7 +212,7 @@ Get-Service -Name AzureMonitorAgent
 
 ---
 
-### 🧩 Step 4 - Register the Agent with Your Log Analytics Workspace (If Needed)
+### 🚀 **Step 4 - Register the Agent with Your Log Analytics Workspace (If Needed)**
 > **Note:** This step is only required if the Azure Monitor Agent (AMA) is installed manually and is not yet registered with your Log Analytics Workspace.
 
 Use the following PowerShell script, replacing `<Your Workspace ID>` and `<Your Primary Key>` with your actual workspace details:
@@ -234,7 +234,7 @@ Start-Process -FilePath $agentPath -ArgumentList "register", "-w", $WorkspaceId,
  
 ---
 
-### 🧩 Step 5 - Azure Arc Onboarding for a Local Hyper-V VM
+### 🚀 **Step 5 - Azure Arc Onboarding for a Local Hyper-V VM**
 
 This guide covers onboarding a local Hyper-V VM to Azure Arc using the generated PowerShell script for centralized management and monitoring in the Azure portal.
 
@@ -277,9 +277,9 @@ This guide covers onboarding a local Hyper-V VM to Azure Arc using the generated
 - The onboarding script automates agent installation and resource registration.
 - For bulk onboarding, consider using Azure Arc provisioning with Azure CLI or automation tools.
 
-
 ---
-### 🧩 Step 5 - Associate a Data Collection Rule (DCR) with Your Devices
+
+### 🚀 **Step 6 - Associate a Data Collection Rule (DCR) with Your Devices**
 
 - In the Azure Portal, go to **Data Collection Rules**.  
 - Select or create a DCR that specifies which logs and events to collect (e.g., `LAPS_SecurityEvents_DCR`).  
@@ -291,7 +291,7 @@ This guide covers onboarding a local Hyper-V VM to Azure Arc using the generated
 
 ---
 
-### 🧩 Step 6 - Verify Log Ingestion in Microsoft Sentinel
+### 🚀 **Step 7 - Verify Log Ingestion in Microsoft Sentinel**
 
 1. Connect to the Azure Portal
 - Open [https://portal.azure.com](https://portal.azure.com).
@@ -342,9 +342,9 @@ SecurityEvent
 
 ---
 
-## 3️ -  Use Cases & Detection Rules
+## 🚨 **3️ -  Use Cases & Detection Rules**
 
-### ✅ Case 1 — Viewing LAPS Password via Intune
+### 🚀 **Case 1 — Viewing LAPS Password via Intune**
 
 This query detects users who retrieved a local admin password through Intune:
 
@@ -357,7 +357,9 @@ AuditLogs
 ```
 > 🔔 Recommendation: Create an alert rule with Medium severity. Add a condition to alert if the Reader is not part of a privileged group like LAPS Password Readers.
 
-### ✅ Case 2 — Manual Rotation of the Local Admin Password
+---
+
+### 🚀 **Case 2 — Manual Rotation of the Local Admin Password**
 This query identifies manual password resets performed from the Intune console:
 
 ```kusto
@@ -369,7 +371,9 @@ AuditLogs
 ```
 > 📌 This may indicate troubleshooting activity or suspicious attempts to reset the admin password.
 
-### ✅ Case 3 — Local Sign-In using the LAPS_Admin Account
+---
+
+### 🚀 **Case 3 — Local Sign-In using the LAPS_Admin Account**
 Assuming Windows Security logs are connected, the following query detects logon events from LAPS_Admin
 
 ```kusto
