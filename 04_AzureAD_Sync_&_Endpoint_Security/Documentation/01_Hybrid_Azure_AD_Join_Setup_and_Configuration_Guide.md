@@ -29,7 +29,7 @@ Before getting started, ensure the following:
 
 ---
 
-## ✅ Step 1 – Hybrid Azure AD Join of On-Premises Devices
+## 🚀 **Steps
 
 ### 🎯 Objective
 Enable domain-joined Windows devices to be automatically registered in Azure AD as **Hybrid Azure AD joined**, allowing for modern device management (Intune, Conditional Access, Defender, etc.).`
