@@ -90,7 +90,7 @@ Implementing these solutions strengthens identity security, improves user experi
 
 #### 🚀 **Step 6. Click **Next**, assign to appropriate user or device groups.**
 
-#### 🚀 **Step 7. Complete and click **Create.**
+#### 🚀 **Step 7. Complete and click Create.**
 
 ![Hello-Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Hello-Policy.png)
 
