@@ -46,7 +46,7 @@ The configuration is done using Intune security policies, allowing centralized d
 | Allow Email Scanning                           | Allowed. Turns on email scanning.     |
 | Allow Full Scan Removable Drive Scanning      | Allowed. Scans removable drives.      |
 | Allow Scanning Network Files                   | Allowed. Scans network files.         |
-| Enable Network Protection                      | Enabled (audit mode)                   |
+| Enable Network Protection                      | Enabled (Block mode)                   |
 | PUA Protection                                | PUA Protection on. Detected items are blocked. They will show in history along with other threats. |
 | Scan Parameter                                | Full scan                            |
 | Real Time Scan Direction                       | Monitor all files (bi-directional).   |
