@@ -154,7 +154,6 @@ Protect all privileged accounts by enforcing MFA.
 - Target directory roles assigned to admins.
 - Apply CA policy requiring MFA for access to all cloud apps.
 
----
 
 ### 🧭 How to Configure:
 
@@ -189,7 +188,7 @@ Restrict administrative portal access (Microsoft Entra, Intune, M365 Admin Cente
 - Block otherwise.
 
 
-## 🧭 How to Configure
+### 🧭 How to Configure
 
 1. Go to: [https://entra.microsoft.com](https://entra.microsoft.com)
 2. Navigate to: `Protection > Conditional Access`
