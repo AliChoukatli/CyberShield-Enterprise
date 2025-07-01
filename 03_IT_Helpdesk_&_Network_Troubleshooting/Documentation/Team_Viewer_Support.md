@@ -21,6 +21,8 @@ You’ll learn how to install the appropriate versions on both devices, establis
 
 ---
 
+## 🧭 **Steps:**
+
 ### 🚀 Step 1 - Download & Install TeamViewer
 
 🔹 **On both LTP-HLP01 and LTP-EMP01:**
