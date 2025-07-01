@@ -208,24 +208,24 @@ This guide explains how to onboard Windows 10/11 devices to Microsoft Defender f
 
 ## 🟢 **Method 3 - Onboarding via Local Script (Single Device, Full Cloud)**
 
-1. Go to the Microsoft 365 Defender portal:  [https://security.microsoft.com](https://security.microsoft.com)
+🚀 1. Go to the Microsoft 365 Defender portal:  [https://security.microsoft.com](https://security.microsoft.com)
 
-2. Navigate to:  
+🚀 2. Navigate to:  
    `Settings` → `Endpoints` → `Onboarding`
 
-3. Connectivity type : Standard 
+🚀 3. Connectivity type : Standard 
 
-4. Select the device type:  
+🚀 4. Select the device type:  
    ➤ *Windows 10 and 11*
 
-5. Under **Deployment method**, choose:  
+🚀 5. Under **Deployment method**, choose:  
    ➤ *Local Script*
 
-6. Click **Download package** to get a `.zip` file containing the onboarding script.
+🚀 6. Click **Download package** to get a `.zip` file containing the onboarding script.
 
 ![OnBoarding_Page](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/OnBoarding_Page.png)
 
-7. On the target machine:
+🚀 7. On the target machine:
    - Extract the `.zip` file.
    - Open **PowerShell as Administrator**.
    - Run the onboarding script:
@@ -235,7 +235,7 @@ This guide explains how to onboard Windows 10/11 devices to Microsoft Defender f
    ```
 ![Script_Successful](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Successful_Onboard_cmd.png)
 
-8. Wait a few minutes. The device should appear in the Defender portal under Device inventory.
+🚀 8. Wait a few minutes. The device should appear in the Defender portal under Device inventory.
 
 ![LTP-HLP_DEF_Status](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/LTP-HLP_DEF_Status.png)
 
