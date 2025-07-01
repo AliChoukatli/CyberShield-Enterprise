@@ -67,13 +67,11 @@ This is a best practice in hardening domain-joined endpoints in enterprise envir
   
    ---
 
-   ### ✅ Conclusion
+## 🔚 Conclusion
 
 By completing these steps:
 
 - The `RDP-Users` security group has been created and populated with authorized users.
 - A Group Policy Object (GPO) restricts RDP logon rights exclusively to members of the `RDP-Users` group.
 - The targeted VM (`LTP-EMP01`) applies this policy, allowing only authorized users to connect remotely.
-- This approach significantly reduces the attack surface and enforces secure remote access management within the Active Directory environment.
-Veux-tu que je t’aide à préparer une section sur la configuration d’une bastion host ou d’un jump server
- 
+- This approach significantly reduces the attack surface and enforces secure remote access management within the Active Directory environment. 
