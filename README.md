@@ -74,7 +74,7 @@ Navigate through the chapters to explore detailed implementations and configurat
 
 ---
 
-## ✨ Security Domains, Tools & Skills Demonstrated
+## ✨ Security Domains & Tools
 
 This project demonstrates practical skills in:
 
