@@ -224,7 +224,7 @@ Copy the password and view its expiration date
 
 ---
 
-# Conclusion
+# 🔚 Conclusion
 
 Implementing Local Administrator Password Management with Intune significantly enhances endpoint security by enforcing unique, complex, and regularly rotated local admin passwords. Through automation and Azure AD integration, LAPS reduces manual password management overhead while minimizing risks associated with static credentials.
 
