@@ -54,6 +54,7 @@ Using LAPS with Intune improves security by minimizing risks related to local ad
 - Enable Microsoft Entra Local Administrator Password Solution (LAPS)
   
 ---
+## 🧭 **Steps:**
 
 ## 1. 🚀 Step 1 -  Create and Test the Local Admin Script
 
