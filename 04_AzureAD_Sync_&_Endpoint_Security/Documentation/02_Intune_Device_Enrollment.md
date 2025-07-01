@@ -21,7 +21,7 @@ Whether deploying new machines or onboarding existing endpoints, this process al
 
 ---
 
-## 🚀 **Steps:**
+## 🧭 **Steps:**
 
 ### 🚀 **Step 1 – Access the Intune Portal**
 - Log in to the [Microsoft Endpoint Manager Admin Center](https://endpoint.microsoft.com/)  
