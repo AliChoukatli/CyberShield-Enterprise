@@ -213,7 +213,7 @@ This guide explains how to onboard Windows 10/11 devices to Microsoft Defender f
 🚀 **Step 2. Navigate to:**
    `Settings` → `Endpoints` → `Onboarding`
 
-🚀 **Step 3. Connectivity type : Standard 
+🚀 **Step 3. Connectivity type : Standard**
 
 🚀 **Step 4. Select the device type:**
    ➤ *Windows 10 and 11*
