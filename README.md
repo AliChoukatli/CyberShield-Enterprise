@@ -109,7 +109,7 @@ Detailed setup instructions for the lab environment are provided in **Chapter 1*
 
 ---
 
-## 🤝 How to Navigate & Contribute
+## 🤝 How to Navigate
 
 Feel free to browse through the chapters in the table of contents. Each chapter's folder typically contains a dedicated `Documentation` section with detailed steps and screenshots.
 
