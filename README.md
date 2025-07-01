@@ -85,8 +85,7 @@ This project significantly enhances an organization's security posture.
 ---
 
 ## ✅ Compliance Mapping
-
-Our technical implementations directly contribute to meeting security and compliance requirements, aligning our operations with recognized frameworks such as ISO 27001 and the NIST Cybersecurity Framework (CSF).
+Each security control in this project was designed not only to enhance protection but also to meet compliance objectives aligned with ISO 27001 and NIST CSF, making the environment both resilient and audit-ready.
 
 | Technical Implementation        | GRC Domain / Compliance Objective (ISO 27001 / NIST CSF)                                                                                 | Specific GRC Benefit                                                                    |
 | :------------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------- |
