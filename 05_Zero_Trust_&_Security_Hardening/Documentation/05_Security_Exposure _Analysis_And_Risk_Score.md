@@ -164,7 +164,6 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender
 
 ![lsaas_Req](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/lsass_Req.png)
 
-
 #### ✅ **Remediation**
 
 - To enable this rule in **Block Mode**, add the following registry key and value: 
@@ -248,6 +247,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender
 
 ![Exe_Fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Exe_Email_policy_Overview.png)
 
+---
+
 ### 🚫 6.5 - Block Executable Content from Email Client and Webmail - Registery Method
 
 ![Exe_Fix](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/05_Zero_Trust_%26_Security_Hardening/Screenshots/Exe_Fix.png)
@@ -289,7 +290,6 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender
 8. On target machines, run `gpupdate /force` or wait for policy refresh
 
 ---
-
 
 ## 🔎 - How to Verify if ASR Rules Are Applied
 
