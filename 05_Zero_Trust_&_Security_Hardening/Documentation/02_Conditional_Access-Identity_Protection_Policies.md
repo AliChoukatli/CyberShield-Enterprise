@@ -43,7 +43,7 @@ By following these guidelines, organizations can strengthen their identity secur
    
 ---
 
-## ✅ 1. Block Legacy Authentication
+## 🚫 **1. Block Legacy Authentication**
 
 ### 🎯 Objective
 
@@ -145,7 +145,7 @@ Microsoft has reintroduced a simplified option to block legacy authentication cl
 
 ---
 
-## ✅ 2. Require MFA for All Admin Roles
+## ✅ **2. Require MFA for All Admin Roles**
 
 ### 🎯 Objective
 
@@ -178,7 +178,7 @@ Protect all privileged accounts by enforcing MFA.
 
 ---
 
-## ✅ 3. Block Admin Portal Access from Unmanaged Devices
+## 🚫 **3. Block Admin Portal Access from Unmanaged Devices**
 
 ### 🎯 Objective
 
@@ -221,7 +221,7 @@ Restrict administrative portal access (Microsoft Entra, Intune, M365 Admin Cente
 ---
 
 
-## ✅ 4. Require MFA for All Users
+## ✅ **4. Require MFA for All Users**
 
 ### 🎯 Objective
 
@@ -250,7 +250,7 @@ Enhance security by requiring MFA for all sign-ins.
 
 ---
 
-## ✅ 5. Require Compliant Devices
+## ✅ **5. Require Compliant Devices**
 
 ### 🎯 Objective
 
@@ -277,7 +277,7 @@ Ensure access is only granted from devices that meet compliance requirements (e.
 
 ---
 
-## ✅ 6. Block Access from Unsupported Countries
+## 🚫 **6. Block Access from Unsupported Countries**
 
 ### 🎯 Objective
 
