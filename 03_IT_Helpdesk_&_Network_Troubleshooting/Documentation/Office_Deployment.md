@@ -12,22 +12,18 @@ You will start by uninstalling any existing Office installations to avoid confli
 
 ## 🛠️ Steps:
 
-### Step 1 – Uninstall Existing Office Installation (if applicable)
+### Recommended Method: Microsoft Support and Recovery Assistant (SaRA)
 
-# Download the script
+### Step 1 - Uninstall Existing Office Installation (if applicable)
+
+1. Download the script
 iwr https://raw.githubusercontent.com/Admonstrator/msoffice-removal-tool/main/msoffice-removal-tool.ps1 -OutFile C:\Scripts\msoffice-removal-tool.ps1
 
-# Execute the script locally
+2. Execute the script locally
 ```powershell
 powershell -ExecutionPolicy Bypass C:\Scripts\msoffice-removal-tool.ps1
 ```
-
-### Recommended Method: Microsoft Support and Recovery Assistant (SaRA)
-1. Run this script :
-```powershell
-iwr https://raw.githubusercontent.com/Admonstrator/msoffice-removal-tool/main/msoffice-removal-tool.ps1 -OutFile msoffice-removal-tool.ps1; powershell -ExecutionPolicy Bypass .\msoffice-removal-tool.ps1
-```
-2. Restart the machine after uninstallation.
+3. Restart the machine after uninstallation.
 
 ---
 
