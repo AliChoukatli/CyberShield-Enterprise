@@ -9,16 +9,7 @@ You'll learn to:
 - Control RDP access via Group Policy
 - Safely delete user accounts
 
----
-
-## 📝 Introduction  
-Effective user and group management is crucial for maintaining a secure and organized Active Directory environment.  
-This chapter dives into practical steps for:
-- Structuring your directory
-- Assigning permissions
-- Implementing access control and security policies
-
-These operations streamline administrative tasks, reinforce your security posture, and support compliance through proper user lifecycle management.
+> These operations streamline administrative tasks, reinforce your security posture, and support compliance through proper user lifecycle management.
 
 ---
 
