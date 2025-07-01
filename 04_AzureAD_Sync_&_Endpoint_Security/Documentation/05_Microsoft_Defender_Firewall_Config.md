@@ -24,19 +24,13 @@ By applying these configurations, organizations can maintain a robust firewall p
   
 ---
 
-## 🎯 Objective
-
-To ensure a secure and consistent firewall configuration across all network profiles (Domain, Private, Public) using Microsoft Defender Firewall, aligned with Zero Trust principles. The firewall should block unsolicited inbound traffic and allow trusted outbound communication.
-
----
-
 ## ✅ Method 1 - Hybrid with Group Policy (GPO)
 
 Used for on-premise Active Directory environments with GPO-based management.
 
 ### ✅ Steps
 
-1. Open the **Local Group Policy Editor**: `gpedit.msc`
+1. Open the **Group Policy Management Console**: `gpmc.msc`
 2. Navigate to:  
    `Computer Configuration` → `Policies` → `Windows Settings` → `Security Settings` → `Windows Defender Firewall with Advanced Security`
 3. Click **Windows Defender Firewall Properties**
