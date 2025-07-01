@@ -122,6 +122,7 @@ Write-Host ""
 }
 
 #-----------------------------------------------------------[Execution]------------------------------------------------------------
+
 # Check if -Force is set
 if (-Not $Force) {
     do {
@@ -134,7 +135,7 @@ if (-Not $Force) {
 }
 
 Invoke-Intro
-# Check if there is a stage to resume
+
 if (-not ($RunAgain)) {
     if (Test-Path "HKLM:\Software\OEM\Singleton-Factory-GmbH\M365\Install") {
         $CurrentStageValue = (Get-ItemProperty "HKLM:\Software\OEM\Singleton-Factory-GmbH\M365\Install").CurrentStage
@@ -147,9 +148,8 @@ if (-not ($RunAgain)) {
             }
 
             2 {
-                Write-Host "Resuming Stage 2: Installing Office 365 ..."
+                Write-Host "Office already uninstalled. Nothing more to do."
                 Remove-SaRA
-                Invoke-RebootInSeconds $SecondsToReboot
             }
 
             3 {
@@ -158,12 +158,12 @@ if (-not ($RunAgain)) {
             }
 
             4 {
-                # Final stage: All is done, script will not run.
+                Write-Host "Script already completed."
                 exit 0
             }
 
             default {
-                Write-Host "Resuming Stage 1: Uninstalling Office ..."
+                Write-Host "Uninstalling Office ..."
                 Invoke-OfficeUninstall 
                 Remove-SaRA
                 Invoke-RebootInSeconds $SecondsToReboot
@@ -183,4 +183,3 @@ else {
     Invoke-OfficeUninstall 
     Invoke-RebootInSeconds $SecondsToReboot
 }
-exit
