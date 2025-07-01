@@ -18,23 +18,26 @@ This is a best practice in hardening domain-joined endpoints in enterprise envir
 
 ---
 
-### 🛠️ Steps
+## 🛠️ Steps
 
-1. **Create the `RDP-Users` Group**:
+### 1. Create Active Directory Security Groups for RDP Access:
+   
+A. **Create the `RDP-Users` Group:**
 
-   - Open **Active Directory Users and Computers (ADUC)**.
-   - Right-click on the **Users** container > **New** > **Group**.
-   - Name the group `RDP-Users`.
-   - Set the group type to **Security**.
-   - Click **OK**.
+  * Open Active Directory Users and Computers (ADUC).
+  * Right-click on the Users container > New > Group.
+  * Name the group `RDP-Users`.
+  * Set the group type to Security.
+  * Click OK.
 
-2. **Add Users to the `RDP-Users` Group**:
+
+B. **Add Users to the `RDP-Users` Group**:
 
    - Right-click on the `RDP-Users` group > **Properties** > **Members** > **Add**.
    - Add users such as `Sophia Martinez`.
   
 
-3. **Create the `IT-Support-RDP` : *Create a domain security group for IT support staff to manage RDP permissions centrally.*
+C. **Create the `IT-Support-RDP` : For IT support staff to manage RDP permissions centrally.**
 
 - Open **Active Directory Users and Computers**
 - Create a new **security group**:
@@ -43,11 +46,16 @@ This is a best practice in hardening domain-joined endpoints in enterprise envir
    * Scope: Global
    * Type: Security
 
-4. Add support team users to the group (e.g., `ali.choukatli`)
+D. **Add Support Team Users to the IT-Support-RDP Group:**
+
+* Right-click on the `IT-Support-RDP` group > Properties > Members > Add.
+* Add users such as `ali.choukatli`.
 
 ![RDP-Member](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%20%203/RDP_groupe.png)
 
-5. **Create and Configure a GPO for RDP Access**:
+>(This image shows the IT-Support-RDP group with a member added.)
+
+2. **Create and Configure a GPO for RDP Access**:
 
    - Open the **Group Policy Management Console**.
    - Right-click on your **Domain** > **Create a GPO in this domain, and Link it here...**.
@@ -62,7 +70,7 @@ This is a best practice in hardening domain-joined endpoints in enterprise envir
     
   ![RDP-policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Phase%202/RDP-policy.png)
 
-6. **Force a Group Policy Update**:
+3. **Force a Group Policy Update**:
 
    On the target VM (**LTP-EMP01**), run:
 
@@ -70,7 +78,7 @@ This is a best practice in hardening domain-joined endpoints in enterprise envir
    gpupdate /force
    ```
 
-7. Test the Access:
+4. Test the Access:
 
  - Log in as Sophia Martinez from another device using RDP to LTP-EMP01.
    
