@@ -14,23 +14,23 @@ This [script](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/0
 
 ## 🧰 What the Script Does
 
-| Step | Action                                                                                                                                                                          |
-|------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1    | Displays a banner and asks for confirmation (unless `-Force`)                                                                                                                     |
-| 2    | Terminates all running Office apps (Word, Excel, Outlook, etc.)                                                                                                                   |
-| 3    | Uninstalls Office using either: <br> • [Microsoft SaRA (Support and Recovery Assistant)](https://aka.ms/SaRA_CommandLineVersionFiles) <br> • Office Deployment Tool + `purge.xml` |
-| 4    | Optionally reinstalls Office 365 using `setup.exe` + `upgrade.xml`                                                                                                                |
-| 5    | Can automatically reboot the machine (configurable)                                                                                                                               |
-| 6    | Tracks progress using Windows Registry to support recovery on reboot                                                                                                              |
+| Step  | Action                                                                     |
+|-------|----------------------------------------------------------------------------|
+| 1     | Displays an introduction banner and requests confirmation unless forced    |
+| 2     | Stops all running Office applications (Word, Excel, Outlook, Teams, etc.)  |
+| 3     | Downloads the latest SaRA command-line tool (`SaRAcmd.exe`)                |
+| 4     | Runs SaRA in command-line mode to uninstall all Office installations       |
+| 5     | Optionally reinstalls Office 365 if requested                              |
+| 6     | Optionally triggers a system reboot with a configurable delay              |
+| 7     | Tracks progress using Windows Registry keys to allow resuming after reboot |
 
 ---
 
 ## ⚙️ Parameters Overview
 
-| Parameter | Description                                                   |
-|----------|----------------------------------------------------------------|
+| Parameter           | Description                                         |
+|----------===========|-----------------------------------------------------|
 | `-InstallOffice365` | Reinstalls Office after removal                     |
-| `-UseSetupRemoval`  | Uses `setup.exe` + `purge.xml` instead of SaRA      |
 | `-SuppressReboot`   | Skips auto-reboot after removal/install             |
 | `-Force`            | Skips user confirmation prompt                      |
 | `-RunAgain`         | Ignores previous state and runs full workflow again |
