@@ -68,6 +68,17 @@ This project demonstrates practical skills in:
 
 ---
 
+## 🚀 Skills Demonstrated
+
+- Deploy and manage **Active Directory** and **Azure AD hybrid environments**
+- Configure **Microsoft Intune** for device compliance and security baselines
+- Enforce **BitLocker encryption**, **firewall rules**, and **Defender policies**
+- Implement **Zero Trust principles** using MFA, Conditional Access, and LAPS
+- Monitor and analyze threats with **Microsoft Sentinel and KQL**
+- Align security implementations with **ISO 27001** and **NIST CSF**
+
+---
+
 ## 📈 Security Transformation: Before vs. After
 
 This project significantly enhances an organization's security posture.
