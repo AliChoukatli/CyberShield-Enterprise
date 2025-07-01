@@ -159,7 +159,7 @@ If you can't Find Defender for office 365  look for `Microsoft 365` in Content H
 
 ---
 
-## ✅ Conclusion
+## 🔚 Conclusion
 
 Deploying Microsoft Sentinel enables centralized, real-time security monitoring and threat detection across your cloud and on-premises environments. By setting up a Log Analytics workspace, activating Sentinel, and configuring key data connectors like Azure Active Directory and Microsoft Defender XDR, you gain valuable visibility into user activity, alerts, and potential threats.
 
