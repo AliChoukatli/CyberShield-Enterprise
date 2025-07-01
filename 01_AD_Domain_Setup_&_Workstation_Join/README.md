@@ -1,5 +1,4 @@
-
-# AD_Domain_Setup_&_Workstation_Join
+# AD Domain Setup & Workstation Join
 
 ## 🎯 Objective
 
