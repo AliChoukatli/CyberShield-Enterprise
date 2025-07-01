@@ -32,6 +32,7 @@ Using LAPS with Intune improves security by minimizing risks related to local ad
 - [Step 7 - Rotation Password](#step-7---rotation-password)
 - [Step 8 - Limit LAPS Password Access Rights](#step-8---limit-laps-password-access-rights)
 
+---
 
 ## 🔑 Key Features
 
