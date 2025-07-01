@@ -12,15 +12,13 @@ You'll perform diagnostic actions like pinging the default gateway and DC, check
 
 ---
 
-## ✅ **Troubleshoot Network Connectivity**
+## 🔴 **Troubleshoot Network Connectivity**
 
-  ## 📌 Ping
+## 🚀 **1 - Ping**
 
 #### 🎯 *Objective : Verify basic network connectivity by pinging the default gateway and the domain controller (DC).*
 
 All commands below are executed from the employee workstation: **LTP-EMP01**.
-
----
 
 #### ▶️ Test A – Ping the Default Gateway
 - Purpose: Ensure the device can reach the router (gateway) and confirm LAN connectivity is functional.
@@ -48,8 +46,10 @@ If the ping fails:
 - 🛠️ Use the following command on the domain controller to verify its IP address:
   ```bash
   ipconfig
+
 --- 
-## 📌 - **IP Configuration**
+
+## 🚀 **2 - IP Configuration**
 
 ```bash
 ipconfig /all
@@ -58,7 +58,7 @@ ipconfig /all
 
 ---
 
-## 📌 - **Inspect Network Adapter Status**  
+## 🔴 **Inspect Network Adapter Status**
 
 #### 🎯 Objective: *Verify if the network adapter is functioning properly.*
 
