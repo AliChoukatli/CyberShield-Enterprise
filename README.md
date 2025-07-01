@@ -92,27 +92,17 @@ All policies and technologies are aligned with Zero Trust security model.
 
 ## ✅ Compliance Mapping
 
-| Framework         | Control ID               | Implementation Example                           |
-| ----------------- | ------------------------ | ------------------------------------------------ |
-| **ISO/IEC 27001** | A.9.2 – User Access Mgmt | Azure AD + Group Membership + Conditional Access |
-| **ISO/IEC 27001** | A.12.4 – Logging         | Microsoft Defender + Sentinel SIEM               |
-| **NIST CSF**      | PR.AC – Access Control   | MFA, Role-based Privileges                       |
-| **NIST CSF**      | DE.CM – Detect/Monitor   | Endpoint Monitoring                              |
+Our technical implementations directly contribute to meeting security and compliance requirements, aligning our operations with recognized frameworks such as ISO 27001 and the NIST Cybersecurity Framework (CSF).
 
+| Technical Implementation  | GRC Domain / Compliance Objective (ISO 27001 / NIST CSF)                         | Specific GRC Benefit                                          |
+|---------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------|
+| **MFA (Multi-Factor Authentication)** | **ISO 27001 A.9.2.1** (User registration and deregistration)<br>**NIST PR.AC-7** (Privileged access) | Strengthens identity authentication, reducing risk of unauthorized access. |
+| **Conditional Access**     | **ISO 27001 A.9.4.2** (Authentication of connections)<br>**NIST PR.AC-5** (Access management) | Ensures only compliant users and devices can access resources based on contextual risk. |
+| **LAPS (Local Admin Password Solution)** | **ISO 27001 A.9.2.3** (Management of privileged access rights)<br>**NIST ID.AM-1** (Managed identities) | Secures and manages local admin accounts, preventing lateral movement. |
+| **Endpoint Hardening**     | **ISO 27001 A.13.1.2** (Network service security)<br>**NIST PR.PT-3** (Network security) | Reduces attack surface on endpoints, limiting exploitable vulnerabilities. |
+| **Sentinel (Logs & Rules)**| **ISO 27001 A.12.4.1** (Event logging)<br>**NIST DE.CM-4** (Data analysis) | Centralizes evidence collection and automates anomaly detection for auditing and response. |
 
 ---
-
-### ⚙️ Cartographie des Contrôles de Sécurité avec les Cadres GRC
-
-Nos implémentations techniques contribuent directement au respect des exigences de sécurité et de conformité, alignant nos opérations avec des cadres reconnus tels que l'ISO 27001 et le NIST Cybersecurity Framework (CSF).
-
-| Implémentation Technique | Domaine GRC / Objectif de Conformité (ISO 27001 / NIST CSF) | Bénéfice GRC Spécifique |
-|--------------------------|---------------------------------------------------------------|-------------------------|
-| **MFA (Multi-Factor Authentication)** | **ISO 27001 A.9.2.1** (Enregistrement et désenregistrement des utilisateurs)<br>**NIST PR.AC-7** (Accès à privilèges) | Renforce l'authentification des identités, réduisant le risque d'accès non autorisé. |
-| **Accès Conditionnel** | **ISO 27001 A.9.4.2** (Authentification des connexions)<br>**NIST PR.AC-5** (Gestion des accès) | Assure que seuls les utilisateurs et appareils conformes peuvent accéder aux ressources, en fonction du risque contextuel. |
-| **LAPS (Local Admin Password Solution)** | **ISO 27001 A.9.2.3** (Gestion des droits d'accès à privilèges)<br>**NIST ID.AM-1** (Identités gérées) | Sécurise et gère les comptes administrateurs locaux, prévenant le mouvement latéral. |
-| **Durcissement des Endpoints** | **ISO 27001 A.13.1.2** (Sécurité des services réseau)<br>**NIST PR.PT-3** (Sécurité des réseaux) | Réduit la surface d'attaque des appareils finaux, limitant les vulnérabilités exploitables. |
-| **Sentinel (Logs & Règles)** | **ISO 27001 A.12.4.1** (Enregistrement des événements)<br>**NIST DE.CM-4** (Analyse des données) | Centralise la collecte des preuves et automatise la détection des anomalies pour l'audit et la réponse. |
 
 ## 📎 Supporting Assets
 
