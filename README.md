@@ -1,117 +1,92 @@
-# 🛡️ CyberShield Entreprise – Securing a Small Business (25 Users)
+# 🛡️ CyberShield-Enterprise: End-to-End Modern Cybersecurity Deployment
 
-This project simulates the end-to-end deployment of a secure, hybrid-cloud IT infrastructure for a fictional small business in the financial sector. It applies modern cybersecurity practices aligned with **Zero Trust**, **ISO/IEC 27001**, and **NIST CSF** using **Microsoft 365**, **Azure AD (Entra ID)**, **Intune**, **Microsoft Defender**, and **Microsoft Sentinel**.
+## 🎯 Project Overview
+**CyberShield-Enterprise** is a comprehensive hands-on project demonstrating the deployment and hardening of a modern cybersecurity posture within a cloud-native and hybrid environment, primarily leveraging Microsoft security services.
 
-> **Context:** Fictional SMB named *CyberShield Entreprise* handling sensitive financial data with a staff of 25. Prioritizing security, compliance, and remote device management.
+It covers the full lifecycle of securing an enterprise—from foundational setup and identity management to endpoint protection, system hardening, and real-time threat detection.
 
----
-
-## 📚 Table of Contents
-
-1. [🎯 Global Objectives](#-global-objectives)
-2. [🏢 Environment Overview](#-environment-overview)
-3. [📐 Architecture](#-architecture)
-4. [🚩 Project Phases Overview](#-project-phases-overview)
-5. [🔐 Zero Trust Implementation](#-zero-trust-implementation)
-6. [📊 Security Before vs After](#-security-before-vs-after)
-7. [✅ Compliance Mapping](#-compliance-mapping)
+This project serves as a practical guide and robust portfolio for individuals looking to gain and showcase experience in real-world cybersecurity implementations.
 
 ---
 
-## 🎯 Global Objectives
+## 📝 Introduction
+In today’s evolving threat landscape, building a resilient and adaptive security infrastructure is paramount.
 
-1. Establish and secure on-premises Active Directory infrastructure  
-2. Manage users, groups, and access control efficiently  
-3. Deploy Office 365 and automate IT support tasks  
-4. Enable hybrid device management with Azure AD and Intune  
-5. Implement Zero Trust security with MFA and endpoint hardening  
-
+This project details how to establish a strong defense-in-depth strategy by integrating Microsoft security solutions to create a cohesive, monitored enterprise environment. From configuring Multi-Factor Authentication (MFA) and Conditional Access policies to deploying endpoint protection and a cloud-native SIEM, **CyberShield-Enterprise** provides a holistic view of modern security operations.
 
 ---
 
-## 🏢 Environment Overview
+## 📘 Table of Contents
 
-| Component        | Details                                                                         |
-| ---------------- | --------------------------------------------------------------------------------|
-| **Users**        | 25 (across multiple departments)                                                 |
-| **Devices**      | 1 Domain Controller, 1 File Server, 3 Workstations                               |
-| **OS**           | Windows Server 2022, Windows 11 Entreprise                                       |
-| **Licensing**    | Microsoft 365 Business Premium P1                                                |
-| **Hybrid Setup** | Azure AD Connect (Password Hash Sync + SSO)                                      |
-| **Device Join**  | Hybrid Azure AD Join + Intune                                                    |
-| **Security**     | Microsoft Defender for Endpoint, Windows Firewall, BitLocker, Conditional Access |
-| **MFA**          | Windows Hello, Microsoft Authenticator, FIDO2, TAP                               |
+### Chapter 1: Project Initialization & Foundational Architecture
+- Setting up the Azure/Microsoft 365 lab environment.
+- Defining core architectural components and initial user/group structures.
+- Establishing fundamental security principles.
 
----
+### Chapter 2: Secure Device Management & Compliance
+- Device enrollment and compliance policies via Microsoft Intune.
+- Enforcing security baselines and configuration standards for endpoints.
 
-## 📐 Architecture
+### Chapter 3: Advanced Endpoint Hardening & Configuration
+- OS hardening techniques.
+- Advanced firewall rules and application controls.
 
-![Architecture](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Architecture.jpg)
+### Chapter 4: Data Protection & Application Security
+- Data encryption strategies (e.g., BitLocker).
+- Securing applications and managing software distribution.
 
-The project integrates Microsoft on-premises and cloud services to manage and protect user identities, devices, and data while ensuring full compliance with recognized standards.
+### Chapter 5: Identity & Access Management (IAM) & System Hardening
+- **5.1**: Multi-Factor Authentication (MFA) Configuration Guide  
+- **5.2**: Conditional Access & Identity Protection Policies  
+- **5.3**: User Rights Assignment – Hardening Settings (Hybrid or Local AD)  
+- **5.4**: Security Controls Implementation  
+- **5.5**: Security Exposure Analysis, Remediation & Risk Management  
+- **5.6**: Local Administrator Password Management (LAPS) with Intune  
+- **5.7**: LAPS Integration with Microsoft Sentinel – Monitoring & Detection Guide  
 
----
+### Chapter 6: Threat Detection & Simulation
+- **6.1**: Microsoft Sentinel – Setup & Architecture  
+- **6.2**: Custom Analytics Rules (Microsoft Sentinel)  
 
-## 🚩 Project Phases Overview
-
-| Phase                                                                | Description                                                                                                                                                                                 |
-| ---------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ✅ **1 – Domain_Setup_&_Workstation_Join**                           | Prepares servers and workstations, domain controller installation, workstation domain join, and Hyper-V environment setup.                                                                  |
-| ✅ **2 – AD_Integration_User_Management**                            | OU creation, user & group management, NTFS permission setup, RDP access policy, and user lifecycle simulation.                                                                              |
-| ✅ **3 – IT_Helpdesk_&_Network_Troubleshooting**                     | Office 365 deployment via ODT and PowerShell, troubleshooting scenarios, user profile repairs, and automation scripts for support tasks.                                                    |
-| ✅ **4 – Azure AD Sync & Endpoint Security**                         | Hybrid join of devices, Intune management, application of security & compliance policies, Windows Defender Firewall, BitLocker encryption, and Microsoft Defender for Endpoint onboarding.  |
-| ✅ **5 – Zero_Trust_&_Security_Hardening**                           | MFA (WHfB, Authenticator App, TAP, FIDO2), integration with Conditional Access, Zero Trust configuration, Misconfig & Resolution & EXposure Security Analysis                               |
-| ✅ **6 – Threat_Detection_&_Simulation**                             |
----
-
-## 🔐 Zero Trust Implementation
-
-| Principle               | Implementation Example                                        |
-| ----------------------- | ------------------------------------------------------------- |
-| **Verify Explicitly**   | MFA (Windows Hello, Authenticator, FIDO2), Conditional Access |
-| **Use Least Privilege** | Role-based access, restricted admin use, separate accounts    |
-| **Assume Breach**       | Endpoint detection (EDR), centralized logs, alert response    |
-
-All policies and technologies are aligned with Zero Trust security model.
+> _(Additional chapters like Playbooks, Threat Hunting, Incident Management may follow)_
 
 ---
 
-## 📊 Security Before vs After
+## ✨ Key Project Highlights & Technologies
 
-| Security Element              | Before Hardening     | After Implementation                        |
-| ----------------------------- | -------------------- | ------------------------------------------- |
-| Multi-Factor Authentication   | ❌ Not enabled        | ✅ Windows Hello, Authenticator, FIDO2, TAP  |
-| Endpoint Compliance           | ❌ Uncontrolled       | ✅ Intune + Defender Baselines               |
-| Device Encryption (BitLocker) | ❌ Disabled           | ✅ Enforced via Intune                       |
-| Firewall Configuration        | ❌ Default rules      | ✅ Custom rules via GPO & Intune             |
-| Privileged Access Control     | ❌ Admin used daily   | ✅ User accounts + Role-based Admins         |
-| Defender for Endpoint         | ❌ Not deployed       | ✅ Cloud or GPO onboarding + central console |
-| Exposure Level                | ⚠️ High (pre-attack)  | ✅ Mitigated via Intune & GPO & PowerShell    |
+**This project demonstrates practical skills in:**
+
+- **Identity & Access Management (IAM)**: MFA, Conditional Access, LAPS, RBAC  
+- **Endpoint Security**: Device Hardening, BitLocker, Microsoft Defender for Endpoint  
+- **Security Operations (SecOps)**: Microsoft Sentinel, Data Connectors, KQL  
+- **Governance, Risk & Compliance (GRC)**: Risk mitigation & compliance mapping (ISO 27001, NIST CSF)  
+- **Cloud Security**: Azure and Microsoft 365 security services  
+
+**🛠️ Tools Used:**  
+Azure AD (Microsoft Entra ID), Intune, Microsoft Defender XDR, Microsoft Sentinel, GPOs, PowerShell
+
+---
+
+## 📈 Security Transformation: Before vs. After
+
+| **Security Element**        | **Before Implementation** | **After Implementation**                      |
+|----------------------------|---------------------------|-----------------------------------------------|
+| Multi-Factor Authentication| ❌ Not enabled             | ✅ Windows Hello, Authenticator, FIDO2, TAP   |
+| Endpoint Compliance        | ❌ Uncontrolled            | ✅ Intune + Defender Baselines                |
+| BitLocker Encryption       | ❌ Disabled                | ✅ Enforced via Intune                        |
+| Firewall Configuration     | ❌ Default rules           | ✅ Custom rules (GPO & Intune)                |
+| Privileged Access Control  | ❌ Admin used daily        | ✅ RBAC with separate user accounts           |
+| Defender for Endpoint      | ❌ Not deployed            | ✅ Cloud or GPO onboarding                    |
+| Exposure Level             | ⚠️ High                    | ✅ Mitigated via Intune, GPO, PowerShell      |
 
 ---
 
 ## ✅ Compliance Mapping
 
-| Technical Implementation  | GRC Domain / Compliance Objective (ISO 27001 / NIST CSF)                         | Specific GRC Benefit                                          |
-|---------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------|
-| **MFA (Multi-Factor Authentication)** | **ISO 27001 A.9.2.1** (User registration and deregistration)<br>**NIST PR.AC-7** (Privileged access) | Strengthens identity authentication, reducing risk of unauthorized access. |
-| **Conditional Access**     | **ISO 27001 A.9.4.2** (Authentication of connections)<br>**NIST PR.AC-5** (Access management) | Ensures only compliant users and devices can access resources based on contextual risk. |
-| **LAPS (Local Admin Password Solution)** | **ISO 27001 A.9.2.3** (Management of privileged access rights)<br>**NIST ID.AM-1** (Managed identities) | Secures and manages local admin accounts, preventing lateral movement. |
-| **Endpoint Hardening**     | **ISO 27001 A.13.1.2** (Network service security)<br>**NIST PR.PT-3** (Network security) | Reduces attack surface on endpoints, limiting exploitable vulnerabilities. |
-| **Sentinel (Logs & Rules)**| **ISO 27001 A.12.4.1** (Event logging)<br>**NIST DE.CM-4** (Data analysis) | Centralizes evidence collection and automates anomaly detection for auditing and response. |
+Our implementations directly support recognized cybersecurity frameworks like **ISO 27001** and **NIST CSF**.
 
----
-
-## 📎 Supporting Assets
-
-* **Scripts**: Fully documented PowerShell scripts for automation (e.g., O365 install, BitLocker, Defender, Join tasks)
-* **Screenshots**: Captures from Entra ID, Intune, Defender, and local machines to validate implementation
-* **GitHub Pages**: Access all project chapters on [CyberShield Enterprise GitHub](https://github.com/AliChoukatli/CyberShield-Enterprise)
-
----
-
-## 🧾 License
-
-Licensed under MIT.
-
-> ⚠️ **Note:** This project is a simulation built for educational and portfolio purposes. It demonstrates real-world implementations in a fictional context.
+| **Technical Implementation** | **GRC Domain / Compliance Objective** | **Specific GRC Benefit** |
+|-----------------------------|----------------------------------------|---------------------------|
+| MFA                         | ISO 27001 A.9.2.1 / NIST PR.AC-7       | Reduces risk of unauthorized access. |
+| Conditional Access          | ISO 27001 A.9.4.2 / NIST PR.AC-5       | Ensures contextual access control. |
+| LAPS                        | ISO 27001 A.9.2.3
