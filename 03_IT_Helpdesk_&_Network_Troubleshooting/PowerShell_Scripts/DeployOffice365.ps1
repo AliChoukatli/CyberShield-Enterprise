@@ -12,18 +12,18 @@ if (!(Test-Path $installFolder)) {
 $odtUrl = "https://aka.ms/O365Install"
 $odtPath = "$installFolder\OfficeSetup.exe"
 
-Write-Host "📥 Downloading Office Deployment Tool..." -ForegroundColor Cyan
+Write-Host "Downloading Office Deployment Tool..." -ForegroundColor Cyan
 Invoke-WebRequest -Uri $odtUrl -OutFile $odtPath
 
 # Check if config file exists
 $configFile = ".\install.xml"
 if (!(Test-Path $configFile)) {
-    Write-Host "❌ install.xml not found. Please create the configuration file first." -ForegroundColor Red
+    Write-Host "install.xml not found. Please create the configuration file first." -ForegroundColor Red
     exit
 }
 
 # Launch Office installation
-Write-Host "🚀 Starting Microsoft 365 installation..." -ForegroundColor Green
+Write-Host "Starting Microsoft 365 installation..." -ForegroundColor Green
 Start-Process -FilePath $odtPath -ArgumentList "/configure `"$configFile`"" -Wait
 
-Write-Host "✅ Microsoft 365 installation completed." -ForegroundColor Green
+Write-Host "Microsoft 365 installation completed." -ForegroundColor Green
