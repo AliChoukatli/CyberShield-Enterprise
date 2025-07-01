@@ -28,7 +28,7 @@ By applying these configurations, organizations can maintain a robust firewall p
 
 Used for on-premise Active Directory environments with GPO-based management.
 
-### ✅ Steps
+### 🚀  Steps
 
 1. Open the **Group Policy Management Console**: `gpmc.msc`
 2. Navigate to:  
