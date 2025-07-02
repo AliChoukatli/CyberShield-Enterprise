@@ -14,7 +14,7 @@
 - [🧱 Architecture](#-architecture-overview)
 - [📘 Table of Contents](#-table-of-contents)
 - [✨ Security Domains & Tools](#-security-domains--tools)
-- [📈 Security Transformation: Before vs. After](#-security-transformation-before-vs-after)
+- [📈 Security Transformation: Before vs After](#-security-transformation-before-vs-after)
 - [✅ Compliance Mapping](#-compliance-mapping)
 - [🛠️ Prerequisites & Lab Setup](#️-prerequisites--lab-setup)
 - [🤝 How to Navigate](#-how-to-navigate)
