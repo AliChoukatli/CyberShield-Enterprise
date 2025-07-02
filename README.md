@@ -10,7 +10,7 @@
 ## 🧭 Quick Navigation
 
 - [🎯 Project Overview](#-project-overview)
-- Architecture
+- [🧱 Architecture](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/README.md#-architecture-overview)
 - [📘 Table of Contents](#-table-of-contents)
 - [✨ Security Domains & Tools](#-security-domains--tools)
 - [📈 Security Transformation: Before vs. After](#-security-transformation-before-vs-after)
@@ -104,6 +104,7 @@ This project significantly enhances an organization's security posture.
 ---
 
 ## ✅ Compliance Mapping
+
 Each security control in this project was designed not only to enhance protection but also to meet compliance objectives aligned with ISO 27001 and NIST CSF, making the environment both resilient and audit-ready.
 
 | Technical Implementation        | GRC Domain / Compliance Objective (ISO 27001 / NIST CSF)                                                                                 | Specific GRC Benefit                                                                    |
@@ -130,5 +131,13 @@ Detailed setup instructions for the lab environment are provided in **Chapter 1*
 
 ## 🤝 How to Navigate
 
-Feel free to browse through the chapters in the table of contents. Each chapter's folder typically contains a dedicated `Documentation` section with detailed steps and screenshots.
+Each chapter includes a Documentation folder containing its subsections (e.g., 1.1, 1.2, etc.), with step-by-step instructions and screenshots for each configuration.
 
+Author : Ali Choukatli
+Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International  
+(CC BY-NC-ND 4.0)
+
+This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.  
+
+You may share this project (e.g. on GitHub, LinkedIn) with proper credit.  
+You may not use it for commercial purposes or modify/reuse parts of it without explicit permission from the author.
