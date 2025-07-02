@@ -14,7 +14,7 @@
 - [🧱 Architecture](#-architecture-overview)
 - [📘 Table of Contents](#-table-of-contents)
 - [✨ Security Domains & Tools](#-security-domains--tools)
-- [📈 Security Transformation: Before vs After](#-security-transformation-before-vs-after)
+- [📈 Security Posture: Before vs After](#-security-posture-before-vs-after)
 - [✅ Compliance Mapping](#-compliance-mapping)
 - [🛠️ Prerequisites & Lab Setup](#️-prerequisites--lab-setup)
 - [🤝 How to Navigate](#-how-to-navigate)
@@ -88,8 +88,7 @@ Navigate through the chapters to explore detailed implementations and configurat
 | **Automation & Scripts**        | PowerShell, KQL                                                                                                                                           |
 
 ---
-
-## 📈 Security Transformation: Before vs. After
+## 📈 Security Posture: Before vs. After
 
 This project significantly enhances an organization's security posture.
 
