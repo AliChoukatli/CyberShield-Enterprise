@@ -11,14 +11,14 @@
 ## 🧭 Quick Navigation
 
 - [🎯 Project Overview](#-project-overview)
-- [🧱 Architecture](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/README.md#-architecture-overview)
+- [🧱 Architecture](#-architecture-overview)
 - [📘 Table of Contents](#-table-of-contents)
 - [✨ Security Domains & Tools](#-security-domains--tools)
 - [📈 Security Transformation: Before vs. After](#-security-transformation-before-vs-after)
 - [✅ Compliance Mapping](#-compliance-mapping)
 - [🛠️ Prerequisites & Lab Setup](#️-prerequisites--lab-setup)
 - [🤝 How to Navigate](#-how-to-navigate)
-- [⚠️ Licence](
+- [⚠️ Licence](#%EF%B8%8F-licence)
 
 ---
 
