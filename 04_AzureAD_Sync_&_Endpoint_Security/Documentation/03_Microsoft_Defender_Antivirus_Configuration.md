@@ -105,5 +105,6 @@ The configuration is done using Intune security policies, allowing centralized d
 ## 🔚 Conclusion
 
 With Microsoft Defender Antivirus now configured via Intune:
+
 ✅ All managed devices receive consistent security settings automatically.  
 
