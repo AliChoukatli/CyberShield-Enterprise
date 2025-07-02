@@ -16,7 +16,7 @@
 - [✨ Security Domains & Tools](#-security-domains--tools)
 - [📈 Security Posture: Before vs After](#-security-posture-before-vs-after)
 - [✅ Compliance Mapping](#-compliance-mapping)
-- [🛠️ Prerequisites & Lab Setup](#️-prerequisites--lab-setup)
+- [🛠️ Prerequisites & Lab Setup](#-prerequisites--lab-setup)
 - [🔍 How to Navigate](#-how-to-navigate)
 - [⚠️ Licence](#%EF%B8%8F-licence)
 
