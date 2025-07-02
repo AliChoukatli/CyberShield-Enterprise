@@ -1,4 +1,4 @@
-# 🛡️ Azure & M365 Security Lab: Build Your Enterprise Cyber Defense 
+# 🛡️ CyberShield Enterprise: Designing and Securing a Zero Trust IT Architecture
 
 ![Status](https://img.shields.io/badge/Status-Active-success?style=flat-square)
 ![PowerShell](https://img.shields.io/badge/Powershell-Scripts-blue?logo=powershell&style=flat-square)
