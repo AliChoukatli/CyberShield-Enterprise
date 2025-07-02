@@ -10,7 +10,7 @@
 ## 🧭 Quick Navigation
 
 - [🎯 Project Overview](#-project-overview)
-- [📝 Introduction](#-introduction)
+- Architecture
 - [📘 Table of Contents](#-table-of-contents)
 - [✨ Security Domains & Tools](#-security-domains--tools)
 - [📈 Security Transformation: Before vs. After](#-security-transformation-before-vs-after)
