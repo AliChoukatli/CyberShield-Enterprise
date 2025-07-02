@@ -1,4 +1,4 @@
-# 👤 User Rights Assignment – Hardening Settings (Hybrid or Local AD
+# 👤 User Rights Assignment – Hardening Settings (For Hybrid or Local AD environment)
 
 ## 🎯 Objective
 
