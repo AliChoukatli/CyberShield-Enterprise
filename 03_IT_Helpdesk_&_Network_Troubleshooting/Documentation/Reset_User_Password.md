@@ -1,4 +1,4 @@
-# 📌 Reset User Passwords & Unlock Accounts
+# 📌 Reset User Passwords
 
 #### 🎯 Objective :*Assist users who are locked out or need password resets using Active Directory Users and Computers (ADUC).*
 
