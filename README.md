@@ -18,6 +18,7 @@
 - [✅ Compliance Mapping](#-compliance-mapping)
 - [🛠️ Prerequisites & Lab Setup](#️-prerequisites--lab-setup)
 - [🤝 How to Navigate](#-how-to-navigate)
+- [⚠️ Licence](
 
 ---
 
@@ -133,6 +134,8 @@ Detailed setup instructions for the lab environment are provided in **Chapter 1*
 ## 🤝 How to Navigate
 
 Each chapter includes a Documentation folder containing its subsections (e.g., 1.1, 1.2, etc.), with step-by-step instructions and screenshots for each configuration.
+
+## ⚠️ Licence
 
 Author : Ali Choukatli
 Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International  
