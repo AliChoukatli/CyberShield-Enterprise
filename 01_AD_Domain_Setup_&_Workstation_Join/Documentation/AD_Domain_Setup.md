@@ -159,5 +159,3 @@ At the end of this initial configuration:
 - The server is ready to operate as a **domain controller (DC01)**.
 - The **Active Directory service** is functional with an established domain (`corp.aclab.tech`).
 - A **dynamic DHCP scope** is configured to automatically assign IP addresses to network clients.
-
-This setup lays the groundwork for advanced deployments, including centralized identity management, group policy enforcement, endpoint protection, and integration with tools like **Microsoft Defender** and **Microsoft Sentinel**.
