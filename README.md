@@ -5,7 +5,8 @@
 ![Windows Server](https://img.shields.io/badge/Windows_Server-2022-blueviolet?logo=windows&style=flat-square)
 ![Azure](https://img.shields.io/badge/Azure-Integrated-blue?logo=microsoft-azure&style=flat-square)
 ![Microsoft365](https://img.shields.io/badge/Microsoft_365-Security-orange?logo=microsoft&style=flat-square)
-![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
+[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC--BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+
 
 ## 🧭 Quick Navigation
 
