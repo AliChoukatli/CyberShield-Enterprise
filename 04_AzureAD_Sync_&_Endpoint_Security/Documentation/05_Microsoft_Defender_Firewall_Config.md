@@ -2,7 +2,7 @@
 
 ## 🎯 Objective
 
-Ensure a secure and consistent firewall configuration across all network profiles (Domain, Private, Public) using Microsoft Defender Firewall. The goal is to block unsolicited inbound traffic and allow trusted outbound communication, following Zero Trust security principles.
+This configuration ensures consistent protection across all network profiles (Domain, Private, Public), blocking unsolicited inbound traffic while allowing trusted outbound communication.
 
 ## 📝 Introduction
 
@@ -34,7 +34,7 @@ Used for on-premise Active Directory environments with GPO-based management.
 2. Edit an existing GPO that targets your devices, or create a new one and link it to the Organizational Unit (OU) containing the relevant computers
 3. Navigate to:  
    `Computer Configuration` → `Policies` → `Windows Settings` → `Security Settings` → `Windows Defender Firewall with Advanced Security`
-4. Click **Right-click Windows Defender Firewall with Advanced Security** and select **Properties**
+4. Right-click **Windows Defender Firewall with Advanced Security** and select **Properties**
 5. Configure each profile (**Domain**, **Private**, **Public**) as follows:
 
 ## 🔥 Windows Defender Firewall – Recommended Global Settings
