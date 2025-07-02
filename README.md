@@ -109,13 +109,13 @@ This project significantly enhances an organization's security posture.
 
 Each security control in this project was designed not only to enhance protection but also to meet compliance objectives aligned with ISO 27001 and NIST CSF, making the environment both resilient and audit-ready.
 
-| Technical Implementation        | GRC Domain / Compliance Objective (ISO 27001 / NIST CSF)                                                                                 | Specific GRC Benefit                                                                    |
-| :------------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------- |
-| **MFA (Multi-Factor Authentication)** | **ISO 27001 A.9.2.1** (User registration and de-registration)<br>**NIST PR.AC-7** (Privileged access)                                   | Strengthens identity authentication, reducing the risk of unauthorized access.            |
-| **Conditional Access** | **ISO 27001 A.9.4.2** (Authentication for external connections)<br>**NIST PR.AC-5** (Access management)                                   | Ensures that only compliant users and devices can access resources, based on contextual risk. |
-| **LAPS (Local Admin Password Solution)** | **ISO 27001 A.9.2.3** (Management of privileged access rights)<br>**NIST ID.AM-1** (Managed identities)                         | Secures and manages local administrator accounts, preventing lateral movement.           |
-| **Endpoint Hardening** | **ISO 27001 A.13.1.2** (Network services security)<br>**NIST PR.PT-3** (Network security)                                                   | Reduces the attack surface of end-user devices, limiting exploitable vulnerabilities.     |
-| **Sentinel (Logs & Rules)** | **ISO 27001 A.12.4.1** (Event logging)<br>**NIST DE.CM-4** (Data analysis)                                                              | Centralizes evidence collection and automates anomaly detection for auditing and response. |
+| Technical Implementation        | GRC Domain / Compliance Objective (ISO 27001 / NIST CSF)                                                         | Specific GRC Benefit                                                                          |
+| :------------------------------|-------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
+| **MFA (Multi-Factor Authentication)** | **ISO 27001 A.9.2.1** (User registration and de-registration)<br>**NIST PR.AC-7** (Privileged access)      | Strengthens identity authentication, reducing the risk of unauthorized access.                |
+| **Conditional Access** | **ISO 27001 A.9.4.2** (Authentication for external connections)<br>**NIST PR.AC-5** (Access management)                   | Ensures that only compliant users and devices can access resources, based on contextual risk. |
+| **LAPS (Local Admin Password Solution)** | **ISO 27001 A.9.2.3** (Management of privileged access rights)<br>**NIST ID.AM-1** (Managed identities) | Secures and manages local administrator accounts, preventing lateral movement.                |
+| **Endpoint Hardening** | **ISO 27001 A.13.1.2** (Network services security)<br>**NIST PR.PT-3** (Network security)                                 | Reduces the attack surface of end-user devices, limiting exploitable vulnerabilities.         |
+| **Sentinel (Logs & Rules)** | **ISO 27001 A.12.4.1** (Event logging)<br>**NIST DE.CM-4** (Data analysis)                                           | Centralizes evidence collection and automates anomaly detection for auditing and response.    |
 
 ---
 
