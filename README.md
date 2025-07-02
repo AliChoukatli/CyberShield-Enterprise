@@ -1,6 +1,5 @@
 # 🔐 CyberShield Enterprise: Designing, Implementing, and Securing a Zero Trust IT Architecture
 
-
 ![Status](https://img.shields.io/badge/Status-Active-success?style=flat-square)
 ![PowerShell](https://img.shields.io/badge/Powershell-Scripts-blue?logo=powershell&style=flat-square)
 ![Windows Server](https://img.shields.io/badge/Windows_Server-2022-blueviolet?logo=windows&style=flat-square)
@@ -19,18 +18,13 @@
 - [🛠️ Prerequisites & Lab Setup](#️-prerequisites--lab-setup)
 - [🤝 How to Navigate](#-how-to-navigate)
 
+---
 
 ## 🎯 Project Overview
 
-**Azure & M365 Security Lab: Build Your Enterprise Cyber Defense** is a comprehensive hands-on project demonstrating the deployment and hardening of a modern cybersecurity posture within a cloud-native and hybrid environment, primarily leveraging Microsoft security services. This project covers the full lifecycle of securing an enterprise, from foundational setup and identity management to endpoint protection, system hardening, and real-time threat detection.
+**CyberShield Enterprise** is a comprehensive hands-on project simulating the design, implementation, and securing of a modern hybrid IT infrastructure based on Zero Trust principles. The project focuses on leveraging Microsoft security technologies to build a robust enterprise cybersecurity posture.
 
-It serves as a practical guide and a robust portfolio for individuals looking to gain and showcase experience in real-world cybersecurity implementations.
-
----
-
-## 📝 Introduction
-
-In today's evolving threat landscape, building a resilient and adaptive security infrastructure is paramount. This project meticulously details the steps to establish a strong defense-in-depth strategy, integrating various Microsoft security solutions to create a cohesive and monitored enterprise environment. From configuring robust Multi-Factor Authentication (MFA) and Conditional Access policies to deploying advanced endpoint protection and a cloud-native SIEM, this lab offers a holistic view of modern security operations.
+It covers key security areas such as identity and access management, endpoint hardening, data encryption, privileged access management, and advanced threat detection and monitoring. This project was developed independently, without prior IT experience or supervision, demonstrating practical skills aligned with industry standards like ISO 27001 and the NIST Cybersecurity Framework.
 
 ---
 
