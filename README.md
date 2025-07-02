@@ -28,6 +28,12 @@
 
 ---
 
+## 🧱 Architecture Overview
+
+![Architecture](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Architecture.jpg)
+
+---
+
 ## 📘 Table of Contents
 
 Navigate through the chapters to explore detailed implementations and configurations:
