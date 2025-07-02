@@ -15,8 +15,8 @@ You'll learn to:
 - **2.1**: [Creating and Managing Organizational Units (OUs)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/02_AD_Integration_User_Management/Documentation/01_Create_Delete_OUs.md)  
 - **2.2**: [Managing Users and Security Groups in Active Directory](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/02_AD_Integration_User_Management/Documentation/02_Manage_Users_Groups.md)
 - **2.3**: [File Share & NTFS Permissions Configuration](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/02_AD_Integration_User_Management/Documentation/03_File_Share_NTFS.md)
-- **2.4**: [RDP Access Control via Group Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/02_AD_Integration_User_Management/Documentation/05_RDP_GPO.md)
-- **2.5**: [Deleting a User Account in Active Directory](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/02_AD_Integration_User_Management/Documentation/06_Delete_Users_Accounts.md) 
+- **2.4**: [RDP Access Control via Group Policy](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/02_AD_Integration_User_Management/Documentation/04_RDP_GPO.md)
+- **2.5**: [Deleting a User Account in Active Directory](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/02_AD_Integration_User_Management/Documentation/05_Delete_Users_Accounts.md)
 
 ---
 
