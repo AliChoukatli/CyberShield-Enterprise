@@ -30,7 +30,7 @@
 
 ## 🧱 Architecture Overview
 
-![Architecture](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Architecture.jpg)
+![Architecture](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/Screenshots/Architecure_.png)
 
 ---
 
