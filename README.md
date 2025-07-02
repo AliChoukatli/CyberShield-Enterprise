@@ -131,7 +131,7 @@ Detailed setup instructions for the lab environment are provided in **Chapter 1*
 
 ---
 
-## 🤝 How to Navigate
+## 🔍 How to Navigate
 
 Each chapter includes a Documentation folder containing its subsections (e.g., 1.1, 1.2, etc.), with step-by-step instructions and screenshots for each configuration.
 
