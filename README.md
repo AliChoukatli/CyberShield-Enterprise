@@ -24,8 +24,7 @@
 
 **CyberShield Enterprise** is a comprehensive hands-on project simulating **the design**, **implementation**, and **securing of a modern hybrid IT infrastructure based on Zero Trust principles**. The project focuses on leveraging Microsoft security technologies to build a robust enterprise cybersecurity posture.
 
-It covers key security areas such as **identity and access management(IAM)**, **endpoint hardening**, **data encryption**, **privileged access management**, and **advanced threat detection and monitoring**, demonstrating practical skills aligned with industry standards like ISO 27001 and the NIST Cybersecurity Framework.
-*This project was developed independently, without prior IT experience or supervision*
+It covers key security areas such as **identity and access management(IAM)**, **endpoint hardening**, **data encryption**, **privileged access management**, and **advanced threat detection and monitoring**, demonstrating practical skills aligned with industry standards like ISO 27001 and the NIST Cybersecurity Framework. *This project was developed independently, without prior IT experience or supervision*
 
 ---
 
