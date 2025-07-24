@@ -70,7 +70,7 @@ Export access rights for internal audit and reporting purposes.
 ```powershell
 Get-ADGroupMember -Identity "APP_Swift_Admin" | Select Name, SamAccountName
 ```
-- Export to .csv:
+- [ ] Export to .csv:
 ```powershell
 Get-ADGroupMember -Identity "APP_Swift_Admin" | 
 Select Name, SamAccountName |
