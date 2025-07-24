@@ -119,7 +119,7 @@ Each security control in this project was designed not only to enhance protectio
 ---
 
 
-## 🧰 Prerequisites & Lab Setup
+## 🧰 Prerequisites & Project Setup
 
 To explore or replicate this project, you will need:
 
