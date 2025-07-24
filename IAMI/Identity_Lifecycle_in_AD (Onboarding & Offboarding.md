@@ -33,7 +33,7 @@ Create service accounts, nested security groups, and test resource access rights
 Simulate the full user lifecycle: joining and leaving the company with access management.
 
 #### Onboarding:
-- [ ] Create a new user account `john.doe`
+- [ ] Create a new user account `clark.chou`
 - [ ] Add to groups: `IT-Users`, `APP_Swift_Read`
 - [ ] Map a personal network drive `U:\` with access only for that user
 - [ ] Apply a basic GPO (e.g., restrict Control Panel, enforce password complexity)
