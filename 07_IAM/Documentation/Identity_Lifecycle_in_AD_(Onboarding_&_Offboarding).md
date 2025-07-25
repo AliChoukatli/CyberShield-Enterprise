@@ -1,78 +1,69 @@
-# 💼  Identity Lifecycle in Active Directory (Onboarding & Offboarding)
+# 💼 Identity Lifecycle in Active Directory (Onboarding & Offboarding)
 
-This chapter simulates real IAM analyst tasks in a banking environment.
+This chapter simulates real-world IAM analyst responsibilities in a banking context using Active Directory. It focuses on identity lifecycle management, access provisioning, service account creation, and audit readiness.
+
+---
 
 ## 🧱 Prerequisites
+
 - ✅ Windows Server 2022 installed
-- ✅ Active Directory (AD DS) configured
-- ✅ Users and Security Groups already created (see Chapter 2)
-- ✅ Lab environment is operational
+- ✅ Active Directory Domain Services (AD DS) configured
+- ✅ Users and Security Groups created (see Chapter 2)
+- ✅ Operational lab environment
 
 ---
 
 ## 🔐 1. Advanced Account and Access Management
 
-### 🎯 Goal:
-Create service accounts, nested security groups, and test resource access rights.
+### 🎯 Goal
+Simulate technical account creation, nested security group strategy, and resource-based access control.
 
-#### 🔧 Steps:
-- [ ] Create a service account `svc_sailpoint` (password never expires, stored in a dedicated OU)
-- [ ] Create the following groups:
+### 🪜 Steps
+
+- [ ] Create a **service account** `svc_sailpoint`
+  - OU: `OU=ServiceAccounts,DC=lab,DC=local`
+  - Options: Password never expires, cannot change password
+  - ➡️ *Justification*: Used by SailPoint (or any IGA tool) to connect to AD for provisioning/deprovisioning.
+
+- [ ] Create the following **security groups**:
   - `APP_Swift_Read`
   - `APP_Swift_Admin`
-  - `APP_Swift_Global` (parent group including the two above)
-- [ ] Add a test user (`testuser1`) to those groups
-- [ ] Create a shared folder `\\SRV-FILES\SwiftDocs` and apply permissions based on the groups
-- [ ] Verify access based on roles (read-only vs full control)
+  - `APP_Swift_Global` (nested group containing the two above)
+  - ➡️ *Justification*: Implements role-based access control (RBAC) for the Swift application.
+
+- [ ] Add test user `testuser1` to the groups:
+  - `APP_Swift_Read` → read-only access
+  - `APP_Swift_Admin` → full access
+  - ➡️ *Note*: Use group nesting to simplify future administration.
+
+- [ ] Create a **shared folder** `\\SRV-FILES\SwiftDocs`
+  - Apply NTFS & Share permissions:
+    - `APP_Swift_Read` → Read
+    - `APP_Swift_Admin` → Full Control
+  - ➡️ *Security Principle*: Least Privilege Access
+
+- [ ] Test access with `testuser1`:
+  - Verify role-based access via group membership
+  - Document results in `Access_Test_Results.md`
 
 ---
 
-## 📥 2. Onboarding and Offboarding Processes
+## 🧰 Bonus: PowerShell Snippets
 
-### 🎯 Goal:
-Simulate the full user lifecycle: joining and leaving the company with access management.
-
-#### Onboarding:
-- [ ] Create a new user account `clark.chou`
-- [ ] Add to groups: `IT-Users`, `APP_Swift_Read`
-- [ ] Map a personal network drive `U:\` with access only for that user
-- [ ] Apply a basic GPO (e.g., restrict Control Panel, enforce password complexity)
-
-#### Offboarding:
-- [ ] Disable `john.doe` account
-- [ ] Remove from all groups
-- [ ] Delete local profile
-- [ ] Archive user documents (local backup or export)
-
----
-
-## 📊 3. Access Requests and Ticket Management
-
-### 🎯 Goal:
-Simulate an ITSM ticket for an application access request.
-
-#### Scenario:
-> "A user requests read-only access to the Swift Alliance application"
-
-- [ ] Create a mock ITSM ticket (description, user, timestamp)
-- [ ] Add the user to the `APP_Swift_Read` group
-- [ ] Log the request (type, action, date, group added)
-- [ ] Track the action in a file like `IAM_Access_Log.md` or a `.csv`
-
----
-
-## 📁 4. Audit and Compliance
-
-### 🎯 Goal:
-Export access rights for internal audit and reporting purposes.
-
-- [ ] List group members using PowerShell:
 ```powershell
-Get-ADGroupMember -Identity "APP_Swift_Admin" | Select Name, SamAccountName
-```
-- [ ] Export to .csv:
-```powershell
-Get-ADGroupMember -Identity "APP_Swift_Admin" | 
-Select Name, SamAccountName |
-Export-Csv -Path "C:\Audit\Swift_Admin_Members.csv" -NoTypeInformation
+# Create service account
+New-ADUser -Name "svc_sailpoint" -SamAccountName "svc_sailpoint" `
+-AccountPassword (ConvertTo-SecureString "StrongPassword123!" -AsPlainText -Force) `
+-Enabled $true -PasswordNeverExpires $true -Path "OU=ServiceAccounts,DC=lab,DC=local"
+
+# Create groups
+New-ADGroup -Name "APP_Swift_Read" -GroupScope Global -GroupCategory Security -Path "OU=Groups,DC=lab,DC=local"
+New-ADGroup -Name "APP_Swift_Admin" -GroupScope Global -GroupCategory Security -Path "OU=Groups,DC=lab,DC=local"
+New-ADGroup -Name "APP_Swift_Global" -GroupScope Global -GroupCategory Security -Path "OU=Groups,DC=lab,DC=local"
+
+# Add nesting
+Add-ADGroupMember -Identity "APP_Swift_Global" -Members "APP_Swift_Read","APP_Swift_Admin"
+
+# Add test user to a group
+Add-ADGroupMember -Identity "APP_Swift_Read" -Members "testuser1"
 ```
