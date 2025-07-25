@@ -61,9 +61,9 @@ if (-not (Get-ADUser -Filter {SamAccountName -eq "svc_sailpoint"})) {
     New-ADUser -Name "svc_sailpoint" -SamAccountName "svc_sailpoint" `
      -AccountPassword (ConvertTo-SecureString "StrongPasswd123$" -AsPlainText -Force) `
      -Enabled $true -PasswordNeverExpires $true -Path $OU_ServiceAccounts
-    Write-Host "✅ Service account 'svc_sailpoint' created."
+    Write-Host "Service account 'svc_sailpoint' created."
 } else {
-    Write-Host "ℹ️ Service account 'svc_sailpoint' already exists."
+    Write-Host "ℹService account 'svc_sailpoint' already exists."
 }
 
 # 2. Create the application groups if they don't exist
@@ -72,9 +72,9 @@ $groups = @("APP_Swift_Read", "APP_Swift_Admin", "APP_Swift_Global")
 foreach ($group in $groups) {
     if (-not (Get-ADGroup -Filter {Name -eq $group})) {
         New-ADGroup -Name $group -GroupScope Global -GroupCategory Security -Path $OU_Groups
-        Write-Host "✅ Group $group created."
+        Write-Host "Group $group created."
     } else {
-        Write-Host "ℹ️ Group $group already exists."
+        Write-Host "ℹGroup $group already exists."
     }
 }
 
@@ -86,14 +86,14 @@ if (-not (Get-ADUser -Filter {SamAccountName -eq "testuser1"})) {
     New-ADUser -Name "testuser1" -SamAccountName "testuser1" `
      -AccountPassword (ConvertTo-SecureString "StrongPasswd123$" -AsPlainText -Force) `
      -Enabled $true -Path $OU_IT
-    Write-Host "✅ User 'testuser1' created in IT."
+    Write-Host "User 'testuser1' created in IT."
 } else {
-    Write-Host "ℹ️ User 'testuser1' already exists."
+    Write-Host "User 'testuser1' already exists."
 }
 
 # 5. Add testuser1 to the Read group
 Add-ADGroupMember -Identity "APP_Swift_Read" -Members "testuser1"
-Write-Host "✅ User 'testuser1' added to 'APP_Swift_Read'."
+Write-Host "User 'testuser1' added to 'APP_Swift_Read'."
 
 
 ```
