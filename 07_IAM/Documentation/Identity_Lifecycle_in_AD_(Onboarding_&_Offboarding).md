@@ -51,22 +51,22 @@ Simulate technical account creation, nested security group strategy, and resourc
 ## 🧰 Bonus: PowerShell Snippets
 
 ```powershell
-# Define Organizational Units
+# Define OUs
 $OU_ServiceAccounts = "OU=Service Accounts,DC=corp,DC=aclab,DC=tech"
-$OU_Users = "OU=Users,DC=corp,DC=aclab,DC=tech"
 $OU_Groups = "OU=Groups,DC=corp,DC=aclab,DC=tech"
+$OU_IT = "OU=IT,OU=Employees,DC=corp,DC=aclab,DC=tech"
 
-# 1. Create service account if it doesn't exist
+# 1. Create the service account if it doesn't exist
 if (-not (Get-ADUser -Filter {SamAccountName -eq "svc_sailpoint"})) {
     New-ADUser -Name "svc_sailpoint" -SamAccountName "svc_sailpoint" `
-     -AccountPassword (ConvertTo-SecureString "StrongPassword123!" -AsPlainText -Force) `
+     -AccountPassword (ConvertTo-SecureString "StrongPasswd123$" -AsPlainText -Force) `
      -Enabled $true -PasswordNeverExpires $true -Path $OU_ServiceAccounts
     Write-Host "✅ Service account 'svc_sailpoint' created."
 } else {
     Write-Host "ℹ️ Service account 'svc_sailpoint' already exists."
 }
 
-# 2. Create groups if they don't exist
+# 2. Create the application groups if they don't exist
 $groups = @("APP_Swift_Read", "APP_Swift_Admin", "APP_Swift_Global")
 
 foreach ($group in $groups) {
@@ -78,15 +78,15 @@ foreach ($group in $groups) {
     }
 }
 
-# 3. Add Read/Admin groups into the Global group (nested membership)
-Add-ADGroupMember -Identity "APP_Swift_Global" -Members "APP_Swift_Read","APP_Swift_Admin"
+# 3. Nest Read/Admin groups into the Global group
+Add-ADGroupMember -Identity "APP_Swift_Global" -Members "APP_Swift_Read", "APP_Swift_Admin"
 
-# 4. Create testuser1 if it doesn't exist
+# 4. Create a test user in the IT department if it doesn't exist
 if (-not (Get-ADUser -Filter {SamAccountName -eq "testuser1"})) {
     New-ADUser -Name "testuser1" -SamAccountName "testuser1" `
-     -AccountPassword (ConvertTo-SecureString "TestUser123!" -AsPlainText -Force) `
-     -Enabled $true -Path $OU_Users
-    Write-Host "✅ User 'testuser1' created."
+     -AccountPassword (ConvertTo-SecureString "StrongPasswd123$" -AsPlainText -Force) `
+     -Enabled $true -Path $OU_IT
+    Write-Host "✅ User 'testuser1' created in IT."
 } else {
     Write-Host "ℹ️ User 'testuser1' already exists."
 }
@@ -94,6 +94,7 @@ if (-not (Get-ADUser -Filter {SamAccountName -eq "testuser1"})) {
 # 5. Add testuser1 to the Read group
 Add-ADGroupMember -Identity "APP_Swift_Read" -Members "testuser1"
 Write-Host "✅ User 'testuser1' added to 'APP_Swift_Read'."
+
 
 ```
 ### 🔎 Explanation
