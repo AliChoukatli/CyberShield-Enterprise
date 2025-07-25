@@ -74,7 +74,7 @@ foreach ($group in $groups) {
         New-ADGroup -Name $group -GroupScope Global -GroupCategory Security -Path $OU_Groups
         Write-Host "Group $group created."
     } else {
-        Write-Host "ℹGroup $group already exists."
+        Write-Host "Group $group already exists."
     }
 }
 
