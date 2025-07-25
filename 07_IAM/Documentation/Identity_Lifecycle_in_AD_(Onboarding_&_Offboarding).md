@@ -72,18 +72,18 @@ foreach ($group in $groups) {
 Add-ADGroupMember -Identity "APP_Swift_Global" -Members "APP_Swift_Read", "APP_Swift_Admin"
 
 # 4. Create a test user in the IT department if it doesn't exist
-if (-not (Get-ADUser -Filter {SamAccountName -eq "testuser1"})) {
-    New-ADUser -Name "testuser1" -SamAccountName "testuser1" `
+if (-not (Get-ADUser -Filter {SamAccountName -eq "swift.user"})) {
+    New-ADUser -Name "swift.user" -SamAccountName "swift.user" `
      -AccountPassword (ConvertTo-SecureString "StrongPasswd123$" -AsPlainText -Force) `
      -Enabled $true -Path $OU_IT
-    Write-Host "User 'testuser1' created in IT."
+    Write-Host "User 'swift.user' created in IT."
 } else {
-    Write-Host "User 'testuser1' already exists."
+    Write-Host "User 'swift.user' already exists."
 }
 
-# 5. Add testuser1 to the Read group
-Add-ADGroupMember -Identity "APP_Swift_Read" -Members "testuser1"
-Write-Host "User 'testuser1' added to 'APP_Swift_Read'."
+# 5. Add swift.user to the Read group
+Add-ADGroupMember -Identity "APP_Swift_Read" -Members "swift.user"
+Write-Host "User 'swift.user' added to 'APP_Swift_Read'."
 
 ```
 ![Swift_Groups_PS](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/07_IAM/Screenshots/Swift_Groups_PS.png)
