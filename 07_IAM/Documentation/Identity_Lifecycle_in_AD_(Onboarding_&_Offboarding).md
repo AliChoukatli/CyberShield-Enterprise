@@ -63,7 +63,7 @@ if (-not (Get-ADUser -Filter {SamAccountName -eq "svc_sailpoint"})) {
      -Enabled $true -PasswordNeverExpires $true -Path $OU_ServiceAccounts
     Write-Host "Service account 'svc_sailpoint' created."
 } else {
-    Write-Host "ℹService account 'svc_sailpoint' already exists."
+    Write-Host "Service account 'svc_sailpoint' already exists."
 }
 
 # 2. Create the application groups if they don't exist
