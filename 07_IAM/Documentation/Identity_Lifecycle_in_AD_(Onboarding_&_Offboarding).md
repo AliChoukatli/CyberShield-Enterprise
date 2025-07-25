@@ -67,3 +67,11 @@ Add-ADGroupMember -Identity "APP_Swift_Global" -Members "APP_Swift_Read","APP_Sw
 # Add test user to a group
 Add-ADGroupMember -Identity "APP_Swift_Read" -Members "testuser1"
 ```
+## 📌 Notes
+- This section reflects tasks typically performed by an IAM analyst in a banking environment when onboarding applications into an IAM or IGA process.
+
+- Access rights are aligned with business roles, ensuring security and compliance.
+
+- Service accounts are managed with strict security settings and stored in dedicated OUs.
+
+➡️ This lab simulates RBAC, group nesting, and technical account hygiene, which are essential practices for both operational IAM and future IGA integration (e.g., SailPoint).
