@@ -51,22 +51,61 @@ Simulate technical account creation, nested security group strategy, and resourc
 ## 🧰 Bonus: PowerShell Snippets
 
 ```powershell
-# Create service account
-New-ADUser -Name "svc_sailpoint" -SamAccountName "svc_sailpoint" `
--AccountPassword (ConvertTo-SecureString "StrongPassword123!" -AsPlainText -Force) `
--Enabled $true -PasswordNeverExpires $true -Path "OU=ServiceAccounts,DC=corp,DC=aclab,DC=tech"
+# Define Organizational Units
+$OU_ServiceAccounts = "OU=Service Accounts,DC=corp,DC=aclab,DC=tech"
+$OU_Users = "OU=Users,DC=corp,DC=aclab,DC=tech"
+$OU_Groups = "OU=Groups,DC=corp,DC=aclab,DC=tech"
 
-# Create groups
-New-ADGroup -Name "APP_Swift_Read" -GroupScope Global -GroupCategory Security -Path "OU=Groups,DC=corp,DC=aclab,DC=tech"
-New-ADGroup -Name "APP_Swift_Admin" -GroupScope Global -GroupCategory Security -Path "OU=Groups,DC=corp,DC=aclab,DC=tech"
-New-ADGroup -Name "APP_Swift_Global" -GroupScope Global -GroupCategory Security -Path "OU=Groups,DC=corp,DC=aclab,DC=tech"
+# 1. Create service account if it doesn't exist
+if (-not (Get-ADUser -Filter {SamAccountName -eq "svc_sailpoint"})) {
+    New-ADUser -Name "svc_sailpoint" -SamAccountName "svc_sailpoint" `
+     -AccountPassword (ConvertTo-SecureString "StrongPassword123!" -AsPlainText -Force) `
+     -Enabled $true -PasswordNeverExpires $true -Path $OU_ServiceAccounts
+    Write-Host "✅ Service account 'svc_sailpoint' created."
+} else {
+    Write-Host "ℹ️ Service account 'svc_sailpoint' already exists."
+}
 
-# Add nesting
+# 2. Create groups if they don't exist
+$groups = @("APP_Swift_Read", "APP_Swift_Admin", "APP_Swift_Global")
+
+foreach ($group in $groups) {
+    if (-not (Get-ADGroup -Filter {Name -eq $group})) {
+        New-ADGroup -Name $group -GroupScope Global -GroupCategory Security -Path $OU_Groups
+        Write-Host "✅ Group $group created."
+    } else {
+        Write-Host "ℹ️ Group $group already exists."
+    }
+}
+
+# 3. Add Read/Admin groups into the Global group (nested membership)
 Add-ADGroupMember -Identity "APP_Swift_Global" -Members "APP_Swift_Read","APP_Swift_Admin"
 
-# Add test user to a group
+# 4. Create testuser1 if it doesn't exist
+if (-not (Get-ADUser -Filter {SamAccountName -eq "testuser1"})) {
+    New-ADUser -Name "testuser1" -SamAccountName "testuser1" `
+     -AccountPassword (ConvertTo-SecureString "TestUser123!" -AsPlainText -Force) `
+     -Enabled $true -Path $OU_Users
+    Write-Host "✅ User 'testuser1' created."
+} else {
+    Write-Host "ℹ️ User 'testuser1' already exists."
+}
+
+# 5. Add testuser1 to the Read group
 Add-ADGroupMember -Identity "APP_Swift_Read" -Members "testuser1"
+Write-Host "✅ User 'testuser1' added to 'APP_Swift_Read'."
+
 ```
+### 🔎 Explanation
+
+| **Component**         | **Purpose**                                                             |
+|-----------------------|-------------------------------------------------------------------------|
+| `svc_sailpoint`       | A service account used by IGA tools like SailPoint                     |
+| `APP_Swift_Read`      | Read-only access group for the SWIFT application                       |
+| `APP_Swift_Admin`     | Admin-level access for SWIFT                                            |
+| `APP_Swift_Global`    | Group that includes both Read & Admin (for high-level audit/policy)    |
+| `testuser1`           | Simulated end-user added to the read group                             |
+
 
 ## 📌 Notes
 - [ ] This section reflects tasks typically performed by an IAM analyst in a banking environment when onboarding applications into an IAM or IGA process.
