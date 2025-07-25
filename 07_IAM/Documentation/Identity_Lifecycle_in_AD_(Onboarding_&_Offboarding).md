@@ -95,8 +95,13 @@ if (-not (Get-ADUser -Filter {SamAccountName -eq "testuser1"})) {
 Add-ADGroupMember -Identity "APP_Swift_Read" -Members "testuser1"
 Write-Host "User 'testuser1' added to 'APP_Swift_Read'."
 
-
 ```
+![Swift_Groups_PS](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/07_IAM/Screenshots/Swift_Groups_PS.png)
+
+![Swift_Groups_ADUC](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/07_IAM/Screenshots/Swift_Groups_ADUC.png)
+
+---
+
 ### 🔎 Explanation
 
 | **Component**         | **Purpose**                                                             |
