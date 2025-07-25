@@ -54,17 +54,5 @@ Demonstrate core SailPoint concepts and typical IAM analyst tasks related to acc
 
 ---
 
-### 📚 References and Resources
 
-- [SailPoint Official Documentation](https://community.sailpoint.com/docs/DOC-10006-sailpoint-identitynow-overview)
-- [SailPoint IdentityNow Demo Videos](https://www.sailpoint.com/resources/)
-- [Introduction to Identity Governance](https://www.sailpoint.com/identity-governance/)
-
----
-
-### ⚠️ Note
-
-This section is a conceptual simulation based on public resources and typical use cases. Actual implementation details may vary depending on organizational context and SailPoint deployment.
-
----
 
