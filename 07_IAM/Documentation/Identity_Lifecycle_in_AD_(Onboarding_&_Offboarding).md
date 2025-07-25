@@ -32,19 +32,9 @@ Simulate technical account creation, nested security group strategy, and resourc
   - ➡️ *Justification*: Implements role-based access control (RBAC) for the Swift application.
 
 - [ ] Add test user `testuser1` to the groups:  
-  - `APP_Swift_Read` → read-only access  
-  - `APP_Swift_Admin` → full access  
+  - `APP_Swift_Read` 
+  - `APP_Swift_Admin`
   - ➡️ *Note*: Use group nesting to simplify future administration.
-
-- [ ] Create a **shared folder** `\\SRV-FILES\SwiftDocs`  
-  - Apply NTFS & Share permissions:  
-    - `APP_Swift_Read` → Read  
-    - `APP_Swift_Admin` → Full Control  
-  - ➡️ *Security Principle*: Least Privilege Access
-
-- [ ] Test access with `testuser1`:  
-  - Verify role-based access via group membership  
-  - Document results in `Access_Test_Results.md`
 
 ---
 
@@ -101,6 +91,16 @@ Write-Host "User 'testuser1' added to 'APP_Swift_Read'."
 ![Swift_Groups_ADUC](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/07_IAM/Screenshots/Swift_Groups_ADUC.png)
 
 ---
+
+- [ ] Create a **shared folder** `\\SRV-FILES\SwiftDocs`  
+  - Apply NTFS & Share permissions:  
+    - `APP_Swift_Read` → Read  
+    - `APP_Swift_Admin` → Full Control  
+  - ➡️ *Security Principle*: Least Privilege Access
+
+- [ ] Test access with `testuser1`:  
+  - Verify role-based access via group membership  
+  - Document results in `Access_Test_Results.md`
 
 ### 🔎 Explanation
 
