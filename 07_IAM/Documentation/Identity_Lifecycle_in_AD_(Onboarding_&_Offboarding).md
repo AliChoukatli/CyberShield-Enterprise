@@ -38,7 +38,7 @@ Simulate technical account creation, nested security group strategy, and resourc
 
 ---
 
-## 🧰 Bonus: PowerShell Snippets
+## 🧰 With PowerShell
 
 ```powershell
 # Define OUs
