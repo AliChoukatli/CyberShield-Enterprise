@@ -56,6 +56,10 @@ BitLocker is a critical technology for protecting data at rest on Windows device
 3. Click **Add dynamic query**
 4. Define the rule with the following properties:
 
+```kql
+(device.deviceOSType -eq "Windows") and ((device.deviceOSVersion -startsWith "10") or (device.deviceOSVersion -startsWith "11"))
+```
+
 ![Windows-Device-Group](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Windows-Device-Group.png)
 
 5. Click **Save** > **Create**
