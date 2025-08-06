@@ -84,7 +84,7 @@ Navigate through the chapters to explore detailed implementations and configurat
 | **IAM & Identity Protection**   | Active Directory, Azure AD (Microsoft Entra ID), Conditional Access, Multi-Factor Authentication (MFA), LAPS, Role-Based Access Control (RBAC).           |
 | **Endpoint Security**           | Windows 11 & Windows Server 2022 hardening with Intune, BitLocker encryption, Microsoft Defender for Endpoint, Group Policy Objects (GPO).                |
 | **Security Operations (SecOps)**| Microsoft Sentinel setup, custom detection with KQL, integration of data connectors for centralized security monitoring and alerting.                     |
-| **Cloud Security & Compliance**| Zero Trust architecture, Intune policy enforcement, alignment with ISO 27001 and NIST Cybersecurity Framework (CSF).                                       |
+| **Cloud Security & Compliance**| Zero Trust architecture, Autopilot, Intune policy enforcement, alignment with ISO 27001 and NIST Cybersecurity Framework (CSF).                                       |
 | **Automation & Scripts**        | PowerShell, KQL                                                                                                                                           |
 
 ---
