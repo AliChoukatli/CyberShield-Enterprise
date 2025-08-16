@@ -16,7 +16,7 @@ You will learn how to set up the necessary infrastructure, activate Sentinel, co
 
 ## 📘 Table of Contents
 
-1. [🚀 Log Analytics Workspace Setup](#3-log-analytics-workspace-setup)
+1. [🚀 Log Analytics Workspace Setup](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_%26_Simulation/Documentation/01_Microsoft_Sentinel_Setup.md#-1---log-analytics-workspace-setup)
 2. [🚀 Microsoft Sentinel Activation](#4-microsoft-sentinel-activation)
 3. [🚀 Data Connectors Configuration](#5-data-connectors-configuration)
     - [🔹3.1 - Azure Active Directory](#51-azure-active-directory)
