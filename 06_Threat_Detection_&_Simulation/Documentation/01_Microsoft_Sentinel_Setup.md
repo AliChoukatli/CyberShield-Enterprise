@@ -22,8 +22,7 @@ You will learn how to set up the necessary infrastructure, activate Sentinel, co
     - [🔹3.1 - Azure Active Directory](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_&_Simulation/Documentation/01_Microsoft_Sentinel_Setup.md#-31-azure-active-directory-microsoft-entra-id)
     - [🔹3.2 - Microsoft Defender XDR ( Defender for Endpoint + Office 365](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_&_Simulation/Documentation/01_Microsoft_Sentinel_Setup.md#-32-microsoft-defender-xdr)
 4. [💰 Cost Management](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_&_Simulation/Documentation/01_Microsoft_Sentinel_Setup.md#4--cost-management)
-5. [🔚 Conclusion](#-Conclusion)
-
+5. [🔚 Conclusion](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/06_Threat_Detection_&_Simulation/Documentation/01_Microsoft_Sentinel_Setup.md#-conclusion)
 
 ## 🧰 Prerequisites
 
