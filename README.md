@@ -75,7 +75,7 @@ Navigate through the chapters to explore detailed implementations and configurat
     * 6.2: Custom Analytics Rules (Microsoft Sentinel)
     * 6.3 : Playbooks (Soon)
 * **[Chapter 7: Autopilot](https://github.com/AliChoukatli/CyberShield-Enterprise/tree/main/07_Autopilot)**
-   * 7.1 Azure AD Join (Cloud-only_Autopilot).md
+    * 7.1: Azure AD Join (Cloud-only Autopilot)
 ---
 
 ## ✨ Security Domains & Tools
