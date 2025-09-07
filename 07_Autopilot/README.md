@@ -1,8 +1,12 @@
-# Chapter 7: Windows Autopilot Deployment
+# Chapter 7: Windows Autopilot Deployment (Cloud-only, Azure AD Join)
 
-## 7.1 Azure AD Join (Cloud-only Autopilot)
+This chapter demonstrates a **zero-touch deployment** approach for modern Windows 11 devices using **Windows Autopilot** and **Azure AD Join**, without requiring any on-premises infrastructure.
 
-- Quick and straightforward Autopilot deployment using Azure AD Join
-- Suitable for small/medium businesses or labs
-- Covers device registration, profile creation, and policy assignment
+Key features of this deployment method:
+
+- **Quick and straightforward** setup for Azure AD Join via Autopilot
+- **Ideal for small to medium businesses** or lab environments
+- **Covers the full deployment process**, including device registration, deployment profile creation, and policy assignment
+- **Fully cloud-managed** using Microsoft Intune for automatic enrollment and configuration
+
 
