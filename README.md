@@ -70,11 +70,12 @@ Navigate through the chapters to explore detailed implementations and configurat
     * 5.5: Security Exposure Analysis, Remediation & Risk Management
     * 5.6: Local Administrator Password Management (LAPS) with Intune
     * 5.7: LAPS Integration with Microsoft Sentinel: Monitoring and Detection Guide
-* **[Chapter 6:Threat Detection & Simulation](06_Threat_Detection_&_Simulation/README.md)**
+* **[Chapter 6: Threat Detection & Simulation](06_Threat_Detection_&_Simulation/README.md)**
     * 6.1: Microsoft Sentinel – Setup 
     * 6.2: Custom Analytics Rules (Microsoft Sentinel)
     * 6.3 : Playbooks (Soon)
-
+* **[Chapter 7: Autopilot](https://github.com/AliChoukatli/CyberShield-Enterprise/tree/main/07_Autopilot)
+   * 7.1_Azure_AD_Join_(Cloud-only_Autopilot).md
 ---
 
 ## ✨ Security Domains & Tools
