@@ -6,9 +6,3 @@
 - Suitable for small/medium businesses or labs
 - Covers device registration, profile creation, and policy assignment
 
-## 7.2 Hybrid Azure AD Join (Advanced Scenario)
-
-- Overview of hybrid deployment with on-prem Active Directory
-- Requires local domain controller and Azure AD Connect
-- More complex setup, typically for large enterprises
-- Optional: lab simulation notes and challenges
