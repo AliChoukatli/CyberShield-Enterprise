@@ -135,15 +135,6 @@ Respond to a simulated phishing email in a safe lab setup.
 ---
 
 
-## 🧼 Post-Incident Steps
-
-After each simulation:
-
-- Write a short summary of actions taken
-- Include key findings and challenges
-- Capture screenshots of alerts, logs, commands used
-- List improvements (e.g., update Defender policy or Sentinel rule)
-- Mark the playbook as “complete” or “needs review”
 
 ---
 
