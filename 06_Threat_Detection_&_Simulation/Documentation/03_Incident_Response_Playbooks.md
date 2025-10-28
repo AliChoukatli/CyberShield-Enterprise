@@ -28,7 +28,7 @@ Simulate malware detection and respond using Microsoft Defender and local tools.
 
 ## 🧪 Test Setup
 
-- **Test file used**: EICAR Standard Antivirus Test File (harmless)
+- **Test file to use**: EICAR Standard Antivirus Test File (harmless)
 - **Test device**: Windows 11 Pro (lab VM)
 - **Security tool**: Microsoft Defender Antivirus (real-time protection ON)
 
