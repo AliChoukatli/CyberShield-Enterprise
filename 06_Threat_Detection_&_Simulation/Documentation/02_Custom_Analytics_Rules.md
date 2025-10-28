@@ -78,7 +78,7 @@ Allows Microsoft Sentinel to recognize and classify entities from the query resu
 | Lookup data from the last | 60 minutes      |
 | First run start time      | 6/16/2025, 12:00 PM |
 
-> This means the rule executes every 5 minutes, analyzing the past 5 minutes of log data.
+> This means the rule executes every 5 minutes, analyzing the past 60 minutes of log data.
 
 #### 🚨 5. Alert Threshold : **Generate alert when number of query results**: `> 1`
 
