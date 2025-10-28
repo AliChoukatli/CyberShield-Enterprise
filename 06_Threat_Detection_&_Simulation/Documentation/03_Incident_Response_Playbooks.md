@@ -15,7 +15,7 @@ This document presents simulated incident response playbooks built for a persona
 
 ---
 
-## 💥 Malware Infection Response – EICAR Simulation
+## 💥 Malware Infection Response
 
 ### 🎯 Objective:
 Simulate malware detection and respond using Microsoft Defender and local tools.
