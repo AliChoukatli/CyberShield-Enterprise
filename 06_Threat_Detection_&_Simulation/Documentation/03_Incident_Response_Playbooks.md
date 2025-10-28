@@ -89,16 +89,11 @@ Look for event ID 1116 (threat detected)
 
 ➡️ Document:
 
-File path
-
-Detection name
-
-Threat severity
-
-Timestamp
-
-Hash (use PowerShell to get hash if file still exists)
-
+- File path
+- Detection name
+- Threat severity
+- Timestamp
+- Hash (use PowerShell to get hash if file still exists)
 
 5. Perform Antivirus Scan
 Run a full scan:
