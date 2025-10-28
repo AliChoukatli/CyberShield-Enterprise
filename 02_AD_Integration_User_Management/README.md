@@ -1,4 +1,4 @@
-# Chapitre 2 : 👥 AD Integration User Management
+#  👥 Chapter 2 : AD Integration User Management
 
 ## 🎯 Objective  
 This chapter focuses on essential user and group management within Active Directory.  
