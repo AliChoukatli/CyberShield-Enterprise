@@ -1,4 +1,4 @@
-# Threat Detection & Simulation
+# Chapter 6 - Threat Detection & Simulation
 
 ## 🎯 Objective
 
