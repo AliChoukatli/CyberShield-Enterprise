@@ -1,4 +1,4 @@
-# Zero Trust & Security Hardening
+# Chapter 5 - Zero Trust & Security Hardening
 
 ## 🎯 Objective
 
