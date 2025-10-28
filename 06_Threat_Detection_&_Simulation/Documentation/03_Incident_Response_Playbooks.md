@@ -135,5 +135,5 @@ Respond to a simulated phishing email in a safe lab setup.
 
 
 
-**👤 Author:** Ali Choukatli – CyberShield  
-**📅 Last Updated:** June 2025
+**👤 Author:** Ali Choukatli  
+**📅 Last Updated:** October 2025
