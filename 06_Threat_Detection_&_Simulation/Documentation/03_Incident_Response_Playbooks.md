@@ -59,7 +59,7 @@ Status: Quarantined
 Action: No action needed
 
 
-➡️ Capture screenshot for documentation.
+➡️ Capture (Soon).
 
 ---
 
