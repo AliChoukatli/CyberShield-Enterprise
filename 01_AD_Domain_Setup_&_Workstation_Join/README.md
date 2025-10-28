@@ -1,4 +1,4 @@
-# AD Domain Setup & Workstation Join
+# Chapter 1 - AD Domain Setup & Workstation Join
 
 ## 🎯 Objective
 
