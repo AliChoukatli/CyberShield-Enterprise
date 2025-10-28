@@ -1,4 +1,4 @@
-# IT Helpdesk & Network Troubleshooting
+# Chapter 3 - IT Helpdesk & Network Troubleshooting
 
 ## 🎯 Objective
 
