@@ -35,8 +35,6 @@ Implementing these solutions strengthens identity security, improves user experi
    
 4. ✅ [FIDO2 Security Key (Passkey)](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/04_Zero%20Trust%20%26%20Security%20Hardening/Documentation/01%20-%20MFA.md#4---fido2-security-key-passkey--recommended-settings)
 
-![Auth-Methods](https://github.com/AliChoukatli/CyberShield-Enterprise/blob/main/03_AzureAD_Sync_%26_Endpoint_Security/Screenshots/Auth-Methods.png)
-
 ---
 
 ## ✅ 1. Windows Hello for Business
