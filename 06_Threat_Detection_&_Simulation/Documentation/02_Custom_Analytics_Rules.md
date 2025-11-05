@@ -39,8 +39,8 @@ let failedThreshold = 5;   // we look for the the last hour and the users with a
 SigninLogs
 | where TimeGenerated > ago(timeRange)
 | where ResultType == 50074 or ResultType == 50076 or ResultType == 50053 // 50074 : MFA Required  50076: MFA Challenge failed 50053: Wrong Credentials
-| summarize FailedCount = count() by UserPrincipalName, bin(TimeGenerated, 10m)  // group all fails within last 10 min
-| where FailedCount >= failedThreshold     // we count the number of failed + only the one with at least 5 fails in the last 10 min.
+| summarize FailedCount = count() by UserPrincipalName, bin(TimeGenerated, 10m)  // group all fails every 10 min
+| where FailedCount >= failedThreshold     // We keep only users whose number of failed logins is greater than or equal to the threshold > 5 
 | join kind=inner (                        // We join these users with those who later successfully logged in (ResultType == 0 means success).
     SigninLogs
     | where TimeGenerated > ago(timeRange)
