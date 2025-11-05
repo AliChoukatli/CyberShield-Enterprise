@@ -134,7 +134,7 @@ let threshold = 3;
 SigninLogs
 | where TimeGenerated > ago(timeRange)
 | where ResultType == 0  // Successful login
-| summarize Locations = make_set(Location), Count = count() by UserDisplayName // summarize groups logs by user, count() counts events per user, and make_set(Location) collects all unique locations for each user.
+| summarize Locations = make_set(Location), Count = count() by UserDisplayName // summarize groups by user, counts events, and lists all unique locations per user.
 | where array_length(Locations) >= threshold
 ```
 
