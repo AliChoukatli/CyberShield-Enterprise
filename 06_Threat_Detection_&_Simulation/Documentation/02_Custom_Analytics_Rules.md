@@ -35,19 +35,19 @@ Microsoft Sentinel enables the creation of custom analytics rules using Kusto Qu
 
 ```kusto
 let timeRange = 1h;
-let failedThreshold = 5;
+let failedThreshold = 5;   // we look for the the last hour and the users with at least 5 failed connection. 
 SigninLogs
 | where TimeGenerated > ago(timeRange)
-| where ResultType == 50074 or ResultType == 50076 or ResultType == 50053 // Failed login codes
-| summarize FailedCount = count() by UserPrincipalName, bin(TimeGenerated, 10m)
-| where FailedCount >= failedThreshold
-| join kind=inner (
+| where ResultType == 50074 or ResultType == 50076 or ResultType == 50053 // 50074 : MFA Required  50076: MFA Challenge failed 50053: Wrong Credentials
+| summarize FailedCount = count() by UserPrincipalName, bin(TimeGenerated, 10m) 
+| where FailedCount >= failedThreshold                  // we count the number of failed + only the one with at least 5 fails in the last 10 min.
+| join kind=inner (                                     // We join these users with those who later successfully logged in (ResultType == 0 means success).
     SigninLogs
     | where TimeGenerated > ago(timeRange)
     | where ResultType == 0 // Successful login
     | project SuccessTime = TimeGenerated, UserPrincipalName
 ) on UserPrincipalName
-| where SuccessTime > TimeGenerated
+| where SuccessTime > TimeGenerated                     // We keep only the cases where the successful login occurs after the failed attempts.
 | project UserPrincipalName, FailedCount, TimeGenerated, SuccessTime
 ```
 
